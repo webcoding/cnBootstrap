@@ -1,112 +1,94 @@
-# [Twitter Bootstrap v2.2.2](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+cnBootstrap
+============
 
-Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
+Bootstrap-中文版——时尚、直观、强大的前端框架使Web开发更快，更容易。
 
-To get started, checkout http://getbootstrap.com!
+本项目使用Git管理，如果您对Git的使用不甚熟悉，可以参考[useGit使用指南](https://github.com/xiaohan1219/useGit)项目，包含详细的Git教程讲解以及Git命令。
 
+# cnBootstrap - 无侵入的Twitter Bootstrap定制版 #
 
+版权采用[『 知识共享署名-非商业性使用 2.5 许可协议』](http://creativecommons.org/licenses/by-nc/2.5/cn/)进行许可。
 
-## Quick start
+[cnBootstrap](https://github.com/Ocode/bootstrap)是一个基于[Twitter Bootstrap](http://twitter.github.com/bootstrap/)（下简称TB）的修改定制版，主要解决了TB的侵入性问题，能使TB更好的与其他前端项目并存以及更好的适应国人需求兼容IE6+等。简言之，cnBootstrap提供TB的所有特性，在其基础上扩展设计更好的支持中文版面了，而这并不会修改你的CSS默认样式。
 
-Three quick start options are available:
+cnBootstrap将作为[cnEngine](https://github.com/Ocode/bootstrap)项目的前端核心框架开源发布，协议采用[New BSD License](http://framework.zend.com/license/new-bsd)。
 
-* [Download the latest release](https://github.com/twitter/bootstrap/zipball/master).
-* Clone the repo: `git clone git://github.com/twitter/bootstrap.git`.
-* Install with Twitter's [Bower](http://twitter.github.com/bower): `bower install bootstrap`.
+目前cnBootstrap基于Twitter Bootstrap v 2.2.1修改。
 
+## cnBootstrap与Twitter Bootstrap的不同 ##
 
+技术上来讲，cnBootstrap的实现原理就是在TB有侵入性的代码上加入了一些CSS Class命名空间，所以使用时会与TB有细微的差别，并更好的支持中文以及更广的浏览器兼容性问题处理：
 
-## Versioning
+### 文本排版 ###
 
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
+对于需要文本排版的元素，需要增加一个class .typo:
 
-Releases will be numbered with the following format:
+在Twitter Bootstrap中:
 
-`<major>.<minor>.<patch>`
+`<p><small>This line of text is meant to be treated as fine print.</small></p>`
 
-And constructed with the following guidelines:
+在cnBootstrap中:
 
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
-For more information on SemVer, please visit http://semver.org/.
-
+`<div class="typo"><p><small>This line of text is meant to be treated as fine print.</small></p></div>`
 
 
-## Bug tracker
+### 表单 ###
 
-Have a bug or a feature request? [Please open a new issue](https://github.com/twitter/bootstrap/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines](https://github.com/necolas/issue-guidelines), written by [Nicolas Gallagher](https://github.com/necolas/).
+对于希望采用TB样式的表单，增加一个class .form
 
+在Twitter Bootstrap中:
 
+`<form><fieldset>
+...
+</fieldset>
+</form>`
 
-## Community
+在cBootstrap中:
 
-Keep track of development and community news.
+`<form class="form"><fieldset>
+...
+</fieldset>
+</form>`
 
-* Follow [@twbootstrap on Twitter](http://twitter.com/twbootstrap).
-* Read and subscribe to the [The Official Twitter Bootstrap Blog](http://blog.getbootstrap.com).
-* Have a question that's not a feature request or bug report? [Ask on the mailing list.](http://groups.google.com/group/twitter-bootstrap)
-* Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##twitter-bootstrap` channel.
+### 移除TB font-face图标
 
+TB的图标略显简陋，索性完全移除。如果想要使用图标，推荐更全更精致的[Font Awesome](http://fortawesome.github.com/Font-Awesome/)，可以对应绝大多数项目需求。
 
+## 新功能 ##
 
-## Developers
+### 中文排版 ###
 
-We have included a makefile with convenience methods for working with the Bootstrap library.
+通过引入[typo.css](https://github.com/sofish/typo.css)项目，提供更好的中文排版支持。
 
-+ **dependencies**
-Our makefile depends on you having recess, connect, uglify.js, and jshint installed. To install, just run the following command in npm:
+对于需要采用中文排版的元素，加上class .typocn
 
-```
-$ npm install recess connect uglify-js jshint -g
-```
+### 高级别CSS Reset ###
 
-+ **build** - `make`
-Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://twitter.github.com/bootstrap/extend.html#compiling">Read more in our docs &raquo;</a>
+TB的CSS Reset采用的是[normalize.css](http://necolas.github.com/normalize.css/)，这种Reset以修复浏览器缺陷为主要目的，在实际项目中往往统一元素的初始状态，所以CSS Reset部分采用了更“高”的Reset，包括了元素样式级别的处理。
 
-+ **test** - `make test`
-Runs jshint and qunit tests headlessly in [phantomjs](http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
+整个Reset部分可以选择加载，所以如果你的项目中已经有了Reset，只需引入cnBootstrap-core即可。
 
-+ **watch** - `make watch`
-This is a convenience method for watching just Less files and automatically building them whenever you save. Requires the Watchr gem.
+### 新的LESS文件结构与函数 ###
 
+将TB的less源文件按功能分类存放，方便查找。同时加入了一些TB中没有包含的便捷LESS函数。
 
+### 百分比Grid布局 ###
 
-## Contributing
+作为TB Grid布局的一个补充，引入了一个非常小巧的[百分比Grid布局](http://cssglobe.com/easy-percentage-grid-system-with-html5/)
 
-Please submit all pull requests against *-wip branches. If your pull request contains JavaScript patches or features, you must include relevant unit tests. All HTML and CSS should conform to the [Code Guide](http://github.com/mdo/code-guide), maintained by [Mark Otto](http://github.com/mdo).
+### 三栏式布局 ###
 
-Thanks!
+## 如何使用 ##
 
+在页面中根据需求引入对应的CSS即可
 
-
-## Authors
-
-**Mark Otto**
-
-+ http://twitter.com/mdo
-+ http://github.com/mdo
-
-**Jacob Thornton**
-
-+ http://twitter.com/fat
-+ http://github.com/fat
+- cnBootstrap-core.css cnBootstrap的核心CSS，不包含Reset，不包含Responsive Layout，无任何侵入性
+- cnBootstrap-fixed.css 在cnBootstrap-core的基础上增加了Reset
+- cnBootstrap-full.css 在cnBootstrap-fixed.css的基础上增加了Responsive Layout
 
 
+更多情况可以直接采用LESS编写，按需求引入LESS源文件即可。
 
-## Copyright and license
+## 意见反馈 ##
 
-Copyright 2012 Twitter, Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this work except in compliance with the License.
-You may obtain a copy of the License in the LICENSE file, or at:
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+请在[Blog](http://www.tcrearor.info/cnBootstrap/)留言或在[项目页](https://github.com/Ocode/bootstrap)提交BUG
