@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* ------------------------------------------------------------
+  Css Reset v0.9
+  Last Updated: 2011-05-13
+  Author: Group#front-end (Cloudyan,陈林,嗲多多,棉花糖)
+  Contact: qqGroup:187260298 - http://www.FAQbaike.com
+------------------------------------------------------------ */
+/* =更新日志
+ * 
+ * 2012-05-11 html5新增语义化的标签（除figure外）不必重置样式，默认就没有样式-陈林
+
+ * 2012-04-04 新项目参考了alipay,yahoo,html5Doctor等结合模块化开发进行研究，html5的Doctype声明，不必写type="text/css" 但是必须要有 rel="stylesheet"
+ * 2011-09-24 解决了IE下超链接使用绝对定位后失效的问题（使用background:url(about:blank)解决是最佳方案）
+ * 2011-09-19 原项目代号Ocode取义Original code，参考http://tcreator.info/labs/projects/2011/css-reset.html
+ 
+ * 研究规划
+ * 第一步通用reset.css
+ * 第二步全站公共样式—common.css
+		包括全站统一样式定义；如：a,a:hover等
+		基础的模块组合样式；如：.f14,.mt10,.tc等
+ * 第三步css模块—c_common.css
+		包括模块公共样式提取
+		公共模块样式
+		模块个性化样式（类似新模块，但多处使用的）
+ * 第四步网站架构css差异化如何书写及管理css
+		单页面/项目css（个性化css）规划
+------------------------------------------------------------ */
+/* 升级原则——渐进增强(Progressive Enhancement)
+
+渐进增强(Progressive Enhancement)是为了确保没有页面特效后基本功能也是可用的。简单来讲，渐进增强是指在确保页面在禁用JavaScript后能正常运作后，再对页面添加各种特效（JavaScript动画、Ajax异步等等）。我们同样可以运用"渐进增强"原则来使用CSS3（或者一些CSS2）、HTML5以及其他IE6所不支持的web规范。
+
+某些情况下，是无法让所有用户在任何浏览器下都完全一模一样，特别是那些使用IE6的用户。运用渐进增强策略，可以保证让那些用户至少能使用到你网站（或网络应用）的基本功能。
+------------------------------------------------------------ */
+/* RESET */
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,textarea,p,blockquote,th,td,hr,button,figure,menu{margin:0;padding:0;}
+
+/* 语义化的标签的样式默认的margin,padding都为0，不用reset */
+article,aside,details,figcaption,footer,header,hgroup,menu,nav,section{}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,embed,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+command,datalist,keygen,mark,meter,progress,rp,rt,ruby,time,wbr{display:inline;}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{border-collapse:collapse;border-spacing:0;}
+
+/* IE bug fixed: th 不继承 text-align*/
+th{text-align:inherit;}
+
+/* 去除默认边框 */
+fieldset,img{border:0;}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{display:block;}
+
+/* webkit内核浏览器会默认给:focus状态的元素加上outline的样式 没必要去除浏览器默认的outline属性 */
+:focus {outline:0;}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym{border:0;font-variant:normal;}
+
+/* 一致的 del 样式 */
+del{text-decoration:line-through;}
+
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500;}
+
+/* 去掉列表前的标识, li 会继承 --2012-08-22参考bootstrap思考后，觉得还是不去掉列表标识的好，W3C指定默认的这个也是有初衷的*/
+/*ol,ul{list-style-type:none}*/
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {text-align:left;}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:500;}
+button,input,select,textarea{font-size:100%;}
+q:before,q:after {content:'';}
+
+/* 统一上标和下标 */
+sub,sup {font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {text-decoration:underline;}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {text-decoration:none;}
+
+/* 修复火狐下图片和文字之间的间隙，添加img{vertical-align:top;}、img{vertical-align:middle;}或img{display:block}属性即可解决，推荐前者 */
+img{vertical-align:top}
+
+
+/* 如果将font-family中的第一个字体设置为Tahoma，则可以完美的实现(type="checkbox",type="radio")对齐(Verdana等字体也可以)。而且在FF3.5/IE6/IE7/IE8和Chrome中均显示正常。 */
+input{ font-family:Tahoma,Verdana,Geneva,sans-serif}
+

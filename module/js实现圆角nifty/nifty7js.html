@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Nifty Corners - CSS & Javascript rounded corners</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="HAPedit 3.0">
+<style type="text/css">
+body{font: 76% Arial, sans-serif;padding: 20px;background: #FFF}
+form{width:310px;background-color: #BBD8FF}
+fieldset{border: 0px solid #000}
+legend{font: bold 140%/1.6 Arial,sans-serif;color: #27518A}
+fieldset label{float:left;display:inline;width:100px;
+    line-height:16px;margin: 3px 10px;text-align:center;background: #FFF url("arrow.jpg") no-repeat right center}
+input,textarea{margin:3px 0 8px;border-style:solid;border-color: #778AA2 #7EA4D8 #7EA4D8 #778AA2;
+    border-width:2px 1px 1px 2px;width: 160px}
+input{height: 18px}
+br{clear:left}
+input#go{margin: 10px 0 0 130px;border-style:solid;border-color: #FFF #333 #333 #FFF;
+    border-width:1px 2px 2px 1px;background: #CCC;width:auto;height: auto}
+</style>
+<link rel="stylesheet" type="text/css" href="niftyCorners.css">
+<link rel="stylesheet" type="text/css" href="niftyPrint.css" media="print">
+<script type="text/javascript" src="nifty.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+if(!NiftyCheck())
+    return;
+Rounded("form","#FFF","#BBD8FF");
+Rounded("label","#BBD8FF","#FFF","small");
+}
+</script>
+<script type="text/javascript"> 
+	var _gaq = _gaq || [];
+	_gaq.push(
+	['_setAccount', 'UA-272662-1'],
+	['_setDomainName', '.html.it'],
+	['_trackPageview']
+);
+</script> 
+ 
+<script type="text/javascript"> 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'http://www.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+</head><body>
+<div id="container">
+    <form method="post" action="">
+      <fieldset>
+        <legend>Contact Form</legend>
+        <label for="nome">name: </label>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="cognome">surname: </label>
+        <input type="text" id="cognome" name="cognome"><br>
+        <label for="email">email: </label>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">message: </label>
+        <textarea id="message" name="message" rows=8 cols=20></textarea><br>
+        <input type="submit" id="go" value="send">
+     </fieldset>
+    </form>
+</div>
+
+</body>
+</html>

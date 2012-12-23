@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>menu菜单大全</title>
+<style type="text/css">
+<!--
+div, ul, p{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    font-family: inherit;
+}
+body {
+    color: #333;
+    background: #deebf3;
+    text-align: center;
+    font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+}
+
+a:link, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+/* Nav
+==========================================================*/
+.nav {
+width:910px;
+    position: relative;
+    margin:0px auto;
+    background: url(images/lrtk.png) no-repeat 0 -36px;
+}
+.navinner {
+    background: url(images/lrtk.png) no-repeat 100% -72px;
+}
+.navlist {
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    margin: 0 10px;
+    background: url(images/lrtk.png) repeat-x 0 0;
+}
+.nav li {
+    float: left;
+    display: inline;
+    margin: 0 0 0 -2px;
+    padding: 0 4px 0 6px;
+    background: url(images/lrtk.png) no-repeat 0 -108px;
+}
+.nav a {
+    display: block;
+    width: 102px;
+    text-align: center;
+    font-size: 120%;
+}
+.nav a:link, .nav a:visited {
+    color: #fff;
+}
+.nav a.current, .nav a:hover, .nav a:active {
+    color: #fff;
+    font-weight: bold;
+    background: url(images/lrtk.png) no-repeat 50% -144px;
+}
+.subnav {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    white-space: nowrap;
+    background: url(images/lrtk.png) no-repeat 0 -180px;
+}
+* html .subnav {
+    margin: 0 10px 0 -10px; /* IE 6 and below */
+}
+.subnav p {
+    padding: 0 10px;
+    background: url(images/lrtk.png) no-repeat 100% -234px;
+}
+.subnav p span {
+    display: block;
+    background: url(images/lrtk.png) repeat-x 0 -207px;
+}
+.subnav p.pointer {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 5px;
+    width: 11px;
+    padding: 0;
+    margin-left: 20px;
+    text-indent: -999em;
+    background: url(images/lrtk.png) repeat-x 0 -261px;
+}
+.subnav a {
+    display: inline;
+    padding: 0;
+    font-size: 100%;
+}
+[class~="subnav"] a {
+    padding: 0 3px;
+}
+.subnav, .subnav a:link, .subnav a:visited {
+    color: #235e99;
+}
+.subnav a:hover, .subnav a:active {
+    color: #235e99;
+}
+.subnav a:hover, .subnav a:active {
+    font-weight: normal;
+    background: none;
+    border-bottom: 2px solid;
+}
+/* subnav position and pointer position */
+#subnav1 { left: 120px; }
+#subnav2 { left: 230px; }
+#subnav3 { left: 340px; }
+#subnav4 { left: 450px; }
+#subnav5, #subnav6, #subnav7 { 
+    left: auto;
+    right: 0px;
+}
+
+#subnav1 .pointer,
+#subnav2 .pointer,
+#subnav3 .pointer,
+#subnav4 .pointer { left: 30px; }
+#subnav5 .pointer { left: auto; right: 290px; }
+#subnav6 .pointer { left: auto; right: 180px; }
+#subnav7 .pointer { left: auto; right: 70px; }
+
+#subnav1, #subnav2, #subnav3, #subnav4 {
+    min-width: 110px;
+}
+#subnav5 { min-width: 340px; }
+#subnav6 { min-width: 240px; }
+#subnav7 { min-width: 130px; }
+
+
+/* Note
+==========================================================*/
+.note {
+    margin: 0 15px 10px;
+        color:#666666;
+}
+.note span{
+        float:right;
+}
+.disable {
+    display: none;
+}
+-->
+</style>
+<script type="text/javascript">function $(id) {
+    return document.getElementById(id);
+}
+
+function showMenu (baseID, divID) {
+    baseID = $(baseID);
+    divID  = $(divID);
+    if (showMenu.timer) clearTimeout(showMenu.timer);
+        hideCur();
+    divID.style.display = 'block';
+        showMenu.cur = divID;
+
+    if (! divID.isCreate) {
+        divID.isCreate = true;
+        //divID.timer = 0;
+        divID.onmouseover = function () {
+            if (showMenu.timer) clearTimeout(showMenu.timer);
+                        hideCur();
+            divID.style.display = 'block';
+        };
+
+        function hide () {
+            showMenu.timer = setTimeout(function () {divID.style.display = 'none';}, 1000);
+        }
+
+        divID.onmouseout = hide;
+        baseID.onmouseout = hide;
+    }
+        function hideCur () {
+                showMenu.cur && (showMenu.cur.style.display = 'none');
+        }
+}</script>
+</head>
+<body>
+<p>仿Chinaz首页菜单导航</p>
+<div class="nav">
+<div class="navinner">
+  <ul class="navlist">
+  <li><a href="#">首页</a></li>
+  <li><a href="/News/Index.html" id="nav_1" onmouseover="showMenu('nav_1','subnav1')">asp教程</a>
+    <div class="subnav disable" id="subnav1">
+      <p class="pointer">.</p>
+      <p><span>
+      <a href="#">基础教程</a> |
+      <a href="#">实例教程</a> |
+      <a href="#">高级教程</a> |
+      <a href="#">组件教程</a>
+      </span></p>
+    </div>  
+  </li>
+  <li><a href="#" id="nav_2" onmouseover="showMenu('nav_2','subnav2')">javascript教程</a>
+    <div class="subnav disable" id="subnav2">
+            <p class="pointer">.</p>
+      <p><span>
+      <a href="#">基础教程</a> |
+      <a href="#">实例教程</a> |
+      <a href="#">高级教程</a>
+      </span></p>
+    </div>
+  </li>
+  <li><a href="#" id="nav_3" onmouseover="showMenu('nav_3','subnav3')">网站运营</a>
+    <div class="subnav disable" id="subnav3">
+      <p class="pointer">.</p>
+      <p><span>
+      <a href="#">建站经验</a> |
+      <a href="#">策划盈利</a> |
+      <a href="#">搜索优化</a> |
+      <a href="#">网站推广</a> |
+      <a href="#">免费资源</a>
+      </span></p>
+    </div>          
+  </li>
+  <li><a href="#" id="nav_4" onmouseover="showMenu('nav_4','subnav4')">css方面</a>
+    <div class="subnav disable" id="subnav4">
+      <p class="pointer">.</p>
+      <p><span>
+      <a href="#">酷站推荐</a> |
+      <a href="#">网页设计</a> |
+      <a href="#">WEB标准</a> |
+      <a href="#">设计活动</a>
+      </span></p>
+    </div>  
+  </li>
+  <li><a href="#" id="nav_5" onmouseover="showMenu('nav_5','subnav5')">网络编程</a>
+    <div class="subnav disable" id="subnav5">
+      <p class="pointer">.</p>
+      <p><span>
+      <a href="#">Asp编程</a> |
+      <a href="#">Php编程</a> |
+      <a href="#">.Net编程</a> |
+      <a href="#">Xml编程</a> |
+      <a href="#">Access</a> |
+      <a href="#">Mssql</a> |
+      <a href="#">Mysql</a>
+      </span></p>
+    </div>  
+  </li>
+  <li><a href="#" id="nav_6" onmouseover="showMenu('nav_6','subnav6')">联盟资讯</a>
+    <div class="subnav disable" id="subnav6">
+      <p class="pointer">.</p>
+      <p><span>
+      <a href="#">联盟新闻</a> |
+      <a href="#">联盟介绍</a>
+      </span></p>
+    </div>
+  </li>
+  <li><a href="#" id="nav_7" onmouseover="showMenu('nav_7','subnav7')">服务器</a>
+    <div class="subnav disable" id="subnav7">
+      <p class="pointer">.</p>
+      <p><span>
+      <a href="#">Web服务器</a> |
+      <a href="#">Ftp服务器</a>
+      </span></p>
+    </div>  
+  </li>
+  </ul>
+</div>  
+</div>
+</div>
+
+</body>
+</html>

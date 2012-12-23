@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>zShowbox</title>
+ 	<script type="text/javascript" src="./jquery-1.3.2.js"></script>
+ 	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			// zShowbox by zwwooooo: 点击图片展示原大图
+			$('.post img').click(function(){ //.post img 为选择器，根据自己主题更改
+				var zshowbox_img_url=$(this).attr('src');
+				$('body').append('<div id="zshowbox" style="overflow:hidden;background:#000;z-index:9999;display:none;position:fixed;left:0;top:0;width:100%;height:100%;"></div><div id="zshowbox_img" style="z-index:99999;display:none;position:fixed;left:50%;top:50%;border:5px solid #777;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;box-shadow:1px 1px 5px #333,-1px -1px 5px #333;-moz-box-shadow:1px 1px 5px #333,-1px -1px 5px #333;-webkit-box-shadow:1px 1px 5px #333,-1px -1px 5px #333;"><img src="'+zshowbox_img_url+'" /></div>');
+				var width=$('#zshowbox_img').width(), height=$('#zshowbox_img').height();
+				width=-(width/2)+'px'; height=-(height/2)+'px';
+				$('#zshowbox_img').css({"margin-left":width,"margin-top":height});
+				$('#zshowbox').fadeTo("fast",0.3,function(){$('#zshowbox').show();});
+				$('#zshowbox_img').fadeIn(400);
+				$('body').click(function(){
+					$('#zshowbox,#zshowbox_img').fadeOut(400,function(){$('#zshowbox,#zshowbox_img').remove();});
+					$('body').unbind('click');
+					return false;
+				});
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div style="margin-top:30px;line-height:30px;text-align:center;border-bottom:1px dashed #ddd;">zShowbox 0.1 beta - by zwwooooo: 点击图片展示原大图</div>
+	<div class="post" style="padding:30px;text-align:center;">
+		<img style="cursor:pointer;width:300px;height:auto;" src="http://b.zwwimg.com/2010/07/100715-thickbox-0.jpg" />
+		<br /><br />
+		<img style="cursor:pointer;width:300px;height:auto;" src="http://b.zwwimg.com/2010/07/100715-thickbox-1.jpg" />
+	</div>
+	<div id="footer" style="margin-bottom:30px;padding:10px 0;text-align:center;border-top:1px dashed #ddd;">ZWWoOoOo | <a href="http://zww.me/">http://zww.me/</a></div>
+</body>
+</html>

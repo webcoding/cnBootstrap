@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片自动缩放和延迟加载</title>
+<style>
+*{margin:0; padding:0; border:0;}
+ul,ol{ list-style-type:none}
+.auto_IMG{ width:300px; margin:20px auto}
+.auto_IMG li a{ overflow:hidden; display:block; text-align:center; width:300px; height:150px; background:#ccc;}
+.auto_IMG li a{ display:none} 
+.auto_IMG li.selected a{ display:block} 
+
+</style>
+<script src="http://pic.lvmama.com/js/jquery142.js"></script>
+	<script type="text/javascript">
+jQuery(document).ready(function(){
+	//$('JS_imgmo_menu img').each(function(){
+//		  if($(this).attr("src")=="http://pic.lvmama.com/img/new_v/ob_comment/tj_pic1.jpg"){
+//				alert("hello")
+//				//$(this).attr("src","http://pic.tcreator.info/static/js/jquery-image-lazy-loading/images/grey.gif")
+//				};
+//	});
+	function getImageSize(thisimg) { 
+				var i = new Image(); //新建一个图片对象 
+				var _thisimg = thisimg;
+				var _src=_thisimg.attr("original");
+				//alert(_src)
+				i.onload = function() {
+					if(_thisimg.attr("src")!=_thisimg.attr("original")){_thisimg.attr("src",_thisimg.attr("original"))};
+				//alert(i.width);
+				autoImgSize(i.width,i.height,_thisimg);
+				i.onload=function(){};
+			};
+			i.src=_src;
+		}
+
+	var JS_mo_menu = $('.JS_imgmo_menu p');
+	JS_mo_menu.mouseover(function(){
+		var this_img = $(this).parents("li").find('img');
+		//if(this_img.attr("src")==""){this_img.attr("src",this_img.attr("original"))};
+		$(this).parents("li").addClass('selected').siblings().removeClass('selected');
+		getImageSize(this_img);
+
+		//autoIMG(this_img,300,150);
+	});
+  $(".JS_imgmo_menu").each(function(){
+		//$(this).children('li').eq(0).find("p").mouseover();
+	});
+	function autoImgSize(img_tw,img_th,_thisimg){
+		var _img_tw = img_tw;
+		var _img_th = img_th;
+		var thisimg = _thisimg;
+		var x = thisimg.parent().innerWidth(); //填入目标图片宽度
+		var y = thisimg.parent().innerHeight(); //填入目标图片高度
+		//var z = 0;   //填入目标上边距
+		var w=_img_tw, h=_img_th;//获取图片真实宽度、高度
+		//alert(w);
+		if (w > x) { //图片宽度大于目标宽度时
+			var w_original=w, h_original=h;
+			h = h * (x / w); 
+			w = x; //宽度等于预定宽度
+			if (h < y) { //如果按比例缩小后的高度小于预定高度时
+				w = w_original * (y / h_original); 
+				h = y; //高度等于预定高度
+			}
+		}
+		if(h < y){
+			var z = (y - h)/2;
+		};
+		//alert(w);
+		$(thisimg).attr({width:w,height:h}).css({'margin-top':z});
+	};
+});
+	</script>
+</head>
+
+<body>
+<ul class="auto_IMG JS_imgmo_menu">
+<li class="selected"><p>hello</p><a href=""><img src="" original="http://hiphotos.baidu.com/563215/pic/item/29b9a439b1a2837196ddd867.jpg"></a></li>
+<li><p>hello</p><a href=""><img src="" original="http://hiphotos.baidu.com/563215/pic/item/29b9a439b1a2837196ddd867.jpg"></a></li>
+<li><p>hello</p><a href=""><img src="" original="http://pic.lvmama.com/img/new_v/ob_comment/slide_pic1.jpg"></a></li>
+<li><p>hello</p><a href=""><img src="" original="http://pic.lvmama.com/img/new_v/ob_comment/chot_pic1.jpg"></a></li>
+<li><p>hello</p><a href=""><img src="" original="http://pic.lvmama.com/img/new_v/ob_comment/tj_pic1.jpg"></a></li>
+<li><p>hello</p><a href=""><img src="" original="http://hiphotos.baidu.com/563215/pic/item/29b9a439b1a2837196ddd867.jpg"></a></li>
+</ul>
+</body>
+</html>

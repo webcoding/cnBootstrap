@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>img Auto Narrow</title>
+	<style>
+		#header{margin-top:30px;line-height:30px;text-align:center;border-bottom:1px dashed #ddd;}
+		.post{padding:30px;text-align:center;}
+		.post img{margin-bottom:20px;}
+		.post .img{overflow:hidden;width:200px;height:140px;border:4px solid #ddd;margin:0 auto;}
+		#footer{margin-bottom:30px;padding:10px 0;text-align:center;border-top:1px dashed #ddd;}
+	</style>
+ 	<script type="text/javascript" src="./jquery-1.3.2.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			/* 图片不完全按比例自动缩小 by zwwooooo */
+			$(window).load(function(){
+				$('#content img').each(function(){
+					var x = 200; //填入目标图片宽度
+					var y = 140; //填入目标图片高度
+					var w=$(this).width(), h=$(this).height();//获取图片宽度、高度
+					if (w > x) { //图片宽度大于目标宽度时
+						var w_original=w, h_original=h;
+						h = h * (x / w); //根据目标宽度按比例算出高度
+						w = x; //宽度等于预定宽度
+						if (h < y) { //如果按比例缩小后的高度小于预定高度时
+							w = w_original * (y / h_original); //按目标高度重新计算宽度
+							h = y; //高度等于预定高度
+						}
+					}
+					$(this).attr({width:w,height:h});
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="header">
+		<h3>图片不完全按比例自动缩小 by zwwooooo</h3>
+		<p>适用场所：固定大小的图片显示区域，如缩略图</p>
+	</div>
+	<div id="content" class="post">
+		<p>原图片大小：460*629，目标显示图片区域大小：200*140，图片通过本jQ程式处理后显示大小：200*273</p>
+		<p class="img"><img src="http://b.zwwimg.com/2010/07/100715-thickbox-0.jpg" /></p>
+		<p>原图片大小：640*554，目标显示图片区域大小：200*140，图片通过本jQ程式处理后显示大小：200*173</p>
+		<p class="img"><img src="http://b.zwwimg.com/2010/07/100715-thickbox-1.jpg" /></p>
+	</div>
+	<div id="footer">ZWWoOoOo | <a href="http://zww.me/">http://zww.me/</a></div>
+</body>
+</html>

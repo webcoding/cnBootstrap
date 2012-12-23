@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浮动元素margin-bottom在IE6和IE7下失效的解决办法</title>
+<style>
+.box{width:600px; background:#E6FECB; border:3px solid #933;overflow:hidden}
+.float_div{float:left; margin:20px; width:100px; height:100px; display:inline; background-color:#CCC;}
+
+.clear{ clear:both}
+
+/* 清除浮动 */
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix{*zoom:1}/* for IE6 IE7 */
+</style>
+</head>
+
+<body>
+<p>返回文章</p>
+<h1><a target="_blank" href="http://www.tcreator.info/webSchool/xhtml-css/margin-bottom-failure-in-ie6-and-ie7-under.html">浮动元素margin-bottom在IE6和IE7下失效的解决办法</a></h1>
+<p>Bug重现：</p>
+<div class="box">
+    <div class="float_div"></div>
+    <div class="float_div"></div>
+    <div class="float_div"></div>
+</div>
+
+
+<p>解决办法：</p>
+<div class="box">
+    <div class="float_div"></div>
+    <div class="float_div"></div>
+    <div class="float_div"></div>
+    <!-- 解决方法 -->
+    <div class="clear"></div>
+</div>
+
+
+
+<p>平时常用的清除浮动clearfix方法，对此IE6、IE7下的浮动元素margin-bottom bug无效了，看来这个属性确实没有空标签清除法强悍啊：</p>
+<div class="box clearfix">
+    <div class="float_div"></div>
+    <div class="float_div"></div>
+    <div class="float_div"></div>
+</div>
+
+</body>
+</html>

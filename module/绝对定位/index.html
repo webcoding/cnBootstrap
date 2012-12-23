@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>绝对定位</title>
+<style>
+*{margin:0; padding:0;}
+html,body{height:auto !important;height:100%;position:relative; overflow:hidden}
+html{ overflow:auto; padding-bottom:75px;}
+* html body{ overflow:auto; position:static; padding-bottom:75px;}/*此处三行代码解决了IE6不支持fixed属性，但实现同样效果的问题*/
+
+.zxfd {background:url(zxfd.png) no-repeat;position:fixed !important; position:absolute; display:block;width:1000px;height:60px;padding:11px 0;margin-left:-500px;left:50%;bottom:5px; overflow:hidden}
+.zxfd a {text-indent:-9999px;}
+.zxfd .inner {width:416px;height:60px;margin:0 auto;}
+.zxfd .qqzx {display:block;width:150px; height:60px;float:left}
+.zxfd p {font-size:14px;color:white;text-align:center;width:125px;height:60px;line-height:26px;float:left}
+.zxfd p span {color:#ff0}
+.zxfd p a.btn {display:block;width:120px;height:30px;float:left}
+</style>
+</head>
+
+<body>
+<div style="height:1000px; width:980px; margin:0 auto; border:1px solid #ccc;">height:1000px; width:980px; margin:0 auto; border:1px solid #ccc;</div>
+<div class="zxfd">
+    <div class="inner"><a class="qqzx" href="http://wpa.qq.com/msgrd?v=3&uin=1395093509&site=qq&menu=yes\">专家QQ交流</a>
+        <p><strong>当前有<span>（<span>18</span>）</span><br />位患者在咨询</strong></p>
+        <p><a class="btn" href="http://kht.zoosnet.net/LR/Chatpre.aspx?id=KHT42929793&r=zhannei&p=www.malejk.com">在线咨询专家</a>
+        <a class="btn" href="http://swt.gssmart.com/gh/www.malejk.com/index.php?website=http://www.malejk.com">免费预约挂号</a></p>
+    </div>
+</div>
+</body>
+</html>

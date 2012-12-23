@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="a:hover属性在IE6下的优先级异常问题" />
+<meta name="description" content="a:hover属性在IE6,ie7,8,firefox,goolge下的优先级异常问题" />
+<title>a:hover属性在IE6下的优先级异常问题</title>
+<style>
+a {
+	color:blue
+}
+a:hover {
+	color:#FF0;
+} /*1,1*/
+.linka a {
+	color:#000
+}/*1,1*/
+/*body a:hover{color:#F90;}1,2*/
+.linkc div p a {
+	color: #090
+}/*2,1*/
+
+.linkb p a {
+	color: #090
+}/*1,2*/
+a:hover {
+	color:#FF0;
+} /*1,1*/
+.linkb .linka a{
+	color:#630;
+}
+</style>
+</head>
+<body>
+<p><a href="">good</a></p>
+
+<p class="linka"><a href="">good</a></p>
+
+<div class="linkb">
+  <p class="linka"><a href="">good</a></p>
+</div>
+
+<div class="linkc">
+  <div class="linkb">
+    <p class="linka"><a href="">good</a></p>
+  </div>
+</div>
+</body>
+</html>
+<!--
+
+/*在firefox,IE8,IE7,Chrome下
+.linkb .linka a 
+大于
+body a:hover 
+等于
+.linkb p a
+大于
+.linkb a
+等于
+a:hover
+*/
+
+/*在IE6下
+.linkc .linkb .linka a
+大于
+a:hover 
+等于
+.linkb .linka a
+大于
+.linkc div p a
+大于
+.linka a
+*/
+-->

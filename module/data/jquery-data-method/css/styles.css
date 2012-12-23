@@ -1,0 +1,151 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	color:#777;
+	background-color:#fcfcfc;
+	font:15px Calibri,Arial,sans-serif;
+	border-top:5px solid #212121;
+}
+
+/* Styling the test form */
+
+form{
+	width:600px;
+	margin:50px auto;
+}
+
+fieldset{
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	
+	border:1px solid #DDDDDD;
+	margin-bottom:20px;
+	padding:5px 25px 30px;
+	position:relative;
+}
+
+#output{
+	left:300px;
+	position:absolute;
+	top:0;
+	width:200px;
+}
+
+pre{
+	margin-top:5px;
+}
+
+legend{
+	font-size:18px;
+	padding:4px;
+	margin-left:-4px;
+}
+
+input{
+	border:1px solid #CCCCCC;
+	color:#888888;
+	font-size:14px;
+	padding:3px 4px;
+	width:180px;
+	outline:none;
+	resize:none;
+}
+
+input[type=button]{
+	background-color:#3293D0;
+	border:1px solid #227DB7;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	margin:10px 8px 0 0;
+
+	padding:5px 8px;
+	text-shadow:1px 1px 0 #227DB7;
+	width:auto;
+	
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+}
+
+input[type=button]:hover{
+	background-color:#44a9e8;
+}
+
+label{
+	display:block;
+	font-size:12px;
+	padding:4px 0 2px;
+}
+
+.note{
+	font-size:14px;
+	margin:0 auto;
+	text-align:center;
+	width:400px;
+}
+
+#footer{
+	background-color:#212121;
+	position:fixed;
+	width:100%;
+	height:70px;
+	bottom:0;
+	left:0;
+}
+
+a.tzine,a.tzine:visited{
+	background:url("../img/tzine.png") no-repeat right top;
+	border:none;
+	color:#FCFCFC;
+	font-size:12px;
+	height:70px;
+	left:50%;
+	line-height:31px;
+	margin:23px 0 0 110px;
+	position:absolute;
+	top:0;
+	width:290px;
+}
+
+.tri{
+	border-color:transparent transparent #212121;
+	border-style:solid;
+	border-width:20px 17px;
+	height:0;
+	left:50%;
+	margin:-40px 0 0 -400px;
+	position:absolute;
+	top:0;
+	width:0;
+}
+
+h1{
+	font-size:20px;
+	font-weight:normal;
+	left:50%;
+	margin-left:-400px;
+	padding:25px 0;
+	position:absolute;
+	width:480px;
+	color:#FCFCFC;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #97cae6;
+	color:#97cae6;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+
+.clear{
+	clear:both;
+}

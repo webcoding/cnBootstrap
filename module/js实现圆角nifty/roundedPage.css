@@ -1,0 +1,30 @@
+html,body{margin:0;padding:0}
+body{font:76% "Trebuchet MS",arial,sans-serif;color: #333;text-align:center;padding: 20px}
+h1,h2{padding-left: 15px;margin: 0}
+h2{font-size: 160%;color: #555}
+p{margin: 0;padding: 0 15px 0.7em;line-height: 1.5}
+address{font-style: normal}
+
+div.gradient{background: #F2F2F2 url(gradient.png) repeat-x top;margin: 15px}
+div.gradient p{margin:0;padding: 2px 5px}
+p.codehere{color: #2A4D91}
+
+div#container{width:500px;margin: 0 auto;background-color: #C0CDF2;text-align: left}
+div#header{background-color: #e7e7e7;padding:10px 0}
+div#header h1{color: #FFF;font-size: 300%;font-weight: 900}
+div#menu{width:100%;overflow:auto;background: #e7e7e7;padding-top: 5px}
+ul#nav,ul#nav li{list-style-type:none;margin:0;padding:0}
+ul#nav{padding-left:15px}
+ul#nav li{float:left;width:80px;margin-right:2px;text-align: center}
+ul#nav a{float:left;width:80px;text-decoration:none;background: #FFC;color: #999}
+ul#nav li.active a,ul#nav a:hover{color: #000}
+div#content{clear:left;width:500px;border-top:1px solid #999;padding-top:15px;background-color: #C0CDF2}
+div#footer{padding-top:5px;text-align: center;font-size: 90%;background: #8395CB;color: #FFF}
+
+div#box{float:right;display:inline;width:150px;margin: 5px 15px 0 5px;background:#E4E7F2;text-align:center}
+div#box p{padding:0 5px}
+div#minipics{float:left;width:100%;padding-bottom:10px}
+div#minipics ul{list-style-type: none;margin:0 15px;padding:0}
+div#minipics li{float:left;width:100px;margin: 10px 10px 10px 0;background-color: #FFF}
+div#minipics li img{display: block;width: 80px;height: 80px;margin:5px 10px;border: 0px}
+

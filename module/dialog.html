@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>弹出框测试</title>
+<Style>
+*{margin:0;padding:0;}
+a{text-decoration:none}
+body{font:12px/22px tahoma,arial;}
+
+/* xh弹窗 */
+.xh_overlay,.xh_dialog{display:none}
+.xh_overlay{ background:#000;filter:alpha(opacity=20); opacity:.2; width:100%; height:100%; position:absolute; overflow:hidden; left:0;top:0; z-index:2000;}
+iframe.xh_overlay{ display:none;}
+.xh_dialog{ position:fixed;_position:absolute; left:50%;top:220px; width:300px; height:120px; overflow:hidden; padding:0px; margin-left:-154px;z-index:2005;padding:4px;}
+.xh_dialog-bg{ position:absolute; left:0; top:0; width:100%;height:100%;_width:500px; *height:500px; background:#000;filter:alpha(opacity=20); opacity:.2;}
+
+.xh_dialog-box{width:270px;_width:270px; height:100px; padding:10px 15px 10px; overflow:hidden; background:#fff; border:1px solid #808080; position: absolute;left:3px; top:3px;}
+.xh_dialog-box p{height:40px;line-height:20px;overflow:hidden;}
+
+.xh_btn-ok,.xh_btn-cancel{width:65px; height:24px; line-height:24px; text-align:center; font-weight:bold; padding:0; overflow:hidden; display:inline-block; zoom:1;*display:inline; margin-right:20px; cursor:pointer;border-radius:3px;background:url(http://pic.lvmama.com/img/common_pop/close.gif) repeat 0 -40px;}
+.xh_btn-ok:hover,.xh_btn-cancel:hover{ text-decoration:none;}
+
+.xh_btn-ok{border:1px solid #e60;color:#fff;}a.xh_btn-ok:hover{color:#fff; background-position: 0 -70px;}
+.xh_btn-cancel{border:1px solid #ccc; background-position:0 -100px;color:#000;}a.xh_btn-cancel:hover{border:1px solid #abc; background-position:0 -130px;color:#000;}
+.xh_dialog-box h4,.xh_dialog-box h3{ margin-bottom:10px;}
+
+
+span.xh_close{position:absolute;z-index:2; right:5px; top:5px;float: right; display: inline; width: 20px; height: 20px; font:16px/20px Tahoma; border: 1px solid #ccc; background: #fff;color:#999; cursor: pointer; text-align: center;}
+span.xh_close:hover{color:#333;border-color:#999;}
+
+
+
+
+</style>
+</head>
+<body>
+<div style="height:2000px; width:980px; margin:10px auto;">
+<p><a class="btn" href="javascript:void(0);">弹出框</a></p>
+</div>
+<div class="xh_overlay"></div>
+<div class="xh_dialog xh_panel">
+	<div class="xh_dialog-bg"></div>
+	<span class="xh_close">&times;</span>
+    <div class="xh_dialog-box">
+    
+    	<h3>您确定要删除吗？</h3>
+        <p>删除后，信息将不可恢复！</p>
+        <div class="xh_dialog-btn">
+        	<a class="ui-btn xh_btn-ok" href="javascript:void(0);">确&nbsp;定</a><a class="ui-btn xh_btn-cancel" href="javascript:void(0);">取&nbsp;消</a>
+        </div>
+    </div>
+</div>
+
+<script src="http://pic.lvmama.com/js/new_v/jquery-1.7.min.js"></script>
+<script>
+$(function(){
+	
+	$(".btn").click(function(){
+		xh_dialog_show();
+	});
+	
+	$(".xh_btn-ok,.xh_btn-cancel,.xh_close").bind('click',function(){
+		xh_dialog_close();
+	});
+	
+	function xh_dialog_show(){
+		var top=$(document).scrollTop();
+		$("div.xh_dialog").css("_top",top+220+"px").show();
+		$("div.xh_overlay").show().height($(document).height());
+		if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style) {
+			$("iframe.xh_overlay").show().height($(document).height());
+		}
+	};
+	
+	function xh_dialog_close(){
+		$("div.xh_dialog,.xh_overlay").hide();
+	};
+});
+</script>
+</body>
+</html>

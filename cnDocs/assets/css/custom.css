@@ -1,0 +1,44 @@
+/*!
+ * 自定义样式
+**/
+
+/* 模拟滚动条 */
+.scoll_box{ height:98px; width:400px;}
+.scoll_box ul{ margin-bottom:0}
+
+
+.question,.answer{ padding:0 10px; }
+.question p,.answer p{ margin:10px 0}
+.question .link,.answer .link{ float: right }
+.question{background: #FCFEFC;border-color:#4CBE00 #E3E3E3 #E3E3E3;border-style: solid; border-width: 2px 1px 1px;}
+.answer{ background: #FFFCF6; border:#FADEC4 1px solid; margin-bottom: 40px;}
+.browser{ float: right; padding-right: 15px;}
+
+.bug-title{ /* float: left; margin-left: -120px; width: 110px; padding-right: 10px; display: inline; text-align: right; margin-top: 5px */}
+
+/* 搜索筛选 */
+.filter-tags li span{}
+.search-filter{border:1px solid #dbdbdb; border-top:2px solid #E08;color:#555; margin-bottom:10px;}
+.filter-info{ border-bottom: 1px solid #ededed;line-height: 22px; padding:8px 10px 4px; background:#f8f8f8}
+.result-info i{ font-style:normal;color:#f60}
+.filter-tags{ overflow: hidden;margin:0 0 10px 0; padding:0 10px 5px 10px; color:#000}
+.filter-tags li{ border-top:1px dashed #ddd; margin-top:-1px; line-height:20px; padding:8px 0;*zoom:1}
+.filter-tags .s-tag{ display:inline-block;*display:inline;*zoom:1; padding:0 6px; vertical-align:baseline; margin-right:16px; height:20px; line-height:20px;}
+.filter-tags .selected{ background:#e08; font-weight:bold; color:#fff;}
+.filter-tags a:hover{ background:#e08;color:#fff; text-decoration:none}
+.filter-tags label{ margin-right:15px;*zoom:1; cursor:pointer}
+.filter-tags input{ margin-right:3px; vertical-align:top; *vertical-align:baseline; margin-top:3px;}
+
+.result-info,.filter-tags{ clear:both; *zoom:1}
+.your-choices{ overflow:hidden; zoom:1}
+.your-choices dd{ display:inline; float:left}
+.your-choices dd{ margin:0 3px 3px 0;}
+.your-choices a{color:#e08; border:1px solid #d1d1d1; background:#fff; height:19px; line-height:19px; padding:0 3px 0 5px; float:left;white-space:nowrap;_height:17px;_padding:3px 3px 0 5px;}
+.tags-empty a{color:#06C}
+.your-choices a:hover{color:#e08; text-decoration:none; border-color:#818181}
+.your-choices h6{color:#333; font-weight:normal; display:inline}
+.your-choices .icon-close{ position:relative;top:3px; margin-left:3px;*top:0; *left:3px;}
+.tags-empty a{ border:none; height:22px; background:none; line-height:22px;}
+
+
+

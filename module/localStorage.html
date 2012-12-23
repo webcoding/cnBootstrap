@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>localStorage 方法</title>
+</head>
+
+<body>
+<script type="text/javascript">
+localStorage.lastname="Smith";
+document.write(localStorage.lastname);
+if (localStorage.pagecount)
+	{
+	localStorage.pagecount=Number(localStorage.pagecount) +1;
+	}
+else
+	{
+	localStorage.pagecount=1;
+	}
+document.write("　Visits: " + localStorage.pagecount + " time(s).");
+</script> 
+<p>刷新页面会看到计数器在增长。(放在域名下才起效，localhost也可以)</p>
+<p>请关闭浏览器窗口，然后再试一次，计数器会继续计数。</p>
+<p>localStorage 方法存储的数据没有时间限制。第二天、第二周或下一年之后，数据依然可用。</p>
+<div>
+  <h2>在客户端存储数据</h2>
+  <p>HTML5 提供了两种在客户端存储数据的新方法：</p>
+  <ul>
+    <li>localStorage - 没有时间限制的数据存储</li>
+    <li>sessionStorage - 针对一个 session 的数据存储</li>
+  </ul>
+  <p>之前，这些都是由 cookie 完成的。但是 cookie 不适合大量数据的存储，因为它们由每个对服务器的请求来传递，这使得 cookie 速度很慢而且效率也不高。</p>
+  <p>在 HTML5 中，数据不是由每个服务器请求传递的，而是只有在请求时使用数据。它使在不影响网站性能的情况下存储大量数据成为可能。</p>
+  <p>对于不同的网站，数据存储于不同的区域，并且一个网站只能访问其自身的数据。</p>
+  <p>HTML5 使用 JavaScript 来存储和访问数据。</p>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>div width algorithm</title>
+<style type="text/css">
+*{ margin:0; padding:0; border:0;}
+#wapper { background:#eee; width:800px; height:auto !important; height:100%; margin:20px auto; padding:10px; text-align:center}
+div{ height:50px; background:#ccc; width:600px;}
+.ie6width{ width:600px; border:10px solid #666; padding:10px; margin:10px;}
+.ie7width{ width:600px; border:10px solid #666; padding:10px; margin:10px;}
+.ie8width{ width:600px; border:10px solid #666; padding:10px; margin:10px;}
+.ffwidth{ width:600px; border:10px solid #666; padding:10px; margin:10px;}
+</style>
+<!--[if ie 6]>
+<style>
+.ie6width{ width:600px; border:10px solid #666; padding:10px; margin:10px;}
+</style>
+<![endif]-->
+<!--[if ie 7]>
+<style>
+.ie7width{ width:600px; border:10px solid #666; padding:10px; margin:10px;}
+</style>
+<![endif]-->
+<!--[if ie 8]>
+<style>
+.ie8width{ width:600px; border:10px solid #666; padding:10px; margin:10px;}
+</style>
+<![endif]-->
+
+</head>
+
+<body>
+<div id="wapper">ahah
+<div class="ie6width">hah</div>
+<div class="ie7width">hah</div>
+<div class="ie8width">hah</div>
+<div class="ffwidth">ahha</div>
+</div>
+</body>
+</html>

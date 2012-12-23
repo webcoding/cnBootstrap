@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery's Data Method – How and Why to Use It | Tutorialzine Demo</title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+</head>
+<body>
+
+<form method="post" action="" id="originalForm">
+    <fieldset>
+        <legend>Form Fields</legend>
+        
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+        
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country" />
+        
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age" />
+        
+        <span id="output"></span>
+        
+    </fieldset>
+    
+    <fieldset>
+        <legend>Controls</legend>
+        
+        <input type="button" value="Output the myFormObj object" />
+        <input type="button" value="Set myFormObj.name=&quot;Homer&quot;" />
+        <input type="button" value="Display my HTML5 data attribute" data-someobj='{"someNumber":23.3,"someString":"asdf"}' />
+        
+    </fieldset>
+    
+</form>
+
+<p class="note">The myFormObj variable is linked to the form. Changes to the form fields affect the properties of the object and vice-versa.</p>
+
+<!-- Feel free to remove this footer -->
+
+<div id="footer">
+	<div class="tri"></div>
+	<h1>jQuery's Data Method – How and Why to Use It</h1>
+	<a class="tzine" href="http://tutorialzine.com/2010/11/jquery-data-method/">Read &amp; Download on</a>
+</div>
+
+<script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.min.js"></script>
+<script src="js/jquery.datalink.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

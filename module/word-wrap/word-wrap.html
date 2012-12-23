@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+    <meta charset="gbk">
+    <title>word wrap</title>
+    <!-- base href="http://ued.taobao.com/lab/word-wrap/word-wrap.html" -->
+    <style type="text/css">
+        #content {
+            width: 960px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #ccc;
+            overflow: visible;
+            font-size: 14px;
+        }
+
+        #content .ib {
+            display: inline-block;
+            border: 1px solid #aaa;
+            background-color: #eee;
+
+            *display: inline;
+            *zoom: 1;
+        }
+
+        #content .f {
+            float: left;
+            display: block;
+            border: 1px solid #aaa;
+            background-color: #eee;
+
+            *zoom: 1;
+        }
+
+        #content img {
+            border: 1px solid white;
+        }
+
+        #control {
+            clear: left;
+        }
+
+    </style>
+<link href="floatingPanel.css" type="text/css" rel="stylesheet"></head>
+<body>
+<script type="text/javascript">
+(function(){function atrand(num){return Math.floor(Math.random()*num)+1}var P=location.pathname;if((parent===self)||P.indexOf('/list_forum')!=-1||P.indexOf('/theme/info/info')!= -1||P.indexOf('/promo/co_header.php')!= -1||P.indexOf('fast_buy.htm')!= -1||P.indexOf('/add_collection.htm')!= -1||P.indexOf('/taobao_digital_iframe')!= -1||window.tbdw_frame_count==true){var R=escape(document.referrer);document.write('<img src="http://www.atpanel.com/1.gif?cache='+atrand(9999999)+'&pre='+R+'&scr='+screen.width+'x'+screen.height+'&category=&userid=&tid=&channel=112&ad_id=" width="0" height="0" style="display:none;" />')}})();
+</script><img src="word-wrap_files/1.gif" style="display: none;" height="0" width="0">
+
+<script type="text/javascript">
+(function(){function akrand(num){return Math.floor(Math.random()*num)+1}var P=location.pathname;var reg=/^https?:\/\/[\w\.]+\.taobao\.com\//i;if((parent===self)||(parent!==self&&!reg.test(document.referrer))||P.indexOf('/list_forum')!=-1||P.indexOf('/theme/info/info')!= -1||P.indexOf('/promo/co_header.php')!= -1||P.indexOf('fast_buy.htm')!= -1||P.indexOf('/add_collection.htm')!= -1||P.indexOf('/taobao_digital_iframe')!= -1||window.tbdw_frame_count==true){var R=escape(document.referrer);var acookie_load_id=""+akrand(9999999999)+akrand(9999999999);var isv_title=escape(document.title);document.write('<img src="http://acookie.taobao.com/1.gif?acookie_load_id='+acookie_load_id+'&title='+isv_title+'&pre='+R+'&category=&userid=&channel=112&ad_id=" width="0" height="0" style="display:none;" />')}})();
+</script><img src="word-wrap_files/1_002.gif" style="display: none;" height="0" width="0">
+
+<div id="page">
+
+    <div id="header"></div>
+
+    <div style="white-space: normal;" id="content">
+        <p>这是一段纯粹的中文，即使有标点符号又如何？浏览器有那么聪明么？它可不是 Microsoft Office Word！
+            （←这里在 html 文档中输入了一个换行）
+            噢对不起，夹杂了一点英文，我不是故意的……在这里就不演示日文和韩文神马的情况了……
+            啊不！微软还是很聪明的，在它实现的 word-break keep-all 里面可以看出来这一点！
+            对了，还有空格还要测试一下的→（G-Cup 爆奶 蔡）</p>
+
+        <p>Once there's a Chinese word called "草泥马".
+            (new line inserted here)
+            It is said that this word represents a kind of animal - which is horse.
+            In English, the "草泥马" may be translated to "HiGuysInFactImNotTheTranslationButADamnLongWordHaHaa".
+            Hey my friend, don't care the crazy translator.
+            Even you can turn the long word back to Chinese "英文中间乱入一个这么长的中文会如何呢让我们拭目以待"</p>
+
+        <p>对于 inline-block 系列的盒子，我们也要放点进来，至于 IE67，将用 hasLayout 的 inline 盒子模拟。
+            <span class="ib">很长很长很长很长很长很长很长的中文行内盒子在此</span>
+            <span class="ib">很长很长的中文行内盒子在此</span><span class="ib">很长的中文行内盒子在此</span>
+            <span class="ib">长中文行内盒子</span><span class="ib">ALongLongLongLongLongLongNoneBreakingBox</span>
+            <span class="ib">a long long long long long breaking inline-block box</span>
+            <span class="ib">a short inline-block box</span><span class="ib">box</span><span class="ib">fk</span>
+
+            <span class="ib">inline-block box</span><span class="ib">行内盒子</span><span class="ib">行内盒子</span></p>
+
+        <p>进一步测试图片内容
+            <img src="../img/100-20.jpg" alt=""><img src="../img/20-20.jpg" alt="">
+            <img src="../img/40-20.jpg" alt=""><img src="../img/20-20.jpg" alt="">
+            <img src="../img/40-20.jpg" alt=""><img src="../img/100-20.jpg" alt="">
+            <img src="../img/40-20.jpg" alt=""><img src="../img/20-20.jpg" alt="">
+            <img src="../img/20-20.jpg" alt=""><img src="../img/20-20.jpg" alt="">
+            <img src="../img/100-20.jpg" alt=""><img src="../img/20-20.jpg" alt="">
+        </p>
+
+        <p>进一步测试浮动盒子
+            <span class="f">很长很长很长很长很长很长很长的中文浮动盒子在此</span>
+            <span class="f">很长很长的中文浮动盒子在此</span><span class="f">很长的中文浮动盒子在此</span>
+            <span class="f">长中文浮动盒子</span><span class="f">ALongLongLongLongLongLongNoneBreakingBox</span>
+
+            <span class="f">a long long long long long breaking floating box</span>
+            <span class="f">a short floating box</span><span class="f">box</span><span class="f">fk</span>
+            <span class="f">floating box</span><span class="f">浮动盒子</span><span class="f">浮动盒子</span></p>
+
+
+        <div id="control">
+
+            <label for="width">容器宽度</label>
+            <select id="width">
+                <option value="auto">- width -</option>
+                <option value="960px">960px</option>
+                <option value="750px">750px</option>
+                <option value="500px">500px</option>
+
+                <option value="200px">200px</option>
+                <option selected="selected" value="50px">50px</option>
+            </select>
+            <label for="word-break">单词隔断</label>
+            <select id="word-break">
+                <option selected="selected" value="inherit">- word-break -</option>
+                <option value="normal">normal</option>
+
+                <option value="break-all">break-all</option>
+                <option value="keep-all">keep-all</option>
+                <option value="hyphenation">hyphenation</option>
+            </select>
+            <label for="word-wrap">单词断行</label>
+            <select id="word-wrap">
+                <option selected="selected" value="inherit">- word-wrap -</option>
+
+                <option value="normal">normal</option>
+                <option value="break-word">break-word</option>
+            </select>
+            <label for="white-space">空白控制</label>
+            <select id="white-space">
+                <option value="inherit">- white-space -</option>
+                <option selected="selected" value="normal">normal</option>
+
+                <option value="pre">pre</option>
+                <option value="nowrap">nowrap</option>
+                <option value="pre-wrap">pre-wrap</option>
+                <option value="pre-line">pre-line</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</div>
+<script type="text/javascript">
+    var content = document.getElementById("content"),
+            selects = document.getElementsByTagName("select");
+
+    for (var i = 0, l = selects.length; i < l; i++) {
+        var select = selects[i];
+        select.onchange = function() {
+            var key = this.id,
+                    value = this.value,
+                    style = ";" + this.id + ":" + this.value;
+
+            content.style.cssText += style;
+        };
+    }
+</script>
+
+<div style="bottom: auto; left: 0px; right: auto; top: 0px; display: none;" class="translator-theme-default" id="translator-floating-panel"><div title="点击翻译" id="translator-floating-panel-button"></div>
+</div>
+<p>white-space 是 white-space-collapsing 和 text-wrap 的缩写(wrap自动换行)<br />
+break-word 	如果一行中没有其他可接受的断点，那么将强行断开文本单词 <br />
+在 IE 的实际效果中，word-break 的效果要激进得多，它穷凶极恶地断开所有单词（如果到达边界的话）<br />
+根据 W3C 的描述来说，word-wrap 是最激进的自动换行方式，可以强行断开单词。而现实情况是，word-break: break-all; 的方式要更为激进<br />对比 word-wrap: break-word; 和 word-break: break-all;，两者都将文本限定在了容器的范围内，只是 break-all 将所有单词，不论长短地，通通截断，break-word 则非如此，它尽量地遵从了排版规则。</p>
+
+<h2>实践方案</h2>
+<ul>
+  <li>对于我们输出的内容（可控的），不使用任何 word-wrap 和 word-break    等属性，对于可能产生的长单词溢出这种小概率事件，首先考虑容器宽度是否合理，其次可以为长单词添加连字符&ldquo;-&rdquo;以便合理地断开，最后设置   overflow: hidden;  避免视觉上的溢出。</li>
+  <li>对于用户输出的内容（不可控的），比如评论等，由于不排除用户会输入&ldquo;dddddddddddd&rdquo;这样没营养的垃圾数据，使用 word-wrap:  break-word; 来强行截断。</li>
+</ul>
+<h2>最后的观点</h2>
+<ul>
+
+  <li>不能完全迁就测试用例，因为有时不合现实情理。</li>
+  <li>浏览器默认已经做得够好，强加诸如 break-all; 这样的指令是不优雅的。</li>
+  <li>问题大多不在于实现，而在于设计（如容器太窄）。</li>
+  <li>对于  bug 浏览器使用 hack 即可，这是它们的错。</li>
+</ul>
+<p>&nbsp;</p>
+</body></html>

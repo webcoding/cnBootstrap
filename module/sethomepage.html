@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<title>设为主页_360安全网址导航</title>
+<base target="_blank" />
+<style type="text/css">
+a{text-decoration:none; color:#333;}
+a:hover{text-decoration:underline; color:#e60012;}
+/*crumbs*/
+#crumbs{height:30px;color:#666;line-height:30px;}
+	#crumbs a{color:#2a7ec4;}
+	#crumbs a:hover{color:#ff0000;}
+/*footer*/
+#footer{text-align:center; color:#666; height:40px; line-height:40px;}	
+#footer a{ color:#2C80C5;}
+#footer a:hover{ color:#ff0000;}
+
+/*content*/
+#content{ margin-bottom:10px;padding-bottom:30px;border:1px solid #aeceef;}
+.content-header{height:32px;background:#f3faff;overflow:hidden;}
+.title{float:left;padding-left:30px;line-height:32px;font-size:14px;color:#666;background:url(http://p5.qhimg.com/d/sethome/icon_sethome.png) no-repeat 8px 8px;}
+.announce{float:right;padding-right:15px;line-height:32px;color:#666;}
+    .announce .link{padding:1px 0 1px 20px;font-weight:bold;color:#07519a;background:url(http://p5.qhimg.com/d/sethome/icon_sethome.png) no-repeat 2px -36px;}
+.section{margin:8px 8px 0 8px;border:1px solid #dcdcdc;}
+.item-tab{padding-left:34px;height:36px;line-height:38px;font-size:14px;color:#07519a;background:url(http://p5.qhimg.com/d/sethome/icon_sethome.png) no-repeat 10px -62px;cursor:pointer;overflow:hidden;display:block}
+    .item-tab .icon{margin:8px 6px 0 0;}
+.item-content{margin:0 10px;padding:15px 20px;border-top:1px dashed #adadad;display:none;}
+.item-content a{color:#07519a;}
+.pic{text-align:center;}
+.item-hover .item-tab{text-decoration:underline;color:#e60012;background-color:#f7f7f7;}
+.item-hover .item-content{margin:0;padding:15px 30px;border-top:1px solid #dcdcdc;}
+.item-selected .item-tab{background-position:10px -97px;}
+.item-selected .item-content{display:block;}
+</style>
+</head>
+<body>
+<div id="wrap">
+</div>
+<style type="text/css">
+<!--
+/*-----------------------------------------------
+	reset
+------------------------------------------------*/
+body,h1,h2,h3,h4,p,dl,dt,dd,ul,li,form,th,td,table,label{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body,button,input,select,textarea,li,dt,dd,div,p,span{font:12px/1.5 Arial;}
+ul{list-style:none;}
+img{border:none;}
+em,b{font-style:normal;}
+b{font-weight:normal;}
+button,input,select,textarea{font-size:100%;outline:0;vertical-align:middle;margin:0;padding:0;}
+a,button{cursor:pointer;}
+table{border-collapse:collapse;border-spacing:0;}
+.clearfix:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{clear:both;zoom:1;}
+/*public*/
+a{cursor:pointer;}
+body{background:#fff url("http://h1.qhimg.com/images/skin/blue_bg_0616.png") repeat-x left 30px;min-height:600px;}
+/*top*/
+#v2-top{background:url("http://h1.qhimg.com/images/top_bg.png") repeat-x;height:28px;min-width:950px;border-bottom:1px solid #D2EBFF;}
+	.top-bd{width:950px;margin:0 auto;position:relative;height:28px;line-height:28px;overflow:hidden;}
+		.top-left,.top-right{line-height:28px;height:28px;}
+		.top-right{position:absolute;right:0;top:0;padding-top:8px;}
+			.top-right a{border-right:1px solid #bfbfbf;padding-right:5px;margin-left:5px;position:relative;right:-1px;color:#333;display:block;float:left;height:14px;line-height:14px;}
+			.top-right a:hover{color:#f00;}
+			.top-right a.back-home{padding-left:18px;background:url("http://w.qhimg.com/images/v2/haotech/hao360cn_sub/20110705/icon_home.png") no-repeat 0 0;}
+/*hd*/
+#hd{height:50px;padding-top:6px;position:relative;overflow:hidden;}
+	#v2-logo,.hd-search,.hd-hot{position:relative;float:left;height:44px;}
+	#v2-logo{width:240px;}
+	.hd-search{width:420px;top:10px;}
+		.hd-search input{height:30px;border:none;font-size:14px;color:#333;*margin-top:-1px;}
+		#v2-kw{background:#fff url("http://w.qhimg.com/images/v2/haotech/hao360cn_sub/20110705/search_kw.png") no-repeat;width:255px;padding:0 4px 0 64px;line-height:30px;font-size:12px;}
+		#v2-btn{background:url("http://w.qhimg.com/images/v2/haotech/hao360cn_sub/20110705/srarch_btn.png") no-repeat;width:81px;cursor:pointer;text-align:center;}	
+	.hd-hot{width:290px;line-height:44px;overflow:hidden;padding-top:4px;}
+		.hd-hot a{border-left:1px solid #bfbfbf;padding-left:6px;margin-right:6px;position:relative;left:-1px;font-size:14px;color:#014d87}
+		.hd-hot a:hover{color:#f00;}
+/*selected-bar*/
+.hd-select{left:240px;padding-left:8px;position:absolute;top:23px;width:52px;z-index:5;background:redl}
+	#hd-selected{height:26px;line-height:26px;line-height:30px\9;_line-height:28px;padding-right:16px;text-align:center;color:#666;background:url("http://w.qhimg.com/images/v2/haotech/hao360cn_sub/20110705/search_selected_bg.png") no-repeat right 1px;cursor:pointer;overflow:hidden;}
+	#select-list{background:#fff;border:1px solid #bfbfbf;z-index:2;width:58px;margin-left:-8px;}
+		#select-list li{height:26px;line-height:26px;cursor:pointer;margin-bottom:1px;padding-left:12px;}
+		#select-list li.hover{color:#fff;background:#39f;}
+	.fold{display:none;}
+	.unfold{display:block;}
+/*wrap*/
+#wrap,.wrap{display:none;}
+#v2-wrap{width:950px;margin:0 auto;position:relative;padding-top:5px;}
+#content,.tong{z-index:1;}
+#crumbs:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;}
+#crumbs{clear:both;zoom:1;height:24px;line-height:20px;}
+div.title-zw{float:none;}
+-->
+</style>
+<div id="v2-top">
+	<div class="top-bd">
+		<div class="top-left"></div>
+		<div class="top-right">
+			<a href="http://hao.360.cn" target="_self" class="back-home">返回首页</a>
+            <a onClick="try{ window.external.AddFavorite('http://hao.360.cn/','360安全网址导航'); } catch(e){ (window.sidebar)?window.sidebar.addPanel('360安全网址导航','http://hao.360.cn/',''):alert('请使用按键 Ctrl+d，收藏360安全网址导航'); }">收藏</a>
+            <a href="http://feedback.hao.360.cn/">反馈</a>
+		</div>
+	</div>
+</div>
+<div id="v2-wrap">
+	<ul id="suggests"></ul>
+	<div id="hd" class="clearfix">
+		<div id="v2-logo">
+			<a href="http://hao.360.cn/" target="_self"><img src="http://h1.qhimg.com/images/logo.png" /></a>
+		</div>
+		<div class="hd-search">
+			 <form  id="search-form" action="http://www.google.com.hk/search" method="GET" target="_blank">
+				<input type="text" autocomplete="off" id="v2-kw"  name="q" />	
+				<input type="submit" value="搜索" id="v2-btn" />        
+				<span id="hide-input">
+					<input type="hidden" value="aff-360daohang" name="client"> 
+					<input type="hidden" value="zh-CN" name="hl"> 
+					<input type="hidden" value="gbk" name="ie"> 
+					<input type="hidden" value="1" name="newwindow"> 
+				</span>
+			</form>
+          </div>
+		<div class="hd-hot">
+			<a href="http://v.360.cn/dianying/">电影</a>
+			<a href="http://v.360.cn/dianshi/">电视剧</a>
+			<a href="http://hao.360.cn/youmoxiaohua.html">搞笑</a>
+			<a href="http://xiaoshuo.360.cn/">小说</a>
+			<a href="http://hao.360.cn/xiaoyouxi.html">小游戏</a>
+		</div>
+			</div>
+<div class="hd-select">
+			<div id="hd-selected">谷歌</div>
+			<ul id="select-list" class="fold">
+				<li engine="baidu">百度</li>
+				<li engine="google">谷歌</li>
+			</ul>
+		</div>
+
+<script src="http://h.qhimg.com/js/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script>
+$(function(){	 
+    //unfold
+    $('#hd-selected').click(function(){
+        var selectList = $('#select-list');
+        if(selectList.hasClass('unfold')){
+            selectList.removeClass('unfold')
+        }
+        else{
+            selectList.addClass('unfold');
+        }
+    });
+    //hover
+    $('#select-list li').mouseover(function(){
+        $(this).addClass('hover');
+    });
+    $('#select-list li').mouseout(function(){
+        $(this).removeClass('hover');
+    });
+    //choose 
+    var searchsite = {baidu:["http://www.baidu.com/s", "word", "\u767e\u5ea6", "cl:2;lm:-1;ct:201326592;ie:gbk"],google:["http://www.google.com.hk/search", "q", "\u8c37\u6b4c", "client:aff-360daohang;hl:zh-CN;ie:gbk;newwindow:1"]};
+	
+     $('#select-list li').click(function(){
+        var formId = "search-form";
+        var kwId = "v2-kw";
+        var btnId = "v2-btn";
+		var hideId = "hide-input";
+		
+        var engineName = $(this).attr("engine");
+        var searchType = searchsite[engineName];
+        $("#" + formId).attr("action",searchType[0]);
+        $("#" + kwId).attr("name" , searchType[1]);
+        $("#hd-selected").html(searchType[2]);
+        $("#select-list").removeClass("unfold");
+		var hideTxt = searchType[3];
+		var hideNum = hideTxt.split(";");
+		var hideHtml = "";
+		var length = hideNum.length;
+		for (var i=0; i<length; i++){
+			var hidenName = hideNum[i].split(":");
+			var input = "<input type=\"hidden\" name=\""+hidenName[0]+"\" value=\""+hidenName[1]+"\" /> ";
+			hideHtml += input;
+		}
+		
+		$("#" +hideId).html(hideHtml);
+		$("#selected").html(searchType[2]);
+		$("#select-list").removeClass("unfold");
+		
+    });	
+    $("body").click(function(e){
+        var target = e.target;
+        if($(target).attr("id")!=="hd-selected"&&$('#select-list').hasClass('unfold')&&$(target).parents("#select-list").length===0&&$(target).attr("id")!=="select-list")
+        {
+            $('#select-list').removeClass('unfold');
+        }
+    });			
+});
+
+$(function(){
+    $("#suggests li").mouseover(function(){
+        $(this).addClass("hover");
+    });
+    $("#suggests li").mouseout(function(){
+        $(this).removeClass("hover");
+    });
+});
+</script>
+  <div id="crumbs">您的位置：<a target="_self" href="http://hao.360.cn/">导航首页</a>  &gt; 主页设置</div>
+  <div id="content">
+      <div class="content-header">
+          <h2 class="title">如何在不同的浏览器中将360安全网址设为主页？</h2>
+          <div class="announce">如果还有问题，请<a href="http://feedback.hao.360.cn/" class="link">联系我们</a></div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#msie" name="msie"><img class="icon" src="http://p0.qhimg.com/d/sethome/icon_ie.png" align="left" />IE浏览器</a>
+          <div class="item-content">
+              <p>1.IE浏览器中，在菜单栏打开工具 → Internet选项 ，弹出属性对话框。</p>
+              <p>2.在主页内容中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击 确定 即可将360安全网址设为主页。</p>
+              <p class="pic"><img src="http://p2.qhimg.com/d/sethome/method_ie.png" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#360se" name="360se"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_360se.png" align="left" />360安全浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是360安全浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.在菜单栏打开 工具 → 主页设置，弹出主页设置对话框。</p>
+              <p>2.直接点击“使用360网址导航”，或在主页内容中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击 确定 即可设为主页。</p>
+              <p class="pic"><img src="http://p4.qhimg.com/t01125fbfb0e34f1048.png" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#360ee" name="360ee"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_360chrome.png" align="left" />360极速浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是360极速浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击浏览器右上角的设置图标-选项，弹出选项对话框。</p>
+              <p>2.在基本设置中，选择打开主页--打开此页--后面框里输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，输入后关闭即可，浏览器会自动保存。</p>
+              <p class="pic"><img src="http://p7.qhimg.com/d/method_360chrome.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#chrome" name="chrome"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_chrome.png" align="left" />chrome浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是chrome浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击浏览器右上角的设置图标-选项，弹出选项对话框。</p>
+              <p>2.在基本设置中，选择打开主页--打开此页--后面框里输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，输入后关闭即可，浏览器会自动保存。</p>
+              <p class="pic"><img src="http://p3.qhimg.com/d/method_chrome2.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#firefox" name="firefox"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_firefox.png" align="left" />Firefox浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是Firefox浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.在菜单栏打开 工具 → 选项 ，弹出选项对话框。</p>
+              <p>2.在主页后的框中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击 确定 即可设为主页。</p>
+              <p class="pic"><img src="http://p4.qhimg.com/d/method_firefox.png" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#se" name="se"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_sogou.png" align="left" />搜狗浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是搜狗浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.在菜单栏中选择工具--搜狗高速浏览器选项，弹出选项对话框。</p>
+              <p>2.在常规--启动设置中，选择自定义网址，并在后面框里输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，输入后点确定即可。</p>
+              <p class="pic"><img src="http://p3.qhimg.com/d/method_sougou.png" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#aoyou" name="aoyou"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_aoyou.png" align="left" />遨游浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是遨游浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击右上角的菜单--选项，打开遨游选项页面。</p>
+              <p>2.在基本设置--启动时打开中，选择主页，并在主页后面框里输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，输入后会自动保存。</p>
+              <p class="pic"><img src="http://p8.qhimg.com/d/method_aoyou.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#theworld" name="theworld"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_theworld.png" align="left" />世界之窗浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是世界之窗浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.在菜单栏打开 工具 → 选项，打开选项设置页面。</p>
+              <p>2.在主页设置的空白框里输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击框外的空白处即可自动保存。</p>
+              <p class="pic"><img src="http://p5.qhimg.com/d/method_theworld.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#worldchrome" name="worldchrome"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_theworldchrome.png" align="left" />世界之窗极速浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是世界之窗极速浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击浏览器右上角的设置图标-选项，打开选项页面。</p>
+              <p>2.在基本设置中，选择打开主页--打开此页--后面框里输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，输入后关闭即可，浏览器会自动保存。</p>
+              <p class="pic"><img src="http://p4.qhimg.com/d/method_theworldchrome.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#greenbrowser" name="greenbrowser"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_greenbrowse.png" align="left" />绿色浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是绿色浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.在菜单栏打开 工具 → GreenBrowser选项，弹出主页设置对话框。</p>
+              <p>2.选择常规-启动/退出-自定义主页，在下面框中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击 确定 即可设为主页。</p>
+              <p class="pic"><img src="http://p2.qhimg.com/d/method_greenbrowse.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#qqbrowser" name="qqbrowser"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_qq.png" align="left" />QQ浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是QQ浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击浏览器右上角的设置图标-选项，打开选项页面。</p>
+              <p>2.在基本设置-主页-自定义网址-输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击 保存 即可将360安全网址设为主页。</p>
+              <p class="pic"><img src="http://p1.qhimg.com/d/method_qq.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#baidu" name="baidu"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_baidu.png" align="left" />百度浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是百度浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击浏览器右上角的设置图标-选项，打开选项页面。</p>
+              <p>2.选择基本-启动时打开-主页-在主页内容中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击空白处自动保存，即可将360安全网址设为主页。</p>
+              <p class="pic"><img src="http://p2.qhimg.com/d/method_baiduse.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#safari" name="safari"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_safari.png" align="left" />Safari浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是Safari浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击浏览器右上角的设置图标-偏好设置，打开通用窗口。</p>
+              <p>2.选择“通用”，在主页内容中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击空白处即可自动保存，将360安全网址设为主页。</p>
+              <p class="pic"><img src="http://p3.qhimg.com/d/method_safari.jpg" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#opera" name="opera"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_opera.png" align="left" />Opera浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是Opera浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.点击左上角opera浏览器的图标，设置--首选项，弹出首选项对话框。</p>
+              <p>2.选择常规-启动-打开主页-在主页内容中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击 确定 即可将360安全网址设为主页。</p>
+              <p class="pic"><img src="http://p3.qhimg.com/d/method_opera.png" /></p>
+          </div>
+      </div>
+      <div class="section">
+          <a class="item-tab" href="#kr" name="kr"><img class="icon" src="http://p1.qhimg.com/d/sethome/icon_KR.png" align="left" />KR浏览器</a>
+          <div class="item-content">
+              <p style="text-align:center;"><a style="color:red; font-size:18px;" href="http://hao.360.cn">访问 360安全网址</a></p><br />
+              <p>您使用的是KR浏览器，<span style="color:red; font-size:14px;">需要手动设置主页</span>，请按以下操作进行：</p>
+              <p>1.在菜单栏打开 工具 → 修改主页，弹出主页设置对话框。</p>
+              <p>2.在主页内容中输入 <a href="http://hao.360.cn/">http://hao.360.cn</a>，然后点击 确定 即可设为主页。</p>
+              <p class="pic"><img src="http://p7.qhimg.com/d/method_KR.jpg" /></p>
+          </div>
+      </div>
+  </div>
+<div id="footer">
+<a target="_blank" href="http://hao.360.cn/about.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a target="_blank" href="http://feedback.hao.360.cn/">意见反馈</a>&nbsp;&nbsp;Copyright &copy; 360网址导航. All Rights Reserved. &nbsp;&nbsp;<a class="icp" href="http://www.miibeian.gov.cn">京ICP证080047号</a></div>
+<script src="http://hao.360.cn/css/monitorscript.js?v1341532940"  type="text/javascript"></script>
+<script>moniter.getTrack();</script>
+</div>
+</body>
+<script type="text/javascript">
+(function (){
+	var sectionArr = $('.item-tab');
+	var num = sectionArr.length;
+	$('.item-tab').hover(
+	  function () {
+		$(this).parents('.section').addClass('item-hover');
+	  },
+	  function () {
+		$(this).parents('.section').removeClass('item-hover');
+	  }
+	).click(function(){
+		tabClickEvent(this);
+	});
+	var tabClickEvent = function (target){
+		if ($(target).parents('.section').hasClass('item-selected')){
+			$('.item-selected .item-content').hide(100);
+			$(target).parents('.section').removeClass('item-selected');
+		}
+		else{
+			$('.item-content').hide();
+			$('.section').removeClass('item-selected');
+			$(target).parents('.section').addClass('item-selected');
+			$('.item-selected .item-content').fadeIn(500);
+		}
+	}
+	var getHash = function (){
+		return window.location.hash;
+	}
+	var goToHash = function  (){
+		var i = 0;
+		var hash = getHash();
+		if (hash){
+			for ( i ; i<num ;i++ ){
+				if (sectionArr.eq(i).attr('href')=="#"+hash){
+					break;
+				}
+			}
+			sectionArr.eq(i).click();
+		}
+	}
+	var UA = (function(WIN, UA) {
+		//正则列表
+		reg = {
+			browser: "(msie|safari|firefox|chrome|opera)",
+			shell: "(maxthon|theworld|360se|360ee|se|theworld|greenbrowser|qqbrowser)",
+			os: "(windows nt|macintosh|solaris|linux)"
+		},
+		//ua匹配方法
+		uaMatch = function(str) {
+			var reg = new RegExp(str + "\\b[ \\/]?([\\w\\.]*)", "i"),
+				result = UA.match(reg);
+			return result ? result.slice(1) : ["", ""];
+		},
+		//特殊浏览器检测
+		is360 = function() {
+			var result = false,
+				s;
+			try{
+				if(external && external.twGetRunPath){
+					s = external.twGetRunPath;
+					if(s && s.toLowerCase().indexOf("360se")>-1) {
+						result = true;
+					}
+				}
+			}catch(e) {
+				result = false;
+			}
+			return result;
+		}(),
+		//特殊检测maxthon返回版本号
+		maxthonVer = function() {
+			try {
+				if (/(\d+\.\d)/.test(external.max_version)) {
+					return parseFloat(RegExp['\x241']);
+				}
+			} catch (e) {}
+		}(),
+		browser = uaMatch(reg.browser),
+		shell = uaMatch(reg.shell),
+		os = uaMatch(reg.os);
+		//修正部分IE外壳浏览器
+		if (browser[0].toLowerCase() === "msie") {
+			if(is360){
+				shell = ["360se",""];
+			} 
+			else if(maxthonVer) {
+				shell = ["maxthon", maxthonVer];
+			}
+		} 
+		else if(browser[0].toLowerCase() === "safari") {
+			//特殊处理sf的version
+			browser[1] = uaMatch("version") + "." + browser[1];
+		}
+
+		return {
+			browser: browser,
+			shell: shell,
+			os: os.join(",")
+		};
+	})(window, navigator.userAgent);
+	var getVersionName = function  (){
+		return UA.shell[0] != ""?$.trim(UA.shell[0]):$.trim(UA.browser[0]);
+	}
+	var showMatchPage = function (){
+		var version = getVersionName().toLowerCase();
+		for ( var i = 0; i<num ; i++ ){
+			if ('#'+version == sectionArr.eq(i).attr("href")){
+				break;
+			}
+		}
+		sectionArr.eq(i).click();
+		$(window).scrollTop(sectionArr.eq(i).offset().top);
+	}
+	var init = function (){
+		$('.section .item-tab').attr('target','_self')
+		goToHash();
+		showMatchPage ();
+	}
+	init();
+})();
+</script>
+
+</html>
