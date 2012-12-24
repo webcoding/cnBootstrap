@@ -18,7 +18,7 @@
     <div class="row">
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#scrollpane"><i class="icon-chevron-right"></i> 模拟滚动条</a></li>
+                <li><a target="_blank" href="#scrollpane"><i class="icon-chevron-right"></i> 模拟滚动条</a></li>
                 <li class="dropdown-submenu"><a href="#select"><i class="icon-chevron-right"></i> Select控件模拟</a>
                     <ul class="dropdown-menu">
                         <li><a href="#select-auto" title="使用select标签自动生成div结构的模拟">select标签自动生成模拟</a></li>
@@ -106,10 +106,11 @@ $('.scroll-pane').jScrollPane();
     ================================================== -->
             <section id="share">
                 <div class="page-header">
-                    <h1>Share Links</h1>
+                    <h1>分享链接</h1>
                 </div>
                 <h2>前端项目</h2>
                 <ol>
+					<li><a target="_blank" href="http://aralejs.org/" title="基于 SeaJS 的前端解决方案，随心构建互联网应用">Arale - Alipay前端解决方案</a></li>
                     <li><a target="_blank" href="http://aliceui.com" title="Alice 是支付宝前端样式解决方案小组的项目代称。她包括构建样式库的样式库解决方案，帮助团队理解新技术的W3C标准文档库和正在进行中实验项目等; 也是团队的代称。目前 Alice 的主要职责是提供 CSS 和 HTML 方面的技术支持和解决方案开发。">Alice - Alipay前端样式库</a></li>
                     <li><a target="_blank" href="http://docs.kissyui.com" title="KISSY 是由淘宝前端攻城师们发起创建的一个开源 JS 类库。Keep It Simple & Stupid, Short & Sweet, Slim & Sexy... Yeah!">KISSY - 淘宝开源 JS 类库</a></li>
                     <li><a target="_blank" href="http://demo.doyoe.com/" title="Web前端实验室用于存放CSS探索之旅的实验和测试用例(Demos and Examples)">Web前端实验室</a></li>
@@ -151,6 +152,49 @@ $('.scroll-pane').jScrollPane();
                     <li><a target="_blank" href=""></a></li>
                     <li><a target="_blank" href=""></a></li>
                 </ol>
+				<h2>jQuery Plugin</h2>
+                <ul>
+					<li>IE对HTML5标签支持，以及浏览器特性检测：<a target="_blank" href="http://modernizr.com/download/">Modernizr</a> &amp; <a target="_blank" href="https://github.com/aFarkas/html5shiv">html5shiv</a></li>
+					<li>IE6 PNG 图片支持：<a target="_blank" href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD_belatedPNG</a></li>
+					<li>定制&amp;统一 浏览器的滚动条样式：<a target="_blank" href="https://github.com/thomd/jquery-scroll/">jquery-scroll</a> &amp; <a target="_blank" href="https://github.com/Charuru/lionbars">Lionbars</a></li>
+					<li>hover提示效果文字：<a target="_blank" href="http://twitter.github.com/bootstrap/javascript.html#tooltips">bootstrap-tooltips</a> &amp; <a target="_blank" href="https://github.com/jaz303/tipsy">tipsy</a></li>
+					<li>滚动条跟随nav效果：<a target="_blank" href="http://twitter.github.com/bootstrap/javascript.html#scrollspy">bootstrap-scrollspy</a></li>
+					<li>提示冒泡文字：<a target="_blank" href="https://github.com/jamescryer/grumble.js">grumble.js</a></li>
+					<li>导航栏过渡效果：<a target="_blank" href="http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers/">lavalamp</a></li>
+					<li>移动设备的滚动效果：<a target="_blank" href="https://github.com/cubiq/iscroll">iscroll 4</a></li>
+					<li>Mac OS Lion 风格的滚动条：<a target="_blank" href="https://github.com/Charuru/lionbars">Lionbars</a></li>
+					<li>弹性SlideShow：<a target="_blank" href="https://github.com/Mottie/Kwicks">kwicks for jQuery</a></li>
+					<li>瀑布流：<a target="_blank" href="https://github.com/desandro/isotope">isotope</a></li>
+					<li>抖动效果：<a target="_blank" href="https://gist.github.com/3270711">jQ shake</a></li>
+					<li>LightBox：<a target="_blank" href="https://github.com/fancyapps/fancyBox">fancyBox</a></li>
+					<li>KenDo UI：<a target="_blank" href="http://www.kendoui.com/purchase.aspx">KenDo UI</a></li>
+					<li>textarea自适应高度：<a target="_blank" href="http://unwrongest.com/projects/elastic/">elastic</a></li>
+					<li>提示区域 &amp; 提示层：<a target="_blank" href="https://github.com/needim/noty">noty</a></li>
+					<li>浮动话题泡：<a target="_blank" href="https://github.com/jamescryer/grumble.js">jQuery grumble</a></li>
+					<li>旋转进度：<a target="_blank" href="https://github.com/aterrien/jQuery-Knob">jQuery Knob</a></li>
+                </ul>
+				<h2>jQuery Plugin</h2>
+                <ul>
+				<li>编辑器：<a href="http://www.sublimetext.com/2">Sublime Text 2</a> / <a href="https://github.com/textmate/textmate">TextMate 2</a> / <a href="http://macvim.org/">Vim</a></li>
+				<li>命令行：<a href="http://www.iterm2.com/">iTerm2</a></li>
+				<li>浏览器调试环境：<a href="http://www.google.com/chrome">Chrome</a> / <a href="http://www.mozilla.org/">Firefox</a> + <a href="http://getfirebug.com/">Firebug</a></li>
+				<li>移动设备浏览器：<a href="http://www.mozilla.org/projects/fennec">Mozilla Fennec</a></li>
+				<li>兼容性测试：<a href="https://www.virtualbox.org/">VirtualBox</a> + Win XP（IE 8）</li>
+				<li>版本控制工具：<a href="http://mac.github.com/">GitHub for Mac</a> / <a href="http://versionsapp.com/">Versions</a> / <a href="http://www.sourcetreeapp.com/">SourceTree</a></li>
+				<li>FTP工具：<a href="http://filezilla-project.org/">Filezilla</a> / <a href="http://itunes.apple.com/us/app/forklift/id412448059?mt=12">ForkLift</a></li>
+				<li>HTTP抓包及Post/Get模拟：<a href="http://www.charlesproxy.com/">Charles</a></li>
+				<li>PHP集成环境：<a href="http://www.apachefriends.org/en/xampp-macosx.html">XAMPP for Mac</a></li>
+				<li>SQL数据库管理：<a href="http://www.sequelpro.com/">Sequel Pro</a></li>
+				<li>标注工具：<a href="http://www.getmarkman.com/">Mark Man</a> / <a href="http://itunes.apple.com/us/app/xscope/id447661441?mt=12">xScope</a></li>
+				<li>取色拾色器：<a href="http://itunes.apple.com/app/sip/id507257563?mt=12">Sip</a> / <a href="http://itunes.apple.com/us/app/snip/id512505421?mt=12">Snip</a> / <a href="http://itunes.apple.com/us/app/xscope/id447661441?mt=12">xScope</a></li>
+				<li>MarkDown编辑器：<a href="http://mouapp.com/">Mou</a></li>
+				<li>浏览器免刷新开发环境：<a href="http://http://livereload.com/">LiveReLoad</a> / <a href="http://incident57.com/codekit/">CodeKit</a></li>
+				<li>CSS Sprite切图工具：<a href="http://itunes.apple.com/us/app/spriteright/id488584662?mt=12">SpriteRight</a></li>
+				<li>Less -&gt; CSS 编译：<a href="http://incident57.com/codekit/">CodeKit</a> / <a href="http://http://livereload.com/">LiveReLoad</a> / <a href="http://incident57.com/less/">Less</a></li>
+				<li>配色方案工具：<a href="http://itunes.apple.com/us/app/colorschemer-studio/id417896628?mt=12">ColorSchemer Studio</a></li>
+				<li>多浏览器Cookie管理：<a href="http://itunes.apple.com/us/app/cookie/id415585910?mt=12">Cookie</a></li>
+				<li>图片素材收集：<a href="http://seesparkbox.com/">Sparkbox</a> / <a href="http://www.pixa-app.com/">Pixa</a></li>
+				</ul>
             </section>
         </div>
     </div>

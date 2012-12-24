@@ -32,6 +32,7 @@
 			<li><a href="#names"><i class="icon-chevron-right"></i> 常用词命名统一表</a></li>
 			<li><a href="#javascript"><i class="icon-chevron-right"></i> JavaScript 编码风格</a></li>
 			<li><a href="#js-notes"><i class="icon-chevron-right"></i> JavaScript 注释规范</a></li>
+			<li><a href="#json"><i class="icon-chevron-right"></i> JSON格式规范</a></li>
 			<li><a href="#readme"><i class="icon-chevron-right"></i> 说明文档书写规范</a></li>
 			<li><a href="#examples"><i class="icon-chevron-right"></i> Examples 规范</a></li>
 			<li><a href="#history"><i class="icon-chevron-right"></i> 历史记录书写规范</a></li>
@@ -126,7 +127,43 @@
 			<div class="page-header">
 				<h1>HTML规范</h1>
 			</div>
-			<p>HTML规范</p>
+			<h5>* 第一行统一使用HTML5标准：&lt;!DOCTYPE html&gt;</h5>
+			<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+			<h5>Meta 的使用：（需根据具体项目选择）参考 <a href="https://github.com/webcoding/cool-head">cool-head</a> </h5>
+			
+			
+			<ul>
+			<li> <code>&lt;img&gt;</code> 标签默认缺省格式：<code>&lt;img src="xxx.png" alt="缺省时文字" /&gt;</code> 避免出现 <a href="http://js8.in/555.html" title="src=&quot;&quot; 问题"> src="" 问题</a> </li>
+			<li> <code>&lt;a&gt;</code> 标签缺省格式：<code>&lt;a href="###" title="链接名称"&gt;xxx&lt;/&gt;</code> 注：<code>target="_blank"</code> 根据需求决定 </li>
+			<li><a>标签预留链接占位符使用 <code>###</code>，参见：</a> <a href="http://www.v2ex.com/t/48511/" title="a标签占位符问题">a标签占位符问题</a></li>
+			<li>所有标签需要符合XHTML标准闭合</li>
+			<li>一律统一标签结尾斜杠的书写形式：<code>&lt;br /&gt;</code> <code>&lt;hr /&gt;</code> 注意之间空格</li>
+			<li>避免使用已过时标签，如：<code>&lt;b&gt;</code> <code>&lt;u&gt;</code> <code>&lt;i&gt;</code> 而用 <code>&lt;strong&gt;</code> <code>&lt;em&gt;</code> 等代替</li>
+			<li>使用 <code>data-xxx</code> 来添加自定义数据，如：<code>&lt;input data-xxx="yyy"/&gt;</code> </li>
+			<li>避免使用 <code>style="xxx:xxx;"</code> 的内联样式表</li>
+			<li>特殊符号使用参考 <a href="http://www.w3school.com.cn/html/html_entities.asp">HTML 符号实体</a> </li>
+			</ul>
+			
+			<h5>HTML 细化规范</h5>
+			<ul>
+			<li>HTML <code>head</code> 部分的结构参看：<a href="https://github.com/webcoding/cool-head">cool-head</a> (摘取必要内容即可)</li>
+			<li> <code>css</code> 文件置于都 <strong>头部</strong> </li>
+			<li> <code>jQuery</code> 及 <code>Google Analytics</code> 引用置于 <strong>头部</strong> </li>
+			<li>其他效果 <code>js</code> 及 <code>统计代码</code> 文件置于 <strong>尾部</strong> </li>
+			<li>HTML 代码尽量过一遍 <a href="http://html5.validator.nu/">HTML5 验证</a> </li>
+			<li>HTML 占位图片使用 <a href="http://temp.im/">temp.im</a> &amp; <a href="http://placehold.us/">placehold.us</a> 图片服务</li>
+			</ul>
 		</section>
 		
 		
@@ -239,7 +276,20 @@
 			<div class="alert alert-info"><strong>强调！</strong> 需要通过 jslint，查看下面的具体编码风格。</div>
 			<p><strong>首先必须通过 <pre class="prettyprint linenums">arale/tools/gjslint</pre> 普通模式校验。</strong> 通不过的，不允许提交到 Git 库。</p>
 
-			<hr><p>下面是一些常用注意点：</p>
+			<hr>
+			
+			<ul>
+			<li>JS 换行缩进：采用 4 空格</li>
+			<li>结束行需添加分号<code>;</code>
+			</li>
+			<li>jQuery变量要求首字符为 <code>$</code>, 私有变量:首字符为 <code>_</code>; 尽量避免全局变量.</li>
+			<li>避免使用 eval()，setTimeOut使用调用函数，考虑重绘，回流 操作对页面影响  参看：<a href="http://www.zhangxinxu.com/wordpress/2010/01/%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98%EF%BC%9Acss%E6%80%A7%E8%83%BD%E8%AE%A9javascript%E5%8F%98%E6%85%A2%EF%BC%9F/" title="重绘,回流参考">reflows，repaints</a>
+			</li>
+			<li>JS调试使用 <code>console.log()</code> 及 <code>console.dir()</code> 进行，避免使用弹出框，线上版需要注释所有调试代码</li>
+			<li>JS压缩混淆工具: <a href="http://javascriptcompressor.com/" title="JS 压缩和混淆">JS Compressor</a>  如果使用了压缩，需要留 <code>name-src.js</code> 在同路径供今后修改使用</li>
+			</ul>
+			<hr>
+			<p>下面是一些常用注意点：</p>
 
 			<h2>编码</h2>
 
@@ -463,6 +513,17 @@ define(function(require, exports, module) {
 
 		</section>
 		
+		<!-- JSON
+		================================================== -->
+		<section id="json">
+			<div class="page-header">
+				<h1>JSON格式规范</h1>
+			</div>
+			<p>参考<a href="https://github.com/webcoding/google-styleguide/blob/master/JSONStyleGuide.md">JSON Style Guide翻译</a>，原版：<a href="http://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google JSON Style Guide</a></p>
+		</section>
+		
+		
+		
 		<!-- Readme
 		================================================== -->
 		<section id="readme">
@@ -500,8 +561,8 @@ define(function(require, exports, module) {
 
 
 <p>上面两部分是必须的，可以根据实际情况，加入其他部分。</p>
-
-<p>参考范例：<a href="https://github.com/alipay/arale/tree/master/lib/class/README.md">lib/class/README.md</a></p>
+<p>关于Markdown的使用可以参考：<a target="_blank" href="http://www.tcreator.info/webSchool/tools/markdown_basics.html">Markdown 中文基础教程文档</a></p>
+<p>参考范例：<a target="_blank" href="https://github.com/alipay/arale/tree/master/lib/class/README.md">lib/class/README.md</a></p>
 
 <h2>HISTORY.md 书写规范</h2>
 
@@ -616,9 +677,22 @@ define(function(require, exports, module) {
 		================================================== -->
 		<section id="edm">
 			<div class="page-header">
-				<h1>EDM制作规范</h1>
+				<h1>EDM 制作规范</h1>
 			</div>
-			<p>EDM制作规范</p>
+			<ul>
+			<li> <code>CSS</code> 只可使用 <strong>内联样式表</strong> ，如：<code>style="margin:0;"</code> </li>
+			<li>设计之初遵循： <strong>图上无文本，文本后无底纹</strong> 的规则</li>
+			<li>使用 <code>MailChimp HTML Email CSS Fix</code> 参看下文链接</li>
+			<li>引入 <code>CSS Reset for HTML Email</code> 参看下文链接</li>
+			<li>使用 <code>Table</code> 布局而非 <code>DIV</code> </li>
+			<li>所有图片使用 <code>IMG</code> 标签，如：<code>&lt;img style="style="display:block" "src="" /&gt;</code> </li>
+			<li>可以适当使用占位符 <code>spacer.gif</code> </li>
+			<li>多用 <code>&lt;br /&gt;</code> 换行而非 <code>&lt;p&gt;</code> </li>
+			<li>整体最佳宽度为：<code>550-600px</code> </li>
+			<li>不使用 <code>Javascript</code> </li>
+			<li>正式发送给用户之前，多次测试</li>
+			</ul>
+			<p>更多细节参考下面链接：<br><a href="http://www.web-ed.com.au/2011/05/coding-html-newsletters-edms-quick-guide/">12 Killer Tips and Tricks for Building HTML Email</a></p>
 		</section>
 
     </div>
