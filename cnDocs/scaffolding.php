@@ -99,18 +99,16 @@
                 </div>
 				
                 <h3 titlt="Basic grid HTML"></h3>
-                <p title="For a simple two column layout, create a .row and add the appropriate number of .span* columns. As this is a 12-column grid, each .span* spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).">一个基本的布局由两个“列”组成，栅格系统由一系列横跨12等分的"span*"组成。
-				
-				For a simple two column layout, create a <code>.row</code> and add the appropriate number of <code>.span*</code> columns. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).</p>
+                <p title="For a simple two column layout, create a .row and add the appropriate number of .span* columns. As this is a 12-column grid, each .span* spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).">对于一个简单的两列布局，创建一个 <code>.row</code> 并添加适当数量的 <code>.span*</code> 列。由于这是一个12列的栅格系统，每个 <code>.span*</code> 都是12列中的那些，并且应该是每列最多达到12（或者说是其列总数最大为12）。</p>
                 <pre class="prettyprint linenums">
 &lt;div class="row"&gt;
   &lt;div class="span4"&gt;...&lt;/div&gt;
   &lt;div class="span8"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-                <p>Given this example, we have <code>.span4</code> and <code>.span8</code>, making for 12 total columns and a complete row.</p>
-                <h2>Offsetting columns</h2>
-                <p>Move columns to the right using <code>.offset*</code> classes. Each class increases the left margin of a column by a whole column. For example, <code>.offset4</code> moves <code>.span4</code> over four columns.</p>
+                <p title="Given this example, we have .span4 and .span8, making for 12 total columns and a complete row.">在这个例子中，我们有 <code>.span4</code> 和 <code>.span8</code>，共12列和一个完整的行。</p>
+                <h2 title="Offsetting columns">列的偏移</h2>
+                <p title="Move columns to the right using .offset* classes. Each class increases the left margin of a column by a whole column. For example, .offset4 moves .span4 over four columns.">使用 <code>.offset*</code> 样式将列向右偏移。每一样式都会添加其等列宽度的左边距，如 <code>.offset4</code> 将移动 <code>.span4</code> 的列宽作为其偏移量。</p>
                 <div class="bs-docs-grid">
                     <div class="row show-grid">
                         <div class="span4">4</div>
@@ -130,10 +128,10 @@
   &lt;div class="span3 offset2"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-                <h2>Nesting columns</h2>
-                <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column. Nested rows should include a set of columns that add up to the number of columns of its parent.</p>
-                <h3>Example</h3>
-                <p>Here two nested <code>.span4</code> columns are placed within a <code>.span8</code>.</p>
+                <h2 title="Nesting columns">列的内嵌</h2>
+                <p title="To nest your content with the default grid, add a new .row and set of .span* columns within an existing .span* column. Nested rows should include a set of columns that add up to the number of columns of its parent.">默认的栅格系统下很容易实现内嵌，只要在一个已存在的 <code>.span*</code> 列中，嵌套一个新的 <code>.row</code> 列，然后在 <code>.row</code> 列中再添加一组 <code>.span*</code> 列即可。内嵌的行应该包含多个列，行的 <code>span*</code> 应该是几个内嵌列 <code>span*</code> 之和。</p>
+                <h3 title="Example">示例</h3>
+                <p title="Here two nested .span4 columns are placed within a .span8.">这里两个内嵌的 <code>.span4</code> 列包含在 <code>.span8</code> 列中。</p>
                 <div class="row show-grid">
                     <div class="span9"> 
 						Level 1 column
@@ -166,11 +164,11 @@
     ================================================== -->
             <section id="fluidGridSystem">
                 <div class="page-header">
-                    <h1>Fluid grid system</h1>
+                    <h1 title="Fluid grid system">流体栅格系统 <small>基于百分比的12列响应式布局</small></h1>
                 </div>
 				
-                <h2>Live fluid grid example</h2>
-                <p>The fluid grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.</p>
+                <h2 title="Live fluid grid example">流体栅格示例</h2>
+                <p title="The fluid grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.">流体栅格系统的列宽使用百分比计算宽度而非像素。与像素栅格布局一样，流体栅格系统也能根据设备和分辨率不同提供了不同的响应性方案。</p>
                 <div class="bs-docs-grid">
                     <div class="row-fluid show-grid">
                         <div class="span1">1</div>
@@ -203,8 +201,8 @@
                         <div class="span12">12</div>
                     </div>
                 </div>
-                <h3>Basic fluid grid HTML</h3>
-                <p>Make any row "fluid" by changing <code>.row</code> to <code>.row-fluid</code>. The column classes stay the exact same, making it easy to flip between fixed and fluid grids.</p>
+                <h3 title="Basic fluid grid HTML">基本流体布局HTML代码</h3>
+                <p title='Make any row "fluid" by changing .row to .row-fluid. The column classes stay the exact same, making it easy to flip between fixed and fluid grids.'>把固定布局变成流式布局很简单，把 <code>.row</code> 变成 <code>.row-fluid</code> 即可，列内容不变，因此在流式布局和固定布局之间转换非常简单。</p>
                 <pre class="prettyprint linenums">
 &lt;div class="row-fluid"&gt;
   &lt;div class="span4"&gt;...&lt;/div&gt;
@@ -212,8 +210,8 @@
 &lt;/div&gt;
 </pre>
 
-          <h2>Fluid offsetting</h2>
-          <p>Operates the same way as the fixed grid system offsetting: add <code>.offset*</code> to any column to offset by that many columns.</p>
+          <h2 title="Fluid offsetting">流布局偏移</h2>
+          <p title="Operates the same way as the fixed grid system offsetting: add .offset* to any column to offset by that many columns.">与像素栅格系统操作方式相同：添加 <code>.offset*</code> 到任意列实现*列的偏移。</p>
           <div class="bs-docs-grid">
             <div class="row-fluid show-grid">
               <div class="span4">4</div>
@@ -234,8 +232,8 @@
 &lt;/div&gt;
 </pre>
 
-          <h2>Fluid nesting</h2>
-          <p>Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.</p>
+          <h2 title="Fluid nesting">流体列的内嵌</h2>
+          <p title="Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.">流式列的内嵌稍稍有点不同：内嵌列宽度数值与父级无关，其累计应该为12，因为所有的内嵌列都是按比例而非像素分配父列的100%宽度。</p>
           <div class="row-fluid show-grid">
             <div class="span12">
               Fluid 12
@@ -275,19 +273,65 @@
 &lt;/div&gt;
 </pre>
             </section>
-            
 
+            <!-- Customizaton
+    ================================================== -->
+            <section id="gridCustomization">
+                <div class="page-header">
+                    <h1 title="Custom grid">自定义栅格</h1>
+                </div>
+				
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>变量</th>
+							<th>默认值</th>
+							<th>描述</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>@gridColumns</code></td>
+							<td>12</td>
+							<td>列的数量</td>
+						</tr>
+						<tr>
+							<td><code>@gridColumnWidth</code></td>
+							<td>60px</td>
+							<td>每列的宽度</td>
+						</tr>
+						<tr>
+							<td><code>@gridGutterWidth</code></td>
+							<td>20px</td>
+							<td>列之间的间隔宽度</td>
+						</tr>
+						<tr>
+							<td><code>@siteWidth</code></td>
+							<td><em>计算所有列的总宽度（含间隔）</em></td>
+							<td>计算列的总宽度以设置 <code>.container-fixed()</code> 的宽度</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<h3>LESS中的变量</h3>
+				<p>Bootstrap内置了一组很有用的变量，用以定制上述的默认940px栅格系统。这些变量保存在variables.less中。</p>
 
+				<h3>如何定制</h3>
+				<p>修改栅格意味着改变三个 <code>@grid*</code> 变量并要重新编译Bootstrap。改变variables.less中的栅格变量，再使用<a href="extend.php#compiling">四种方式中的某一种重编译less</a>。在添加更多列之前，要先在grid.less在定义这三个变量。</p>
+
+				<h3>保持响应性</h3>
+				<p>定制的栅格只能工作在默认的940px下，若要保证Bootstrap的全面响应性，还得更改responsive.less中的栅格内容。</p>
+
+			</section>
 
             <!-- Layouts (Default and fluid)
     ================================================== -->
             <section id="layouts">
                 <div class="page-header">
-                    <h1>Layouts</h1>
+                    <h1 title="Layouts">布局 <small>用基础模板创建网页</small></h1>
                 </div>
-                <h2>Fixed layout</h2>
-                <p>Provides a common fixed-width (and optionally responsive) layout with only <code>&lt;div class="container"&gt;</code> required.</p>
-                <p>默认布局宽度为940px、居中，简单的使用 <code>&lt;div class="container"&gt;</code> 即可达到效果。</p>
+                <h2 title="Fixed layout">固定布局</h2>
+                <p title='Provides a common fixed-width (and optionally responsive) layout with only &lt;div class="container"&gt; required.'>提供一个共同的固定宽度(也可以选择相应式宽度) 居中布局，仅仅使用 <code>&lt;div class="container"&gt;</code> 即可。</p>
                 <div class="mini-layout">
                     <div class="mini-layout-body"></div>
                 </div>
@@ -298,9 +342,9 @@
   &lt;/div&gt;
 &lt;/body&gt;
 </pre>
-                <h2>Fluid layout</h2>
-                <p>Create a fluid, two-column page with <code>&lt;div class="container-fluid"&gt;</code>&mdash;great for applications and docs.</p>
-                <p><code>&lt;div class="container-fluid"&gt;</code> 是一种更自由的布局。更适合apps或者docs使用。</p>
+                <h2 title="Fluid layout">流体布局</h2>
+                <p title='Create a fluid, two-column page with &lt;div class="container-fluid"&gt;&mdash;great for applications and docs.'>使用 <code>&lt;div class="container-fluid"&gt;</code>  实现一个两列流体布局，拥有一个左边栏。很适合做应用和文档。</p>
+                <p></p>
                 <div class="mini-layout fluid">
                     <div class="mini-layout-sidebar"></div>
                     <div class="mini-layout-body"></div>
