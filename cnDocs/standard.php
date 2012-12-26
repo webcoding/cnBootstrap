@@ -519,7 +519,7 @@ define(function(require, exports, module) {
 			<div class="page-header">
 				<h1>JSON格式规范</h1>
 			</div>
-			<p>参考<a href="https://github.com/webcoding/google-styleguide/blob/master/JSONStyleGuide.md">JSON Style Guide翻译</a>，原版：<a href="http://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google JSON Style Guide</a></p>
+			<p>参考<a target="_blank" href="https://github.com/webcoding/google-styleguide/blob/master/JSONStyleGuide.md">JSON Style Guide翻译</a>，原版：<a target="_blank" href="http://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google JSON Style Guide</a></p>
 		</section>
 		
 		

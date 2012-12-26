@@ -2,6 +2,12 @@
  * 自定义样式
 **/
 
+.none{ margin:0; padding:0;list-style:none}
+.solutions{ margin-right:-20px;}
+.solutions li{ float:left; display:inline; text-align:center; margin:0 20px 20px 0;}
+.solutions b{ display:block}
+
+
 /* 模拟滚动条 */
 .scoll_box{ height:98px; width:400px;}
 .scoll_box ul{ margin-bottom:0}
