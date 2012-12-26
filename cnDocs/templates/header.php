@@ -30,7 +30,6 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 <!-- Navbar
@@ -43,8 +42,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-			</button>
-			<a class="brand" href="./index.php">Bootstrap</a>
+            </button>
+            <a class="brand" href="./index.php">Bootstrap</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li <?php if(isset($page) && $page == 'home') echo 'class="active"' ?>> <a href="./index.php" title="Home">首页</a> </li>

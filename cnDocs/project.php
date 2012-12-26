@@ -18,15 +18,14 @@
     <div class="row">
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-                <li><a target="_blank" href="#scrollpane"><i class="icon-chevron-right"></i> 模拟滚动条</a></li>
+                <li><a href="#scrollpane"><i class="icon-chevron-right"></i> 模拟滚动条</a></li>
                 <li class="dropdown-submenu"><a href="#select"><i class="icon-chevron-right"></i> Select控件模拟</a>
                     <ul class="dropdown-menu">
                         <li><a href="#select-auto" title="使用select标签自动生成div结构的模拟">select标签自动生成模拟</a></li>
                         <li><a href="#select-div" title="不存在select标签，直接使用div结构模拟select效果">Div模拟select</a></li>
                     </ul>
                 </li>
-                <li><a href="#select"><i class="icon-chevron-right"></i> 分页组件</a></li>
-                <li><a href="#select"><i class="icon-chevron-right"></i> 九宫格背景组件</a></li>
+                <li><a href="#pages"><i class="icon-chevron-right"></i> 分页组件</a></li>
                 <li><a href="#share"><i class="icon-chevron-right"></i> 分享链接</a></li>
             </ul>
         </div>
@@ -75,7 +74,7 @@ $('.scroll-pane').jScrollPane();
 
             <!-- select
     ================================================== -->
-            <section id="scrollpane">
+            <section id="select">
                 <div class="page-header">
                     <h1>Select控件模拟</h1>
                 </div>
@@ -100,7 +99,15 @@ $('.scroll-pane').jScrollPane();
                 <p><span class="label label-warning">注意：</span> </p>
             </section>
 
-
+            <!-- Pages
+    ================================================== -->
+            <section id="pages">
+                <div class="page-header">
+                    <h1>分页组件</h1>
+                </div>
+                <h3>分页组件</h3>
+                <p>页码是常用的网页组件</p>
+            </section>
 
             <!-- Share
     ================================================== -->
@@ -173,7 +180,7 @@ $('.scroll-pane').jScrollPane();
 					<li>浮动话题泡：<a target="_blank" href="https://github.com/jamescryer/grumble.js">jQuery grumble</a></li>
 					<li>旋转进度：<a target="_blank" href="https://github.com/aterrien/jQuery-Knob">jQuery Knob</a></li>
                 </ul>
-				<h2>前段工具</h2>
+				<h2>前端工具</h2>
                 <ul>
 				<li>编辑器：<a href="http://www.sublimetext.com/2">Sublime Text 2</a> / <a href="https://github.com/textmate/textmate">TextMate 2</a> / <a href="http://macvim.org/">Vim</a></li>
 				<li>命令行：<a href="http://www.iterm2.com/">iTerm2</a></li>
