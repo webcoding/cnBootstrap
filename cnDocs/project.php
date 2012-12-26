@@ -173,7 +173,7 @@ $('.scroll-pane').jScrollPane();
 					<li>浮动话题泡：<a target="_blank" href="https://github.com/jamescryer/grumble.js">jQuery grumble</a></li>
 					<li>旋转进度：<a target="_blank" href="https://github.com/aterrien/jQuery-Knob">jQuery Knob</a></li>
                 </ul>
-				<h2>jQuery Plugin</h2>
+				<h2>前段工具</h2>
                 <ul>
 				<li>编辑器：<a href="http://www.sublimetext.com/2">Sublime Text 2</a> / <a href="https://github.com/textmate/textmate">TextMate 2</a> / <a href="http://macvim.org/">Vim</a></li>
 				<li>命令行：<a href="http://www.iterm2.com/">iTerm2</a></li>
