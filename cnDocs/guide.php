@@ -86,7 +86,12 @@
 			<div class="page-header">
 				<h1>JavaScript</h1>
 			</div>
-			<p>JavaScript规范</p>
+			<h3>JavaScript基础</h3>
+			<p>JavaScript入门必须要了解的知识</p>
+			<ol>
+				<li>JavaScript</li>
+			</ol>
+			
 		</section>
 		<section id="js-guide">
 			<div class="page-header">
