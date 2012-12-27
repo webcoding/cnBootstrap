@@ -4,7 +4,12 @@
 
 .none{ margin:0; padding:0;list-style:none}
 .solutions li{text-align:center;}
-.solutions a.thumbnail{padding-top:10px;}
+.solutions a.thumbnail{padding-top:5%;}
+.solutions h4{margin:5px 0}
+
+@media (max-width: 767px) {
+    .solutions a.thumbnail{padding-top:10px;}
+}
 /*
 .solutions li:hover{
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.4); 
