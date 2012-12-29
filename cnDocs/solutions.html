@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>前端解决方案 · Oricode - Twitter Bootstrap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="全兼容的前端解决方案">
+
+<meta name="author" content="Authors of Bootstrap">
+<!--
+<link href="assets/css/reset.css" rel="stylesheet">
+<link href="assets/css/common.css" rel="stylesheet">
+-->
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+<link href="assets/js/jscrollpane/jquery.jscrollpane.css" rel="stylesheet">
+<!--<link href="assets/css/icons-pure-css.css" rel="stylesheet">-->
+<link href="assets/css/custom.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<!-- Navbar
+================================================== -->
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.php">Bootstrap</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li > <a href="./index.php" title="Home">首页</a> </li>
+                    <li > <a href="./getting-started.php" title="Get started">概述</a> </li>
+                    <li > <a href="./scaffolding.php" title="Scaffolding">框架</a> </li>
+                    <li > <a href="./base-css.php" title="Base CSS">基础CSS</a> </li>
+                    <li > <a href="./components.php" title="Components">组件</a> </li>
+                    <li > <a href="./javascript.php" title="JavaScript">Javascript插件</a> </li>
+                    <li > <a href="./customize.php" title="Customize">定制</a> </li>
+                    <li class="divider-vertical"></li>
+                    <li > <a href="./bugs-and-fixed.php" title="Bugs - Fixed">Bugs - Fixed</a> </li>
+                    <li > <a href="./standard.php" title="Guide"> 前端规范</a> </li>
+                    <li > <a href="./guide.php" title="Guide"> 前端进阶</a> </li>
+                    <li class="active"> <a href="./solution.php" title="Guide"> 解决方案</a> </li>
+                    <li > <a href="./project.php" title="Projects"> 项目</a> </li>
+                    <li > <a href="./update-log.php" title="Update log"> 更新日志</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+===============================================
+===============================================
+-------------------- 分割线 --------------------
+===============================================
+===============================================
+-->
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1 title="Guide">前端解决方案</h1>
+    <p class="lead">头痛的问题，我们提前搞定</p>
+  </div>
+</header>
+
+
+  <div class="container solutions">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+			<li><a href="#overview"><i class="icon-chevron-right"></i> 概述</a></li>
+			<li><a href="#vertical-middle"><i class="icon-chevron-right"></i> 垂直/水平居中</a></li>
+			
+        </ul>
+      </div>
+      <div class="span9">
+		
+		
+        <!-- Overview
+        ================================================== -->
+        <section id="overview">
+            <div class="page-header">
+                <h1>概述</h1>
+            </div>
+            <p>原本想把解决方案的案例全部放置到此页中，左侧配置导航引导，而如果仅仅放置经典解决方案，难免忽略一些常用的问题，全整理在此页面就太过琐碎了。遂决定按照此思想方式，针对每个解决方案的不同实现方法汇总单一的页面，这样有的放矢，也方便大家对比差异优劣！</p>
+            <p>同时为了排除过多的代码样式干扰，案例一般采用浏览器默认样式。</p>
+        </section>
+		
+        <!-- vertical-middle
+        ================================================== -->
+        <section id="vertical-middle">
+            <div class="page-header">
+                <h1>垂直/水平居中</h1>
+            </div>
+            <h3>固定宽度的容器水平居中 <small>具有固定宽度或百分比等已知值的容器居中</small></h3>
+            <div class="bs-docs-example">
+            	<div class="test bc">固定宽度或百分比的已知值</div>
+            </div>
+<pre class="prettyprint linenums">
+.test{ background:#ccc; width:300px; width:50%; height:80px;}
+.bc{ margin-left:auto; margin-right:auto}
+</pre>
+            <p><strong>核心：</strong>width定值 + margin-left:auto; margin-right:auto;，二者缺一不可。</p>
+            <ul>
+                <li>优：固定宽度容器水平居中实现超级简单，用于页面主体居中特方便。</li>
+                <li>劣：此实现思想无法应用于垂直居中，也无法实现未知宽度的容器水平居中。</li>
+            </ul>
+            
+            <h3>内容的水平/垂直居中 <small>垂直方向上仅适用于单行内容居中</small></h3>
+            <div class="bs-docs-example">
+            	<div class="test bc" style=" text-align:center;line-height:80px;">内容的水平/垂直居中</div>
+            </div>
+<pre class="prettyprint linenums">
+&lt;div style=&quot;text-align:center;line-height:80px;&quot;&gt;固定宽度或百分比的已知值&lt;/div&gt;
+</pre>
+            <p><strong>核心：</strong>水平text-align:center; + 垂直（适用于单行内容）line-height:等于容器高度;</p>
+            <ul>
+                <li>优：实现简单。</li>
+                <li>劣：无法支持多行文本。</li>
+            </ul>
+            
+            
+            <h3>CSS绝对定位居中 <small>相对于具备定位属性的父标签</small></h3>
+            <div class="bs-docs-example">
+                <div class="Lx"></div>
+                <div class="Ly"></div>
+            </div>
+<pre class="prettyprint linenums">
+.Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
+.Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
+.Ly{width:30px;height:100px;margin-left:-15px;margin-top:-50px;}
+</pre>
+        	
+            
+        </section>
+		
+		
+		
+	    
+
+      </div>
+    </div>
+
+</div>
+
+
+<!-- Footer
+================================================== -->
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> , <a href="http://twitter.com/fat" target="_blank">@fat</a> and <a href="http://weibo.com/206662804" target="_blank">@cloudYan</a> .</p>
+    <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="footer-links">
+      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="https://github.com/twitter/bootstrap/wiki">Roadmap and changelog</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Le javascript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>')</script>
+<!--<script src="/assets/js/jquery.min.js"></script> -->
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script> 
+<script src="assets/js/bootstrap-carousel.js"></script> 
+<script src="assets/js/bootstrap-typeahead.js"></script> 
+<script src="assets/js/bootstrap-affix.js"></script> 
+<script src="assets/js/holder/holder.js"></script>
+<script src="assets/js/application.js"></script> 
+<script src="assets/js/jquery.mousewheel.js"></script> 
+<script src="assets/js/jscrollpane/jquery.jscrollpane.min.js"></script> 
+<script src="assets/js/ori-custom.js"></script> 
+
+<!--
+<div style="text-indent:-9999px; height:0; overflow:hidden">
+<script src="http://www.tcreator.info/plus/mytag_js.php?aid=5"></script>
+</div>-->
+</body>
+</html>
