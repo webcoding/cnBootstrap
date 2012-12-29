@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -9,26 +9,33 @@
 .test{ height:225px; background:url(img/pngfix.png)}
 </style>
 </head>
-
 <body>
 <div class="wrap">
-	
     <h1>IE6 PNG24图片半透明度问题的解决办法</h1>
+	<h2>方法一：DD_belatedPNG</h2>
     <p>使用DD_belatedPNG方法修复IE6的Png半透明，支持背景重定位(background-position)和平铺(repeat)设置。</p>
     <div class="demo">
         <img class="ie6png" src="img/pngfix.png" width="300" height="225">
         <h3>这是png24图片</h3>
-        <div class="test ie6png"></div>
-        <h3>这是png24背景，横向平铺了</h3>
-        
     </div>
-    <h2>问题及注意事项：</h2>
-	<p>此方法对延迟加载的或加载完毕后重新操作src赋值的png24图片无效，即无fix处理！</p>
+<pre class="prettyprint linenums">
+&lt;img class="ie6png" src="img/pngfix.png" width="300" height="225"&gt;
+</pre>
+	<div class="demo">
+        <div class="test ie6png"></div>
+        <h3>这是png24背景，且横向平铺了</h3>
+    </div>
+<pre class="prettyprint linenums">
+&lt;div class="test ie6png"&gt;&lt;/div&gt;
+</pre>
 
+
+    <h3>问题及注意事项：</h3>
+	<p>此方法对延迟加载的或加载完毕后重新操作src赋值的png24图片无效，即不会进行fix处理！</p>
+	
+	<h2>方法二：</h2>
 
 </div>
-
-
 
 <!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
 

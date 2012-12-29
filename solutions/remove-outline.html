@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>去除链接、按钮虚线框</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+a.outline-all:focus{outline:none;}
+input{outline:none;}
+input[type=button]::-moz-focus-inner{border:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>去除链接、按钮虚线框 | remove outline</h1>
+    <p>一般情况下，链接的 outline 可以不去除。如果 outline 形状极丑陋的情况下，视觉效果很差，则需要使用这些方法：</p>
+    
+    <div class="demo">
+		<p><a href="#">未去掉</a></p>
+		<p><a class="outline-all" hidefocus href="#" title="remove outline for all situation">去掉所有情况下的虚线</a></p>
+    	<p>IE6: <a href="#" hidefocus="true">A outline:hidefocus</a></p>
+		<p>Firefox: </p>
+		<p><input type="submit" hidefocus value="去掉除firefox外的虚线框" /></p>
+		<p><input type="button" hidefocus value="去掉虚线框,包括firefox" /> </p>
+    </div>
+<pre class="prettyprint linenums">
+&lt;a href="#" hidefocus="true"&gt;A outline:hidefocus&lt;/a&gt;
+
+/* hack for Firefox */
+input[type=submit]::-moz-focus-inner,input[type=button]::-moz-focus-inner{    
+	border : 0px; 
+}
+
+/* 不要随便去掉虚线框 */
+input[type=submit]:focus, input[type=button]:focus{      
+	outline : none;  
+}
+</pre>
+	<h3>问题及注意事项：</h3>
+	<p>IE 需要在标签中添加 hidefocus 属性，值可以为空，如：<code>&lt;input href="#" hidefocus value="确定" type="button" /&gt;</code>，<code>&lt;a /&gt;</code> 标签同理。</p>
+	
+	<h3>关于潜规则、关于BUG</h3>
+	<p>我能在用 TAB 键的时候不去掉虚线框吗？为什么我的 input 在 firefox 下没有成功去除虚线框？这些问题被提出的时候，困扰着不少人。因为这里面有潜规则。总结一下，看这个表：</p>
+	<table class="info">
+		<thead>
+			<tr>
+				<th>
+					去除的方式</th>
+				<th>
+					生效的浏览器</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					outline:none</td>
+				<td>
+					IE8 | Firefox | Webkit |Opera</td>
+			</tr>
+			<tr>
+				<td>
+					hidefocus</td>
+				<td>
+					IE</td>
+			</tr>
+			<tr>
+				<td>
+					:focus{outline:none;}</td>
+				<td>
+					IE8 | Firefox | Webkit | Opera</td>
+			</tr>
+			<tr>
+				<td>
+					:active{outline:none;}</td>
+				<td>
+					同上，但在tab的时候，IE将保留虚线框</td>
+			</tr>
+			<tr>
+				<td>
+					::-moz-focus-inner{outline:none;}</td>
+				<td>
+					Firefox 存着bug，input&nbsp;须要去这个伪状态下的边框</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>更多：详见<a href="http://www.tcreator.info/webSchool/xhtml-css/remove-ontline.html">去除虚线框</a></p>
+	
+</div>
+</body>
+</html>

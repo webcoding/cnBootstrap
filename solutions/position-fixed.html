@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>跨浏览器 position:fixed</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.fixed{background:#ffc;}
+.fixed-top,.fixed-bottom{width:280px;height:100px;padding:20px;}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>跨浏览器 position:fixed</h1>
+    <p>此方法针对IE6使用css表达式实现，会影响IE6的性能，慎用。</p>
+    
+    <div class="demo">
+        <div class="fixed fixed-top fixed-right">
+        The block is fixed at the right-top side by apply an attribute <code>class="fixed fixed-top fixed-right"</code>.
+        </div>
+		<div class="fixed fixed-left fixed-bottom">
+        The block is fixed at the right-bottom side by apply an attribute <code>class="fixed fixed-left fixed-bottom"</code>.
+        </div>
+		<p>实现fixed的Demo不在此区域内了</p>
+    </div>
+<pre class="prettyprint linenums">
+.fixed-top 相当于正常的 position:fixed; top:0; 
+.fixed-bottom 相当于正常的 position:fixed;bottom:0px;
+.fixed-left 相当于正常的 position:fixed;left:0px;
+.fixed-right 相当于正常的 position:fixed;right:0;
+
+详细：
+.fixed{
+    position:fixed;
+}
+
+/* 相当于正常的 position:fixed; top:0;  */
+.fixed-top {
+    bottom:auto;
+    top:0;
+    _bottom:auto;
+    _top:expression(eval(document.documentElement.scrollTop));
+}
+
+/* 相当于正常的 position:fixed;bottom:0px; */
+.fixed-bottom {
+    bottom:0;
+    top:auto;
+    _bottom:auto;
+    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+
+/* 相当于正常的 position:fixed;left:0px; */
+.fixed-left {
+    left:0;
+    _position:absolute;
+    right:auto;
+    _left:expression(eval(document.documentElement.scrollLeft));
+}
+
+/* 相当于正常的 position:fixed;right:0; */
+.fixed-right {
+    right:0;
+    left:auto;
+    _right:auto;
+    _left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));
+}
+
+/* 当不是 https 时，可以把 # 换成 about:blank 以提升效率 */
+html,html body {
+    _background-image:url('about:blank');
+    _background-attachment:fixed;
+}
+
+/* hack for ie6 */
+.fixed-top,.fixed-right,.fixed-bottom,.fixed-left {
+    _position:absolute;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <ul>
+        <li>如果需要多个方向的固定位置，比如 top + right，需要加两个 class</li>
+        <li>如果加了<code>.fixed-top</code>, 那么就别给这个元素加 top 属性的值</li>
+        <li>为了不出现异常，这个只作为套用。比如要top:30px 的时候，请在 <code>.fixed-top</code> 的子元素内设置</li>
+        <li>由于我们有打包，所以，改solution是可以的，但这是强烈不推荐的，因为不利于维护</li>
+    </ul>
+	<p style="height:150px;"></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>select 遮盖问题</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.as-selectmask{
+    opacity:0.6;
+    filter: alpha(opacity=60);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>IE6 select 浮层遮盖</h1>
+    <p>浮层被 select 穿透，是最常见的 z-index bug。用法：</p>
+    
+    <div class="demo">
+        <div style="position:relative">
+            <select></select><select></select><select></select>
+            <select></select><br>
+            <select></select>
+            <select></select><select></select>
+            内容
+            <select></select><br><select></select><select></select>
+            <select></select><br><select></select><select></select><select></select>
+            内容
+            <select></select><select></select><select></select>
+            内容
+            <select></select><br><select></select><select></select><select></select>
+            内容
+            
+            <div class="as-selectmask" style="background:#09c;">
+                内容<br/>
+                内容<br/>
+                内容<br/>
+                内容<br/>
+                <!--[if lte IE 6.5]><iframe src="javascript:'';"></iframe><![endif]-->
+            </div>
+        </div>
+    </div>
+<pre class="prettyprint linenums">
+HTML：
+&lt;div class=&quot;as-selectmask&quot; style=&quot;background:#FF3366;&quot;&gt;
+    内容&lt;br/&gt;
+&lt;!--[if lt IE 7]&gt;&lt;iframe src=&quot;javascript:'';&quot;&gt;&lt;/iframe&gt;&lt;![endif]--&gt;
+&lt;/div&gt;
+
+CSS：
+.as-selectmask {
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 10;
+    overflow: hidden;
+    width: 33em;
+}
+.as-selectmask iframe {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: -1;
+    border:none;
+    filter: mask();
+    width: 3000px; /* for any big value */
+    height: 3000px /* for any big value */
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>请注意，即使使用这种方法，半透明div下，<code>select</code> 会被彻底隐藏。这个问题还是没办法解决。</p>
+
+</div>
+</body>
+</html>

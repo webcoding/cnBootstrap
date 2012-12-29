@@ -13,7 +13,7 @@
 .demo {
   position: relative;
   margin: 15px 0;
-  padding: 15px 20px;
+  padding: 30px 20px 20px;
   *padding-top: 19px;
   background-color: #eee;
   border: 1px solid #ddd;
@@ -42,6 +42,92 @@
 	margin-top: -20px;
 	padding-top: 15px;
 }
+
+/* Tweak examples
+------------------------- */
+.demo > p:last-child {
+  margin-bottom: 0;
+}
+.demo .table,
+.demo .progress,
+.demo .well,
+.demo .alert,
+.demo .hero-unit,
+.demo .pagination,
+.demo .navbar,
+.demo > .nav,
+.demo blockquote {
+  margin-bottom: 5px;
+}
+.demo .pagination {
+  margin-top: 0;
+}
+/* Code pre */
+
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+code {
+  padding: 2px 4px;
+  color: #d14;
+  white-space: nowrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+pre.prettyprint {
+  margin-bottom: 20px;
+}
+
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+table.info{border: 1px solid #888;border-collapse:collapse;font-family:Arial,Helvetica;margin-left:2em;}
+table.info pre{background-color:transparent;margin:0;padding:0;width:auto;}
+table.info th{background-color:#CCC;border: 1px solid #888;padding:3px 15px 3px 5px;text-align:left;vertical-align: baseline;}
+table.info td{background-color:#EFEFEF;border:1px solid #AAA;padding:3px 15px 3px 5px;vertical-align:text-top;}
+table.info p{margin:0 0 2px;}
+table.info ul,table.info li{list-style-type:none;margin:0;padding:0;}
+table.info td em{color:#00F;font-weight:normal;}
+table.info .table_value{color: #0F93D2;}
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -55,6 +141,166 @@ body {
 /* vertical-middle */
 .as-middle{}
 
+
+/*
+	@ 名称: 解决 <select /> z-index 太高问题
+	@ 描述: 浮层被 select 穿透，是最常见的 z-index bug
+	@ 例子：
+		<div class="as-selectmask" style="background:#FF3366;">
+			内容<br/>
+		<!--[if lt IE 7]><iframe src="javascript:'';"></iframe><![endif]-->
+		</div>
+*/
+
+.as-selectmask {
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 10;
+	overflow: hidden;
+	width: 33em;
+}
+.as-selectmask iframe {
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	z-index: -1;
+	border:none;
+	filter: mask();
+	width: 3000px; /* for any big value */
+	height: 3000px /* for any big value */
+}
+
+
+
+
+
+/*
+	@ 名称: 去除虚线框
+	@ 描述: 去除作为焦点的按钮的虚线框
+	@ 用法: 把css引入到
+	@ 例子: IE 需要在标签中添加 hidefocus 属性，值可以为空，如:
+	
+		<input href="#" hidefocus value="确定" type="button" />
+		
+		<a /> 标签同理。
+*/
+
+
+/* hack for Firefox */
+input[type=submit]::-moz-focus-inner,input[type=button]::-moz-focus-inner{    
+	border : 0px; 
+}
+
+/* 不要随便去掉虚线框 */
+input[type=submit]:focus, input[type=button]:focus{      
+	outline : none;  
+}
+
+
+
+
+
+/*
+	@ 名称: 翻转90度
+	@ 用法: 添加 .as-rotate, 默认为顺时针旋转90度, 逆时针翻转需添加 .as-rotate-90ccw
+	@ 用法: 
+  默认: <span class="as-rotate as-rotate-90">顺时针转一下</span>
+		<span class="as-rotate as-rotate-90cw">顺时针转一下</span>
+		<span class="as-rotate as-rotate-90ccw">逆时针转一下</span>
+            
+*/
+
+.as-rotate{
+	*zoom:1;
+}
+
+/* for inline elements */
+span.as-rotate, em.as-rotate, cite.as-rotate, strong.as-rotate, abbr.as-rotate, li.as-rotate{
+	display:inline-block;
+}
+
+
+/* 顺时针 */
+.as-rotate-90cw, .as-rotate-90{
+    -webkit-transform: rotate(90deg);   
+    -moz-transform: rotate(90deg);  
+    -o-transform: rotate(90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);  
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";  
+    transform: rotate(90deg);
+}
+
+/* 逆时针 */
+.as-rotate-90ccw{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotae(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; 
+    transform: rotate(-90deg);
+}
+
+
+
+
+
+/*
+	@ 名称: position:fixed
+	@ 用法：添加class
+	@ 注意:
+        * 如果需要多个方向的固定位置，比如 top + right，需要加两个 class
+        * 如果加了.fixed-top, 那么就别给这个元素加 top 属性的值
+        * 为了不出现异常，这个只作为套用。比如要top:30px 的时候，请在 .fixed-top 的子元素内设置
+        * 由于我们有打包，所以，改solution是可以的，但这是强烈不推荐的，因为不利于维护
+*/
+
+.fixed{
+    position:fixed;
+}
+
+/* 相当于正常的 position:fixed; top:0;  */
+.fixed-top {
+    bottom:auto;
+    top:0;
+    _bottom:auto;
+    _top:expression(eval(document.documentElement.scrollTop));
+}
+
+/* 相当于正常的 position:fixed;bottom:0px; */
+.fixed-bottom {
+    bottom:0;
+    top:auto;
+    _bottom:auto;
+    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+
+/* 相当于正常的 position:fixed;left:0px; */
+.fixed-left {
+    left:0;
+    _position:absolute;
+    right:auto;
+    _left:expression(eval(document.documentElement.scrollLeft));
+}
+
+/* 相当于正常的 position:fixed;right:0; */
+.fixed-right {
+    right:0;
+    left:auto;
+    _right:auto;
+    _left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));
+}
+
+/* 当不是 https 时，可以把 # 换成 about:blank 以提升效率 */
+html,html body {
+    _background-image:url('about:blank');
+    _background-attachment:fixed;
+}
+
+/* hack for ie6 */
+.fixed-top,.fixed-right,.fixed-bottom,.fixed-left {
+    _position:absolute;
+}
 
 
 

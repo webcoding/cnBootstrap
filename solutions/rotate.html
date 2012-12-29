@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>跨浏览器翻转</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>跨浏览器翻转</h1>
+    <p>使用 CSS filter 实现 CSS3 的 <code>transform</code> 一样效果</p>
+    
+    <div class="demo" style="padding:50px;">
+		<p style="background:#ccc">
+        <span class="as-rotate as-rotate-90">顺时针转一下</span>
+        <span class="as-rotate as-rotate-90cw">顺时针转一下</span>
+        <span class="as-rotate as-rotate-90ccw">逆时针转一下</span>
+		<span class="">这个没有转</span>
+		</p>
+	</div>
+<pre class="prettyprint linenums">
+HTML:
+&lt;span class="as-rotate as-rotate-90"&gt;顺时针转一下&lt;/span&gt;
+&lt;span class="as-rotate as-rotate-90cw"&gt;顺时针转一下&lt;/span&gt;
+&lt;span class="as-rotate as-rotate-90ccw"&gt;逆时针转一下&lt;/span&gt;
+
+CSS:
+/* 顺时针 */
+.as-rotate-90cw, .as-rotate-90{
+    -webkit-transform: rotate(90deg);   
+    -moz-transform: rotate(90deg);  
+    -o-transform: rotate(90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);  
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";  
+    transform: rotate(90deg);
+}
+
+/* 逆时针 */
+.as-rotate-90ccw{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotae(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; 
+    transform: rotate(-90deg);
+}
+</pre>
+	<h3>问题及注意事项：</h3>
+	<p>注意: rotate 所占空间与未 rotate 前一样</p>
+
+</div>
+</body>
+</html>
