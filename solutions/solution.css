@@ -1,0 +1,21 @@
+/*!
+ * solution style
+**/
+
+/* 测试属性 */
+.solutions .bs-docs-example{ min-height:120px;}
+.test{ background:#ccc; width:300px; width:50%; height:80px;}
+
+
+/* vertical-middle */
+.as-middle{}
+
+.bc{ margin-left:auto; margin-right:auto}
+
+.Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
+.Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
+.Ly{width:30px;height:100px;margin-left:-15px;margin-top:-50px;}
+
+
+
+

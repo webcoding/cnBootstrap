@@ -1,10 +1,12 @@
 /*!
  * 自定义样式
 **/
+
+
 .case li{ text-align:center}
 .case h4{ margin:5px 0; font-weight:normal; font-size:12px;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
-
+/* 
 .none{ margin:0; padding:0;list-style:none}
 .solutions li{text-align:center;}
 .solutions a.thumbnail{padding-top:5%;}

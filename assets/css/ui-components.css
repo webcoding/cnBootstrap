@@ -1,0 +1,379 @@
+
+/* ------------------------------------------------------------
+  ui-components v0.9
+  Create: 2012-09-14
+  Last Updated: 2012-09-29
+  Author: Cloudyan
+  Contact: qqGroup:187260298 1395093509@qq.com
+  Description: 包含最常用且基本的组件(不要轻易修改此样式表中的样式，详询Author)
+------------------------------------------------------------ */
+
+
+/* 四种常用css注释
+ * 比较复杂的组件-变化组合较多，需要详细说明
+ * 一般组件比较简单，只需简单说明
+ * 简单组件但代码比较多，需要清晰划分css区块
+ * 简单注释，只需功能性描述
+ */
+
+
+/**
+ * @name      : alert
+ * @explain   : 操作提示
+ * @type      : 基类 .alert
+ * @dependent : 无
+ * @author    : Cloudyan
+ * @version   : 1.0
+ * @html      :
+
+<div class="tips">  
+  <span class="tips-ico"><span class="ico-ok"><!-- 图标 --></span></span>
+  <div class="tips-content">
+   <div class="tips-title">提示标题</div>
+   <div class="tips-line">提示描述</div>
+     <div class="tips-buttons">
+   <a class="btn-white" href="#"><span>按钮</span></a>
+   <a href="#">链接</a>
+   </div>
+  </div>
+</div>
+ */
+
+/**
+ * @name:           UI CSS Framework 1.0
+ * @author:         Oricode UI
+ * @description:    UI 组件描述
+ */
+
+/* Misc visuals-其他视觉效果
+----------------------------------*/
+
+/* Corner radius-圆角 */	
+
+
+/* 常用css注释举例结束
+ **************************
+ *********  end  **********
+ **************************
+ */
+
+/* （页面html说明举例）搜索页面主体内容 
+ * 边栏盒模型aside-box 单独定义盒子请附加具体的盒子名称，样式在自定义class名下定义
+ * 如有边框添加class="lv-bd"
+ * 尽量保持结构设计上的统一，保持页面中的注释风格，示例如下：
+ * 注释开始 <!-- 盒子功能名称\\ -->
+ * 注释结束 <!-- //盒子功能名称 -->
+ */
+
+/**
+ * @name:           UI CSS Framework 1.0
+ * @author:         Oricode Group
+ * @description:    UI 组件描述
+ */
+ 
+/**
+  * @name      : mini-tips ===tips alert msg-
+  * @explain   : 操作提示
+  * @type      : 基类 .tips .alert
+  * @expand    : 扩展 -info -success -error -warning -help -stop -wait === message danger
+  * @dependent : Oricode
+  * @author    : Cloudyan
+  * @version   : 1.0
+  * @html      :
+
+<span class="mtips tips-info">
+		<span class="tips-ico"></span>
+    </span>
+
+<div class="tips tips-info">
+	<span class="tips-ico"></span>
+	安全提醒：自行编辑，非系统消息
+</div>
+
+<div class="alert alert-info">
+	<span class="alert-ico"></span>
+	<h3>Binggo！操作状态提醒！</h3>
+	<p>您现在可以去畅游网络了。</p>
+</div>
+
+<div class="alert alert-warning">
+	<button type="button" class="close" data-dismiss="alert">×</button>
+	<span class="alert-ico"><!-- 图标 --></span>
+	<div class="alert-content">
+		<div class="alert-title">提示标题</div>
+		<div class="alert-line">提示描述</div>
+		<div class="alert-buttons">
+			<a class="btn-white" href="#"><span>按钮</span></a>
+			<a href="#">链接</a>
+		</div>
+	</div>
+</div>
+
+ */
+.mtips,.tips-ico,span.tips,.alert-ico{display:inline-block;*display:inline;*zoom:1;}
+.tips-ico,.alert-ico{ background:url(/labs/lvmama/img/ico-combo.png) -1000px -1000px no-repeat; }
+
+/* tips */
+.tips .tips-ico{ width:14px; height:14px; float:left; margin-right:5px; background-position:0 -34px}
+.tips{ margin:0; background:#f9f9f9;border:1px solid #d4d4d4;padding:8px 10px; line-height:14px;}
+.tips-info .tips-ico{ background-position:0 -34px}
+.tips-warning .tips-ico{ background-position:-14px -34px}
+.tips-error .tips-ico{background-position:-28px -34px}
+.tips-success .tips-ico{ background-position:-42px -34px}
+.tips-help .tips-ico{ background-position:-56px -34px}
+.tips-stop .tips-ico{ background-position:-70px -34px}
+.tips-wait .tips-ico{ background-position:-84px -34px}
+
+.tips-info{background:#e5f5ff;border:1px solid #c9d5e2}
+.tips-warning{background:#ffffe0;border:1px solid #ff8801}
+.tips-error{background:#fff2f2;border:1px solid #f44}
+.tips-success{background:#f1ffe2;border:1px solid #7dc25e}
+.tips-help{background:#e5f5ff;border:1px solid #c9d5e2}
+.tips-stop{background:#fceee8;border:1px solid #f6c8b5}
+.tips-wait{background:#e5f5ff;border:1px solid #c9d5e2}
+
+.tips-arrowup{display:inline-block;height:10px;left:40px;margin-left:-8px;position:absolute;text-indent:-9999em;width:16px;z-index:1;top:-9px;_top:-8px}
+.tips-arrowup-message{background-position:-194px -39px}
+.tips-arrowup-warning{background-position:-211px -39px}
+
+/* mini-tips */
+.mtips{padding:9px 10px; line-height:14px; border:none; background:none}
+.mtips .tips-ico{ width:14px; height:14px;}
+
+/* alert */
+.alert .alert-ico{ width:32px; height:32px; float:left; margin:0 0 0 -45px; background-position:0 -34px}
+.alert{ background:#f9f9f9;border:1px solid #d4d4d4; padding:20px 30px 20px 65px;}
+.alert .alert-title{ font-size:14px; font-weight:bold;}
+.alert .alert-title,.alert .alert-line,.alert p{ margin:0}
+.alert-info .alert-ico{ background-position:0 0}
+.alert-warning .alert-ico{ background-position:-32px 0}
+.alert-error .alert-ico{background-position:-64px 0}
+.alert-success .alert-ico{ background-position:-96px 0}
+.alert-help .alert-ico{ background-position:-128px 0}
+.alert-stop .alert-ico{ background-position:-160px 0}
+.alert-wait .alert-ico{ background-position:-192px 0}
+
+.alert-info{background:#e5f5ff;border:1px solid #c9d5e2}
+.alert-warning{background:#ffffe0;border:1px solid #ff8801}
+.alert-error{background:#fff2f2;border:1px solid #f44}
+.alert-success{background:#f1ffe2;border:1px solid #7dc25e}
+.alert-help{background:#e5f5ff;border:1px solid #c9d5e2}
+.alert-stop{background:#fceee8;border:1px solid #f6c8b5}
+.alert-wait{background:#e5f5ff;border:1px solid #c9d5e2}
+
+.alert-title{ font-size:14px; font-weight:bold}
+.alert-line{ font-size:12px; line-height:22px;}
+
+button.close {padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none;}
+.alert .close{position:relative; width:24px; height:24px;top:-18px;right:-28px;line-height:22px;}
+
+
+/**
+ * @name      : Autocomplete Plugin
+ * @explain   : 自动完成插件
+ * @type      : 基类 .auto >> auto-big auto-list
+ * @dependent : 无
+ * @author    : Cloudyan
+ * @version   : 1.0
+ * @html      :
+
+ */
+.auto{font:12px/22px \5b8b\4f53,Tahoma,Arial; width:277px; overflow:hidden;border:1px solid #dbdbdb;background: #fff;
+box-shadow:2px 2px 2px 0 rgba(102,102,102,0.2);}
+.auto a{color:#333; text-decoration:none}
+.auto a:hover{ color:#e08; text-decoration:underline}
+.auto-line{color:#888; font-size:12px;font-weight:normal; margin:0;}
+.auto-title{color:#999; font-size:12px; font-weight: normal; border-bottom:1px dotted #dbdbdb}
+.auto-box{ padding:5px 10px;}
+.auto-mini .auto-box{ padding:0;}
+.auto-mini a{ padding:0 10px;}
+.a2row,.a3row,.a4row,.a5row{ overflow:hidden;*zoom:1; margin-right:-2px; padding-top:2px; margin-bottom:10px;}
+.a2row li,.a3row li,.a4row li,.a5row li{ float:left; display:inline;overflow:hidden;}
+.a2row li{ width:49.5%}.a3row li{ width:33.25%}.a4row li{ width:24.9%}.a5row li{ width:19.9%}
+.auto a{ display:block; white-space:nowrap;overflow:hidden; text-align:left;}
+.a2row a,.a3row a{margin-right:10px;text-overflow:ellipsis;}
+.auto-mini a{text-overflow:ellipsis;color:#333;}
+.auto-mini a:hover{ background:#ff9cc0;color:#fff; text-decoration:none}
+
+.auto-big{ width:355px;}
+.auto-middle{width:277px;}
+.auto-small{ width:235px;}
+.auto-mini{ width:137px;}
+
+/* 活动促销icon
+ * icon101  节日-红色(按顺序排列) 元旦 清明 五一 端午 中秋 国庆 微旅游日
+ * icon201	促销-橙色 多人多惠 礼盒 促销 热卖 新品
+ * icon301	项目-多彩 超级自由行 开心驴行
+ * icon-sp1	促销-大ICON 信用卡促销 多人多惠 早订优惠 招行专享
+ * icon-01  标识-景点
+ */
+.icon-01,
+.icon101,.icon102,.icon103,.icon104,.icon105,.icon106,.icon07,
+.icon201,.icon202,.icon203,.icon204,.icon205,
+.icon301,.icon302,
+.icon-sp1,.icon-sp2,.icon-sp3,.icon-sp4,.icon-sp5,.icon-sp6
+{ background: url(http://pic.lvmama.com/img/new_v/ob_search/combo.gif) no-repeat; display: inline-block;*display: inline;*zoom:1; vertical-align:top;*vertical-align:middle}
+.icon-01{ height:16px; width:16px;margin-top:2px;*margin-top:0;}
+.icon-01{ background-position: 0 -96px;}
+.icon101,.icon102,.icon103,.icon104,.icon105,.icon106,.icon07,
+.icon201,.icon202,.icon203,.icon204,.icon205
+{height: 16px;width: 33px; margin-top:2px;*margin-top:0; margin-left:10px;}
+/* icon101	节日-红色(按顺序排列) 101元旦 102清明 103五一 104端午 105中秋 106国庆 107微旅游日 */
+.icon101{ background-position: -122px 0} 
+.icon102{ background-position: -155px -16px}
+.icon103{ background-position: -122px -16px}
+.icon104{ background-position: -155px -16px}
+.icon105{ background-position: -122px -32px}
+.icon106{ background-position: -155px -32px}
+.icon107{ background-position: -122px -48px;width: 56px;}
+/* icon201	促销-橙色 201多人多惠 202礼盒 203促销 204热卖 205新品 */
+.icon201{ background-position: -122px -80px;width: 56px;}
+.icon202{ background-position: -179px -80px;width: 12px;}
+.icon203{ background-position: -122px -96px;}
+.icon204{ background-position: -155px -96px;}
+.icon205{ background-position: -122px -112px;}
+/* icon301	项目-玫红 301超级自由行 302开心驴行 */
+.icon301,.icon302
+{height: 17px;width: 76px; margin-left:10px;}
+.icon301{ background-position: -190px 0; width: 88px;}
+.icon302{ background-position: -190px -17px; width: 76px;}
+/* icon301	促销-大ICON -sp1信用卡促销 -sp2多人多惠 -sp3早订优惠 -sp4招行专享 */
+.icon-sp1,.icon-sp2,.icon-sp3,.icon-sp4,.icon-sp5,.icon-sp6
+{ width: 90px; height: 34px; margin-bottom:10px;}
+.icon-sp1{ background-position: -32px 0}
+.icon-sp2{ background-position: -32px -34px}
+.icon-sp3{ background-position: -32px -68px}
+.icon-sp4{ background-position: -32px -102px}
+
+/* pages页码小组件
+ * 样式默认玫红色（可缺省rosestyle）
+ * 可组合样式orangestyle橙色
+ * @html
+<div class="pages orangestyle"> <!-- <div id="lv_page"><div class="Pages">可缺省此两级嵌套 -->
+	<span class="PageSel">1</span>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<span class="more">...</span>
+	<a href="#">下一页</a>
+</div>
+ */
+.pages{margin:10px 0 0;text-align:right;}
+.pages a,.pages span{display:inline-block;zoom:1;*display:inline;margin-left:5px;padding:3px 9px; line-height:18px;}
+.pages a{border:1px solid #ddd;color:#333;background:#fff;}
+.pages .PageSel,.rosestyle .PageSel{font-weight:bold;border:1px solid #df1a7a;color:#fff;background:#df1a7a;}
+.pages a:hover,.rosestyle a:hover{ border-color:#df1a7a;color:#df1a7a; text-decoration:none}
+.orangestyle .PageSel{font-weight:bold;border:1px solid #f80;color:#fff;background:#f80;}
+.orangestyle a:hover{ border-color:#f80;color:#f80; text-decoration:none}
+
+/* 星星组件
+ * span.big_star 大星星-方形玫红星-无灰色背景（底灰色星星）
+ * span.re_star starbg 点评星星（灰色背景）
+ * span.b_star 大星星-玫红星-透明背景（底灰色星星）
+ * span.sm_star 小星星-玫红小星星
+ * span.k_star 小星星-橙色空心
+ * span.t_star 小星星-橙色实心（底空心星）
+ * @html
+<span class="big_star"><i style="width:80%"></i></span>
+ */
+span.big_star,span.big_star i,span.b_star,span.b_star i,span.sm_star,span.sm_star i,span.t_star,span.t_star i,span.k_star i,.re-star,.starbg,.starbg i
+{ background:url(http://pic.lvmama.com/img/new_v/channel/ico_s_result.gif) no-repeat;display:inline-block;*display:inline;*zoom:1;overflow:hidden;}
+span.t_star,span.k_star{display:inline-block;overflow:hidden; height:10px;}
+span.t_star,span.k_star{width:62px;}
+span.t_star,span.t_star i,span.k_star i{ height:10px; background-position:-50px -100px;}
+span.t_star i{background-position:-50px -111px;}
+span.t_star i,span.k_star i{ float:left;}
+span.sm_star,span.sm_star i{width:68px; height:12px; background-position:-180px -100px;}
+span.sm_star i{background-position:-180px -111px; float:left;}
+span.big_star,span.big_star i{ width:69px; height:13px; background-position:-24px 0;}
+span.big_star i{background-position:-24px -16px; float:left;}
+span.b_star,span.b_star i{ width:78px; height:12px; background-position:-27px -124px;}
+span.b_star i{background-position:-27px -138px; float:left;}
+.re-star,.starbg,.starbg i{ background-position:-250px -100px;width:80px; height:20px;}
+.re-star{ padding:0 7px; overflow:hidden; vertical-align:middle}
+.starbg{ background-position:-257px -100px;}
+.starbg i{float:left; background-position:-257px -120px;}
+/* 小星星扩展 */
+span.star1{ width:12px}
+span.star2{ width:24px}
+span.star3{ width:37px}
+span.star4{ width:49px}
+span.star5{ width:62px}
+small.star{font-weight: normal; font-size:12px; line-height:11px; -webkit-text-size-adjust: none;}
+small.star i{ width:100%;}
+small.star span.t_star{ margin-right:5px;}
+
+/* 翻页小组件 */
+.pageoper{color:#555}
+.page-arrow,i.arrow{ background:url(http://pic.lvmama.com/img/new_v/ob_search/combo.gif) 1000px 1000px no-repeat; display:inline-block; *display:inline;*zoom:1;}
+.page-arrow { width:16px; height:16px; overflow:hidden; position:absolute; top:2px; _top:1px;}
+.page-arrow-left{background-position:0 -80px; left:0px;}
+.page-arrow-right{background-position:-16px -80px; right:0px;}
+.page-prev,.page-next{ display:inline-block;*display:inline;*zoom:1; border:1px solid #dfdfdf; height:20px;line-height:20px; background:#fff; color:#555; position:relative}
+.page-prev{ padding:0 4px 0 15px;}
+.page-next{ padding:0 15px 0 4px;}
+a.page-prev:hover,a.page-next:hover{color:#555; text-decoration:none; border-color:#FFB8DB;}
+
+/* view-more arrow 展开/收起-箭头 */
+.view-more,.hide-more{ display:inline-block;*display:inline;*zoom:1; line-height:22px; cursor:pointer}
+i.arrow{ background-position:0 -112px;width:16px; height:16px; margin:2px 0 0 3px; vertical-align:top; *vertical-align:baseline}
+.view-more .arrow{ background-position:0 -112px; }
+.hide-more .arrow{background-position:-16px -112px; }
+
+/**
+ * @name      : tooltip
+ * @explain   : 提示
+ * @type      : 基类
+ * @dependent : 无
+ * @author    : Cloudyan
+ * @version   : 1.0
+ * @html      :
+
+<div class="tooltip top">
+	<div class="tooltip-arrow"></div>
+	<div class="tooltip-outer">
+		<div class="tooltip-shadow"></div>
+		<div class="tooltip-inner">
+			<h5 class="tooltip-title">标题</h5>
+			<div class="tooltip-content"><p>内容</p></div>
+		</div>
+	</div>
+</div>
+ */
+
+.tooltip {position: absolute;z-index: 1030;display: block; padding:5px 0; font-size: 11px;/*opacity: 0;filter: alpha(opacity=0);*/visibility: visible;}
+/*.tooltip.in {opacity: 0.8;filter: alpha(opacity=80);}*/
+.tooltip.top {margin-top: -3px;}
+.tooltip.right {margin-left: 3px;}
+.tooltip.bottom {margin-top: 3px;}
+.tooltip.left {margin-left: -3px;}
+.tooltip-outer {max-width: 260px;width:260px; position:relative; overflow:hidden; padding:3px; z-index:10;
+/*  border-bottom-color:rgba(129,129,129,1);
+	-webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;*/
+	
+}
+.tooltip-shadow{
+	position:absolute; width:100%; height:100%; _width:265px; _height:200px; top:0; left:0;z-index:50;
+	background:#000;
+	opacity:0.1;
+	filter: alpha(opacity=10);
+}
+.tooltip-inner{ position:relative; z-index:101; left:0; top:0; padding:5px 8px; background:#fff;text-decoration:none; border:1px solid #c6c6c6; color:#333;zoom:1;/*opacity:1;filter: alpha(opacity=100);*/}
+.tooltip-title{color:#333; font-size:12px;}
+.tooltip-content{color:#555; line-height:18px; font-size:12px;}
+.tooltip-content p{ margin:0;}
+.tooltip-content span{color:#ff9714}
+.tooltip-arrow {position: absolute; z-index:100;width: 0;height: 0; overflow:hidden;border-color: transparent;border-style: solid;opacity:0.1;filter: alpha(opacity=10);}
+.top .tooltip-arrow {bottom: 0;left: 50%;margin-left: -5px;border-top-color:#000;border-width: 5px 5px 0;}
+.right .tooltip-arrow {top: 50%;left: 0;margin-top: -5px;border-right-color:#000;border-width: 5px 5px 5px 0;}
+.left .tooltip-arrow {top: 50%;right: 0;margin-top: -5px;border-left-color:#000;border-width: 5px 0 5px 5px;}
+.bottom .tooltip-arrow {top: 0;left: 50%;margin-left: -5px;border-bottom-color:#000;border-width: 0 5px 5px;}
+asdasd{}
+.bottom-left .tooltip-arrow,.bottom-right .tooltip-arrow{border-bottom-color:#000;border-width: 0 5px 5px;}
+.bottom-left .tooltip-arrow {top: 0;left:25px;}
+.bottom-right .tooltip-arrow {top: 0;left:100%; margin-left:-30px;}
+.top-left .tooltip-arrow,.top-right .tooltip-arrow{border-top-color:#000;border-width: 5px 5px 0;}
+.top-left .tooltip-arrow {bottom: 0;left:25px;}
+.top-right .tooltip-arrow {bottom: 0;left:100%; margin-left:-30px;}
+
