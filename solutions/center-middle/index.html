@@ -1,112 +1,68 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
-<title>前端解决方案 · Oricode - Twitter Bootstrap</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="全兼容的前端解决方案">
-<meta name="author" content="Authors of Bootstrap">
-<link href="/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+<title></title>
+<link rel="stylesheet" href="../../assets/css/noreset.css">
 <link href="../solution.css" rel="stylesheet">
+<style>
+.demo{ background:#eee;min-height:120px;position:relative}
+.test{ background:#ccc; width:300px; width:50%; height:80px;}
+.Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
+.Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
+.Ly{width:30px;height:100px;margin-left:-15px;margin-top:-50px;}
+</style>
 </head>
+
 <body>
-
-<!-- 
-===============================================
-===============================================
--------------------- 分割线 --------------------
-===============================================
-===============================================
--->
-
-<div class="page-header">
-    <h1>概述</h1>
-</div>
-<p>原本想把解决方案的案例放置到此页中，但是太过琐碎了，如果仅仅放置经典解决方案，难免忽略一些问题，于是按照此思想方式，定制每个具体的解决方案中的不同实现方法，也方便大家对比差异优劣！</p>
-<p>同时为了排除其他代码样式的干扰，Demo采用浏览器默认样式。</p>
-        </section>
-		
-        <!-- vertical-middle
-        ================================================== -->
-        <section id="vertical-middle">
-            <div class="page-header">
-                <h1>垂直/水平居中</h1>
-            </div>
-            <h3>固定宽度的容器水平居中 <small>具有固定宽度或百分比等已知值的容器居中</small></h3>
-            <div class="bs-docs-example">
-            	<div class="test bc">固定宽度或百分比的已知值</div>
-            </div>
+<div class="wrap">
+	<h1>垂直/水平居中</h1>
+    <p>原本想把解决方案的案例放置到此页中，但是太过琐碎了，如果仅仅放置经典解决方案，难免忽略一些问题，于是按照此思想方式，定制每个具体的解决方案中的不同实现方法，也方便大家对比差异优劣！</p>
+	<p>同时为了排除其他代码样式的干扰，Demo采用浏览器默认样式。</p>
+	
+    <h3>固定宽度的容器水平居中 <small>具有固定宽度或百分比等已知值的容器居中</small></h3>
+	
+	<div class="demo">
+		<div class="test bc">固定宽度或百分比的容器居中</div>
+	</div>
 <pre class="prettyprint linenums">
 .test{ background:#ccc; width:300px; width:50%; height:80px;}
 .bc{ margin-left:auto; margin-right:auto}
 </pre>
-            <p><strong>核心：</strong>width定值 + margin-left:auto; margin-right:auto;，二者缺一不可。</p>
-            <ul>
-                <li>优：固定宽度容器水平居中实现超级简单，用于页面主体居中特方便。</li>
-                <li>劣：此实现思想无法应用于垂直居中，也无法实现未知宽度的容器水平居中。</li>
-            </ul>
-            
-            <h3>内容的水平/垂直居中 <small>垂直方向上仅适用于单行内容居中</small></h3>
-            <div class="bs-docs-example">
-            	<div class="test bc" style=" text-align:center;line-height:80px;">内容的水平/垂直居中</div>
-            </div>
+	<p><strong>核心：</strong>width定值 + margin-left:auto; margin-right:auto;，二者缺一不可。</p>
+	<ul>
+		<li>优：固定宽度容器水平居中实现超级简单，用于页面主体居中特方便。</li>
+		<li>劣：此实现思想无法应用于垂直居中，也无法实现未知宽度的容器水平居中。</li>
+	</ul>
+	
+	<h3>内容的水平/垂直居中 <small>垂直方向上仅适用于单行内容居中</small></h3>
+	<div class="demo">
+		<div class="test bc" style=" text-align:center;line-height:80px;">内容的水平/垂直居中</div>
+	</div>
 <pre class="prettyprint linenums">
 &lt;div style=&quot;text-align:center;line-height:80px;&quot;&gt;固定宽度或百分比的已知值&lt;/div&gt;
 </pre>
-            <p><strong>核心：</strong>水平text-align:center; + 垂直（适用于单行内容）line-height:等于容器高度;</p>
-            <ul>
-                <li>优：实现简单。</li>
-                <li>劣：无法支持多行文本。</li>
-            </ul>
-            
-            
-            <h3>CSS绝对定位居中 <small>相对于具备定位属性的父标签</small></h3>
-            <div class="bs-docs-example">
-                <div class="Lx"></div>
-                <div class="Ly"></div>
-            </div>
+	<p><strong>核心：</strong>水平text-align:center; + 垂直（适用于单行内容）line-height:等于容器高度;</p>
+	<ul>
+		<li>优：实现简单。</li>
+		<li>劣：无法支持多行文本。</li>
+	</ul>
+	
+	
+	<h3>CSS绝对定位居中 <small>相对于具备定位属性的父标签</small></h3>
+	<div class="demo" style="height:300px;">
+		<div class="Lx"></div>
+		<div class="Ly"></div>
+	</div>
 <pre class="prettyprint linenums">
 .Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
 .Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
 .Ly{width:30px;height:100px;margin-left:-15px;margin-top:-50px;}
 </pre>
-        	
-            
-            
-            
-        	
-        </section>
-		
-		
-		
-	    
-
-      </div>
-    </div>
+    
+	<h2>问题及注意事项：</h2>
+	<p>这种案例实现，也许太繁琐了，正在纠结中，是拆还是合呢？</p>
 
 </div>
-
-
-<!-- Le javascript
-================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-<!--
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.min.js"></script>-->
-<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
-<!--<script src="/assets/js/jquery.min.js"></script> -->
-<script src="/assets/js/google-code-prettify/prettify.js"></script> 
-<script src="/assets/js/holder/holder.js"></script>
-<!--[if lte IE 6]>
-
-<![endif]--> 
-<!--<script src="/OriCode/mbase/DD_belatedPNG-min.js" ></script>
-<script type="text/javascript">
-   DD_belatedPNG.fix('.ie6png');
-</script>
---> 
-<!--
-<div style="text-indent:-9999px; height:0; overflow:hidden">
-<script src="http://www.tcreator.info/plus/mytag_js.php?aid=5"></script>
-</div>-->
 </body>
 </html>

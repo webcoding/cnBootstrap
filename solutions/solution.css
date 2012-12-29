@@ -2,19 +2,60 @@
  * solution style
 **/
 
-/* 测试属性 */
-.solutions .bs-docs-example{ min-height:120px;}
-.test{ background:#ccc; width:300px; width:50%; height:80px;}
+.wrap,.bc{margin-left:auto; margin-right:auto}
+.wrap{ width:980px;}
+
+/* 测试使用 */
+/* Code examples
+-------------------------------------------------- */
+
+/* Base class */
+.demo {
+  position: relative;
+  margin: 15px 0;
+  padding: 15px 20px;
+  *padding-top: 19px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+/* Echo out a label for the example */
+.demo:after {
+	content: "Example";
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	color: #9da0a4;
+	-webkit-border-radius: 4px 0 4px 0;
+	 -moz-border-radius: 4px 0 4px 0;
+		  border-radius: 4px 0 4px 0;
+}
+.demo + .prettyprint {
+	margin-top: -20px;
+	padding-top: 15px;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
 
 
 /* vertical-middle */
 .as-middle{}
 
-.bc{ margin-left:auto; margin-right:auto}
 
-.Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
-.Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
-.Ly{width:30px;height:100px;margin-left:-15px;margin-top:-50px;}
 
 
 
