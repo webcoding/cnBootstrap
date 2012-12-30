@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IE6 min/max height/width</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+#test{border:1px dotted #aaa;padding:10px 20px; background:#ddd;min-height: 200px;height: auto;_height:200px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>IE6 min/max height/width</h1>
+    <p>方法：这个东西还是用JS解决吧，除 <code>min-height</code>，CSS 方法还不是那靠谱：</p>
+    
+    <div class="demo">
+        <div id="test" class="minheight">
+            <p>花开了，会有凋谢的一天；星星是璀璨的，也会有消失光芒的一天。这个地球，太阳，这个银河系，甚至连整个宇宙，都有死亡的时候。人的一生和这些相比，不过是一眨眼那么短暂而已。就在那样一个瞬间，人们诞生、欢笑、流泪、战斗、受伤、欢喜、悲伤……憎恨某人，爱上某人，一切的一切，都只是刹那间的邂逅。终究将归入死的永眠。
+        </div>    
+    </div>
+<pre class="prettyprint linenums">
+/* min-height */
+.min-height:200px;height:auto;
+_height:200px; /* hack for ie6 */
+
+// max-height
+function setMaxHeight(elementId, height){
+    var container = document.getElementById(elementId);
+    container.style.height = (container.scrollHeight > (height - 1)) ? height + "px" : "auto";
+}
+
+// min Width
+function setMinWidth(elementId, width){
+    var container = document.getElementById(elementId);
+    container.style.width = (container.clientWidth < width) ? width + "px" : "auto";
+} 
+
+// max Width
+function setMaxWidth(elementId, width){
+    var container = document.getElementById(elementId);
+    container.style.width = (container.clientWidth > (width - 1)) ? width + "px" : "auto";
+} 
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>同方法描述</p>
+    
+</div>
+</body>
+</html>

@@ -119,6 +119,55 @@ pre code {
   overflow-y: scroll;
 }
 
+/* Quotes for two levels of nested quotations */
+q {
+	quotes: '“' '”' '‘' '’';
+}
+ /* extra content definitions for pre-2011 WebKit */
+q:before {
+	content: '“';
+	content: open-quote;
+}
+q:after {
+	content: '”';
+	content: close-quote;
+}
+q q:before {
+	content: '‘';
+	content: open-quote;
+}
+q q:after {
+	content: '’';
+	content: close-quote;
+}
+  /* q in blockquote */
+blockquote q:before {
+	content: '‘';
+	content: open-quote;
+}
+blockquote q:after {
+	content: '’';
+	content: close-quote;
+}
+blockquote q q:before {
+	content: '“';
+	content: open-quote;
+}
+blockquote q q:after {
+	content: '”';
+	content: close-quote;
+}
+/* hanging opening quote */
+blockquote:before {
+	display: block;
+	height: 0;
+	content: "“";
+	margin-left: -.55em; font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+	color: #999;
+}
+blockquote{white-space:pre-wrap;word-wrap:break-word;font-size:12px;display:block;line-height:1.6em;margin:0.45em 0 0.45em 2em;}
+blockquote{background:#F4F5F7;white-space:normal;min-width:574px;padding:8px 6px 8px 30px;border:1px dashed #ccc;}
+
 table.info{border: 1px solid #888;border-collapse:collapse;font-family:Arial,Helvetica;margin-left:2em;}
 table.info pre{background-color:transparent;margin:0;padding:0;width:auto;}
 table.info th{background-color:#CCC;border: 1px solid #888;padding:3px 15px 3px 5px;text-align:left;vertical-align: baseline;}

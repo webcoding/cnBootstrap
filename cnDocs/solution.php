@@ -36,6 +36,8 @@
         	
             <h3>浏览器兼容解决方案 <small>头痛的问题，我们提前搞定</small></h3>
             <p><a href="solutions.html">solutions</a></p>
+			<!-- 预添加简洁分类筛选 Todo -->
+			
             <ul class="thumbnails case">
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/center-middle"><img src="../solutions/img/vertical-middle.png" alt="垂直/水平居中" ><h4>垂直/水平居中</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/select-mask.html"><img src="../solutions/img/select-mask.png" alt="IE6 浮层遮盖" ><h4>IE6 浮层遮盖</h4></a></li>
@@ -44,7 +46,7 @@
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/position-fixed.html"><img src="../solutions/img/position-fixed.png" alt="IE6 position:fixed" ><h4>IE6 position:fixed</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pngfix.html"><img src="../solutions/img/png24.png" alt="IE6 PNG 半透明" ><h4>IE6 PNG 半透明</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/placeholder.html"><img src="../solutions/img/placeholder.png" alt="跨浏览器 Placeholder" ><h4>跨浏览器 Placeholder</h4></a></li>
-				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/min-max"><img src="../solutions/img/min-max.png" alt="IE6 最大/小宽度" ><h4>IE6 最大/小宽度</h4></a></li>
+				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/min-max.html"><img src="../solutions/img/min-max.png" alt="IE6 最大/小宽度" ><h4>IE6 最大/小宽度</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/localstorage"><img src="../solutions/img/solution-default.png" alt="跨浏览器文本存储" ><h4>跨浏览器文本存储</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/linear-gradient"><img src="../solutions/img/linear-gradient.png" alt="跨浏览器线性渐变" ><h4>跨浏览器线性渐变</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ime-disabled"><img src="../solutions/img/ime.png" alt="强制非中文输入法" ><h4>强制非中文输入法</h4></a></li>
