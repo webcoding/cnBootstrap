@@ -47,7 +47,7 @@
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pngfix.html"><img src="../solutions/img/png24.png" alt="IE6 PNG 半透明" ><h4>IE6 PNG 半透明</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/placeholder.html"><img src="../solutions/img/placeholder.png" alt="跨浏览器 Placeholder" ><h4>跨浏览器 Placeholder</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/min-max.html"><img src="../solutions/img/min-max.png" alt="IE6 最大/小宽度" ><h4>IE6 最大/小宽度</h4></a></li>
-				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/localstorage"><img src="../solutions/img/solution-default.png" alt="跨浏览器文本存储" ><h4>跨浏览器文本存储</h4></a></li>
+				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/localStorage.html"><img src="../solutions/img/solution-default.png" alt="跨浏览器文本存储" ><h4>跨浏览器文本存储</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/linear-gradient"><img src="../solutions/img/linear-gradient.png" alt="跨浏览器线性渐变" ><h4>跨浏览器线性渐变</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ime-disabled"><img src="../solutions/img/ime.png" alt="强制非中文输入法" ><h4>强制非中文输入法</h4></a></li>
 				<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ie-z-index-bug"><img src="../solutions/img/z-index.png" alt="IE z-index bug" ><h4>IE z-index bug</h4></a></li>
