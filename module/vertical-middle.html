@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vertical-align:middle</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.ie-center{display:inline-block;height:100%;width:0;overflow:hidden;font-size:0;vertical-align:middle}
+.photo-main{overflow:hidden;position:relative;text-align:center;height:100%;z-index:1;*zoom:1}
+.photo-main .photo-inner{display:inline-block;#display:inline;#zoom:1;position:relative;z-index:1;vertical-align:middle;font:0/0 arial;margin:0px auto 0}
+.photo-main .photo-inner,.ie-center{#display:inline;#zoom:1; z-index:2}
+/*.photo-main{background:rgba(0,0,0,.9);#background:url(data:);#filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#e5000000',EndColorStr='#e5000000');}*/
+.photo-main{ background:#eee; margin:10px auto; width:980px; height:500px; border:5px dashed #ccc}
+.last-tips{ margin-top:-30px;}
+
+
+.imgwrap{ border:2px solid #ccc; overflow:hidden; padding:3px;}
+/* test #hack 针对IE6/IE7的  粉色背景 */
+.photo-main { #background:#FCF}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="photo-main">
+    <div class="ie-center"></div>
+    <div class="photo-inner" style="height: auto; width: auto;">
+        <!--<div class="imgwrap">-->
+            <img data-src="holder.js/300x200/#ccc:#333" width="300" height="200" title="可以不定高的图片">
+        <!--</div>-->
+    </div><!--//div  .photo-inner-->
+    <div class="last-tips">不定高度图片/容器自适应垂直居中（你可以随意更换内部图片的大小，可以自适应垂直居中）</div>
+</div><!--//div  .photo-main-->
+
+<div class="photo-main">
+    <div class="ie-center"></div>
+    <div class="photo-inner" style="height: auto; width: auto;">
+        <div class="imgwrap" title="可以不定高的容器">
+            <img data-src="holder.js/400x300/#ccc:#333" width="400" height="300">
+        </div>
+    </div><!--//div  .photo-inner-->
+    <div class="last-tips">不定高度图片/容器自适应垂直居中（容器同上）</div>
+</div><!--//div  .photo-main-->
+
+<script src="http://www.tcreator.info/cnBootstrap/cnDocs/assets/js/holder/holder.js"></script>
+</body>
+</html>
