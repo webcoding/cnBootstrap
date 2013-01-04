@@ -6,15 +6,15 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link href="solution.css" rel="stylesheet">
 <style>
+.wrap{width:65%;padding-right:30%;}
 .demo{overflow:hidden}
 h1,h2,h3{padding-top:1em}
 
 .bc{margin-left:auto;margin-right:auto;}
 .tc{text-align:center}
-.ctest{width:300px;height:100px;background:#999;}
+.ctest{width:200px;height:80px;background:#999;}
 .mtest{padding:20px 0;background:#ccc;}
 table.middle{height:130px;background:#ccc;}
-.middle .ctest{width:200px; height:80px;}
 
 /* 页码 */
 .pages{margin:0;padding:0;list-style:none}
@@ -37,9 +37,13 @@ table.middle{height:130px;background:#ccc;}
 .pages3 a{float:left;padding:0 9px; height:25px; line-height:25px;}
 
 /* 垂直居中 */
+/* 方法一 */
 .box{position:relative;height:120px;display:table-cell;vertical-align:middle;background:#ccc;}
 .verticalWrap{*position:absolute;*top:-50%;}
 .vertical{*position:relative;*top:-50%;}
+/* 方法三 */
+.middle-item,.middle-full{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;}
+.middle-full{height:100%;width:0;overflow:hidden;font-size:0;}
 
 .Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
 .Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
@@ -47,7 +51,7 @@ table.middle{height:130px;background:#ccc;}
 </style>
 </head>
 <body>
-<div class="wrap" style="width:760px; padding-right:200px;">
+<div class="wrap">
     <!-- 便捷导航 -->
     <div id="guide" class="fixed fixed-top fixed-right">
     	<ol id="shortcut">
@@ -72,9 +76,9 @@ table.middle{height:130px;background:#ccc;}
 				        <ul>
 				            <li><a href="#middle31">方法一 <small>外嵌套table方法</small></a></li>
 				            <li><a href="#middle32">方法二 <small>display:table-cell + hack</small></a></li>
+                            <li><a href="#middle33">方法三：<small>vertical-align:middle + inline-block方法</small></a></li>
 				        </ul>
 					</li>
-					<li><a href="#middle4">父子元素高度都不确定的垂直居中</a>
 				</ul>
 			<li><a href="#center-middle">弹窗的居中 <small>定位实现</small></a>
 			</li>
@@ -279,7 +283,7 @@ table.middle{height:130px;background:#ccc;}
 		<hr>
 		<table class="middle">
 		    <tr><td>
-                <img src="img/center-middle.png" height="60">
+                <img src="img/center-middle.png" width="90" height="60">
             </td></tr>
 		</table>
 		<hr>
@@ -315,7 +319,7 @@ table.middle{height:130px;background:#ccc;}
 	
 	<p>因为td标签默认情况下就隐式地设置了vertical-align的值为middle，所以我们不需要在显式地设置一遍。</p>
 	
-	<h3 id="middle31">方法二：<small>display:table-cell + hack</small></h3>
+	<h3 id="middle32">方法二：<small>display:table-cell + hack</small></h3>
 	<p>对支持 <code>display:table-cell</code> 的IE8+和Firefox用 <code>display:table-cell</code> 和 <code>vertical-align:middle</code> 来实现居中，对不支持 display:table-cell 的IE6和IE7，使用特定的hack，如下：</p>
 	<div class="demo">
 	    <div class="box">
@@ -330,7 +334,7 @@ table.middle{height:130px;background:#ccc;}
 		<hr>
 		<div class="box">
             <div class="verticalWrap">
-                <img class="vertical" src="img/center-middle.png" height="60">
+                <img class="vertical" src="img/center-middle.png" width="90" height="60">
             </div>
         </div>
 		<hr>
@@ -371,14 +375,53 @@ table.middle{height:130px;background:#ccc;}
 	
 	<p>利用hack技术区别对待标准浏览器和IE6/7，在不支持 <code>display:table-cell</code> 的IE6/7下，通过给父子两层元素分别设置 <code>top:50%</code> 和 <code>top:-50%</code> 来实现居中。这种方法的好处是没有增加额外的标签，但它的缺点也很明显，一方面使用了hack，不利于维护，另一方面，它需要设置 <code>position:relative</code>和 <code>position:absolute</code>，带来了副作用。</p>
 	
-    <h2 id="middle4">父子元素高度都不确定的垂直居中</h2>
-	<p>父元素、子元素的高度都不固定，使用 <code>vertical-align:middle</code> + .ie-center空标签方法可以自适应垂直居中，如下：</p>
+    <h3 id="middle33">方法三：<small>inline-block + vertical-align:middle 方法</small></h3>
+	<p>父元素高度固定、子元素的高度不固定，使用<code>inline-block</code> 元素设置 <code>vertical-align:middle</code> 后会垂直居中对齐，添加 <code>.middle-full</code> 空标签辅助实现，如下：</p>
 	<div class="demo">
-		
-	</div>
+	    <div class="box">
+            <div class="middle-full"></div>
+            <p class="middle-item">
+                hello world!<br>
+                hello world!<br>
+                hello world!
+            </p>
+		</div>
+		<hr>
+		<div class="box">
+            <div class="middle-full"></div>
+            <img class="middle-item" src="img/center-middle.png" width="90" height="60">
+        </div>
+		<hr>
+		<div class="box">
+            <div class="middle-full"></div>
+            <div class="ctest middle-item"></div>
+		</div>
+    </div>
 <pre class="prettyprint linenums">
+/* 垂直居中 */
+.middle-item,.middle-full{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;}
+.middle-full{height:100%;width:0;overflow:hidden;font-size:0;}
 
+&lt;div class="box"&gt;
+    &lt;div class="middle-full"&gt;&lt;/div&gt;
+    &lt;p class="middle-item"&gt;
+        hello world!&lt;br&gt;
+        hello world!&lt;br&gt;
+        hello world!
+    &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="box"&gt;
+    &lt;div class="middle-full"&gt;&lt;/div&gt;
+    &lt;img class="middle-item" src="img/center-middle.png" height="60"&gt;
+&lt;/div&gt;
+
+&lt;div class="box"&gt;
+    &lt;div class="middle-full"&gt;&lt;/div&gt;
+    &lt;div class="ctest middle-item"&gt;&lt;/div&gt;
+&lt;/div&gt;
 </pre>
+    <p>利用<code>inline-block</code> 属性的元素设置 <code>vertical-align:middle</code> 后垂直居中对齐的特性，在父标签内放置辅助标签 <code>.middle-full</code> 等高于父标签（宽度为0），表现元素会垂直居中对齐于此标签，从而实现想要的效果。优点是比方法二减少了标签嵌套层级，同时避免添加position属性引起副作用。</p>
 	
 	<h2 id="center-middle">弹窗的居中 <small>定位实现</small></h2>
 	<div class="demo" style="height:300px;">
