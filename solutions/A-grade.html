@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YUI A-grade Browsers selector support</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h3>YUI A-grade Browsers selector support</h3>
+    <table class="info">
+        <tr>
+            <th>&nbsp;</th>
+            <th>IE6</th>
+            <th>IE7</th>
+            <th>IE8</th>
+            <th>Firefox3.5</th>
+            <th>Opera10.10</th>
+            <th>Chrome4.0</th>
+            <th>Safari4</th>
+        </tr>
+        <tr>
+            <td>*：所有的元素 </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E：E元素 </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E[foo]：属性选择器，元素E拥有属性foo</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E[foo=&rdquo;bar&rdquo;]：属性选择器，元素E有属性foo，且它的属性值是bar </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E[foo~=&rdquo;bar&rdquo;]：属性选择器，元素E有属性foo，bar是它的属性值中的一个。 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E[foo^=&rdquo;bar&rdquo;]：属性选择器，元素E有属性foo，bar是它的第一个属性值。 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E[foo$=&rdquo;bar&rdquo;]：属性选择器，元素E有属性foo，bar是它的最后一个属性值。 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E[foo*=&rdquo;bar&rdquo;]：属性选择器，元素E有属性foo，bar是它其中一个属性值的子串。 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E[foo|=&rdquo;en&rdquo;]：属性选择器，元素E有属性foo，且foo的第一个属性值以en开始，跟着是&rdquo;-&rdquo;。(例：&lt;p class=&rdquo;test-p&rdquo;&gt;<br>
+                P[class|=&rdquo;test&rdquo;]) </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:root：元素E是文档的根 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y（html：root） </td>
+            <td>Y（html：root） </td>
+            <td>Y（html：root） </td>
+            <td>Y（html：root） </td>
+        </tr>
+        <tr>
+            <td>E:nth-child(n)：元素E是它父节点的第n个孩子(n的取值可以为odd(奇数)even(偶数)，4n,4n+1,4n+2) </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:nth-last-child(n)：元素E是它父节点的倒数第n个孩子(n的取值可以为odd(奇数)even(偶数)，4n,4n+1,4n+2) </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:nth-of-type(n)：跟元素E是相同元素且是它父节点的第n个孩子(n的取值可以为odd(奇数)even(偶数)，4n,4n+1,4n+2) </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:nth-last-of-type(n)：跟元素E是相同元素且是它父节点的倒数第n个孩子(n的取值可以为odd(奇数)even(偶数)，4n,4n+1,4n+2) </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:first-child：元素E是它父节点的第1个孩子 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:last-child：元素E是它父节点的最后一个孩子 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:first-of-type：跟元素E是相同元素且是它父节点的第1个孩子 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:last-of-type：跟元素E是相同元素且是它父节点的最后一个孩子 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:only-child：元素E是它父节点的唯一孩子 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:only-of-type：跟元素E是相同元素且是它父节点的唯一孩子 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:empty：元素E没有子节点（包括文本节点） </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:link：元素E是a，且未访问 </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:visited：元素E是a，且已访问 </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:active：元素E在用户活动中 </td>
+            <td>Y（仅a元素） </td>
+            <td>Y（仅a元素） </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:hover：鼠标悬浮在元素E上 </td>
+            <td>Y（仅a元素） </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:focus：元素E得到焦点 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:target：元素E是url的目标 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:lang(fr)：元素E的语言是fr </td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:enabled：元素E被启用 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:disabled：元素E被禁 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:checked：元素E被选中 </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>N</td>
+            <td>N</td>
+        </tr>
+        <tr>
+            <td>E:first-line：元素E的第一行 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:first-letter：元素E的第一个字母 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:before：元素E的前面（与CSS的content属性合用，在已有内容前附加内容） </td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:after：元素E的后面（与CSS的content属性合用，在已有内容后附加内容） </td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E.warning：元素E的class是warning </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E#myid：元素E的id是myid </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E:not(s)：元素E不是元素s </td>
+            <td>N</td>
+            <td>N</td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E F：元素F是元素E的子孙 </td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E&gt;F：元素F是元素E的孩子 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E+F：元素F是元素E的直接后继兄弟节点 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>E~F：元素F是元素E的后继兄弟节点 </td>
+            <td>N</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+    </table>
+   <p></p>
+</div>
+</body>
+</html>

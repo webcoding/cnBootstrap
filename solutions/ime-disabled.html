@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>禁用中文输入</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>强制非中文输入法</h1>
+    <p>禁用中文输入，应用在非中文输入的地方，让用户不需要切换输入法，提升体验等</p>
+    
+    <div class="demo">
+        <p><label>账户：<input type="text" placeholder="未禁用中文"></label></p>
+        <p><label>账户：<input type="text" placeholder="禁用中文输入法" class="ime-disabled"></label></p>
+        <p><label>密码：<input type="password" placeholder="默认已经禁用中文输入法"></label></p>
+    </div>
+<pre class="prettyprint linenums">
+&lt;input type="text" placeholder="未禁用中文"&gt;
+&lt;type="text" placeholder="禁用中文输入法" class="ime-disabled"&gt;
+&lt;input type="password" placeholder="默认已经禁用中文输入法"&gt;
+
+/*
+  @ 名称: 禁用中文输入法
+  @ 用法: 
+    在需要禁用的地方添加: .ime-disabled;
+*/
+
+.ime-disabled{
+    ime-mode:disabled!important;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <ul>
+        <li>在 chrome 和 safari 浏览器下，该解决方案失效。</li>
+        <li>密码框默认状态已经无法启用中文输入法，不必此设置。</li>
+    </ul>
+</div>
+</body>
+</html>
