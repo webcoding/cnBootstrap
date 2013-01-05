@@ -36,6 +36,7 @@
                 <div class="page-header">
                     <h1 title="Typography">排版 <small> 标题，段落，列表，以及其他行级元素</small></h1>
                 </div>
+				<p><span class="label label-info">注意!</span> 此处以下为BT的排版，点击查看更多<a href="../solutions/typo.html">中文排版详情</a></p>
                 <h2 id="headings" title="Headings">标题</h2>
                 <p title="All HTML headings, h1 through h6 are available.">所有的HTML标题, <code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code> 都可以用。</p>
                 <div class="bs-docs-example">
