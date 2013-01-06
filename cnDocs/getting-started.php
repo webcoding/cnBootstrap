@@ -231,7 +231,7 @@ Oricode/
             <img src="assets/img/examples/bootstrap-example-signin.png" alt="">
           </a>
           <h4 title="Sign in">登陆界面</h4>
-          <p title="Barebones sign in form with custom, larger form controls and a flexible layout.">标准的登陆框以及自定义的标志，能更大程度的控制及灵活的布局。</p>
+          <p title="Barebones sign in form with custom, larger form controls and a flexible layout.">标准的登陆框且能更大灵活的控制布局。</p>
         </li>
         <li class="span3">
           <a class="thumbnail" href="examples/sticky-footer.html">

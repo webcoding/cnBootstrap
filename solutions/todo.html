@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>解决方案标题</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{min-height:100px;}
+#cube { height: 6.5em; width: 6em; margin-right: 15px; }
+#cube div { width: 0; height: 0; border-style: solid; overflow: hidden; }
+#cube .c1 { border-color: transparent transparent blue transparent; border-width: 0 3em 1.5em 3em; }
+#cube .c2 { border-color: blue lime blue red; border-width: 1.5em 3em 0 3em; height: 2em; }
+#cube .c3 { border-color: transparent red transparent transparent; border-width: 0 3em 1.5em 0; float: left; }
+#cube .c4 { border-color: transparent transparent transparent lime; border-width: 0 0 1.5em 3em; float: left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+    
+    <h1>这是模版</h1>
+    <p>解决方案描述</p>
+    
+    <div class="demo">
+        <div id="cube">
+		    <div class="c1"></div>
+			<div class="c2"></div>
+			<div class="c3"></div>
+			<div class="c4"></div>
+		</div>
+        这是案例展示
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>这是描述</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>

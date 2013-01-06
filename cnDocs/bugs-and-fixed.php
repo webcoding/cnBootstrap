@@ -315,10 +315,10 @@ window.onload = function() {
                     <li class="bugs-item" data-key="IE6 IE7 IE8 z-index 定位 层级">
                         <h3 class="bug-title">IE下z-index的bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
-                            <p>在IE浏览器中，定位元素的<code class="inline">z-index</code>层级是相对于各自的父级容器，所以会导致<code class="inline">z-index</code>出现<a href="http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html" target="_blank" title="">错误的表现</a>。</p>
+                            <p>在IE浏览器中，定位元素的 <code>z-index</code> 层级是相对于各自的父级容器，所以会导致 <code>z-index</code> 出现<a href="http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html" target="_blank" title="">错误的表现</a>。</p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
-                            <p>解决方法是给其父级元素定义<code class="inline">z-index</code>，有些情况下还需要定义<code class="inline">position:relative</code> 。</p>
+                            <p>解决方法是给其父级元素定义 <code>z-index</code>，有些情况下还需要定义 <code>position:relative</code>。</p>
                         </div>
                     </li>
                     <li class="bugs-item" data-key="IE6 IE7 Overflow 相对定位">

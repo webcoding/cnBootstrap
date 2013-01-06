@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IE z-index bug</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+#yellow{position:relative;top:40px;}
+#yellow p, #green{width:200px;height:200px;background-color:#9c0;;}
+#yellow p{position:absolute;background-color:#FF0;z-index:100000;}
+#green{position:absolute;top:20px;left:150px;z-index:10;}
+
+.parent{width:200px; height:200px; padding:20px;}
+.sub{text-align:right; font:15px Verdana;width:100px; height:100px;left:-10px;}
+.lt{left:20px;top:50px;}
+
+/*
+.parent1{background:black;}
+.parent10{background:lightgrey;}
+.box1,.box2,.box10,.box20{position:absolute;}
+.box1,.box10{background:dimgray;}
+.box2,.box20{background:darkgray;}
+.box1{z-index:1;}
+.box2{z-index:2;}
+.box10{z-index:10;}
+.box20{z-index:20;}
+*/
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>IE z-index bug</h1>
+    <p>两个元素的平等级别祖先元素z-index高的，显示于上面。俗称：后台硬占据最高点。</p>
+    <p>在IE6/7浏览器中，定位元素的 <code>z-index</code> 层级是相对于各自的父级容器，所以会导致 <code>z-index</code> 出现 <a target="_blank" href="http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html">错误的表现</a> 如下。</p>
+    <div class="demo" style="height:250px;">
+        <div id="yellow">
+            <p>#yellow p<br />应该是在上面的</p>
+        </div>
+        <div id="green">#green<br />IE6/7显示在上面，实际上应该在下面</div>
+    </div>
+<pre class="prettyprint linenums">
+HTML：
+&lt;div id="yellow"&gt;
+    &lt;p>#yellow p&lt;br&gt;应该是在上面的&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="green"&gt;#green&lt;br&gt;IE6/7显示在上面，实际上应该在下面&lt;/div&gt;
+
+CSS：
+#yellow{position:relative;top:40px;}
+#yellow p, #green{width:200px;height:200px;background-color:#9c0;;}
+#yellow p{position:absolute;background-color:#FF0;z-index:100000;}
+#green{position:absolute;top:20px;left:150px;z-index:10;}
+</pre>
+    <h4>这是个拼爹的时代，在IE6/7下很好的体现了这点...囧</h4>
+    <p>层级高低不仅要看本身，还要看自己的父元素是否给力：父元素的 position 属性为 relative或absolute 时，子元素的 absolute 属性是相对于父元素而言的。而在IE6下的层级的表现有时候不是看子元素的 z-index 多高，而要看它们的父元素的 z-index 谁高谁低。</p>
+    <p>也可以这样理解，子元素层级再高也高不过父级的同辈元素(可以高过自己的父辈元素)。</p>
+	<h4>下面再看一个更详细的例子</h4>
+    <div class="demo" style="height:300px;padding-top:40px;">
+        <div style="position:absolute; background:lightgrey;" class="parent">
+            <div style="position:absolute;z-index:20;background:darkgray;" class="sub">20</div>
+            <div style="position:absolute;z-index:10;background:dimgray;" class="sub lt">10</div>
+        </div>
+        <div style="position:absolute;left:80px;top:100px;background:black;" class="parent">
+            <div style="position:absolute;z-index:2;background:darkgray;" class="sub">2</div>
+            <div style="position:absolute;z-index:1;background:dimgray;" class="sub lt">1</div>
+        </div>
+    </div>
+<pre class="prettyprint linenums">
+&lt;div style=&quot;position:absolute; background:lightgrey;&quot; class=&quot;parent&quot;&gt;
+    &lt;div style=&quot;position:absolute;z-index:20;background:darkgray;&quot; class=&quot;sub&quot;&gt;20&lt;/div&gt;
+    &lt;div style=&quot;position:absolute;z-index:10;background:dimgray;&quot; class=&quot;sub lt&quot;&gt;10&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position:absolute;left:80px;top:100px;background:black;&quot; class=&quot;parent&quot;&gt;
+    &lt;div style=&quot;position:absolute;z-index:2;background:darkgray;&quot; class=&quot;sub&quot;&gt;2&lt;/div&gt;
+    &lt;div style=&quot;position:absolute;z-index:1;background:dimgray;&quot; class=&quot;sub lt&quot;&gt;1&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	
+	<h4>各浏览器下的结果汇总如下：</h4>
+	<table class="info">
+		<thead>
+			<tr>
+				<th>IE6 IE7 IE8(Q)</th>
+				<th>IE8(S) Firefox Safari Chrome</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="background:#fff"><img src="img/z-index-ie67.png" width="350" height="320"></td>
+				<td style="background:#fff"><img src="img/z-index-s.png" width="350" height="320"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<h3>问题及注意事项：</h3>
+	<p>在制作当前浮动层覆盖父级同辈元素时，可在 <code>:hover</code> 时，提升当前元素父层的层级。</p>
+</body>
+</html>

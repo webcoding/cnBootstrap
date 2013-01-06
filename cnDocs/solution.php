@@ -68,30 +68,30 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt="对话框" ><h4>对话框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt="" ><h4>弹出框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt="" ><h4>弹出框</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img data-src="holder.js/160x106" alt="" ><h4>布局</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border"><img data-src="holder.js/160x106" alt="" ><h4>border</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float"><img data-src="holder.js/160x106" alt="" ><h4>清除浮动</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis"><img data-src="holder.js/160x106" alt="" ><h4>省略号</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/imgtext"><img data-src="holder.js/160x106" alt="" ><h4>图文混排</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/itemlist"><img data-src="holder.js/160x106" alt="" ><h4>项目列表</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/newslist"><img data-src="holder.js/160x106" alt="" ><h4>新闻列表</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img data-src="holder.js/160x106" alt="" ><h4>tab标题</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/radio-checkbox"><img data-src="holder.js/160x106" alt="" ><h4>radio/checkbox</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button-submit"><img data-src="holder.js/160x106" alt="" ><h4>button/submit</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img data-src="holder.js/160x100" alt="" ><h4>布局</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border"><img data-src="holder.js/160x100" alt="" ><h4>border</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float"><img data-src="holder.js/160x100" alt="" ><h4>清除浮动</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis"><img data-src="holder.js/160x100" alt="" ><h4>省略号</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/imgtext"><img data-src="holder.js/160x100" alt="" ><h4>图文混排</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/itemlist"><img data-src="holder.js/160x100" alt="" ><h4>项目列表</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/newslist"><img data-src="holder.js/160x100" alt="" ><h4>新闻列表</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img data-src="holder.js/160x100" alt="" ><h4>tab标题</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/radio-checkbox"><img data-src="holder.js/160x100" alt="" ><h4>radio/checkbox</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button-submit"><img data-src="holder.js/160x100" alt="" ><h4>button/submit</h4></a></li>
 			
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/form"><img data-src="holder.js/160x106" alt="" ><h4>form表单</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyhtml"><img data-src="holder.js/160x106" alt="" ><h4>html固定用法</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyrun"><img data-src="holder.js/160x106" alt="" ><h4>Copy&Run</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/bugs"><img data-src="holder.js/160x106" alt="" ><h4>Bugs列表</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tools"><img data-src="holder.js/160x106" alt="" ><h4>前端工具</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css-resource"><img data-src="holder.js/160x106" alt="" ><h4>css资源</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-base"><img data-src="holder.js/160x106" alt="" ><h4>css3属性详解</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-btn"><img data-src="holder.js/160x106" alt="" ><h4>CSS3按钮</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text"><img data-src="holder.js/160x106" alt="" ><h4>CSS3文字特效</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-content"><img data-src="holder.js/160x106" alt="" ><h4>CSS3生成内容</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/box-shadow"><img data-src="holder.js/160x106" alt="" ><h4>CSS3盒子阴影</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/accordion"><img data-src="holder.js/160x106" alt="" ><h4>CSS3 accordion</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img data-src="holder.js/160x106" alt="" ><h4>CSS3 tabs</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/form"><img data-src="holder.js/160x100" alt="" ><h4>form表单</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyhtml"><img data-src="holder.js/160x100" alt="" ><h4>html固定用法</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyrun"><img data-src="holder.js/160x100" alt="" ><h4>Copy&Run</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/bugs"><img data-src="holder.js/160x100" alt="" ><h4>Bugs列表</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tools"><img data-src="holder.js/160x100" alt="" ><h4>前端工具</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css-resource"><img data-src="holder.js/160x100" alt="" ><h4>css资源</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-base"><img data-src="holder.js/160x100" alt="" ><h4>css3属性详解</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-btn"><img data-src="holder.js/160x100" alt="" ><h4>CSS3按钮</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text"><img data-src="holder.js/160x100" alt="" ><h4>CSS3文字特效</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-content"><img data-src="holder.js/160x100" alt="" ><h4>CSS3生成内容</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/box-shadow"><img data-src="holder.js/160x100" alt="" ><h4>CSS3盒子阴影</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/accordion"><img data-src="holder.js/160x100" alt="" ><h4>CSS3 accordion</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img data-src="holder.js/160x100" alt="" ><h4>CSS3 tabs</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 	</section>
