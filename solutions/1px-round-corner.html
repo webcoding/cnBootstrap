@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>1像素圆角</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>1像素圆角</h1>
+    <p>结构：支持 -hover, hover 时为 class=".as-rc .as-rc-hover"</p>
+    
+    <div class="demo">
+        <p>
+            <span class="as-rc"><span class="as-rc-cnt">&nbsp;一像素圆角&nbsp;</span></span><!-- .as-rc -->
+            <cite>混排的文字</cite>
+        </p>
+  
+        <a href="#" class="as-rc"><span class="as-rc-cnt">&nbsp;由 &lt;a/&gt; 标签实现时不用加 .as-rc-hover&nbsp;</span></a>
+        <cite>混排的文字</cite>
+
+    </div>
+<pre class="prettyprint linenums">
+/*
+  @ 名称: 1像素圆角
+  @ 描述: 需要自己设置宽度，或者高度，否则会随内容自适应
+  @ 用法: 
+    最外层：.as-rc 
+    内容层：.as-rc-cnt
+    鼠标经过：.as-rc-hover
+*/
+
+/* base */
+.as-rc{
+    display:inline-block;vertical-align: middle;
+    border-left:1px solid #ddd;border-right:1px solid #ddd;  /* 可重设 */
+}
+
+/* 
+  不要直接给 BOTTON | INPUT[type=submit[button]] 添加边框
+  这会引发 IE 的 1px 的黑边 bug
+  Note: 一般不要把 input 作为.as-rc-cnt 层 
+ */
+.as-rc-cnt{
+    float:left;position: relative;
+    border-top: 1px solid #ddd;border-bottom:1px solid #ddd; /* 可重设 */
+    margin:-1px 0;
+}
+
+/* HACK for ie6 7 */
+div.as-rc, p.as-rc, h2.as-rc, h3.as-rc, h4.as-rc, h5.as-rc, h6.as-rc, ul.as-rc, ol.as-rc{
+    *display: inline;
+}
+
+/* 鼠标经过 */
+.as-rc-hover, .as-rc-hover .as-rc-cnt, .as-rc:hover, .as-rc:hover .as-rc-cnt{
+    border-color: #aaa; /* 可重设 */
+    text-decoration: none;
+}
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>最好不要给 INPUT[type=submit[button]] || BUTTON 直接添加border，避免 lte IE7 出现的1px 黑边 bug。</p>
+    <ul>
+    	<li>好处：跨浏览器，自适应高度和宽度</li>
+    	<li>缺点：外观太简单</li>
+    </ul>
+    
+    
+</div>
+</body>
+</html>
