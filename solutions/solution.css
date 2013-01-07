@@ -14,8 +14,9 @@ small{ font-weight:normal}
 .note{font-size:13px;color:#555}
 .note strong:first-child{color:red}
 
+h1,h2,h3{padding-top:0.5em;line-height:1.2}
 h4{margin-bottom:1em}
-
+body h1:first-child{padding-top:0;}
 /* Code examples
 -------------------------------------------------- */
 .demo {
@@ -548,4 +549,39 @@ div.as-rc, p.as-rc, h2.as-rc, h3.as-rc, h4.as-rc, h5.as-rc, h6.as-rc, ul.as-rc, 
 
 
 
+/*
+  @ 名称: 自定义 input[type=file]
+  @ 用法: 添加 class .as-file
+  @ 例子：
+    <span class="as-file">
+        <input type="button" value="点击选择图片" />
+        <input type="file" exts="png|jpg|bmp" class="as-input-file" />
+    </span>
+*/
 
+/* 基础样式 */
+.as-file{
+    position:relative;
+    display:inline-block;
+	*display:inline;
+    *zoom:1;
+    cursor:pointer;
+    overflow:hidden;
+    vertical-align:middle;
+}
+
+/* 影响 .ui-input-file 的样式 */
+.as-file .as-input-file{
+    position:absolute;
+    right:0;
+    top:0;
+    _font-size:100px; /* overwrite*/
+    _font-size:12px;
+    _zoom:10; /* overwrite */
+    height:100%;
+    _height:auto;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -ms-filter:"alpha(opacity=0)";
+    cursor:pointer;
+}

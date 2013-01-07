@@ -40,7 +40,7 @@
 		
 		<ul class="thumbnails case">
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/typo.html"><img src="../solutions/img/default.png" alt="中文排版" ><h4>中文排版</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/center-middle.html"><img src="../solutions/img/center-middle.png" alt="垂直/水平居中" ><h4>垂直/水平居中</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/center-middle.html"><img src="../solutions/img/center-middle.png" alt="垂直/水平居中" ><h4>水平/垂直居中</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/select-mask.html"><img src="../solutions/img/select-mask.png" alt="IE6 浮层遮盖" ><h4>IE6 浮层遮盖</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rotate.html"><img src="../solutions/img/rotate.png" alt="跨浏览器翻转" ><h4>跨浏览器翻转</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/remove-outline.html"><img src="../solutions/img/outline.png" alt="" ><h4>去除虚线框</h4></a></li>
@@ -48,17 +48,17 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pngfix.html"><img src="../solutions/img/png24.png" alt="IE6 PNG 半透明" ><h4>IE6 PNG 半透明</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/placeholder.html"><img src="../solutions/img/placeholder.png" alt="跨浏览器 Placeholder" ><h4>跨浏览器 Placeholder</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/min-max.html"><img src="../solutions/img/min-max.png" alt="IE6 最大/小宽度" ><h4>IE6 最大/小宽度</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/localStorage.html"><img src="../solutions/img/default.png" alt="跨浏览器文本存储" ><h4>跨浏览器文本存储</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/localStorage.html"><img src="../solutions/img/localStorage.png" alt="跨浏览器文本存储" ><h4>跨浏览器文本存储</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/linear-gradient.html"><img src="../solutions/img/linear-gradient.png" alt="跨浏览器线性渐变" ><h4>跨浏览器线性渐变</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ime-disabled.html"><img src="../solutions/img/ime.png" alt="强制非中文输入法" ><h4>强制非中文输入法</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ie-z-index-bug.html"><img src="../solutions/img/z-index.png" alt="IE z-index bug" ><h4>IE z-index bug</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/force-wrap.html"><img src="../solutions/img/default.png" alt="文本强制换行" ><h4>文本强制(不)换行</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/font-face.html"><img src="../solutions/img/font-face.png" alt="@font-face" ><h4>@font-face</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/float-center.html"><img src="../solutions/img/float-center.png" alt="float:center" ><h4>float:center</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/font-face.html"><img src="../solutions/img/font-face.jpg" alt="@font-face" ><h4>@font-face</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/float-center.html"><img src="../solutions/img/float-center.png" alt="float:center" ><h4>float:center 居中浮动</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/equal-height-layout.html"><img src="../solutions/img/layout.png" alt="布局等高栏" ><h4>布局等高栏</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/drop-shadow.html"><img src="../solutions/img/box-shadow.png" alt="跨浏览器投影" ><h4>跨浏览器投影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-file.html"><img src="../solutions/img/upload.png" alt="自定义上传文件样式" ><h4>自定义上传文件样式</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-domain-iframe.html"><img src="../solutions/img/default.png" alt="iframe 跨域自适应" ><h4>iframe 跨域自适应</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-domain-iframe.html"><img src="../solutions/img/iframe.png" alt="iframe 跨域自适应" ><h4>iframe 跨域自适应</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-browers-copy.html"><img src="../solutions/img/default.png" alt="跨浏览器剪贴功能" ><h4>跨浏览器剪贴功能</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/1px-round-corner.html"><img src="../solutions/img/radius-1px-box.png" alt="一像素圆角" ><h4>一像素圆角</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/alert.html"><img src="../solutions/img/default.png" alt="通知提醒" ><h4>通知提醒</h4></a></li>

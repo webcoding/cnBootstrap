@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gbk">
+<title>我与A页面同域</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+</head>
+<body>
+<div style="position:absolute; background-color:#ccc;"><button id="btn" class="open" style="padding:5px 15px;">增加页面高度</button><div>我是一个绝对定位的层<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>我是一个绝对定位的层<br></div></div>
+<script>
+(function(){
+		document.getElementById("btn").onclick = function(){
+				if (this.className === "open"){
+						this.style.height='1000px';
+						this.className = "close";
+						this.firstChild.nodeValue = "减小页面高度";
+				}else{
+						this.style.height='30px';
+						this.className = "open";
+						this.firstChild.nodeValue = "增加页面高度";
+				}
+		}
+})();
+</script>
+</body>
+</html>

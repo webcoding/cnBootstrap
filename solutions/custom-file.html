@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>自定义 input[type=file] 样式</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>自定义 input[type=file] 样式</h1>
+    <p>使用 <strong>透明 + 定位</strong> 的方法实现自定义 <code>input[type=file]</code> 样式。</p>
+    
+    <div class="demo">
+        <span class="as-file">
+            <input type="button" value="点击选择图片" />
+            <input type="file" exts="png|jpg|bmp" class="as-input-file" />
+        </span> png | jpg | bmp
+    </div>
+<pre class="prettyprint linenums">
+HTML:
+&lt;span class="as-file"&gt;
+    &lt;input type="button" value="点击选择图片" /&gt;
+    &lt;input type="file" exts="png|jpg|bmp" class="as-input-file" /&gt;
+&lt;/span&gt;
+
+CSS:
+/* 基础样式 */
+.as-file{
+    position:relative;
+    display:inline-block;
+	*display:inline;
+    *zoom:1;
+    cursor:pointer;
+    overflow:hidden;
+    vertical-align:middle;
+}
+
+/* 影响 .ui-input-file 的样式 */
+.as-file .as-input-file{
+    position:absolute;
+    right:0;
+    top:0;
+    _font-size:100px; /* overwrite*/
+    _font-size:12px;
+    _zoom:10; /* overwrite */
+    height:100%;
+    _height:auto;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -ms-filter:"alpha(opacity=0)";
+    cursor:pointer;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>如上实例，通过在 <code>button</code> 上自定义样式实现视觉效果。</p>
+    
+</div>
+</body>
+</html>

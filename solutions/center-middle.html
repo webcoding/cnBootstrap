@@ -2,13 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>垂直/水平居中</title>
+<title>水平/垂直居中</title>
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link href="solution.css" rel="stylesheet">
 <style>
 .wrap{width:65%;padding-right:30%;}
 .demo{overflow:hidden}
-h1,h2,h3{padding-top:1em}
 
 .bc{margin-left:auto;margin-right:auto;}
 .tc{text-align:center}
@@ -53,9 +52,12 @@ table.middle{height:150px;background:#ccc;}
 </head>
 <body>
 <div class="wrap">
-    <!-- 便捷导航 -->
+    <h1>水平/垂直居中</h1>
+	
+	<!-- 便捷导航 -->
     <div id="guide" class="fixed fixed-top fixed-right">
     	<ol id="shortcut">
+			<li><a href="#table">使用table</a></li>
         	<li><a href="#center">水平居中</a>
 			    <ul>
 				    <li><a href="#center1">文本、图片等行内元素的水平居中</a></li>
@@ -86,8 +88,58 @@ table.middle{height:150px;background:#ccc;}
         </ol>
     </div><!-- //div #guide -->
 	
-    <h1 id="center">水平居中</h1>
-	<p>CSS的居中会遇到很多种情况，不同的情况使用的方法不同。</p>
+	<h2 id="table">使用table</h2>
+	<p>无论水平还是垂直居中，使用 <code>table</code> 实现都超简单，只需 <code>text-algin:center;vertical-align:middle;</code> 就可以了。</p>
+<!--
+	<div class="demo">
+	    <table class="bc">
+	        <tr><td>
+			    <ul class="pages pages1">
+				    <li><a href="#">1</a></li>
+				</ul>
+		    </td></tr>
+		</table>
+		<table class="bc">
+	        <tr><td>
+				<ul class="pages pages1">
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				</ul>
+			</td></tr>
+		</table>
+		<table class="bc">
+	        <tr><td>
+				<ul class="pages pages1">
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				</ul>
+			</td></tr>
+		</table>
+    </div>
+<pre class="prettyprint linenums">
+.bc{margin-left:auto;margin-right:auto;}
+.pages1 li{float:left;display:inline;margin-right:5px;}
+.pages1 a{float:left;display:block;padding:0 9px; height:25px; line-height:25px;}
+
+&lt;table class="bc"&gt;
+    &lt;tr&gt;&lt;td&gt;
+        &lt;ul class="pages pages1"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+	<p><code>table</code> 标签拥有很多优厚的待遇，浏览器对它的支持几乎达到了空前的一致。</p>
+	<p>做法很巧妙，但缺点是增加了无语义的标签，加深了标签的嵌套层数。</p>
+-->
+	
+	<h1 id="center">水平居中</h1>
+	<p>除上述 <code>table</code> 方法外，其他的CSS实现居中会遇到很多种情况，不同的情况使用的方法不同。</p>
+	
 	
 	<h2 id="center1">文本、图片等行内元素的水平居中</h2>
 	<p>给父元素设置 <code>text-align:center</code> 可以实现文本、图片等行内元素的水平居中，如下：</p>
@@ -197,7 +249,7 @@ table.middle{height:150px;background:#ccc;}
 	
 	<p>这里换了种思路，改变块级元素的display为 <code>inline</code> 类型，然后使用 <code>text-align:center</code> 来实现居中。相较于方法一，它的好处是不用增加无语义标签，简化了标签的嵌套深度，但它也存在一定的问题：它将块级元素的 display 类型改为 inline，变成了行内元素，而行内元素比起块级元素缺少一些功能，比如设定长宽值，在某些特殊需求的CSS设置中，这种方法可能会带来一些限制。</p>
 	
-	<p class="note"><strong>注：</strong>其实这里使用变块级为inline-block类型更为合适，参见<a href="float-center.html">float-center.html</a>，此方法为<em>水平居中</em> 的<b>推荐方案</b>。</p>
+	<p class="note"><strong>注：</strong>其实这里使用变块级为inline-block类型更为合适，此方法为<em>水平居中</em> 的<b>推荐方案</b>。</p>
 	
 	<h3 id="center33">方法三：<small>使用position:relative</small></h3>
 	<div class="demo">
@@ -228,6 +280,7 @@ table.middle{height:150px;background:#ccc;}
 </pre>
 	
 	<p>方法三通过给父标签设置 <code>float</code>，然后父元素设置 <code>position:relative</code> 和 <code>left:50%;</code>，子元素设置 <code>position:relative</code> 和 <code>left:-50%;</code> 来实现水平居中。它可以保留块级元素仍以 <code>display:block</code> 的形式显示，而且不会添加无语义标签，不增加嵌套深度，但它的缺点是设置了 <code>position:relative</code>，带来了一定的副作用。</p>
+	<p>此方法可以解决浮动居中的问题，详情参见<a href="float-center.html">float-center.html</a>。</p>
 	
 	<p>这三种方法使用得都非常广泛，各有优缺点，具体选用哪种方式可以视具体情况而定。</p>
 	

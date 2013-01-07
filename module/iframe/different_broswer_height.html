@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gbk">
+<title>不同浏览器计算页面高度的不同方法</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css">
+<style>
+	body{font:12px/1.5 "宋体";}
+	table{ border:1px solid #ccc; border-width:1px 0 0 1px; border-collapse:collapse;}
+	th,td{ padding:4px 15px; border:1px solid #ccc; border-width:0 1px 1px 0;}
+  th{ background-color:#eee;}
+</style>
+</head>
+<body>
+<table>
+	<thead>
+  	<tr>
+    	<th></th>
+    	<th>IEs</th>
+      <th>Firefox</th>
+      <th>opera</th>
+      <th>Chrome、safari</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<tr>
+    	<th>documentElement</th>
+      <td>1629(IE8:1628)</td>
+      <td>1626</td>
+      <td>1626</td>
+      <td>98</td>
+    </tr>
+  	<tr>
+    	<th>body</th>
+      <td>82</td>
+      <td>82</td>
+      <td>82</td>
+      <td>1636、1637</td>
+    </tr>
+  </tbody>
+</table>
+<div style="position:absolute; background-color:#ccc;"><button id="btn" class="open" style="padding:5px 15px;">废弃的按钮</button><div>我是一个绝对定位的层<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>我是一个绝对定位的层<br></div></div>
+<script>
+(function(){
+		alert("documentElement:" + document.documentElement.scrollHeight + ";body:" + document.body.scrollHeight);
+})();
+</script>
+</body>
+</html>

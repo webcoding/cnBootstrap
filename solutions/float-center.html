@@ -2,21 +2,78 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>float:center</title>
+<title>跨浏览器实现float:center居中浮动</title>
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
+.demo{background:#fff}
 .center-box{border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:3px 0;}
 .center-item{border:3px solid orange;background:#f36;color:#fff;padding:3px 10px;}
+.none,.none li{margin:0;padding:0;list-style-type:none}
+
+.float-center{
+    text-align:center;
+    overflow:hidden;
+}
+.float-center ul{
+    float:left;
+    position:relative;
+    left:50%;
+}
+.float-center li{
+    position:relative;
+    right:50%;
+    float:left;
+    margin:5px;
+    padding:0 10px;
+    border:2px solid #ffa500;
+    line-height:2em;
+    background:#fd537e;
+    color:#fff;
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-    <h1>float:center</h1>
+    <h1>float:center居中浮动</h1>
+	<p>我们都知道 <code>float:left</code> 和 <code>float:right</code>，但是否想过 <strong>float:center</strong> 呢？居中浮动...</p>
+	<div class="demo float-center">
+		<h3>跨浏览器实现float:center，No CSS hacks</h3>
+    	<ul class="none">
+            <li>列表一,我是浮动的</li>
+            <li>列表二</li>
+            <li>列表三</li>
+            <li>这里可能是N</li>
+        </ul>
+    </div>
+<pre class="prettyprint linenums">
+.float-center{
+    text-align:center;
+    overflow:hidden;
+}
+.float-center ul{
+    float:left;
+    position:relative;
+    left:50%;
+}
+.float-center li{
+    position:relative;
+    right:50%;
+    float:left;
+    margin:5px;
+    padding:0 10px;
+    border:2px solid #ffa500;
+    line-height:2em;
+    background:#fd537e;
+    color:#fff;
+}
+</pre>
+	<p>此方法实质是<strong><a href="center-middle.html#center3">不确定宽度的块级元素的水平居中</a></strong>的解决方法三的应用。</p>
+	
+	<h3>这里还有一个变通的方法 <small>取消 <code>float</code> 后水平居中，实现视觉上的一致</small></h3>
     <p>外框加上 <code>.center-box</code>，子元素加上 <code>.center-item</code>，元素就可以自动根据父元素的宽度水平居中。</p>
-    
     <div class="demo">
-    	<ul class="center-box clearfix">
+    	<ul class="center-box">
             <li class="center-item">item1</li>
             <li class="center-item">item2</li>
             <li class="center-item">item3</li>
@@ -54,8 +111,9 @@ CSS：
     font-size:13px;
 }
 </pre>
+	
     <h3>问题及注意事项：</h3>
-    <p>实质上这就是<strong><a href="center-middle.html#center3">不确定宽度的块级元素的水平居中</a></strong>的解决方法之一</p>
+    <p>此方法实质是<strong><a href="center-middle.html#center3">不确定宽度的块级元素的水平居中</a></strong>的解决方法二的应用。</p>
     
 </div>
 </body>

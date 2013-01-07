@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gbk">
+<title>iframe高于页面实际高度</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css">
+<style>
+	body{font:12px/1.5 "宋体";}
+	table{ border:1px solid #ccc; border-width:1px 0 0 1px; border-collapse:collapse;}
+	th,td{ padding:4px 15px; border:1px solid #ccc; border-width:0 1px 1px 0;}
+  th{ background-color:#eee;}
+	#frame_content_parent{ height:1800px; }
+</style>
+</head>
+<body>
+<table>
+	<thead>
+  	<tr>
+    	<th></th>
+    	<th>IEs</th>
+      <th>Firefox</th>
+      <th>opera</th>
+      <th>Chrome、safari</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<tr>
+    	<th>documentElement</th>
+      <td>1544</td>
+      <td>1800</td>
+      <td>1800</td>
+      <td>0</td>
+    </tr>
+  	<tr>
+    	<th>body</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1800</td>
+    </tr>
+  </tbody>
+</table>
+<iframe width="790" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://demo.zhouqicf.com/js/2010/iframe_height/same_area.html" id="frame_content_parent" name="frame_content_parent"></iframe>
+<script>
+(function(){
+		var frame = document.getElementById("frame_content_parent"),
+				setIframeHeight = function(){
+						var frameContent = frame.contentWindow.document;
+						alert("documentElement:" + frameContent.documentElement.scrollHeight + ";body:" + frameContent.body.scrollHeight);// + ";body:" + frameContent.body.scrollHeight
+				};
+		if(frame.addEventListener){
+				frame.addEventListener("load",setIframeHeight,false);
+		}else{
+				frame.attachEvent("onload",setIframeHeight);
+		}
+})();
+</script>
+</body>
+</html>

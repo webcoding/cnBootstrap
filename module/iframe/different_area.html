@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gbk">
+<title>我与A页面不同域</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+</head>
+<body>
+<div style="position:absolute;background-color:#ccc;"><button id="btn" class="open" style="padding:5px 15px;">增加页面高度</button><div>我是一个绝对定位的层<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>test2<br>我是一个绝对定位的层<br></div></div>
+<script>
+(function(){
+		var getHeight = function(){
+				return Math.max(document.documentElement.scrollHeight,document.body.scrollHeight);
+		};
+		
+		var preHeight = getHeight(),
+				agent_iframe;
+		
+		var createIframe = function(height){
+				agent_iframe = document.createElement("iframe");
+				agent_iframe.style.height = "0";
+				agent_iframe.style.width = "0";
+				agent_iframe.style.border = "none";
+				agent_iframe.src = "http://demo.zhouqicf.com/js/2010/iframe_height/agent_iframe.html#" + height;
+				document.body.appendChild(agent_iframe);
+		}
+		
+		createIframe(preHeight);
+		
+		var checkHeight = function(){
+				var currentHeight = getHeight();
+				if(currentHeight != preHeight){
+						agent_iframe.src = "http://demo.zhouqicf.com/js/2010/iframe_height/agent_iframe.html#" + currentHeight;
+						preHeight = currentHeight;
+				}
+				setTimeout(checkHeight,500);
+		}
+		
+		setTimeout(checkHeight,500);
+})();
+(function(){
+		document.getElementById("btn").onclick = function(){
+				if (this.className === "open"){
+						this.style.height='1000px';
+						this.className = "close";
+						this.firstChild.nodeValue = "减小页面高度";
+				}else{
+						this.style.height='30px';
+						this.className = "open";
+						this.firstChild.nodeValue = "增加页面高度";
+				}
+		}
+})();
+</script>
+</body>
+</html>

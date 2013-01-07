@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gbk">
+<title>我只是个代理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+</head>
+<body>
+<script>
+(function(){
+		var preHeight = parseInt(window.location.hash.substring(1),10),
+				ifrmae = window.top.document.getElementById("frame_content_parent");
+		
+		ifrmae.height = preHeight;
+		setInterval(function(){
+				var newHeight = parseInt(window.location.hash.substring(1),10);
+				if (newHeight !== preHeight){
+						ifrmae.height = newHeight;
+						preHeight = newHeight;
+				}
+		},500);
+})();
+</script>
+</body>
+</html>
