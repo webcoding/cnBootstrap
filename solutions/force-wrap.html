@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>强制换行与不换行</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+td{padding:5px 10px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>强制换行-强制不换行</h1>
+    <h3>强制换行用法：</h3>
+    <ul>
+    	<li>一般块级元素用：.as-wrap</li>
+    	<li>table标签中需添加：.as-wrap-table</li>
+    </ul>
+    
+<div class="demo">
+    <div class="fl" style="margin-bottom:30px;">
+        <h3>一般块元素换行:</h3>
+        <p class="fl as-wrap" style="width:200px;margin-top:20px;margin-right:30px;background:#e8edef;">
+        	http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <h3>一般块元素不换行:</h3>
+        <p class="fl" style="width:200px;margin-top:20px;background:#ffc;">
+        	http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+    <table width="500px;" class="as-wrap as-wrap-table">
+    	<tr>
+    		<th colspan="2"><h3>换行的 table:</h3></th>
+    	</tr>
+    	<tr>
+    		<td>
+    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    		</td>
+    		<td>
+    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    		</td>
+    	</tr>
+    </table>
+
+    <table width="500px;" style="margin-bottom:20px;">
+    	<tr>
+    		<th colspan="2"><h3>未换行的 table:</h3></th>
+    	</tr>
+    	<tr>
+    		<td>
+    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    		</td>
+    		<td>
+    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    		</td>
+    	</tr>
+    </table>
+
+    
+</div>
+<pre class="prettyprint linenums">
+/*
+  @ 名称: 强制换行
+  @ 用法: 
+    * 一般块级元素用：.as-wrap
+    * table标签中需添加：.as-wrap-table
+  @ 例子: 
+    &lt;p class="as-wrap"&gt;…&lt;/p&gt;
+    &lt;table class="as-wrap as-wrap-table"&gt;&lt;/table&gt;
+*/
+
+/* 一般 block-level 元素 */
+.as-wrap, .as-wrap td, .as-wrap th{
+    word-wrap:break-word;word-break:break-all;
+}
+
+/* table */
+.as-wrap-table{
+    table-layout:fixed;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>这是描述</p>
+
+
+    <h3>强制不换行用法：</h3>
+
+
+</div>
+</body>
+</html>
