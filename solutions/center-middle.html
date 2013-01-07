@@ -197,6 +197,8 @@ table.middle{height:150px;background:#ccc;}
 	
 	<p>这里换了种思路，改变块级元素的display为 <code>inline</code> 类型，然后使用 <code>text-align:center</code> 来实现居中。相较于方法一，它的好处是不用增加无语义标签，简化了标签的嵌套深度，但它也存在一定的问题：它将块级元素的 display 类型改为 inline，变成了行内元素，而行内元素比起块级元素缺少一些功能，比如设定长宽值，在某些特殊需求的CSS设置中，这种方法可能会带来一些限制。</p>
 	
+	<p class="note"><strong>注：</strong>其实这里使用变块级为inline-block类型更为合适，参见<a href="float-center.html">float-center.html</a>，此方法为<em>水平居中</em> 的<b>推荐方案</b>。</p>
+	
 	<h3 id="center33">方法三：<small>使用position:relative</small></h3>
 	<div class="demo">
 		<ul class="pages pages3">

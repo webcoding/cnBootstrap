@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>等高布局</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+#col2-1{width:600px;background: #f7f7f7;}
+#col2-2{width:310px;background: #ffc;}
+#col3-1{width:400px;margin-right:30px;background: #f7f7f7;}
+#col3-2{width:300px;background: #f7f7f7;}
+#col3-3{width:180px;background: #ffc;}  
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>等高布局</h1>
+    <p>等高栏的容器添加 <code>.equalheight-box</code> 子元素添加 <code>.equalheight-item</code> 可以实现等高。</p>
+    
+    <div class="demo">
+        <h3>2 column width equal height</h3>
+        <div class="equalheight-box">
+            <div id="col2-1" class="equalheight-item fl">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div id="col2-2"  class="equalheight-item fr">
+            Just another column floated to right
+            </div>
+        </div>
+        
+        
+        <h3>3 column width equal height</h3>
+        <div class="equalheight-box">
+            <div id="col3-1" class="fl equalheight-item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div id="col3-2" class="fl equalheight-item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div id="col3-3"  class="fr equalheight-item">
+            Just another column floated to right
+            </div>
+        </div>
+    </div>
+<pre class="prettyprint linenums">
+HTML:
+&lt;div class="equalheight-box"gt;
+    &lt;div class="equalheight-item fl"&gt;...&lt;/div&gt;
+    &lt;div class="equalheight-item fl"&gt;...&lt;/div&gt;
+    &lt;div class="equalheight-item fr"&gt;...&lt;/div&gt;
+&lt;/div&gt;&lt;!-- //div .equalheight-box --&gt;
+
+CSS:
+/* 记得更改宽度，如果页面不是960px的话 */
+.equalheight-box{
+    /*width: 960px;  /* 需重设 */
+    overflow: hidden;
+} 
+
+/* 等高 */
+.equalheight-item{
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>如上布局，当需要的时候，如果有n栏，那么，&lt; n 的栏都用 <code>.fl</code> 让它 <code>float:left</code>；第n栏，也就是最近一栏使用 <code>.fr</code> 向右浮动。</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>

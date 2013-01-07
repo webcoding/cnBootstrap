@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>跨浏览器投影</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>跨浏览器投影</h1>
+    <p>使用 CSS filter 实现像 CSS3 的 box-shadow 效果，使用控制不同方向的投影来消除 filter 实现投影有噪点的不足。</p>
+    
+    <div class="demo" style="padding:40px 40px 30px">
+        <div class="shadow" style="width:500px;height:300px;padding:20px;">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div><!-- //div .shadow -->
+    </div>
+<pre class="prettyprint linenums">
+.shadow{
+    /* modern web browsers */ 
+    -moz-box-shadow:1px 3px 12px #bbb;
+    -webkit-box-shadow:1px 3px 12px #bbb;
+    box-shadow:1px 3px 12px #bbb;
+    
+    /* 一定要设置background, 不然 ie 会显示在字体上 */
+    background: #fff;
+    
+    /* gte=ie8 */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Glow(color=#aaaaaa,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=10) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=6)";
+    
+    /* lte=ie7 */
+    *filter: 
+    progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=7)
+    progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=7);
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p><strong>注意：</strong>记得添加 background 属性，防止 IE 把投影转移到文字上</p>
+    
+</div>
+</body>
+</html>

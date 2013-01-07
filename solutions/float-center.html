@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>float:center</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.center-box{border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:3px 0;}
+.center-item{border:3px solid orange;background:#f36;color:#fff;padding:3px 10px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>float:center</h1>
+    <p>外框加上 <code>.center-box</code>，子元素加上 <code>.center-item</code>，元素就可以自动根据父元素的宽度水平居中。</p>
+    
+    <div class="demo">
+    	<ul class="center-box clearfix">
+            <li class="center-item">item1</li>
+            <li class="center-item">item2</li>
+            <li class="center-item">item3</li>
+        </ul>
+    </div>
+<pre class="prettyprint linenums">
+HTML：
+&lt;ul class="center-box clearfix"&gt;
+    &lt;li class="center-item"&gt;item1&lt;/li&gt;
+    &lt;li class="center-item"&gt;item2&lt;/li&gt;
+    &lt;li class="center-item"&gt;item3&lt;/li&gt;
+&lt;/ul&gt;
+
+CSS：
+/*
+  @名称: float center 
+  @用法：
+    1. 外框加上 .center-box，子元素加上 .center-item，元素就可以自动根据父元素的宽度水平居中。
+    2. 结构(例:3栏)：别忘记给每个栏加宽度(如上)
+*/
+
+.center-box{
+    display:block;text-align:center;
+    
+    /* 解决间隙问题 */
+    font-size:0;
+}
+.center-item{
+    display:inline-block;*display:inline;*zoom:1;
+    
+    /* 解决不能水平对齐问题 */
+    vertical-align:top;
+    
+    /* 解决间隙问题后遗症解决 */
+    font-size:13px;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实质上这就是<strong><a href="center-middle.html#center3">不确定宽度的块级元素的水平居中</a></strong>的解决方法之一</p>
+    
+</div>
+</body>
+</html>
