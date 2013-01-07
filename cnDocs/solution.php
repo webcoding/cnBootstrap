@@ -61,6 +61,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-domain-iframe.html"><img src="../solutions/img/iframe.png" alt="iframe 跨域自适应" ><h4>iframe 跨域自适应</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-browers-copy.html"><img src="../solutions/img/default.png" alt="跨浏览器剪贴功能" ><h4>跨浏览器剪贴功能</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/1px-round-corner.html"><img src="../solutions/img/radius-1px-box.png" alt="一像素圆角" ><h4>一像素圆角</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pages.html"><img src="../solutions/img/default.png" alt="页码组件" ><h4>页码组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/alert.html"><img src="../solutions/img/default.png" alt="通知提醒" ><h4>通知提醒</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="base-css.php#buttons"><img src="../solutions/img/default.png" alt="全CSS按钮" ><h4>全CSS按钮</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/table.html"><img src="../solutions/img/default.png" alt="常用表格" ><h4>常用表格</h4></a></li>
