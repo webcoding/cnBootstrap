@@ -22,7 +22,7 @@ body h1:first-child{padding-top:0;}
 .demo {
   position: relative;
   margin: 15px 0;
-  padding: 30px 20px 20px;
+  padding: 40px 20px 20px;
   *padding-top: 19px;
   background: #eee;
   border: 1px solid #ddd;
@@ -31,6 +31,7 @@ body h1:first-child{padding-top:0;}
           border-radius: 4px;
 }
 .demo + .demo{margin-top:-15px;}
+.demo p:first-child{margin-top:0;}
 /* Echo out a label for the example */
 .demo:after {
 	content: "Example";

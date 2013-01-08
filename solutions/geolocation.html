@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>geolocation 地理定位</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>geolocation 地理定位</h1>
+    <p>用 js 的方式获取 geolocation。</p>
+    
+    <div class="demo">
+	    <h4>获取地理位置：</h4>
+        <div id="map">
+            <div id="msg">Loading…</div>
+        </div>
+        
+    </div>
+<pre class="prettyprint linenums">
+使用方法：
+// 获取数据成功时的回调：successCallback(coords)，包含一个参数 coords {Array}，经纬度
+// 获取失败时的回调：errorCallback，包含一个参数 error {String}：错误消息
+var geo = new Geo(successCallback, errorCallback);
+
+
+// 实例化：
+var geo = new Geo(function(coords){
+    alert('Latitude: ' + coords.latitude + '\nLongitude: ' + coords.longitude);
+}, function(error){
+    alert('Error Message: ' + error);
+});
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+	
+	<h3>知识扩展：</h3>
+    <ul>
+		<li><a target="_blank" href="http://www.cnblogs.com/lecaf/archive/2011/08/01/2123593.html">JS新API标准 地理定位（navigator.geolocation）</li>
+		<li><a target="_blank" href=""></li>
+		<li><a target="_blank" href=""></li>
+	</ul>
+</div>
+<!-- #map -->
+
+<!-- use the google map api
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+-->
+<script charset="utf-8" src="http://api.map.soso.com/v1.0/main.js"></script>
+<script src="./geolocation.js"></script>
+<script>
+
+var doc = document,
+    mapContainer = doc.getElementById('map'),
+    mapMessage = doc.getElementById('msg');
+
+// get the position and pass it to the google map API
+function initPosition(coords){
+        
+    /* The Google Map API
+    var myOptions = {
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    },
+    
+    // create a map
+    map = new google.maps.Map(mapContainer, myOptions),
+    pos = new google.maps.LatLng(coords.latitude, coords.longitude),
+    infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: pos,
+        content: '<p>Hi there, I\'m <a href="http://sofish.de">sofish.</a> Say hello form the <a href="https://github.com/sofish">My Github Repo</a>. Your current location is:</p><ul><li>Latitude: '+coords.latitude + '</li><li>Longitude: ' + coords.longitude + '</li></ul>'
+    });
+    
+    // init map view
+    map.setCenter(pos);
+    
+    */ // end the Google Map API
+    
+    // Using the QQ Map API
+    // create the map
+    var center = new soso.maps.LatLng(coords.latitude, coords.longitude);
+    var map = new soso.maps.Map(mapContainer, {
+        center: center,
+        zoomLevel: 16
+    }),
+    
+    // set data
+    path = [
+        new soso.maps.LatLng(30.286624, 120.1256251),
+        center
+    ],
+    
+    // calculate the distance
+    polyline = new soso.maps.Polyline({
+        map: map,
+        strokeColor: "#f00",
+        strokeWeight: 2,
+        path: path
+    });    
+    
+    mapMessage.innerHTML = 'You\'re ' + map.getDistance(path[0],path[1]).toFixed()/1000 + 'km away form <a href="http://sofish.de">sofish</a>';    
+}
+
+
+// handle error
+function renderError(err){
+    mapMessage.innerHTML = 'Error Message: ' + err;
+}
+
+// init the google map
+window.onload = function(){
+    new Geo(initPosition, renderError);
+};
+
+</script>
+</body>
+</html>

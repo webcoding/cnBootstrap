@@ -15,10 +15,10 @@
 /* 按兼容要求配置 src url */
 @font-face {
     font-family: 'JennaSue'; /* 字体名，可自定义 */
-    src: url('./font/JennaSue.eot'); /* fix ie9 */
-    src: local('JennaSue'), /* 本地可选 */
-         url('./font/JennaSue.eot?#iefix') format('eot'),/* ie4~ie8*/
-         url('./font/JennaSue.ttf') format('truetype');/* modern browser safari in iOS */
+    src: url('font/JennaSue.eot'); /* fix ie9 */
+    src: /* local('JennaSue'), 本地可选 */
+         url('font/JennaSue.eot?#iefix') format('eot'),/* ie4~ie8*/
+         url('font/JennaSue.ttf') format('truetype');/* modern browser safari in iOS */
 }
 
 /* 通过font-family引用 */
@@ -60,8 +60,8 @@ CSS:
 @font-face {
     font-family: 'JennaSue'; /* 字体名，可自定义 */
     src: url('./font/JennaSue.eot'); /* fix ie9 */
-    src: url('./font/JennaSue.eot?#iefix') format('eot'),/* ie4~ie8*/
-         url('./font/JennaSue.ttf') format('truetype');/* modern browser safari in iOS */
+    src: url('./font/JennaSue.eot?#iefix') format('eot'), /* ie4~ie8*/
+         url('./font/JennaSue.ttf') format('truetype'); /* modern browser safari in iOS */
 }
 
 /* 通过font-family引用 */

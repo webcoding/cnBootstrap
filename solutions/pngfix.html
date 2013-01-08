@@ -6,14 +6,70 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
+.pngfix{
+    background:#555 url(./img/png8_aphla.png) no-repeat 0 0;
+    _background:#555 none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/png8_aphla.png', sizingMethod='scale');
+    
+    width:150px;height:150px;line-height:30px;text-align:center;font-size:20px;color:#fff;
+}
+
 .test{ height:225px; background:url(img/pngfix.png)}
 </style>
 </head>
 <body>
 <div class="wrap">
-    <h1>IE6 PNG24图片半透明度问题的解决办法</h1>
-	<h2>方法一：DD_belatedPNG</h2>
-    <p>使用DD_belatedPNG方法修复IE6的Png半透明，支持背景重定位(background-position)和平铺(repeat)设置。</p>
+    <h1>IE6 PNG24 图片半透明</h1>
+	<h2>方法一：CSS 滤镜</h2>
+	<p></p>
+	<div class="demo">
+        <div class="pngfix">
+        png8 aphla
+        </div><!-- #pngfix -->
+    </div>
+<pre class="prettyprint linenums">
+.pngfix{
+    background:#555 url(./img/png8_aphla.png) no-repeat 0 0;
+    _background:#555 none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/png8_aphla.png', sizingMethod='scale');
+    
+    width:150px;height:150px;line-height:30px;text-align:center;font-size:20px;color:#fff;
+}
+</pre>
+	<h3>问题及注意事项：</h3>
+	<ul>
+		<li>使用了scale, 这个会适应元素宽度，所以需要设置固定的高度或宽度 </li>
+		<li>filter是应该避免的，所以避免index transparent外的 PNG 透明元素 </li>
+		<li>IE6 默认支持index transparent 的 PNG </li>
+		<li>src的路径相对于当前文档来说的，不过，我们一般用绝对路径，就没什么问题了 </li>
+	</ul>
+	<h4>语法：</h4>
+<pre class="prettyprint linenums">
+filter : progid:DXImageTransform.Microsoft.AlphaImageLoader ( enabled=bEnabled , sizingMethod=sSize , src=sURL )
+</pre>
+    <h4>属性：</h4>
+    <ul>
+        <li>enabled: 可选项。布尔值(Boolean)。设置或检索滤镜是否激活</li>
+        <li>true  : 默认值。滤镜激活</li>
+        <li>false:滤镜被禁止</li>
+        <li>sizingMethod: 可选项。字符串(String)。设置或检索滤镜作用的对象的图片在对象容器边界内的显示方式 </li>
+        <li>crop: 剪切图片以适应对象尺寸 </li>
+        <li>image: 默认值。增大或减小对象的尺寸边界以适应图片的尺寸 </li>
+        <li>scale: 缩放图片以适应对象的尺寸边界 </li>
+        <li>src: 必选项。字符串(String)。使用绝对或相对 url 地址指定背景图像。假如忽略此参数，滤镜将不会作用</li>
+    </ul>
+	<h4>特性：</h4>
+    <ul>
+        <li>Enabled: 可读写。布尔值(Boolean)。参阅 enabled 属性</li>
+        <li>sizingMethod: 可读写。字符串(String)。参阅 sizingMethod 属性</li>
+        <li>src: 可读写。字符串(String)。参阅 src 属性</li>
+    </ul>
+	<h4>说明：</h4>
+	<p>在对象容器边界内，在对象的背景和内容之间显示一张图片。并提供对此图片的剪切和改变尺寸的操作。如果载入的是PNG(Portable Network Graphics)格式，则0%-100%的透明度也被提供。PNG(Portable Network Graphics)格式的图片的透明度不妨碍你选择文本。也就是说，你可以选择显示在PNG(Portable Network Graphics)格式的图片完全透明区域后面的内容。</p>
+	
+	
+	<h2>方法二：DD_belatedPNG 插件</h2>
+    <p><b>推荐</b>使用 DD_belatedPNG，只需要一个理由，就是它支持背景重定位 <code>background-position</code> 和平铺 <code>background-repeat</code> 属性，这是其他js插件不具备的，同时 DD_belatedPNG 还支持 <code>a:hover</code> 属性以及 <code>&lt;img&gt;</code>。</p>
     <div class="demo">
         <img class="ie6png" src="img/pngfix.png" width="300" height="225">
         <h3>这是png24图片</h3>
@@ -29,11 +85,66 @@
 &lt;div class="test ie6png"&gt;&lt;/div&gt;
 </pre>
 
-
-    <h3>问题及注意事项：</h3>
-	<p>此方法对延迟加载的或加载完毕后重新操作src赋值的png24图片无效，即不会进行fix处理！</p>
+    <h3>关于IE6使用DD_belatedPNG存在的问题：</h3>
+	<ol>
+		<li>页面是用iframe载入的 。页面里面的用DD_belatedPNG， 在ie6下会出现空白一大片，但是是占位的。</li>
+		<li>页面中的png图片有版本号，在ie6会出现不透明情况。</li>
+		<li>做滑动门背景图是png 需要透明，在ie6下hover会出现背景跑到屏幕左上角。</li>
+		<li>a用absolute 背景用png ，在ie6 hover效果同上（这个问题是根据记忆，没有具体写demo去测试）</li>
+		<li>&lt;li>&lt;a href=""&gt;&lt;img src="***.png"/&gt;&lt;/a&gt;&lt;/li&gt; li只是浮动，ie6图片会跑到屏幕左上角。</li>
+		<li>IE6刷新完，png背景图老是在左上角闪一下？</li>
+	</ol>
+	<p class="note"><strong>注意：</strong>此方法若已执行，之后延迟加载的或加载完毕后重新操作src赋值的png24图片将不会进行fix处理！</p>
+	<h3>其实1，3，4，5是同一个问题，查看DD_belatedPNG代码可知：</h3>
+<pre class="prettyprint linenums">
+giveLayout: function (el) {
+    el.style.zoom = 1;
+    if (el.currentStyle.position == 'static') {
+        el.style.position = 'relative'
+    };
+}
+</pre>
+	<p>看了这个代码发现，只要position没有设置，那么 DD_belatedPNG 就会把 position 设置为 relative。</p>
+	<p>可以加个判断如下修复：</p>
+<pre class="prettyprint linenums">
+giveLayout: function (el) {
+        el.style.zoom = 1;
+        if (el.currentStyle.position == 'static') {
+        var tags=el.nodeName.toLowerCase();
+        if(tags!='html' && tags!='a'&& tags!='img'){
+            el.style.position = 'relative'
+        };
+    }
+}
+</pre>
+    <p>这样修改就没问题了，接着我们再看问题 2 </p>
+	<h3>页面中的png图片有版本号，在ie6会出现不透明情况。</h3>
+	<p>DD_belatedPNG 中对判断是img的代码如下：</p>
+<pre class="prettyprint linenums">
+if (el.nodeName == 'IMG') {
+    if(el.src.toLowerCase().search(/\.png$/) != -1) {
+        el.isImg = true;
+        el.style.visibility = 'hidden';
+    }
+	...
+}
+</pre>
+	<p>这段只是匹配了这张图片是不是png，但是如果图片加了版本号例如：logo.png?v=1321303913 这样的图片在ie6下就不会透明，可如下修改：</p>
+<pre class="prettyprint linenums">
+if (el.nodeName == 'IMG') {
+    if(/\.png(?:\W|$)/.test(el.src.toLowerCase())) {
+        el.isImg = true;
+        el.style.visibility = 'hidden';
+    }
+	...
+}
+</pre>
+    <h3>刷新完，png背景图在左上角闪一下？</h3>
+	<p>给容器加个定位</p>
+	<p>童鞋说这个js的性能很低，这个问题我没有办法解决，我发现这个js里面用了很多的addRule()这个函数，我搜索下了这个函数，很多说法，是用了这个之后cup直线上升，我也没有找到可以替代的方法。</p>
+	<p>如果可以转换思路，就尽量不要如此处理，使用 GIF 或其他方式替代。</p>
+	<p>PS：这样不停的兼容，只会延长IE6的寿命，大家应该一起努力，放弃IE6。</p>
 	
-	<h2>方法二：</h2>
 
 </div>
 

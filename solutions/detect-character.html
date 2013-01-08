@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>检测字符类型</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>检测字符类型</h1>
+	
+	<h2>检测文字是否为中文</h2>
+    <p>解决方案描述</p>
+    
+    <div class="demo">
+        <h3>是否为中文？</h3>
+        <input id="words" placeholder="请输入中文字符">
+        <p id="tips"></p>
+    </div>
+<pre class="prettyprint linenums">
+核心JS:
+var isChinese = function(word) { return /[\u4E00-\uFA29]+|[\uE7C7-\uE7F3]+/.test(word) }
+isChinese('汉'); // true
+
+本例实现：
+&lt;script&gt;
+var words = document.getElementById('words'),
+    tips = document.getElementById('tips'),
+    isChinese = function (word) {
+        return /[\u4E00-\uFA29]+|[\uE7C7-\uE7F3]+/.test(word)
+    }
+
+words.onkeyup = function () {
+    var arr = [], msg = [],
+        input = words.value
+    for (var i = 0, len = input.length; i < len; i++) arr.push(input[i])
+    for (var i = 0, len = arr.length; i < len; i++) {
+        !isChinese(arr[i]) && msg.push((i + 1) + '&lt;small&gt;(' + arr[i] + ')&lt;/small&gt;')
+    }
+    if (msg.length) tips.innerHTML = '第' + msg.join('、') + '个字不是中文';
+}
+&lt;/script&gt;
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+<script>
+var words = document.getElementById('words'),
+    tips = document.getElementById('tips'),
+    isChinese = function (word) {
+        return /[\u4E00-\uFA29]+|[\uE7C7-\uE7F3]+/.test(word)
+    }
+
+words.onkeyup = function () {
+    var arr = [], msg = [],
+        input = words.value
+    for (var i = 0, len = input.length; i < len; i++) arr.push(input[i])
+    for (var i = 0, len = arr.length; i < len; i++) {
+        !isChinese(arr[i]) && msg.push((i + 1) + '<small>(' + arr[i] + ')</small>')
+    }
+    if (msg.length) tips.innerHTML = '第' + msg.join('、') + '个字不是中文';
+}
+</script>
+</body>
+</html>
