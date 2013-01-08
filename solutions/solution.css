@@ -17,6 +17,7 @@ small{ font-weight:normal}
 h1,h2,h3{padding-top:0.5em;line-height:1.2}
 h4{margin-bottom:1em}
 body h1:first-child{padding-top:0;}
+body{padding-bottom:30px;}
 /* Code examples
 -------------------------------------------------- */
 .demo {
@@ -31,7 +32,8 @@ body h1:first-child{padding-top:0;}
           border-radius: 4px;
 }
 .demo + .demo{margin-top:-15px;}
-.demo p:first-child{margin-top:0;}
+.demo p:first-child,.demo h2:first-child,.demo h3:first-child,.demo h4:first-child{margin-top:0;}
+
 /* Echo out a label for the example */
 .demo:after {
 	content: "Example";
@@ -96,7 +98,7 @@ code {
 pre {
   display: block;
   padding: 9.5px;
-  margin: 0 0 10px;
+  margin:5px 0 10px;
   font-size: 13px;
   line-height: 20px;
   word-break: break-all;
@@ -187,11 +189,12 @@ table.info ul,table.info li{list-style-type:none;margin:0;padding:0;}
 table.info td em{color:#00F;font-weight:normal;}
 table.info .table_value{color: #0F93D2;}
 
-dt{font-weight:bold}
+dt,dd{margin-bottom:5px;}
+dt{font-weight:bold;margin-top:10px;}dd{margin-left:0}
 p.line,.dl-line{padding-left:2em;}
 .dl-line {*zoom: 1;}
-.dl-line dt{float:left}
-
+.dl-line dt{float:left;margin:0;}
+.dl-line dd{margin:0;}
 
 
 body {

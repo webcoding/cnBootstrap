@@ -402,7 +402,7 @@ a{ text-decoration:none}
 a:hover{ text-decoration: underline}
 
 
-/*
+/* 
 <!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
 
 <!--[if ie 6]>

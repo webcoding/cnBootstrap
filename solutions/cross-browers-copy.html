@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
-
+.demo{overflow:hidden}
+.demo-area{margin-right:50px;}
+.box{border:1px solid #ccc; overflow:hidden;padding:10px 10px 0; background:#dedede}
+.box h4:first-child{margin-top:0;}
 </style>
 </head>
 <body>
@@ -15,42 +18,102 @@
     <p>IE本身有提供了原生的支持：<code>clipboardData</code> 和 <code>setData</code>。Firefox 等都没有，因此利用 flash 来做跨浏览器支持。</p>
 	
     <p>使用 <code>ZeroClipboard</code> 是目前最好的解决方式(需要在服务器上运行)：</p>
+    <h4>Zero Clipboard的实现原理</h4>
+	<p>Zero Clipboard 利用透明的 Flash 让其漂浮在复制按钮之上，这样其实点击的不是按钮而是 Flash ，这样将需要的内容传入Flash，再通过Flash的复制功能把传入的内容复制到剪贴板。</p>
     <div class="demo">
-        这是案例展示
-        
+        <h3>Zero Clipboard Demo</h3>
+        <p><script>document.write("Your browser: " + navigator.userAgent);</script></p>
+        <div class="demo-area fl">
+            <h4><label for="fe_text">Change Copy Text Here</label></h4>
+            <textarea id="fe_text"  cols="50" rows="3">Copy me!</textarea>
+			<p><button id="d_clip_button" class="my_clip_button" title="Click me to copy to clipboard." data-clipboard-text="Copy me!"><b>Copy To Clipboard...</b></button></p>
+            <h4><label for="testarea">Paste Text Here</label></h4>
+            <textarea id="testarea" cols="50" rows="3"></textarea>
+            <p><button id="clear-test">Clear Test Area</button></p>
+        </div>
+        <div id="d_debug" class="box">
+		    <h4>Debug Console:</h4>
+		</div>
     </div>
 <pre class="prettyprint linenums">
-// 初始化一个复制程序
-var clip = new ZeroClipboard.Client(),
-    doc = document,
-    tip = doc.getElementById('tip'),
-    text = doc.getElementById('text');
-    
-// 把要复制的值初化为空
-clip.setText( '' );
-// 设置 flash 的鼠标手形
-clip.setHandCursor( true );
-        
-// 监听复制完毕事件
-clip.addEventListener( 'complete', function(client, text) {
-    tip.innerHTML = 'copied…';
-    tip.style.display = 'inline';
-    setTimeout(function(){
-        tip.style.display = 'none';
-    }, 1000);
-} );
+THML:
+&lt;button id="copy-button" data-clipboard-text="Copy Me!" title="Click to copy me."&gt;Copy to Clipboard&lt;/button&gt;
+&lt;script src="ZeroClipboard.js"&gt;&lt;/script&gt;
+&lt;script src="main.js"&gt;&lt;/script&gt;
 
-// 当鼠标点击按钮时，设置要复制出来的值 
-clip.addEventListener( 'mouseDown', function(client) { 
-    clip.setText( text.value );
-} );
+// main.js
+var clip = new ZeroClipboard( document.getElementById("copy-button"), {
+    moviePath: "/path/to/ZeroClipboard.swf"
+});
 
-// 把复制程序定位到某个具体的位置
-clip.glue( 'button' );
+clip.on( 'load', function(client) {
+    // alert( "movie is loaded" );
+});
+
+clip.on( 'complete', function(client, args) {
+    this.style.display = 'none'; // "this" is the element that was clicked
+    alert("Copied text to clipboard: " + args.text );
+});
+
+clip.on( 'mouseover', function(client) {
+    // alert("mouse over");
+});
+
+clip.on( 'mouseout', function(client) {
+  // alert("mouse out");
+});
+
+clip.on( 'mousedown', function(client) {
+    // alert("mouse down");
+});
+
+clip.on( 'mouseup', function(client) {
+    // alert("mouse up");
+});
 </pre>
     <h3>问题及注意事项：</h3>
-    <p>更多关于 <code>ZeroClipboard</code> 的内容：<a target="_blank" href="http://jonrohan.github.com/ZeroClipboard/">http://jonrohan.github.com/ZeroClipboard/</a></p>
+    <p>ZeroClipboard　<a target="_blank" href="http://jonrohan.github.com/ZeroClipboard/">项目官网</a>　<a target="_blank" href="https://github.com/jonrohan/ZeroClipboard">使用介绍</a></p>
     
 </div>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+<script src="copy/ZeroClipboard.min.js"></script>
+<script>
+$(document).ready(function() {
+    var clip = new ZeroClipboard($("#d_clip_button"), {
+        moviePath: "copy/ZeroClipboard.swf"
+    });
+    
+    clip.on('load', function (client) {
+        debugstr("Flash movie loaded and ready.");
+    });
+    
+    clip.on('noflash', function (client) {
+        $(".demo-area").hide();
+        debugstr("Your browser has no flash.");
+    });
+    
+    clip.on('complete', function (client, args) {
+        debugstr("Copied text to clipboard: " + args.text );
+    });
+    
+    // jquery stuff (optional)
+    function debugstr(text) {
+        $("#d_debug").append($("<p>").text(text));
+    }
+    
+    $("#fe_text").on("change", function(){
+        clip.setText($(this).val());
+    });
+    
+    $("#clear-test").on("click", function(){
+        $("#fe_text").val("Click me!");
+        $("#testarea").val("");
+        clip.resetText();
+    });
+})
+
+</script>
 </body>
 </html>

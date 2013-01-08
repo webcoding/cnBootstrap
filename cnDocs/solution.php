@@ -59,7 +59,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/drop-shadow.html"><img src="../solutions/img/box-shadow.png" alt="跨浏览器投影" ><h4>跨浏览器投影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-file.html"><img src="../solutions/img/upload.png" alt="自定义上传文件样式" ><h4>自定义上传文件样式</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-domain-iframe.html"><img src="../solutions/img/iframe.png" alt="iframe 跨域自适应" ><h4>iframe 跨域自适应</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-browers-copy.html"><img src="../solutions/img/default.png" alt="跨浏览器剪贴功能" ><h4>跨浏览器剪贴功能</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-browers-copy.html"><img src="../solutions/img/clipboard.png" alt="跨浏览器剪贴功能" ><h4>跨浏览器剪贴功能</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/1px-round-corner.html"><img src="../solutions/img/radius-1px-box.png" alt="一像素圆角" ><h4>一像素圆角</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/detect-character.html"><img src="../solutions/img/default.png" alt="检测字符类型" ><h4>检测字符类型</h4></a></li>
 			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位" ><h4>geolocation 地理定位</h4></a></li>-->

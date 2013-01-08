@@ -38,13 +38,6 @@ body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea
 
 ol,ul{list-style-type:none}
 /* 新计划中涉及的属性
-****************************************/
-ul,ol,li{}
-/* 去掉列表前的标识, li 会继承 */
-/*
-
-/* 结束
-****************************************/
 
 
 /* 语义化的标签的样式默认的margin,padding都为0，不用reset */
