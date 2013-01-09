@@ -100,7 +100,8 @@
 		<h3>HTML5/CSS3 解决方案 <small>提升体验、平滑升级</small></h3>
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-light-animation.html"><img src="../solutions/img/light.png" alt="CSS3 光影动画" ><h4>CSS3 光影动画</h4></a></li>
-		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/default.png" alt="CSS3 阴影特效" ><h4>CSS3 阴影特效</h4></a></li>
+		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/css3-box-shadow.jpg" alt="CSS3 阴影特效" ><h4>CSS3 阴影特效</h4></a></li>
+		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-stroke-gradient-text.html"><img src="../solutions/img/css3-stroke-gradient-text.jpg" alt="CSS3 渐变字特效" ><h4>CSS3 渐变字特效</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/html5"><img src="../solutions/img/default.png" alt="" ><h4>HTML5</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-base"><img src="../solutions/img/default.png" alt="" ><h4>css3属性详解</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-btn"><img src="../solutions/img/default.png" alt="" ><h4>CSS3按钮</h4></a></li>

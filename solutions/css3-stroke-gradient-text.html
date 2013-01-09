@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 渐变字特效</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bubblegum+Sans">
+<style>
+.box h1,.box h2,.box h3{text-align:center;font-size:64pt;font-weight:bold;}
+.demo h3{
+    font-family: 'Bubblegum Sans',Arial;
+}
+.box span,.box h3{
+    cursor:pointer;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 3s;
+    -webkit-transition-timing-function: ease-out;
+    color:#222;
+    text-shadow:0px 0px 5px white;
+    z-index:3;
+    background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    -webkit-text-stroke: 5px rgba(255,255,255,.01);
+    -webkit-background-clip: text;
+}
+.box span:hover{
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-out;
+    background: -webkit-linear-gradient(right,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    background-position:100px;
+    -webkit-background-clip: text;
+}
+.demo h2{
+    margin-top:.25em;
+    text-align:center;
+    font-size:64pt;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 3s;
+    -webkit-transition-timing-function: ease-out;
+    content:'studentwebhosting.com';
+    -webkit-text-stroke: 3px rgba(255,255,255,1);
+    background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    -webkit-background-clip: text;
+    color:transparent;
+}
+.demo h2:hover{
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-out;
+    cursor:pointer;
+    -webkit-text-stroke: 3px rgba(255,255,255,1);
+    background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    -webkit-background-clip: text;
+    color:transparent;
+    background-position:-500px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 渐变字特效</h1>
+    <p>CSS3 渐变填充文字特效</p>
+    
+    <div class="demo dark-demo">
+	    <div class="box">
+            <h1><span>H</span><span>o</span><span>l</span><span>y</span> <span>F</span><span>e</span><span>t</span><span>c</span><span>h</span><span>a</span><span>m</span><span>o</span><span>l</span><span>y</span> <span>!</span></h1>
+            <h2>hover over us!</h3>
+		    <h3>Sweet Molasses</h4>
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+.box h1,.box h2,.box h3{text-align:center;font-size:64pt;font-weight:bold;}
+.demo h3{
+    font-family: 'Bubblegum Sans',Arial;
+}
+.box span,.box h3{
+    cursor:pointer;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 3s;
+    -webkit-transition-timing-function: ease-out;
+    color:#222;
+    text-shadow:0px 0px 5px white;
+    z-index:3;
+    background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    -webkit-text-stroke: 5px rgba(255,255,255,.01);
+    -webkit-background-clip: text;
+}
+.box span:hover{
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-out;
+    background: -webkit-linear-gradient(right,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    background-position:100px;
+    -webkit-background-clip: text;
+}
+.demo h2{
+    margin-top:.25em;
+    text-align:center;
+    font-size:64pt;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 3s;
+    -webkit-transition-timing-function: ease-out;
+    content:'studentwebhosting.com';
+    -webkit-text-stroke: 3px rgba(255,255,255,1);
+    background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    -webkit-background-clip: text;
+    color:transparent;
+}
+.demo h2:hover{
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease-out;
+    cursor:pointer;
+    -webkit-text-stroke: 3px rgba(255,255,255,1);
+    background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 19%,rgba(0,255,0,1) 38%,rgba(0,255,255,1) 51%,rgba(0,0,255,1) 67%,rgba(255,0,255,1) 83%,rgba(255,0,0,1) 99%); /* Chrome10+,Safari5.1+ */
+    -webkit-background-clip: text;
+    color:transparent;
+    background-position:-500px;
+}
+.demo h3{
+    font-family: 'Bubblegum Sans',Arial;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知 CSS3 Gradient Filled Text Strokes & CSS3 Strokes On Gradient Filled Text! </p>
+    
+</div>
+</body>
+</html>

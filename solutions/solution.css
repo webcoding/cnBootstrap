@@ -6,6 +6,11 @@
 .wrap{ width:980px;}
 small{ font-weight:normal}
 .none,.none li{margin:0;padding:0;list-style-type:none}
+.a2row,.a3row,.a4row,.a5row{ overflow:hidden;*zoom:1; margin-right:-2px; padding-top:2px; margin-bottom:10px;}
+.a2row li,.a3row li,.a4row li,.a5row li{ float:left; display:inline;}
+.a2row li{ width:49.5%}.a3row li{ width:33.25%}.a4row li{ width:24.9%}.a5row li{ width:19.9%}
+.auto a{ display:block; white-space:nowrap;overflow:hidden; text-align:left;}
+.a2row a,.a3row a{margin-right:10px;text-overflow:ellipsis;}
 /* 测试使用 */
 /* Base class */
 #guide{width:300px;padding:10px 15px 10px 10px;background:#eee;border:1px solid #bbb;position:fixed;right:10px;top:18px; z-index:100;}
@@ -23,6 +28,7 @@ body{padding-bottom:30px;}
 -------------------------------------------------- */
 .demo {
   position: relative;
+  z-index:0;
   margin: 15px 0;
   padding: 40px 20px 20px;
   *padding-top: 19px;
@@ -52,6 +58,8 @@ body{padding-bottom:30px;}
 	 -moz-border-radius: 4px 0 4px 0;
 		  border-radius: 4px 0 4px 0;
 }
+.dark-demo{background-image: url(images/low_contrast_linen.png);}
+.dark-demo::after{background-color: #666;border: 1px solid #888;color: #fff;}
 .demo + .prettyprint {
 	margin-top: -20px;
 	padding-top: 15px;
