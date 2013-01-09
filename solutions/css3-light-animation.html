@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 光影动画</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.light-box{}
+.light-box li{float:left;display:inline;margin-right:20px;position:relative;width:90px;height:90px;overflow:hidden}
+.light-box img{border-radius:5px;}
+.album-cover-border{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 10px;
+    height: 90px;
+    background: url(images/mborder.png) repeat-y 0px 0px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.light{
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 90px;
+    height: 90px;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    transform: skewx(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);
+    -moz-transition: 0s;
+    -o-transition: 0s;
+    -webkit-transition: 0s;
+    transition: 0s;
+}
+.light{
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: -o-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+}
+a.cover:hover .light{
+    left: 120px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>光影动画 (CSS3)</h1>
+    <p>:hover时在图片或某容器上方实现一道光影划过。</p>
+    
+    <div class="demo">
+	    <h3>鼠标 hover，光影划过 <small>效果摘自百度音乐</small></h3>
+        <ul class="light-box none">
+			<li><a class="cover" href="#"><img src="images/m1.jpg" width="90" height="90"><i class="album-cover-border"></i><i class="light"></i></a></li>
+			<li><a class="cover" href="#"><img src="images/m2.jpg" width="90" height="90"><i class="album-cover-border"></i><i class="light"></i></a></li>
+			<li><a class="cover" href="#"><img src="images/m3.jpg" width="90" height="90"><i class="album-cover-border"></i><i class="light"></i></a></li>
+			<li><a class="cover" href="#"><img src="images/m4.jpg" width="90" height="90"><i class="album-cover-border"></i><i class="light"></i></a></li>
+		<ul>
+        
+    </div>
+<pre class="prettyprint linenums">
+.light-box li{position:relative;width:90px;height:90px;overflow:hidden}
+
+.light{
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 90px;
+    height: 90px;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    transform: skewx(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);
+    -moz-transition: 0s;
+    -o-transition: 0s;
+    -webkit-transition: 0s;
+    transition: 0s;
+}
+.light{
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: -o-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+}
+a.cover:hover .light{
+    left: 120px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

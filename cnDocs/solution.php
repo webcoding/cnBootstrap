@@ -34,7 +34,7 @@
 	================================================== -->
 	<section id="solutions">
 		
-		<h3>浏览器兼容解决方案 <small>头痛的问题，我们提前搞定</small></h3>
+		<h3>兼容解决方案 <small>头痛的问题，我们提前搞定</small></h3>
 		<p><a href="solutions.html">solutions</a></p>
 		<!-- 预添加简洁分类筛选 Todo -->
 		
@@ -62,8 +62,20 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-browers-copy.html"><img src="../solutions/img/clipboard.png" alt="跨浏览器剪贴功能" ><h4>跨浏览器剪贴功能</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/1px-round-corner.html"><img src="../solutions/img/radius-1px-box.png" alt="一像素圆角" ><h4>一像素圆角</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/detect-character.html"><img src="../solutions/img/default.png" alt="检测字符类型" ><h4>检测字符类型</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/divider.html"><img src="../solutions/img/default.png" alt="分割线" ><h4>分割线</h4></a></li>
 			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位" ><h4>geolocation 地理定位</h4></a></li>-->
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pages.html"><img src="../solutions/img/default.png" alt="页码组件" ><h4>页码组件</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt="" ><h4>border</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float"><img src="../solutions/img/default.png" alt="" ><h4>清除浮动</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis"><img src="../solutions/img/default.png" alt="" ><h4>省略号</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/radio-checkbox"><img src="../solutions/img/default.png" alt="" ><h4>radio/checkbox</h4></a></li>
+			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
+		</ul>
+		
+		<h3>组件解决方案 <small>统一规划、批量生产</small></h3>
+		<ul class="thumbnails case">
+		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pages.html"><img src="../solutions/img/default.png" alt="页码组件" ><h4>页码组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/alert.html"><img src="../solutions/img/default.png" alt="通知提醒" ><h4>通知提醒</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="base-css.php#buttons"><img src="../solutions/img/default.png" alt="全CSS按钮" ><h4>全CSS按钮</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/table.html"><img src="../solutions/img/default.png" alt="常用表格" ><h4>常用表格</h4></a></li>
@@ -72,22 +84,24 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt="" ><h4>弹出框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt="" ><h4>弹出框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt="" ><h4>布局</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border"><img src="../solutions/img/default.png" alt="" ><h4>border</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float"><img src="../solutions/img/default.png" alt="" ><h4>清除浮动</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis"><img src="../solutions/img/default.png" alt="" ><h4>省略号</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/form"><img src="../solutions/img/default.png" alt="" ><h4>form表单</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyhtml"><img src="../solutions/img/default.png" alt="" ><h4>html固定用法</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/imgtext"><img src="../solutions/img/default.png" alt="" ><h4>图文混排</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/itemlist"><img src="../solutions/img/default.png" alt="" ><h4>项目列表</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/newslist"><img src="../solutions/img/default.png" alt="" ><h4>新闻列表</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img src="../solutions/img/default.png" alt="" ><h4>tab标题</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/radio-checkbox"><img src="../solutions/img/default.png" alt="" ><h4>radio/checkbox</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button-submit"><img src="../solutions/img/default.png" alt="" ><h4>button/submit</h4></a></li>
-			
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/form"><img src="../solutions/img/default.png" alt="" ><h4>form表单</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyhtml"><img src="../solutions/img/default.png" alt="" ><h4>html固定用法</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyrun"><img src="../solutions/img/default.png" alt="" ><h4>Copy&Run</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/bugs"><img src="../solutions/img/default.png" alt="" ><h4>Bugs列表</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tools"><img src="../solutions/img/default.png" alt="" ><h4>前端工具</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css-resource"><img src="../solutions/img/default.png" alt="" ><h4>css资源</h4></a></li>
+			
+		</ul>
+		
+		<h3>HTML5/CSS3 解决方案 <small>提升体验、平滑升级</small></h3>
+		<ul class="thumbnails case">
+		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-light-animation.html"><img src="../solutions/img/light.png" alt="CSS3 光影动画" ><h4>CSS3 光影动画</h4></a></li>
+		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/default.png" alt="CSS3 阴影特效" ><h4>CSS3 阴影特效</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/html5"><img src="../solutions/img/default.png" alt="" ><h4>HTML5</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-base"><img src="../solutions/img/default.png" alt="" ><h4>css3属性详解</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-btn"><img src="../solutions/img/default.png" alt="" ><h4>CSS3按钮</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text"><img src="../solutions/img/default.png" alt="" ><h4>CSS3文字特效</h4></a></li>
@@ -95,6 +109,12 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/box-shadow"><img src="../solutions/img/default.png" alt="" ><h4>CSS3盒子阴影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/accordion"><img src="../solutions/img/default.png" alt="" ><h4>CSS3 accordion</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img src="../solutions/img/default.png" alt="" ><h4>CSS3 tabs</h4></a></li>
+			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
+		</ul>
+		
+		<h3>JS解决方案 <small>经典功能、一锤定音</small></h3>
+		<ul class="thumbnails case">
+		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/sort.html"><img src="../solutions/img/default.png" alt="" ><h4>JS 排序</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 	</section>

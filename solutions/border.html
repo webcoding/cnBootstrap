@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css border 解决方案</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{min-height:100px;}
+#cube { height: 6.5em; width: 6em; margin-right: 15px; }
+#cube div { width: 0; height: 0; border-style: solid; overflow: hidden; }
+#cube .c1 { border-color: transparent transparent blue transparent; border-width: 0 3em 1.5em 3em; }
+#cube .c2 { border-color: blue lime blue red; border-width: 1.5em 3em 0 3em; height: 2em; }
+#cube .c3 { border-color: transparent red transparent transparent; border-width: 0 3em 1.5em 0; float: left; }
+#cube .c4 { border-color: transparent transparent transparent lime; border-width: 0 0 1.5em 3em; float: left; }
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>border 解决方案</h1>
+    <p>好好使用 <code>border</code> 可以实现很多意想不到的效果。下面这些情况你遇到了吗？</p>
+    
+    <div class="demo">
+	    <h3>border 做图形　<small>更多参见 <a href="#">纯css图形</a></small></h3>
+        <div id="cube">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+        </div>
+        <h3>border 实现箭头 arrow</h3>
+		<p></p>
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>
