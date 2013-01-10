@@ -63,9 +63,10 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/1px-round-corner.html"><img src="../solutions/img/radius-1px-box.png" alt="一像素圆角" ><h4>一像素圆角</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/detect-character.html"><img src="../solutions/img/default.png" alt="检测字符类型" ><h4>检测字符类型</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/divider.html"><img src="../solutions/img/default.png" alt="分割线" ><h4>分割线</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/text-align-justify.html"><img src="../solutions/img/text-align-justify.png" alt="文本两端对齐" ><h4>文本两端对齐</h4></a></li>
 			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位" ><h4>geolocation 地理定位</h4></a></li>-->
 			
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt="" ><h4>border</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt="" ><h4>border 探索</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float"><img src="../solutions/img/default.png" alt="" ><h4>清除浮动</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis"><img src="../solutions/img/default.png" alt="" ><h4>省略号</h4></a></li>
 			
@@ -97,23 +98,39 @@
 			
 		</ul>
 		
-		<h3>HTML5/CSS3 解决方案 <small>提升体验、平滑升级</small></h3>
+		<h3>HTML5/CSS3 特效 <small>提升体验、平滑升级</small></h3>
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-light-animation.html"><img src="../solutions/img/light.png" alt="CSS3 光影动画" ><h4>CSS3 光影动画</h4></a></li>
-		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/css3-box-shadow.jpg" alt="CSS3 阴影特效" ><h4>CSS3 阴影特效</h4></a></li>
+		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow-effect.html"><img src="../solutions/img/css3-box-shadow.jpg" alt="CSS3 阴影特效" ><h4>CSS3 阴影特效</h4></a></li>
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-stroke-gradient-text.html"><img src="../solutions/img/css3-stroke-gradient-text.jpg" alt="CSS3 渐变字特效" ><h4>CSS3 渐变字特效</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/html5"><img src="../solutions/img/default.png" alt="" ><h4>HTML5</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-base"><img src="../solutions/img/default.png" alt="" ><h4>css3属性详解</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-radius.html"><img src="../solutions/img/default.png" alt="" ><h4>border-radius 圆角</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-colors.html"><img src="../solutions/img/default.png" alt="" ><h4>border-colors 多组边框色</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-double-border.html"><img src="../solutions/img/default.png" alt="" ><h4>double border 双线框效果</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-image.html"><img src="../solutions/img/default.png" alt="" ><h4>border-image 边框图片</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/default.png" alt="" ><h4>box-shadow 阴影</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-rgba.html"><img src="../solutions/img/default.png" alt="" ><h4>CSS3 RGBA color详解</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-clip.html"><img src="../solutions/img/default.png" alt="" ><h4>background-clip 背景裁剪</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-origin.html"><img src="../solutions/img/default.png" alt="" ><h4>background-origin 背景图片参考位置</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-size.html"><img src="../solutions/img/default.png" alt="" ><h4>background-size 背景图尺寸</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-image.html"><img src="../solutions/img/default.png" alt="" ><h4>background-image 多组背景图</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-shadow.html"><img src="../solutions/img/default.png" alt="" ><h4>text-shadow 文字阴影</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-reflect.html"><img src="../solutions/img/default.png" alt="" ><h4>box-reflect 倒影</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-stroke.html"><img src="../solutions/img/default.png" alt="" ><h4>text-stroke 文字描边</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-fill-color.html"><img src="../solutions/img/default.png" alt="" ><h4>text-fill-color 文字填充色</h4></a></li>
+			
+			
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-btn"><img src="../solutions/img/default.png" alt="" ><h4>CSS3按钮</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text"><img src="../solutions/img/default.png" alt="" ><h4>CSS3文字特效</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-content"><img src="../solutions/img/default.png" alt="" ><h4>CSS3生成内容</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/box-shadow"><img src="../solutions/img/default.png" alt="" ><h4>CSS3盒子阴影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/accordion"><img src="../solutions/img/default.png" alt="" ><h4>CSS3 accordion</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img src="../solutions/img/default.png" alt="" ><h4>CSS3 tabs</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/html5"><img src="../solutions/img/default.png" alt="" ><h4>HTML5</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
-		<h3>JS解决方案 <small>经典功能、一锤定音</small></h3>
+		<h3>JS解决方案 <small>经典功能</small></h3>
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/sort.html"><img src="../solutions/img/default.png" alt="" ><h4>JS 排序</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>

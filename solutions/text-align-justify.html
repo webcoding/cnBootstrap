@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文本两端对齐</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo {background:#fff}
+.demo p{
+    overflow:hidden;
+    width:200px;
+    height:24px;
+	line-height:24px;
+    margin:0 auto 10px;
+    border:1px solid #ccc;
+	background:#eee;
+}
+
+/* Only for IE */
+.justify-for-ie p{
+    text-align:justify;
+    text-align-last:justify;
+}
+
+/* Only for Firefox */
+.justify-for-firefox p{
+    text-align:justify;
+    -moz-text-align-last:justify;
+}
+
+/* Chrome, Safari, Opera下的两端对齐 */
+.justify-for-webkit-presto p{
+    text-align:justify;
+}
+.justify-for-webkit-presto p:after{
+    display:inline-block;
+    content:'';
+    overflow:hidden;
+    width:100%;
+    height:0;
+}
+
+/* justify for All */
+.text-justify p{
+    text-align:justify;
+    text-align-last:justify;
+}
+.text-justify p:after{
+    display:inline-block;
+    content:'';
+    overflow:hidden;
+    width:100%;
+    height:0;
+}
+
+/* justify-form 表单标签两端对齐 */
+.justify-form{
+    
+}
+
+.btn-submit{overflow:visible;height:31px;padding:3px 20px;border:1px solid #0382AD;border-radius:3px;background-color:#45B5DA;background:-webkit-linear-gradient(#45B5DA,#0382AD);background:linear-gradient(#45B5DA,#0382AD);color:#fff;font-size:14px;}
+.btn-submit:hover{background-color:#4bc4ec;background:-webkit-linear-gradient(#4bc4ec,#0494c5);background:linear-gradient(#4bc4ec,#0494c5);}
+.btn-submit:active{background-color:#45B5DA;background:-webkit-linear-gradient(#0382AD,#45B5DA);background:linear-gradient(#0382AD,#45B5DA);}
+input.text{height:17px;padding:5px 5px;border:1px solid #aaa;border-radius:3px;box-shadow:1px 1px 2px rgba(0,0,0,.1) inset;outline:none;background-color:#fff;}
+input.text:focus{box-shadow:0 0 3px rgba(0,0,0,.2);}
+input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efefef;}
+
+.form-inline li{zoom:1;padding:5px 0;vertical-align:top;}
+.form-inline li:after{display:block;clear:both;height:0;visibility:hidden;content:'';}
+.form-inline .mark{display:block;float:left;overflow:hidden;width:78px;height:29px;padding-right:10px;text-align:justify;text-align-last:justify;line-height:2;}
+.form-inline .mark:after{display:inline-block;overflow:hidden;width:100%;height:0;content:"";}
+.form-inline .write{display:table-cell;zoom:1;}
+.form-inline .write .tip{display:none;color:#666;font-size:12px;}
+.form-inline .write input.text:focus{border-color:#7ebaed;background-color:#edfefe;}
+.form-inline .write input.text:focus ~ .tip{display:inline;}
+.form-inline .write input.text:focus ~ .tip:after{content:attr(data-initial);}
+
+.demo .form{width:400px;margin:20px auto;text-align:left;}
+.demo fieldset{padding:20px;border:1px solid #aaa;border-radius:5px;}
+.demo .act{padding:10px 0 0 88px;}
+
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>文本两端对齐</h1>
+	<p class="browser">浏览器参照基准：IE5.5+, Firefox4+, Chrome5+, Safari5+, Opera10.53+ </p>
+    <p>解决方案描述</p>
+	
+	<div class="demo text-justify">
+	    <h3 class="tc">综合兼容实现</h3>
+	    <p>世 界 末 日 2012</p>
+	    <p>把 钱 都 花 了 ？</p>
+	    <p>末 日 没 来</p>
+	    <p>傻 了 吧</p>
+    </div>
+<pre class="prettyprint linenums">
+/* text-justify */
+.text-justify p{
+    text-align:justify;
+    text-align-last:justify;
+}
+.text-justify p:after{
+    display:inline-block;
+    content:'';
+    overflow:hidden;
+    width:100%;
+    height:0;
+}
+</pre>
+	
+    <div class="demo justify-for-ie">
+	    <h3 class="tc">Only IE</h3>
+	    <p>世 界 末 日 2012</p>
+	    <p>把 钱 都 花 了 ？</p>
+	    <p>末 日 没 来</p>
+	    <p>傻 了 吧</p>
+    </div>
+<pre class="prettyprint linenums">
+/* Only for IE */
+.justify-for-ie p{
+    text-align:justify;
+    text-align-last:justify;
+}
+</pre>    
+    
+	<div class="demo justify-for-firefox">
+	    <h3 class="tc">Only Firefox</h3>
+	    <p>世 界 末 日 2012</p>
+	    <p>把 钱 都 花 了 ？</p>
+	    <p>末 日 没 来</p>
+	    <p>傻 了 吧</p>
+    </div>
+<pre class="prettyprint linenums">
+/* Only for Firefox */
+.justify-for-firefox p{
+    text-align:justify;
+    -moz-text-align-last:justify;
+}
+</pre>
+    
+	<div class="demo justify-for-webkit-presto">
+	    <h3 class="tc">Chrome, Safari, Opera下的两端对齐</h3>
+	    <p>世 界 末 日 2012</p>
+	    <p>把 钱 都 花 了 ？</p>
+	    <p>末 日 没 来</p>
+	    <p>傻 了 吧</p>
+    </div>
+<pre class="prettyprint linenums">
+/* Chrome, Safari, Opera下的两端对齐 */
+.justify-for-webkit-presto p{
+    text-align:justify;
+}
+.justify-for-webkit-presto p:after{
+    display:inline-block;
+    content:'';
+    overflow:hidden;
+    width:100%;
+    height:0;
+}
+</pre>
+
+	<div class="demo">
+<form action="#" method="post" class="form form-inline" autocomplete="off">
+	<fieldset>
+		<legend>表单</legend>
+		<ul class="none">
+			<li>
+				<label class="mark" for="form-name">姓 名</label>
+				<div class="write">
+					<input type="text" id="form-name" class="text" placeholder="请输入4-10字符" />
+					<span class="tip" data-initial="请输入4-10字符"></span>
+				</div>
+			</li>
+			<li>
+				<label class="mark" for="form-psw">密 码</label>
+				<div class="write">
+					<input type="text" id="form-psw" class="text" placeholder="请输入6-30字符" />
+					<span class="tip" data-initial="请输入6-30字符"></span>
+				</div>
+			</li>
+			<li>
+				<label class="mark" for="form-repsw">确 认 密 码</label>
+				<div class="write">
+					<input type="text" id="form-repsw" class="text" placeholder="请再输入一遍密码" />
+					<span class="tip" data-initial="请输入6-30字符"></span>
+				</div>
+			</li>
+			<li>
+				<label class="mark" for="form-imgcode">验 证 码</label>
+				<div class="write">
+					<input type="text" id="form-imgcode" class="text disabled" disabled="disabled" placeholder="输入验证码" />
+					<span class="tip" data-initial="请输入验证码"></span>
+				</div>
+			</li>
+		</ul>
+		<div class="act"><input type="submit" class="btn-submit" value="提交" /></div>
+	</fieldset>
+</form>
+
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>	
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>
