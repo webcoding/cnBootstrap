@@ -107,7 +107,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-colors.html"><img src="../solutions/img/default.png" alt="" ><h4>border-colors 多组边框色</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-double-border.html"><img src="../solutions/img/default.png" alt="" ><h4>double border 双线框效果</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-image.html"><img src="../solutions/img/default.png" alt="" ><h4>border-image 边框图片</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/default.png" alt="" ><h4>box-shadow 阴影</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/box-shadow.png" alt="" ><h4>box-shadow 阴影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-rgba.html"><img src="../solutions/img/default.png" alt="" ><h4>背景透明与 RGBA</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-clip.html"><img src="../solutions/img/default.png" alt="" ><h4>background-clip 背景裁剪</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-origin.html"><img src="../solutions/img/default.png" alt="" ><h4>背景图片参考位置</h4></a></li>
