@@ -58,8 +58,12 @@ body{padding-bottom:30px;}
 	 -moz-border-radius: 4px 0 4px 0;
 		  border-radius: 4px 0 4px 0;
 }
-.dark-demo{background-image: url(images/low_contrast_linen.png);}
+.dark-demo{background: url(images/low_contrast_linen.png) !important;}
 .dark-demo::after{background-color: #666;border: 1px solid #888;color: #fff;}
+.black-demo{background:#000 !important;color:#fff}
+.black-demo::after{background-color: #333;border: 1px solid #666;color: #fff;}
+
+
 .demo + .prettyprint {
 	margin-top: -20px;
 	padding-top: 15px;

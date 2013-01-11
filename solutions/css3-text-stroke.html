@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 </title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{
+    line-height:1.231;
+    font-size:60px;
+    font-weight:bold;
+}
+.demo p{ text-align:center}
+
+.text-stroke{
+    -webkit-text-stroke:1px #f00;
+}
+
+
+.box{
+    color:#555;
+    -webkit-text-stroke:1px #f00;
+    -webkit-animation:cliptext 7.5s linear infinite;
+    font-size:80px;
+}
+@-webkit-keyframes cliptext{
+    0%{-webkit-text-stroke:1px #c00;}
+    25%{-webkit-text-stroke:1px #ff0;}
+    50%{-webkit-text-stroke:1px #090;}
+    75%{-webkit-text-stroke:1px #00f;}
+    100%{-webkit-text-stroke:1px #93c;}
+}
+
+.demo p::selection {
+    background-color: #333369;
+    color: #FFF;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>这是模版</h1>
+	<p class="browser">浏览器参照基准：Webkit Only </p>
+    <p>语法：text-stroke：&lt;text-stroke-width&gt; &lt;text-stroke-color&gt;</p>
+    
+    <div class="demo">
+        <p class="text-stroke">红色描边的文字</p>
+        
+    </div>
+<pre class="prettyprint linenums">
+.text-stroke{
+    -webkit-text-stroke:1px #f00;
+}
+
+text-stroke是复合属性，可以分拆为text-stroke-width和text-stroke-color两个属性
+</pre>
+    
+    <div class="demo">
+        <p class="box">描边1像素<br>的文字</p>
+        
+    </div>
+<pre class="prettyprint linenums">
+
+.box{
+    color:#555;
+    -webkit-text-stroke:1px #f00;
+    -webkit-animation:cliptext 7.5s linear infinite;
+    font-size:80px;
+}
+@-webkit-keyframes cliptext{
+    0%{-webkit-text-stroke:1px #c00;}
+    25%{-webkit-text-stroke:1px #ff0;}
+    50%{-webkit-text-stroke:1px #090;}
+    75%{-webkit-text-stroke:1px #00f;}
+    100%{-webkit-text-stroke:1px #93c;}
+}
+</pre><p class="box">这是描了1像素的文字</p>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>

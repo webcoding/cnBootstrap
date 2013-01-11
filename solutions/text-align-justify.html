@@ -87,7 +87,7 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
 <div class="wrap">
     <h1>文本两端对齐</h1>
 	<p class="browser">浏览器参照基准：IE5.5+, Firefox4+, Chrome5+, Safari5+, Opera10.53+ </p>
-    <p>解决方案描述</p>
+    <p>两端对齐方案基于 text-align:justify 及 text-align-last:justify 实现</p>
 	
 	<div class="demo text-justify">
 	    <h3 class="tc">综合兼容实现</h3>
@@ -124,7 +124,9 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
     text-align:justify;
     text-align-last:justify;
 }
-</pre>    
+
+justify最先是作为IE私有属性实现
+</pre>
     
 	<div class="demo justify-for-firefox">
 	    <h3 class="tc">Only Firefox</h3>
@@ -139,6 +141,8 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
     text-align:justify;
     -moz-text-align-last:justify;
 }
+
+text-align-last 在Firefox12-17下仍处理实验支持阶段，需加前缀 -moz-
 </pre>
     
 	<div class="demo justify-for-webkit-presto">
@@ -160,9 +164,12 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
     width:100%;
     height:0;
 }
+
+Chrome23, Safari5.1.7, Opera12.11 不支持 text-align-last, 但支持 text-align 的 jsutify,所以这里可以变通实现单行文本两端对齐对齐，我们知道text-align:justify 不处理块内的最后一行文本（包括块内仅有一行文本的情况，这时既是第一行也是最后一行）及被强制打断的行的两端对齐，但会处理除此之外的其它行，所以只需要将这里的单行变成多行即可，那么我们可以使用伪对象的方式派生出新行，这样不需要额外处理html代码，然后再将派生出的新行隐藏
 </pre>
 
 	<div class="demo">
+	<h3 class="tc">常见场景</h3>
 <form action="#" method="post" class="form form-inline" autocomplete="off">
 	<fieldset>
 		<legend>表单</legend>
@@ -202,7 +209,7 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
 
     </div>
 <pre class="prettyprint linenums">
-
+由于所有浏览器都支持 text-align 的 justify 属性值，但不全支持 text-align-last，我们可以对非IE及IE7以上浏览器使用伪对象生成额外的内容（IE7及以下浏览器不支持伪对象，使用text-align-last处理），置于第二行并将其隐藏，这时第一行文本（即要对齐的那个单行文本）可使用text-align:justify来对齐，所以Firefox也无需使用-moz-text-align-last了，因为也使用了text-align:justify
 </pre>	
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>

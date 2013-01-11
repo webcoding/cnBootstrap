@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 文字阴影</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+.title{color: #444;font-size: 60px;margin-bottom:10px;text-align:center;
+    text-shadow: 1px 1px 1px rgba(255,255,255,.8),2px 2px 3px rgba(0,0,0,.8);
+}
+ol{list-style-type:decimal;margin-left:2em;text-align:left;width:500px; margin:0 auto}
+li{margin-top:5px;padding:3px 10px;border:3px solid #ddd;font-weight:bold;font-size:40px;line-height:1.5}
+li:nth-child(1){background:#aaa;color:#eee;text-shadow:1px 1px 0 rgba(0,0,0,.8);}
+li:nth-child(2){color:#eee;text-shadow:1px 1px 5px rgba(0,0,0,.8);}
+li:nth-child(3){color:#999;text-shadow:1px 1px 0 rgba(255,255,255,.8),2px 2px 3px rgba(0,0,0,.5);}
+li:nth-child(4){background:#333;text-shadow:0px 2px 3px #666;color:#000}
+
+.black-demo p{
+    margin-top:10px;
+	text-align:center;
+	font-size:100px;
+	line-height:1.5;
+	font-weight:bold;
+}
+
+.fire-text{
+    font-family:arial,sans-serif;
+    text-shadow:0 0 5px #fff,
+                0 0 20px #fefcc9,
+                10px -10px 30px #feec85,
+                -20px -20px 40px #ffae34,
+                20px -40px 50px #ec760c,
+                -20px -60px 60px #cd4606,
+                0 -80px 70px #973716,
+                10px -90px 80px #451b0e;
+}
+
+.neon-text{
+    font-family:georgia,sans-serif;
+    text-shadow:0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #ff00de,
+                0 0 70px #ff00de,
+                0 0 80px #ff00de,
+                0 0 100px #ff00de,
+                0 0 150px #ff00de;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 文字阴影</h1>
+	<p class="browser">浏览器参照基准：IE10+, Firefox3.6+, Chrome5+, Safari5+, Opera11.50+ </p>
+    <p>语法：box-reflect：none | [ &lt;length&gt;{2,3} && &lt;color&gt;? ][ , &lt;length&gt;{2,3} && &lt;color&gt;? ]*<br>
+	　　　text-shadow有3个length参数，第1个表示水平偏移，第2个表示垂直偏移，第3个表示模糊（可选），color 是设置阴影的颜色
+	</p>
+    <div class="demo">
+	    <h3>文字阴影示例：</h3>
+        <p style="text-shadow:1px 1px 0 #666;">如果你的浏览器支持text-shadow，你将看到本段文字有1层阴影</p>
+        
+    </div>
+<pre class="prettyprint linenums">
+text-shadow:1px 1px 0 #666;
+</pre>
+
+    <div class="demo">
+	    <h3>柔和一点的文字阴影：</h3>
+        <p style="text-shadow:1px 1px 5px #666;">如果你的浏览器支持text-shadow，你将看到本段文字有1层阴影</p>
+    </div>
+<pre class="prettyprint linenums">
+text-shadow:1px 1px 5px #666;
+</pre>
+
+    <div class="demo">
+	    <h3>多重阴影：</h3>
+        <p style="text-shadow:1px 1px #fff,2px 2px 2px rgba(0,0,0,.3);">如果你的浏览器支持text-shadow，你将看到本段文字有2层阴影</p>
+    </div>
+<pre class="prettyprint linenums">
+text-shadow:1px 1px #fff,2px 2px 2px rgba(0,0,0,.3);
+</pre>
+    <h2>常见文字阴影效果</h2>
+    <div class="demo">
+	    <h3 class="title">text-shadow</h3>
+        <ol>
+            <li>The Shadow Text</li>
+            <li>The Shadow Text</li>
+            <li>The Shadow Text</li>
+            <li>The Shadow Text</li>
+        </ol>
+    </div>
+<pre class="prettyprint linenums">
+li:nth-child(1){background:#aaa;color:#eee;text-shadow:1px 1px 0 rgba(0,0,0,.8);}
+li:nth-child(2){color:#eee;text-shadow:1px 1px 5px rgba(0,0,0,.8);}
+li:nth-child(3){color:#999;text-shadow:1px 1px 0 rgba(255,255,255,.8),2px 2px 3px rgba(0,0,0,.5);}
+li:nth-child(4){background:#333;text-shadow:0px 2px 3px #666;}
+</pre>
+    
+    <div class="demo black-demo">
+	    <h3 class="title tc">火焰文字效果：</h3>
+        <p class="fire-text">FIRE TEXT</p>
+    </div>
+<pre class="prettyprint linenums">
+.fire-text{
+    margin-top:10px;
+    font:bold 100px/1.5 arial,sans-serif;
+    text-shadow:0 0 5px #fff,
+                0 0 20px #fefcc9,
+                10px -10px 30px #feec85,
+                -20px -20px 40px #ffae34,
+                20px -40px 50px #ec760c,
+                -20px -60px 60px #cd4606,
+                0 -80px 70px #973716,
+                10px -90px 80px #451b0e;
+}
+</pre>
+    
+    <div class="demo black-demo">
+	    <h3 class="title tc">霓虹文字效果：</h3>
+        <p class="neon-text">NEON TEXT</p>
+    </div>
+<pre class="prettyprint linenums">
+.neon-text{
+    font-family:georgia,sans-serif;
+    text-shadow:0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #ff00de,
+                0 0 70px #ff00de,
+                0 0 80px #ff00de,
+                0 0 100px #ff00de,
+                0 0 150px #ff00de;
+}
+</pre>
+
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>
