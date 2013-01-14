@@ -64,12 +64,11 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/detect-character.html"><img src="../solutions/img/default.png" alt="检测字符类型" ><h4>检测字符类型</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/divider.html"><img src="../solutions/img/default.png" alt="分割线" ><h4>分割线</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/text-align-justify.html"><img src="../solutions/img/text-align-justify.png" alt="文本两端对齐" ><h4>文本两端对齐</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis.html"><img src="../solutions/img/ellipsis.png" alt="" ><h4>省略号</h4></a></li>
 			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位" ><h4>geolocation 地理定位</h4></a></li>-->
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt="" ><h4>border 探索</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float"><img src="../solutions/img/default.png" alt="" ><h4>清除浮动</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis"><img src="../solutions/img/default.png" alt="" ><h4>省略号</h4></a></li>
-			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float.html"><img src="../solutions/img/clear-float.png" alt="" ><h4>清除浮动</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/radio-checkbox"><img src="../solutions/img/default.png" alt="" ><h4>radio/checkbox</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清除浮动</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo ul{background:#ccc;padding:10px;}
+.demo li{float:left;display:inline;margin-right:10px;}
+
+.test2{
+    overflow:hidden;*zoom:1;
+}
+
+.clear{
+    margin:0 !important;
+    padding:0 !important;
+    float:none !important;
+    clear:both !important;
+    display:block !important;
+}
+
+.test4{
+    display:inline-block;*display:inline;*zoom:1;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>清除浮动</h1>
+    <p>如果使用div(或其他容器)包裹一个浮动的元素，经常会遇到一些无法包裹内部元素的问题。</p>
+    <p><b>这时就需要清除浮动：</b>必须给容器(如div)定义明确的 <code>height</code>、<code>width</code>、<code>overflow</code> 之中一个属性（除了auto值）才能将浮动元素严实地包裹。</p>
+	<p>最常见的有四种方法：</p>
+	<ul>
+	    <li><b>clearfix清除法</b>：clearfix使用:after属性，配合zoom:1 来实现清除浮动；实现：只要在其父层添加 <code>class="clearfix"</code> 即可。</li>
+	    <li><b>overflow清除法</b>：定义overflow之中一个属性（除了auto值）。</li>
+	    <li><b>额外空标签清除法</b>：在浮动层父标签内部最后添加空标签 <code>&lt;div class="clear"&gt;&lt;/div&gt;</code> 来实现。</li>
+	    <li><b>inline-block方法</b>：在浮动层父标签上设置 <code>inline-block</code> 属性。</li>
+	</ul>
+	
+	<h2>clearfix清除法 <small>推荐方法</small></h2>
+    <div class="demo">
+        <ul class="none test1 clearfix">
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		</ul>
+		
+    </div>
+<pre class="prettyprint linenums">
+/*简洁版*/
+.clearfix:before, .clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+    overflow:hidden;
+}
+.clearfix{
+    zoom:1;
+}
+
+/* 经典版 */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+</pre>
+    
+	<h2>overflow清除法</h2>
+    <div class="demo">
+        <ul class="none test2">
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		</ul>
+		
+    </div>
+<pre class="prettyprint linenums">
+.test2{
+    overflow:hidden;*zoom:1;
+}
+</pre>
+	
+	<h2>空标签清除法</h2>
+    <div class="demo">
+        <ul class="none test3">
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+			<li class="clear"></li>
+		</ul>
+		
+    </div>
+<pre class="prettyprint linenums">
+.clear{
+    float:none !important;
+    clear:both !important;
+    display:block !important;
+}
+</pre>
+	
+	<h2>inline-block方法</h2>
+    <div class="demo">
+        <ul class="none test4">
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
+		</ul>
+		<p class="note"><strong>注意：</strong>这个demo和上面几个是有所不同的哦，细心的你早就发现了，前面的比这个宽度要大啊。</p>
+    </div>
+<pre class="prettyprint linenums">
+.test4{
+    display:inline-block;*display:inline;*zoom:1;
+}
+</pre>
+	<h3>问题及注意事项：</h3>
+    <ul>
+	    <li><a target="_blank" href="http://www.tcreator.info/demo/float-margin-bottom.html">float元素设定margin-bottom时在IE6和IE7下会失效</a></li>
+	    <li>关于position:relative对清除浮动的影响</li>
+	</ul>
+    
+	
+</div>
+</body>
+</html>

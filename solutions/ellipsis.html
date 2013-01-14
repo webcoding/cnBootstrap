@@ -2,35 +2,43 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>解决方案标题</title>
+<title>省略号解决方案</title>
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
-
+.ellipsis{
+    width:200px; /*设置宽度*/
+    white-space: nowrap; /*设置不折行*/
+    overflow: hidden; /*设置超过的隐藏*/
+    text-overflow: ellipsis; /*这就是省略号喽*/
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-    <h1>这是模版</h1>
+    <h1>省略号</h1>
+    <h2>省略号 <small>单行文本解决方案</small></h2>
     <p>解决方案描述</p>
     
     <div class="demo">
-        这是案例展示
+        <p class="ellipsis" title="这里字太多了就会显示省略号省略号！">这里字太多了就会显示省略号省略号！</p>
         
     </div>
 <pre class="prettyprint linenums">
-
+.ellipsis{
+    width:200px; /*设置宽度*/
+    white-space: nowrap; /*设置不折行*/
+    overflow: hidden; /*设置超过的隐藏*/
+    text-overflow: ellipsis; /*这就是省略号喽*/
+}
 </pre>
-    <h3>问题及注意事项：</h3>
-    <p>实践出真知</p>
+    
+	<h4>问题及注意事项：</h4>
+    <p>如上代码设置，都是必选项，每个属性都不可缺少，且仅适用于单行文本。</p>
+	
+	<h2>省略号 <small>多行文本解决方案</small></h2>
+	
     
 </div>
-
-<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
-
-<!--[if ie 6]>
-<script src="../assets/js/DD_belatedPNG-min.js"></script> 
-<script>DD_belatedPNG.fix('.ie6png');</script>
-<![endif]-->
 </body>
 </html>

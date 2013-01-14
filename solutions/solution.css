@@ -3,6 +3,7 @@
 **/
 .fl{float:left}.fr{float:right}.fl,.fr{display:inline}
 .wrap,.bc{margin-left:auto; margin-right:auto}.tc{text-align:center}
+.hor li{float:left;display:inline;}
 .wrap{ width:980px;}
 small{ font-weight:normal}
 .none,.none li{margin:0;padding:0;list-style-type:none}
