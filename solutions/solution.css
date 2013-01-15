@@ -140,7 +140,7 @@ pre code {
   background-color: transparent;
   border: 0;
 }
-
+pre.inblock{border:none;margin:0;padding:0;background:none}
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;

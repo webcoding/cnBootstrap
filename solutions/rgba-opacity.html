@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RGBA 与 背景透明</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff}
+.box{padding:10px;color:#fff;}
+.box pre{color:#fff;}
+
+.hex{background-color:#000000;}
+.rgb{background-color:rgb(0,0,0);}
+.rgb-alpha{background-color:rgb(0,0,0);opacity:.5;}
+.rgba{background-color:rgba(0,0,0,.5);}
+
+.opacity{
+    position:relative;
+    z-index:3;
+    width:380px;
+    height:80px;
+    padding:20px;
+    background-color:#000;
+    color:#fff;
+    filter:alpha(opacity=60); /* For IE */
+    opacity:.6;
+}
+
+.opacity-text{
+    position:relative;
+    z-index:3;
+    width:380px;
+    height:80px;
+    padding:20px;
+    color:#fff;
+    margin-top:-120px;
+}
+.text{
+    position:relative;
+    z-index:1;
+    width:320px;
+    height:20px;
+    margin:-110px 0 0 10px;
+    padding:50px;
+    background:#f00;
+}
+
+.rgba-opacity{
+    position:relative;
+    z-index:3;
+    width:380px;
+    height:80px;
+    padding:20px;
+    background-color:rgba(0,0,0,.7);
+    color:#fff;
+}
+
+
+iframe{
+    position:relative;
+    z-index:3;
+    width:420px;
+    height:120px;
+    color:#fff;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>RGBA 与 背景透明</h1>
+	<p class="browser">RGBA-浏览器参照基准：IE9+, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
+    <p>语法：rgba(0-255,0-255,0-255,0-1)</p>
+    
+    <div class="demo">
+        <h3>HEX颜色中的黑色：</h3>
+        <div class="box hex"><pre class="inblock">background-color:#000000;</pre></div>
+		<h3>RGB颜色中的黑色：</h3>
+        <div class="box rgb"><pre class="inblock"></pre>background-color:rgb(0,0,0);</div>
+		<h3>RGB颜色+opacity透明度(50%透明度的黑色)：</h3>
+        <div class="box rgb-alpha"><pre class="inblock">background-color:rgb(0,0,0);
+opacity:.5;</pre></div>
+		<h3>RGBA颜色(50%透明度的黑色)：</h3>
+        <div class="box rgba"><pre class="inblock">background-color:rgba(0,0,0,.5);</pre></div>
+    </div>
+	<p class="browser">背景透明-浏览器参照基准：IE, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
+    <div class="demo">
+	    <h3>效果演示：<small>error</small></h3>
+        <div class="opacity">这是一个不成功的背景透明内容不透明效果，你会看到背景及内容两者都透明了</div>
+		<div class="text">将内容和背景分别放到不同的层，然后将背景设置成透明，两者就互不相关了</div>
+		
+		<h3>效果演示：<small>success</small></h3>
+		<div class="opacity"></div>
+		<div class="opacity-text">这是一个在所有主流浏览器下都可以看到的背景透明，内容不透明的效果</div>
+		<div class="text">将内容和背景分别放到不同的层，然后将背景设置成透明，两者就互不相关了</div>
+		
+		<h3>效果演示：<small>RGBA</small></h3>
+		<div class="rgba-opacity">这是一个用RGBA实现的背景透明内容不透明的效果</div>
+		<div class="text">直接用RGBA值作为背景色</div>
+    </div>
+<pre class="prettyprint linenums">
+.opacity{
+    position:relative;
+    z-index:3;
+    width:380px;
+    height:80px;
+    padding:20px;
+    background-color:#000;
+    color:#fff;
+    filter:alpha(opacity=60); /* For IE */
+    opacity:.6;
+}
+
+.opacity-text{
+    position:relative;
+    z-index:3;
+    width:380px;
+    height:80px;
+    padding:20px;
+    color:#fff;
+    margin-top:-120px;
+}
+.text{
+    position:relative;
+    z-index:1;
+    width:320px;
+    height:20px;
+    margin:-110px 0 0 10px;
+    padding:50px;
+    background:#f00;
+}
+
+.rgba-opacity{
+    position:relative;
+    z-index:3;
+    width:380px;
+    height:80px;
+    padding:20px;
+    background-color:rgba(0,0,0,.7);
+    color:#fff;
+}
+</pre>
+    
+	<h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+	
+	<h2>知识扩展：</h2>
+	<h3>如何让iframe的背景透明内容不透明？</h3>
+	<p class="browser">背景透明-浏览器参照基准：IE6+, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
+    <div class="demo">
+	    
+	    <iframe src="iframe-test-content.html" allowtransparency="true"></iframe>
+		<div class="text">给iframe标记加上allowtransparency属性并设置为true即可以让iframe在IE下透明</div>
+    </div>
+<pre class="prettyprint linenums">
+&lt;iframe src="iframe-test-content.html" allowtransparency="true"&gt;&lt;/iframe&gt;
+
+iframe{
+    position:relative;
+    z-index:3;
+    width:420px;
+    height:120px;
+    color:#fff;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>
