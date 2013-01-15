@@ -222,8 +222,9 @@ body {
 }
 
 
-/* vertical-middle */
-.as-middle{}
+/* 垂直居中 */
+.middle-item,.middle-full{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;}
+.middle-full{height:100%;width:0;overflow:hidden;font-size:0;}
 
 
 /*

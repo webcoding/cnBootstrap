@@ -21,8 +21,11 @@
         <a href="./extend.php" title="Extend">扩展</a>
       </li>
       <li>
-        Version 1.0 base on TB v2.2.1
+        base on TB v2.2.1
       </li>
+	  <li>
+	  	<a href="./standard.php" title="standard">前端规范</a>
+	  </li>
 	  <li>
 	  	<a href="./bugs-and-fixed.php" title="Browser compatibility reproduce the bug and solution">Bugs and Fixed</a>
 	  </li>

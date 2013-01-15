@@ -87,7 +87,23 @@ input[type=submit]:focus, input[type=button]:focus{
 		</tbody>
 	</table>
 	<p>更多：详见<a href="http://www.tcreator.info/webSchool/xhtml-css/remove-ontline.html">去除虚线框</a></p>
+	<h3>也可以用js这样添加</h3>
+<pre class="prettyprint linenums">
+/* 去除虚线(部分元素) */
+$(".no_focus").bind("focus",function(){
+    //if(document.all){ //针对IE
+    if(this.blur){
+        this.blur(); //常用于幻灯的数字按钮
+    };
+});
+</pre>
+	<h3>问题</h3>
+	 <ul>
+	    <li>IE下使用</li>
+    </ul>
 	
 </div>
+
+
 </body>
 </html>

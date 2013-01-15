@@ -6,20 +6,26 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
-.demo ul{background:#ccc;padding:10px;}
-.demo li{float:left;display:inline;margin-right:10px;}
-
+.demo ul,.box{background:#ccc;padding:10px;}
+.demo li{float:left;display:inline;margin:20px;*zoom:1;}
+.demo li img{vertical-align:middle} /* 浮动元素与内元素空白间隙 */
 .test2{
     overflow:hidden;*zoom:1;
 }
 
 .clear{
-    margin:0 !important;
+    display:block !important;
+    clear:both !important; /* 空标签清除浮动核心代码 */
+    margin:0!important;
+    border:none !important;
     padding:0 !important;
     float:none !important;
-    clear:both !important;
-    display:block !important;
+    height:0px !important;
+    background:red !important;
+    font-size:0 !important;
 }
+.box{ width:600px;}
+.box .fl{ margin:20px;}
 
 .test4{
     display:inline-block;*display:inline;*zoom:1;
@@ -35,7 +41,7 @@
 	<p>最常见的有四种方法：</p>
 	<ul>
 	    <li><b>clearfix清除法</b>：clearfix使用:after属性，配合zoom:1 来实现清除浮动；实现：只要在其父层添加 <code>class="clearfix"</code> 即可。</li>
-	    <li><b>overflow清除法</b>：定义overflow之中一个属性（除了auto值）。</li>
+	    <li><b>overflow清除法</b>：父标签定义overflow之中一个属性（除了auto值）。</li>
 	    <li><b>额外空标签清除法</b>：在浮动层父标签内部最后添加空标签 <code>&lt;div class="clear"&gt;&lt;/div&gt;</code> 来实现。</li>
 	    <li><b>inline-block方法</b>：在浮动层父标签上设置 <code>inline-block</code> 属性。</li>
 	</ul>
@@ -99,13 +105,18 @@
 		    <li><img src="images/shahuhu.jpg" width="160" height="150"></li>
 			<li class="clear"></li>
 		</ul>
-		
+		<p class="note"><strong>小提醒：</strong>float元素设定 <code>margin-bottom</code> 时在 IE6/IE7 下会失效，目前发现只有<b>空标签清除法+固定宽度</b>才能有效解决，且不能是li结构</p>
+		<div class="box">
+		    <div class="fl"><img src="images/shahuhu.jpg" width="160" height="150"></div>
+		    <div class="fl"><img src="images/shahuhu.jpg" width="160" height="150"></div>
+		    <div class="fl"><img src="images/shahuhu.jpg" width="160" height="150"></div>
+			<div class="clear"></div>
+		</div>
     </div>
 <pre class="prettyprint linenums">
 .clear{
-    float:none !important;
-    clear:both !important;
     display:block !important;
+    clear:both !important; /* 空标签清除浮动核心代码 */
 }
 </pre>
 	
@@ -125,11 +136,14 @@
 </pre>
 	<h3>问题及注意事项：</h3>
     <ul>
-	    <li><a target="_blank" href="http://www.tcreator.info/demo/float-margin-bottom.html">float元素设定margin-bottom时在IE6和IE7下会失效</a></li>
+	    <li>float元素设定margin-bottom时在IE6和IE7下会失效</li>
 	    <li>关于position:relative对清除浮动的影响</li>
 	</ul>
     
 	
 </div>
+
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
 </body>
 </html>

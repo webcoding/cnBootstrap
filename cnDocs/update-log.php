@@ -7,8 +7,8 @@
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
 <div class="container">
-<h1>Update and Planning</h1>
-<p class="lead">Update log and Planning list.</p>
+<h1 title="Update and Planning">升级计划</h1>
+<p class="lead" title="Update log and Planning list.">更新日志及计划列表</p>
 </div>
 </header>
 
@@ -20,8 +20,8 @@
 <div class="row">
   <div class="span3 bs-docs-sidebar">
     <ul class="nav nav-list bs-docs-sidenav">
-      <li><a href="#update"><i class="icon-chevron-right"></i> Update log</a></li>
-      <li><a href="#planning"><i class="icon-chevron-right"></i> Planning</a></li>
+      <li><a href="#update" title="Update log"><i class="icon-chevron-right"></i> 升级日志</a></li>
+      <li><a href="#planning" title="Planning"><i class="icon-chevron-right"></i> 计划</a></li>
     </ul>
   </div>
   <div class="span9">
@@ -29,8 +29,8 @@
     ================================================== -->
     <section id="update">
       <div class="page-header">
-        <h1>Update</h1>
-      </div>、
+        <h1>升级</h1>
+      </div>
 <!-- <h2>Done list</h2>-->
       <h2>Doing list</h2>
       <p>menu for bugs lists of links. Made interactive with the bugs.</p><ol>
@@ -56,7 +56,7 @@
     ================================================== -->
     <section id="planning">
       <div class="page-header">
-        <h1>Planning</h1>
+        <h1>计划</h1>
       </div>
       <p>menu for bugs lists of links. Made interactive with the bugs.</p>
       <ol>

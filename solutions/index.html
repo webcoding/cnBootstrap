@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鼠标指针样式自定义控制</title>
+<style>
+.fl,.fr{width:50%; height:100%}
+.fl{float:left}
+.fr{float:right}
+.photo-view{width:400px; height:100px; border:1px solid #ccc; background:#eee; margin:20px auto}
+.photo-view .cursor_next {cursor: url(next.cur), auto;}
+.photo-view .cursor_pre {cursor: url(pre.cur), auto;}
+
+.info{cursor: url(zoom.cur), auto; padding:10px 20px; width:600px; margin:0 auto}
+</style>
+</head>
+
+<body>
+
+<div class="photo-view"><div class="cursor_pre fl"></div><div class="cursor_next fr"></div></div>
+
+<div class="info" title="鼠标指针样式自定义控制">
+<p>cursor:设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。<br>
+<strong>注意：</strong>使用自定义图像作为光标类型，IE, Opera只支持*.cur等特定的图片格式；Firefox, Chrome, Safari既支持特定图片类型也支持常见的*.jpg, *.gif, *.jpg等图片格式。 
+cursor的属性值可以是一个序列 
+示例代码：</p>
+<pre>
+:link,:visited{ 
+    cursor:url(example.svg#linkcursor),
+            url(hyper.cur),
+            url(hyper.png) 2 3,
+            pointer;
+}</pre><p>
+本例用来给所有的超链接定义光标类型，客户端如果不支持SVG类型的光标，则使用下个"hyper.cur"；如果cur类型也不支持，则使用下个"hyper.png"；依次类推。
+</p></div>
+</body>
+</html>
