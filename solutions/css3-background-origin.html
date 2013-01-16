@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 background-origin背景图片参考位置</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+.box{
+    padding:10px 20px;
+    border:10px dashed #666;
+    background:#ddd url(images/pencil.jpg) 0 0 no-repeat;
+}
+.background-origin-border{
+    -moz-background-origin:border-box;         /* For Firefox */
+    -webkit-background-origin:border-box;      /* For Chrome, Safari */
+    -o-background-origin:border-box;           /* For Opera */
+    -ms-background-origin:border-box;          /* For IE */
+    background-origin:border-box;              /* For Future */
+}
+.background-origin-padding{
+    -moz-background-origin:padding-box;         /* For Firefox */
+    -webkit-background-origin:padding-box;      /* For Chrome, Safari */
+    -o-background-origin:padding-box;           /* For Opera */
+    -ms-background-origin:padding-box;          /* For IE */
+    background-origin:padding-box;              /* For Future */
+}
+.background-origin-content{
+    -moz-background-origin:content-box;         /* For Firefox */
+    -webkit-background-origin:content-box;      /* For Chrome, Safari */
+    -o-background-origin:content-box;           /* For Opera */
+    -ms-background-origin:content-box;          /* For IE */
+    background-origin:content-box;              /* For Future */
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 background-origin背景图片参考位置</h1>
+	<p class="browser">浏览器参照基准：IE9+, Firefox3.6+, Chrome5+, Safari5+, Opera11.50+ </p>
+    <p>用于指定background-position计算的参考位置。<b>默认值为padding-box</b>，IE下的一般标记默认表现等同于border-box（hasLayout的标记或一般标记被触发hasLayout时，表现等同于padding-box）</p>
+    
+    <div class="demo">
+        <h3>背景起点（以border(即包括border)为原点计算背景图的background-position）：</h3>
+        <div class="box background-origin-border">
+<pre class="inblock">
+.background-origin-border{
+    -moz-background-origin:border-box;         /* For Firefox */
+    -webkit-background-origin:border-box;      /* For Chrome, Safari */
+    -o-background-origin:border-box;           /* For Opera */
+    -ms-background-origin:border-box;          /* For IE */
+    background-origin:border-box;              /* For Future */
+}
+</pre>
+        </div>
+        <h3>背景起点（以padding(即包括padding)为原点计算背景图的background-position）：</h3>
+        <div class="box background-origin-padding">
+<pre class="inblock">
+.background-origin-padding{
+    -moz-background-origin:padding-box;         /* For Firefox */
+    -webkit-background-origin:padding-box;      /* For Chrome, Safari */
+    -o-background-origin:padding-box;           /* For Opera */
+    -ms-background-origin:padding-box;          /* For IE */
+    background-origin:padding-box;              /* For Future */
+}
+</pre>
+        </div>
+        <h3>背景起点（以content(即从content开始)为原点计算背景图的background-position）：</h3>
+        <div class="box background-origin-content">
+<pre class="inblock">
+.background-origin-content{
+    -moz-background-origin:content-box;         /* For Firefox */
+    -webkit-background-origin:content-box;      /* For Chrome, Safari */
+    -o-background-origin:content-box;           /* For Opera */
+    -ms-background-origin:content-box;          /* For IE */
+    background-origin:content-box;              /* For Future */
+}
+</pre>
+        </div>
+    </div>
+	<!--
+<pre class="prettyprint linenums">
+
+</pre>-->
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

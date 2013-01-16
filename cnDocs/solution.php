@@ -71,7 +71,6 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt="" ><h4>border 探索</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float.html"><img src="../solutions/img/clear-float.png" alt="" ><h4>清除浮动</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rgba-opacity.html"><img src="../solutions/img/rgba-opacity.png" alt="" ><h4>RGBA 与 背景透明</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/radio-checkbox"><img src="../solutions/img/default.png" alt="" ><h4>radio/checkbox</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
@@ -109,8 +108,8 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-double-border.html"><img src="../solutions/img/default.png" alt="" ><h4>double border 双线框效果</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-image.html"><img src="../solutions/img/default.png" alt="" ><h4>border-image 边框图片</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/box-shadow.png" alt="" ><h4>box-shadow 阴影</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-clip.html"><img src="../solutions/img/default.png" alt="" ><h4>background-clip 背景裁剪</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-origin.html"><img src="../solutions/img/default.png" alt="" ><h4>背景图片参考位置</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-clip.html"><img src="../solutions/img/background-clip.jpg" alt="" ><h4>background-clip 背景裁剪</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-origin.html"><img src="../solutions/img/background-origin.jpg" alt="" ><h4>background-origin 背景位置</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-size.html"><img src="../solutions/img/default.png" alt="" ><h4>背景图尺寸</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-image.html"><img src="../solutions/img/default.png" alt="" ><h4>多组背景图</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-shadow.html"><img src="../solutions/img/text-shadow.png" alt="" ><h4>text-shadow 文字阴影</h4></a></li>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 background-clip 背景裁剪</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+.box{
+    padding:10px 20px;
+    border:10px dashed #666;
+    background-color:#ddd;
+}
+.background-clip-border{
+    -moz-background-clip:border-box;           /* For Firefox */
+    -webkit-background-clip:border-box;        /* For Chrome, Safari */
+    -o-background-clip:border-box;             /* For Opera */
+    -ms-background-clip:border-box;            /* For IE */
+    background-clip:border-box;                /* For Future */
+}
+.background-clip-padding{
+    -moz-background-clip:padding-box;           /* For Firefox */
+    -webkit-background-clip:padding-box;        /* For Chrome, Safari */
+    -o-background-clip:padding-box;             /* For Opera */
+    -ms-background-clip:padding-box;            /* For IE */
+    background-clip:padding-box;                /* For Future */
+}
+.background-clip-content{
+    -moz-background-clip:content-box;           /* For Firefox */
+    -webkit-background-clip:content-box;        /* For Chrome, Safari */
+    -o-background-clip:content-box;             /* For Opera */
+    -ms-background-clip:content-box;            /* For IE */
+    background-clip:content-box;                /* For Future */
+}
+/* 如果你的浏览器支持text值，你将会看到本段文字的颜色直接使用了背景颜色：红色，且背景将被裁剪掉不再显示 */
+.background-clip-text{
+    background-color:#f00;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;               /* For Chrome, Safari */
+    background-clip:text;                       /* For Future */
+}
+
+.text{
+    margin:0 auto;
+    font-size:165px;
+    line-height:100%;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-align:center;
+}
+.cliptext{
+    background:url(images/mask_text_bg.png) repeat;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-animation:cliptext 25s linear infinite;
+}
+@-webkit-keyframes cliptext{
+    0%{background-position:left top;}
+    50%{background-position:right top;}
+    100%{background-position:left top;}
+}
+.cliptext2{
+    background:url(images/girl2.jpg) repeat;
+    background-size:auto;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-animation:cliptext 20s linear infinite;
+    font-size:196px;
+    text-transform:uppercase;
+}
+.cliptext3{
+    background:#333 -webkit-linear-gradient(-15deg,#000 5%,rgba(255,255,255,.7),rgba(255,255,255,.9),rgba(255,255,255,.7),#000 10%) no-repeat;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-animation:cliptext 10s linear infinite;
+    font-size:56px;
+}
+<!--
+@-webkit-keyframes cliptext{
+	0%{background-position:left 0;}
+	100%{background-position:1200px 0;}
+}
+-->
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 background-clip 背景裁剪</h1>
+	<p class="browser">浏览器参照基准：IE9+, Firefox3.6+, Chrome5+, Safari5+, Opera11.50+ </p>
+    <p>用于指定background是否包含content之外的border,padding。<b>默认值为border-box</b>，即background从包含border在内的地方开始渲染，IE的默认表现也等同于border-box</p>
+    
+    <div class="demo">
+        <h3>背景裁剪（背景从border(即包括border在内)开始绘制（渲染））：</h3>
+        <div class="box background-clip-border">
+<pre class="inblock">
+.background-clip-border{
+    -moz-background-clip:border-box;           /* For Firefox */
+    -webkit-background-clip:border-box;        /* For Chrome, Safari */
+    -o-background-clip:border-box;             /* For Opera */
+    -ms-background-clip:border-box;            /* For IE */
+    background-clip:border-box;                /* For Future */
+}
+</pre>
+        </div>
+        <h3>背景裁剪（背景从padding(即包括padding在内)开始绘制）：</h3>
+        <div class="box background-clip-padding">
+<pre class="inblock">
+.background-clip-padding{
+    -moz-background-clip:padding-box;           /* For Firefox */
+    -webkit-background-clip:padding-box;        /* For Chrome, Safari */
+    -o-background-clip:padding-box;             /* For Opera */
+    -ms-background-clip:padding-box;            /* For IE */
+    background-clip:padding-box;                /* For Future */
+}
+</pre>
+        </div>
+        <h3>背景裁剪（背景从content(即内容部分)开始绘制）：</h3>
+        <div class="box background-clip-content">
+<pre class="inblock">
+.background-clip-content{
+    -moz-background-clip:content-box;           /* For Firefox */
+    -webkit-background-clip:content-box;        /* For Chrome, Safari */
+    -o-background-clip:content-box;             /* For Opera */
+    -ms-background-clip:content-box;            /* For IE */
+    background-clip:content-box;                /* For Future */
+}
+</pre>
+        </div>
+        <h3>背景裁剪（将背景裁剪作为文本的填充色）：</h3>
+        <div class="box background-clip-text">
+<pre class="inblock">
+/* 如果你的浏览器支持text值，你将会看到本段文字的颜色直接使用了背景颜色：红色，且背景将被裁剪掉不再显示 */
+.background-clip-text{
+    background-color:#f00;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;               /* For Chrome, Safari */
+    background-clip:text;                       /* For Future */
+}
+</pre>
+        </div>
+    </div>
+	<h2>background-clip 背景裁剪实现的文字特效</h2>
+	<div class="demo">
+	    <h3 class="tc">流光溢彩文字</h3>
+        <p class="text cliptext">Clip Text</p>
+	</div>
+<pre class="prettyprint linenums">
+.cliptext{
+    background:url(images/mask_text_bg.png) repeat;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-animation:cliptext 25s linear infinite;
+}
+@-webkit-keyframes cliptext{
+    0%{background-position:left top;}
+    50%{background-position:right top;}
+    100%{background-position:left top;}
+}
+</pre>
+	<div class="demo">
+        <p class="text cliptext2">遮罩效果</p>
+	</div>
+<pre class="prettyprint linenums">
+.cliptext2{
+    background:url(images/girl2.jpg) repeat;
+    background-size:auto;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-animation:cliptext 20s linear infinite;
+    font-size:196px;
+    text-transform:uppercase;
+}
+@-webkit-keyframes cliptext{
+    0%{background-position:left top;}
+    50%{background-position:right top;}
+    100%{background-position:left top;}
+}
+</pre>
+	<div class="demo">
+        <p class="text cliptext3">有点粗糙的光影划过文字效果</p>
+	</div>
+<pre class="prettyprint linenums">
+.cliptext3{
+    background:#333 -webkit-linear-gradient(-15deg,#000 5%,rgba(255,255,255,.7),rgba(255,255,255,.9),rgba(255,255,255,.7),#000 10%) no-repeat;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-animation:cliptext 10s linear infinite;
+    font-size:56px;
+}
+@-webkit-keyframes cliptext{
+	0%{background-position:left 0;}
+	100%{background-position:1200px 0;}
+}
+</pre>
+
+	<h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

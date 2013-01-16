@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>去除链接、按钮虚线框</title>
-<link rel="stylesheet" href="../assets/css/noreset.css">
+<title>去除超链接、按钮、热点链接等虚线框</title>
+<!--<link rel="stylesheet" href="../assets/css/noreset.css">-->
 <link rel="stylesheet" href="solution.css">
 <style>
 .demo{ background:#fff;}
@@ -16,27 +16,59 @@ input[type=button]::-moz-focus-inner{border:none;}
 <body>
 <div class="wrap">
     <h1>去除链接、按钮虚线框 | remove outline</h1>
-    <p>一般情况下，链接的 outline 可以不去除。如果 outline 形状极丑陋的情况下，视觉效果很差，则需要使用这些方法：</p>
-    
+	<h3>去除虚线框的一些说明：</h3>
+<pre class="prettyprint linenums">
+/*
+ * 注意：由于我们的demo页面采用的noreset.css重置样式包含对虚线框的重置(代码如下)---点击时没有虚线框，但是聚焦状态是有的
+ * 故本页面注释了noreset样式的引用，方便测试虚线框的情况！
+ */
+
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+</pre>
+	<h4>从网页的易用性来考虑，链接的 outline 不要去除，推荐使用如上方法。简单列举为什么不要去除虚线框：</h4>
+	<ul>
+		<li>虚线框（outline）给键盘导航带来便利</li>
+		<li>导致更加糟糕的用户体验（令 JavsScript 的onfocus事件无用武之地）</li>
+		<li>可替代的选择方案（设置焦点被触发时，链接背景为红色等）</li>
+	</ul>
+	<p>查看详细分析：<a target="_blank" href="http://www.tcreator.info/webSchool/xhtml-css/66.html">页面的易用性：为什么不推荐去掉链接周围的虚线框</a></p>
+	
+	<h4>如果虚线框形状极其丑陋，严重影响外观、视觉效果，可以参考以下方法：</h4>
     <div class="demo">
-		<p><a href="#">未去掉</a></p>
-		<p><a class="outline-all" hidefocus href="#" title="remove outline for all situation">去掉所有情况下的虚线</a></p>
-    	<p>IE6: <a href="#" hidefocus="true">A outline:hidefocus</a></p>
+		<p><a href="###">未去掉虚线框</a>　Chrome/Safari 浏览器默认没有虚线框</p>
+		<p><a class="outline-all" hidefocus href="###" title="remove outline for all situation">去掉所有情况下的虚线</a></p>
+    	<p>IE6: <a href="###" hidefocus="true">A outline:hidefocus</a></p>
 		<p>Firefox: </p>
 		<p><input type="submit" hidefocus value="去掉除firefox外的虚线框" /></p>
 		<p><input type="button" hidefocus value="去掉虚线框,包括firefox" /> </p>
     </div>
+
 <pre class="prettyprint linenums">
 &lt;a href="#" hidefocus="true"&gt;A outline:hidefocus&lt;/a&gt;
 
 /* hack for Firefox */
 input[type=submit]::-moz-focus-inner,input[type=button]::-moz-focus-inner{    
-	border : 0px; 
+    border : 0px; 
 }
 
 /* 不要随便去掉虚线框 */
 input[type=submit]:focus, input[type=button]:focus{      
-	outline : none;  
+    outline : none;  
 }
 </pre>
 	<h3>问题及注意事项：</h3>
@@ -86,7 +118,7 @@ input[type=submit]:focus, input[type=button]:focus{
 			</tr>
 		</tbody>
 	</table>
-	<p>更多：详见<a href="http://www.tcreator.info/webSchool/xhtml-css/remove-ontline.html">去除虚线框</a></p>
+	<p>更多：详见<a target="_blank" href="http://www.tcreator.info/webSchool/xhtml-css/remove-ontline.html">去除虚线框介绍</a></p>
 	<h3>也可以用js这样添加</h3>
 <pre class="prettyprint linenums">
 /* 去除虚线(部分元素) */
@@ -100,10 +132,10 @@ $(".no_focus").bind("focus",function(){
 	<h3>问题</h3>
 	 <ul>
 	    <li>IE下使用</li>
+	    <li>关于热点链接的虚线框</li>
     </ul>
 	
 </div>
-
 
 </body>
 </html>
