@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>信息提示框</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<link rel="stylesheet" href="plugin.css">
+<style>
+.plugin .tips,.plugin .alert {margin-bottom: 10px;}
+
+/**
+  * @name      : mini-tips ===tips alert msg-
+  * @explain   : 操作提示
+  * @type      : 基类 .tips .alert
+  * @expand    : 扩展 -info -success -error -warning -help -stop -wait === message danger
+  * @dependent : Oricode
+  * @author    : Cloudyan
+  * @version   : 1.0
+  * @html      :
+<!--
+<span class="mtips tips-ico-info"></span>
+
+<div class="tips tips-info">
+	<span class="tips-ico"></span>
+	安全提醒：自行编辑，非系统消息
+</div>
+
+<div class="alert alert-info">
+	<span class="alert-ico"></span>
+	<h3>Binggo！操作状态提醒！</h3>
+	<p>您现在可以去畅游网络了。</p>
+</div>
+
+<div class="alert alert-warning">
+	<button type="button" class="close" data-dismiss="alert">×</button>
+	<span class="alert-ico">图标</span>
+	<div class="alert-content">
+		<div class="alert-title">提示标题</div>
+		<div class="alert-line">提示描述</div>
+		<div class="alert-buttons">
+			<a class="btn-white" href="#"><span>按钮</span></a>
+			<a href="#">链接</a>
+		</div>
+	</div>
+</div>
+
+-->
+ */
+.mtips,.tips-ico,span.tips,.alert-ico{display:inline-block;*display:inline;*zoom:1;}
+.mtips,.tips-ico,.alert-ico{ background:url(/labs/lvmama/img/ico-combo.png) -1000px -1000px no-repeat; }
+
+/* tips */
+.mtips,.tips .tips-ico{ width:14px; height:14px; margin-right:5px; background-position:0 -34px}
+.tips .tips-ico {float:left;}
+.tips{ margin:0; background:#f9f9f9;border:1px solid #d4d4d4;padding:8px 10px; line-height:14px;}
+.tips-info .tips-ico,.tips-ico-info{ background-position:0 -34px}
+.tips-warning .tips-ico,.tips-ico-warning{ background-position:-14px -34px}
+.tips-error .tips-ico,.tips-ico-error{background-position:-28px -34px}
+.tips-success .tips-ico,.tips-ico-success{ background-position:-42px -34px}
+.tips-help .tips-ico,.tips-ico-help{ background-position:-56px -34px}
+.tips-stop .tips-ico,.tips-ico-stop{ background-position:-70px -34px}
+.tips-wait .tips-ico,.tips-ico-wait{ background-position:-84px -34px}
+
+.tips-info{background:#e5f5ff;border:1px solid #c9d5e2}
+.tips-warning{background:#ffffe0;border:1px solid #ff8801}
+.tips-error{background:#fff2f2;border:1px solid #f44}
+.tips-success{background:#f1ffe2;border:1px solid #7dc25e}
+.tips-help{background:#e5f5ff;border:1px solid #c9d5e2}
+.tips-stop{background:#fceee8;border:1px solid #f6c8b5}
+.tips-wait{background:#e5f5ff;border:1px solid #c9d5e2}
+
+.tips-arrowup{display:inline-block;height:10px;left:40px;margin-left:-8px;position:absolute;text-indent:-9999em;width:16px;z-index:1;top:-9px;_top:-8px}
+.tips-arrowup-message{background-position:-194px -39px}
+.tips-arrowup-warning{background-position:-211px -39px}
+
+/* mini-tips */
+.mtips{ border:none;width:14px; height:14px;}
+
+/* alert */
+.alert .alert-ico{ width:32px; height:32px; float:left; margin:0 0 0 -45px; background-position:0 -34px}
+.alert{ background:#f9f9f9;border:1px solid #d4d4d4; padding:20px 30px 20px 65px;}
+.alert .alert-title{ font-size:14px; font-weight:bold;}
+.alert .alert-title,.alert .alert-line,.alert p{ margin:0}
+.alert-info .alert-ico{ background-position:0 0}
+.alert-warning .alert-ico{ background-position:-32px 0}
+.alert-error .alert-ico{background-position:-64px 0}
+.alert-success .alert-ico{ background-position:-96px 0}
+.alert-help .alert-ico{ background-position:-128px 0}
+.alert-stop .alert-ico{ background-position:-160px 0}
+.alert-wait .alert-ico{ background-position:-192px 0}
+
+.alert-info{background:#e5f5ff;border:1px solid #c9d5e2}
+.alert-warning{background:#ffffe0;border:1px solid #ff8801}
+.alert-error{background:#fff2f2;border:1px solid #f44}
+.alert-success{background:#f1ffe2;border:1px solid #7dc25e}
+.alert-help{background:#e5f5ff;border:1px solid #c9d5e2}
+.alert-stop{background:#fceee8;border:1px solid #f6c8b5}
+.alert-wait{background:#e5f5ff;border:1px solid #c9d5e2}
+
+.alert-title{ font-size:14px; font-weight:bold}
+.alert-line{ font-size:12px; line-height:22px;}
+
+button.close {padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none;}
+.alert .close{position:relative; width:24px; height:24px;top:-18px;right:-28px;line-height:22px;}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>信息提示框</h1>
+    <p>各种类型的信息提示框（消息，警告，错误，成功，帮助，停止，等待，正在进行……）</p>
+    
+    <div class="demo plugin">
+<p>一般信息ico</p>
+<!-- mini-tips\\ -->
+<span class="mtips tips-ico-info"></span>
+<span class="mtips tips-ico-warning"></span>
+<span class="mtips tips-ico-error"></span>
+<span class="mtips tips-ico-success"></span>
+<span class="mtips tips-ico-help"></span>
+<span class="mtips tips-ico-stop"></span>
+<span class="mtips tips-ico-wait"></span>
+<span class="mtips tips-ico-info"></span>
+<!-- //mini-tips -->
+
+
+<p>简单块级行提醒</p>
+<!-- tips-box\\ -->
+	<p class="tips">
+        安全提醒：自行编辑，非系统消息
+    </p>
+	<div class="tips tips-info">
+    	<span class="tips-ico"></span>
+        消息提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-warning">
+    	<span class="tips-ico"></span>
+        警告提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-error">
+    	<span class="tips-ico"></span>
+        错误提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-success">
+    	<span class="tips-ico"></span>
+        成功提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-help">
+    	<span class="tips-ico"></span>
+        帮助提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-stop">
+    	<span class="tips-ico"></span>
+        停止提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-wait">
+    	<span class="tips-ico"></span>
+        等待提醒：自行编辑，非系统消息
+    </div>
+    <p>内联行提醒</p>
+	<span class="tips tips-warning">
+    	<span class="tips-ico"></span>
+        安全提醒：自行编辑，非系统消息
+    </span>
+<!-- //tips-box -->
+
+
+
+<p>操作反馈框</p>
+
+	<div class="alert hide">
+    	<h3 class="alert-title">恭喜！操作成功！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-info">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">Binggo！操作状态提醒！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-warning">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">注意！操作有风险，付款需谨慎！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-error">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">对不起！操作有误！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-success">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">恭喜！操作成功！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-help">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">有疑问？您可以参考以下内容！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-stop">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">警告！此删除操作后数据将不可恢复！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-wait">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">驴妈妈正在努力的为您查找，请稍后&hellip;</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+<!-- //alert-box -->
+
+
+
+<p>包含按钮链接的提醒框仍在筹划中……</p>
+<!-- alert-warning\\ -->
+<div class="alert alert-warning">
+	<span class="alert-ico"><!-- 图标 --></span>
+	<div class="alert-content">
+		<div class="alert-title">提示标题</div>
+		<div class="alert-line">提示描述</div>
+		<div class="alert-buttons">
+			<a class="btn-white" href="#"><span>按钮</span></a>
+			<a href="#">链接</a>
+		</div>
+	</div>
+</div><!-- //alert-warning -->
+
+
+        
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>

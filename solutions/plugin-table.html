@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表格研究</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<link rel="stylesheet" href="plugin.css">
+<style>
+
+
+/* 表格
+ * 普通表格 xtable
+ * 产品表格 ptable
+ * 其他定制表格 xtable-custom
+**/
+/* 表格基础样式 */
+table,th,tr,td{vertical-align:middle; border:none}/* table-layout:fixed; 会导致表格不自动扩展宽度 */
+table {max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;}
+[class*="table"]{width:100%;}
+[class*="table"] th,[class*="table"] td{padding:4px 8px;line-height: 20px;vertical-align: middle;border-top:1px solid #ddd;}
+.table-line th{ border-top:0}
+.xtable {margin-bottom: 20px;}
+.xtable tr,.xtable td,.ui-table tr,.ui-table td{border:1px solid #ddd;}
+.xtable th{font-weight: bold;vertical-align: bottom;}
+/* 测试属性 */
+.xtable th,.xtable th:hover{background:#fff; border:none}
+.xtable tr:hover{background:#f5f5f5}
+
+.ui-table tbody tr:nth-child(odd) td,
+.ui-table tbody tr:nth-child(odd) th {background-color: #f9f9f9;}
+.ui-table tbody tr:hover td,
+.ui-table tbody tr:hover th {background-color: #f5f5f5;}
+
+/* 定制表格——产品列表订单 */
+.ptable{color:#555}
+.ptable{font-size:inherit;}
+.ptable th,.ptable td{ border:1px solid #dedede; padding:3px 8px;}
+.ptable td{border:1px solid #D4E7FF;} 
+.ptable .col-name{border-width:0 1px 1px 1px; border-style:solid; border-color:#d8619b #dcdcdc #dcdcdc #dcdcdc; background: url(http://pic.lvmama.com/img/mylvmama/lv-bgx.gif) #fff left top repeat-x;}
+.ptable th{height:29px; line-height:29px;text-align:center; padding:0 8px;color:#555;white-space:nowrap;border:none;}
+.ptable td{text-align:center;border-color:#ddd;}
+.ptable .product-name,.biz_order td{text-align:left;}
+.ptable .order-hd td{height:23px;}
+.ptable .sep-row{height:7px;}
+.ptable .sep-row td{border:none;}
+.ptable p{ margin:0;}
+
+.xcard th,.xcard td{ border-color:#b6d6ee}.xcard .order-hd{ background:#e6f6ff}
+.ptable .order-hd{color:#404040;}
+.ptable .close-order .order-hd,.ptable .success-order .order-hd{background:#f8f8f8;}
+.close-order td,.success-order td{border-color:#ddd;}
+.xcard .product-name-name{color:#08C}
+.success-order .product-name-name,.close-order .product-name-name{color:#333}
+.xcard .product-name-name:hover{color:#d38}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>表格研究</h1>
+    <p>表格仍然是网页布局中不可获取的部分，现对表格进行深入研究，制定适应我们应用的表格样式，内置样式表中，避免重复开发定义</p>
+    <ul>
+        <li>默认无边框表格（默认|<code>class="table-none"</code>）</li>
+        <li>内置经典表格（信息表 <code>table</code> 单行表格 <code>table-line</code> 全宽表格 <code>table-full</code>）</li>
+        <li>常用订单/产品表格（普通订单 <code>table-order</code> 复杂订单 <code>table-xorder</code>）</li>
+        <li>支持表格扩展定制（定制原型 <code>xtable</code>）</li>
+        <li>其他的扩展设置（指定特定列宽度）</li>
+    </ul>
+<p>借鉴Button的实现，需要的表格最多挂三个class实现（默认，某一特色效果级别，定制级别）</p>
+<p>以下举例将实现三种常见表格（普通表格xtable、产品表格ptable、其他定制表格xtable-custom）</p>
+    
+    <div class="demo plugin">
+
+<h3>默认无边框</h3>
+<table>
+    <tr>
+        <th>名称</th>
+        <th>需求</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>默认表格</td>
+        <td>适用于表格布局</td>
+        <td>没有任何其他样式，仅是行和列，布局紧凑</td>
+    </tr>
+    <tr>
+        <td>基本表格（行）</td>
+        <td>适用于表格布局行列表</td>
+        <td>行间只有水平的线</td>
+    </tr>
+    <tr>
+        <td>普通表格</td>
+        <td>承载表格数据</td>
+        <td>表格边框及自适应的布局，承载多样的表格式数据，并添加悬停/滑过（hover）状态等</td>
+    </tr>
+    <tr>
+        <td>产品列表表格</td>
+        <td>适用于订单列表</td>
+        <td>比较复杂的表格，承载订单列表等复杂表格</td>
+    </tr>
+    <tr>
+        <td>其他定制表格</td>
+        <td>扩展的表格</td>
+        <td>扩展其他更完善的功能：行间添加奇偶背景色 (1, 3, 5, etc)标准浏览器支持等</td>
+    </tr>
+</table>
+
+        
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>
