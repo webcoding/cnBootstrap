@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>double border双线框效果的2种实现方式</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+.box{padding:10px;}
+
+.double-border{
+    border:3px double #000;
+}
+
+.double-border2{
+    border-width:3px;
+    border-style:solid;
+    /* For Firefox3.6+ */
+    -moz-border-top-colors:#000 #fff #000;
+    -moz-border-right-colors:#000 #fff #000;
+    -moz-border-bottom-colors:#000 #fff #000;
+    -moz-border-left-colors:#000 #fff #000;
+}
+
+.double-border3{
+	border-width:3px;
+	border-style:solid;
+	-moz-border-top-colors:#000 #aaa #000;
+	-moz-border-right-colors:#000 #aaa #000;
+	-moz-border-bottom-colors:#000 #aaa #000;
+	-moz-border-left-colors:#000 #aaa #000;
+	background-color:#aaa;
+}
+.double-border4{
+	border-width:3px;
+	border-style:solid;
+	-moz-border-top-colors:#000 #fff #000;
+	-moz-border-right-colors:#000 #fff #000;
+	-moz-border-bottom-colors:#000 #fff #000;
+	-moz-border-left-colors:#000 #fff #000;
+	background-color:#aaa;
+}
+.double-border5{
+	border-width:3px;
+	border-style:solid;
+	-moz-border-top-colors:#000 #fff #f00;
+	-moz-border-right-colors:#000 #fff #f00;
+	-moz-border-bottom-colors:#000 #fff #f00;
+	-moz-border-left-colors:#000 #fff #f00;
+}
+.double-border6{
+	border-width:3px;
+	border-style:solid;
+	-moz-border-top-colors:#000 #f00 #000;
+	-moz-border-right-colors:#000 #f00 #000;
+	-moz-border-bottom-colors:#000 #f00 #000;
+	-moz-border-left-colors:#000 #f00 #000;
+}
+.double-border7{
+	border-width:2px;
+	border-style:solid;
+	-moz-border-top-colors:#000 #fff;
+	-moz-border-right-colors:#000 #fff;
+	-moz-border-bottom-colors:#000 #fff;
+	-moz-border-left-colors:#000 #fff;
+	background-color:#aaa;
+}
+.double-border8{
+	height:100px;
+	border-width:2px;
+	border-style:solid;
+	-moz-border-top-colors:#000 #fff;
+	-moz-border-right-colors:#000 #fff;
+	-moz-border-bottom-colors:#000 #fff;
+	-moz-border-left-colors:#000 #fff;
+	background:-moz-linear-gradient(50% 0,#888,#fff);
+	background:-webkit-gradient(linear,50% 0,50% 100%,from(#888),to(#fff));
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>double border双线框效果</h1>
+	<h3>双线框(border-style方式)：<small>border-style:double</small></h3>
+    
+    <div class="demo">
+        <h3>现代浏览器均支持：</h3>
+        <div class="box double-border">
+<pre class="inblock">
+.double-border{
+    border:3px double #000;
+}
+</pre>
+        </div>
+    </div>
+
+    <h3>双线框（border-colors方式）：<small>border-colors/-moz-border-colors</small></h3>
+    <div class="demo">
+        <p>以下的不同双线框实现<b>仅Firefox支持</b>，其它浏览器暂不支持（不含渐变色的实现）</p>
+        <div class="box double-border2">
+<pre class="inblock">
+.double-border2{
+    border-width:3px;
+    border-style:solid;
+    /* For Firefox3.6+ */
+    -moz-border-top-colors:#000 #fff #000;
+    -moz-border-right-colors:#000 #fff #000;
+    -moz-border-bottom-colors:#000 #fff #000;
+    -moz-border-left-colors:#000 #fff #000;
+}
+</pre>
+        </div>
+    </div>
+
+    <h2>border-colors方式双线框的一些常规效果：</h2>
+    <div class="demo">
+<h3>Figure 2：</h3>
+<div class="box double-border3">double border</div>
+<h3>Figure 3：</h3>
+<div class="box double-border4">double border</div>
+<h3>Figure 4：</h3>
+<div class="box double-border5">double border</div>
+<h3>Figure 5：</h3>
+<div class="box double-border6">double border</div>
+<h3>Figure 6：</h3>
+<div class="box double-border7">double border</div>
+<h3>Figure 7：</h3>
+<div class="box double-border8">double border</div>
+    </div>
+
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

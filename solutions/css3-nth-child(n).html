@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 :nth-child(n)</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+.box{padding:10px;}
+
+.list li:nth-child(1){
+    color:#f00;
+}
+
+
+.list2{
+    padding:1px;
+    border:1px solid #ddd;
+}
+.list2 li{
+    padding:5px 8px;
+    background-color:#ddd;
+}
+.list2 li:nth-child(2n){
+    background-color:#bbb;
+}
+
+
+
+
+.square{
+    display:inline-block;
+    overflow:hidden;
+	*display:inline;
+    *zoom:1;
+    padding-bottom:1px;
+    border:1px solid #ddd;
+}
+.square li{
+    float:left;
+    width:90px;
+    height:90px;
+    margin:1px 0 0 1px;
+    line-height:90px;
+    text-align:center;
+}
+.square li:nth-child(4n+1){
+    clear:left;
+    background-color:#999;
+}
+.square li:nth-child(4n+2){
+    background-color:#aaa;
+}
+.square li:nth-child(4n+3){
+    background-color:#ccc;
+}
+.square li:nth-child(4n+4){
+    background-color:#eee;
+}
+
+/* 小扩展--每横每竖和相等 */
+[class^="p"]{
+    position:relative;
+	z-index:9;
+	z-index-1;
+	-moz-transition: 1s;
+    -o-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.square:hover [class^="p"]{
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+    -webkit-transition: 1.5s;
+	transition: 1.5s;
+}
+.square:hover p6,
+.square:hover p7,
+.square:hover p10,
+.square:hover p11 {
+    z-index:10;
+}
+
+.square:hover p1,
+.square:hover p3,
+.square:hover p13,
+.square:hover p16 {
+    z-index:11;
+}
+.p1,p4,.p13,p16{
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.square:hover .p1,.square:hover .p4,.square:hover .p13,.square:hover .p16{
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+    -webkit-transition: 1.5s;
+	transition: 1.5s;
+}
+
+.square:hover .p1,.square:hover .p13{
+	left:273px;
+	background-color:#eee;
+}
+.square:hover .p4,.square:hover .p16{
+	left:-273px;
+	background-color:#999;
+}
+.square:hover .p1,.square:hover .p4{
+    top:273px;
+}
+.square:hover .p13,.square:hover .p16{
+    top:-273px;
+}
+
+.square:hover .p6,.square:hover .p10{
+	left:91px;
+	background-color:#ccc;
+}
+.square:hover .p7,.square:hover .p11{
+	left:-91px;
+	background-color:#aaa;
+}
+.square:hover .p6,.square:hover .p7{
+	top:91px;
+}
+.square:hover .p10,.square:hover .p11{
+	top:-91px;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 :nth-child(n)</h1>
+	<p class="browser">浏览器参照基准：IE9+, Firefox4+, Chrome5+, Safari5+, Opera10.53+ </p>
+	<p>语法：E:nth-child(n){ sRules }  匹配父元素索引为n的子元素E</p>
+	<h3>:nth-child(n) 让你匹配到父元素的任一子元素：</h3>
+    <p>解决方案描述</p>
+    
+    <div class="demo">
+        <ul class="list">
+		    <li>如果我是红色，说明选择到了我，你的浏览器还颇为先进</li>
+		    <li>落后的浏览器</li>
+		    <li>落后的浏览器</li>
+		    <li>落后的浏览器</li>
+		</ul>
+<pre class="inblock">
+.list li:nth-child(1){
+    color:#f00;
+}
+</pre>
+    <p>除lte IE8浏览器外，你都能看到第一个li被匹配到，且文本为红色；</p>
+    </div>
+    <h3>重点：匹配到的是父元素的子元素：</h3>
+<pre class="prettyprint linenums">
+&lt;div class="demo"&gt;
+    &lt;/h3&gt;选取 .demo 第一个子元素 p &lt;/h3&gt;
+	&lt;p&gt;如果你以为我会被选中变红，那你就猜错了&lt;/p&gt;
+	&lt;p&gt;落后的浏览器&lt;/p&gt;
+	&lt;p&gt;落后的浏览器...
+&lt;/div&gt;
+
+.demo p:nth-child(1){
+	color:#f00;
+}
+
+上述代码是不是让你感觉第一p元素会被匹配到？如果你真这么想，那你就真的错了，这里没有任何一个元素会被匹配到。
+将其改为 .demo p:nth-child(2) 你会发现第一个p才被选中变红，why? 
+</pre>
+    <p>我们把p tag从选择器中去除，你会发现第一个p同样被选中变红。貌似这个才是能符合我们正常思维的，因为第1个p是 .demo 的第二个子元素；也就是说在本 DEMO 中 <code>.demo p:nth-child(2)</code> 与 <code>.demo :nth-child(2)</code> 是等价的；</p>
+	<h4> 你觉得这难理解么？</h4>
+	<p>CSS选择器是从右到左查询的，我猜你已经知道了这个。<code>E:nth-child(n)</code> 表示的是匹配父元素第2个子元素，如果第2个子元素正好是E，则被匹配到；</p>
+    <p>上例中的 <code>.demo :nth-child(2)</code> 表示直接选择 .demo 第2个子元素，不论这个子元素是任何标签，都将被匹配到；(加了p后，就是匹配第二个元素且为p标签)</p>
+
+    <h2>:nth-child(n) 实现奇偶间隔背景色效果</h2>
+    <div class="demo">
+        <ul class="list2 none">
+            <li>CSS3伪类 :nth-child(n) 实现的奇偶间隔背景色效果</li>
+            <li>CSS3伪类 :nth-child(n) 实现的奇偶间隔背景色效果</li>
+            <li>CSS3伪类 :nth-child(n) 实现的奇偶间隔背景色效果</li>
+            <li>CSS3伪类 :nth-child(n) 实现的奇偶间隔背景色效果</li>
+            <li>CSS3伪类 :nth-child(n) 实现的奇偶间隔背景色效果</li>
+        </ul>
+	</div>
+<pre class="prettyprint linenums">
+.list2{
+    padding:1px;
+    border:1px solid #ddd;
+}
+.list2 li{
+    padding:5px 8px;
+    background-color:#ddd;
+}
+.list2 li:nth-child(2n){
+    background-color:#bbb;
+}
+</pre>
+    
+    <p>确实，:nth-child(n)，这个 n 不仅可以试一个具体的数字索引，也可以作为一个乘法的因子，比如本例中的 2n 不论这个 n 是多少，始终代表是的一个偶数，所以实现奇偶间隔真是轻而易举；</p>
+    
+	<p>也可以 n+1 这样子，你是不是会更兴奋？下面的例子你可以看到 n+1 的使用场景。</p>
+    <div class="demo tc">
+	    <h3>我想每个显示4个方块，并且每列的背景色都不相同？</h3>
+        <ul class="square none">
+            <li class="p1">1</li>
+            <li class="p2">2</li>
+            <li class="p3">3</li>
+            <li class="p4">4</li>
+            <li class="p5">5</li>
+            <li class="p6">6</li>
+            <li class="p7">7</li>
+            <li class="p8">8</li>
+            <li class="p9">9</li>
+            <li class="p10">10</li>
+            <li class="p11">11</li>
+            <li class="p12">12</li>
+            <li class="p13">13</li>
+            <li class="p14">14</li>
+            <li class="p15">15</li>
+            <li class="p16">16</li>
+		</ul>   
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <p>相信你能拓展更多的使用场景和好玩的实例，Good Luck!</p>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>
