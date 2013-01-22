@@ -33,6 +33,15 @@
     float:left;display:inline;margin-right:20px;width:auto;height:auto;border:1px solid #bbb;padding:10px; margin-bottom:30px;
 }
 
+.box-shadow{
+     box-shadow:0px 0px 10px 10px green;
+}
+.box-shadow-inset{
+     box-shadow:0px 0px 10px 10px green inset;
+}
+.test li{margin:10px 20px;width:100px;height:94px;padding:5px;border:1px solid red}
+
+
 </style>
 </head>
 <body>
@@ -120,13 +129,6 @@
 </pre>
     
 	<div class="demo">
-	    <h3>文本框阴影效果</h3>
-    </div>
-<pre class="prettyprint linenums">
-
-</pre>
-    
-	<div class="demo">
 	    <h3>凹陷阴影效果：</h3>
 		<div class="shadow-cave with-image"><img src="images/girl.jpg" width="500" alt="The cave box shadow demo"></div>
 		<div class="box shadow-cave">
@@ -159,7 +161,22 @@
 }
 </pre>
 
-    <h3>问题及注意事项：</h3>
+    <h3>box-shadow阴影的应用限制：</h3>
+	<ul>
+		<li>box-shadow内阴影无法遮住图片</li>
+	</ul>
+	<div class="demo">
+	    <h3>图片上无法实现box-shadow内阴影 <small>外层盒子的内阴影也只能在图片的下面，无法遮住图片</small></h3>
+		<ul class="test hor">
+		    <li title="li:box-shadow内阴影" class="box-shadow-inset"></li>
+		    <li title="li:box-shadow内阴影" class="box-shadow-inset"><img src="images/shahuhu.jpg" width="100"></li>
+			<li title="img:box-shadow内阴影"><img class="box-shadow-inset" src="images/shahuhu.jpg" width="100"></li>
+		    <li title="li:box-shadow外阴影" class="box-shadow"></li>
+			<li title="img:box-shadow外阴影"><img class="box-shadow" src="images/shahuhu.jpg" width="100"></li>
+		</ul>
+		
+    </div>
+	
     <p>更多：<a href="css3-box-shadow-effect.html">阴影特效</a></p>
     
 </div>
