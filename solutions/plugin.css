@@ -131,7 +131,7 @@
 
  */
 .mtips,.tips-ico,span.tips,.alert-ico{display:inline-block;*display:inline;*zoom:1;}
-.mtips,.tips-ico,.alert-ico{ background:url(/labs/lvmama/img/ico-combo.png) -1000px -1000px no-repeat; }
+.mtips,.tips-ico,.alert-ico{ background:url(img/icon-alert.png) -1000px -1000px no-repeat; }
 
 /* tips */
 .mtips,.tips .tips-ico{ width:14px; height:14px; margin-right:5px; background-position:0 -34px}
