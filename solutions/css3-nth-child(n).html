@@ -226,7 +226,27 @@
 		</ul>   
     </div>
 <pre class="prettyprint linenums">
-
+.square li{
+    float:left;
+    width:90px;
+    height:90px;
+    margin:1px 0 0 1px;
+    line-height:90px;
+    text-align:center;
+}
+.square li:nth-child(4n+1){
+    clear:left;
+    background-color:#999;
+}
+.square li:nth-child(4n+2){
+    background-color:#aaa;
+}
+.square li:nth-child(4n+3){
+    background-color:#ccc;
+}
+.square li:nth-child(4n+4){
+    background-color:#eee;
+}
 </pre>
     <p>相信你能拓展更多的使用场景和好玩的实例，Good Luck!</p>
     <h3>问题及注意事项：</h3>

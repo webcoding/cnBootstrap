@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 border-colors 多组边框色</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+.box{padding:10px;}
+
+.border-colors{
+    border-width:6px;
+    border-style:solid;
+    /* For Firefox3.6+ */
+    -moz-border-top-colors:#000 #fff #999 #aaa #ccc #eee;
+    -moz-border-right-colors:#000 #fff #999 #aaa #ccc #eee;
+    -moz-border-bottom-colors:#000 #fff #999 #aaa #ccc #eee;
+    -moz-border-left-colors:#000 #fff #999 #aaa #ccc #eee;
+}
+
+.border-colors2{
+    border-width:10px;
+    border-style:solid;
+    /* For Firefox3.6+ */
+    -moz-border-top-colors:#100 #300 #600 #800 #900 #a00; 
+    -moz-border-right-colors:#100 #300 #600 #800 #900 #a00;
+    -moz-border-bottom-colors:#100 #300 #600 #800 #900 #a00;
+    -moz-border-left-colors:#100 #300 #600 #800 #900 #a00;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>border-colors 多组边框色: <small>现仅Firefox支持</small></h1>
+	<p class="browser">浏览器参照基准：Firefox3.6+, 其他浏览器暂不支持, IE系列不做参考</p>
+    <h3>多重边框色(常规)：<small>border-colors/-moz-border-colors</small></h3>
+    <div class="demo">
+        <p>如border宽为(n)px，则最多可以设置n组边框色，每组边框色为1px</p>
+        <div class="box border-colors">
+<pre class="inblock">
+.border-colors{
+    border-width:6px;
+    border-style:solid;
+    /* For Firefox3.6+ 需要分开写*/
+    -moz-border-top-colors:#000 #fff #999 #aaa #ccc #eee;
+    -moz-border-right-colors:#000 #fff #999 #aaa #ccc #eee;
+    -moz-border-bottom-colors:#000 #fff #999 #aaa #ccc #eee;
+    -moz-border-left-colors:#000 #fff #999 #aaa #ccc #eee;
+}
+</pre>
+		</div>
+    </div>
+    <h3>多重边框色(非常规-边框为10px，却只设置了6组边框颜色)：<small>border-colors/-moz-border-colors</small></h3>
+    <div class="demo">
+        <p>如border宽为10px，却只设置了6组边框色，那么最后一组边框色将渲染剩余的宽度</p>
+        <div class="box border-colors2">
+<pre class="inblock">
+.border-colors2{
+    border-width:10px;
+    border-style:solid;
+    /* For Firefox3.6+ */
+    -moz-border-top-colors:#100 #300 #600 #800 #900 #a00; 
+    -moz-border-right-colors:#100 #300 #600 #800 #900 #a00;
+    -moz-border-bottom-colors:#100 #300 #600 #800 #900 #a00;
+    -moz-border-left-colors:#100 #300 #600 #800 #900 #a00;
+}
+</pre>
+		</div>
+    </div>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

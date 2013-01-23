@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 transition 动画效果</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.small{ width:410px; height:80px; margin:auto;}
+.small li{
+    width:50px;
+	height:50px;
+	background:rgba(0,153,204,1);
+	float:left;
+	margin:15px 15px;
+    display:inline-block;
+	line-height:65px;
+	-webkit-transition:all .3s linear;
+    border-radius:90px;
+	color:#FFF;
+}
+.small li:hover{
+    -webkit-transform-style:preserve-3d;
+    -webkit-transform:rotate(360deg) scale(1.5,1.5) translateX(2px);
+	z-index:5;
+    border-radius:0px;
+	border:2px solid rgba(153,153,153,.5);
+    background:rgba(153,153,153,1);
+	background:rgba(204,204,204,.5);
+    color:rgba(0,102,204,1);
+}
+.small [data-icon]:before{ font-size:30px;}
+.big [data-icon]:before{ font-size:80px;} 
+.big{ width:360px; margin:20px auto 0; }
+.big li{ 
+    width:100px;
+    height:100px;
+    background:rgba(0,153,204,1); 
+    float:left;
+    margin:10px;           
+    position:relative;
+    padding:20px 0 0 0;
+    -webkit-transition:all .8s ease;
+    cursor:pointer;
+    -webkit-transform-style:preserve-3d;
+}
+.big li:hover span{
+    width:100px; 
+    height:20px; 
+    display:block; 
+    position:absolute;
+    top:10px; background:rgba(153,153,153,.8);
+    color:rgba(102,102,102,1);
+    font:bold 1.2em/20px Arial, Helvetica, sans-serif;
+}
+.big li:hover{
+    background:rgba(204,204,204,.5);
+    color:rgba(255,102,0,1);
+    -webkit-transform:scale(1.5) perspective(500px);
+    z-index:5;
+}
+span{width:100px; height:20px; display:none; -webkit-font-smoothing: antialiased;}
+
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 transition 动画效果</h1>
+    <p>利用css巧妙的实现超炫的动画效果</p>
+    
+    <div class="demo">
+        <ul class="small none"> 
+            <li data-icon="&#xe004;"></li>
+            <li data-icon="&#xe003;"></li>
+            <li data-icon="&#xe00e;"></li>
+            <li data-icon="&#xe016;"></li>
+            <li data-icon="&#xe00d;"></li>
+        </ul>
+        <ul class="big none">
+            <li data-icon="&#xe007;"><span>Chrome</span></li>
+            <li data-icon="&#xe008;"><span>FoxFire</span></li>
+            <li data-icon="&#xe009;"><span>IE</span></li>
+            <li data-icon="&#xe00a;"><span>Opera</span></li>
+            <li data-icon="&#xe011;"><span>Google+</span></li>
+            <li data-icon="&#xe00f;"><span>FaceBook</span></li>
+        </ul>
+        
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

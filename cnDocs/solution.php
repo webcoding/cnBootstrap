@@ -71,7 +71,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt="" ><h4>border 探索</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float.html"><img src="../solutions/img/clear-float.png" alt="" ><h4>清除浮动</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rgba-opacity.html"><img src="../solutions/img/rgba-opacity.png" alt="" ><h4>RGBA 与 背景透明</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/double-border.html"><img src="../solutions/img/default.png" alt="" ><h4>double border 双线框</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/double-border.html"><img src="../solutions/img/double-border.png" alt="" ><h4>double border 双线框</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
@@ -103,19 +103,18 @@
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow-effect.html"><img src="../solutions/img/css3-box-shadow.jpg" alt="CSS3 阴影特效" ><h4>CSS3 阴影特效</h4></a></li>
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-stroke-gradient-text.html"><img src="../solutions/img/css3-stroke-gradient-text.jpg" alt="CSS3 渐变字特效" ><h4>CSS3 渐变字特效</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-radius.html"><img src="../solutions/img/default.png" alt="" ><h4>border-radius 圆角</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-colors.html"><img src="../solutions/img/default.png" alt="" ><h4>border-colors 多组边框色</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-double-border.html"><img src="../solutions/img/default.png" alt="" ><h4>double border 双线框效果</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-colors.html"><img src="../solutions/img/border-colors.png" alt="" ><h4>border-colors 多组边框色</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-border-image.html"><img src="../solutions/img/default.png" alt="" ><h4>border-image 边框图片</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-shadow.html"><img src="../solutions/img/box-shadow.png" alt="" ><h4>box-shadow 阴影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-clip.html"><img src="../solutions/img/background-clip.jpg" alt="" ><h4>background-clip 背景裁剪</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-origin.html"><img src="../solutions/img/background-origin.jpg" alt="" ><h4>background-origin 背景位置</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-size.html"><img src="../solutions/img/default.png" alt="" ><h4>背景图尺寸</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-size.html"><img src="../solutions/img/background-size.png" alt="" ><h4>背景图尺寸</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-background-image.html"><img src="../solutions/img/default.png" alt="" ><h4>多组背景图</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-shadow.html"><img src="../solutions/img/text-shadow.png" alt="" ><h4>text-shadow 文字阴影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-box-reflect.html"><img src="../solutions/img/default.png" alt="" ><h4>box-reflect 倒影</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-stroke.html"><img src="../solutions/img/text-stroke.png" alt="" ><h4>text-stroke 文字描边</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-fill-color.html"><img src="../solutions/img/default.png" alt="" ><h4>text-fill-color 文字填充色</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-nth-child(n).html"><img src="../solutions/img/default.png" alt="" ><h4>nth-child(n)</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-nth-child(n).html"><img src="../solutions/img/nth-child(n).png" alt="" ><h4>nth-child(n)</h4></a></li>
 			
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-btn"><img src="../solutions/img/default.png" alt="" ><h4>CSS3按钮</h4></a></li>

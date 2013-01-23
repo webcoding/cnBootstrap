@@ -613,7 +613,7 @@ div.as-rc, p.as-rc, h2.as-rc, h3.as-rc, h4.as-rc, h5.as-rc, h6.as-rc, ul.as-rc, 
 .as-file{
     position:relative;
     display:inline-block;
-	*display:inline;
+    *display:inline;
     *zoom:1;
     cursor:pointer;
     overflow:hidden;

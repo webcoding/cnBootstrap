@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 background-size 背景图尺寸</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.demo{background:#fff;}
+.box{padding:20px;}
+.with-image{
+    background:#eee url(images/m5.jpg) no-repeat;
+	border:1px solid #ccc;
+}
+.background-size-resize-repeat{
+    background:#eee url(images/m5.jpg) repeat-x;
+    background-size:150px 100%;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>background-size 背景图尺寸</h1>
+	<p class="browser">浏览器参照基准：IE9.0+, Firefox3.6+, Chrome5+, Safari5+, Opera11.50+ </p>
+    <p class="note"><strong>语法：</strong>background-size:[length|percentage|auto]{1,2}|cover|contain  用于设置背景图片的大小<br>
+	　　　有2个可选值（分别指定背景图的width和height），如果只指定1个值的，则第2个值默认为auto（即等比缩放；特定值cover和contain除外）</p>
+	<h4>原图</h4>
+	<p><img src="images/m5.jpg" width="90" height="90"></p>
+    <div class="demo">
+	    <h3>背景图尺寸（数值表示方式）：</h3>
+        <div class="box with-image" style="background-size:150px 120px;">
+<pre class="inblock">
+.background-size{
+    background-size:150px 120px;
+}
+</pre>
+        </div>
+	    <h3>背景图尺寸（百分比表示方式）：</h3>
+        <div class="box with-image" style="background-size:50% 80%;">
+<pre class="inblock">
+.background-size{
+    background-size:50% 80%;
+}
+</pre>
+        </div>
+	    <h3>背景图尺寸（等比扩展图片来填满元素，即cover值）：</h3>
+        <div class="box with-image" style="background-size:cover;">
+<pre class="inblock">
+.background-size{
+    background-size:cover;
+}
+</pre>
+        </div>
+		<p>background-size的cover特定值会保持图像本身的宽高比例，将图片缩放到正好完全覆盖定义背景的区域。</p>
+	    <h3>背景图尺寸（等比缩小图片来适应元素的尺寸，即contain值）：</h3>
+        <div class="box with-image" style="background-size:contain;">
+<pre class="inblock">
+.background-size{
+    background-size:contain;
+}
+</pre>
+        </div>
+	    <h3>背景图尺寸（以图片自身大小来填充元素，即auto值）：</h3>
+        <div class="box with-image" style="background-size:auto;">
+<pre class="inblock">
+.background-size{
+    background-size:auto;
+}
+</pre>
+        </div>
+	    <h3>背景图尺寸（背景图自适应容器大小，宽高100%）：</h3>
+        <div class="box with-image" style="background-size:100% 100%;">
+<pre class="inblock">
+.background-size{
+    background-size:100% 100%;
+}
+</pre>
+        </div>
+		<p>你可以任意调整示例中容器的宽高，用以测试背景图是否会随着容器的大小变化而变化</p>
+	    <h3>background-size 设置背景图大小与平铺：</h3>
+        <div class="box background-size-resize-repeat">
+<pre class="inblock">
+.background-size-resize-repeat{
+    background:#eee url(images/m5.jpg) repeat-x;
+    background-size:150px 100%;
+}
+</pre>
+        </div>
+
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+</body>
+</html>
