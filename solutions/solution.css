@@ -88,7 +88,8 @@ body{padding-bottom:30px;}
 	 -moz-border-radius: 4px 0 4px 0;
 		  border-radius: 4px 0 4px 0;
 }
-.plugin{background:#fff}
+.plugin,.white-demo{background:#fff}
+
 .dark-demo{background: url(images/low_contrast_linen.png) !important;}
 .dark-demo::after{background-color: #666;border: 1px solid #888;color: #fff;}
 .black-demo{background:#000 !important;color:#fff}

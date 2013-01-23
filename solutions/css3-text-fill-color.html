@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 text-fill-color 文字填充色</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.box{padding:10px;}
+
+.text-fill-color{
+    -webkit-text-fill-color:#f00;
+    color:#000;
+}
+
+.box p{
+    font-size: 50px;
+	line-height:1;
+	margin:10px 0;
+	font-weight:bold;
+}
+.text-fill-color2{
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke:1px #000;
+}
+.text-fill-color3{
+    background-image:-webkit-linear-gradient(#eee,#000);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.text-fill-color4{
+    background-image:-webkit-linear-gradient(#eee,#000);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke:1px transparent;
+}
+.text-fill-color5{
+    text-fill-color:#f00;
+    color:#000;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>text-fill-color 文字填充色</h1>
+	<p class="browser">浏览器参照基准：Webkit Only </p>
+    <h3>text-fill-color 会覆盖color所定义的字体颜色 <small>无视先后顺序</small></h3>
+    <div class="demo">
+        <p class="text-fill-color">如果你的浏览器支持text-fill-color，将看到我是红色</p>
+    </div>
+<pre class="prettyprint linenums">
+.text-fill-color{
+    -webkit-text-fill-color:#f00;
+    color:#000;
+}
+在webkit下你将看到红色的文字
+</pre>
+    <h3>text-fill-color 打造镂空文字：</h3>
+    <div class="demo">
+	    <div class="box">
+            <p class="text-fill-color2">未定义text-stroke-color的文字</p>
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+.text-fill-color2{
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke:1px #000;
+}
+</pre>
+    <h3>text-stroke-color 透明值让文字更柔和：</h3>
+    <div class="demo">
+	    <h3>效果1：</h3>
+	    <div class="box">
+            <p class="text-fill-color3">Gradient图像填充的文字</p>
+		</div>
+		<h3>效果2：</h3>
+	    <div class="box">
+            <p class="text-fill-color4">Gradient图像填充的文字</p>
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+.text-fill-color3{
+    background-image:-webkit-linear-gradient(#eee,#000);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.text-fill-color4{
+    background-image:-webkit-linear-gradient(#eee,#000);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke:1px transparent;
+}
+对比你会发现效果2中的文字比效果1更柔和一点
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

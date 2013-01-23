@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 box-reflect倒影</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.box{padding:10px;line-height:1.231;font-size:20px;}
+.demo .reflect h3{margin:20px 0 0;}
+.reflect{width:300px;margin:0 auto;}
+.reflect li{text-align:center}
+.reflect img{vertical-align:middle;border-radius:10px;width:250px;}
+.reflect .above img{margin-top:320px;-webkit-box-reflect:above;}
+.reflect .below img{margin-bottom:320px;-webkit-box-reflect:below;}
+.reflect .left img{-webkit-box-reflect:left;}
+.reflect .right img{-webkit-box-reflect:right;}
+.app-box{text-align:center}
+.app-box img{
+    display:inline-block;
+    width:200px;
+    margin:10px 15px 150px;
+    -webkit-box-reflect:below 5px -webkit-linear-gradient(transparent,transparent 60%,rgba(0,0,0,.2));
+    padding:5px;
+    box-shadow:0 0 8px rgba(0,0,0,.4);
+    background:#fff;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .8s ease-in-out;
+    -o-transition:all .8s ease-in;
+    -ms-transition:all .8s ease-in;
+    transition:all .8s ease-in;
+}
+.app-box img:hover{
+    box-shadow:0 0 8px rgba(0,0,0,.3);
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    transform:scale(1.15);
+}
+
+article{
+    width:310px;
+    margin:30px auto;
+    padding:30px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-shadow:0 0 5px rgba(0,0,0,.3);
+    background:#eee;
+    text-align:left;
+}
+header{
+    zoom:1;
+    overflow:hidden;
+    padding-bottom:60px;
+    text-align:center;
+}
+article h1{
+    display:inline-block;
+    font-weight:bold;
+    font-size:58px;
+    margin:0;
+}
+h1,.content p{
+    -webkit-box-reflect:below 0 -webkit-linear-gradient(transparent,transparent 50%,rgba(255,255,255,.2));
+    line-height:1;
+}
+.content{
+    font-size:25px;
+}
+.content p{
+    margin-bottom:20px;
+}
+.content p:nth-child(2),.content p:nth-child(4){
+    text-indent:2em;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 box-reflect倒影</h1>
+	<p class="browser">浏览器参照基准：Webkit Only</p>
+    <p class="note"><strong>语法：</strong>box-reflect：none | &lt;direction&gt; &lt;offset&gt;? &lt;mask-box-image&gt;?</p>
+    
+    <div class="demo">
+        <p>如果你需要一个简单倒影，你可以这样做：</p>
+        <div class="box">
+		   <p style="-webkit-box-reflect: below;">简单的文字倒影</p>
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+.box-reflect{
+    -webkit-box-reflect: below;
+    box-reflect: below;
+}
+<strong>注意：</strong>设置倒影元素的padding是会影响倒影位置的
+</pre>
+    <div class="demo">
+        <p>&lt;offset&gt; 允许你定义倒影与元素之间的距离：</p>
+        <div class="box">
+		   <p style="-webkit-box-reflect: below 10px;">简单的文字倒影</p>
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+.box-reflect{
+    -webkit-box-reflect: below 10px;
+    box-reflect: below 10px;
+}
+</pre>
+    <div class="demo">
+        <p>&lt;mask-box-image&gt; 允许你用Gradient图像或image作为遮罩：</p>
+        <div class="box">
+		   <p style="-webkit-box-reflect:below 1px -webkit-linear-gradient(transparent,transparent 50%,rgba(0,0,0,.3));
+">简单的文字倒影</p>
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+.box-reflect{
+    -webkit-box-reflect:below 1px -webkit-linear-gradient(transparent,transparent 50%,rgba(0,0,0,.3));
+    box-reflect: below 1px linear-gradient(transparent,transparent 50%,rgba(0,0,0,.3));
+}
+</pre>
+    <h3>常规的图片倒影效果：</h3>
+    <div class="demo">
+        <h3 class="tc">倒影方向：</h3>
+        <ul class="reflect none">
+			<li class="above">
+				<h3>box-reflect:above</h3>
+				<img src="images/girl_400x500_1.jpg" alt="CSS3倒影效果：倒影在上边" />
+			</li>
+			<li class="below">
+				<h3>box-reflect:below</h3>
+				<img src="images/girl_400x500_2.jpg" alt="CSS3倒影效果：倒影在下边" />
+			</li>
+			<li class="left">
+				<h3>box-reflect:left</h3>
+				<img src="images/girl_400x500_3.jpg" alt="CSS3倒影效果：倒影在左边" />
+			</li>
+			<li class="right">
+				<h3>box-reflect:right</h3>
+				<img src="images/girl_400x500_4.jpg" alt="CSS3倒影效果：倒影在右边" />
+			</li>
+		</ul>
+    </div>
+<pre class="prettyprint linenums">
+-webkit-box-reflect:above;
+-webkit-box-reflect:below;
+-webkit-box-reflect:left;
+-webkit-box-reflect:right;
+分别对应上下左右
+</pre>
+    <div class="demo">
+        <h3 class="tc">图片与倒影之间有1像素间隔：</h3>
+        <ul class="reflect none">
+			<li class="below">
+				<h3>box-reflect:below 1px</h3>
+				<img src="images/girl_400x500_2.jpg" style="-webkit-box-reflect:below 1px;" alt="图片与倒影之间有1像素间隔" />
+			</li>
+		</ul>
+    </div>
+<pre class="prettyprint linenums">
+-webkit-box-reflect:below 1px;
+</pre>
+    <h3>应用级的图片倒影：</h3>
+    <div class="demo">
+        <div class="box app-box">
+            <img src="images/girl_400x500_1.jpg" alt="美女">
+            <img src="images/girl_400x500_3.jpg" alt="美女">
+            <img src="images/girl_400x500_4.jpg" alt="美女">
+            <img src="images/girl_400x500_5.jpg" alt="美女">
+            <img src="images/girl_400x500_6.jpg" alt="美女">
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+.app-box img{
+    display:inline-block;
+    width:200px;
+    margin:10px 15px 150px;
+    -webkit-box-reflect:below 5px -webkit-linear-gradient(transparent,transparent 60%,rgba(0,0,0,.2));
+    padding:5px;
+    box-shadow:0 0 8px rgba(0,0,0,.4);
+    background:#fff;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .8s ease-in-out;
+    -o-transition:all .8s ease-in;
+    -ms-transition:all .8s ease-in;
+    transition:all .8s ease-in;
+}
+.app-box img:hover{
+    box-shadow:0 0 8px rgba(0,0,0,.3);
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    transform:scale(1.15);
+}
+</pre>
+    <h3>文字倒影应用：</h3>
+    <div class="demo white-demo">
+        <article>
+            <header>
+                <h1>断章</h1>
+                <small>卞之琳</small>
+            </header>
+            <div class="content">
+                <p>你在桥上看风景</p>
+                <p>看风景的人在楼上看你</p>
+                <p>明月装饰了你的窗子</p>
+                <p>你装饰了别人的梦</p>
+            </div>
+        </article>
+    </div>
+<pre class="prettyprint linenums">
+h1,.content p{
+    -webkit-box-reflect:below 0 -webkit-linear-gradient(transparent,transparent 50%,rgba(255,255,255,.2));
+    line-height:1;
+}
+</pre>
+
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>
