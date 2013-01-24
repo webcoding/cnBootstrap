@@ -6,10 +6,34 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
-.box{padding:10px;border:1px solid #ccc;}
-.demo h3{margin-top:50px;}
+.demo{background:#fff;}
+.box{padding:10px;border:1px solid #ccc;line-height:1;}
 .block span{display:block}
 pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px;}
+
+.vertext{
+    width:20px;
+    font-size:20px;
+    word-wrap:break-word;
+}
+
+.vertext2{
+    width:40px;
+    font-size:40px;
+    word-wrap:break-word;
+    letter-spacing:20px;/* Set large letter-spacing as precaution */
+}
+
+.vertext3{
+    width: 1em;
+    font-size: 40px;
+    letter-spacing: 40px; /* arbitrary large letter-spacing for safety */
+    background:#CCC;
+}
+
+.pre{
+    white-space: pre;
+}
 </style>
 </head>
 <body>
@@ -18,7 +42,7 @@ pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px
 	<p>这是cherry在uecss.com里总结的文字纵排列方法，开头一段话很特别，摘来给大家看下：</p>
 	<blockquote>一次与携程网Lucky老师交流，才发现工作了三年的自己，其实功底一点都不扎实，所以从现在开始，认真恩考，认真总结，不但要知其然，更要知其所以然。再次感谢点醒执迷不悟的我的Lucky老师！
 	</blockquote>
-    <h2>使文字纵排列的几种方法：</h2>
+    <h2>使文字纵排列的几种方法：<small>与cherry的总结有改动</small></h2>
     <ol>
     	<li>&lt;br&gt; 标签</li>
     	<li>Static Wrapping</li>
@@ -28,97 +52,114 @@ pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px
     	<li>使用emS</li>
     	<li>Whitespace</li>
     </ol>
-    <div class="demo white-demo">
-	    <h3>&lt;br&gt; 标签 <small>这种方法没有说服力，不推荐使用</small></h3>
+    <div class="demo">
+	    <h3>&lt;br&gt; 标签</h3>
         <div class="box">
 		    文<br>
 			字<br>
 			纵<br>
 			排<br>
 		</div>
-        <h3>Static Wrapping <small>这种方法的弊端是，需要手工录入标签</small></h3>
+	</div>
+<pre class="prettyprint linenums">
+&lt;div class="box"&gt;
+    文&lt;br&gt;
+    字&lt;br&gt;
+    纵&lt;br&gt;
+    排&lt;br&gt;
+&lt;/div&gt;
+这种方法最易想到，也最常用
+</pre>
+	<div class="demo">
+        <h3>Static Wrapping</h3>
         <div class="box block">
 		    <span>文</span>
 			<span>字</span>
 			<span>纵</span>
 			<span>排</span>
 		</div>
-		<h3>用 JavaScript <small>此种方法与第二种方法原理是一样的，好处是用js代替手工添加span标签。</small></h3>
+		<h3>用 JavaScript</h3>
         <div id="J_vertext" class="box block">文字纵排</div>
-<pre class="inblock">
+	</div>
+<pre class="prettyprint linenums">
+&lt;div class="box block"&gt;
+    &lt;span&gt;文&lt;/span&gt;
+    &lt;span&gt;字&lt;/span&gt;
+    &lt;span&gt;纵&lt;/span&gt;
+    &lt;span&gt;排&lt;/span&gt;
+&lt;/div&gt;
+这种方法的弊端是，需要手工录入标签
+
+&lt;div id="J_vertext" class="box"&gt;文字纵排&lt;/div&gt;
+此种方法与前者原理一样，好处是用js代替手工添加span标签。
+
 var J_vertext=document.getElementById('J_vertext');
 J_vertext.innerHTML='&lt;span&gt;'+J_vertext.innerHTML.split('').join('&lt;/span&gt;&lt;span&gt;')+'&lt;/span&gt;';
 </pre>
-		<h4>尽管如此，还是有一些弊端：</h4>
-		<ul>
-			<li>当js失效的时候，会影响页面布局；</li>
-			<li>当然完美的解决方法是，尽可能用css;</li>
-		</ul>
-		<h3>给Container定个宽度 <small></small></h3>
-        <div class="box">
-		    文
-			字
-			纵
-			排
-<pre class="inblock">
-.box{
+    <h4>尽管如此，还是有一些弊端：</h4>
+	<ul>
+		<li>当js失效的时候，会影响页面布局；</li>
+		<li>当然完美的解决方法是，尽可能用css;</li>
+	</ul>
+
+	<div class="demo">
+		<h3>给Container定个宽度</h3>
+        <div class="box vertext">文字纵排</div>
+	</div>
+<pre class="prettyprint linenums">
+.vertext{
     width:20px;
     font-size:20px;
     word-wrap:break-word;
 }
+
+word-wrap:break-word的一部分是CSS3规格,并不是在所有的浏览器兼容。
 </pre>
-            <p>word-wrap:break-word的一部分是CSS3规格,并不是在所有的浏览器兼容。</p>
-            <p>如果把除第一个字母外的其它字母小写的话，就有点悲剧了，套用别人的一句话就是"it's too risky to play with pixel values."；</p>
-		</div>
-		<h3>使用letter-spacing <small></small></h3>
-        <div class="box">
-		    文
-			字
-			纵
-			排
-<pre class="inblock">
-.box{
-    width:50px;
-    font-size:50px;
+    <p>如果把除第一个字母外的其它字母小写的话，就有点悲剧了，套用别人的一句话就是"it's too risky to play with pixel values."；</p>
+	<div class="demo">
+		<h3>使用break-word;</h3>
+        <div class="box vertext2">文字纵排</div>
+	</div>
+<pre class="prettyprint linenums">
+.vertext2{
+    width:40px;
+    font-size:40px;
     word-wrap:break-word;
     letter-spacing:20px;/* Set large letter-spacing as precaution */
 }
+
+这种方法貌似很好，不过有用到一点css3了
 </pre>
-            <p>这种方法貌似很好，不过有用到一点css3了</p>
-		</div>
-        <h3>使用emS <small></small></h3>
-        <div class="box">
-		    文
-			字
-			纵
-			排
-<pre class="inblock">
-.box{
+	<div class="demo">
+        <h3>使用letter-spacing</h3>
+        <div class="box vertext3">文字纵排</div>
+	</div>
+<pre class="prettyprint linenums">
+.vertext3{
     width: 1em;
     font-size: 40px;
     letter-spacing: 40px; /* arbitrary large letter-spacing for safety */
     background:#CCC;
 }
+
+据我所知,到目前为止,这是最好的,最符合跨浏览器的解决方案。
 </pre>
-            <p>据我所知,到目前为止,这是最好的,最符合跨浏览器的解决方案。</p>
-		</div>
-        <h3>Whitespace<small></small></h3>
-        <div class="box">
-		    文
-			字
-			纵
-			排
-<pre class="inblock">
-.box{
-    white-space:pre;
-}
-</pre>
-            <p>不爽的是，我们需要在编辑里所文字纵向排列；</p>
-		</div>
+	<div class="demo">
+        <h3>white-space:pre;</h3>
+<div class="box pre">
+文
+字
+纵
+排
+</div>
         
     </div>
 <pre class="prettyprint linenums">
+.pre{
+    white-space:pre; /* 或 pre-wrap */
+}
 
+不爽的是，我们需要在编辑里所文字纵向排列且第一行不能换行并注意空格；
 </pre>
     <h3>扩展：</h3>
     <p>纵向排列解决了，可否做到垂直居中呢？拭目以待！</p>
@@ -126,7 +167,7 @@ J_vertext.innerHTML='&lt;span&gt;'+J_vertext.innerHTML.split('').join('&lt;/span
 </div>
 <script>
 var J_vertext=document.getElementById('J_vertext');
-J_vertext.innerHTML='<span>'+J_vertext.innerHTML.split('').join('</span><span>')+'</span>';
+J_vertext.innerHTML = '<span>'+J_vertext.innerHTML.split('').join('</span><span>')+'</span>';
 </script>
 </body>
 </html>
