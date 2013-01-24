@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文字纵向排列</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.box{padding:10px;border:1px solid #ccc;}
+.demo h3{margin-top:50px;}
+.block span{display:block}
+pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>文字纵向排列</h1>
+	<p>这是cherry在uecss.com里总结的文字纵排列方法，开头一段话很特别，摘来给大家看下：</p>
+	<blockquote>一次与携程网Lucky老师交流，才发现工作了三年的自己，其实功底一点都不扎实，所以从现在开始，认真恩考，认真总结，不但要知其然，更要知其所以然。再次感谢点醒执迷不悟的我的Lucky老师！
+	</blockquote>
+    <h2>使文字纵排列的几种方法：</h2>
+    <ol>
+    	<li>&lt;br&gt; 标签</li>
+    	<li>Static Wrapping</li>
+    	<li>用 JavaScript</li>
+    	<li>给Container定个宽度</li>
+    	<li>使用letter-spacing</li>
+    	<li>使用emS</li>
+    	<li>Whitespace</li>
+    </ol>
+    <div class="demo white-demo">
+	    <h3>&lt;br&gt; 标签 <small>这种方法没有说服力，不推荐使用</small></h3>
+        <div class="box">
+		    文<br>
+			字<br>
+			纵<br>
+			排<br>
+		</div>
+        <h3>Static Wrapping <small>这种方法的弊端是，需要手工录入标签</small></h3>
+        <div class="box block">
+		    <span>文</span>
+			<span>字</span>
+			<span>纵</span>
+			<span>排</span>
+		</div>
+		<h3>用 JavaScript <small>此种方法与第二种方法原理是一样的，好处是用js代替手工添加span标签。</small></h3>
+        <div id="J_vertext" class="box block">文字纵排</div>
+<pre class="inblock">
+var J_vertext=document.getElementById('J_vertext');
+J_vertext.innerHTML='&lt;span&gt;'+J_vertext.innerHTML.split('').join('&lt;/span&gt;&lt;span&gt;')+'&lt;/span&gt;';
+</pre>
+		<h4>尽管如此，还是有一些弊端：</h4>
+		<ul>
+			<li>当js失效的时候，会影响页面布局；</li>
+			<li>当然完美的解决方法是，尽可能用css;</li>
+		</ul>
+		<h3>给Container定个宽度 <small></small></h3>
+        <div class="box">
+		    文
+			字
+			纵
+			排
+<pre class="inblock">
+.box{
+    width:20px;
+    font-size:20px;
+    word-wrap:break-word;
+}
+</pre>
+            <p>word-wrap:break-word的一部分是CSS3规格,并不是在所有的浏览器兼容。</p>
+            <p>如果把除第一个字母外的其它字母小写的话，就有点悲剧了，套用别人的一句话就是"it's too risky to play with pixel values."；</p>
+		</div>
+		<h3>使用letter-spacing <small></small></h3>
+        <div class="box">
+		    文
+			字
+			纵
+			排
+<pre class="inblock">
+.box{
+    width:50px;
+    font-size:50px;
+    word-wrap:break-word;
+    letter-spacing:20px;/* Set large letter-spacing as precaution */
+}
+</pre>
+            <p>这种方法貌似很好，不过有用到一点css3了</p>
+		</div>
+        <h3>使用emS <small></small></h3>
+        <div class="box">
+		    文
+			字
+			纵
+			排
+<pre class="inblock">
+.box{
+    width: 1em;
+    font-size: 40px;
+    letter-spacing: 40px; /* arbitrary large letter-spacing for safety */
+    background:#CCC;
+}
+</pre>
+            <p>据我所知,到目前为止,这是最好的,最符合跨浏览器的解决方案。</p>
+		</div>
+        <h3>Whitespace<small></small></h3>
+        <div class="box">
+		    文
+			字
+			纵
+			排
+<pre class="inblock">
+.box{
+    white-space:pre;
+}
+</pre>
+            <p>不爽的是，我们需要在编辑里所文字纵向排列；</p>
+		</div>
+        
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>扩展：</h3>
+    <p>纵向排列解决了，可否做到垂直居中呢？拭目以待！</p>
+    
+</div>
+<script>
+var J_vertext=document.getElementById('J_vertext');
+J_vertext.innerHTML='<span>'+J_vertext.innerHTML.split('').join('</span><span>')+'</span>';
+</script>
+</body>
+</html>

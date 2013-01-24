@@ -34,7 +34,7 @@
 	================================================== -->
 	<section id="solutions">
 		
-		<h3>兼容解决方案 <small>头痛的问题，我们提前搞定</small></h3>
+		<h3>兼容解决方案 <small>认真思考，认真总结，不但要知其然，更要知其所以然。</small></h3>
 		<p><a href="solutions.html">solutions</a> 界面及缩略图设计参考：<a href="http://ued.taobao.com/blog/2011/12/%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E9%80%9F%E6%88%90/">界面设计速成</a></p>
 		<!-- 预添加简洁分类筛选 Todo -->
 		
