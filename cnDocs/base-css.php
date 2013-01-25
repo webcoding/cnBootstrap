@@ -791,8 +791,8 @@
 ...
 </pre>
                 <hr class="bs-docs-separator">
-                <h2>Supported table markup</h2>
-                <p>List of supported table HTML elements and how they should be used.</p>
+                <h2 title="Supported table markup">Supported table markup</h2>
+                <p title="List of supported table HTML elements and how they should be used.">List of supported table HTML elements and how they should be used.</p>
                 <table class="table table-bordered table-striped">
                     <colgroup>
                     <col class="span1">
@@ -890,28 +890,27 @@
                         <tr>
                             <th>垂直表单 (默认)</th>
                             <td><code>.form-vertical</code> <span class="muted">(可选)</span></td>
-                            <td>Stacked, left-aligned labels over controls</td>
+                            <td title="Stacked, left-aligned labels over controls">堆叠式的，所有控件的标签文字都左对齐</td>
                         </tr>
                         <tr>
                             <th>内联表单</th>
                             <td><code>.form-inline</code></td>
-                            <td>居左的label和内联的元素组成的简洁的表单</td>
+                            <td>标签文字左对齐，控件以inline-block紧凑形式存在</td>
                         </tr>
                         <tr>
                             <th>搜索表单</th>
                             <td><code>.form-search</code></td>
-                            <td>精致的圆形边框搜索表单</td>
+                            <td>经典的搜索美化方案，精致圆边文本框</td>
                         </tr>
                         <tr>
                             <th>水平表单</th>
                             <td><code>.form-horizontal</code></td>
-                            <td>居左但内容右对齐的label和控件在一行</td>
+                            <td>左浮动，标签与其对应的控件居于同一行，标签文字右对齐</td>
                         </tr>
                     </tbody>
                 </table>
-                <h2>Default styles <small>基础表单</small></h2>
-                <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
-                <p>仅使用表单元素，没有额外的标签</p>
+                <h2 title="Default styles">基本表单</h2>
+                <p title="Individual form controls receive styling, but without any required base class on the &lt;form&gt; or large changes in markup. Results in stacked, left-aligned labels on top of form controls.">简洁灵活的表单默认样式，只使用表单控件，无须额外标记。</p>
                 <form class="bs-docs-example">
 					<fieldset>
 	                    <legend>Legend</legend>
@@ -939,10 +938,11 @@
 &lt;/form&gt;
 </pre>
                 <hr class="bs-docs-separator">
-                <h2>Optional layouts</h2>
-                <p>Included with Bootstrap are three optional form layouts for common use cases.</p>
-                <h3>Search form</h3>
+                <h2 title="Optional layouts">表单布局选项</h2>
+                <p title="Included with Bootstrap are three optional form layouts for common use cases.">Bootstrap包含3种常用表单布局</p>
+                <h3 title="Search form">搜索表单</h3>
                 <p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
+				<p>在表单添加 <code>.form-search</code> 和 在 <code>&lt;input&gt;</code> 添加 <code>.search-query</code> 可为输入框提供一个额外的圆角.</p>
                 <form class="bs-docs-example form-search">
                     <input type="text" class="input-medium search-query">
                     <button type="submit" class="btn">Search</button>

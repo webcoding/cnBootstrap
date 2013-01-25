@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="solution.css">
 <style>
 .demo{background:#fff;}
-.box{padding:10px;border:1px solid #ccc;line-height:1;}
+.box{padding:10px;border:1px solid #ccc;line-height:1.1;}
 .block span{display:block}
 pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px;}
 
@@ -18,22 +18,26 @@ pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px
 }
 
 .vertext2{
-    width:40px;
-    font-size:40px;
+    width:20px;
+    font-size:20px;
     word-wrap:break-word;
     letter-spacing:20px;/* Set large letter-spacing as precaution */
 }
 
 .vertext3{
     width: 1em;
-    font-size: 40px;
-    letter-spacing: 40px; /* arbitrary large letter-spacing for safety */
+    font-size: 20px;
+    letter-spacing: 20px; /* arbitrary large letter-spacing for safety */
     background:#CCC;
 }
 
 .pre{
     white-space: pre;
 }
+
+.poetry{display:inline-block;*display:inline;*zoom:1;overflow:hidden;}
+.poetry p,.poetry h3{float:right;display:inline;margin:0;text-align:center}
+.poetry p{margin-left:10px;font-size:20px;}
 </style>
 </head>
 <body>
@@ -45,11 +49,11 @@ pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px
     <h2>使文字纵排列的几种方法：<small>与cherry的总结有改动</small></h2>
     <ol>
     	<li>&lt;br&gt; 标签</li>
-    	<li>Static Wrapping</li>
+    	<li>block每个字</li>
     	<li>用 JavaScript</li>
-    	<li>给Container定个宽度</li>
+    	<li>限制Container容器宽度</li>
+    	<li>使用break-word;</li>
     	<li>使用letter-spacing</li>
-    	<li>使用emS</li>
     	<li>Whitespace</li>
     </ol>
     <div class="demo">
@@ -71,7 +75,7 @@ pre.inblock{border:1px dashed #ccc; background:#fff; margin-top:10px;padding:5px
 这种方法最易想到，也最常用
 </pre>
 	<div class="demo">
-        <h3>Static Wrapping</h3>
+        <h3>block每个字</h3>
         <div class="box block">
 		    <span>文</span>
 			<span>字</span>
@@ -103,7 +107,7 @@ J_vertext.innerHTML='&lt;span&gt;'+J_vertext.innerHTML.split('').join('&lt;/span
 	</ul>
 
 	<div class="demo">
-		<h3>给Container定个宽度</h3>
+		<h3>限制Container容器宽度</h3>
         <div class="box vertext">文字纵排</div>
 	</div>
 <pre class="prettyprint linenums">
@@ -142,12 +146,11 @@ word-wrap:break-word的一部分是CSS3规格,并不是在所有的浏览器兼�
     background:#CCC;
 }
 
-据我所知,到目前为止,这是最好的,最符合跨浏览器的解决方案。
+不很好，遇到标点标准浏览器需要和文字中间要加空格才能正常显示(默认标点不会显示在一行的开头)，而IE直接无视标点符号了。
 </pre>
 	<div class="demo">
         <h3>white-space:pre;</h3>
-<div class="box pre">
-文
+<div class="box pre">文
 字
 纵
 排
@@ -159,12 +162,51 @@ word-wrap:break-word的一部分是CSS3规格,并不是在所有的浏览器兼�
     white-space:pre; /* 或 pre-wrap */
 }
 
-不爽的是，我们需要在编辑里所文字纵向排列且第一行不能换行并注意空格；
+不爽的是，我们需要在编辑里所文字纵向排列，编辑控制很不方便
 </pre>
+    
+	<div class="demo">
+	    <h3>纵向排列小应用，来首诗吧</h3>
+<div class="box poetry">
+<p>关<br>关<br>雎<br>鸠<br>，<br>在<br>河<br>之<br>洲</p>
+<p class="block"></span>窈</span><span>窕</span><span>淑</span><span>女</span><span>，</span><span>君</span><span>子</span><span>好</span><span>逑</span></p>
+<p class="vertext">参差荇菜，左右流之</p>
+<p class="vertext2">窈窕淑女，寤寐求之</p>
+<p class="vertext3">求之不得 ，寤寐思服</p>
+<p class="vertext">悠哉悠哉，辗转反侧</p>
+<p class="vertext">参差荇菜，左右采之</p>
+<p class="vertext">窈窕淑女，琴瑟友之</p>
+<p class="vertext">参差荇菜，左右芼之</p>
+<p class="vertext">窈窕淑女，钟鼓乐之</p>
+<h3 class="pre">
+
+
+
+
+
+
+|
+|
+诗
+经</h3>
+</div>
+    <h3>存在的问题</h3>
+    <ul>
+	    <li>IE下文字标点在一起letter-spacing方法直接无视标点符号了</li>
+	    <li>pre方法调整显示高度非常不方便</li>
+	    <li>letter-spacing属性设置不当，会导致选中状态遮住文字</li>
+	</ul>
+    <p class="note"><strong>最后小结：</strong>综上推荐使用&lt;br&gt;换行方法或限制容器宽度方法，简单便捷。</p>   
+    </div>
+
     <h3>扩展：</h3>
     <p>纵向排列解决了，可否做到垂直居中呢？拭目以待！</p>
     
 </div>
+
+
+
+
 <script>
 var J_vertext=document.getElementById('J_vertext');
 J_vertext.innerHTML = '<span>'+J_vertext.innerHTML.split('').join('</span><span>')+'</span>';

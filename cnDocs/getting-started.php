@@ -260,7 +260,7 @@ Oricode/
       <div class="page-header">
         <h1>接下来是什么？</h1>
       </div>
-      <p class="lead" title="Head to the docs for information, examples, and code snippets, or take the next leap and customize Bootstrap for any upcoming project.">去了解文档说明、实例以及代码片段，或者进行直接为即将开展的项目定制Bootstrap。</p>
+      <p class="lead" title="Head to the docs for information, examples, and code snippets, or take the next leap and customize Bootstrap for any upcoming project.">了解文档说明、实例以及代码片段，或者直接为即将开展的项目定制Bootstrap。</p>
       <a class="btn btn-large btn-primary" href="./scaffolding.php" >访问Bootstrap文档</a>
       <a class="btn btn-large" href="./customize.php" style="margin-left: 5px;" >定制Bootstrap</a>
     </section>

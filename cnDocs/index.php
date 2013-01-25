@@ -55,7 +55,7 @@
   <div class="marketing">
 
     <h1 title="Introducing Bootstrap.">Bootstrap简介</h1>
-    <p class="marketing-byline" title="Need reasons to love Bootstrap? Look no further.">爱上Bootstrap需要理由么？无需观望</p>
+    <p class="marketing-byline" title="Need reasons to love Bootstrap? Look no further.">爱上Bootstrap需要理由么？无需理由</p>
 
     <div class="row-fluid">
       <div class="span4">
@@ -66,12 +66,12 @@
       <div class="span4">
         <img src="assets/img/bs-docs-responsive-illustrations.png">
         <h2 title="Made for everyone.">适合于每一个人</h2>
-        <p title="Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via responsive CSS as well.">Bootstrap 不仅仅在主流浏览器表现卓越 (设置包括IE7), 并且通过 <a href="./scaffolding.php#responsive">响应式布局</a> 提供对平板和智能手机的支持。</p>
+        <p title="Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via responsive CSS as well.">Bootstrap 不仅在主流浏览器表现卓越(甚至包括IE7), 并通过 <a href="./scaffolding.php#responsive">响应式布局</a> 对平板和智能手机提供支持。</p>
       </div>
       <div class="span4">
         <img src="assets/img/bs-docs-bootstrap-features.png">
-        <h2 title="Packed with features.">功能便携</h2>
-        <p title="A 12-column responsive grid, dozens of components, JavaScript plugins, typography, form controls, and even a web-based Customizer to make Bootstrap your own.">12列的响应<a href="./scaffolding.php#grid">栅格布局</a>，众多的组件，<a href="./javascript.php">JavaScript插件</a>，排版，表格控件，甚至可以<a href="./customize.php">基于网络定制自己的Bootstrap</a>。</p>
+        <h2 title="Packed with features.">功能便携 应有尽有</h2>
+        <p title="A 12-column responsive grid, dozens of components, JavaScript plugins, typography, form controls, and even a web-based Customizer to make Bootstrap your own.">12列的响应<a href="./scaffolding.php#grid">栅格布局</a>，众多的组件，<a href="./javascript.php">JavaScript插件</a>，排版，表单控件，甚至可以根据需求<a href="./customize.php">定制自己的Bootstrap</a>。</p>
       </div>
     </div>
 

@@ -65,6 +65,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/divider.html"><img src="../solutions/img/default.png" alt="分割线"><h4>分割线</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/text-align-justify.html"><img src="../solutions/img/text-align-justify.png" alt="文本两端对齐"><h4>文本两端对齐</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis.html"><img src="../solutions/img/ellipsis.png" alt=""><h4>省略号</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/vertical-text.html"><img src="../solutions/img/vertical-text.png" alt=""><h4>文字纵向排列</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-cursor.html"><img src="../solutions/img/custom-cursor.jpg" alt="鼠标指针样式自定义"><h4>鼠标指针样式自定义</h4></a></li>
 			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位"><h4>geolocation 地理定位</h4></a></li>-->
 			
