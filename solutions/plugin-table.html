@@ -8,70 +8,68 @@
 <link rel="stylesheet" href="plugin.css">
 <style>
 
-
-/* 表格
- * 普通表格 xtable
- * 产品表格 ptable
- * 其他定制表格 xtable-custom
-**/
-/* 表格基础样式 */
-table,th,tr,td{vertical-align:middle; border:none}/* table-layout:fixed; 会导致表格不自动扩展宽度 */
-table {max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;}
-[class*="table"]{width:100%;}
-[class*="table"] th,[class*="table"] td{padding:4px 8px;line-height: 20px;vertical-align: middle;border-top:1px solid #ddd;}
-.table-line th{ border-top:0}
-.xtable {margin-bottom: 20px;}
-.xtable tr,.xtable td,.ui-table tr,.ui-table td{border:1px solid #ddd;}
-.xtable th{font-weight: bold;vertical-align: bottom;}
-/* 测试属性 */
-.xtable th,.xtable th:hover{background:#fff; border:none}
-.xtable tr:hover{background:#f5f5f5}
-
-.ui-table tbody tr:nth-child(odd) td,
-.ui-table tbody tr:nth-child(odd) th {background-color: #f9f9f9;}
-.ui-table tbody tr:hover td,
-.ui-table tbody tr:hover th {background-color: #f5f5f5;}
-
-/* 定制表格——产品列表订单 */
-.ptable{color:#555}
-.ptable{font-size:inherit;}
-.ptable th,.ptable td{ border:1px solid #dedede; padding:3px 8px;}
-.ptable td{border:1px solid #D4E7FF;} 
-.ptable .col-name{border-width:0 1px 1px 1px; border-style:solid; border-color:#d8619b #dcdcdc #dcdcdc #dcdcdc; background: url(http://pic.lvmama.com/img/mylvmama/lv-bgx.gif) #fff left top repeat-x;}
-.ptable th{height:29px; line-height:29px;text-align:center; padding:0 8px;color:#555;white-space:nowrap;border:none;}
-.ptable td{text-align:center;border-color:#ddd;}
-.ptable .product-name,.biz_order td{text-align:left;}
-.ptable .order-hd td{height:23px;}
-.ptable .sep-row{height:7px;}
-.ptable .sep-row td{border:none;}
-.ptable p{ margin:0;}
-
-.xcard th,.xcard td{ border-color:#b6d6ee}.xcard .order-hd{ background:#e6f6ff}
-.ptable .order-hd{color:#404040;}
-.ptable .close-order .order-hd,.ptable .success-order .order-hd{background:#f8f8f8;}
-.close-order td,.success-order td{border-color:#ddd;}
-.xcard .product-name-name{color:#08C}
-.success-order .product-name-name,.close-order .product-name-name{color:#333}
-.xcard .product-name-name:hover{color:#d38}
 </style>
 </head>
 <body>
 <div class="wrap">
     <h1>表格研究</h1>
-    <p>表格仍然是网页布局中不可获取的部分，现对表格进行深入研究，制定适应我们应用的表格样式，内置样式表中，避免重复开发定义</p>
+    <p>表格仍然是网页布局中不可或缺的部分，表格数据最佳选择就是使用表格来制作，表格在这方面有得天独厚的优势，这是其他标签所不能比拟的。</p>
+	<p>下面对表格进行深入研究，制定适用于我们的表格样式，并内置样式表中，避免重复开发定义，以提升效率。</p>
+	<h3>按最常见需求进行研究</h3>
     <ul>
-        <li>默认无边框表格（默认|<code>class="table-none"</code>）</li>
+        <li>默认表格无边框（默认 | class="table-none"）</li>
         <li>内置经典表格（信息表 <code>table</code> 单行表格 <code>table-line</code> 全宽表格 <code>table-full</code>）</li>
         <li>常用订单/产品表格（普通订单 <code>table-order</code> 复杂订单 <code>table-xorder</code>）</li>
         <li>支持表格扩展定制（定制原型 <code>xtable</code>）</li>
         <li>其他的扩展设置（指定特定列宽度）</li>
     </ul>
-<p>借鉴Button的实现，需要的表格最多挂三个class实现（默认，某一特色效果级别，定制级别）</p>
-<p>以下举例将实现三种常见表格（普通表格xtable、产品表格ptable、其他定制表格xtable-custom）</p>
-    
+<p>借鉴Button的实现，需要的表格不需要组合太多的class实现（默认，某一特色效果级别，定制级别）</p>
+<h3>下面是将要实现最基本需求的表格：<small>组合表格命名使用class="table-***"，定制表格使用class="***-table"</small></h3>
+    <table class="">
+		<tr>
+			<th>名称</th>
+			<th>样式</th>
+			<th>描述</th>
+		</tr>
+		<tr>
+		    <td>默认表格</td>
+			<td>无 | <code>.table-loyout</code></td>
+			<td>没有任何其他样式，仅是行和列，无边框</td>
+		</tr>
+		<tr>
+		    <td>单边表格</td>
+			<td><code>.table-line</code></td>
+			<td>仅使用一组横向边线</td>
+		</tr>
+		<tr>
+		    <td>单边双线表格</td>
+			<td><code>.table-dline</td>
+			<td>仅使用两组横向边线double-line</code></td>
+		</tr>
+		<tr>
+		    <td>有边框的表格</td>
+			<td><code>.table-border</code></td>
+			<td>添加外边框</td>
+		</tr>
+		<tr>
+		    <td>有:hover的表格</td>
+			<td><code>.table-hover</code></td>
+			<td>添加悬停/滑过（hover）状态</td>
+		</tr>
+		<tr>
+		    <td>奇偶相间的表格</td>
+			<td><code>.table-striped</code></td>
+			<td>行间添加奇偶背景色 (1, 3, 5, etc)</td>
+		</tr>
+		<tr>
+		    <td>100%宽度表格</td>
+			<td><code>.table-full</code></td>
+			<td>100%宽度</td>
+		</tr>
+	</table>
     <div class="demo plugin">
 
-<h3>默认无边框</h3>
+<h3>基础表格</h3>
 <table>
     <tr>
         <th>名称</th>
@@ -114,12 +112,5 @@ table {max-width:100%;background-color:transparent;border-collapse:collapse;bord
     <p>实践出真知</p>
     
 </div>
-
-<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
-
-<!--[if ie 6]>
-<script src="../assets/js/DD_belatedPNG-min.js"></script> 
-<script>DD_belatedPNG.fix('.ie6png');</script>
-<![endif]-->
 </body>
 </html>

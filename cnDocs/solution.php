@@ -81,7 +81,7 @@
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-pages.html"><img src="../solutions/img/default.png" alt="页码组件"><h4>页码组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-alert.html"><img src="../solutions/img/default.png" alt="通知提醒"><h4>通知提醒</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="base-css.php#buttons"><img src="../solutions/img/default.png" alt="全CSS按钮"><h4>全CSS按钮</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-table.html"><img src="../solutions/img/default.png" alt="常用表格"><h4>常用表格</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-table.html"><img src="../solutions/img/table.png" alt="表格研究"><h4>表格研究</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-form.html"><img src="../solutions/img/default.png" alt="Form表单"><h4>Form表单</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/dialog.html"><img src="../solutions/img/default.png" alt="对话框"><h4>对话框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/popover.html"><img src="../solutions/img/default.png" alt=""><h4>弹出框</h4></a></li>
