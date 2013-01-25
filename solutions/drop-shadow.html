@@ -6,7 +6,21 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
-
+.demo{background:#fff;padding:40px 40px 30px}
+.shadow-simple{
+    float:left;
+    margin-right:20px;
+    background-color:#efefef;
+}
+.shadow-simple img{
+    padding:4px;
+    border:1px solid #cdcdcd;
+    background-color:#fff;
+    position:relative;
+    top:-5px;
+    left:-5px;
+    vertical-align: top;/* 消除空白间隙 */
+}
 </style>
 </head>
 <body>
@@ -14,7 +28,7 @@
     <h1>跨浏览器投影</h1>
     <p>使用 CSS filter 实现像 CSS3 的 box-shadow 效果，使用控制不同方向的投影来消除 filter 实现投影有噪点的不足。</p>
     
-    <div class="demo" style="padding:40px 40px 30px">
+    <div class="demo">
         <div class="shadow" style="width:500px;height:300px;padding:20px;">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div><!-- //div .shadow -->
@@ -42,7 +56,27 @@
 </pre>
     <h3>问题及注意事项：</h3>
     <p><strong>注意：</strong>记得添加 background 属性，防止 IE 把投影转移到文字上</p>
-    
+    <h3>简单的阴影效果</h3>
+    <div class="demo">
+        <div class="shadow-simple"><img src="images/pic1.jpg"></div>
+        <div class="shadow-simple"><img src="images/pic2.jpg"></div>
+        <div class="shadow-simple"><img src="images/pic3.jpg"></div>
+    </div>
+<pre class="prettyprint linenums">
+.shadow-simple{
+    float:left;
+    margin-right:20px;
+    background-color:#efefef;
+}
+.shadow-simple img{
+    padding:4px;
+    border:1px solid #cdcdcd;
+    background-color:#fff;
+    position:relative;
+    top:-5px;
+    left:-5px;
+    vertical-align: top;/* 消除空白间隙 */
+}
 </div>
 </body>
 </html>
