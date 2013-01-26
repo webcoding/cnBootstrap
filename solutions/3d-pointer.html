@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3幻灯片 3D百叶窗</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.billboard {height:412px; width:600px; margin:0 auto; background:#369; padding:12px 10px 0 12px;
+	-moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.poster {float:left;width:50px; height:400px;
+	-moz-perspective: 800px;
+	-moz-perspective-origin: 50% 200px;
+	-webkit-perspective: 800px;
+	-webkit-perspective-origin: 50% 200px;
+}
+
+.triangle {position:relative; margin:0 auto; height:400px; width:50px;
+	-moz-transform-style: preserve-3d;
+	-moz-animation:rotateMe 18s infinite;
+	-webkit-transform-style: preserve-3d;
+	-webkit-animation: rotateMe 18s infinite;
+}
+
+.face {position:absolute; height:400px; width:50px;}
+
+.triangle .panel1 {background:url(images/girl_400x500_1.jpg);
+	background-size:600px auto;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-moz-transform: translateZ(14px);
+	-webkit-transform: translateZ(14px);
+}
+.triangle .panel2 {background:url(images/girl_400x500_2.jpg);
+	background-size:600px auto;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-moz-transform: rotateY(120deg) translateZ(14px);
+	-webkit-transform: rotateY(120deg) translateZ(14px);
+}
+.triangle .panel3 {background:url(images/girl_400x500_3.jpg);
+	background-size:600px auto;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-moz-transform: rotateY(-120deg) translateZ(14px);
+	-webkit-transform: rotateY(-120deg) translateZ(14px);
+}
+
+@-moz-keyframes rotateMe {
+	0% { -moz-transform: rotateY(0deg) translateZ(0px) rotate(0deg);}
+	9% { -moz-transform: rotateY(0deg) translateZ(0px) rotate(0deg);}
+	24% { -moz-transform: rotateY(120deg) translateZ(0px) rotate(0deg);}
+	42% { -moz-transform: rotateY(120deg) translateZ(0px) rotate(0deg);}
+	57% { -moz-transform: rotateY(240deg) translateZ(0px) rotate(0deg);}
+	75% { -moz-transform: rotateY(240deg) translateZ(0px) rotate(0deg);}
+	90% { -moz-transform: rotateY(360deg) translateZ(0px) rotate(0deg);}
+	100% { -moz-transform: rotateY(360deg) translateZ(0px) rotate(0deg);}
+}
+@-webkit-keyframes rotateMe {
+	0% { -webkit-transform: rotateY(0deg) translateZ(0px) rotate(0deg);}
+	9% { -webkit-transform: rotateY(0deg) translateZ(0px) rotate(0deg);}
+	24% { -webkit-transform: rotateY(120deg) translateZ(0px) rotate(0deg);}
+	42% { -webkit-transform: rotateY(120deg) translateZ(0px) rotate(0deg);}
+	57% { -webkit-transform: rotateY(240deg) translateZ(0px) rotate(0deg);}
+	75% { -webkit-transform: rotateY(240deg) translateZ(0px) rotate(0deg);}
+	90% { -webkit-transform: rotateY(360deg) translateZ(0px) rotate(0deg);}
+	100% { -webkit-transform: rotateY(360deg) translateZ(0px) rotate(0deg);}
+}
+
+.triangle .p1 {background-position:left top;}
+.triangle .p2 {background-position:-50px top;}
+.triangle .p3 {background-position:-100px top;}
+.triangle .p4 {background-position:-150px top;}
+.triangle .p5 {background-position:-200px top;}
+.triangle .p6 {background-position:-250px top;}
+.triangle .p7 {background-position:-300px top;}
+.triangle .p8 {background-position:-350px top;}
+.triangle .p9 {background-position:-400px top;}
+.triangle .p10 {background-position:-450px top;}
+.triangle .p11 {background-position:-500px top;}
+.triangle .p12 {background-position:-550px top;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3幻灯片 3D百叶窗</h1>
+    <p>CSS3实现的幻灯片——3D百叶窗</p>
+    
+    <div class="demo">
+<div class="billboard">
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p1">
+			</div>
+			<div class="face panel2 p1">
+			</div>
+			<div class="face panel3 p1">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p2">
+			</div>
+			<div class="face panel2 p2">
+			</div>
+			<div class="face panel3 p2">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p3">
+			</div>
+			<div class="face panel2 p3">
+			</div>
+			<div class="face panel3 p3">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p4">
+			</div>
+			<div class="face panel2 p4">
+			</div>
+			<div class="face panel3 p4">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p5">
+			</div>
+			<div class="face panel2 p5">
+			</div>
+			<div class="face panel3 p5">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p6">
+			</div>
+			<div class="face panel2 p6">
+			</div>
+			<div class="face panel3 p6">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p7">
+			</div>
+			<div class="face panel2 p7">
+			</div>
+			<div class="face panel3 p7">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p8">
+			</div>
+			<div class="face panel2 p8">
+			</div>
+			<div class="face panel3 p8">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p9">
+			</div>
+			<div class="face panel2 p9">
+			</div>
+			<div class="face panel3 p9">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p10">
+			</div>
+			<div class="face panel2 p10">
+			</div>
+			<div class="face panel3 p10">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p11">
+			</div>
+			<div class="face panel2 p11">
+			</div>
+			<div class="face panel3 p11">
+			</div>
+		</div>
+	</div>
+	<div class="poster">
+		<div class="triangle">
+			<div class="face panel1 p12">
+			</div>
+			<div class="face panel2 p12">
+			</div>
+			<div class="face panel3 p12">
+			</div>
+		</div>
+	</div>
+</div>
+        
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

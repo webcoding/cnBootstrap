@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 绘制砖墙</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.wall {width:600px; height:300px; margin:20px auto; font-family: 'Shadows Into Light', cursive; text-align:center; color:#000;
+    background-image:
+    -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -webkit-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -webkit-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -moz-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -moz-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    -ms-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -ms-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -ms-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    -o-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -o-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -o-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-position:0 0, 0 0, 13px 0, 28px 15px, 0 0, 0 0, 15px 15px;
+    background-size:600px 300px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px;
+    background-repeat:repeat;
+}
+.wall h1 {padding:75px; margin:0; font-size:50px; line-height:50px; text-shadow:0 5px 5px rgba(0,0,0,0.9);}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 绘制砖墙 <small>没有用任何图片</small></h1>
+    <p>CSS3 绘制砖墙，虽然没有什么创新，但是你要是想做出这个效果，也是要花费很多时间的。这css3产生的效果，会让你眼球一亮，效果怎么和ue做出来的图片一样呢？但他确实没有用到图画。只是应用了radial-gradient，linear-gradient，怎么样下了一跳吧。</p>
+	<p>不要再说css3没什么，也不要说说他不神奇，因为神奇是你创造出来的。</p>
+    
+    <div class="demo">
+        <div class="wall">
+		    <h1>ANOTHER BRICK<br>IN<br>THE WALL</h1>
+	    </div>
+    </div>
+<pre class="prettyprint linenums">
+.wall {width:600px; height:300px; margin:20px auto; font-family: 'Shadows Into Light', cursive; text-align:center; color:#000;
+    background-image:
+    -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -webkit-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -webkit-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -moz-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -moz-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    -ms-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -ms-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -ms-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    -o-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    -o-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    -o-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-image:
+    radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%),
+    linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
+    linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px),
+    linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
+    linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
+    background-position:0 0, 0 0, 13px 0, 28px 15px, 0 0, 0 0, 15px 15px;
+    background-size:600px 300px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px, 30px 30px;
+    background-repeat:repeat;
+}
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

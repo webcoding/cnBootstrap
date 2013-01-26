@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 制作iphone的message图标</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+.box{padding:10px;}
+.icon {width: 56px;height: 56px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    -webkit-box-shadow: rgba(0,0,0,0.5) 0 1px 2px;
+	-moz-box-shadow: rgba(0,0,0,0.5) 0 1px 2px;
+	box-shadow: rgba(0,0,0,0.5) 0 1px 2px;   
+}
+.icon span {
+    font: bold 11px/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;color: #fff;width: 76px;
+    text-shadow: rgba(0,0,0,0.3) 1px 2px 1px;
+    text-transform: capitalize;
+}
+.i_message {
+	width: 100%;height: 100%;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top, #015801, #06f700);
+    background: -moz-linear-gradient(top, #015801, #06f700);
+    background: -ms-linear-gradient(top, #015801, #06f700);
+    background: -o-linear-gradient(top, #015801, #06f700);
+    background: linear-gradient(top, #015801, #06f700);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#015801', endColorstr='#06f700', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#015801', endColorstr='#06f700', GradientType=0);
+    overflow: hidden;
+}
+
+.i_message .bg_angled {
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    width: 125%; 
+    height: 125%;
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    -webkit-background-size: 4px 4px;
+	-moz-background-size: 4px 4px;
+	-ms-background-size: 4px 4px;
+	-o-background-size: 4px 4px;
+	background-size: 4px 4px;
+    background-color: none;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 50%, transparent 50%,  transparent 100%);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 50%, transparent 50%,  transparent 100%);
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 50%, transparent 50%,  transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 50%, transparent 50%,  transparent 100%);
+    background-image: linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 50%, transparent 50%,  transparent 100%);
+    -webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.i_message:after{
+    content: '';
+    -webkit-box-shadow: inset #06f700 0 0 2px;
+	-moz-box-shadow: inset #06f700 0 0 2px;
+	box-shadow: inset #06f700 0 0 2px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+    z-index: 2;
+}
+
+.i_message:before{
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    display: block;
+    -webkit-border-radius: 10px 10px 50% 50% / 10px 10px 5px 5px;
+	-moz-border-radius: 10px 10px 50% 50% / 10px 10px 5px 5px;
+	border-radius: 10px 10px 50% 50% / 10px 10px 5px 5px;
+    background: rgba(255,255,255,0.5);
+    z-index: 5;
+    -webkit-box-shadow: inset rgba(255,255,255,0.5) 0 1px 0;
+	-moz-box-shadow: inset rgba(255,255,255,0.5) 0 1px 0;
+	box-shadow: inset rgba(255,255,255,0.5) 0 1px 0;
+}
+
+.i_message .bulb {
+    position: absolute;
+    width: 39px;
+    height: 32px;
+    top: 47%;
+    left: 50%;
+    margin-left: -19.5px;
+    margin-top: -16px;
+    -webkit-border-radius: 50%/50%;
+	-moz-border-radius: 50%/50%;
+	border-radius: 50%/50%;
+    background: -webkit-linear-gradient(bottom, #fff, #cbdae9 50%);
+    background: -moz-linear-gradient(bottom, #fff, #cbdae9 50%);
+    background: -ms-linear-gradient(bottom, #fff, #cbdae9 50%);
+    background: -o-linear-gradient(bottom, #fff, #cbdae9 50%);
+    background: linear-gradient(bottom, #fff, #cbdae9 50%);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbdae9', endColorstr='#ffffff', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbdae9', endColorstr='#ffffff', GradientType=0);
+    -webkit-box-shadow: rgba(0,0,0,0.4) 0 0 2px, inset #e7e8e9 0 -1px 0;
+	-moz-box-shadow: rgba(0,0,0,0.4) 0 0 2px, inset #e7e8e9 0 -1px 0;
+	box-shadow: rgba(0,0,0,0.4) 0 0 2px, inset #e7e8e9 0 -1px 0;
+    z-index: 2;
+}
+
+.i_message .tail {
+    position: absolute;
+    background: #fff;
+    width: 11px;
+    height: 7px;
+    left: 11px;
+    bottom: 12px;
+    -webkit-border-radius: 0 0 100% 0/ 0 0 100% 0;
+	-moz-border-radius: 0 0 100% 0/ 0 0 100% 0;
+	border-radius: 0 0 100% 0/ 0 0 100% 0;
+    z-index: 1;
+    -webkit-box-shadow: rgba(0,0,0,0.4) 0 0 2px, inset #e7e8e9 0 -1px 0;
+	-moz-box-shadow: rgba(0,0,0,0.4) 0 0 2px, inset #e7e8e9 0 -1px 0;
+	box-shadow: rgba(0,0,0,0.4) 0 0 2px, inset #e7e8e9 0 -1px 0;
+}
+
+.i_message .tail:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+    left: -6px;
+    top: -3px;
+    background:-webkit-linear-gradient(bottom, #05d400, #04ba00);
+    background:-moz-linear-gradient(bottom, #05d400, #04ba00);
+    background:-ms-linear-gradient(bottom, #05d400, #04ba00);
+    background:-o-linear-gradient(bottom, #05d400, #04ba00);
+    background:linear-gradient(bottom, #05d400, #04ba00);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#04ba00', endColorstr='#05d400', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#04ba00', endColorstr='#05d400', GradientType=0);
+}
+
+.i_message .tail:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+    left: -6px;
+    top: -3px;
+    -webkit-background-size: 4px 4px;
+	-moz-background-size: 4px 4px;
+	-ms-background-size: 4px 4px;
+	-o-background-size: 4px 4px;
+	background-size: 4px 4px;
+    background-image:-webkit-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 20%, transparent 20%,  transparent 70%, rgba(255, 255, 255, .2) 70%, rgba(255, 255, 255, .2) 100%);
+    background-image:-moz-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 20%, transparent 20%,  transparent 70%, rgba(255, 255, 255, .2) 70%, rgba(255, 255, 255, .2) 100%);
+    background-image:-ms-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 20%, transparent 20%,  transparent 70%, rgba(255, 255, 255, .2) 70%, rgba(255, 255, 255, .2) 100%);
+    background-image:-o-linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 20%, transparent 20%,  transparent 70%, rgba(255, 255, 255, .2) 70%, rgba(255, 255, 255, .2) 100%);
+    background-image:linear-gradient(top, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .2) 20%, transparent 20%,  transparent 70%, rgba(255, 255, 255, .2) 70%, rgba(255, 255, 255, .2) 100%);
+    -webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+    z-index: 10;
+}
+
+.i_message .hack {
+    background:-webkit-linear-gradient(top, #ebf1f7, #fff);
+    background:-moz-linear-gradient(top, #ebf1f7, #fff);
+    background:-ms-linear-gradient(top, #ebf1f7, #fff);
+    background:-o-linear-gradient(top, #ebf1f7, #fff);
+    background:linear-gradient(top, #ebf1f7, #fff);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebf1f7', endColorstr='#ffffff', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebf1f7', endColorstr='#ffffff', GradientType=0);
+    width: 5px;
+    height: 5px;
+    left: 15px;
+    top: 36px;
+    position: absolute;
+    z-index: 10;
+    -webkit-border-radius:0 0 3px 0;
+	-moz-border-radius:0 0 3px 0;
+	border-radius:0 0 3px 0;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 制作iphone的message图标</h1>
+    
+    <div class="demo dark-demo">
+		<div class="box">
+			<div class="icon">
+				<div class="i_message">
+					<div class="bg_angled"></div>
+					<div class="bulb"></div>
+					<div class="tail"></div>
+					<div class="hack"></div>
+				</div>
+				<span>Message</span>
+			</div>
+		</div>
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

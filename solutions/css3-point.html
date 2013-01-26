@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 换位幻灯片</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.flowGallery {width:810px; height:540px;margin:10px auto; position:relative; z-index:100;}
+.flowGallery input {position:absolute; left:-9999px;}
+.flow {padding:0; margin:0; list-style:none; width:810px; height:540px;}
+.flow li {width:150px; height:100px; position:absolute;}
+
+.flow li img {display:block; width:100%;height:100%;}
+.flow li.c1 {left:0; top:0;
+-webkit-transition:0.5s 0.05s;
+-moz-transition:0.5s 0.05s;
+-ms-transition:0.5s 0.05s;
+-o-transition:0.5s 0.05s;
+transition:0.5s 0.05s;
+}
+.flow li.c2 {left:165px; top:0;
+-webkit-transition:0.5s 0.1s;
+-moz-transition:0.5s 0.1s;
+-ms-transition:0.5s 0.1s;
+-o-transition:0.5s 0.1s;
+transition:0.5s 0.1s;
+}
+.flow li.c3 {left:330px; top:0;
+-webkit-transition:0.5s 0.15s;
+-moz-transition:0.5s 0.15s;
+-ms-transition:0.5s 0.15s;
+-o-transition:0.5s 0.15s;
+transition:0.5s 0.15s;
+}
+.flow li.c4 {left:495px; top:0;
+-webkit-transition:0.5s 0.2s;
+-moz-transition:0.5s 0.2s;
+-ms-transition:0.5s 0.2s;
+-o-transition:0.5s 0.2s;
+transition:0.5s 0.2s;
+}
+.flow li.c5 {left:660px; top:0;
+-webkit-transition:0.5s 0.25s;
+-moz-transition:0.5s 0.25s;
+-ms-transition:0.5s 0.25s;
+-o-transition:0.5s 0.25s;
+transition:0.5s 0.25s;
+}
+.flow li.c6 {left:0; top:110px;
+-webkit-transition:0.5s 0.3s;
+-moz-transition:0.5s 0.3s;
+-ms-transition:0.5s 0.3s;
+-o-transition:0.5s 0.3s;
+transition:0.5s 0.3s;
+}
+.flow li.c7 {left:165px; top:110px;
+-webkit-transition:0.5s 0.35s;
+-moz-transition:0.5s 0.35s;
+-ms-transition:0.5s 0.35s;
+-o-transition:0.5s 0.35s;
+transition:0.5s 0.35s;
+}
+.flow li.c8 {left:330px; top:110px;
+-webkit-transition:0.5s 0.4s;
+-moz-transition:0.5s 0.4s;
+-ms-transition:0.5s 0.4s;
+-o-transition:0.5s 0.4s;
+transition:0.5s 0.4s;
+}
+.flow li.c9 {left:495px; top:110px;
+-webkit-transition:0.5s 0.45s;
+-moz-transition:0.5s 0.45s;
+-ms-transition:0.5s 0.45s;
+-o-transition:0.5s 0.45s;
+transition:0.5s 0.45s;
+}
+.flow li.c10 {left:660px; top:110px;
+-webkit-transition:0.5s 0.5s;
+-moz-transition:0.5s 0.5s;
+-ms-transition:0.5s 0.5s;
+-o-transition:0.5s 0.5s;
+transition:0.5s 0.5s;
+}
+.flow li.c11 {left:0; top:220px;
+-webkit-transition:0.5s 0.45s;
+-moz-transition:0.5s 0.45s;
+-ms-transition:0.5s 0.45s;
+-o-transition:0.5s 0.45s;
+transition:0.5s 0.45s;
+}
+.flow li.c12 {left:165px; top:220px;
+-webkit-transition:0.5s 0.4s;
+-moz-transition:0.5s 0.4s;
+-ms-transition:0.5s 0.4s;
+-o-transition:0.5s 0.4s;
+transition:0.5s 0.4s;
+}
+.flow li.c13 {left:330px; top:220px;
+-webkit-transition:0.5s 0.35s;
+-moz-transition:0.5s 0.35s;
+-ms-transition:0.5s 0.35s;
+-o-transition:0.5s 0.35s;
+transition:0.5s 0.35s;
+}
+.flow li.c14 {left:495px; top:220px;
+-webkit-transition:0.5s 0.3s;
+-moz-transition:0.5s 0.3s;
+-ms-transition:0.5s 0.3s;
+-o-transition:0.5s 0.3s;
+transition:0.5s 0.3s;
+}
+.flow li.c15 {left:660px; top:220px;
+-webkit-transition:0.5s 0.25s;
+-moz-transition:0.5s 0.25s;
+-ms-transition:0.5s 0.25s;
+-o-transition:0.5s 0.25s;
+transition:0.5s 0.25s;
+}
+.flow li.c16 {left:0; top:330px;
+-webkit-transition:0.5s 0.2s;
+-moz-transition:0.5s 0.2s;
+-ms-transition:0.5s 0.2s;
+-o-transition:0.5s 0.2s;
+transition:0.5s 0.2s;
+}
+.flow li.c17 {left:165px; top:330px;
+-webkit-transition:0.5s 0.15s;
+-moz-transition:0.5s 0.15s;
+-ms-transition:0.5s 0.15s;
+-o-transition:0.5s 0.15s;
+transition:0.5s 0.15s;
+}
+
+#p1:checked ~ .flow li.c1 {left:0px; top:0px; width:480px; height:320px; z-index:-1;}
+#p1:checked ~ .flow li.c2 {left:495px; top:0px;}
+#p1:checked ~ .flow li.c3 {left:660px; top:0px;}
+#p1:checked ~ .flow li.c4 {left:495px; top:110px;}
+#p1:checked ~ .flow li.c5 {left:660px; top:110px;}
+#p1:checked ~ .flow li.c6 {left:495px; top:220px;}
+#p1:checked ~ .flow li.c7 {left:660px; top:220px;}
+#p1:checked ~ .flow li.c8 {left:0px; top:330px;}
+#p1:checked ~ .flow li.c9 {left:165px; top:330px;}
+#p1:checked ~ .flow li.c10 {left:330px; top:330px;}
+#p1:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p1:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p1:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p1:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p1:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p1:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p1:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p2:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p2:checked ~ .flow li.c2 {left:165px; top:0px; width:480px; height:320px; z-index:-1;}
+#p2:checked ~ .flow li.c3 {left:660px; top:0px;}
+#p2:checked ~ .flow li.c4 {left:0px; top:110px;}
+#p2:checked ~ .flow li.c5 {left:660px; top:110px;}
+#p2:checked ~ .flow li.c6 {left:0px; top:220px;}
+#p2:checked ~ .flow li.c7 {left:660px; top:220px;}
+#p2:checked ~ .flow li.c8 {left:0px; top:330px;}
+#p2:checked ~ .flow li.c9 {left:165px; top:330px;}
+#p2:checked ~ .flow li.c10 {left:330px; top:330px;}
+#p2:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p2:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p2:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p2:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p2:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p2:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p2:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p3:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p3:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p3:checked ~ .flow li.c3 {left:330px; top:0px; width:480px; height:320px; z-index:-1;}
+#p3:checked ~ .flow li.c4 {left:0px; top:110px;}
+#p3:checked ~ .flow li.c5 {left:165px; top:110px;}
+#p3:checked ~ .flow li.c6 {left:0px; top:220px;}
+#p3:checked ~ .flow li.c7 {left:165px; top:220px;}
+#p3:checked ~ .flow li.c8 {left:0px; top:330px;}
+#p3:checked ~ .flow li.c9 {left:165px; top:330px;}
+#p3:checked ~ .flow li.c10 {left:330px; top:330px;}
+#p3:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p3:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p3:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p3:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p3:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p3:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p3:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p4:checked ~ .flow li.c1 {left:495px; top:0px;}
+#p4:checked ~ .flow li.c2 {left:660px; top:0px;}
+#p4:checked ~ .flow li.c3 {left:495px; top:110px;}
+#p4:checked ~ .flow li.c4 {left:0px; top:0px; width:480px; height:320px; z-index:-1;}
+#p4:checked ~ .flow li.c5 {left:660px; top:110px;}
+#p4:checked ~ .flow li.c6 {left:495px; top:220px;}
+#p4:checked ~ .flow li.c7 {left:660px; top:220px;}
+#p4:checked ~ .flow li.c8 {left:0px; top:330px;}
+#p4:checked ~ .flow li.c9 {left:165px; top:330px;}
+#p4:checked ~ .flow li.c10 {left:330px; top:330px;}
+#p4:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p4:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p4:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p4:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p4:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p4:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p4:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p5:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p5:checked ~ .flow li.c2 {left:660px; top:0px;}
+#p5:checked ~ .flow li.c3 {left:0px; top:110px;}
+#p5:checked ~ .flow li.c4 {left:660px; top:110px;}
+#p5:checked ~ .flow li.c5 {left:165px; top:0px; width:480px; height:320px; z-index:-1;}
+#p5:checked ~ .flow li.c6 {left:0px; top:220px;}
+#p5:checked ~ .flow li.c7 {left:660px; top:220px;}
+#p5:checked ~ .flow li.c8 {left:0px; top:330px;}
+#p5:checked ~ .flow li.c9 {left:165px; top:330px;}
+#p5:checked ~ .flow li.c10 {left:330px; top:330px;}
+#p5:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p5:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p5:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p5:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p5:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p5:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p5:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p6:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p6:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p6:checked ~ .flow li.c3 {left:0px; top:110px;}
+#p6:checked ~ .flow li.c4 {left:165px; top:110px;}
+#p6:checked ~ .flow li.c5 {left:0px; top:220px;}
+#p6:checked ~ .flow li.c6 {left:330px; top:0px; width:480px; height:320px; z-index:-1;}
+#p6:checked ~ .flow li.c7 {left:165px; top:220px;}
+#p6:checked ~ .flow li.c8 {left:0px; top:330px;}
+#p6:checked ~ .flow li.c9 {left:165px; top:330px;}
+#p6:checked ~ .flow li.c10 {left:330px; top:330px;}
+#p6:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p6:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p6:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p6:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p6:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p6:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p6:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p7:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p7:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p7:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p7:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p7:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p7:checked ~ .flow li.c6 {left:495px; top:110px;}
+#p7:checked ~ .flow li.c7 {left:0px; top:110px; width:480px; height:320px; z-index:-1;}
+#p7:checked ~ .flow li.c8 {left:660px; top:110px;}
+#p7:checked ~ .flow li.c9 {left:495px; top:220px;}
+#p7:checked ~ .flow li.c10 {left:660px; top:220px;}
+#p7:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p7:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p7:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p7:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p7:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p7:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p7:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p8:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p8:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p8:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p8:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p8:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p8:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p8:checked ~ .flow li.c7 {left:660px; top:110px;}
+#p8:checked ~ .flow li.c8 {left:165px; top:110px; width:480px; height:320px; z-index:-1;}
+#p8:checked ~ .flow li.c9 {left:0px; top:220px;}
+#p8:checked ~ .flow li.c10 {left:660px; top:220px;}
+#p8:checked ~ .flow li.c11 {left:0px; top:330px;}
+#p8:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p8:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p8:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p8:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p8:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p8:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p9:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p9:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p9:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p9:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p9:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p9:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p9:checked ~ .flow li.c7 {left:165px; top:110px;}
+#p9:checked ~ .flow li.c8 {left:0px; top:220px;}
+#p9:checked ~ .flow li.c9 {left:330px; top:110px; width:480px; height:320px; z-index:-1;}
+#p9:checked ~ .flow li.c10 {left:165px; top:220px;}
+#p9:checked ~ .flow li.c11 {left:0px; top:330px;}
+#p9:checked ~ .flow li.c12 {left:165px; top:330px;}
+#p9:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p9:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p9:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p9:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p9:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p10:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p10:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p10:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p10:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p10:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p10:checked ~ .flow li.c6 {left:495px; top:110px;}
+#p10:checked ~ .flow li.c7 {left:660px; top:110px;}
+#p10:checked ~ .flow li.c8 {left:495px; top:220px;}
+#p10:checked ~ .flow li.c9 {left:660px; top:220px;}
+#p10:checked ~ .flow li.c10 {left:0px; top:110px; width:480px; height:320px; z-index:-1;}
+#p10:checked ~ .flow li.c11 {left:495px; top:330px;}
+#p10:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p10:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p10:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p10:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p10:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p10:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p11:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p11:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p11:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p11:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p11:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p11:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p11:checked ~ .flow li.c7 {left:660px; top:110px;}
+#p11:checked ~ .flow li.c8 {left:0px; top:220px;}
+#p11:checked ~ .flow li.c9 {left:660px; top:220px;}
+#p11:checked ~ .flow li.c10 {left:0px; top:330px;}
+#p11:checked ~ .flow li.c11 {left:165px; top:110px; width:480px; height:320px; z-index:-1;}
+#p11:checked ~ .flow li.c12 {left:660px; top:330px;}
+#p11:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p11:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p11:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p11:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p11:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p12:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p12:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p12:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p12:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p12:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p12:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p12:checked ~ .flow li.c7 {left:165px; top:110px;}
+#p12:checked ~ .flow li.c8 {left:0px; top:220px;}
+#p12:checked ~ .flow li.c9 {left:165px; top:220px;}
+#p12:checked ~ .flow li.c10 {left:0px; top:330px;}
+#p12:checked ~ .flow li.c11 {left:165px; top:330px;}
+#p12:checked ~ .flow li.c12 {left:330px; top:110px; width:480px; height:320px; z-index:-1;}
+#p12:checked ~ .flow li.c13 {left:0px; top:440px;}
+#p12:checked ~ .flow li.c14 {left:165px; top:440px;}
+#p12:checked ~ .flow li.c15 {left:330px; top:440px;}
+#p12:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p12:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p13:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p13:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p13:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p13:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p13:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p13:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p13:checked ~ .flow li.c7 {left:165px; top:110px;}
+#p13:checked ~ .flow li.c8 {left:330px; top:110px;}
+#p13:checked ~ .flow li.c9 {left:495px; top:110px;}
+#p13:checked ~ .flow li.c10 {left:660px; top:110px;}
+#p13:checked ~ .flow li.c11 {left:495px; top:220px;}
+#p13:checked ~ .flow li.c12 {left:660px; top:220px;}
+#p13:checked ~ .flow li.c13 {left:0px; top:220px; width:480px; height:320px; z-index:-1;}
+#p13:checked ~ .flow li.c14 {left:495px; top:330px;}
+#p13:checked ~ .flow li.c15 {left:660px; top:330px;}
+#p13:checked ~ .flow li.c16 {left:495px; top:440px;}
+#p13:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p14:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p14:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p14:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p14:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p14:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p14:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p14:checked ~ .flow li.c7 {left:165px; top:110px;}
+#p14:checked ~ .flow li.c8 {left:330px; top:110px;}
+#p14:checked ~ .flow li.c9 {left:495px; top:110px;}
+#p14:checked ~ .flow li.c10 {left:660px; top:110px;}
+#p14:checked ~ .flow li.c11 {left:0px; top:220px;}
+#p14:checked ~ .flow li.c12 {left:660px; top:220px;}
+#p14:checked ~ .flow li.c13 {left:0px; top:330px;}
+#p14:checked ~ .flow li.c14 {left:165px; top:220px; width:480px; height:320px; z-index:-1;}
+#p14:checked ~ .flow li.c15 {left:660px; top:330px;}
+#p14:checked ~ .flow li.c16 {left:0px; top:440px;}
+#p14:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p15:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p15:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p15:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p15:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p15:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p15:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p15:checked ~ .flow li.c7 {left:165px; top:110px;}
+#p15:checked ~ .flow li.c8 {left:330px; top:110px;}
+#p15:checked ~ .flow li.c9 {left:495px; top:110px;}
+#p15:checked ~ .flow li.c10 {left:660px; top:110px;}
+#p15:checked ~ .flow li.c11 {left:0px; top:220px;}
+#p15:checked ~ .flow li.c12 {left:165px; top:220px;}
+#p15:checked ~ .flow li.c13 {left:0px; top:330px;}
+#p15:checked ~ .flow li.c14 {left:165px; top:330px;}
+#p15:checked ~ .flow li.c15 {left:330px; top:220px; width:480px; height:320px; z-index:-1;}
+#p15:checked ~ .flow li.c16 {left:0px; top:440px;}
+#p15:checked ~ .flow li.c17 {left:165px; top:440px;}
+
+#p16:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p16:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p16:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p16:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p16:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p16:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p16:checked ~ .flow li.c7 {left:165px; top:110px;}
+#p16:checked ~ .flow li.c8 {left:330px; top:110px;}
+#p16:checked ~ .flow li.c9 {left:495px; top:110px;}
+#p16:checked ~ .flow li.c10 {left:660px; top:110px;}
+#p16:checked ~ .flow li.c11 {left:0px; top:220px;}
+#p16:checked ~ .flow li.c12 {left:660px; top:220px;}
+#p16:checked ~ .flow li.c13 {left:0px; top:330px;}
+#p16:checked ~ .flow li.c14 {left:660px; top:330px;}
+#p16:checked ~ .flow li.c15 {left:0px; top:440px;}
+#p16:checked ~ .flow li.c16 {left:165px; top:220px; width:480px; height:320px; z-index:-1;}
+#p16:checked ~ .flow li.c17 {left:660px; top:440px;}
+
+#p17:checked ~ .flow li.c1 {left:0px; top:0px;}
+#p17:checked ~ .flow li.c2 {left:165px; top:0px;}
+#p17:checked ~ .flow li.c3 {left:330px; top:0px;}
+#p17:checked ~ .flow li.c4 {left:495px; top:0px;}
+#p17:checked ~ .flow li.c5 {left:660px; top:0px;}
+#p17:checked ~ .flow li.c6 {left:0px; top:110px;}
+#p17:checked ~ .flow li.c7 {left:165px; top:110px;}
+#p17:checked ~ .flow li.c8 {left:330px; top:110px;}
+#p17:checked ~ .flow li.c9 {left:495px; top:110px;}
+#p17:checked ~ .flow li.c10 {left:660px; top:110px;}
+#p17:checked ~ .flow li.c11 {left:0px; top:220px;}
+#p17:checked ~ .flow li.c12 {left:165px; top:220px;}
+#p17:checked ~ .flow li.c13 {left:0px; top:330px;}
+#p17:checked ~ .flow li.c14 {left:165px; top:330px;}
+#p17:checked ~ .flow li.c15 {left:0px; top:440px;}
+#p17:checked ~ .flow li.c16 {left:165px; top:440px;}
+#p17:checked ~ .flow li.c17 {left:330px; top:220px; width:480px; height:320px; z-index:-1;}
+
+/* 应用clip:属性 */
+.flow li img {height:auto; position:absolute; clip:rect(0,150px,100px,0px);}
+
+#p1:checked ~ .flow li.c1 img,
+#p2:checked ~ .flow li.c2 img,
+#p3:checked ~ .flow li.c3 img,
+#p4:checked ~ .flow li.c4 img,
+#p5:checked ~ .flow li.c5 img,
+#p6:checked ~ .flow li.c6 img,
+#p7:checked ~ .flow li.c7 img,
+#p8:checked ~ .flow li.c8 img,
+#p9:checked ~ .flow li.c9 img,
+#p10:checked ~ .flow li.c10 img,
+#p11:checked ~ .flow li.c11 img,
+#p12:checked ~ .flow li.c12 img,
+#p13:checked ~ .flow li.c13 img,
+#p14:checked ~ .flow li.c14 img,
+#p15:checked ~ .flow li.c15 img,
+#p16:checked ~ .flow li.c16 img,
+#p17:checked ~ .flow li.c17 img
+{clip: rect(0,480px,320px,0);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>CSS3 换位幻灯片</h1>
+	<p>这是一款比较奇特的css3做品，点击图片，图片就会交换位置，并且伴随着打乱，效果绚丽。也许你认为应用了js，但是没有！</p>
+    
+    <div class="demo">
+<div class="flowGallery">
+	<input type="radio" name="flow" id="p1" checked="checked">
+	<input type="radio" name="flow" id="p2">
+	<input type="radio" name="flow" id="p3">
+	<input type="radio" name="flow" id="p4">
+	<input type="radio" name="flow" id="p5">
+	<input type="radio" name="flow" id="p6">
+	<input type="radio" name="flow" id="p7">
+	<input type="radio" name="flow" id="p8">
+	<input type="radio" name="flow" id="p9">
+	<input type="radio" name="flow" id="p10">
+	<input type="radio" name="flow" id="p11">
+	<input type="radio" name="flow" id="p12">
+	<input type="radio" name="flow" id="p13">
+	<input type="radio" name="flow" id="p14">
+	<input type="radio" name="flow" id="p15">
+	<input type="radio" name="flow" id="p16">
+	<input type="radio" name="flow" id="p17">
+	<ul class="flow">
+		<li class="c1"><label for="p1"><img src="images/girl_400x500_1.jpg" alt=""></label></li>
+		<li class="c2"><label for="p2"><img src="images/girl_400x500_2.jpg" alt=""></label></li>
+		<li class="c3"><label for="p3"><img src="images/girl_400x500_3.jpg" alt=""></label></li>
+		<li class="c4"><label for="p4"><img src="images/girl_400x500_4.jpg" alt=""></label></li>
+		<li class="c5"><label for="p5"><img src="images/girl_400x500_5.jpg" alt=""></label></li>
+		<li class="c6"><label for="p6"><img src="images/girl_400x500_6.jpg" alt=""></label></li>
+		<li class="c7"><label for="p7"><img src="images/girl_400x500_1.jpg" alt=""></label></li>
+		<li class="c8"><label for="p8"><img src="images/girl_400x500_2.jpg" alt=""></label></li>
+		<li class="c9"><label for="p9"><img src="images/girl_400x500_3.jpg" alt=""></label></li>
+		<li class="c10"><label for="p10"><img src="images/girl_400x500_4.jpg" alt=""></label></li>
+		<li class="c11"><label for="p11"><img src="images/girl_400x500_5.jpg" alt=""></label></li>
+		<li class="c12"><label for="p12"><img src="images/girl_400x500_6.jpg" alt=""></label></li>
+		<li class="c13"><label for="p13"><img src="images/girl_400x500_1.jpg" alt=""></label></li>
+		<li class="c14"><label for="p14"><img src="images/girl_400x500_2.jpg" alt=""></label></li>
+		<li class="c15"><label for="p15"><img src="images/girl_400x500_3.jpg" alt=""></label></li>
+		<li class="c16"><label for="p16"><img src="images/girl_400x500_4.jpg" alt=""></label></li>
+		<li class="c17"><label for="p17"><img src="images/girl_400x500_5.jpg" alt=""></label></li>
+	</ul>
+</div>
+        
+    </div>
+<pre class="prettyprint linenums">
+如果图片采用等比例的，那么就不必应用clip属性，效果将会更流畅。
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+</body>
+</html>

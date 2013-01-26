@@ -23,7 +23,7 @@ small{ font-weight:normal}
 .browser{padding:5px 10px;background:#eee;}
 h1,h2,h3{/*padding-top:0.5em;*/line-height:1.2}
 h4{margin-bottom:1em}
-body h1:first-child{padding-top:0;}
+body :first-child{padding-top:0;}
 body{padding-bottom:30px;}
 
 .topic,.notopic{
@@ -89,7 +89,6 @@ body{padding-bottom:30px;}
 		  border-radius: 4px 0 4px 0;
 }
 .plugin,.white-demo{background:#fff}
-
 .dark-demo{background: url(images/low_contrast_linen.png) !important;}
 .dark-demo::after{background-color: #666;border: 1px solid #888;color: #fff;}
 .black-demo{background:#000 !important;color:#fff}

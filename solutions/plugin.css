@@ -276,18 +276,29 @@ box-shadow:2px 2px 2px 0 rgba(102,102,102,0.2);}
 .orangestyle a:hover{ border-color:#f80;color:#f80;}
 
 
+/**
+ * @name      : table
+ * @explain   : 表格
+ * @type      : 基类 table table-line table-border table-full 
+ * @dependent : 无
+ * @author    : Cloudyan
+ * @version   : 1.0
+ * @html      :
 
+ */
 
-
-
-
-
-
-
-
-
-
-
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+table td,table td{padding:3px;}
+.table-full{ width:100%;}
+.table-loyout{}
+.table-line{}
+.table-dline{}
+.table-border{}
+.table-hover{}
+.table-striped{}
 
 
 
