@@ -14,18 +14,18 @@
 <div class="wrap">
     <h1>表格研究</h1>
     <p>表格仍然是网页布局中不可或缺的部分，表格数据最佳选择就是使用表格来制作，表格在这方面有得天独厚的优势，这是其他标签所不能比拟的。</p>
-	<p>下面对表格进行深入研究，制定适用于我们的表格样式，并内置样式表中，避免重复开发定义，以提升效率。</p>
+	<p>下面对表格进行深入研究，制定适用于我们的表格样式，并内置样式表中，避免重复开发定义，以提升效率。为了避免与BT中定义的表格样式发生冲突，保留BT的表格样式 <code>.table-***</code>，针对我们新定义的表格样式，使用其他的名称，如下：</p>
 	<h3>按最常见需求进行研究</h3>
     <ul>
-        <li>默认表格无边框（默认 | class="table-none"）</li>
-        <li>内置经典表格（信息表 <code>table</code> 单行表格 <code>table-line</code> 全宽表格 <code>table-full</code>）</li>
+        <li>默认表格及BT表格（.table table-striped table-bordered table-hover等）</li>
+        <li>扩展的经典表格（边框表格 <code>table-border</code> 信息表格 <code>table-info</code> 全宽表格 <code>table-full</code>）</li>
         <li>常用订单/产品表格（普通订单 <code>table-order</code> 复杂订单 <code>table-xorder</code>）</li>
         <li>支持表格扩展定制（定制原型 <code>xtable</code>）</li>
-        <li>其他的扩展设置（指定特定列宽度）</li>
+        <li>其他的扩展设置（.***-table）</li>
     </ul>
 <p>借鉴Button的实现，需要的表格不需要组合太多的class实现（默认，某一特色效果级别，定制级别）</p>
 <h3>下面是将要实现最基本需求的表格：<small>组合表格命名使用class="table-***"，定制表格使用class="***-table"</small></h3>
-    <table class="">
+    <table class="table-info">
 		<tr>
 			<th>名称</th>
 			<th>样式</th>
@@ -33,18 +33,18 @@
 		</tr>
 		<tr>
 		    <td>默认表格</td>
-			<td>无 | <code>.table-loyout</code></td>
+			<td>无</td>
 			<td>没有任何其他样式，仅是行和列，无边框</td>
 		</tr>
 		<tr>
 		    <td>单边表格</td>
-			<td><code>.table-line</code></td>
+			<td><code>.table</code></td>
 			<td>仅使用一组横向边线</td>
 		</tr>
 		<tr>
-		    <td>单边双线表格</td>
-			<td><code>.table-dline</td>
-			<td>仅使用两组横向边线double-line</code></td>
+		    <td>简单信息表</td>
+			<td><code>.table-info</td>
+			<td>存放一般表格信息</code></td>
 		</tr>
 		<tr>
 		    <td>有边框的表格</td>
@@ -68,9 +68,9 @@
 		</tr>
 	</table>
     <div class="demo plugin">
-
+	<p>这里将放置复选选项，在下面的区域展示各种样式组合的效果展示！</p>
 <h3>基础表格</h3>
-<table>
+<table class="table table-striped table-bordered table-hover">
     <tr>
         <th>名称</th>
         <th>需求</th>

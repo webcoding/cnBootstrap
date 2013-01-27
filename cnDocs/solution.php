@@ -68,11 +68,11 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/vertical-text.html"><img src="../solutions/img/vertical-text.png" alt=""><h4>文字纵向排列</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-cursor.html"><img src="../solutions/img/custom-cursor.jpg" alt="鼠标指针样式自定义"><h4>鼠标指针样式自定义</h4></a></li>
 			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位"><h4>geolocation 地理定位</h4></a></li>-->
-			
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt=""><h4>border 探索</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float.html"><img src="../solutions/img/clear-float.png" alt=""><h4>清除浮动</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rgba-opacity.html"><img src="../solutions/img/rgba-opacity.png" alt=""><h4>RGBA 与 背景透明</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/double-border.html"><img src="../solutions/img/double-border.png" alt=""><h4>double border 双线框</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button.html"><img src="../solutions/img/default.png" alt="按钮兼容最佳方案"><h4>按钮兼容最佳方案</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
@@ -80,9 +80,9 @@
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-pages.html"><img src="../solutions/img/default.png" alt="页码组件"><h4>页码组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-alert.html"><img src="../solutions/img/default.png" alt="通知提醒"><h4>通知提醒</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="base-css.php#buttons"><img src="../solutions/img/default.png" alt="全CSS按钮"><h4>全CSS按钮</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-button.html"><img src="../solutions/img/default.png" alt="网页中的按钮"><h4>网页中的按钮</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-table.html"><img src="../solutions/img/table.png" alt="表格研究"><h4>表格研究</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-form.html"><img src="../solutions/img/default.png" alt="Form表单"><h4>Form表单</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-form.html"><img src="../solutions/img/default.png" alt="Form 表单"><h4>Form 表单</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/dialog.html"><img src="../solutions/img/default.png" alt="对话框"><h4>对话框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/popover.html"><img src="../solutions/img/default.png" alt=""><h4>弹出框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt=""><h4>布局</h4></a></li>

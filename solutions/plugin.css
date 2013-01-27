@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*!
  * plugin style
 **/
@@ -9,35 +10,35 @@
   Last Updated: 2013-01-18
   Author: Cloudyan
   Contact: qqGroup:187260298 1395093509@qq.com
-  Description: °üº¬×î³£ÓÃÇÒ»ù±¾µÄ×é¼ş(²»ÒªÇáÒ×ĞŞ¸Ä´ËÑùÊ½±íÖĞµÄÑùÊ½£¬ÏêÑ¯Author)
+  Description: åŒ…å«æœ€å¸¸ç”¨ä¸”åŸºæœ¬çš„ç»„ä»¶(ä¸è¦è½»æ˜“ä¿®æ”¹æ­¤æ ·å¼è¡¨ä¸­çš„æ ·å¼ï¼Œè¯¦è¯¢Author)
 ------------------------------------------------------------ */
 
 
-/* ËÄÖÖ³£ÓÃcss×¢ÊÍ
- * ±È½Ï¸´ÔÓµÄ×é¼ş-±ä»¯×éºÏ½Ï¶à£¬ĞèÒªÏêÏ¸ËµÃ÷
- * Ò»°ã×é¼ş±È½Ï¼òµ¥£¬Ö»Ğè¼òµ¥ËµÃ÷
- * ¼òµ¥×é¼şµ«´úÂë±È½Ï¶à£¬ĞèÒªÇåÎú»®·ÖcssÇø¿é
- * ¼òµ¥×¢ÊÍ£¬Ö»Ğè¹¦ÄÜĞÔÃèÊö
+/* å››ç§å¸¸ç”¨cssæ³¨é‡Š
+ * æ¯”è¾ƒå¤æ‚çš„ç»„ä»¶-å˜åŒ–ç»„åˆè¾ƒå¤šï¼Œéœ€è¦è¯¦ç»†è¯´æ˜
+ * ä¸€èˆ¬ç»„ä»¶æ¯”è¾ƒç®€å•ï¼Œåªéœ€ç®€å•è¯´æ˜
+ * ç®€å•ç»„ä»¶ä½†ä»£ç æ¯”è¾ƒå¤šï¼Œéœ€è¦æ¸…æ™°åˆ’åˆ†cssåŒºå—
+ * ç®€å•æ³¨é‡Šï¼Œåªéœ€åŠŸèƒ½æ€§æè¿°
  */
 
 
 /**
  * @name      : alert
- * @explain   : ²Ù×÷ÌáÊ¾
- * @type      : »ùÀà .alert
- * @dependent : ÎŞ
+ * @explain   : æ“ä½œæç¤º
+ * @type      : åŸºç±» .alert
+ * @dependent : æ— 
  * @author    : Cloudyan
  * @version   : 1.0
  * @html      :
 
 <div class="tips">  
-  <span class="tips-ico"><span class="ico-ok"><!-- Í¼±ê --></span></span>
+  <span class="tips-ico"><span class="ico-ok"><!-- å›¾æ ‡ --></span></span>
   <div class="tips-content">
-   <div class="tips-title">ÌáÊ¾±êÌâ</div>
-   <div class="tips-line">ÌáÊ¾ÃèÊö</div>
+   <div class="tips-title">æç¤ºæ ‡é¢˜</div>
+   <div class="tips-line">æç¤ºæè¿°</div>
      <div class="tips-buttons">
-   <a class="btn-white" href="#"><span>°´Å¥</span></a>
-   <a href="#">Á´½Ó</a>
+   <a class="btn-white" href="#"><span>æŒ‰é’®</span></a>
+   <a href="#">é“¾æ¥</a>
    </div>
   </div>
 </div>
@@ -46,36 +47,28 @@
 /**
  * @name:           UI CSS Framework 1.0
  * @author:         Oricode UI
- * @description:    UI ×é¼şÃèÊö
+ * @description:    UI ç»„ä»¶æè¿°
  */
 
-/* Misc visuals-ÆäËûÊÓ¾õĞ§¹û
+/* Misc visuals-å…¶ä»–è§†è§‰æ•ˆæœ
 ----------------------------------*/
 
-/* Corner radius-Ô²½Ç */	
+/* Corner radius-åœ†è§’ */	
 
 
-/* ³£ÓÃcss×¢ÊÍ¾ÙÀı½áÊø
+/* å¸¸ç”¨cssæ³¨é‡Šä¸¾ä¾‹ç»“æŸ
  **************************
  *********  end  **********
  **************************
  */
 
-/* £¨Ò³ÃæhtmlËµÃ÷¾ÙÀı£©ËÑË÷Ò³ÃæÖ÷ÌåÄÚÈİ 
- * ±ßÀ¸ºĞÄ£ĞÍaside-box µ¥¶À¶¨ÒåºĞ×ÓÇë¸½¼Ó¾ßÌåµÄºĞ×ÓÃû³Æ£¬ÑùÊ½ÔÚ×Ô¶¨ÒåclassÃûÏÂ¶¨Òå
- * ÈçÓĞ±ß¿òÌí¼Óclass="lv-bd"
- * ¾¡Á¿±£³Ö½á¹¹Éè¼ÆÉÏµÄÍ³Ò»£¬±£³ÖÒ³ÃæÖĞµÄ×¢ÊÍ·ç¸ñ£¬Ê¾ÀıÈçÏÂ£º
- * ×¢ÊÍ¿ªÊ¼ <!-- ºĞ×Ó¹¦ÄÜÃû³Æ\\ -->
- * ×¢ÊÍ½áÊø <!-- //ºĞ×Ó¹¦ÄÜÃû³Æ -->
+/* ï¼ˆé¡µé¢htmlè¯´æ˜ä¸¾ä¾‹ï¼‰æœç´¢é¡µé¢ä¸»ä½“å†…å®¹ 
+ * è¾¹æ ç›’æ¨¡å‹aside-box å•ç‹¬å®šä¹‰ç›’å­è¯·é™„åŠ å…·ä½“çš„ç›’å­åç§°ï¼Œæ ·å¼åœ¨è‡ªå®šä¹‰classåä¸‹å®šä¹‰
+ * å¦‚æœ‰è¾¹æ¡†æ·»åŠ class="lv-bd"
+ * å°½é‡ä¿æŒç»“æ„è®¾è®¡ä¸Šçš„ç»Ÿä¸€ï¼Œä¿æŒé¡µé¢ä¸­çš„æ³¨é‡Šé£æ ¼ï¼Œç¤ºä¾‹å¦‚ä¸‹ï¼š
+ * æ³¨é‡Šå¼€å§‹ <!-- ç›’å­åŠŸèƒ½åç§°\\ -->
+ * æ³¨é‡Šç»“æŸ <!-- //ç›’å­åŠŸèƒ½åç§° -->
  */
-
-
-
-
-
-
-
-
 
 
 
@@ -85,19 +78,15 @@
 /**
  * @name:           UI CSS Framework 1.0
  * @author:         Oricode Group
- * @description:    UI ×é¼şÃèÊö
+ * @description:    UI ç»„ä»¶æè¿°
  */
-
-
-
-
 
  
 /**
   * @name      : mini-tips ===tips alert msg-
-  * @explain   : ²Ù×÷ÌáÊ¾
-  * @type      : »ùÀà .tips .alert
-  * @expand    : À©Õ¹ -info -success -error -warning -help -stop -wait === message danger
+  * @explain   : æ“ä½œæç¤º
+  * @type      : åŸºç±» .tips .alert
+  * @expand    : æ‰©å±• -info -success -error -warning -help -stop -wait === message danger
   * @dependent : Oricode
   * @author    : Cloudyan
   * @version   : 1.0
@@ -107,24 +96,24 @@
 
 <div class="tips tips-info">
 	<span class="tips-ico"></span>
-	°²È«ÌáĞÑ£º×ÔĞĞ±à¼­£¬·ÇÏµÍ³ÏûÏ¢
+	å®‰å…¨æé†’ï¼šè‡ªè¡Œç¼–è¾‘ï¼Œéç³»ç»Ÿæ¶ˆæ¯
 </div>
 
 <div class="alert alert-info">
 	<span class="alert-ico"></span>
-	<h3>Binggo£¡²Ù×÷×´Ì¬ÌáĞÑ£¡</h3>
-	<p>ÄúÏÖÔÚ¿ÉÒÔÈ¥³©ÓÎÍøÂçÁË¡£</p>
+	<h3>Binggoï¼æ“ä½œçŠ¶æ€æé†’ï¼</h3>
+	<p>æ‚¨ç°åœ¨å¯ä»¥å»ç•…æ¸¸ç½‘ç»œäº†ã€‚</p>
 </div>
 
 <div class="alert alert-warning">
-	<button type="button" class="close" data-dismiss="alert">¡Á</button>
-	<span class="alert-ico"><!-- Í¼±ê --></span>
+	<button type="button" class="close" data-dismiss="alert">Ã—</button>
+	<span class="alert-ico"><!-- å›¾æ ‡ --></span>
 	<div class="alert-content">
-		<div class="alert-title">ÌáÊ¾±êÌâ</div>
-		<div class="alert-line">ÌáÊ¾ÃèÊö</div>
+		<div class="alert-title">æç¤ºæ ‡é¢˜</div>
+		<div class="alert-line">æç¤ºæè¿°</div>
 		<div class="alert-buttons">
-			<a class="btn-white" href="#"><span>°´Å¥</span></a>
-			<a href="#">Á´½Ó</a>
+			<a class="btn-white" href="#"><span>æŒ‰é’®</span></a>
+			<a href="#">é“¾æ¥</a>
 		</div>
 	</div>
 </div>
@@ -190,9 +179,9 @@ button.close {padding:0;cursor:pointer;background:transparent;border:0;-webkit-a
 
 /**
  * @name      : Autocomplete Plugin
- * @explain   : ×Ô¶¯Íê³É²å¼ş
- * @type      : »ùÀà .auto >> auto-big auto-list
- * @dependent : ÎŞ
+ * @explain   : è‡ªåŠ¨å®Œæˆæ’ä»¶
+ * @type      : åŸºç±» .auto >> auto-big auto-list
+ * @dependent : æ— 
  * @author    : Cloudyan
  * @version   : 1.0
  * @html      :
@@ -223,21 +212,21 @@ box-shadow:2px 2px 2px 0 rgba(102,102,102,0.2);}
 
 
 
-/* pagesÒ³ÂëĞ¡×é¼ş
- * ÑùÊ½Ä¬ÈÏÃµºìÉ«£¨¿ÉÈ±Ê¡rosestyle£©
- * ¿É×éºÏÑùÊ½orangestyle³ÈÉ«
+/* pagesé¡µç å°ç»„ä»¶
+ * æ ·å¼é»˜è®¤ç«çº¢è‰²ï¼ˆå¯ç¼ºçœrosestyleï¼‰
+ * å¯ç»„åˆæ ·å¼orangestyleæ©™è‰²
  * @html
-<div class="pages orangestyle"> <!-- <div id="lv_page"><div class="Pages">¿ÉÈ±Ê¡´ËÁ½¼¶Ç¶Ì× -->
+<div class="pages orangestyle"> <!-- <div id="lv_page"><div class="Pages">å¯ç¼ºçœæ­¤ä¸¤çº§åµŒå¥— -->
 	<span class="PageSel">1</span>
 	<a href="#">2</a>
 	<a href="#">3</a>
 	<span class="more">...</span>
-	<a href="#">ÏÂÒ»Ò³</a>
+	<a href="#">ä¸‹ä¸€é¡µ</a>
 </div>
 
-// Éı¼¶°æ
+// å‡çº§ç‰ˆ
 <div class="Pages">
-	<a class="PrevPage" href="#">ÉÏÒ»Ò³</a>
+	<a class="PrevPage" href="#">ä¸Šä¸€é¡µ</a>
 	<a href="#">1</a>
 	<span class="PageSel">2</span>
 	<a href="#">3</a>
@@ -246,7 +235,7 @@ box-shadow:2px 2px 2px 0 rgba(102,102,102,0.2);}
 	<a href="#">6</a>
 	<span class="PageMore">...</span>
 	<a href="#">16</a>
-	<a class="NextPage" href="#">ÏÂÒ»Ò³</a>
+	<a class="NextPage" href="#">ä¸‹ä¸€é¡µ</a>
 </div>
  */
 .pages{margin:10px 0 0;text-align:right;}
@@ -257,7 +246,7 @@ box-shadow:2px 2px 2px 0 rgba(102,102,102,0.2);}
 .orangestyle .PageSel{font-weight:bold;border:1px solid #f80;color:#fff;background:#f80;}
 .orangestyle a:hover{ border-color:#f80;color:#f80; text-decoration:none}
 
-/* PagesÒ³Âë¿ØÖÆ Ä¬ÈÏ³ÈÉ« */
+/* Pagesé¡µç æ§åˆ¶ é»˜è®¤æ©™è‰² */
 .pages{margin:10px 0 0;text-align:right;}
 .Pages a,.Pages span{display:inline-block;zoom:1;*display:inline;margin-left:5px;padding:0 9px; height:25px; line-height:25px;}
 .Pages a{border:1px solid #ddd;color:#333; color:#07c;background:#fff;}
@@ -278,9 +267,10 @@ box-shadow:2px 2px 2px 0 rgba(102,102,102,0.2);}
 
 /**
  * @name      : table
- * @explain   : ±í¸ñ
- * @type      : »ùÀà table table-line table-border table-full 
- * @dependent : ÎŞ
+ * @explain   : è¡¨æ ¼
+ * @type      : åŸºç±» .table table-bordered table-full table-striped table-hover
+ * @expand    ï¼šæ‰©å±• table-borderï¼ˆä¸table-borderedç›¸åŒï¼Œä½†ä¸å«åœ†è§’ï¼‰ table-info table-layout ptable ui-table
+ * @dependent : æ— 
  * @author    : Cloudyan
  * @version   : 1.0
  * @html      :
@@ -288,20 +278,309 @@ box-shadow:2px 2px 2px 0 rgba(102,102,102,0.2);}
  */
 
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-table td,table td{padding:3px;}
-.table-full{ width:100%;}
-.table-loyout{}
-.table-line{}
-.table-dline{}
-.table-border{}
-.table-hover{}
-.table-striped{}
 
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
 
+.table th {
+  font-weight: bold;
+}
 
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+  background-color: #ffffff;
+}
+
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #dddddd;
+}
+
+.table-bordered caption + thead tr:first-child th,
+.table-bordered caption + tbody tr:first-child th,
+.table-bordered caption + tbody tr:first-child td,
+.table-bordered colgroup + thead tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child td,
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table-bordered thead:first-child tr:first-child > th:first-child,
+.table-bordered tbody:first-child tr:first-child > td:first-child {
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.table-bordered thead:first-child tr:first-child > th:last-child,
+.table-bordered tbody:first-child tr:first-child > td:last-child {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+}
+
+.table-bordered thead:last-child tr:last-child > th:first-child,
+.table-bordered tbody:last-child tr:last-child > td:first-child,
+.table-bordered tfoot:last-child tr:last-child > td:first-child {
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+}
+
+.table-bordered thead:last-child tr:last-child > th:last-child,
+.table-bordered tbody:last-child tr:last-child > td:last-child,
+.table-bordered tfoot:last-child tr:last-child > td:last-child {
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+.table-bordered tfoot + tbody:last-child tr:last-child td:first-child {
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+}
+
+.table-bordered tfoot + tbody:last-child tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+}
+
+.table-bordered caption + thead tr:first-child th:first-child,
+.table-bordered caption + tbody tr:first-child td:first-child,
+.table-bordered colgroup + thead tr:first-child th:first-child,
+.table-bordered colgroup + tbody tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.table-bordered caption + thead tr:first-child th:last-child,
+.table-bordered caption + tbody tr:first-child td:last-child,
+.table-bordered colgroup + thead tr:first-child th:last-child,
+.table-bordered colgroup + tbody tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #f5f5f5;
+}
+
+table td[class*="span"],
+table th[class*="span"],
+.row-fluid table td[class*="span"],
+.row-fluid table th[class*="span"] {
+  display: table-cell;
+  float: none;
+  margin-left: 0;
+}
+
+.table td.span1,
+.table th.span1 {
+  float: none;
+  width: 44px;
+  margin-left: 0;
+}
+
+.table td.span2,
+.table th.span2 {
+  float: none;
+  width: 124px;
+  margin-left: 0;
+}
+
+.table td.span3,
+.table th.span3 {
+  float: none;
+  width: 204px;
+  margin-left: 0;
+}
+
+.table td.span4,
+.table th.span4 {
+  float: none;
+  width: 284px;
+  margin-left: 0;
+}
+
+.table td.span5,
+.table th.span5 {
+  float: none;
+  width: 364px;
+  margin-left: 0;
+}
+
+.table td.span6,
+.table th.span6 {
+  float: none;
+  width: 444px;
+  margin-left: 0;
+}
+
+.table td.span7,
+.table th.span7 {
+  float: none;
+  width: 524px;
+  margin-left: 0;
+}
+
+.table td.span8,
+.table th.span8 {
+  float: none;
+  width: 604px;
+  margin-left: 0;
+}
+
+.table td.span9,
+.table th.span9 {
+  float: none;
+  width: 684px;
+  margin-left: 0;
+}
+
+.table td.span10,
+.table th.span10 {
+  float: none;
+  width: 764px;
+  margin-left: 0;
+}
+
+.table td.span11,
+.table th.span11 {
+  float: none;
+  width: 844px;
+  margin-left: 0;
+}
+
+.table td.span12,
+.table th.span12 {
+  float: none;
+  width: 924px;
+  margin-left: 0;
+}
+
+.table tbody tr.success td {
+  background-color: #dff0d8;
+}
+
+.table tbody tr.error td {
+  background-color: #f2dede;
+}
+
+.table tbody tr.warning td {
+  background-color: #fcf8e3;
+}
+
+.table tbody tr.info td {
+  background-color: #d9edf7;
+}
+
+.table-hover tbody tr.success:hover td {
+  background-color: #d0e9c6;
+}
+
+.table-hover tbody tr.error:hover td {
+  background-color: #ebcccc;
+}
+
+.table-hover tbody tr.warning:hover td {
+  background-color: #faf2cc;
+}
+
+.table-hover tbody tr.info:hover td {
+  background-color: #c4e3f3;
+}
+
+/* è¡¨æ ¼æ‰©å±• */
+
+table th,
+table td {
+  padding:4px 5px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  font-weight: bold;
+}
+
+.table-full {
+  width: 100%;
+}
+
+.table-border th,
+.table-border td{
+    border:1px solid #ddd;
+}
+
+table.table-info{border:1px solid #888;border-collapse:collapse;margin-bottom:1em}
+table.table-info pre{background-color:transparent;margin:0;padding:0;width:auto;}
+table.table-info th,table.table-info td{padding:5px 15px 5px 10px;text-align:left;}
+table.table-info th{background-color:#ccc;border: 1px solid #888;vertical-align: baseline;}
+table.table-info td{background-color:#efefef;border:1px solid #aaa;vertical-align:text-top;}
+table.table-info p{margin:0 0 2px;}
+table.table-info ul,table.table-info li{list-style-type:none;margin:0;padding:0;}
+table.table-info td em{color:#00F;font-weight:normal;}
+table.table-info .table_value{color: #0F93D2;}
+/*table.table-info tr:hover td{ background-color:#f5f5f5}*/
 
 

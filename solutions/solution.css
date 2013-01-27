@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*!
  * solution style
 **/
@@ -23,7 +24,7 @@ small{ font-weight:normal}
 .browser{padding:5px 10px;background:#eee;}
 h1,h2,h3{/*padding-top:0.5em;*/line-height:1.2}
 h4{margin-bottom:1em}
-body :first-child{padding-top:0;}
+body > h1:first-child{padding-top:0;}
 body{padding-bottom:30px;}
 
 .topic,.notopic{
