@@ -80,7 +80,7 @@
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-pages.html"><img src="../solutions/img/default.png" alt="页码组件"><h4>页码组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-alert.html"><img src="../solutions/img/default.png" alt="通知提醒"><h4>通知提醒</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-button.html"><img src="../solutions/img/default.png" alt="网页中的按钮"><h4>网页中的按钮</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-button.html"><img src="../solutions/img/default.png" alt="按钮组件"><h4>按钮组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-table.html"><img src="../solutions/img/table.png" alt="表格研究"><h4>表格研究</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-form.html"><img src="../solutions/img/default.png" alt="Form 表单"><h4>Form 表单</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/dialog.html"><img src="../solutions/img/default.png" alt="对话框"><h4>对话框</h4></a></li>

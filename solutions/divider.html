@@ -8,27 +8,32 @@
 <style>
 .demo{background:#fff;}
 
+/* 定值border,适应性差 */
 .line_01{
     padding: 0 20px 0;
-    margin: 20px 0;
+    margin:30px auto;
     line-height: 1px;
-    border-left: 200px solid #ddd;
-    border-right: 200px solid #ddd;
+    border-left: 350px solid #ddd;
+    border-right: 350px solid #ddd;
     text-align: center;
 }
+/* 适应性差最好,设置最为简单 */
 .line_02{
     height: 1px;
     border-top: 1px solid #ddd;
     text-align: center;
+	margin:30px auto;
 }
 .line_02 span{
     position: relative;
     top: -12px;
     background: #fff;
-    padding: 0 20px;
+    padding:10px 30px;
 }
+
 .line_03{
     width:600px;
+	margin:20px auto;
 }
 .line_03 b{
     background: #ddd;
@@ -46,7 +51,9 @@
 text-align: center;
 }
 .line_04{
-    width:600px;
+    width:60%;
+    min-width:600px;
+	margin:20px auto;
 }
 .line_04{
     overflow: hidden;
@@ -56,19 +63,22 @@ text-align: center;
     background: #ddd;
     margin-top: 12px;
     float: left;
-    width: 26%;
+    width: 30%;
     height: 1px;
     _overflow: hidden;
 }
 .line_04 span{
     padding: 0 10px;
-    width: 32%;
+    width: 36%;
+	min-width: 180px;
     float: left;
     text-align: center;
 }
 .line_05{
     letter-spacing: -1px;
     color: #ddd;
+	text-align: center;
+	margin: 20px auto;
 }
 .line_05 span{
     letter-spacing: 0;
@@ -87,17 +97,9 @@ text-align: center;
 	<h3>小小分隔线 <small>推荐第二种</small></h3>
 	<div class="box">
 <div class="line_01">小小分隔线 单标签实现</div>
-<br>
-<br>
 <div class="line_02"><span>小小分隔线 巧用色实现</span></div>
-<br>
-<br>
 <div class="line_03"><b></b><span>小小分隔线 inline-block实现</span><b></b></div>
-<br>
-<br>
 <div class="line_04"><b></b><span>小小分隔线 浮动来实现</span><b></b></div>
-<br>
-<br>
 <div class="line_05">———————————<span>小小分隔线 字符来实现</span>————————————</div>
 
         </div>
@@ -109,12 +111,5 @@ text-align: center;
     <p>实践出真知</p>
     
 </div>
-
-<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
-
-<!--[if ie 6]>
-<script src="../assets/js/DD_belatedPNG-min.js"></script> 
-<script>DD_belatedPNG.fix('.ie6png');</script>
-<![endif]-->
 </body>
 </html>
