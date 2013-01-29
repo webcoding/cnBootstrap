@@ -7,7 +7,44 @@
 <link rel="stylesheet" href="solution.css">
 <link rel="stylesheet" href="plugin.css">
 <style>
+body{font-size:12px;}
+table{margin-bottom:20px;}
+/* 定制表格——产品列表订单 */
+table{font-size:inherit;}
+.ptable{color:#555;font-size:12px;}
+.ptable th,.ptable td{ border:1px solid #dedede; padding:3px 8px;}
+.ptable td{border:1px solid #D4E7FF;} 
+.ptable .col-name{border-width:2px 1px 1px 1px; border-style:solid; border-color:#d8619b #dcdcdc #dcdcdc #dcdcdc; background: url(http://pic.lvmama.com/img/mylvmama/lv-bgx.gif) #fff left top repeat-x;}
+.ptable th{height:29px; line-height:29px;text-align:center; padding:0 8px;color:#555;white-space:nowrap;border:none;}
+.ptable td{text-align:center;border-color:#ddd;}
+.ptable .product-name,.biz_order td{text-align:left;}
+.ptable .order-hd td{height:23px;}
+.ptable .sep-row{height:7px;}
+.ptable .sep-row td{border:none;}
+.ptable p{ margin:0;}
 
+.xcard th,.xcard td{ border-color:#b6d6ee}.xcard .order-hd{ background:#e6f6ff}
+.ptable .order-hd{color:#404040;}
+.ptable .close-order .order-hd,.ptable .success-order .order-hd{background:#f8f8f8;}
+.close-order td,.success-order td{border-color:#ddd;}
+.xcard .product-name-name{color:#08C}
+.success-order .product-name-name,.close-order .product-name-name{color:#333}
+.xcard .product-name-name:hover{color:#d38}
+
+
+input{
+    display: inline-block;
+    height: 16px;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #aabbcc;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.075);
+}
+.req{color: #f00;font-style: normal;padding-right:3px;}
 </style>
 </head>
 <body>
@@ -18,10 +55,9 @@
 	<h3>按最常见需求进行研究</h3>
     <ul>
         <li>默认表格及BT表格（.table table-striped table-bordered table-hover等）</li>
-        <li>扩展的经典表格（边框表格 <code>table-border</code> 信息表格 <code>table-info</code> 全宽表格 <code>table-full</code>）</li>
-        <li>常用订单/产品表格（普通订单 <code>table-order</code> 复杂订单 <code>table-xorder</code>）</li>
-        <li>支持表格扩展定制（定制原型 <code>xtable</code>）</li>
-        <li>其他的扩展设置（.***-table）</li>
+        <li>内置经典表格（边框表格 <code>table-border</code> 信息表格 <code>table-info</code> 全宽表格 <code>table-full</code>）</li>
+        <li>定制的表格（布局表格 <code>table-layout</code> 订单/产品表格 <code>table-order</code> 复杂订单列表 <code>table-xorder</code>）</li>
+        <li>其他扩展定制（定制原型 <code>xtable</code> <code>.***-table</code>）</li>
     </ul>
 <p>借鉴Button的实现，需要的表格不需要组合太多的class实现（默认，某一特色效果级别，定制级别）</p>
 <h3>下面是将要实现最基本需求的表格：<small>组合表格命名使用class="table-***"，定制表格使用class="***-table"</small></h3>
@@ -103,7 +139,158 @@
     </tr>
 </table>
 
-        
+<h3>布局表格 <small>.table-layout</small></h3>
+<table class="table-layout">
+    <tr>
+        <th>表格布局</th>
+        <th>承载布局元素</th>
+        <th>这是一种常用的布局方式</th>
+    </tr>
+	<tr>
+        <td>布局样式</td>
+        <td>表单，信息展示等</td>
+        <td>两列方便对齐，如:左侧右对齐，右侧左对齐且水平对齐</td>
+    </tr>
+</table>
+<table class="table-layout">
+    <tr>
+        <td class="label">用户名：</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td class="label">密码：</td>
+        <td><input type="password"></td>
+    </tr>
+</table>
+<table class="table-layout table-border form-inline">
+	<tr>
+		<td class="f_label" width="150"><i class="req">*</i>产品名称：</td>
+		<td width="300"><input type="text" placeholder="日本团队旅游(上海送签)" class="w15"></td>
+		<td class="f_label" width="150">产品ID：</td>
+		<td width="300">lv123456</td>
+	</tr>
+	<tr>
+		<td class="f_label"><i class="req">*</i>签证有效期：</td>
+		<td><input type="text" placeholder="根据行程，以使馆签发为准" class="w15"></td>
+		<td class="f_label"><i class="req">*</i>送签类型：</td>
+		<td>
+			<label class="radio"><input type="radio">团队旅游签证</label>
+		</td>
+	</tr>
+	<tr>
+		<td class="f_label"><i class="req">*</i>销售价：</td>
+		<td><input type="text" class="w3"></td>
+		<td class="f_label">是否附加：</td>
+		<td>
+			<label class="radio"><input name="yesno" type="radio">是</label>　　
+			<label class="radio"><input name="yesno" type="radio">否</label>
+		</td>
+	</tr>
+	<tr>
+		<td class="f_label"><i class="req">*</i>结算价：</td>
+		<td><input type="text" class="w3"></td>
+		<td class="f_label">产品编号：</td>
+		<td>
+			<input type="text">
+		</td>
+	</tr>
+	<tr>
+		<td class="f_label">市场价：</td>
+		<td><input type="text" class="w3"></td>
+		<td class="f_label">材料截止收取提前：</td>
+		<td>
+			<input type="text" class="w2" placeholder="5">
+		</td>
+	</tr>
+	<tr>
+		<td class="f_label">币种：</td>
+		<td><input type="text" placeholder="人民币"></td>
+		<td class="f_label">所属公司：</td>
+		<td><select>
+		<option value="">亚洲</option>
+		<option value="">美洲</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="f_label">关联供应商：</td>
+		<td><input type="text" class="search" placeholder="上航假班"></td>
+		<td class="f_label">产品经理：</td>
+		<td><input type="text" class="search"></td>
+	</tr>
+	<tr>
+		<td class="f_label">结算对象：</td>
+		<td colspan="3"><input type="text" class="search" placeholder="上航假班"></td>
+	</tr>
+	<tr>
+		<td class="f_label">预订须知：</td>
+		<td class="form-inline" colspan="3">
+			<textarea class="p-textarea">2011-09-01至2020-12-31 :使用说明: 提交材料后，我司可能会根据您材料情况要求增补其他签证材料、担保金或者予以劝退，请积极配合。
+2011-12-01至2021-12-31 :使用说明: 办理签证期间，领馆可能会联系您核对材料准确性并要求增补其他签证材料，请积极配合查询，有助于顺利出签！
+2012-12-19至2013-05-16 :预订限制: 日本领馆将于2012年12月31日-2013年01月03日、01月05日、01月06日、02月11日-02月15日闭馆。</textarea>
+		</td>
+	</tr>
+</table>
+<h3>定制表格 <small>产品列表订单等</small></h3>
+<table data-spm="6" class="ptable">
+    <thead>
+    	<tr class="col-name">
+            <th class="product-name">产品名称</th>
+            <th class="price">金额(元)</th>
+            <th class="order-status">订单状态</th>
+            <th class="deal-status">合同状态</th>
+            <th class="remark">　操作　</th>
+            <th class="other">其它操作</th>
+        </tr>
+    </thead>
+    <tbody class="xcard combo-order">
+    	<tr class="sep-row">
+            <td colspan="6"></td>
+        </tr>
+        <tr class="order-hd biz_order">
+        	<td colspan="6"><span>订单号：195770365703415  下单时间：2012-07-15 22:31 支付方式：在线支付</span></td>
+    	</tr>
+            <tr class="order-bd last">
+            <td colspan="1" class="product-name">
+            	<a href="#" class="plink_name">三亚蜈支洲岛、天涯海角、扬帆海钓美食海景双飞5日游三三亚蜈支洲岛扬帆海钓美食海景双飞5日游亚蜈支洲岛天涯海角扬帆海钓美食海景双飞5日游</a><br>
+                自助游天下，就找驴妈妈
+            </td>
+            <td class="price">111</td>
+            <td class="order-status">等待支付</td>
+            <td class="deal-status">未签约</td>
+            <td class="operate">立即支付</td>
+            <td class="other"></td>
+        </tr>
+    </tbody>
+    <tbody class="xcard combo-order close-order success-order">
+    	<tr class="sep-row">
+            <td colspan="6"></td>
+        </tr>
+        <tr class="order-hd biz_order">
+        	<td colspan="6"><span>订单号：195770365703415  下单时间：2012-07-15 22:31 支付方式：在线支付</span></td>
+    	</tr>
+            <tr class="order-bd last">
+            <td colspan="1" class="product-name">
+            	<p><a href="#" class="plink_name">三亚蜈支洲岛、天涯海角、扬帆海钓美食海景双飞5日游三三亚蜈支洲岛扬帆海钓美食海景双飞5日游亚蜈支洲岛天涯海角扬帆海钓美食海景双飞5日游</a></p>
+                <p>自助游天下，就找驴妈妈</p>
+            </td>
+            <td class="price">111</td>
+            <td class="order-status">交易完成</td>
+            <td class="deal-status">已签约</td>
+            <td class="operate"></td>
+            <td class="other">点评</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr class="sep-row">
+            <td colspan="6"></td>
+        </tr>
+    </tfoot>
+</table>
+
+
+
+
     </div>
 <pre class="prettyprint linenums">
 

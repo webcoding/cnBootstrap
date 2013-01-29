@@ -72,6 +72,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float.html"><img src="../solutions/img/clear-float.png" alt=""><h4>清除浮动</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rgba-opacity.html"><img src="../solutions/img/rgba-opacity.png" alt=""><h4>RGBA 与 背景透明</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/double-border.html"><img src="../solutions/img/double-border.png" alt=""><h4>double border 双线框</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/two-layout.html"><img src="../solutions/img/two-layout.png" alt="经典两列布局"><h4>经典两列布局</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button.html"><img src="../solutions/img/default.png" alt="按钮兼容最佳方案"><h4>按钮兼容最佳方案</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
