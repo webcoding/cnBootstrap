@@ -26,7 +26,7 @@ h1,h2,h3{/*padding-top:0.5em;*/line-height:1.2}
 h4{margin-bottom:1em}
 body > h1:first-child{padding-top:0;}
 body{padding-bottom:30px;}
-
+.red{color:#f00}
 .topic,.notopic{
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
