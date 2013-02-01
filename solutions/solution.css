@@ -220,12 +220,12 @@ blockquote:before {
 	display: block;
 	height: 0;
 	content: "“";
-	margin-left: -.55em; font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+	margin-left: -.65em; font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
 	color: #999;
 }
 blockquote{white-space:pre-wrap;word-wrap:break-word;font-size:12px;display:block;line-height:1.6em;margin:0.45em 0 0.45em 2em;}
-blockquote{background:#F4F5F7;white-space:normal;min-width:574px;padding:8px 6px 8px 30px;border:1px dashed #ccc;}
-
+blockquote{background:#F4F5F7;white-space:normal;min-width:574px;padding:8px 6px 8px 40px;border:1px dashed #ccc;}
+blockquote p{margin:5px 0}
 table.info{border: 1px solid #888;border-collapse:collapse;font-family:Arial,Helvetica;margin-bottom:1em}
 table.info pre{background-color:transparent;margin:0;padding:0;width:auto;}
 table.info th{background-color:#CCC;border: 1px solid #888;padding:5px 15px 5px 10px;text-align:left;vertical-align: baseline;}

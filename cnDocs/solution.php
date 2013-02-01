@@ -73,7 +73,8 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rgba-opacity.html"><img src="../solutions/img/rgba-opacity.png" alt=""><h4>RGBA 与 背景透明</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/double-border.html"><img src="../solutions/img/double-border.png" alt=""><h4>double border 双线框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/two-layout.html"><img src="../solutions/img/two-layout.png" alt="经典两列布局"><h4>经典两列布局</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button.html"><img src="../solutions/img/default.png" alt="按钮兼容最佳方案"><h4>按钮兼容最佳方案</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button.html"><img src="../solutions/img/button.png" alt="按钮兼容最佳方案"><h4>按钮兼容最佳方案</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/margin-usage.html"><img src="../solutions/img/default.png" alt="妙用margin负边距"><h4>妙用margin负边距</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
@@ -86,17 +87,16 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/plugin-form.html"><img src="../solutions/img/default.png" alt="Form 表单"><h4>Form 表单</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/dialog.html"><img src="../solutions/img/default.png" alt="对话框"><h4>对话框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/popover.html"><img src="../solutions/img/default.png" alt=""><h4>弹出框</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout"><img src="../solutions/img/default.png" alt=""><h4>布局</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyhtml"><img src="../solutions/img/default.png" alt=""><h4>html固定用法</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/imgtext"><img src="../solutions/img/default.png" alt=""><h4>图文混排</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/itemlist"><img src="../solutions/img/default.png" alt=""><h4>项目列表</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/newslist"><img src="../solutions/img/default.png" alt=""><h4>新闻列表</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs"><img src="../solutions/img/default.png" alt=""><h4>tab标题</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyrun"><img src="../solutions/img/default.png" alt=""><h4>Copy&Run</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="bugs-and-fixed.php"><img src="../solutions/img/default.png" alt=""><h4>Bugs列表</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tools"><img src="../solutions/img/default.png" alt=""><h4>前端工具</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css-resource"><img src="../solutions/img/default.png" alt=""><h4>css资源</h4></a></li>
-			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/layout.html"><img src="../solutions/img/default.png" alt=""><h4>布局</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copy-makeup.html"><img src="../solutions/img/default.png" alt=""><h4>html固定用法</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/imgtext.html"><img src="../solutions/img/default.png" alt=""><h4>图文混排</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/itemlist.html"><img src="../solutions/img/default.png" alt=""><h4>项目列表</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/newslist.html"><img src="../solutions/img/default.png" alt=""><h4>新闻列表</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tabs.html"><img src="../solutions/img/default.png" alt=""><h4>tab标题</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/copyrun.html"><img src="../solutions/img/default.png" alt=""><h4>Copy&Run</h4></a></li>
+			<li class="span2"><a class="thumbnail" href="bugs-and-fixed.php"><img src="../solutions/img/default.png" alt=""><h4>Bugs列表</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/tools.html"><img src="../solutions/img/default.png" alt=""><h4>前端工具</h4></a></li>
+			<li class="span2"><a class="thumbnail" href="../solutions/project.php"><img src="../solutions/img/default.png" alt=""><h4>前端资源</h4></a></li>
 		</ul>
 		
 		<h3>HTML5/CSS3 特效 <small>提升体验、平滑升级</small></h3>
@@ -117,7 +117,6 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-stroke.html"><img src="../solutions/img/text-stroke.png" alt="text-stroke 文字描边"><h4>text-stroke 文字描边</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text-fill-color.html"><img src="../solutions/img/text-fill-color.png" alt="text-fill-color 文字填充色"><h4>text-fill-color 文字填充色</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-nth-child(n).html"><img src="../solutions/img/nth-child(n).png" alt="nth-child(n)"><h4>nth-child(n) 匹配子元素</h4></a></li>
-			
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-btn"><img src="../solutions/img/default.png" alt=""><h4>CSS3按钮</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/css3-text"><img src="../solutions/img/default.png" alt=""><h4>CSS3文字特效</h4></a></li>
