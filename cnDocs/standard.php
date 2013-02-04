@@ -21,15 +21,15 @@
 	<div class="span3 bs-docs-sidebar">
 		<ul class="nav nav-list bs-docs-sidenav">
 			<li><a href="#overview"><i class="icon-chevron-right"></i> 概述</a></li>
-			<li><a href="#document"><i class="icon-chevron-right"></i> 文档结构</a></li>
 			<li><a href="#file-structure"><i class="icon-chevron-right"></i> 目录结构规范</a></li>
+			<li><a href="#document"><i class="icon-chevron-right"></i> 文档结构</a></li>
 			<li><a href="#naming"><i class="icon-chevron-right"></i> 命名规范</a></li>
-			<li><a href="#labor"><i class="icon-chevron-right"></i> 分工安排</a></li>
-			<li><a href="#notes"><i class="icon-chevron-right"></i> 注释规范</a></li>
-			<li><a href="#css"><i class="icon-chevron-right"></i> CSS规范</a></li>
 			<li><a href="#html"><i class="icon-chevron-right"></i> HTML规范</a></li>
+			<li><a href="#css"><i class="icon-chevron-right"></i> CSS规范</a></li>
 			<li><a href="#hack"><i class="icon-chevron-right"></i> Hack规则</a></li>
+			<li><a href="#notes"><i class="icon-chevron-right"></i> 注释规范</a></li>
 			<li><a href="#names"><i class="icon-chevron-right"></i> 常用词命名统一表</a></li>
+			<li><a href="#labor"><i class="icon-chevron-right"></i> 分工安排</a></li>
 			<li><a href="#javascript"><i class="icon-chevron-right"></i> JavaScript 编码风格</a></li>
 			<li><a href="#js-notes"><i class="icon-chevron-right"></i> JavaScript 注释规范</a></li>
 			<li><a href="#json"><i class="icon-chevron-right"></i> JSON格式规范</a></li>
@@ -50,27 +50,101 @@
 				<h1>概述</h1>
 			</div>
 			<h3>规范说明</h3>
-			<p>此规范为参考规范，不全是硬性要求，部分硬性约定见下一条书写规范，统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。</p>
+			<p>此规范为参考规范，不全是硬性要求，部分硬性约定见 <a href="standard.php#document">文档结构</a> & <a href="">书写规范</a>，统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。</p>
+			<p>首先规划统一风格的文档结构，包括但不限于HTML、CSS、JS，文档更统一且简洁明了！</p>
+			<p>统一风格的命名规范，语义清晰，可读性高</p>
+			<p>严谨的编码风格，消除潜在代码缺陷</p>
 			<div class="alert alert-info"><strong>大家一起完善。</strong> </div>
 		</section>
-		
-		<!-- Document
-		================================================== -->
-		<section id="document">
-			<div class="page-header">
-				<h1>文档结构</h1>
-			</div>
-			<p>文档结构</p>
-		</section>
-		
+
 	    <!-- File Structure
 		================================================== -->
 		<section id="file-structure">
 			<div class="page-header">
 				<h1>目录结构规范</h1>
 			</div>
-			<p>目录结构规范</p>
+			<h3>网站系统</h3>
+<pre class="prettyprint">
+cnBootstrap/  pro即具体项目名称
+├── css/
+│   ├── /reset.css     ├── core.css
+│   ├── /common.css    │
+│   ├── pro-common.css │
+│   ├── pro-custom.css
+├── js/
+│   ├── /common.js
+│   ├── pro-custom.js
+├── img/
+│   ├── combo.png
+│   ├── pro-png24.png
+└── README.md
+</pre>
+			<h3>专题页面</h3>
+<pre class="prettyprint">
+zt/  pro即专题简述名称
+├── css/
+│   ├── /reset.css     ├── zt_style.css
+│   ├── /common.css    │
+│   ├── zt_style.css   │
+├── js/
+│   ├── /common.js
+│   ├── pro-custom.js
+├── img/
+│   ├── combo.png
+│   ├── pro-png24.png
+└── README.md
+</pre>
 		</section>
+		
+		<!-- HTML
+		================================================== -->
+		<section id="html">
+			<div class="page-header">
+				<h1>HTML规范</h1>
+			</div>
+			<h5>* 第一行统一使用HTML5标准：&lt;!DOCTYPE html&gt;</h5>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;title&gt;your title&lt;/title&gt;
+&lt;link rel="stylesheet" href="css_example_url" /&gt;
+&lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+			<h5>Meta 的使用：（需根据具体项目选择）参考 <a href="https://github.com/webcoding/cool-head">cool-head</a> </h5>
+			
+			
+			<ul>
+			<li> <code>&lt;img&gt;</code> 标签默认缺省格式：<code>&lt;img src="xxx.png" alt="缺省时文字" /&gt;</code> 避免出现 <a href="http://js8.in/555.html" title="src=&quot;&quot; 问题"> src="" 问题</a> </li>
+			<li> <code>&lt;a&gt;</code> 标签缺省格式：<code>&lt;a href="###" title="链接名称"&gt;xxx&lt;/&gt;</code> 注：<code>target="_blank"</code> 根据需求决定 </li>
+			<li><a>标签预留链接占位符使用 <code>###</code>，参见：</a> <a href="http://www.v2ex.com/t/48511/" title="a标签占位符问题">a标签占位符问题</a></li>
+			<li>所有标签需要符合XHTML标准闭合</li>
+			<li>一律统一标签结尾斜杠的书写形式：<code>&lt;br /&gt;</code> <code>&lt;hr /&gt;</code> 注意之间空格</li>
+			<li>避免使用已过时标签，如：<code>&lt;b&gt;</code> <code>&lt;u&gt;</code> <code>&lt;i&gt;</code> 而用 <code>&lt;strong&gt;</code> <code>&lt;em&gt;</code> 等代替</li>
+			<li>使用 <code>data-xxx</code> 来添加自定义数据，如：<code>&lt;input data-xxx="yyy"/&gt;</code> </li>
+			<li>避免使用 <code>style="xxx:xxx;"</code> 的内联样式表</li>
+			<li>特殊符号使用参考 <a href="http://www.w3school.com.cn/html/html_entities.asp">HTML 符号实体</a> </li>
+			</ul>
+			
+			<h5>HTML 细化规范</h5>
+			<ul>
+			<li>HTML <code>head</code> 部分的结构参看：<a href="https://github.com/webcoding/cool-head">cool-head</a> (摘取必要内容即可)</li>
+			<li> <code>css</code> 文件置于都 <strong>头部</strong> </li>
+			<li> <code>jQuery</code> 及 <code>Google Analytics</code> 引用置于 <strong>头部</strong> </li>
+			<li>其他效果 <code>js</code> 及 <code>统计代码</code> 文件置于 <strong>尾部</strong> </li>
+			<li>HTML 代码尽量过一遍 <a href="http://html5.validator.nu/">HTML5 验证</a> </li>
+			<li>HTML 占位图片使用 <a href="http://temp.im/">temp.im</a> &amp; <a href="http://placehold.us/">placehold.us</a> 图片服务</li>
+			</ul>
+		</section>
+		
+
 		
 		<!-- Naming
 		================================================== -->
@@ -92,6 +166,24 @@
 </ul></li>
 </ol>
 		</section>
+		
+		<!-- Document
+		================================================== -->
+		<section id="document">
+			<div class="page-header">
+				<h1>文档结构</h1>
+			</div>
+			<p>下面内容对前端文档结构进行了规范约束，并作为硬性约定。</p>
+			<h2>HTML 规范</h2>
+			
+			
+			
+			<h2>CSS</h2>
+			<h2></h2>
+		</section>
+		
+		
+
 		
 		<!-- JavaScript
 		================================================== -->
@@ -121,50 +213,7 @@
 			<p>CSS规范</p>
 		</section>
 		
-		<!-- HTML
-		================================================== -->
-		<section id="html">
-			<div class="page-header">
-				<h1>HTML规范</h1>
-			</div>
-			<h5>* 第一行统一使用HTML5标准：&lt;!DOCTYPE html&gt;</h5>
-			<pre class="prettyprint linenums">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Hello, world!&lt;/h1&gt;
-&lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-			<h5>Meta 的使用：（需根据具体项目选择）参考 <a href="https://github.com/webcoding/cool-head">cool-head</a> </h5>
-			
-			
-			<ul>
-			<li> <code>&lt;img&gt;</code> 标签默认缺省格式：<code>&lt;img src="xxx.png" alt="缺省时文字" /&gt;</code> 避免出现 <a href="http://js8.in/555.html" title="src=&quot;&quot; 问题"> src="" 问题</a> </li>
-			<li> <code>&lt;a&gt;</code> 标签缺省格式：<code>&lt;a href="###" title="链接名称"&gt;xxx&lt;/&gt;</code> 注：<code>target="_blank"</code> 根据需求决定 </li>
-			<li><a>标签预留链接占位符使用 <code>###</code>，参见：</a> <a href="http://www.v2ex.com/t/48511/" title="a标签占位符问题">a标签占位符问题</a></li>
-			<li>所有标签需要符合XHTML标准闭合</li>
-			<li>一律统一标签结尾斜杠的书写形式：<code>&lt;br /&gt;</code> <code>&lt;hr /&gt;</code> 注意之间空格</li>
-			<li>避免使用已过时标签，如：<code>&lt;b&gt;</code> <code>&lt;u&gt;</code> <code>&lt;i&gt;</code> 而用 <code>&lt;strong&gt;</code> <code>&lt;em&gt;</code> 等代替</li>
-			<li>使用 <code>data-xxx</code> 来添加自定义数据，如：<code>&lt;input data-xxx="yyy"/&gt;</code> </li>
-			<li>避免使用 <code>style="xxx:xxx;"</code> 的内联样式表</li>
-			<li>特殊符号使用参考 <a href="http://www.w3school.com.cn/html/html_entities.asp">HTML 符号实体</a> </li>
-			</ul>
-			
-			<h5>HTML 细化规范</h5>
-			<ul>
-			<li>HTML <code>head</code> 部分的结构参看：<a href="https://github.com/webcoding/cool-head">cool-head</a> (摘取必要内容即可)</li>
-			<li> <code>css</code> 文件置于都 <strong>头部</strong> </li>
-			<li> <code>jQuery</code> 及 <code>Google Analytics</code> 引用置于 <strong>头部</strong> </li>
-			<li>其他效果 <code>js</code> 及 <code>统计代码</code> 文件置于 <strong>尾部</strong> </li>
-			<li>HTML 代码尽量过一遍 <a href="http://html5.validator.nu/">HTML5 验证</a> </li>
-			<li>HTML 占位图片使用 <a href="http://temp.im/">temp.im</a> &amp; <a href="http://placehold.us/">placehold.us</a> 图片服务</li>
-			</ul>
-		</section>
+
 		
 		
 		<!-- Hack
@@ -692,7 +741,7 @@ define(function(require, exports, module) {
 			<li>不使用 <code>Javascript</code> </li>
 			<li>正式发送给用户之前，多次测试</li>
 			</ul>
-			<p>更多细节参考下面链接：<br><a href="http://www.web-ed.com.au/2011/05/coding-html-newsletters-edms-quick-guide/">12 Killer Tips and Tricks for Building HTML Email</a></p>
+			<p>更多细节参考下面链接：<br><a target="_blank" href="http://www.web-ed.com.au/2011/05/coding-html-newsletters-edms-quick-guide/">12 Killer Tips and Tricks for Building HTML Email</a></p>
 		</section>
 
     </div>

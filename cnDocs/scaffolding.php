@@ -36,7 +36,7 @@
                 <h3 title="Requires HTML5 doctype">要求HTML5 doctype</h3>
                 <p title="Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.">Bootstrap用到的HTML元素和CSS属性需要HTML5 doctype。因此每个使用Bootstrap的页面都应该包启HTML5声明。</p>
                 <p>页面框架是创建所有页面的基础，拷贝以下代码作为你的页面的初始状态。</p>
-                <pre class="prettyprint linenums">
+<pre class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
