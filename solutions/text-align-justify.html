@@ -7,10 +7,9 @@
 <link rel="stylesheet" href="solution.css">
 <style>
 .demo {background:#fff}
-.demo p{
+.demo-text p{
     overflow:hidden;
     width:200px;
-    height:24px;
 	line-height:24px;
     margin:0 auto 10px;
     border:1px solid #ccc;
@@ -20,7 +19,6 @@
 /* Only for IE */
 .justify-for-ie p{
     text-align:justify;
-    text-align-last:justify;
 }
 
 /* Only for Firefox */
@@ -42,11 +40,15 @@
 }
 
 /* justify for All */
-.text-justify p{
+.text-justify{
     text-align:justify;
+	/*text-justify:inter-ideograph; ie hack*/
+}
+.single-line-justify p{
+    height:24px;
     text-align-last:justify;
 }
-.text-justify p:after{
+.single-line-justify p:after{
     display:inline-block;
     content:'';
     overflow:hidden;
@@ -54,9 +56,27 @@
     height:0;
 }
 
+.singleline-justify{
+    height:24px;
+    text-align-last:justify;
+	
+}
+.singleline-justify:after{
+    display:inline-block;
+    content:'';
+    overflow:hidden;
+    width:100%;
+    height:0;
+}
+.a2row li{width:40%;margin:0 4% 0;background:#eee;border:1px solid #ccc;padding-top:10px;}
+.a2row li p{padding:0 10px;margin:10px 0;line-height:22px;font-family:Tahoma;}
+
+
+
+
 /* justify-form 表单标签两端对齐 */
 .justify-form{
-    
+
 }
 
 .btn-submit{overflow:visible;height:31px;padding:3px 20px;border:1px solid #0382AD;border-radius:3px;background-color:#45B5DA;background:-webkit-linear-gradient(#45B5DA,#0382AD);background:linear-gradient(#45B5DA,#0382AD);color:#fff;font-size:14px;}
@@ -79,8 +99,6 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
 .demo .form{width:400px;margin:20px auto;text-align:left;}
 .demo fieldset{padding:20px;border:1px solid #aaa;border-radius:5px;}
 .demo .act{padding:10px 0 0 88px;}
-
-
 </style>
 </head>
 <body>
@@ -89,7 +107,7 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
 	<p class="browser">浏览器参照基准：IE5.5+, Firefox4+, Chrome5+, Safari5+, Opera10.53+ </p>
     <p>两端对齐方案基于 text-align:justify 及 text-align-last:justify 实现</p>
 	
-	<div class="demo text-justify">
+	<div class="demo demo-text text-justify single-line-justify">
 	    <h3 class="tc">综合兼容实现</h3>
 	    <p>世 界 末 日 2012</p>
 	    <p>把 钱 都 花 了 ？</p>
@@ -97,21 +115,28 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
 	    <p>傻 了 吧</p>
     </div>
 <pre class="prettyprint linenums">
-/* text-justify */
+/* justify for All */
 .text-justify p{
     text-align:justify;
     text-align-last:justify;
 }
-.text-justify p:after{
+.single-line-justify p{
+    height:24px;
+}
+.single-line-justify p:after{
     display:inline-block;
     content:'';
     overflow:hidden;
     width:100%;
     height:0;
 }
+
+<strong>注意：</strong>这里使用了:after属性，p标签<b>自适应高度</b>时出现底部多一空白行高度，针对此问题，对<em>飘零雾雨</em>的方法进行下变更会应用更方便，对单行文本和多行文本进行区分处理，如下：
+默认支持多行文本两端对齐，需添加 .text-justify 样式；
+支持单行文本两端对齐，需再添加 .single-line-justify 样式，对了，还要单独设置下高度哦！
 </pre>
 	
-    <div class="demo justify-for-ie">
+    <div class="demo demo-text justify-for-ie single-line-justify">
 	    <h3 class="tc">Only IE</h3>
 	    <p>世 界 末 日 2012</p>
 	    <p>把 钱 都 花 了 ？</p>
@@ -122,13 +147,15 @@ input.text:disabled,input.text.disabled{border-color:#aaa;background-color:#efef
 /* Only for IE */
 .justify-for-ie p{
     text-align:justify;
-    text-align-last:justify;
 }
-
-justify最先是作为IE私有属性实现
+.single-line-justify p{
+    text-align-last:justify;
+    /* 此不能作为两端对齐默认属性，会对多行文本最后一行造成影响，故改为只在单行文本时使用 */
+}
+justify最先是作为IE私有属性实现（也许是由于office吧，IE对文本的排版设置特别强悍，还有文本纵向排列属性呢，只不过其他浏览器都不支持，以至于<a href="vertical-text.html">文本纵排</a>全兼容最好用其他方法）
 </pre>
     
-	<div class="demo justify-for-firefox">
+	<div class="demo demo-text justify-for-firefox">
 	    <h3 class="tc">Only Firefox</h3>
 	    <p>世 界 末 日 2012</p>
 	    <p>把 钱 都 花 了 ？</p>
@@ -145,7 +172,7 @@ justify最先是作为IE私有属性实现
 text-align-last 在Firefox12-17下仍处理实验支持阶段，需加前缀 -moz-
 </pre>
     
-	<div class="demo justify-for-webkit-presto">
+	<div class="demo demo-text justify-for-webkit-presto single-line-justify">
 	    <h3 class="tc">Chrome, Safari, Opera下的两端对齐</h3>
 	    <p>世 界 末 日 2012</p>
 	    <p>把 钱 都 花 了 ？</p>
@@ -157,7 +184,10 @@ text-align-last 在Firefox12-17下仍处理实验支持阶段，需加前缀 -mo
 .justify-for-webkit-presto p{
     text-align:justify;
 }
-.justify-for-webkit-presto p:after{
+.single-line-justify p{
+    height:24px;
+}
+.single-line-justify p:after{
     display:inline-block;
     content:'';
     overflow:hidden;
@@ -166,10 +196,36 @@ text-align-last 在Firefox12-17下仍处理实验支持阶段，需加前缀 -mo
 }
 
 Chrome23, Safari5.1.7, Opera12.11 不支持 text-align-last, 但支持 text-align 的 jsutify,所以这里可以变通实现单行文本两端对齐对齐，我们知道text-align:justify 不处理块内的最后一行文本（包括块内仅有一行文本的情况，这时既是第一行也是最后一行）及被强制打断的行的两端对齐，但会处理除此之外的其它行，所以只需要将这里的单行变成多行即可，那么我们可以使用伪对象的方式派生出新行，这样不需要额外处理html代码，然后再将派生出的新行隐藏
+
+这里<em>飘零雾雨</em>的:after方法主要解决单行文本两端对齐问题，对于多行文本无此问题，无需设置即可！
 </pre>
 
 	<div class="demo">
-	<h3 class="tc">常见场景</h3>
+	<h3 class="tc">中英文 多行|单行文本两端对齐效果</h3>
+	<ul class="none a2row hor">
+	<li class="text-justify">
+	<p><span class="red">This is the effect of the English text:</span><br>
+	Start:<br>
+	<b style="background:#A0FFFF">W3Schools</b> is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use and privacy policy.<br>
+	End.</p>
+	<p class="singleline-justify">Effect of a single line of text</p>
+	</li>
+	<li class="text-justify">
+	<p><span class="red">这是中文文字的效果：</span><br>
+	测试文字内容区开始：<br>
+	cnBootstrap 项目是基于 Twitter Bootstrap 开发的前端框架，集成了 aliceui 兼容解决方案（包括但不限于aliceui）亦将我所了解的前端技巧也整合进了解决方案，现仍在完善中... 本项目在<a target="_blank" href="http://creativecommons.org/licenses/by/3.0/deed.zh" title="开源许可协议">CC BY 3.0</a>协议下开源，您可以随意使用本项目代码，更多详情请访问<a href="../cnDocs/solution.php">前端兼容解决方案</a>。<br>
+	测试文字内容区结束</p>
+	<p>标点/空格测试<br>
+	cnBootstrap项目是基于Twitter Bootstrap开发的前端框架，集成了...  <span class="red" title="此处避免此行标点符号居行首，所以上一行单独一个的空格自动分配了那么大的空间，可以适当的在英文周围添加空格来处理此问题，避免出现上面难看的效果">此处会避免标点符号居行首，所以...</span></p>
+	<div class="single-line-justify">
+	<p>单 行 文 本 效 果</p></div>
+	</li>
+	</ul>
+	<p class="note"><strong>注意：</strong>针对中文的单行文本两端对齐（英文单词已经有空格了），文字间必须要加空格两端对齐才有效果，不然无效！<br>
+	text-justify:inter-ideograph;属性时IE hack，在IE下不管中英文、不管是不是最后一行、不管中文间有没有加空格都将全变为文本两端对齐的效果，不推荐使用。
+	</p>
+	<p>由于字体在各个浏览器下还是有些微差异的，所以文本两端对齐的应用在各浏览器下效果并不一致，请重视空格/标点符号的影响，需适当手工调整。</p>
+	<h3 class="tc">其他常见场景</h3>
 <form action="#" method="post" class="form form-inline" autocomplete="off">
 	<fieldset>
 		<legend>表单</legend>

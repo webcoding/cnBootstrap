@@ -6,12 +6,69 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
+.main { background:#ccc; }
+.aside { background:#aaa; }
+.content { background:#999 }
+.laya { position:relative; height:250px; overflow:hidden }
+.laya .aside, .laya .main { position:absolute; left:0; }/*绝对定位一个方向即可*/
+.laya .main { width:100%; }
+.laya .content { margin:20px 20px 20px 340px; height:200px; }
+.laya .aside { width:300px; margin:20px; height:200px }
 
+.layb { overflow:hidden }
+.layb .main { float:right; width:100%; margin-left:-340px; }
+.layb .main,.layb .aside{ display:inline}/*消除IE6下块级浮动引起的双边距*/
+.layb .content { margin:20px 20px 20px 340px; height:200px; }
+.layb .aside { float:left; width:300px; margin:20px; height:200px;}
+.layba { overflow:hidden }/*大前端的实现办法*/
+.layba .main,.layba .aside{float:right; display:inline}/*消除IE6下块级浮动引起的双边距*/
+.layba .main { width:100%; }
+.layba .content { margin:20px 20px 20px 340px; height:200px; }
+.layba .aside { width:300px; margin:20px -320px 20px 20px; height:200px }
+
+.layc { position:relative; background:#ccc; height:250px; overflow:hidden; }
+.layc .main { left:340px; right:20px; background:#999 }
+.layc .aside { width:300px; left:20px; }
+.layc .aside, .layc .main { position:absolute;top:20px; bottom:20px;}
+/*上面这种方法若设置四个方向的绝对定位，在复杂的布局中，可支持某一盒子高度宽度随浏览器变化，并始终铺满浏览器空白区域，适用于后台管理操作界面的设计
+不足是IE6浏览器最多只支持两个方向的绝对定位，需要引入一个js修复IE6的bug，有且仅有此一不足*/
+
+.layd { overflow:hidden; background:#ccc }
+/* calc() 用于动态计算长度值 Webkit(Chrome/Safari)  Presto(Opera)  IE6,7,8不支持，可使用width: expression();表达式
+  任何长度值都可以使用calc()函数进行计算。 calc()函数支持+, -, *, /, mod运算
+	Gecko(Firefox) -moz-calc() 
+	Trident(IE) calc() 	/* IE9 
+	.test{width:-moz-calc(100%-50px);width:calc(100%-50px);background:#eee;}*/
+
+.laye { border:6px solid orange; padding:6px; text-align:justify; -moz-column-width:20em; -moz-column-gap:3em; -moz-column-rule:6px solid blue; -webkit-column-width:20em; -webkit-column-gap:5em; -webkit-column-rule:6px solid blue; }
+/*multi-column layout:多列布局，让文字以多列显示，包括column-width、column-count、column-gap三个值
+  column-width:指定每列宽度
+  column-count:指定列数
+  column-gap:指定每列之间的间距
+  column-rule-color:控制列间的颜色
+  column-rule-style:控制列间的样式
+  column-rule-width:控制列间的宽度
+  column-space-distribution:平均分配列间距
+*/
+
+.layf { overflow:hidden; background:#ccc; overflow:hidden;zoom:1; }
+.layf .main { background:url(images/column_bg.png) -200px 0 repeat-y; margin:20px;zoom:1; overflow:hidden }
+.layf .aside { float:left; clear:left; display:inline; width:300px; margin-right:20px; height:200px }
+.layf .content { display:inline; }
+.clear{clear:both}
+
+.layg{background:#ccc;overflow:hidden;padding:20px;}
+.layg .aside{float:left;display:inline;width:300px;margin-right:20px;}
+.layg .content{overflow:hidden}
+.layg .aside,.layg .content{height:200px;}
+
+.notice { color:red }
+.color_a{ color:white}
 </style>
 </head>
 <body>
 <div class="wrap">
-    <h1>经典自适应两列布局</h1>
+    <h1>经典自适应两列布局 <small>一列定宽、一列自适应宽度</small></h1>
     <p class="note"><strong>要求：</strong>实现以下网页布局</p>
     <img src="img/two-layout.png">
 	<p>以上实现后再考虑下面的内容：</p>
@@ -20,13 +77,89 @@
 	<p>如果要求<b>两列高度自适应对齐</b>，你怎么实现？</p>
 	</blockquote>
 	<h4>如果是你，你会怎么实现？你能写出几种方法？<small>要考虑兼容主流浏览器哦！</small></h4>
-    <div class="demo">
-        这是案例展示
-        
-    </div>
-<pre class="prettyprint linenums">
+	<p>当时面试的时候，关于自动宽度当时拿不准两个属性，width:100%和width:auto(平时不怎么用这两个属性)，实在没办法，就用绝对定 位，定位四个方向可以做到自动宽度(实际在此例中定位两个属性也OK)，第二种方法写的是可以通过css表达式实现自动宽度（当然自动宽度可以实现，但这个方法岁也能实现，但是根本不可取，即使不知道别的方法，也别说这个方法了），面试结果第一种需要修复IE6下的bug（最多只支持两个方向的绝对定位）需要引入一个js，第二种css表达式性能实在太差，就这样我就被否定掉了……</p>
+	<p>唉，有点郁闷啊，所以回来就总结了以下实现方法，给大家贴出来！和大家交流下，呵呵</p>
+</div>	
 
-</pre>
+<p>第一种想法<br />
+应用<strong>绝对定位</strong>，限定于此laya盒模型中，兼容性好，可扩展性较好，易控性好，网页性能佳，是不错的解决办法<br />
+  综合推荐指数：★★★★</p>
+<div class="laya">
+  <div class="main">
+    <div class="content">右侧自动宽度且优先显示</div>
+  </div>
+  <div class="aside">左侧定宽</div>
+</div>
+<p>第二种想法<br />
+<strong>应用浮动，利用margin的负属性实现</strong>，兼容性好，可扩展性好，易控性好，网页性能好，几乎最佳的解决办法（因为还没有发现更好的办法）<br />
+  <em>此方法是年前在研究Wordpress默认主题的css写法时注意到margin的负值这样应用有很大的好处，以前在做绝对居中时经常会考虑使用margin的负边距，但应对携程笔试的时候确实没怎么细心思考</em> 综合推荐指数：★★★★★</p>
+<div class="layb">
+  <div class="main">
+    <div class="content">右侧自动宽度且优先显示</div>
+  </div>
+  <div class="aside">左侧定宽</div>
+</div>
+<p>第三种想法<br />
+仍然使用绝对定位，兼容性良好，可扩展性好，易控性好，网页性能良好，常用于后台管理界面的设计，操作界面平铺整个浏览器可变区域<br />
+  <em>绝对定位可控制四个方向的定位，使结构比第一种绝对定位方法更易控制，且实现自动宽度，缺点是针对IE6需要引入一个修复Bug的js（IE6最多支持两个方向的绝对定位，在IE6将被淘汰的未来，这是一个不错的方法）</em><br />
+  综合推荐指数：★★★★</p>
+<div class="layc">
+  <div class="main">右侧自动宽度且优先显示</div>
+  <div class="aside">左侧定宽</div>
+</div>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+
+<p>第四种想法<br />
+使用最不推荐使用的CSS表达式同样可以实现，使用兼容性好，可扩展性好，易控性好，网页性能很差，强烈不推荐使用，可做了解<br />
+  <em>偏偏起初我能确认的方法只有第三种和这一种（第五种我没研究过自然也写不出来，只是提了一下可以用），其他好的方法平时没试过，也无法说出口，当然我也知道这种不可取，平时我也不会去用，但当时无奈才充数算是一种方法<br />
+  事实上css表达式只能作为实现右侧自动宽度的一种替代方法，这个问题要求的布局仍然需要正规的方法写出来，这里就选用最简单的右浮动，不采用margin的负属性来实现</em><br />
+  综合推荐指数：<span class="notice">强烈抵制，永远都不要使用</span></p>
+<div class="layd">
+  <p>这种方法我就不去研究了，也是极不推荐的，尽量不要用！详细原因可去百度！</p>
+  <p>其实第一眼看到要求自动适应宽度的时候，心里就有数了，觉得正规的方法应该有的，这必然跟那个width:100%;以及width:auto;有关系，可是我还真的没去研究过（之前测试过高度100%的各浏览器兼容性），没测试过的这怎么写啊，不确认通不通又没法调试，心里蹦出来的第一个想法就是绝对定位超强功能肯定能实现，就回答了这个，还有就是css表达式，宽度可运算得出，是变化的变化可以实现（事实上我也没写过，平时哪怕使用js也不会使用css表达式，它导致鼠标的每一次滚动会引起浏览器上万次的运算，性能实在不敢恭维，只是知道它可以做到）</p>
+</div>
+<p>第五种想法<br />
+使用CSS3新属性支持多列布局，因为兼容性的问题，所以未作研究，刚见到时也算是一种方法的了，可是现在研究了一番，实现不了，没法控制单列样式，按说这老外制定css3应该考虑到这种情况，每个单列都可以单独定义设置的啊，至少目前没有发现此实现的方法，此法优点可扩展性好，易控性好，网页性能好，但兼容性太差，不支持占国内最大市场主流的IE浏览器IE6/7/8/9，十分不可取，但这是发展方向，需要了解，之前做过一个报纸站，二十几个页面，考虑一番，多列实现还是用内联样式实现比较容易维护！ <br />
+  综合推荐指数：<span class="notice">无（实现不了上述要求）</span></p>
+<div class="laye">当春风再一次吹拂她的脸庞时，那场让她刻骨铭心的失恋已在煦风轻扬的季节淡去了。她一点点地恢复，仿佛重生一般，花儿般的笑颜又重新浮上了她的脸庞。而他，看到她康复的样子，高兴极了，但他却不会讲什么，依旧如故，默默地陪在她身旁。他爱她，就包括爱她的一切缺点。这样做，他并不觉得有失尊严。他认为既然爱了，就应该无怨无悔。而她，觉得开始有点喜欢上了他，有些依赖他。但她认为，离爱还很遥远。<br/>
+  转眼她和他都要毕业了，她甚至没有征求他的意见，就直接去了北方的一座城市，而他，却追随着她也到了这里。本来，在南方那座城市，他的家人早已给他联系好了一家不错的公司，但他连想都没想就拒绝了。她和他分别进了不同的公司。同在一个陌生的城市打工，难免心神俱疲，这个时候，她就很想找一个依靠，给她一点家的温暖。明明知道他一直愿意做她的依靠，可她却不愿意把自己的一生交付于他，因为她觉得自己一直不爱他，不爱，又如何依靠，再说，他也不能提供给她想像中的生活。
+  <div class="main">右侧自动宽度且优先显示</div>
+  <div class="aside">左侧定宽</div>
+</div>
+<p>大前端的实现方法<br />
+<strong>应用浮动，同第二种方法，使用margin的负属性实现</strong>，css的设置有点不同，习惯不一样而已，应算同一种方法，兼容性好，可扩展性好，易控性好，网页性能好，几乎最佳的解决办法<br />
+  <em>此方法是来自大前端的页面布局，不过他的页面是右侧固定，左侧自动宽度，这里我们尝试下方向反过来（当然当宽度变得过小时还会变换新的效果，要学习的话可以去研究下）</em> 综合推荐指数：★★★★★</p>
+<div class="layba">
+  <div class="main">
+    <div class="content">右侧自动宽度且优先显示</div>
+  </div>
+  <div class="aside">左侧定宽</div>
+</div>
+<p>第六种想法<br />
+<strong>这应该算是一种演变，使用背景图片平铺</strong>，兼容性良，可扩展较好，易控性好，网页性能好，也是不错的实现方法<br />
+  <em>此方法是在开发两列布局网站时想出来的，当时为了应付中间的一条隔线，又同时好几个页面在用这个属性，要100%的高度，不能放在左边框设置，也不能放在右边框，最好的就是放在父级目录设置，下面看实现</em> 综合推荐指数：★★★★</p>
+<div class="layf">
+  <div class="main">
+    <div class="aside">左侧定宽
+      <p><em>这种知识表面看着像做出了盒子/界限分割一样，实际上是一种假象，这是背景表现的视觉效果</em><p>
+    </div>
+    <div class="content">右侧自动宽度且优先显示，缺点：右侧优先显示时会出现IE6/7下Bug，且应用环境有要求，只能实现视觉上一致；优点：轻松实现左右两列自动对齐</div>
+  </div>
+</div>
+<p>小结：汇总一下上面的方法，一共应该是四种方法（css表达式不算），就做参考使用吧，要在复杂的布局中使用，还是选五星级的好啊，呵呵</p>
+<h3>评断以上实现方法优劣的参数说明：</h3>
+<ul>
+  <li>兼容性：兼容市场主流浏览器；</li>
+  <li>可扩展性：对于未来可能扩展的内容或变化的支持；</li>
+  <li>易控性：是否便于精确调节与控制；</li>
+  <li>页面性能：网页性能表现</li>
+</ul>
+<p>再补充一个方法——第七种想法<br />
+<strong>在观察朋友网三列布局时，发现其中间列巧妙的通过此种方法实现</strong> 综合推荐指数：★★★★★</p>
+<div class="layg">
+    <div class="aside">左侧定宽，左浮动</div>
+    <div class="content">右侧自适应，overflow:hidden<br>这也许是最简单的办法了，唯一的限制是设置了overflow:hidden，导致超出此盒子的布局会被隐藏。</div>
+</div>
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>
     
