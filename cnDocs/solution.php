@@ -136,7 +136,7 @@
 		</ul>
 		
 	</section>
-		<p>cnBootstrap 项目是 Twitter 开发的前端框架 Bootstrap 的中文版，并集成了 aliceui 兼容解决方案（包括但不限于aliceui），亦将我所了解的解决方案也整合进了此列表中，现仍在完善中...</p>
+		<p>cnBootstrap 是 Twitter 开发的前端框架 Bootstrap 的中文版，并集成了 aliceui 兼容解决方案（包括但不限于aliceui），亦将我所了解的解决方案也整合进了此列表中，现仍在完善中...</p>
 		<p>欢迎广大网友提意见共同完善，此项目在Github上开源管理</p>
 		
 		
