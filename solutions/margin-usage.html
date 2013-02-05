@@ -6,10 +6,17 @@
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
 <style>
-
+.bigdemo{background:#000;padding:0 0 40px}
+#header,.topbg{background:url(images/vector_bg-x.png) left 0 repeat-x;}
+#header{ border-top:1px solid #ce1526;height:33px; border-bottom:1px solid #343434;position: relative;}
+.topbg{ height:50px; width:50%; position:absolute;top:0; margin-left:-480px; z-index:5;}
+.topbar{ position:relative; z-index:1000;}
+.logo{float:left; position:absolute;display:inline; width:315px; height:50px; background:url(images/vector_logo.png) 0 0 no-repeat;}
+.logo h1 { text-indent:-9999px;}
 </style>
 </head>
 <body>
+
 <div class="wrap">
     <h1>妙用margin负边距</h1>
     <p>使用好margin负边距，可以巧妙的实现布局效果；全兼容，无烦恼</p>
@@ -18,17 +25,46 @@
     	<li>弹窗居中——参看实例<a href="center-middle.html#center-middle">弹窗的垂直/水平居中</a></li>
     	<li>非对称平铺——效果如下：</li>
     </ul>
-	<p><img src="images/vector.png"></p>
+</div>
+<div class="bigdemo">
+<div id="header"><div class="topbg"></div>
+	<div class="topbar">
+		<div class="inner wrap" style="width:980px;">
+			<a class="logo" href="index.html"><h1>Vector advertising</h1></a>
+			<!--
+			<form class="search" action="#" method="get">
+			   <input class="input-text" type="text" placeholder="搜索">
+			   <input class="search-submit ie6png" type="submit">
+			</form>
+			<div class="nav">
+				<ul class="hor">
+					<li><a href="#"><span class="icon-home"></span>Home</a></li>
+					<li><a href="contact-us.html"><span class="icon-email"></span>E-mail us</a></li>
+				</ul>
+			</div>
+			-->
+		</div>
+	</div><!-- //div .topbar -->
+</div>
+</div>
+<div class="wrap">
     <div class="demo">
-        这是案例展示
+        效果展示如上：
         
     </div>
 <pre class="prettyprint linenums">
+核心代码：
 
+/* 左侧非对称平铺 */
+#header,.topbg{background:url(images/bg-x.png) left 0 repeat-x;}
+#header{ border-top:1px solid #ce1526;height:33px; border-bottom:1px solid #343434;position: relative;}
+.topbg{ height:50px; width:50%; position:absolute;top:0; margin-left:-480px; z-index:5;}
 </pre>
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>
     
 </div>
+
+
 </body>
 </html>
