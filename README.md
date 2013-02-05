@@ -1,7 +1,7 @@
 cnBootstrap
 ============
 
-Bootstrap——时尚、直观、强大的前端框架使Web开发更快，更容易，cnBootstrap 是 Twitter 开发的前端框架 Bootstrap 的中文版。
+cnBootstrap 是 Twitter 开发的前端框架 Bootstrap 的中文版——是时尚、直观、强大的前端框架，能使Web开发更快，更容易。
 
 cnBootstrap 收集了网络上遇到的大多数[前端 bug 和 fixed](http://www.tcrearor.info/cnBootstrap/cnDocs/bugs-and-fixed.php)，列表于此。
 
