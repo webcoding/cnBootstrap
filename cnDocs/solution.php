@@ -134,8 +134,10 @@
 		    <li class="span2"><a class="thumbnail" target="_blank" href="../solutions/sort.html"><img src="../solutions/img/default.png" alt=""><h4>JS 排序</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
-	</section>
 		
+	</section>
+		<p>cnBootstrap 项目是 Twitter 开发的前端框架 Bootstrap 的中文版，并集成了 aliceui 兼容解决方案（包括但不限于aliceui），亦将我所了解的解决方案也整合进了此列表中，现仍在完善中...</p>
+		<p>欢迎广大网友提意见共同完善，此项目在Github上开源管理</p>
 		
 		
 	    
