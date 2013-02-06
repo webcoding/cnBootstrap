@@ -39,41 +39,62 @@
 		<!-- 预添加简洁分类筛选 Todo -->
 		
 		<ul class="thumbnails case">
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/typo.html"><img src="../solutions/img/default.png" alt="中文排版"><h4>中文排版</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/center-middle.html"><img src="../solutions/img/center-middle.png" alt="垂直/水平居中"><h4>水平/垂直居中</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/select-mask.html"><img src="../solutions/img/select-mask.png" alt="IE6 浮层遮盖"><h4>IE6 浮层遮盖</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rotate.html"><img src="../solutions/img/rotate.png" alt="跨浏览器翻转"><h4>跨浏览器翻转</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/remove-outline.html"><img src="../solutions/img/outline.png" alt=""><h4>去除虚线框</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/position-fixed.html"><img src="../solutions/img/position-fixed.png" alt="IE6 position:fixed"><h4>IE6 position:fixed</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pngfix.html"><img src="../solutions/img/png24.png" alt="IE6 PNG 半透明"><h4>IE6 PNG 半透明</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/placeholder.html"><img src="../solutions/img/placeholder.png" alt="跨浏览器 Placeholder"><h4>跨浏览器 Placeholder</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/min-max.html"><img src="../solutions/img/min-max.png" alt="IE6 最大/小宽度"><h4>IE6 最大/小宽度</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/localStorage.html"><img src="../solutions/img/localStorage.png" alt="跨浏览器文本存储"><h4>跨浏览器文本存储</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/linear-gradient.html"><img src="../solutions/img/linear-gradient.png" alt="跨浏览器线性渐变"><h4>跨浏览器线性渐变</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ime-disabled.html"><img src="../solutions/img/ime.png" alt="强制非中文输入法"><h4>强制非中文输入法</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ie-z-index-bug.html"><img src="../solutions/img/z-index.png" alt="IE z-index bug"><h4>IE z-index bug</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/force-wrap.html"><img src="../solutions/img/default.png" alt="文本强制换行"><h4>文本强制(不)换行</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/font-face.html"><img src="../solutions/img/font-face.jpg" alt="@font-face"><h4>@font-face</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/float-center.html"><img src="../solutions/img/float-center.png" alt="float:center"><h4>float:center 居中浮动</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/equal-height-layout.html"><img src="../solutions/img/layout.png" alt="布局等高栏"><h4>布局等高栏</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/drop-shadow.html"><img src="../solutions/img/box-shadow.png" alt="跨浏览器投影"><h4>跨浏览器投影</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-file.html"><img src="../solutions/img/upload.png" alt="自定义上传文件样式"><h4>自定义上传文件样式</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-domain-iframe.html"><img src="../solutions/img/iframe.png" alt="iframe 跨域自适应"><h4>iframe 跨域自适应</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-browers-copy.html"><img src="../solutions/img/clipboard.png" alt="跨浏览器剪贴功能"><h4>跨浏览器剪贴功能</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/1px-round-corner.html"><img src="../solutions/img/radius-1px-box.png" alt="一像素圆角"><h4>一像素圆角</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/detect-character.html"><img src="../solutions/img/default.png" alt="检测字符类型"><h4>检测字符类型</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/divider.html"><img src="../solutions/img/default.png" alt="分割线"><h4>分割线</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/text-align-justify.html"><img src="../solutions/img/text-align-justify.png" alt="文本两端对齐"><h4>文本两端对齐</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ellipsis.html"><img src="../solutions/img/ellipsis.png" alt=""><h4>省略号</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/vertical-text.html"><img src="../solutions/img/vertical-text.png" alt=""><h4>文字纵向排列</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-cursor.html"><img src="../solutions/img/custom-cursor.jpg" alt="鼠标指针样式自定义"><h4>鼠标指针样式自定义</h4></a></li>
-			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位"><h4>geolocation 地理定位</h4></a></li>-->
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt=""><h4>border 探索</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float.html"><img src="../solutions/img/clear-float.png" alt=""><h4>清除浮动</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rgba-opacity.html"><img src="../solutions/img/rgba-opacity.png" alt=""><h4>RGBA 与 背景透明</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/double-border.html"><img src="../solutions/img/double-border.png" alt=""><h4>double border 双线框</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="http://typo.sofish.de/"><img src="../solutions/img/typo.png" alt="中文排版"><h4>中文排版</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/two-layout.html"><img src="../solutions/img/two-layout.png" alt="自适应两列布局"><h4>自适应两列布局</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/equal-height-layout.html"><img src="../solutions/img/layout.png" alt="布局等高栏"><h4>布局等高栏</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/center-middle.html"><img src="../solutions/img/center-middle.png" alt="垂直/水平居中"><h4>水平/垂直居中</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/float-center.html"><img src="../solutions/img/float-center.png" alt="float:center"><h4>float:center 居中浮动</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/clear-float.html"><img src="../solutions/img/clear-float.png" alt=""><h4>清除浮动</h4></a></li>
+			
+			
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/white-space.html"><img src="../solutions/img/white-space.png" alt="文本强制(不)换行与省略号"><h4>文本省略号 强制换行</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/text-align-justify.html"><img src="../solutions/img/text-align-justify.png" alt="文本两端对齐"><h4>文本两端对齐</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/vertical-text.html"><img src="../solutions/img/vertical-text.png" alt=""><h4>文字纵向排列</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-file.html"><img src="../solutions/img/upload.png" alt="自定义上传文件样式"><h4>自定义上传文件样式</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/remove-outline.html"><img src="../solutions/img/outline.png" alt=""><h4>去除虚线框</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/select-mask.html"><img src="../solutions/img/select-mask.png" alt="IE6 浮层遮盖"><h4>IE6 浮层遮盖</h4></a></li>
+			
+			
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rgba-opacity.html"><img src="../solutions/img/rgba-opacity.png" alt=""><h4>RGBA 与 背景透明</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/pngfix.html"><img src="../solutions/img/png24.png" alt="IE6 PNG 半透明"><h4>IE6 PNG 半透明</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-browers-copy.html"><img src="../solutions/img/clipboard.png" alt="跨浏览器剪贴功能"><h4>跨浏览器剪贴功能</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/placeholder.html"><img src="../solutions/img/placeholder.png" alt="跨浏览器 Placeholder"><h4>跨浏览器 Placeholder</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/localStorage.html"><img src="../solutions/img/localStorage.png" alt="跨浏览器文本存储"><h4>跨浏览器文本存储</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ime-disabled.html"><img src="../solutions/img/ime.png" alt="强制非中文输入法"><h4>强制非中文输入法</h4></a></li>
+			
+			
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/cross-domain-iframe.html"><img src="../solutions/img/iframe.png" alt="iframe 跨域自适应"><h4>iframe 跨域自适应</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/custom-cursor.html"><img src="../solutions/img/custom-cursor.jpg" alt="鼠标指针样式自定义"><h4>鼠标指针样式自定义</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/border.html"><img src="../solutions/img/border.png" alt=""><h4>border 探索</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/font-face.html"><img src="../solutions/img/font-face.jpg" alt="@font-face"><h4>@font-face</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/linear-gradient.html"><img src="../solutions/img/linear-gradient.png" alt="跨浏览器线性渐变"><h4>跨浏览器线性渐变</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/drop-shadow.html"><img src="../solutions/img/box-shadow.png" alt="跨浏览器投影"><h4>跨浏览器投影</h4></a></li>
+			
+			
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/min-max.html"><img src="../solutions/img/min-max.png" alt="IE6 最大/小宽度"><h4>IE6 最大/小宽度</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/position-fixed.html"><img src="../solutions/img/position-fixed.png" alt="IE6 position:fixed"><h4>IE6 position:fixed</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/ie-z-index-bug.html"><img src="../solutions/img/z-index.png" alt="IE z-index bug"><h4>IE z-index bug</h4></a></li>
+			
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/1px-round-corner.html"><img src="../solutions/img/radius-1px-box.png" alt="一像素圆角"><h4>一像素圆角</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/rotate.html"><img src="../solutions/img/rotate.png" alt="跨浏览器翻转"><h4>跨浏览器翻转</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/detect-character.html"><img src="../solutions/img/default.png" alt="检测字符类型"><h4>检测字符类型</h4></a></li>
+			
+			<!--<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/geolocation.html"><img src="../solutions/img/default.png" alt="geolocation 地理定位"><h4>geolocation 地理定位</h4></a></li>-->
+			
+			
+			
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/button.html"><img src="../solutions/img/button.png" alt="按钮兼容最佳方案"><h4>按钮兼容最佳方案</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/divider.html"><img src="../solutions/img/default.png" alt="分割线"><h4>分割线</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/double-border.html"><img src="../solutions/img/double-border.png" alt=""><h4>double border 双线框</h4></a></li>
+			
 			<li class="span2"><a class="thumbnail" target="_blank" href="../solutions/margin-usage.html"><img src="../solutions/img/default.png" alt="妙用margin负边距"><h4>妙用margin负边距</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
