@@ -14,11 +14,12 @@
 table.middle{height:150px;background:#ccc;}
 
 /* 页码 */
-.pages{margin:0;padding:0;list-style:none}
+.pages{margin:0;padding:0;list-style:none;*zoom:1}
 
 .pages a{border:1px solid #ddd;color:#333;background:#fff;}
 .pages a:hover{text-decoration:none;border-color:#f80;color:#f80;}
 
+.pages ul{*zoom:1}
 /* 方法一 */
 .pages1 li{float:left;display:inline;margin-right:5px;}
 .pages1 a{float:left;padding:0 9px; height:25px; line-height:25px;}
@@ -105,7 +106,7 @@ table.middle{height:150px;background:#ccc;}
 				</ul>
 			</td></tr>
 		</table>
-		<table class="bc">
+		<table class="bc ">
 	        <tr><td>
 				<ul class="pages pages1">
 				    <li><a href="#">1</a></li>
@@ -434,8 +435,7 @@ table.middle{height:130px;background:#ccc;}
 	<p>父元素高度固定、子元素的高度不固定，使用<code>inline-block</code> 元素设置 <code>vertical-align:middle</code> 后会垂直居中对齐，添加 <code>.middle-full</code> 空标签辅助实现，如下：</p>
 	<div class="demo">
 	    <div class="box3">
-            <div class="middle-full"></div>
-            <p class="middle-item">
+            <div class="middle-full"></div><p class="middle-item">
                 hello world!<br>
                 hello world!<br>
                 hello world!
@@ -443,13 +443,11 @@ table.middle{height:130px;background:#ccc;}
 		</div>
 		<hr>
 		<div class="box3">
-            <div class="middle-full"></div>
-            <img class="middle-item" src="img/center-middle.png" width="90" height="60">
+            <div class="middle-full"></div><img class="middle-item" src="img/center-middle.png" width="90" height="60">
         </div>
 		<hr>
 		<div class="box3">
-            <div class="middle-full"></div>
-            <div class="ctest middle-item"></div>
+            <div class="middle-full"></div><div class="ctest middle-item"></div>
 		</div>
     </div>
 <pre class="prettyprint linenums">
