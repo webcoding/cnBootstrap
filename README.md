@@ -24,6 +24,7 @@ cnBootstrap 把参考研究的前端界比较好的项目进行了简单的分�
 
 请在[Blog](http://www.tcrearor.info/cnBootstrap/)留言或在[项目页](https://github.com/webcoding/cnBootstrap)提交BUG
 
+# Git管理工具指南 
 
 本项目使用Git管理，如果您对Git的使用不甚熟悉，可以参考[useGit使用指南](https://github.com/webcoding/useGit)项目，包含详细的Git教程讲解以及Git命令。
 
