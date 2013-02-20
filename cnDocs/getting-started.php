@@ -226,6 +226,13 @@ Oricode/
           <h4 title="Narrow marketing">小型营销</h4>
           <p title="Slim, lightweight marketing template for small projects or teams.">规模较小的项目或团队的营销模板。</p>
         </li>
+		<li class="span3">
+              <a class="thumbnail" href="examples/justified-nav.html">
+                <img src="assets/img/examples/bootstrap-example-justified-nav.png" alt="">
+              </a>
+              <h4 title="Justified nav">等宽导航</h4>
+              <p title="Marketing page with equal-width navigation links in a modified navbar.">营销页面，修改导航条后具有等宽导航链接。</p>
+            </li>
         <li class="span3">
           <a class="thumbnail" href="examples/signin.html">
             <img src="assets/img/examples/bootstrap-example-signin.png" alt="">
@@ -240,7 +247,6 @@ Oricode/
           <h4 title="Sticky footer">固定页脚</h4>
           <p title="Pin a fixed-height footer to the bottom of the user's viewport.">固定页脚始终位于浏览器窗口的最底部。</p>
         </li>
-
         <li class="span3">
           <a class="thumbnail" href="examples/carousel.html">
             <img src="assets/img/examples/bootstrap-example-carousel.png" alt="">
