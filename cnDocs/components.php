@@ -75,14 +75,14 @@
 
 <pre class="prettyprint linenums">
 &lt;div class="dropdown"&gt;
-&lt;!-- Link or button to toggle dropdown --&gt;
-&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-&lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-&lt;li class="divider"&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;!-- Link or button to toggle dropdown --&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
@@ -93,41 +93,111 @@
       <p title="Add .pull-right to a .dropdown-menu to right align the dropdown menu.">添加 <code>.pull-right</code> 到 <code>.dropdown-menu</code> 上可实现下拉菜单的右对齐。</p>
 <pre class="prettyprint linenums">
 &lt;ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel"&gt;
-...
+  ...
 &lt;/ul&gt;
 </pre>
 
+
+          <h3>Disabled menu options</h3>
+          <p>Add <code>.disabled</code> to a <code>&lt;li&gt;</code> in the dropdown to disable the link.</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">Regular link</a></li>
+                <li class="disabled"><a tabindex="-1" href="#">Disabled link</a></li>
+                <li><a tabindex="-1" href="#">Another link</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
       <h3 title="Sub menus on dropdowns">二级下拉菜单</h3>
       <p title="Add an extra level of dropdown menus, appearing on hover like those of OS X, with some simple markup additions. Add .dropdown-submenu to any li in an existing dropdown menu for automatic styling.">实现额外的水平下拉菜单，只需添加少量的代码，并且在实现的li位置添加 <code>.dropdown-submenu</code> 即可。</p>
-      <div class="bs-docs-example">
+    <div class="bs-docs-example bs-docs-example-submenus">
+
+     <div class="pull-left">
+      <p class="muted">Default</p>
         <div class="dropdown clearfix">
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 				<li><a tabindex="-1" href="#" title="Action">动作</a></li>
 				<li><a tabindex="-1" href="#" title="Another action">另一个动作</a></li>
 				<li><a tabindex="-1" href="#" title="Something else here">其他</a></li>
 				<li class="divider"></li>
-				<li class="dropdown-submenu">
-					<a tabindex="-1" href="#" title="More options">更多选项</a>
-					<ul class="dropdown-menu">
-						<li><a tabindex="-1" href="#" title="Second level link">二级链接</a></li>
-						<li><a tabindex="-1" href="#">二级链接</a></li>
-						<li><a tabindex="-1" href="#">二级链接</a></li>
-						<li><a tabindex="-1" href="#">二级链接</a></li>
-						<li><a tabindex="-1" href="#">二级链接</a></li>
-					</ul>
-				</li>
-			</ul>
-        </div>
-      </div>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">更多选项</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pull-left">
+              <p class="muted">Dropup</p>
+              <div class="dropup">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">More options</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pull-left">
+              <p class="muted">Left submenu</p>
+              <div class="dropdown">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a tabindex="-1" href="#">Action</a></li>
+                  <li><a tabindex="-1" href="#">Another action</a></li>
+                  <li><a tabindex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu pull-left">
+                    <a tabindex="-1" href="#">More options</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
 <pre class="prettyprint linenums">
 &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-...
-&lt;li class="dropdown-submenu"&gt;
-&lt;a tabindex="-1" href="#"&gt;More options&lt;/a&gt;
-&lt;ul class="dropdown-menu"&gt;
   ...
-&lt;/ul&gt;
-&lt;/li&gt;
+  &lt;li class="dropdown-submenu"&gt;
+    &lt;a tabindex="-1" href="#"&gt;More options&lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -166,9 +236,9 @@
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-&lt;button class="btn"&gt;1&lt;/button&gt;
-&lt;button class="btn"&gt;2&lt;/button&gt;
-&lt;button class="btn"&gt;3&lt;/button&gt;
+  &lt;button class="btn"&gt;Left&lt;/button&gt;
+  &lt;button class="btn"&gt;Middle&lt;/button&gt;
+  &lt;button class="btn"&gt;Right&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -213,7 +283,7 @@
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group btn-group-vertical"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -316,13 +386,13 @@
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-&lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
-Action
-&lt;span class="caret"&gt;&lt;/span&gt;
-&lt;/a&gt;
-&lt;ul class="dropdown-menu"&gt;
-&lt;!-- dropdown menu links --&gt;
-&lt;/ul&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
@@ -363,7 +433,7 @@ Action
         </div><!-- /btn-toolbar -->
       </div>
 
-      <h3 title="Requires javascript">javascript 依赖</h3>
+      <h3 title="Requires JavaScript">JavaScript 依赖</h3>
       <p title="Button dropdowns require the Bootstrap dropdown plugin to function.">下拉按钮依赖于<a href="./javascript.php#dropdowns">下拉按钮插件</a>。</p>
       <p title="In some cases&mdash;like mobile&mdash;dropdown menus will extend outside the viewport. You need to resolve the alignment manually or with custom javascript.">在某些情形下 &mdash; 利于移动设备 &mdash; 下拉按钮可能会超出当前的可视区域。你需要手动或者使用javascript的方式解决屏幕的自适应问题。</p>
 
@@ -457,13 +527,13 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-&lt;button class="btn"&gt;Action&lt;/button&gt;
-&lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
-&lt;span class="caret"&gt;&lt;/span&gt;
-&lt;/button&gt;
-&lt;ul class="dropdown-menu"&gt;
-&lt;!-- dropdown menu links --&gt;
-&lt;/ul&gt;
+  &lt;button class="btn"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
@@ -512,13 +582,13 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-&lt;button class="btn btn-mini"&gt;Action&lt;/button&gt;
-&lt;button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"&gt;
-&lt;span class="caret"&gt;&lt;/span&gt;
-&lt;/button&gt;
-&lt;ul class="dropdown-menu"&gt;
-&lt;!-- dropdown menu links --&gt;
-&lt;/ul&gt;
+  &lt;button class="btn btn-mini"&gt;Action&lt;/button&gt;
+  &lt;button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
@@ -552,13 +622,13 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group dropup"&gt;
-&lt;button class="btn"&gt;Dropup&lt;/button&gt;
-&lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
-&lt;span class="caret"&gt;&lt;/span&gt;
-&lt;/button&gt;
-&lt;ul class="dropdown-menu"&gt;
-&lt;!-- dropdown menu links --&gt;
-&lt;/ul&gt;
+  &lt;button class="btn"&gt;Dropup&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
@@ -589,11 +659,11 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-tabs"&gt;
-&lt;li class="active"&gt;
-&lt;a href="#"&gt;Home&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -608,11 +678,11 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-pills"&gt;
-&lt;li class="active"&gt;
-&lt;a href="#"&gt;Home&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -627,9 +697,9 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-pills"&gt;
-...
-&lt;li class="disabled"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-...
+  ...
+  &lt;li class="disabled"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  ...
 &lt;/ul&gt;
 </pre>
 
@@ -652,7 +722,7 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-tabs nav-stacked"&gt;
-...
+  ...
 &lt;/ul&gt;
 </pre>
 
@@ -666,7 +736,7 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-pills nav-stacked"&gt;
-...
+  ...
 &lt;/ul&gt;
 </pre>
 
@@ -696,17 +766,17 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-tabs"&gt;
-&lt;li class="dropdown"&gt;
-&lt;a class="dropdown-toggle"
-   data-toggle="dropdown"
-   href="#"&gt;
-    Dropdown
-    &lt;b class="caret"&gt;&lt;/b&gt;
-  &lt;/a&gt;
-&lt;ul class="dropdown-menu"&gt;
-  &lt;!-- links --&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -729,17 +799,17 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-pills"&gt;
-&lt;li class="dropdown"&gt;
-&lt;a class="dropdown-toggle"
-   data-toggle="dropdown"
-   href="#"&gt;
-    Dropdown
-    &lt;b class="caret"&gt;&lt;/b&gt;
-  &lt;/a&gt;
-&lt;ul class="dropdown-menu"&gt;
-  &lt;!-- links --&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -770,10 +840,10 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-list"&gt;
-&lt;li class="nav-header"&gt;列表头&lt;/li&gt;
-&lt;li class="active"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;类库&lt;/a&gt;&lt;/li&gt;
-...
+  &lt;li class="nav-header"&gt;List header&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+  ...
 &lt;/ul&gt;
 </pre>
       <p title='Note For nesting within a nav list, include class="nav nav-list" on any nested &lt;ul&gt;.'>
@@ -807,9 +877,9 @@ Action
       <p title="Add a horizontal divider by creating an empty list item with the class .divider, like so:">应用 <code>.divider</code> 的空列表项会显示为一个水平间隔，如下：</p>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-list"&gt;
-...
-&lt;li class="divider"&gt;&lt;/li&gt;
-...
+  ...
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  ...
 &lt;/ul&gt;
 </pre>
 
@@ -844,18 +914,18 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
-&lt;ul class="nav nav-tabs"&gt;
-&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="tab-content"&gt;
-&lt;div class="tab-pane active" id="tab1"&gt;
-  &lt;p&gt;I'm in Section 1.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="tab-pane" id="tab2"&gt;
-  &lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;I'm in Section 1.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -891,12 +961,12 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="tabbable tabs-below"&gt;
-&lt;div class="tab-content"&gt;
-...
-&lt;/div&gt;
-&lt;ul class="nav nav-tabs"&gt;
-...
-&lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
@@ -924,12 +994,12 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="tabbable tabs-left"&gt;
-&lt;ul class="nav nav-tabs"&gt;
-...
-&lt;/ul&gt;
-&lt;div class="tab-content"&gt;
-...
-&lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -957,12 +1027,12 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="tabbable tabs-right"&gt;
-&lt;ul class="nav nav-tabs"&gt;
-...
-&lt;/ul&gt;
-&lt;div class="tab-content"&gt;
-...
-&lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -994,14 +1064,14 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="navbar"&gt;
-&lt;div class="navbar-inner"&gt;
-&lt;a class="brand" href="#"&gt;Title&lt;/a&gt;
-&lt;ul class="nav"&gt;
-  &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;a class="brand" href="#"&gt;Title&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1039,11 +1109,11 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav"&gt;
-&lt;li class="active"&gt;
-&lt;a href="#">Home&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#">Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
       <p title="You can easily add dividers to your nav links with an empty list item and a simple class. Just add this between links:">将应用 <code>.divider-vertical</code> 的空列表项插入到两个链接项之间，就会得到分隔条：</p>
@@ -1063,9 +1133,9 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="nav"&gt;
-...
-&lt;li class="divider-vertical"&gt;&lt;/li&gt;
-...
+  ...
+  &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+  ...
 &lt;/ul&gt;
 </pre>
 
@@ -1083,8 +1153,8 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;form class="navbar-form pull-left"&gt;
-&lt;input type="text" class="span2"&gt;
-&lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+  &lt;input type="text" class="span2"&gt;
+  &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;
 </pre>
 
@@ -1101,7 +1171,7 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;form class="navbar-search pull-left"&gt;
-&lt;input type="text" class="search-query" placeholder="Search"&gt;
+  &lt;input type="text" class="search-query" placeholder="Search"&gt;
 &lt;/form&gt;
 </pre>
 
@@ -1112,15 +1182,15 @@ Action
       <p title="Add dropdowns and dropups to the nav with a bit of markup and the dropdowns javascript plugin.">在导航中很容易添加上下拉菜单，要用到 <a href="./javascript.html/#dropdown">下拉javascript插件</a>。</p>
 <pre class="prettyprint linenums">
 &lt;ul class="nav"&gt;
-&lt;li class="dropdown"&gt;
-&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">
-  Account
-  &lt;b class="caret"&gt;&lt;/b&gt;
-&lt;/a&gt;
-&lt;ul class="dropdown-menu"&gt;
-  ...
-&lt;/ul&gt;
-&lt;/li&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      Account
+      &lt;b class="caret"&gt;&lt;/b&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
       <p title="Visit the javascript dropdowns documentation for more markup and information on calling dropdowns.">访问 <a href="./javascript.php#dropdowns">javascript下拉菜单文档</a> 及更多调用下拉菜单的代码和信息。</p>
@@ -1153,7 +1223,7 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="navbar navbar-fixed-top"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -1197,7 +1267,7 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="navbar navbar-static-top"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -1259,23 +1329,23 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="navbar"&gt;
-&lt;div class="navbar-inner"&gt;
-&lt;div class="container"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
 
-  &lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;
-  &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
-    &lt;span class="icon-bar"&gt;&lt;/span&gt;
-    &lt;span class="icon-bar"&gt;&lt;/span&gt;
-    &lt;span class="icon-bar"&gt;&lt;/span&gt;
-  &lt;/a&gt;
+      &lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;
+      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/a&gt;
 
-  &lt;!-- Be sure to leave the brand out there if you want it shown --&gt;
-  &lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
+      &lt;!-- Be sure to leave the brand out there if you want it shown --&gt;
+      &lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
 
-  &lt;!-- Everything you want hidden at 940px or less, place within here --&gt;
-  &lt;div class="nav-collapse"&gt;
-    &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
-  &lt;/div&gt;
+      &lt;!-- Everything you want hidden at 940px or less, place within here --&gt;
+      &lt;div class="nav-collapse collapse"&gt;
+        &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
+      &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1343,7 +1413,7 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="navbar navbar-inverse"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -1377,9 +1447,9 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="breadcrumb"&gt;
-&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
-&lt;li class="active"&gt;Data&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -1411,14 +1481,15 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="pagination"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1445,51 +1516,132 @@ Action
         </div>
       </div>
 <pre class="prettyprint linenums">
-&lt;div class="pagination "&gt;
-&lt;ul&gt;
-&lt;li class="disabled"&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
-&lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
-...
-&lt;/ul&gt;
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+          <p>You can optionally swap out active or disabled anchors for spans to remove click functionality while retaining intended styles.</p>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
-      <h3 title="Alignment">对齐方式</h3>
-      <p title="Add one of two optional classes to change the alignment of pagination links: .pagination-centered and .pagination-right.">使用 <code>.pagination-centered</code> 和 <code>.pagination-right</code> 可以改变页码的对齐方式，前者居中，后者居右。</p>
-      <div class="bs-docs-example">
-        <div class="pagination pagination-centered">
-          <ul>
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-         </ul>
-        </div>
-      </div>
+          <h3>Sizes</h3>
+          <p>Fancy larger or smaller pagination? Add <code>.pagination-large</code>, <code>.pagination-small</code>, or <code>.pagination-mini</code> for additional sizes.</p>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-large">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+            <div class="pagination">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+            <div class="pagination pagination-small">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+            <div class="pagination pagination-mini">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
 <pre class="prettyprint linenums">
-&lt;div class="pagination pagination-centered"&gt;
-...
+&lt;div class="pagination pagination-large"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination pagination-small"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination pagination-mini"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
-      <div class="bs-docs-example">
-        <div class="pagination pagination-right">
-          <ul>
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-          </ul>
-        </div>
-      </div>
+
+          <h3>Alignment</h3>
+          <p>Add one of two optional classes to change the alignment of pagination links: <code>.pagination-centered</code> and <code>.pagination-right</code>.</p>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-centered">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination pagination-centered"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-right">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
 <pre class="prettyprint linenums">
 &lt;div class="pagination pagination-right"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -1510,8 +1662,8 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="pager"&gt;
-&lt;li&gt;&lt;a href="#"&gt;上一页&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;下一页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;上一页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;下一页&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -1544,10 +1696,10 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;ul class="pager"&gt;
-&lt;li class="previous disabled"&gt;
-&lt;a href="#"&gt;&amp;larr; 过去的&lt;/a&gt;
-&lt;/li&gt;
-...
+  &lt;li class="previous disabled"&gt;
+    &lt;a href="#"&gt;&amp;larr; 过去的&lt;/a&gt;
+  &lt;/li&gt;
+  ...
 &lt;/ul&gt;
 </pre>
 
@@ -1727,13 +1879,13 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="hero-unit"&gt;
-&lt;h1&gt;Heading&lt;/h1&gt;
-&lt;p&gt;Tagline&lt;/p&gt;
-&lt;p&gt;
-&lt;a class="btn btn-primary btn-large"&gt;
-  Learn more
-&lt;/a&gt;
-&lt;/p&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class="btn btn-primary btn-large"&gt;
+      Learn more
+    &lt;/a&gt;
+  &lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1741,12 +1893,12 @@ Action
       <p title="A simple shell for an h1 to appropriately space out and segment sections of content on a page. It can utilize the h1's default small, element as well most other components (with additional styles)."><p>相当于一个简单的 <code>h1</code> 外壳，它有适当的留白，以便在页面中分割内容片段。还可以在 <code>h1</code> 内嵌入 <code>small</code>，html元素或是其他组件。</p>
       <div class="bs-docs-example">
         <div class="page-header">
-          <h1 title="Example page header  Subtext for header">页面标题的例子 <small>子标题文字</small></h1>
+          <h1 title="Example page header Subtext for header">页面标题的例子 <small>子标题文字</small></h1>
         </div>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="page-header"&gt;
-&lt;h1&gt;Example page header&lt;/h1&gt;
+  &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1826,7 +1978,7 @@ Action
             </ul>
           </div>
 
-          <h3 title="Why use thumbnails"></h3>
+          <h3 title="Why use thumbnails">为什么使用缩略图</h3>
           <p title="Thumbnails (previously .media-grid up until v1.4) are great for grids of photos or videos, image search results, retail products, portfolios, and much more. They can be links or static content.">缩略项（1.4版之前使用 <code>.media-grid</code> ）适用于栅格化的图片和视频，图片搜索结果，零售产品，文件夹等等。缩略项可以是链接，也可以是静态内容。</p>
 
           <h3 title="Simple, flexible markup">简洁灵活的代码</h3>
@@ -1912,8 +2064,8 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert"&gt;
-&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
-&lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
 &lt;/div&gt;
 </pre>
 
@@ -1923,7 +2075,7 @@ Action
       <p title='Alternatively, you may use a &lt;button&gt; element with the data attribute, which we have opted to do for our docs. When using &lt;button&gt;, you must include type="button" or your forms may not submit.'>或者，也可以使用带有data属性的 <code>&lt;button&gt;</code> 元素，在Bootstrap文档中有使用。当使用 <code>&lt;button&gt;</code> 时，必须应用 <code>type="button"</code> 除非你的表单无需提交。</p>
       <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;</pre>
 
-      <h3 title="Dismiss alerts via javascript">与javascript配合良好</h3>
+      <h3 title="Dismiss alerts via JavaScript">与JavaScript配合良好</h3>
       <p title="Use the alerts jQuery plugin for quick and easy dismissal of alerts.">友好的 <a href="./javascript.html#alerts">jQuery插件</a> 驱动通知消息，方便用户快速地关闭通知。</p>
 
 
@@ -1941,9 +2093,9 @@ Action
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-block"&gt;
-&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
-&lt;h4&gt;Warning!&lt;/h4&gt;
-Best check yo self, you're not...
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
+  &lt;h4&gt;Warning!&lt;/h4&gt;
+  Best check yo self, you're not...
 &lt;/div&gt;
 </pre>
 
@@ -1954,7 +2106,7 @@ Best check yo self, you're not...
       <h2 title="Contextual alternatives">语境下的强化</h2>
       <p title="Add optional classes to change an alert's connotation.">Add optional classes to change an alert's connotation.</p>
 
-      <h3 title="Error or danger"></h3>
+      <h3 title="Error or danger">错误或危险操作</h3>
       <div class="bs-docs-example">
         <div class="alert alert-error">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -1963,7 +2115,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-error"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -1976,7 +2128,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-success"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -1989,7 +2141,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-info"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 
@@ -2028,7 +2180,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="progress progress-striped"&gt;
-&lt;div class="bar" style="width: 20%;"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 20%;"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -2041,7 +2193,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="progress progress-striped active"&gt;
-&lt;div class="bar" style="width: 40%;"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 40%;"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -2086,16 +2238,16 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="progress progress-info"&gt;
-&lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="progress progress-success"&gt;
-&lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="progress progress-warning"&gt;
-&lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="progress progress-danger"&gt;
-&lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -2117,16 +2269,16 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="progress progress-info progress-striped"&gt;
-&lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="progress progress-success progress-striped"&gt;
-&lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="progress progress-warning progress-striped"&gt;
-&lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="progress progress-danger progress-striped"&gt;
-&lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -2294,7 +2446,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="well"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
       <h3 title="Optional classes">可选类</h3>
@@ -2306,7 +2458,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="well well-large"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
       <div class="bs-docs-example">
@@ -2316,7 +2468,7 @@ Best check yo self, you're not...
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="well well-small"&gt;
-...
+  ...
 &lt;/div&gt;
 </pre>
 

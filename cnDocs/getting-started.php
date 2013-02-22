@@ -124,25 +124,26 @@ Oricode/
 
       <h2 title="List of components">组件列表</h2>
       <p title="Together, the Components and JavaScript plugins sections provide the following interface elements:">总之，<strong>组件</strong> 和<strong>JavaScript插件</strong>部分提供了以下界面元素：</p>
-      <ul>
-        <li>按钮组</li>
-        <li>按钮下拉菜单</li>
-        <li title="Navigational tabs, pills, and lists">导航选项卡、列表</li>
-        <li>导航栏</li>
-        <li>标签</li>
-        <li>标识</li>
-        <li title="Page headers and hero unit">页头</li>
-        <li>缩略图</li>
-        <li>通知</li>
-        <li>进度条</li>
-        <li>对话框</li>
-        <li>下拉列表</li>
-        <li>工具提醒</li>
-        <li>弹出提醒</li>
-        <li>折叠</li>
-        <li>轮播/跑马灯</li>
-        <li>输入提醒</li>
-      </ul>
+    <ul>
+	    <li>Button groups</li>
+	    <li>Button dropdowns</li>
+	    <li>Navigational tabs, pills, and lists</li>
+	    <li>Navbar</li>
+	    <li>Labels</li>
+	    <li>Badges</li>
+	    <li>Page headers and hero unit</li>
+	    <li>Thumbnails</li>
+	    <li>Alerts</li>
+	    <li>Progress bars</li>
+	    <li>Modals</li>
+	    <li>Dropdowns</li>
+	    <li>Tooltips</li>
+	    <li>Popovers</li>
+	    <li>Accordion</li>
+	    <li>Carousel</li>
+	    <li>Typeahead</li>
+    </ul>
+
       <p title="In future guides, we may walk through these components individually in more detail. Until then, look for each of these in the documentation for information on how to utilize and customize them.">在未来的发展中，我们可能会对个别的组件实现更多的细节。在此之前，文档中仅仅介绍如何利用它们进行自定义设置。</p>
     </section>
 

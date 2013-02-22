@@ -97,6 +97,7 @@
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/margin-usage.html"><img src="solutions/img/default.png" alt="妙用margin负边距"><h4>妙用margin负边距</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="textarea自适应高度"><h4>textarea自适应高度</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="局部打印"><h4>局部打印</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		

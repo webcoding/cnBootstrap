@@ -214,7 +214,7 @@ $('#myModal').on('show', function (e) {
 				<div class="alert alert-info"><strong>强调！</strong> 实现对话框淡入淡出的动画效果，必须引用 bootstrap-transition.js，再对 <code>.modal</code> 元素应用 <code>.fade</code>。</div>
                 <hr class="bs-docs-separator">
                 <h2 title="Usage">用法</h2>
-                <h3 title="Via data attributes"></h3>
+                <h3 title="Via data attributes">data属性</h3>
                 <p title='Activate a modal without writing JavaScript. Set data-toggle="modal" on a controller element, like a button, along with a data-target="#foo" or href="#foo" to target a specific modal to toggle.'>你可以简单的利用javascript插件实现一个模态窗口，仅需要在HTML标签中配置 <code>data-toggle="modal"</code> 作为触发模态窗口的控制器，同时指定 <code>data-target="#foo"</code> 或者 <code>href="#foo"</code> 来关联要弹出的元素的ID，这些内容将显示在模态对话框中。</p>
                 <p>同时，配置模态窗口的配置项，可以在控制器或者模态窗口的标签上配置一些数据。</p>
                 <pre class="prettyprint linenums" title="Launch modal">&lt;button type="button" data-toggle="modal" data-target="#myModal"&gt;点击触发对话框&lt;/button&gt;</pre>
@@ -333,35 +333,35 @@ $('#myModal').on('hidden', function () {
                   <a class="brand" href="#" title="Project Name">项目名称</a>
                   <ul class="nav" role="navigation">
                     <li class="dropdown">
-                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">下拉 <b class="caret"></b></a>
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                        <li><a tabindex="-1" href="#" title="Action">动作</a></li>
-						<li><a tabindex="-1" href="#" title="Another action">另一个动作</a></li>
-						<li><a tabindex="-1" href="#" title="Something else here">其他</a></li>
-						<li class="divider"></li>
-						<li><a tabindex="-1" href="#" title="Separated link">被间隔的链接</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">下拉2 <b class="caret"></b></a>
+                      <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-                        <li><a tabindex="-1" href="#" title="Action">动作</a></li>
-						<li><a tabindex="-1" href="#" title="Another action">另一个动作</a></li>
-						<li><a tabindex="-1" href="#" title="Something else here">其他</a></li>
-						<li class="divider"></li>
-						<li><a tabindex="-1" href="#" title="Separated link">被间隔的链接</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                       </ul>
                     </li>
                   </ul>
                   <ul class="nav pull-right">
                     <li id="fat-menu" class="dropdown">
-                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">下拉3 <b class="caret"></b></a>
+                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 3 <b class="caret"></b></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                        <li><a tabindex="-1" href="#" title="Action">动作</a></li>
-						<li><a tabindex="-1" href="#" title="Another action">另一个动作</a></li>
-						<li><a tabindex="-1" href="#" title="Something else here">其他</a></li>
-						<li class="divider"></li>
-						<li><a tabindex="-1" href="#" title="Separated link">被间隔的链接</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -377,31 +377,31 @@ $('#myModal').on('hidden', function () {
               <li class="dropdown">
                 <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">下拉 <b class="caret"></b></a>
                 <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-					<li><a tabindex="-1" href="#" title="Action">动作</a></li>
-					<li><a tabindex="-1" href="#" title="Another action">另一个动作</a></li>
-					<li><a tabindex="-1" href="#" title="Something else here">其他</a></li>
-					<li class="divider"></li>
-					<li><a tabindex="-1" href="#" title="Separated link">被间隔的链接</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">下拉2 <b class="caret"></b></a>
                 <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-					<li><a tabindex="-1" href="#" title="Action">动作</a></li>
-					<li><a tabindex="-1" href="#" title="Another action">另一个动作</a></li>
-					<li><a tabindex="-1" href="#" title="Something else here">其他</a></li>
-					<li class="divider"></li>
-					<li><a tabindex="-1" href="#" title="Separated link">被间隔的链接</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">下拉3 <b class="caret"></b></a>
                 <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-					<li><a tabindex="-1" href="#" title="Action">动作</a></li>
-					<li><a tabindex="-1" href="#" title="Another action">另一个动作</a></li>
-					<li><a tabindex="-1" href="#" title="Something else here">其他</a></li>
-					<li class="divider"></li>
-					<li><a tabindex="-1" href="#" title="Separated link">被间隔的链接</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
                 </ul>
               </li>
             </ul> <!-- /tabs -->
@@ -772,19 +772,20 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
           <h2 title="Examples">示例</h2>
           <p title="Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, use CSS3 for animations, and data-attributes for local title storage.">受Jason Frame所写的出色的jQuery.tipsy插件所启发；Tooltips做为前者的升级版，不依赖于图像， 使用css3显示动画效果，利用data-属性对标题做本地化存储。</p>
-          <p title="Hover over the links below to see tooltips:">鼠标经过下面链接时显示tooltips：</p>
+          <p>For performance reasons, the tooltip and popover data-apis are opt in, meaning <strong>you must initialize them yourself</strong>.</p>
+		  <p title="Hover over the links below to see tooltips:">鼠标经过下面链接时显示tooltips：</p>
           <div class="bs-docs-example tooltip-demo">
-            <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+            <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="A much longer tooltip belongs right here to demonstrate the max-width we apply.">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
             </p>
           </div>
 
           <h3 title="Four directions">支持四个方向</h3>
           <div class="bs-docs-example tooltip-demo">
             <ul class="bs-docs-tooltip-examples">
-              <li><a href="#" rel="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</a></li>
-              <li><a href="#" rel="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</a></li>
-              <li><a href="#" rel="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</a></li>
-              <li><a href="#" rel="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</a></li>
             </ul>
           </div>
 
@@ -842,7 +843,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                <td>trigger</td>
                <td title="string">字符串</td>
                <td>'hover'</td>
-               <td title="how tooltip is triggered - click | hover | focus | manual">工具提示的触发方式：点击(click) | 鼠标经过(hover) | 获得焦点(focus) | 手动触发(manual)</td>
+               <td title="how tooltip is triggered - click | hover | focus | manual. Note you case pass trigger mutliple, space seperated, trigger types.">工具提示的触发方式：点击(click) | 鼠标经过(hover) | 获得焦点(focus) | 手动触发(manual)</td>
              </tr>
              <tr>
                <td>delay</td>
@@ -854,6 +855,14 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                 <p title="Object structure is: delay: { show: 500, hide: 100 }">如果是一个对象，其结构就是: <code>delay: { show: 500, hide: 100 }</code></p>
                </td>
              </tr>
+             <tr>
+               <td>container</td>
+               <td>string | false</td>
+               <td>false</td>
+               <td>
+                <p>Appends the tooltip to a specific element <code>container: 'body'</code></p>
+               </td>
+             </tr>
             </tbody>
           </table>
           <div class="alert alert-info" title="Heads up!  Options for individual tooltips can alternatively be specified through the use of data attributes.">
@@ -863,7 +872,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
           <h3 title="Markup">标记</h3>
           <p title="For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a selector option.">出于性能的考虑，在使用工具提示和弹出提示时建议利用data-属性，再指定一个selector选项即可。</p>
-          <pre class="prettyprint linenums">&lt;a href="#" rel="tooltip" title="first tooltip"&gt;hover over me&lt;/a&gt;</pre>
+          <pre class="prettyprint linenums">&lt;a href="#" data-toggle="tooltip" title="first tooltip"&gt;hover over me&lt;/a&gt;</pre>
 
           <h3 title="Mothods">方法</h3>
           <h4>$().tooltip(options)</h4>
@@ -935,16 +944,16 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <h3 title="Live demo">动态的例子</h3>
         <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="btn btn-large btn-danger" rel="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
+          <a href="#" class="btn btn-large btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
         </div>
 
         <h4>Four directions</h4>
         <div class="bs-docs-example tooltip-demo">
           <ul class="bs-docs-tooltip-examples">
-            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
           </ul>
         </div>
 
@@ -953,7 +962,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
 
         <h2 title="Usage">用法</h2>
-        <p title="Enable popovers via JavaScript:">使用javascript启用弹出提示：</p>
+        <p title="Enable popovers via JavaScript:">使用JavaScript启用弹出提示：</p>
         <pre class="prettyprint linenums">$('#example').popover(options)</pre>
 
         <h3 title="Options">选项</h3>
@@ -1020,6 +1029,14 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
               <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
              </td>
            </tr>
+           <tr>
+             <td>container</td>
+             <td>string | false</td>
+             <td>false</td>
+             <td>
+              <p>Appends the popover to a specific element <code>container: 'body'</code></p>
+             </td>
+           </tr>
           </tbody>
         </table>
         <div class="alert alert-info" title="">
@@ -1082,7 +1099,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
 
         <h2 title="Usage">用法</h2>
-        <p title="Enable dismissal of an alert via JavaScript:">通过javascript触发通知：</p>
+        <p title="Enable dismissal of an alert via JavaScript:">通过JavaScript触发通知：</p>
         <pre class="prettyprint linenums">$(".alert").alert()</pre>
 
         <h3 title="Markup">标记</h3>
@@ -1211,7 +1228,9 @@ $('#my-alert').bind('closed', function () {
             <h4>$().button('loading')</h4>
             <p title="Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute data-loading-text.">设置按钮为载入状态 - 按钮无效且将文本变成载入文本 载入文本应该设置在按钮的 <code>data-loading-text</code> 的属性中。
             </p>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
+<pre class="prettyprint linenums">
+&lt;button type="button" class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;
+</pre>
             <div class="alert alert-info" title='Firefox persists the disabled state across page loads. A workaround for this is to use autocomplete="off".'>
               <strong>强调!</strong> 
               <a href="https://github.com/twitter/bootstrap/issues/793">Firefox在页面载入时会保持按钮无效状态</a>。变通方案是在按钮上应用 <code>autocomplete="off"</code>。
@@ -1411,7 +1430,7 @@ $('#myCollapsible').collapse({
             </table>
 <pre class="prettyprint linenums">
 $('#myCollapsible').on('hidden', function () {
-  //  做点hidden之后的事情…
+  // do something…
 })</pre>
           </section>
 
@@ -1428,6 +1447,11 @@ $('#myCollapsible').on('hidden', function () {
             <p title="">The slideshow below shows a generic plugin and component for cycling through elements like a carousel.</p>
             <div class="bs-docs-example">
               <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
                 <div class="carousel-inner">
                   <div class="item active">
                     <img src="assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
@@ -1457,6 +1481,11 @@ $('#myCollapsible').on('hidden', function () {
             </div>
 <pre class="prettyprint linenums">
 &lt;div id="myCarousel" class="carousel slide"&gt;
+  &lt;ol class="carousel-indicators"&gt
+    &lt;li data-target="#myCarousel" data-slide-to="0" class="active"&gt&lt;/li&gt
+    &lt;li data-target="#myCarousel" data-slide-to="1"&gt&lt;/li&gt
+    &lt;li data-target="#myCarousel" data-slide-to="2"&gt&lt;/li&gt
+  &lt;/ol&gt
   &lt;!-- Carousel items --&gt;
   &lt;div class="carousel-inner"&gt;
     &lt;div class="active item"&gt;…&lt;/div&gt;

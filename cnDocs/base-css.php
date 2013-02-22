@@ -78,21 +78,21 @@
   &lt;small&gt;这一行文本意味着它不是强调的内容。&lt;/small&gt;
 &lt;/p&gt;
 </pre>          
-<h3 title="Bold">加粗</h3>
-<p title="For emphasizing a snippet of text with a heavier font-weight.">使用加粗来强调文本</p>
-          <div class="bs-docs-example">
-            <p title="The following snippet of text is rendered as bold text.">下面的代码片段的文本呈现为<strong>粗体文本</strong>。</p>
-          </div>
-          <pre class="prettyprint">&lt;strong&gt;粗体文本&lt;/strong&gt;</pre>
-
-          <h3 title="Italics">斜体</h3>
-          <p title="For emphasizing a snippet of text with italics.">使用斜体来强调文本</p>
-          <div class="bs-docs-example">
-            <p title="The following snippet of text isrendered as italicized text.">下面的代码片段的文本 <em>呈现为斜体字</em>。</p>
-          </div>
-          <pre class="prettyprint">&lt;em&gt;呈现为斜体字&lt;/em&gt;</pre>
-
-          <p title="Feel free to use &lt;b&gt; and &lt;i&gt; in HTML5. &lt;b&gt; is meant to highlight words or phrases without conveying additional importance while &lt;i&gt; is mostly for voice, technical terms, etc."><span class="label label-info">注意!</span> 在HTML5中仍然可以使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 标签，但是它们的用途已经发生了改变。
+    <h3 title="Bold">加粗</h3>
+    <p title="For emphasizing a snippet of text with a heavier font-weight.">使用加粗来强调文本</p>
+    <div class="bs-docs-example">
+    <p title="The following snippet of text is rendered as bold text.">下面的代码片段的文本呈现为<strong>粗体文本</strong>。</p>
+    </div>
+    <pre class="prettyprint">&lt;strong&gt;粗体文本&lt;/strong&gt;</pre>
+    
+    <h3 title="Italics">斜体</h3>
+    <p title="For emphasizing a snippet of text with italics.">使用斜体来强调文本</p>
+    <div class="bs-docs-example">
+    <p title="The following snippet of text isrendered as italicized text.">下面的代码片段的文本 <em>呈现为斜体字</em>。</p>
+    </div>
+    <pre class="prettyprint">&lt;em&gt;呈现为斜体字&lt;/em&gt;</pre>
+    
+    <p title="Feel free to use &lt;b&gt; and &lt;i&gt; in HTML5. &lt;b&gt; is meant to highlight words or phrases without conveying additional importance while &lt;i&gt; is mostly for voice, technical terms, etc."><span class="label label-info">注意!</span> 在HTML5中仍然可以使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 标签，但是它们的用途已经发生了改变。
 	<code>&lt;b&gt;</code> 在过去仅仅用来加粗单词或短语，没有任何语义上的含义，现在定义需要强调的部分（如果您希望把文本标记为相比其他文本更为重要，应该使用 <code>&lt;strong&gt;</code> 标签。）。而 <code>&lt;i&gt;</code> 主要用在语音和技术等方面。</p>
 
           <h3 title="Emphasis classes">强调类</h3>
@@ -145,15 +145,15 @@
                 </div>
                 <pre class="prettyprint linenums">
 &lt;address&gt;
-&lt;strong&gt;tCreator文化有限公司&lt;/strong&gt;&lt;br&gt;
-某省某市某大道404号&lt;br&gt;
-佚名大厦, A座49楼&lt;br&gt;
-&lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890
+  &lt;strong&gt;tCreator文化有限公司&lt;/strong&gt;&lt;br&gt;
+  某省某市某大道404号&lt;br&gt;
+  佚名大厦, A座49楼&lt;br&gt;
+  &lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890
 &lt;/address&gt;
 
 &lt;address&gt;
-&lt;strong&gt;有关负责人&lt;/strong&gt;&lt;br&gt;
-&lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
+  &lt;strong&gt;有关负责人&lt;/strong&gt;&lt;br&gt;
+  &lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
 &lt;/address&gt;
 </pre>
                 <hr class="bs-docs-separator">
@@ -206,8 +206,8 @@
                 </div>
                 <pre class="prettyprint linenums">
 &lt;blockquote&gt;
-&lt;p&gt;远看山有色，近听水无声。春去花还在，人来鸟不惊。&lt;/p&gt;
-&lt;small&gt;王维 &lt;cite title="Source Title"&gt;《画》&lt;/cite&gt;&lt;/small&gt;
+  &lt;p&gt;远看山有色，近听水无声。春去花还在，人来鸟不惊。&lt;/p&gt;
+  &lt;small&gt;王维 &lt;cite title="Source Title"&gt;《画》&lt;/cite&gt;&lt;/small&gt;
 &lt;/blockquote&gt;
 </pre>
                 <h4 title="Alternate displays">另一种引用效果</h4>
@@ -220,7 +220,7 @@
                 </div>
                 <pre class="prettyprint linenums">
 &lt;blockquote class="pull-right"&gt;
-...
+  ...
 &lt;/blockquote&gt;
 </pre>
                 <hr class="bs-docs-separator">
@@ -335,8 +335,7 @@
 </pre>
                 <p title="Horizontal description lists will truncate terms that are too long to fit in the left column fix text-overflow. In narrower viewports, they will change to the default stacked layout. ">
 				<span class="label label-info">注意!</span>
-				水平列表中如果项目名称太长，需要添加 <code>text-overflow</code> 属性。在小分辨率下，他们会以堆叠式布局显示。 
-				</p>
+				水平列表中如果项目名称太长，需要添加 <code>text-overflow</code> 属性。在小分辨率下，他们会以堆叠式布局显示。 </p>
             </section>
             
             <!-- Code
@@ -780,77 +779,106 @@
                         </tbody>
                     </table>
                 </div>
-                <pre class="prettyprint linenums">
-...
-&lt;tr class="success"&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;TB - Monthly&lt;/td&gt;
-&lt;td&gt;01/04/2012&lt;/td&gt;
-&lt;td&gt;Approved&lt;/td&gt;
-&lt;/tr&gt;
-...
+<pre class="prettyprint linenums">
+  &lt;tr class="success"&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;TB - Monthly&lt;/td&gt;
+    &lt;td&gt;01/04/2012&lt;/td&gt;
+    &lt;td&gt;Approved&lt;/td&gt;
+  &lt;/tr&gt;
 </pre>
-                <hr class="bs-docs-separator">
-                <h2 title="Supported table markup">Supported table markup</h2>
-                <p title="List of supported table HTML elements and how they should be used.">List of supported table HTML elements and how they should be used.</p>
-                <table class="table table-bordered table-striped">
-                    <colgroup>
-                    <col class="span1">
-                    <col class="span7">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Tag</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>&lt;table&gt;</code></td>
-                            <td> Wrapping element for displaying data in a tabular format </td>
-                        </tr>
-                        <tr>
-                            <td><code>&lt;thead&gt;</code></td>
-                            <td> Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns </td>
-                        </tr>
-                        <tr>
-                            <td><code>&lt;tbody&gt;</code></td>
-                            <td> Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table </td>
-                        </tr>
-                        <tr>
-                            <td><code>&lt;tr&gt;</code></td>
-                            <td> Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row </td>
-                        </tr>
-                        <tr>
-                            <td><code>&lt;td&gt;</code></td>
-                            <td> Default table cell </td>
-                        </tr>
-                        <tr>
-                            <td><code>&lt;th&gt;</code></td>
-                            <td> Special table cell for column (or row, depending on scope and placement) labels<br>
-                                Must be used within a <code>&lt;thead&gt;</code></td>
-                        </tr>
-                        <tr>
-                            <td><code>&lt;caption&gt;</code></td>
-                            <td> Description or summary of what the table holds, especially useful for screen readers </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <pre class="prettyprint linenums">
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>Supported table markup</h2>
+          <p>List of supported table HTML elements and how they should be used.</p>
+          <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span1">
+              <col class="span7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>&lt;table&gt;</code>
+                </td>
+                <td>
+                  Wrapping element for displaying data in a tabular format
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;thead&gt;</code>
+                </td>
+                <td>
+                  Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tbody&gt;</code>
+                </td>
+                <td>
+                  Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tr&gt;</code>
+                </td>
+                <td>
+                  Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;td&gt;</code>
+                </td>
+                <td>
+                  Default table cell
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;th&gt;</code>
+                </td>
+                <td>
+                  Special table cell for column (or row, depending on scope and placement) labels
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;caption&gt;</code>
+                </td>
+                <td>
+                  Description or summary of what the table holds, especially useful for screen readers
+                </td>
+              </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums">
 &lt;table&gt;
-&lt;caption&gt;...&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-  &lt;th&gt;...&lt;/th&gt;
-  &lt;th&gt;...&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-  &lt;td&gt;...&lt;/td&gt;
-  &lt;td&gt;...&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
             </section>
@@ -983,7 +1011,6 @@
                     <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
                 </ul>
                 <form class="bs-docs-example form-horizontal">
-                    <legend>Legend</legend>
                     <div class="control-group">
                         <label class="control-label" for="inputEmail">Email</label>
                         <div class="controls">
@@ -1159,12 +1186,13 @@ Option two can be something else and selecting it will deselect option one
                 <form class="bs-docs-example">
                     <div class="input-prepend">
 						<span class="add-on">@</span>
-                        <input class="span2" id="prependedInput" size="16" type="text" placeholder="Username">
+                        <input class="span2" id="prependedInput" type="text" placeholder="Username">
                     </div>
                     <br>
                     <div class="input-append">
-                        <input class="span2" id="appendedInput" size="16" type="text">
-                        <span class="add-on">.00</span> </div>
+                        <input class="span2" id="appendedInput" type="text">
+                        <span class="add-on">.00</span>
+					</div>
                 </form>
                 <pre class="prettyprint linenums">
 &lt;div class="input-prepend"&gt;
@@ -1333,6 +1361,54 @@ Option two can be something else and selecting it will deselect option one
 &lt;/div&gt;
 </pre>
 
+          <h4>Segmented dropdown groups</h4>
+          <form class="bs-docs-example">
+            <div class="input-prepend">
+              <div class="btn-group">
+                <button class="btn" tabindex="-1">Action</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <input type="text">
+            </div>
+            <div class="input-append">
+              <input type="text">
+              <div class="btn-group">
+                <button class="btn" tabindex="-1">Action</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;div class="btn-group"&gt;...&lt;/div&gt;
+    &lt;input type="text"&gt;
+  &lt;/div&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text"&gt;
+    &lt;div class="btn-group"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
           <h4>Search form</h4>
           <form class="bs-docs-example form-search">
             <div class="input-append">
@@ -1346,16 +1422,17 @@ Option two can be something else and selecting it will deselect option one
           </form>
 <pre class="prettyprint linenums">
 &lt;form class="form-search"&gt;
-&lt;div class="input-append"&gt;
-&lt;input type="text" class="span2 search-query"&gt;
-&lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="input-prepend"&gt;
-&lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
-&lt;input type="text" class="span2 search-query"&gt;
-&lt;/div&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+  &lt;/div&gt;
 &lt;/form&gt;
 </pre>
+
 
           <h3>Control sizing</h3>
           <p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.span*</code> classes.</p>
@@ -1430,7 +1507,7 @@ Option two can be something else and selecting it will deselect option one
 &lt;input class="span2" type="text" placeholder=".span2"&gt;
 &lt;input class="span3" type="text" placeholder=".span3"&gt;
 &lt;select class="span1"&gt;
-...
+  ...
 &lt;/select&gt;
 &lt;select class="span2"&gt;
 ...
@@ -1491,8 +1568,8 @@ Option two can be something else and selecting it will deselect option one
           </form>
 <pre class="prettyprint linenums">
 &lt;div class="form-actions"&gt;
-&lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
-&lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1574,6 +1651,7 @@ Option two can be something else and selecting it will deselect option one
     &lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="control-group error"&gt;
   &lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
   &lt;div class="controls"&gt;
@@ -1581,6 +1659,15 @@ Option two can be something else and selecting it will deselect option one
     &lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div class="control-group info"&gt;
+  &lt;label class="control-label" for="inputInfo"&gt;Input with info&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputInfo"&gt;
+    &lt;span class="help-inline"&gt;Username is already taken&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;div class="control-group success"&gt;
   &lt;label class="control-label" for="inputSuccess"&gt;Input with success&lt;/label&gt;
   &lt;div class="controls"&gt;
@@ -1675,20 +1762,20 @@ Option two can be something else and selecting it will deselect option one
                 </div>
                 <pre class="prettyprint linenums">
 &lt;p&gt;
-&lt;button class="btn btn-large btn-primary" type="button"&gt;大号按钮&lt;/button&gt;
-&lt;button class="btn btn-large" type="button"&gt;大号按钮&lt;/button&gt;
+  &lt;button class="btn btn-large btn-primary" type="button"&gt;大号按钮&lt;/button&gt;
+  &lt;button class="btn btn-large" type="button"&gt;大号按钮&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;button class="btn btn-primary" type="button"&gt;默认按钮&lt;/button&gt;
-&lt;button class="btn" type="button"&gt;默认按钮&lt;/button&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;默认按钮&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;默认按钮&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;button class="btn btn-small btn-primary" type="button"&gt;小号按钮&lt;/button&gt;
-&lt;button class="btn btn-small" type="button"&gt;小号按钮&lt;/button&gt;
+  &lt;button class="btn btn-small btn-primary" type="button"&gt;小号按钮&lt;/button&gt;
+  &lt;button class="btn btn-small" type="button"&gt;小号按钮&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;button class="btn btn-mini btn-primary" type="button"&gt;迷你按钮&lt;/button&gt;
-&lt;button class="btn btn-mini" type="button"&gt;迷你按钮&lt;/button&gt;
+  &lt;button class="btn btn-mini btn-primary" type="button"&gt;迷你按钮&lt;/button&gt;
+  &lt;button class="btn btn-mini" type="button"&gt;迷你按钮&lt;/button&gt;
 &lt;/p&gt;
 </pre>
                 <p title="Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding .btn-block.">通过添加 <code>.btn-block</code> 样式，创建块级按钮且等于父级宽度。</p>
@@ -1754,11 +1841,11 @@ Option two can be something else and selecting it will deselect option one
 					<img data-src="holder.js/140x140" class="img-polaroid">
 				</div>
 <pre class="prettyprint linenums">
-&lt;img data-src="holder.js/140x140" class="img-rounded"&gt;
-&lt;img data-src="holder.js/140x140" class="img-circle"&gt;
-&lt;img data-src="holder.js/140x140" class="img-polaroid"&gt;
+&lt;img src="..." class="img-rounded"&gt;
+&lt;img src="..." class="img-circle"&gt;
+&lt;img src="..." class="img-polaroid"&gt;
 </pre>
-                <p title=".img-rounded and .img-circle do not work in IE7-8 due to lack of border-radius support."><span class="label label-info">注意!</span> 因为IE7-8缺乏对 <code>border-radius</code>的支持，将导致 <code>.img-rounded</code> 和 <code>.img-circle</code> 样式失效。</p>
+        <p title=".img-rounded and .img-circle do not work in IE7-8 due to lack of border-radius support."><span class="label label-info">注意!</span> 因为IE7-8缺乏对 <code>border-radius</code>的支持，将导致 <code>.img-rounded</code> 和 <code>.img-circle</code> 样式失效。</p>
             </section>
             
             <!-- Icons
@@ -1960,13 +2047,12 @@ Option two can be something else and selecting it will deselect option one
 		          </div>
                 <pre class="prettyprint linenums">
 &lt;div class="btn-toolbar"&gt;
-&lt;div class="btn-group"&gt;
-
-&lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a class="btn" href="#"&gt;&lt;i class="icon-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;/div&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
                 <h5>Dropdown in a button group</h5>
@@ -2007,7 +2093,7 @@ Option two can be something else and selecting it will deselect option one
 &lt;/div&gt;
 </pre>
 
-          <h5>Small button</h5>
+          <h5>Button sizes</h5>
 		  <div class="bs-docs-example">
             <a class="btn btn-large" href="#"><i class="icon-star"></i> Star</a>
             <a class="btn btn-small" href="#"><i class="icon-star"></i> Star</a>

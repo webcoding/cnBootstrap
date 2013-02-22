@@ -6,13 +6,13 @@
 <div class="jumbotron masthead">
   <div class="container">
     <h1>cnBootstrap</h1>
-    <p>Bootstrap中文版——时尚、直观、强大的前端框架<br>使Web开发更快，更容易。</p>
+    <p title="Sleek, intuitive, and powerful front-end framework for faster and easier web development.">Bootstrap中文版——时尚、直观、强大的前端框架<br>使Web开发更快，更容易。</p>
     <p>
       <a href="https://github.com/webcoding/cnBootstrap" class="btn btn-primary btn-large" title="Download Bootstrap">下载 cnBootstrap<small>(v1.0)</small></a>
     </p>
     <ul class="masthead-links">
       <li>
-        <a href="https://github.com/webcoding/cnBootstrap" title="Github Progect">访问 GitHub 项目</a>
+        <a href="https://github.com/webcoding/cnBootstrap" title="GitHub Progect">访问 GitHub 项目</a>
       </li>
       <li>
         <a href="./getting-started.php#examples" title="Examples">例子</a>
@@ -21,7 +21,7 @@
         <a href="./extend.php" title="Extend">扩展</a>
       </li>
       <li>
-        base on TB v2.2.1
+        base on TB v2.3.0
       </li>
 	  <li>
 	  	<a href="./standard.php" title="standard">前端规范</a>
@@ -61,12 +61,12 @@
       <div class="span4">
         <img src="assets/img/bs-docs-twitter-github.png">
         <h2>由匠人建 为匠人用</h2>
-        <p>由 Twitter 大神<a href="http://twitter.com/mdo">@mdo</a> and <a href="http://twitter.com/fat">@fat</a>创建, Bootstrap 使用 <a href="http://lesscss.org">LESS CSS</a>, 通过 <a href="http://nodejs.org">Node</a> 编译, 在 <a href="http://github.com">GitHub</a> 网站上进行管理维护并不断完善。</p>
+        <p title="Built at Twitter by @mdo and @fat, Bootstrap utilizes LESS CSS, is compiled via Node, and is managed through GitHub to help nerds do awesome stuff on the web.">由 Twitter 大神<a href="http://twitter.com/mdo">@mdo</a> and <a href="http://twitter.com/fat">@fat创建, Bootstrap 使用 <a href="http://lesscss.org">LESS CSS</a>, 通过 <a href="http://nodejs.org">Node</a> 编译, 在 <a href="http://github.com">GitHub</a> 网站上进行管理维护并不断完善。</p>
       </div>
       <div class="span4">
         <img src="assets/img/bs-docs-responsive-illustrations.png">
         <h2 title="Made for everyone.">适合于每一个人</h2>
-        <p title="Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via responsive CSS as well.">Bootstrap 不仅在主流浏览器表现卓越(甚至包括IE7), 并通过 <a href="./scaffolding.php#responsive">响应式布局</a> 对平板和智能手机提供支持。</p>
+        <p title="Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via responsive CSS as well.">cnBootstrap 不仅在主流浏览器表现卓越(甚至包括IE7), 并通过 <a href="./scaffolding.php#responsive">响应式布局</a> 对平板和智能手机提供支持。</p>
       </div>
       <div class="span4">
         <img src="assets/img/bs-docs-bootstrap-features.png">
