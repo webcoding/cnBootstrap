@@ -6,8 +6,8 @@
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
   <div class="container">
-    <h1>Extending Bootstrap</h1>
-    <p class="lead">Extend Bootstrap to take advantage of included styles and components, as well as LESS variables and mixins.</p>
+    <h1 title="Extending Bootstrap">扩展</h1>
+    <p class="lead" title="Extend Bootstrap to take advantage of included styles and components, as well as LESS variables and mixins.">BT扩展，充分利用了风格样式和组件以及变量和混合。</p>
   <div>
 </header>
 
@@ -18,9 +18,9 @@
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#built-with-less"><i class="icon-chevron-right"></i> Built with LESS</a></li>
-          <li><a href="#compiling"><i class="icon-chevron-right"></i> Compiling Bootstrap</a></li>
-          <li><a href="#static-assets"><i class="icon-chevron-right"></i> Use as static assets</a></li>
+          <li><a href="#built-with-less" title="Built with LESS"><i class="icon-chevron-right"></i> 使用LESS</a></li>
+          <li><a href="#compiling" tilte="Compiling Bootstrap"><i class="icon-chevron-right"></i> 编译Bootstrap</a></li>
+          <li><a href="#static-assets" title="Use as static assets"><i class="icon-chevron-right"></i> 使用静态资源</a></li>
         </ul>
       </div>
       <div class="span9">
@@ -31,25 +31,27 @@
         ================================================== -->
         <section id="built-with-less">
           <div class="page-header">
-            <h1>Built with LESS</h1>
+            <h1 title="Built with LESS">使用LESS</h1>
           </div>
 
           <img style="float: right; height: 36px; margin: 10px 20px 20px" src="assets/img/less-logo-large.png" alt="LESS CSS">
-          <p class="lead">Bootstrap is made with LESS at its core, a dynamic stylesheet language created by our good friend, <a href="http://cloudhead.io">Alexis Sellier</a>. It makes developing systems-based CSS faster, easier, and more fun.</p>
+          <p class="lead" title="Bootstrap is made with LESS at its core, a dynamic stylesheet language created by our good friend, Alexis Sellier. It makes developing systems-based CSS faster, easier, and more fun.">Bootstrap使用LESS构造核心，LESS是由我们的好友 <a href="http://cloudhead.io">Alexis Sellier</a> 创造的一种动态样本表语言。它让系统底层的CSS开发变得更快捷高效，更有生趣。
+      </p>
 
-          <h3>Why LESS?</h3>
-          <p>One of Bootstrap's creators wrote a quick <a href="http://www.wordsbyf.at/2012/03/08/why-less/">blog post about this</a>, summarized here:</p>
+          <h3 title="Why LESS?">为什么使用LESS？</h3>
+          <p title="One of Bootstrap's creators wrote a quick blog post about this, summarized here:">Bootstrap的一个创造者写了一篇关于<a href="http://www.wordsbyf.at/2012/03/08/why-less/">为什么使用LESS</a>的博文，摘要如下：</p>
           <ul>
-            <li>Bootstrap compiles faster ~6x faster with Less compared to Sass</li>
-            <li>Less is written in JavaScript, making it easier to us to dive in and patch compared to Ruby with Sass.</li>
-            <li>Less is more; we want to feel like we're writing CSS and making Bootstrap approachable to all.</li>
+            <li title="Bootstrap compiles faster ~6x faster with Less compared to Sass">Bootstrap编译速度更快约6倍，相比于Sass。</li>
+            <li title="Less is written in JavaScript, making it easier to us to dive in and patch compared to Ruby with Sass.">LESS是写在JavaScript中，使其更容易给调试，相比于Sass用Ruby编译。</li>
+            <li title="Less is more; we want to feel like we're writing CSS and making Bootstrap approachable to all.">少即是多即我们想要的感觉，就像我们在编写的CSS且使Bootstrap更平易近人。</li>
           </ul>
 
-          <h3>What's included?</h3>
-          <p>As an extension of CSS, LESS includes variables, mixins for reusable snippets of code, operations for simple math, nesting, and even color functions.</p>
+          <h3 title="What's included?">包含什么？</h3>
+          <p title="As an extension of CSS, LESS includes variables, mixins for reusable snippets of code, operations for simple math, nesting, and even color functions.">做为CSS的扩展，LESS包括变量，可重用代码段的混合，简单的数学操作，内嵌，以及颜色方法等等。</p>
 
-          <h3>Learn more</h3>
-          <p>Visit the official website at <a href="http://lesscss.org">http://lesscss.org</a> to learn more.</p>
+          <h3 title="Learn more">了解更多</h3>
+          <p title="Visit the official website at http://lesscss.org to learn more.">详见LESS官网 <a href="http://lesscss.org">http://lesscss.org</a> 。<br>详见LESS中国官网 <a href="http://lesscss.net">http://lesscss.net</a> 。
+      </p>
         </section>
 
 
@@ -58,19 +60,19 @@
         ================================================== -->
         <section id="compiling">
           <div class="page-header">
-            <h1>Compiling Bootstrap with Less</h1>
+            <h1 title="Compiling Bootstrap with Less">使用LESS编译 <small>LESS变量和变量值，以及用法指南</small></h1>
           </div>
 
-          <p class="lead">Since our CSS is written with Less and utilizes variables and mixins, it needs to be compiled for final production implementation. Here's how.</p>
+          <p class="lead" title="Since our CSS is written with Less and utilizes variables and mixins, it needs to be compiled for final production implementation. Here's how.">由于使用了LESS变量及混入来书写css，所以就需要编译生成到生产环境，这里是怎么实现的：</p>
 
           <div class="alert alert-info">
             <strong>Note:</strong> If you're submitting a pull request to GitHub with modified CSS, you <strong>must</strong> recompile the CSS via any of these methods.
           </div>
 
-          <h2>Tools for compiling</h2>
+          <h2 title="Tools for compiling">编译工具</h2>
 
-          <h3>Command line</h3>
-          <p>Follow <a href="https://github.com/twitter/bootstrap#developers">the instructions in the project readme</a> on GitHub for compiling via command line.</p>
+          <h3 title="Command line">命令行</h3>
+          <p title="Follow the instructions in the project readme on GitHub for compiling via command line.">按照在GitHub上的 <a href="https://github.com/twitter/bootstrap#developers">项目自述</a>中的说明，通过命令行编译。</p>
 
           <h3>JavaScript</h3>
           <p><a href="http://lesscss.org/">Download the latest Less.js</a> and include the path to it (and Bootstrap) in the <code>&lt;head&gt;</code>.</p>
