@@ -1,9 +1,8 @@
 @charset "utf-8";
-/*
-@名称: reset.css
-@功能: 重设浏览器默认样式(综合自aliceui,yahoo,normalize)
-*/
-
+/**
+ @名称: reset.css
+ @功能: 重设浏览器默认样式(综合自aliceui,yahoo,normalize)
+ */
 
 /* ==============================
    HTML5 显示定义
@@ -415,7 +414,7 @@ img {
     height: 0;
 }
 .clearfix, 
-.wrap{
+.wrap {
     *zoom:1
 }/* for IE6 IE7 */
 
@@ -427,7 +426,7 @@ img {
     visibility: hidden;
 }
 .wrap, 
-.bc{
+.bc {
     margin-left: auto;
     margin-right: auto;
 }
