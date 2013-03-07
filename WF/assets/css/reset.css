@@ -1,7 +1,7 @@
 @charset "utf-8";
 /**
  @名称: reset.css
- @功能: 重设浏览器默认样式(综合自aliceui,yahoo,normalize)
+ @功能: 重设浏览器默认样式
  */
 
 /* ==============================
@@ -96,7 +96,11 @@ menu,
 nav, 
 section {}
 
-/* 去除列表项 */
+/* 去除列表项
+   大范围的去除并不好，不若使用.none样式，由于限制习惯等问题，使用推荐如下：
+   - 生产线网站项目使用传统reset样式
+   - 前端研究项目使用noreset.css样式(参考normalize并使用.none样式完成此reset功能)
+ */
 ol, 
 ul {
     list-style-type: none;
@@ -435,3 +439,7 @@ img {
 /* 这条分割线以上为reset.css，书写规范请参见README.md
 ============================================================ */
 
+/* 
+ === 样式测试 ===
+ javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/cnBootstrap/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";b.className+=" typo"})()
+============================================================ */

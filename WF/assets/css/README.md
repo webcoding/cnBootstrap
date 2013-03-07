@@ -1,11 +1,13 @@
 
 # About reset.css
 
+综合自Ocode,html5doctor,aliceui,yahoo,normalize等
+
 /* ------------------------------------------------------------
 
   - Css Reset v1.0
   - Created: 2011-04-25
-  - Last Updated: 2013-03-04
+  - Last Updated: 2013-03-07
   - Author: cloudYan
   - Contact: qqGroup:187260298
 
@@ -76,4 +78,38 @@ html5的Doctype声明，不必写type="text/css" 但是必须要有 rel="stylesh
 ## CSS 书写规范
 
 详情请参阅 [CSS 书写规范](http://www.tcreator.info/cnBootstrap/cnDocs/standard.php#css)
+
+
+# 组合样式combo.css
+
+
+/* ------------------------------------------------------------
+
+  - Css combo v1.0
+  - Created: 2011-04-25
+  - Last Updated: 2013-03-07
+  - Author: cloudYan
+  - Contact: qqGroup:187260298
+
+------------------------------------------------------------ */
+
+为方便开发特提供便捷的组合样式，能迅速拼写出想要的样式，秉承样式与结构相分离的原则，此样式不可滥用，否则得不偿失
+
+### 适用范围
+
+在网页中有部分简单的样式需要时间，此时没有方便可用的 id 或 class，则可尝试使用common.css提供的便捷类，如：
+
+````默认12px的文本中某名词需要加粗并大一号字体
+
+&lt;p>这是一段普通文本&lt;/p&gt;
+&lt;p>这是另一端普通文本，这里需要 &lt;strong&gt;着重&lt;/strong&gt;，使用&lt;b class="f14"&gt;大一号的字体&lt;/b&gt;&lt;/p&gt;
+````
+如上：这里没有多余的类可用，又没有必要新建类名，使用快捷组合类是实现需求最简单的解决办法。
+
+
+
+
+
+
+
 
