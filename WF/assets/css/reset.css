@@ -1,7 +1,7 @@
 @charset "utf-8";
-/**
+/*
  @名称: reset.css
- @功能: 重设浏览器默认样式
+ @功能: 重设浏览器默认样式(综合自aliceui,yahoo,normalize)
  */
 
 /* ==============================
@@ -55,7 +55,7 @@ wbr {
    Base
    ============================== */
 
-/**
+/*
  * 1. 防止用户自定义背景颜色对网页的影响
  * 2. 设置默认字体Tahoma
  * 3. 防止 iOS 设备方向变化且没有禁用缩放功能时，文字会发生大小变化
@@ -96,10 +96,10 @@ menu,
 nav, 
 section {}
 
-/* 去除列表项
-   大范围的去除并不好，不若使用.none样式，由于限制习惯等问题，使用推荐如下：
-   - 生产线网站项目使用传统reset样式
-   - 前端研究项目使用noreset.css样式(参考normalize并使用.none样式完成此reset功能)
+/* 
+  大范围的去除列表项并不好，不若使用.none样式，由于习惯限制等问题，使用推荐如下：
+  - 生产线网站项目使用传统reset样式
+  - 前端研究项目使用noreset.css样式(参考normalize并使用.none样式完成此reset功能)
  */
 ol, 
 ul {
@@ -151,7 +151,7 @@ sub { bottom: -0.25em; }
    Embedded content
    ============================== */
 
-/**
+/*
  * 移除IE下a标签内img的边框
  */
 img {
@@ -163,7 +163,7 @@ img {
    Links
    ============================== */
 
-/**
+/*
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
@@ -198,7 +198,7 @@ a:hover {
    Forms input button ...
    ============================== */
 
-/**
+/*
  * Define consistent border, margin, and padding.
  */
 
@@ -208,7 +208,7 @@ fieldset {
     padding: 0.35em 0.625em 0.75em;
 }
 
-/**
+/*
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
@@ -218,7 +218,7 @@ legend {
     padding: 0; /* 2 */
 }
 
-/**
+/*
  * 1. 表单元素并不继承父级 font 的字体，这里设置默认字体，并不让其继承父级字体
  * 2. 表单元素并不继承父级 font 的大小
  * 3. 统一外边距 in Firefox 4+, Safari 5, and Chrome.
@@ -233,7 +233,7 @@ textarea {
     margin: 0; /* 3 */
 }
 
-/**
+/*
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
@@ -243,7 +243,7 @@ input {
     line-height: normal;
 }
 
-/**
+/*
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
@@ -255,7 +255,7 @@ select {
     text-transform: none;
 }
 
-/**
+/*
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
  * 2. Correct inability to style clickable `input` types in iOS.
@@ -271,7 +271,7 @@ input[type="submit"] {
     cursor: pointer; /* 3 */
 }
 
-/**
+/*
  * Re-set default cursor for disabled elements.
  */
 
@@ -280,7 +280,7 @@ html input[disabled] {
     cursor: default;
 }
 
-/**
+/*
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
@@ -291,7 +291,7 @@ input[type="radio"] {
     padding: 0; /* 2 */
 }
 
-/**
+/*
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
@@ -304,7 +304,7 @@ input[type="search"] {
     box-sizing: content-box;
 }
 
-/**
+/*
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
@@ -314,7 +314,7 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-/**
+/*
  * Remove inner padding and border in Firefox 4+.
  */
 
@@ -324,7 +324,7 @@ input::-moz-focus-inner {
     padding: 0;
 }
 
-/**
+/*
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
