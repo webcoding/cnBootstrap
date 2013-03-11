@@ -397,14 +397,16 @@ th {
 }
 
 
+/* 
+ 修复火狐下图片和文字之间的间隙
+ 添加img{vertical-align:top;}、img{vertical-align:middle;}或img{display:block}属性即可解决
+ 推荐前者，不要再reset中设置，建议使用时再处理
 
-
-
-/* 修复火狐下图片和文字之间的间隙，添加img{vertical-align:top;}、img{vertical-align:middle;}或img{display:block}属性即可解决，推荐前者 */
 img {
     vertical-align: middle;
 }
-
+ */
+ 
 /* 清除浮动 */
 .clearfix:after, 
 .wrap:after {
