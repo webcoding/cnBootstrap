@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../assets/css/reset.css" >
+<link rel="stylesheet" href="../assets/css/combo.css" >
+<link rel="stylesheet" href="../assets/css/responsive.css" >
+<link rel="stylesheet" href="less/buttons.css" >
+<link rel="stylesheet" href="less/forms.css" >
+<!--
+<link rel="stylesheet/less" href="less/variables.less" >
+<link rel="stylesheet/less" href="less/buttons.less" >
+<script src="less-1.3.3.min.js"></script>
+-->
+<style>
+h1, h2, h3 { margin: 1em 0; font-weight: bold; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+form { margin-bottom: 20px;}
+</style>
+<!-- 让IE系列浏览器识别html5标签 -->
+<!--[if lt IE 9]>
+<script src="../assets/js/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+    <h1>表单布局</h1>
+	<h3>垂直表单(默认)</h3>
+    <form class="">
+    	<fieldset>
+    		<legend>表单标题</legend>
+    		<label>标签名称</label>
+    		<input type="text" placeholder="输入提醒">
+    		<span class="help-block">例如 块级的帮助文本。</span>
+    		<label class="checkbox">
+    			<input type="checkbox"> 选项
+    		</label>
+    		<button type="submit" class="btn">提交</button>
+    	</fieldset>
+    </form>
+	
+	<hr>
+	
+	<h3>搜索表单</h3>
+    <form class="form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">搜索</button>
+    </form>
+	
+	<hr>
+	
+	<h3>内联表单</h3>
+	<form class="form-inline">
+		<input type="text" class="input-small" placeholder="邮箱">
+		<input type="password" class="input-small" placeholder="密码">
+		<label class="checkbox">
+			<input type="checkbox"> 记住帐号 
+			</label>
+		<button type="submit" class="btn">登录</button>
+	</form>
+	
+	<hr>
+	
+	<h3>水平表单</h3>
+	<form class="bs-docs-example form-horizontal">
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">邮箱</label>
+			<div class="controls">
+				<input type="text" id="inputEmail" placeholder="Email">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">密码</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" placeholder="Password">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+					<input type="checkbox"> 记住帐号 
+				</label>
+				<button type="submit" class="btn">登录</button>
+			</div>
+		</div>
+	</form>
+	
+	<hr>
+	
+	<h3>组合框 <small>按钮紧邻输入框</small></h3>
+    <div class="input-append">
+        <input class="span2" id="appendedInputButton" type="text">
+        <button class="btn" type="button">搜索</button>
+    </div>
+	
+</div>
+</body>
+</html>
