@@ -269,7 +269,7 @@ input[type="button"].btn-block {
 /* 新增样式 浅黄色buff 橙色orange 玫红色pink */
 .btn-buff {
   color: #555555;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   background-color: #fdf7ed;
   background-image: -moz-linear-gradient(top, #fdf7ed, #ffdfa9);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdf7ed), to(#ffdfa9));
@@ -304,13 +304,13 @@ input[type="button"].btn-block {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #fe8500;
-  background-image: -moz-linear-gradient(top, #feca69, #fd6932);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#feca69), to(#fd6932));
-  background-image: -webkit-linear-gradient(top, #feca69, #fd6932);
-  background-image: -o-linear-gradient(top, #feca69, #fd6932);
-  background-image: linear-gradient(to bottom, #feca69, #fd6932);
+  background-image: -moz-linear-gradient(top, #fd944a, #fd6932);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fd944a), to(#fd6932));
+  background-image: -webkit-linear-gradient(top, #fd944a, #fd6932);
+  background-image: -o-linear-gradient(top, #fd944a, #fd6932);
+  background-image: linear-gradient(to bottom, #fd944a, #fd6932);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffeca69', endColorstr='#fffd6932', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffd944a', endColorstr='#fffd6932', GradientType=0);
   border-color: #fd6932 #fd6932 #e8b96c;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #fd6932;
