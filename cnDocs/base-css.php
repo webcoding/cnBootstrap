@@ -941,28 +941,28 @@
                 <p title="Individual form controls receive styling, but without any required base class on the &lt;form&gt; or large changes in markup. Results in stacked, left-aligned labels on top of form controls.">简洁灵活的表单默认样式，只使用表单控件，无须额外标记。</p>
                 <form class="bs-docs-example">
 					<fieldset>
-	                    <legend>Legend</legend>
-	                    <label>Label name</label>
-	                    <input type="text" placeholder="Type something…">
-	                    <span class="help-block">Example block-level help text here.</span>
+	                    <legend>表单标题</legend>
+	                    <label>标签名称</label>
+	                    <input type="text" placeholder="输入提醒">
+	                    <span class="help-block">例如 块级的帮助文本。</span>
 	                    <label class="checkbox">
-	                        <input type="checkbox"> Check me out 
+	                        <input type="checkbox"> 选项 
 						</label>
-	                    <button type="submit" class="btn">Submit</button>
+	                    <button type="submit" class="btn">提交</button>
 					</fieldset>
                 </form>
                 <pre class="prettyprint linenums">
 &lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Legend&lt;/legend&gt;
-    &lt;label&gt;Label name&lt;/label&gt;
-    &lt;input type="text" placeholder="Type something…"&gt;
-    &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
-    &lt;label class="checkbox"&gt;
-      &lt;input type="checkbox"&gt; Check me out
-    &lt;/label&gt;
-    &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
-  &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;表单标题&lt;/legend&gt;
+        &lt;label&gt;标签名称&lt;/label&gt;
+        &lt;input type="text" placeholder="输入提醒"&gt;
+        &lt;span class="help-block"&gt;例如 块级的帮助文本。&lt;/span&gt;
+        &lt;label class="checkbox"&gt;
+            &lt;input type="checkbox"&gt; 选项
+        &lt;/label&gt;
+        &lt;button type="submit" class="btn"&gt;提交&lt;/button&gt;
+    &lt;/fieldset&gt;
 &lt;/form&gt;
 </pre>
                 <hr class="bs-docs-separator">
@@ -973,33 +973,33 @@
 				<p>在表单添加 <code>.form-search</code> 和 在 <code>&lt;input&gt;</code> 添加 <code>.search-query</code> 可为输入框提供一个额外的圆角.</p>
                 <form class="bs-docs-example form-search">
                     <input type="text" class="input-medium search-query">
-                    <button type="submit" class="btn">Search</button>
+                    <button type="submit" class="btn">搜索</button>
                 </form>
                 <pre class="prettyprint linenums">
 &lt;form class="form-search"&gt;
-&lt;input type="text" class="input-medium search-query"&gt;
-&lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+    &lt;input type="text" class="input-medium search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;搜索&lt;/button&gt;
 &lt;/form&gt;
 </pre>
                 <h3>Inline form <small>内联表单</small></h3>
                 <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
                 <p>对于 <code>.form-inline</code> 和 <code>.form-horizontal</code>样式, 我们使用”inline-block“方式.</p>
                 <form class="bs-docs-example form-inline">
-                    <input type="text" class="input-small" placeholder="Email">
-                    <input type="password" class="input-small" placeholder="Password">
+                    <input type="text" class="input-small" placeholder="邮箱">
+                    <input type="password" class="input-small" placeholder="密码">
                     <label class="checkbox">
-                        <input type="checkbox"> Remember me 
+                        <input type="checkbox"> 记住帐号 
 						</label>
-                    <button type="submit" class="btn">Sign in</button>
+                    <button type="submit" class="btn">登录</button>
                 </form>
                 <pre class="prettyprint linenums">
 &lt;form class="form-inline"&gt;
-  &lt;input type="text" class="input-small" placeholder="Email"&gt;
-  &lt;input type="password" class="input-small" placeholder="Password"&gt;
-  &lt;label class="checkbox"&gt;
-    &lt;input type="checkbox"&gt; Remember me
-  &lt;/label&gt;
-  &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+    &lt;input type="text" class="input-small" placeholder="邮箱"&gt;
+    &lt;input type="password" class="input-small" placeholder="密码"&gt;
+    &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox"&gt; 记住帐号
+    &lt;/label&gt;
+    &lt;button type="submit" class="btn"&gt;登录&lt;/button&gt;
 &lt;/form&gt;
 </pre>
                 <h3>Horizontal form</h3>
@@ -1012,13 +1012,13 @@
                 </ul>
                 <form class="bs-docs-example form-horizontal">
                     <div class="control-group">
-                        <label class="control-label" for="inputEmail">Email</label>
+                        <label class="control-label" for="inputEmail">邮箱</label>
                         <div class="controls">
                             <input type="text" id="inputEmail" placeholder="Email">
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label" for="inputPassword">Password</label>
+                        <label class="control-label" for="inputPassword">密码</label>
                         <div class="controls">
                             <input type="password" id="inputPassword" placeholder="Password">
                         </div>
@@ -1026,9 +1026,9 @@
                     <div class="control-group">
                         <div class="controls">
                             <label class="checkbox">
-                                <input type="checkbox"> Remember me 
+                                <input type="checkbox"> 记住帐号 
 							</label>
-                            <button type="submit" class="btn">Sign in</button>
+                            <button type="submit" class="btn">登录</button>
                         </div>
                     </div>
                 </form>
