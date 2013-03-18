@@ -39,7 +39,7 @@ address,caption,cite,dfn,em,i,var{font-style:normal;font-weight:500;}
 caption,th{text-align:left;}
 .clearfix:after,.wrap:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}
 .clearfix,.wrap{zoom:1;}
-.clear{clear:both;display:block;overflow:hidden;visibility:hidden;}
+.clear{clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
 .wrap,.bc{margin-left:auto;margin-right:auto;}
 article,aside,details,embed,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,iframe{display:block;}
 img,fieldset,img{border:0;}

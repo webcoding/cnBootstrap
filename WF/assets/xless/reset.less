@@ -1,7 +1,7 @@
-@charset "utf-8";
+
 /* 
  @名称: reset.css
- @功能: 重设浏览器默认样式(综合自aliceui,yahoo,normalize)
+ @功能: 重设浏览器默认样式(综合自aliceui,yahoo,html5doctor,normalize)
  */
 
 /* ==============================
@@ -25,7 +25,7 @@ summary {
     display: block;
 }
 
-/* HTML5 媒体文件跟 img inline-block属性保持一致 */
+/* HTML5 媒体文件跟 img inline-block属性保持一致(IE6-9 and FF3) */
 audio, 
 canvas, 
 video {
@@ -62,8 +62,8 @@ wbr {
  */
 html {
     color: #000; /* 1 */
-	background: #fff; /* 1 */
-    font-family: Tahoma,Arial,\5b8b\4f53;; /* 2 */
+    background: #fff; /* 1 */
+    font-family: Tahoma,Arial,\5b8b\4f53; /* 2 */
     -webkit-text-size-adjust: 100%; /* 3 */
     -ms-text-size-adjust: 100%; /* 3 */
 }
@@ -80,11 +80,12 @@ menu {
     padding: 0;
 }
 
-/* 移除表单元素的reset，在form.css中统一设置 */
+/* 移除表单元素的reset，在form.css中统一设置
 fieldset, figure, legend,
 form, input, button, textarea {}
+*/
 
-/* 语义化的标签的样式默认的margin,padding都为0，不必reset */
+/* 语义化的标签的样式默认的margin,padding都为0，不必reset
 article, 
 aside, 
 details, 
@@ -95,6 +96,7 @@ hgroup,
 menu, 
 nav, 
 section {}
+ */
 
 /* 
   大范围的去除列表项并不好，不若使用.none样式，由于习惯限制等问题，使用推荐如下：
@@ -139,9 +141,9 @@ small {
 
 /* 统一上标和下标 */
 sub, sup {
+    position: relative;
     font-size: 75%;
     line-height: 0;
-    position: relative;
     vertical-align: baseline;
 }
 sup { top: -0.5em; }
@@ -155,6 +157,7 @@ sub { bottom: -0.25em; }
  * 移除IE下a标签内img的边框
  */
 img {
+    vertical-align: middle; /* 此属性有争议，待定 */
     border: 0;
 }
 
@@ -168,8 +171,9 @@ img {
  */
 
 /* 默认不显示下划线，保持页面简洁 */
-ins,a {
-    text-decoration: none;
+ins,
+a {
+text-decoration: none;
 }
 
 /* 让链接在 hover 状态下显示下划线 */
@@ -219,18 +223,19 @@ legend {
 }
 
 /*
- * 1. 表单元素并不继承父级 font 的字体，这里设置默认字体，并不让其继承父级字体
- * 2. 表单元素并不继承父级 font 的大小
- * 3. 统一外边距 in Firefox 4+, Safari 5, and Chrome.
+ * 1. 统一外边距 in Firefox 4+, Safari 5, and Chrome.
+ * 2. 表单元素并不继承父级 font 的字体，这里设置默认字体，并不让其继承父级字体
+ * 3. 表单元素并不继承父级 font 的大小
  */
 button,
 input,
 select,
 textarea {
-    font-family: inherit; /* 1 */
-	font-family: Tahoma,Arial,\5b8b\4f53; /* 1 */
-    font-size: 100%; /* 2 */
-    margin: 0; /* 3 */
+    margin: 0; /* 1 */
+    font-family: inherit; /* 2 */
+    font-family: Tahoma,Arial,\5b8b\4f53; /* 2 */
+    font-size: 100%; /* 3 */
+    vertical-align: middle; /* 待定样式 */
 }
 
 /*
@@ -240,10 +245,8 @@ textarea {
 
 button,
 input {
-    line-height: normal;
-	
-    /* IE6/7 内间距宽度一致 */	
-    *overflow: visible; 
+    *overflow: visible; // IE6/7 内间距宽度一致
+    line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
 }
 
 /*
@@ -424,14 +427,13 @@ img {
 }
 .clearfix, 
 .wrap {
-    *zoom:1
-}/* for IE6 IE7 */
+    *zoom: 1; /* for IE6 IE7 */
+}
 
 /* 空标签清除法 */
 .clear {
     clear: both;
     display: block;
-    height:0;
     overflow: hidden;
     visibility: hidden;
 }
@@ -442,10 +444,6 @@ img {
 }
 
 
-/* 这条分割线以上为reset.css，书写规范请参见README.md
-============================================================ */
+// Printing
+// -------------------------
 
-/* 
- === 样式测试 ===
- javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/cnBootstrap/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";b.className+=" typo"})()
-============================================================ */
