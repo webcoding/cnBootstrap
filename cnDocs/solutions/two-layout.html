@@ -158,7 +158,8 @@
 <strong>在观察朋友网三列布局时，发现其中间列巧妙的通过此种方法实现</strong> 综合推荐指数：★★★★★</p>
 <div class="layg">
     <div class="aside">左侧定宽，左浮动</div>
-    <div class="content">右侧自适应，overflow:hidden<br>这也许是最简单的办法了，唯一的限制是设置了overflow:hidden，导致超出此盒子的布局会被隐藏。</div>
+    <div class="content">右侧自适应，overflow:hidden<br>这也许是最简单的办法了，唯一的限制是设置了overflow:hidden，导致超出此盒子的布局会被隐藏。<br>
+	还有个问题，这里无法全兼容使用等高布局(margin-bottom:-1000px;padding-bottom:1000px;)这个属性，在IE6/7下，清除浮动时margin-bottom失效。所以这个不适用等高布局，除非仅右侧高度较大的情况。</div>
 </div>
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>

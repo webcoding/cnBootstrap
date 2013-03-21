@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>等高布局 参考自sydmo</title>
+<style>
+#box {width:940px;background:#ddd;margin:0 auto; padding:10px; }
+#box1 {width:640px;background:#666;position:relative;margin-right:300px; }
+#box2 {width:300px;background:#999;position:relative;margin-left:640px;margin-right:-300px;}
+#box3 { width:940px; position:relative; margin-left:-640px; overflow:hidden; }
+#left {width:620px;float:left;padding:10px;}
+#right {width:280px;float:right;padding:10px;}
+</style>
+</head>
+<body>
+<div id="box">
+  <div id="box1">
+    <div id="box2">
+      <div id="box3">
+        <div id="left">
+          <p>left</p>
+        </div>
+        <div id="right">
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+          <p>right</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
