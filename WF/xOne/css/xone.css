@@ -1,5 +1,5 @@
 
-body{font-size:12px; font-family:Tahoma,Arial,\5b8b\4f53; color:#333; background:#fff;}
+body{font:12px/22px Tahoma,Arial,\5b8b\4f53; color:#333; background:url(../images/bg.jpg) #fff center top no-repeat;}
 
 .element-invisible {
     position: absolute !important;
@@ -57,12 +57,9 @@ body{font-size:12px; font-family:Tahoma,Arial,\5b8b\4f53; color:#333; background
 /* .navbar
 ============================================================ */
 
-.navbar {
-    margin-bottom:20px;
-}
-
-
-
+.special_menu{padding:10px; font-size:12px;line-height:22px;overflow:hidden}
+.special_menu a{margin-right:10px;color:#333;}
+.special_menu h4{float:left;padding-right:10px;}
 
 
 
