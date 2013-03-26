@@ -272,8 +272,7 @@ zt/  pro即专题简述名称
 			</div>
 
             <p>外部CSS引用，必须使用如下格式( rel 在前，href 在后，无 type="text/css" 及 charset )：</p>
-            <pre>&lt;link rel="stylesheet" href="css_example_url" &gt;</pre>
-            
+            <pre>&lt;link rel="stylesheet" href="http://pic.lvmama.com/styles/v3/combo.css" &gt;</pre>
             <h3>CSS 注意事项</h3>
             <ul>
                 <li>无特殊说明，编码统一为utf-8；</li>
@@ -290,7 +289,7 @@ zt/  pro即专题简述名称
             </ul>
             
             <h3>CSS 书写规范</h3>
-            
+            <p class="lead">以下书写规范针对组件开发使用，非组件书写格式建议使用单行式排版。</p>
             <ul>
                 <li>使用四个空格的 soft-tabs 缩进</li>
                 <li>写组选择器时，保持选择器各占一行</li>
