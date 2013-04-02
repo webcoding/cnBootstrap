@@ -38,10 +38,13 @@
 .tl{ text-align: left; }
 .tr{ text-align: right; }
 
-
-
-
-
+/* 颜色取值 */
+.red       { color: red;    }
+.orange { color: orange; }
+.pink     { color: #e38;   }
+.gray     { color: gray;   }
+.gray3   { color: #333;   }
+.gray6   { color: #666;   }
 
 /* 文本大小、行高 */
 .f12 { font-size: 12px; }
