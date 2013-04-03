@@ -191,7 +191,13 @@
     float:left;
 }
 /* 竖向列表 */
-
+.ver li {
+    display:block;
+    *zoom:1;
+}
+.ver li a{
+    display:block;
+}
 
 /* ==============================
    模块功能划分
@@ -299,4 +305,11 @@ h6 {
     font-weight: normal; 
 }
 
+.v-t { vertical-align: top; }
+.v-m { vertical-align: middle; }
+.v-b { vertical-align: bottom; }
 
+.element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+}
