@@ -1,5 +1,5 @@
 
-/**
+/* 
  @名称: buttons.css
  @功能: 按钮样式
  */
@@ -84,9 +84,6 @@ input {
   border: 1px solid #cccccc;
   *border: 0;
   border-bottom-color: #b3b3b3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   *margin-left: .3em;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
@@ -142,12 +139,18 @@ input {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+.btn-big {
+  padding: 7px 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.btn-big [class^="icon-"],
+.btn-big [class*=" icon-"] {
+  margin-top: 2px;
+}
 .btn-large {
   padding: 11px 19px;
   font-size: 18px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
   font-weight: bold;
 }
 .btn-large [class^="icon-"],
@@ -157,9 +160,6 @@ input {
 .btn-small {
   padding: 2px 10px;
   font-size: 12px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
@@ -172,9 +172,6 @@ input {
 .btn-mini {
   padding: 0 6px;
   font-size: 12px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
 }
 .btn-block {
   display: block;
@@ -542,6 +539,31 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
 }
 
+.btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.btn-big {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.btn-large {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.btn-small {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.btn-mini {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
 /* 按钮文字阴影 */
 /* 暂时不使用
 .btn,

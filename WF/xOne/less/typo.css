@@ -60,8 +60,8 @@
 /* Utility classes */
 @import "utilities.css"; /* Has to be last to override when necessary */
 
-/* Plugin classes */
-@import "plugin.css";
+
+
 
 
 /* 书写规范请参见README.md
@@ -69,5 +69,5 @@
 
 /* 
  === 样式测试 ===
- javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";})()
+ javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";b.className+=" typo"})()
 ============================================================ */

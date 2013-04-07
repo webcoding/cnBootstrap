@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>wf.css - 测试网页reset、排版与公共组件</title>
+<meta name="description" content="用于浏览查看整体效果，以便测试调整。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 让IE系列浏览器识别html5标签 -->
+<!--[if lt IE 9]>
+<script src="../assets/js/html5shiv.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="less/wf.css" >
+<!--
+<link rel="stylesheet/less" href="../assets/xless/wf.less" >
+<script src="../assets/js/less-1.3.3.min.js"></script>
+-->
+<style>
+body { font:12px/22px Tahoma,Arial,\5b8b\4f53;}
+h1, h2, h3 { margin:1em 0;}
+h1 small, h2 small, h3 small { font-size:80%; font-weight:normal;}
+h1 { font-size:30px;}
+h2 { font-size:24px;}
+h3 { font-size:18px;}
+.plugin .pages { margin-bottom:20px;}
+.plugin .tips,.plugin .alert {margin-bottom: 10px;}
+
+</style>
+
+</head>
+<body>
+<div class="wrap plugin">
+<h1>wf.css 集成了各种组件css</h1>
+<h2>buttons.css <small>http://pic.lvmama.com/styles/v3/button.css</small></h2>
+<h3>按钮尺寸、类别 <small>可组合</small></h3>
+
+<button class="btn btn-mini">迷你按钮</button>
+<button class="btn btn-small">小按钮</button>
+<button class="btn">默认按钮</button>
+<button class="btn btn-big">大按钮</button>
+<button class="btn btn-large">超大按钮</button>
+<br></br>
+
+<button class="btn btn-primary">主按钮</button>
+<button class="btn btn-info">次按钮</button>
+<button class="btn btn-success">成功</button>
+<button class="btn btn-warning">警告</button>
+<button class="btn btn-danger">危险</button>
+<button class="btn btn-inverse">反色</button>
+<button class="btn btn-link">链接</button>
+
+<!-- 新增按钮样式 -->
+<button class="btn btn-buff">浅黄</button>
+<button class="btn btn-orange">橙色</button>
+<button class="btn btn-pink">玫红</button>
+
+<h3>按钮禁用样式</h3>
+<button class="btn btn-mini disabled">迷你按钮</button>
+<button class="btn btn-small disabled">小按钮</button>
+<button class="btn disabled">默认按钮</button>
+<button class="btn btn-big disabled">大按钮</button>
+<button class="btn btn-large disabled">超大按钮</button>
+
+<br><br>
+
+<button class="btn btn-primary disabled">主按钮</button>
+<button class="btn btn-info disabled">次按钮</button>
+<button class="btn btn-success disabled">成功</button>
+<button class="btn btn-warning disabled">警告</button>
+<button class="btn btn-danger disabled">危险</button>
+<button class="btn btn-inverse disabled">反色</button>
+<button class="btn btn-link disabled">链接</button>
+
+<!-- 新增按钮样式 -->
+<button class="btn btn-buff disabled">浅黄</button>
+<button class="btn btn-orange disabled">橙色</button>
+<button class="btn btn-pink disabled">玫红</button>
+<br><br>
+
+<button class="btn btn-large btn-block">块级按钮</button>
+
+<br><br>
+
+<button class="btn disabled">禁用按钮</button>
+<button class="btn"><i class="icon-*"></i>ICON 组合按钮</button>
+
+<h2>pages 分页组件 <small>http://pic.lvmama.com/styles/v3/plugin.css</small></h2>
+<!-- 分页组件 -->
+<div class="pages rosestyle"> <a href="#">上一页</a><a href="#">1</a><span class="PageSel">2</span><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><span class="more">...</span><a href="#">20</a><a href="#">下一页</a> </div>
+
+<div class="pages orangestyle"> <a href="#">上一页</a><a href="#">1</a><span class="PageSel">2</span><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><span class="more">...</span><a href="#">20</a><a href="#">下一页</a> </div>
+
+<h3>升级版</h3>
+<p>此设置默认为橙色，文字右对齐</p>
+<div class="pages orangestyle">
+	<div class="Pages"> <span class="PrevPage">上一页</span><span class="PageSel">1</span><span class="NextPage">下一页</span> </div>
+</div>
+
+<div class="pages orangestyle">
+	<div class="Pages"> <a class="PrevPage" href="#">上一页</a><a href="#">1</a><span class="PageSel">2</span><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><span class="PageMore">...</span><a href="#">20</a><a class="NextPage" href="#">下一页</a> </div>
+</div>
+
+
+<div class="pages rosestyle">
+	<div class="Pages"> <span class="PrevPage">上一页</span><span class="PageSel">1</span><span class="NextPage">下一页</span> </div>
+</div>
+
+<div class="pages rosestyle">
+	<div class="Pages"> <a class="PrevPage" href="#">上一页</a><a href="#">1</a><span class="PageSel">2</span><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><span class="PageMore">...</span><a href="#">20</a><a class="NextPage" href="#">下一页</a> </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>信息提示框 <small></small></h2>
+<p>一般信息ico</p>
+<!-- mini-tips\\ -->
+<span class="mtips tips-ico-info"></span>
+<span class="mtips tips-ico-warning"></span>
+<span class="mtips tips-ico-error"></span>
+<span class="mtips tips-ico-success"></span>
+<span class="mtips tips-ico-help"></span>
+<span class="mtips tips-ico-stop"></span>
+<span class="mtips tips-ico-wait"></span>
+<span class="mtips tips-ico-info"></span>
+<!-- //mini-tips -->
+
+
+<p>简单块级行提醒</p>
+<!-- tips-box\\ -->
+	<p class="tips">
+        安全提醒：自行编辑，非系统消息
+    </p>
+	<div class="tips tips-info">
+    	<span class="tips-ico"></span>
+        消息提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-warning">
+    	<span class="tips-ico"></span>
+        警告提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-error">
+    	<span class="tips-ico"></span>
+        错误提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-success">
+    	<span class="tips-ico"></span>
+        成功提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-help">
+    	<span class="tips-ico"></span>
+        帮助提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-stop">
+    	<span class="tips-ico"></span>
+        停止提醒：自行编辑，非系统消息
+    </div>
+    <div class="tips tips-wait">
+    	<span class="tips-ico"></span>
+        等待提醒：自行编辑，非系统消息
+    </div>
+    <p>内联行提醒</p>
+	<span class="tips tips-warning">
+    	<span class="tips-ico"></span>
+        安全提醒：自行编辑，非系统消息
+    </span>
+<!-- //tips-box -->
+
+
+
+<p>操作反馈框</p>
+
+	<div class="alert hide">
+    	<h3 class="alert-title">恭喜！操作成功！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-info">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">Binggo！操作状态提醒！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-warning">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">注意！操作有风险，付款需谨慎！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-error">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">对不起！操作有误！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-success">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">恭喜！操作成功！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-help">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">有疑问？您可以参考以下内容！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-stop">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">警告！此删除操作后数据将不可恢复！</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+    <div class="alert alert-wait">
+    	<span class="alert-ico"></span>
+    	<h3 class="alert-title">驴妈妈正在努力的为您查找，请稍后&hellip;</h3>
+        <p>您现在可以去畅游网络了。</p>
+    </div>
+<!-- //alert-box -->
+
+
+
+<p>包含按钮链接的提醒框仍在筹划中……</p>
+<!-- alert-warning\\ -->
+<div class="alert alert-warning">
+	<span class="alert-ico"><!-- 图标 --></span>
+	<div class="alert-content">
+		<div class="alert-title">提示标题</div>
+		<div class="alert-line">提示描述</div>
+		<div class="alert-buttons">
+			<a class="btn-white" href="#"><span>按钮</span></a>
+			<a href="#">链接</a>
+		</div>
+	</div>
+</div> <!-- //alert-warning -->
+
+
+
+
+
+
+
+
+</body>
+</html>
