@@ -35,7 +35,7 @@
 	<section id="solutions">
 		
 		<h3>兼容解决方案 <small>认真思考，认真总结，不但要知其然，更要知其所以然。</small></h3>
-		<p><a href="solutions.html">solutions</a> 界面及缩略图设计参考：<a href="http://ued.taobao.com/blog/2011/12/%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E9%80%9F%E6%88%90/">界面设计速成</a></p>
+		<p>solutions 界面及缩略图设计参考：<a href="http://ued.taobao.com/blog/2011/12/%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E9%80%9F%E6%88%90/">界面设计速成</a></p>
 		<!-- 预添加简洁分类筛选 Todo -->
 		
 		<ul class="thumbnails case">
@@ -103,10 +103,10 @@
 		
 		<h3>组件解决方案 <small>统一规划、批量生产</small></h3>
 		<ul class="thumbnails case">
-		    <li class="span2"><a class="thumbnail" target="_blank" href="solutions/pages.html"><img src="solutions/img/default.png" alt="页码组件"><h4>页码组件</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/alerts.html"><img src="solutions/img/default.png" alt="通知提醒"><h4>通知提醒</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/buttons.html"><img src="solutions/img/default.png" alt="按钮组件"><h4>按钮组件</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/tables.html"><img src="solutions/img/table.png" alt="表格研究"><h4>表格研究</h4></a></li>
+		    <li class="span2"><a class="thumbnail" target="_blank" href="solutions/pages.html"><img src="solutions/img/pages.png" alt="页码组件"><h4>页码组件</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/alerts.html"><img src="solutions/img/alert.png" alt="通知提醒"><h4>通知提醒</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/buttons.html"><img src="solutions/img/buttons.png" alt="按钮组件"><h4>按钮组件</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/tables.html"><img src="solutions/img/tables.png" alt="表格研究"><h4>表格研究</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/forms.html"><img src="solutions/img/default.png" alt="Form 表单"><h4>Form 表单</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/dialog.html"><img src="solutions/img/default.png" alt="对话框"><h4>对话框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/popover.html"><img src="solutions/img/default.png" alt=""><h4>弹出框</h4></a></li>
