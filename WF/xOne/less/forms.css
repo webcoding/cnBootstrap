@@ -24,7 +24,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 20px;
 }
@@ -60,10 +60,10 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 16px;
+  height: 20px;
   padding: 4px 6px;
-/*  margin-bottom: 10px;*/
-  font-size: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
   line-height: 20px;
   color: #555555;
   vertical-align: middle;
@@ -634,6 +634,9 @@ input.search-query {
   /* IE7-8 doesn't have border-radius, so don't indent the padding */
 
   margin-bottom: 0;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+  	      border-radius: 15px;
 }
 
 .form-search input,
@@ -791,6 +794,29 @@ button.close {
 /*
   表单样式结束
 */
+
+.form-small label,
+.form-small  input, 
+.form-small  select, 
+.form-small  textarea {
+  font-size: 12px;
+  line-height:16px
+}
+
+.form-small input{
+  height: 16px; 
+}
+.form-small input[type="radio"],
+.form-small input[type="checkbox"] {
+  margin-top: 2px;
+  
+}
+.form-small .help-block {
+    font-size:12px;
+}
+.form-small .form-horizontal .control-group {
+  margin-bottom: 10px;
+}
 
 
 /* 表格布局表单 */

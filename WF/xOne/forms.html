@@ -26,6 +26,77 @@ form { margin-bottom: 20px;}
 <body>
 <div class="wrap">
     <h1>表单布局</h1>
+<table>
+	<tr>
+		<td class="form-small">
+	<h3>垂直表单(默认)</h3>
+	<form class="">
+    	<fieldset>
+    		<legend>表单标题</legend>
+    		<label>标签名称</label>
+    		<input type="text" placeholder="输入提醒">
+    		<span class="help-block">例如 块级的帮助文本。</span>
+    		<label class="checkbox">
+    			<input type="checkbox"> 选项
+    		</label>
+    		<button type="submit" class="btn btn-small">提交</button>
+    	</fieldset>
+    </form>
+	<hr>
+	
+	<h3>搜索表单</h3>
+	<form class="form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn btn-small">搜索</button>
+    </form>
+	<hr>
+	
+	<h3>内联表单</h3>
+	<form class="form-inline">
+		<input type="text" class="input-small" placeholder="邮箱">
+		<input type="password" class="input-small" placeholder="密码">
+		<label class="checkbox">
+			<input type="checkbox"> 记住帐号 
+			</label>
+		<button type="submit" class="btn btn-small">登录</button>
+	</form>
+	<hr>
+	
+	<h3>水平表单</h3>
+	<form class="bs-docs-example form-horizontal">
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">邮箱</label>
+			<div class="controls">
+				<input type="text" id="inputEmail" placeholder="Email">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">密码</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" placeholder="Password">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+					<input type="checkbox"> 记住帐号 
+				</label>
+				<button type="submit" class="btn">登录</button>
+			</div>
+		</div>
+	</form>
+	
+	<hr>
+	
+	<h3>组合框 <small>按钮紧邻输入框</small></h3>
+	<div class="input-append">
+        <input class="span2" id="appendedInputButton" type="text">
+		<button class="btn btn-small" type="button">搜索</button>
+    </div>
+	
+		</td>
+		<td>
+		
 	<h3>垂直表单(默认)</h3>
     <form class="">
     	<fieldset>
@@ -39,7 +110,6 @@ form { margin-bottom: 20px;}
     		<button type="submit" class="btn">提交</button>
     	</fieldset>
     </form>
-	
 	<hr>
 	
 	<h3>搜索表单</h3>
@@ -47,7 +117,6 @@ form { margin-bottom: 20px;}
         <input type="text" class="input-medium search-query">
         <button type="submit" class="btn">搜索</button>
     </form>
-	
 	<hr>
 	
 	<h3>内联表单</h3>
@@ -59,7 +128,6 @@ form { margin-bottom: 20px;}
 			</label>
 		<button type="submit" class="btn">登录</button>
 	</form>
-	
 	<hr>
 	
 	<h3>水平表单</h3>
@@ -91,8 +159,22 @@ form { margin-bottom: 20px;}
 	<h3>组合框 <small>按钮紧邻输入框</small></h3>
     <div class="input-append">
         <input class="span2" id="appendedInputButton" type="text">
-        <button class="btn" type="button">搜索</button>
+		<button class="btn" type="button">搜索</button>
     </div>
+	
+		</td>
+	</tr>
+</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 </div>
 </body>
