@@ -163,6 +163,9 @@ button.close {padding:0;cursor:pointer;background:transparent;border:0;-webkit-a
 .orangestyle a:hover{ border-color:#f80;color:#f80;}
 
 
+
+
+
 /* 
  * @name      : table
  * @explain   : 表格
@@ -292,6 +295,7 @@ table {
   background-color: #c4e3f3;
 }
 
+
 /* 表格扩展 */
 
 table th,
@@ -330,5 +334,7 @@ table.table-info ul,table.table-info li{list-style-type:none;margin:0;padding:0;
 table.table-info td em{color:#00F;font-weight:normal;}
 table.table-info .table_value{color: #0F93D2;}
 /*table.table-info tr:hover td{ background-color:#f5f5f5}*/
+
+
 
 
