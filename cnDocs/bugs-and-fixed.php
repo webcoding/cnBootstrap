@@ -851,6 +851,8 @@ vertical-align:middle;
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>设置flash的wmode值为transparent或opaque，<code>&lt;param name="wmode" value="transparent" /&gt;</code></p>
+							<p>IE浏览器下可用 <code>&lt;param name=”wmode” value=”transparent” /&gt;</code><br>标准浏览器下可用 <code>&lt;embed src=”flash.swf” wmode=”transparent” ... &gt;&lt;/embed&gt;</code></p>
+							<p>还有种方法是 iframe，缺点是影响网站性能！建议万不得已再用</p>
                         </div>
                     </li>
                     <li class="bugs-item" data-key="IE6 iframe 背景透明">
