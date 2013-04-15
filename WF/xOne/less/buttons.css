@@ -539,7 +539,7 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
 }
 
-/* 暂时不使用圆角 
+
 .btn {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -565,6 +565,7 @@ input[type="submit"].btn.btn-mini {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
+
 /* 按钮文字阴影 */
 /* 暂时不使用
 .btn,
