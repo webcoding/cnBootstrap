@@ -159,8 +159,8 @@ input[type="color"]:focus,
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9;
+  margin: 3px 0 0;
+  margin-top: 2px \9;
   *margin-top: 0;
   line-height: normal;
   cursor: pointer;
@@ -1033,8 +1033,8 @@ button.close {
 }
 .form-small input[type="radio"],
 .form-small input[type="checkbox"] {
-  margin-top: 1px;
-  
+  margin-top: 0px;
+  margin-top: -1px \9;
 }
 .form-small .help-block {
     font-size:12px;
@@ -1070,4 +1070,6 @@ button.close {
     width:400px; 
     height:100px;
 }
-
+.vmimg img {
+    vertical-align: middle;
+}
