@@ -29,42 +29,116 @@
     <h2>控件的状态和其他</h2>
     <p>DPL 中包含你所希望的所有表单控件的样式，同时包含一系列的自定义组件，例如在input前面或者后面附加内容；支持复选框列表。</p>
     <p>表单控件有各种状态：错误、警告和成功，除此之外还有当禁用控件时的不可用状态。</p>
-
+	
+	<h2>四种类型的表单</h2>
+	<p>DPL提供了简单的标签和样式来实现常见的四种表单。</p>
+	<table class="ui-table">
+		<thead>
+			<tr>
+				<th>名称</th>
+				<th>样式</th>
+				<th>描述</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>垂直表单 (默认)</th>
+				<td><code>.form-vertical</code> <span class="muted">(可选)</span></td>
+				<td>层叠式，左对齐的块属性标签</td>
+			</tr>
+			<tr>
+				<th>内联表单</th>
+				<td><code>.form-inline</code></td>
+				<td>居左的label和内联的元素组成的简洁的表单</td>
+			</tr>
+			<tr>
+				<th>搜索表单</th>
+				<td><code>.form-search</code></td>
+				<td>精致的圆形边框搜索表单</td>
+			</tr>
+			<tr>
+				<th>水平表单</th>
+				<td><code>.form-horizontal</code></td>
+				<td>居左但内容右对齐的label和控件在一行</td>
+			</tr>
+		</tbody>
+	</table>
+	
     <div class="demo plugin">
-<h2>四种类型的表单</h2>
-<p>DPL提供了简单的标签和样式来实现常见的四种表单。</p>
-<table class="ui-table">
-    <thead>
-        <tr>
-            <th>名称</th>
-            <th>样式</th>
-            <th>描述</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>垂直表单 (默认)</th>
-            <td><code>.form-vertical</code> <span class="muted">(可选)</span></td>
-            <td>层叠式，左对齐的块属性标签</td>
-        </tr>
-        <tr>
-            <th>内联表单</th>
-            <td><code>.form-inline</code></td>
-            <td>居左的label和内联的元素组成的简洁的表单</td>
-        </tr>
-        <tr>
-            <th>搜索表单</th>
-            <td><code>.form-search</code></td>
-            <td>精致的圆形边框搜索表单</td>
-        </tr>
-        <tr>
-            <th>水平表单</th>
-            <td><code>.form-horizontal</code></td>
-            <td>居左但内容右对齐的label和控件在一行</td>
-        </tr>
-    </tbody>
-</table>
 
+<table>
+	<tr>
+		<td class="form-small">
+    <h3>垂直表单(默认)</h3>
+    <form class="">
+    	<fieldset>
+    		<legend>表单标题</legend>
+    		<label>标签名称</label>
+    		<input type="text" placeholder="输入提醒">
+    		<span class="help-block">例如 块级的帮助文本。</span>
+    		<label class="checkbox">
+    			<input type="checkbox"> 选项
+    		</label>
+    		<button type="submit" class="btn btn-small">提交</button>
+    	</fieldset>
+    </form>
+	
+	<hr>
+	
+	<h3>搜索表单</h3>
+    <form class="form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn btn-small">搜索</button>
+    </form>
+	
+	<hr>
+	
+	<h3>内联表单</h3>
+	<form class="form-inline">
+		<input type="text" class="input-small" placeholder="邮箱">
+		<input type="password" class="input-small" placeholder="密码">
+		<label class="checkbox">
+			<input type="checkbox"> 记住帐号 
+			</label>
+		<button type="submit" class="btn btn-small">登录</button>
+	</form>
+	
+	<hr>
+	
+	<h3>水平表单</h3>
+	<form class="bs-docs-example form-horizontal">
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">邮箱</label>
+			<div class="controls">
+				<input type="text" id="inputEmail" placeholder="Email">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">密码</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" placeholder="Password">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+					<input type="checkbox"> 记住帐号 
+				</label>
+				<button type="submit" class="btn btn-small">登录</button>
+			</div>
+		</div>
+	</form>
+	
+	<hr>
+	
+	<h3>组合框 <small>按钮紧邻输入框</small></h3>
+    <div class="input-append">
+        <input class="span2" id="appendedInputButton" type="text">
+        <button class="btn btn-small" type="button">搜索</button>
+    </div>
+		
+		</td>
+		<td>
     <h3>垂直表单(默认)</h3>
     <form class="">
     	<fieldset>
@@ -132,6 +206,87 @@
         <input class="span2" id="appendedInputButton" type="text">
         <button class="btn" type="button">搜索</button>
     </div>
+
+		</td>
+	</tr>
+</table>
+
+	<table class="form-table form-inline">
+		<tr>
+			<td class="label">驴妈妈用户名：</td>
+			<td><input type="text" class="input-text"></td>
+		</tr>
+		<tr>
+			<td class="label"><i class="req">*</i>真实姓名：</td>
+			<td><input id="xh_name" type="text" class="input-text"></td>
+		</tr>
+		<tr>
+			<td class="label"><i class="req">*</i>性别：</td>
+			<td>
+				<span id="select_sex"><label class="radio"><input name="sex" type="radio" class="input-radio">男</label>
+				<label class="radio"><input name="sex" type="radio" class="input-radio">女</label></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="label"><i class="req">*</i>年龄：</td>
+			<td><span id="select_age"><label class="radio"><input name="age" type="radio" class="input-radio">20岁以下</label>
+				<label class="radio"><input name="age" type="radio" class="input-radio">21-30岁</label>
+				<label class="radio"><input name="age" type="radio" class="input-radio">31-40岁</label>
+				<label class="radio"><input name="age" type="radio" class="input-radio">41-50岁</label>
+				<label class="radio"><input name="age" type="radio" class="input-radio">51-60岁</label>
+				<label class="radio"><input name="age" type="radio" class="input-radio">60岁以上</label></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="label"><i class="req">*</i>手机号：</td>
+			<td><input id="xh_mobile" type="text" class="input-text"></td>
+		</tr>
+		<tr>
+			<td class="label">职业：</td>
+			<td><input type="text" class="input-text"></td>
+		</tr>
+		<tr>
+			<td class="label">月收入：</td>
+			<td><select>
+			<option value="">请选择</option>
+			<option value="">5000</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td class="label">Email：</td>
+			<td><input type="text" class="input-text"></td>
+		</tr>
+		<tr>
+			<td class="label">留言：</td>
+			<td><textarea class="textarea"></textarea></td>
+		</tr>
+		<tr>
+			<td class="label">验证码：</td>
+			<td class="vmimg"><input type="text" class="input-text" style="width:50px;"> <img data-src="holder.js/80x30"> <a href="#">换一张</a></td>
+		</tr>
+	</table>
+	
+	<p class="form-small">
+		<label class="radio"><input name="type-order" type="radio" class="input-radio">在线预订较多</label>
+		<label class="radio"><input name="type-order" type="radio" class="input-radio">电话预订较多</label>
+		<label class="radio"><input name="type-order" type="radio" class="input-radio">在线预订和电话预订二者相当</label>
+		<label class="radio"><input name="type-order" type="radio" class="input-radio">没预订过</label>
+	</p>
+	
+	<p class="form-inline form-small">
+		<label class="checkbox"><input type="checkbox" class="input-checkout">打折门票</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">周边跟团游</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">长途跟团游</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">自由行( 门票+酒店 )</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">自由行( 机票+酒店 )</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">出境游</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">酒店</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">我的驴妈妈</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">手机客户端</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">点评</label>
+		<label class="checkbox"><input type="checkbox" class="input-checkout">其他</label>
+	</p>
+	
     </div>
 <pre class="prettyprint linenums">
 
@@ -141,11 +296,6 @@
     
 </div>
 
-<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
-
-<!--[if ie 6]>
-<script src="../assets/js/DD_belatedPNG-min.js"></script> 
-<script>DD_belatedPNG.fix('.ie6png');</script>
-<![endif]-->
+<script src="../assets/js/holder/holder.js"></script>
 </body>
 </html>

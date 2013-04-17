@@ -3,21 +3,105 @@
 <head>
 <meta charset="utf-8">
 <title>跨浏览器 HTML5 Placeholder</title>
+
 <link rel="stylesheet" href="../assets/css/noreset.css">
 <link rel="stylesheet" href="solution.css">
+
 <style>
 input{display:block; margin:5px 0 10px; padding:3px 5px;}
 input:last-child{margin-bottom:0}
+
+input { width: 14em; }
+textarea { height: 5em; width: 20em; }
+#note { border: 1px solid orange; padding: 1em; background: #ffffe0; }
+
+
+.form-hor .form-line{margin-bottom:10px;}
+.form-hor .label-info{float:left;width:120px;text-align:right;padding:0 10px 0 5px;line-height: 28px;}
+.form-hor label input{margin:0;display:inline-block;}
+
+input:-webkit-autofill {
+    background:#fff;
+}
+input.placeholder{color:gray;}
+
 </style>
 </head>
 <body>
 <div class="wrap">
     <h1>跨浏览器 HTML5 Placeholder</h1>
-    <p>跟 HTML5 的使用方法一样。在 <code>input</code> 中添加属性 <code>placeholder</code>: </p>
-    
+    <p>跟 HTML5 的使用方法一样。在 <code>input</code> 中添加属性 <code>placeholder</code>:(摘自sofish的AliceUI项目) </p>
     <div class="demo">
+        <form class="form-hor">
+		    <div class="form-line">
+				<label>
+					<span class="label-info">type=search</span>
+					<input type="search" name="search" placeholder="Search this site…">
+				</label>
+			</div>
+		    <div class="form-line">
+				<label>
+					<span class="label-info">type=text</span>
+					<input type="text" name="name" placeholder="e.g. Cloud Yan">
+				</label>
+			</div>
+		    <div class="form-line">
+				<label>
+					<span class="label-info">type=email</span>
+					<input type="email" name="email" placeholder="e.g. address@example.ext">
+				</label>
+			</div>
+		    <div class="form-line">
+				<label>
+					<span class="label-info">type=url</span>
+					<input type="url" name="url" placeholder="e.g. http://guessu.com/">
+				</label>
+			</div>
+			<div class="form-line">
+				<label>
+					<span class="label-info">type=tel</span>
+					<input type="tel" name="tel" placeholder="e.g. +86 0631 7348897">
+				</label>
+			</div>
+		    <div class="form-line">
+				<label>
+					<span class="label-info">type=password</span>
+					<input type="password" name="password" placeholder="password">
+				</label>
+			</div>
+		    <div class="form-line">
+				<label>
+					<span class="label-info">textarea</span>
+					<textarea name="message" placeholder="Your message goes here"></textarea>
+				</label>
+			</div>
+		    <div class="form-line">
+				<span class="label-info">　</span>
+				<input type="submit" value="type=submit">
+			</div>
+		</form>
+		<p id="note"></p>
+        <h4>关于placeholder文字的颜色</h4>
+        <p>火狐和webkit内核浏览器可以直接通过css来控制，分别为:-moz-placeholder和::-webkit-input-placeholder，调用这个js之后，会给不支持placeholder的加上placeholder这个class，所以整合起来就是：</p>
+<pre>
+Css Code
+:-moz-placeholder,
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+.placeholder{
+	color: #bfbfbf;
+}
+:-webkit-autofill {
+    background:#fff;
+}
+
+</pre>
+        <p>注：请注意不要把这两个样式写在一起，如果集体声明ie8,9将不能正确解析.placeholder的样式。有点奇怪</p>
+    </div>
+	<div class="demo">
         <input placeholder="提示文字">
-        <input type="text" placeholder="邮箱/手机号/用户名"></label>
+        <input type="text" placeholder="邮箱/手机号/用户名">
         <input type="password" placeholder="请输入密码">
     </div>
 <pre class="prettyprint linenums">
@@ -27,34 +111,66 @@ input:last-child{margin-bottom:0}
 
 JavaScript辅助：
 &lt;script&gt;
-var doc = document,
+// placeholder 功能扩展
+window.onload = function(){
+    var doc = document,
     inputs = doc.getElementsByTagName('input'),
+	
+    // 检测 placeholder 支持
     supportPlaceholder = 'placeholder' in doc.createElement('input'),
+    supportPlaceholdertextarea = 'placeholder' in doc.createElement('textarea'),
+	
+/* 
+ * 创建 placeholder
+ * @param {ELEMENT} input 传入的 input 对象
+ * @return {VOID}
+ * @author: sofish Lin http://sofish.de
+ */
     placeholder = function(input){
         var text = input.getAttribute('placeholder'),
             defaultValue = input.defaultValue;
-
-        input.value = text;
+        if(input.value=="" || input.value==text){
+            // 制作一个假 placeholder
+            // 需要 css 配合，在 JS 中设置 style 并不太好
+            input.value=text;
+            // input.style.color = 'gray';
+            input.className = 'placeholder';
+        }
+        
+        // 聚焦去掉假 placeholder
         input.onfocus = function(){
-            if(input.value === defaultValue || input.value === text){
+            if(input.value === text){
                 this.value = '';
+                // this.style.color = '';
+                input.className = '';
             }
         }
+        
+        // 当失焦值为空时，补回 placeholder 的值
         input.onblur = function(){
             if(input.value === ''){
+                // input.style.color = 'gray';
+                input.className = 'placeholder';
                 this.value = text;
             }
         }
-    };
-
-if(!supportPlaceholder){
-    for(var i = 0, len = inputs.length; i < len; i++){
-        var input = inputs[i], text = input.getAttribute('placeholder');
-        if(input.type === 'text' && text){
-            placeholder(input);
+        input.onkeydown = function(){
+            this.style.color = '';
         }
-    }    
-}
+    };
+	
+    if(!supportPlaceholder){
+    	for(var i = 0, len = inputs.length; i < len; i++){
+    	    var input = inputs[i], text = input.getAttribute('placeholder');
+    	    
+    	    // 当 input[type=text] 并且 placeholder 值不为空是执行
+    	    if(input.type === 'text' && text){
+    	    	placeholder(input);
+    	    }
+    	}    
+    }
+};
+
 &lt;/script&gt;
 </pre>
     <h3>问题及注意事项：</h3>
@@ -63,52 +179,80 @@ if(!supportPlaceholder){
 </div>
 
 <script>
-var doc = document,
-inputs = doc.getElementsByTagName('input'),
-
-// 检测 placeholder 支持
-supportPlaceholder = 'placeholder' in doc.createElement('input'),
-
+// placeholder 功能扩展
+window.onload = function(){
+    var doc = document,
+    inputs = doc.getElementsByTagName('input'),
+	
+    // 检测 placeholder 支持
+    supportPlaceholder = 'placeholder' in doc.createElement('input'),
+    supportPlaceholdertextarea = 'placeholder' in doc.createElement('textarea'),
+	
 /* 
  * 创建 placeholder
  * @param {ELEMENT} input 传入的 input 对象
  * @return {VOID}
  * @author: sofish Lin http://sofish.de
- **/
-placeholder = function (input) {
-  var text = input.getAttribute('placeholder'),
-    defaultValue = input.defaultValue;
-
-  // 制作一个假 placeholder
-  // 需要 css 配合，在 JS 中设置 style 并不太好
-  input.value = text;
-
-  // 聚焦去掉假 placeholder
-  input.onfocus = function () {
-    if (input.value === defaultValue || input.value === text) {
-      this.value = '';
+ */
+    placeholder = function(input){
+        var text = input.getAttribute('placeholder'),
+            defaultValue = input.defaultValue;
+        if(input.value=="" || input.value==text){
+            // 制作一个假 placeholder
+            // 需要 css 配合，在 JS 中设置 style 并不太好
+            input.value=text;
+            // input.style.color = 'gray';
+            input.className = 'placeholder';
+        }
+        
+        // 聚焦去掉假 placeholder
+        input.onfocus = function(){
+            if(input.value === text){
+                this.value = '';
+                // this.style.color = '';
+                input.className = '';
+            }
+        }
+        
+        // 当失焦值为空时，补回 placeholder 的值
+        input.onblur = function(){
+            if(input.value === ''){
+                // input.style.color = 'gray';
+                input.className = 'placeholder';
+                this.value = text;
+            }
+        }
+        input.onkeydown = function(){
+            this.style.color = '';
+        }
+    };
+	
+    if(!supportPlaceholder){
+    	for(var i = 0, len = inputs.length; i < len; i++){
+    	    var input = inputs[i], text = input.getAttribute('placeholder');
+    	    
+    	    // 当 input[type=text] 并且 placeholder 值不为空是执行
+    	    if(input.type === 'text' && text){
+    	    	placeholder(input);
+    	    }
+    	}    
     }
-  }
-
-  // 当失焦值为空时，补回 placeholder 的值
-  input.onblur = function () {
-    if (input.value === '') {
-      this.value = text;
+	
+    var html;
+    if (supportPlaceholder && supportPlaceholdertextarea) {
+        html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won’t run in this case, since it’s not needed. If you want to test the plugin, use an older browser ;)';
+    } else if (supportPlaceholder) {
+        html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+    } else {
+        html = '<strong>Your current browser do not supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin will run in this case.';
     }
-  }
+    if (html) {
+        document.getElementById('note').innerHTML = html;
+    }
+	
 };
 
-if (!supportPlaceholder) {
-  for (var i = 0, len = inputs.length; i < len; i++) {
-    var input = inputs[i],
-      text = input.getAttribute('placeholder');
-
-    // 当 input[type=text] 并且 placeholder 值不为空是执行
-    if (input.type === 'text' && text) {
-      placeholder(input);
-    }
-  }
-}          
 </script>
+
 </body>
 </html>

@@ -107,7 +107,8 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/alerts.html"><img src="solutions/img/alert.png" alt="通知提醒"><h4>通知提醒</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/buttons.html"><img src="solutions/img/buttons.png" alt="按钮组件"><h4>按钮组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/tables.html"><img src="solutions/img/tables.png" alt="表格研究"><h4>表格研究</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/forms.html"><img src="solutions/img/default.png" alt="Form 表单"><h4>Form 表单</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/forms.html"><img src="solutions/img/forms.png" alt="Form 表单"><h4>Form 表单</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/tooltip.html"><img src="solutions/img/default.png" alt="tooltip"><h4>工具提醒</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/dialog.html"><img src="solutions/img/default.png" alt="对话框"><h4>对话框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/popover.html"><img src="solutions/img/default.png" alt=""><h4>弹出框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/layout.html"><img src="solutions/img/default.png" alt=""><h4>布局</h4></a></li>
@@ -162,8 +163,6 @@
 		<p>cnBootstrap 是 Twitter 开发的前端框架 Bootstrap 的中文版，并集成了 aliceui 兼容解决方案（包括但不限于aliceui），亦将我所了解的解决方案也整合进了此列表中，现仍在完善中...</p>
 		<p>欢迎广大网友提意见共同完善，此项目在Github上开源管理</p>
 		
-		
-	    
 
       </div>
    <!-- </div>-->

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>工具提醒</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<link rel="stylesheet" href="plugin.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>工具提醒</h1>
+    <p></p>
+	
+    <div class="demo plugin">
+		<div class="calendar" tip-content='今天预订11.03日产品，可同时享受以下优惠：<br>早订早惠：成人价，每份最大优惠50元。<br>多订多惠：成人价，预订满N份（含）以上，每份最大优惠50元。'>日历优惠活动提醒</div>
+		
+		<br>
+	
+		<a class="discount" rel="tooltip" tip-content='奖金只支持前台下单支付，可最多抵扣20元，奖金在付款页面使用'><i>奖金折扣</i>101元</a>
+		
+		<i class="icon-tag2" rel="tooltip" tip-content='1.早定早惠价格可与优惠活动重复使用<br>2.订购时间越早将享受优惠越多'>早订优惠</i>
+		
+		<i class="icon-tag2" rel="tooltip" tip-content='订购份数越多将享受优惠越多'>多订优惠</i><i class="icon-tag2" rel="tooltip" tip-content='500积分抵扣5元（不与优惠券叠加使用）'>积分抵扣</i>
+    </div>
+<pre class="prettyprint linenums">
+&lt;div class="calendar" tip-content='今天预订11.03日产品，可同时享受以下优惠：&lt;br&gt;早订早惠：成人价，每份最大优惠50元。&lt;br>多订多惠：成人价，预订满N份（含）以上，每份最大优惠50元。'&gt;日历&lt;/div&gt;
+	
+&lt;a class="discount" tip-title="提醒标题" tip-content='提醒内容'&gt;&lt;i&gt;奖金折扣&lt;/i&gt;101元&lt;/a&gt;
+&lt;i class="icon-tag2" tip-content='提醒内容'&gt;早订优惠&lt;/i&gt;
+&lt;i class="icon-tag2" tip-content='提醒内容'&gt;多订优惠&lt;/i&gt;
+&lt;i class="icon-tag2" tip-content='提醒内容'&gt;积分抵扣&lt;/i&gt;
+
+&lt;script src="http://pic.lvmama.com/min/index.php?f=js/new_v/jquery-1.7.2.min.js,/js/ui/lvmamaUI/lvmamaUI.js"&gt;&lt;/script&gt;
+$(function(){
+	$('.calendar').ui('lvtip',{
+	  templete : 2,
+	  place: 'bottom-left',
+	  offsetX: 0,
+	  event : "live"
+    });
+	$('a[class=discount]').ui('lvtip',{
+	  place: 'bottom'
+    });
+	$('i.icon-tag2').ui('lvtip',{
+	  place: 'bottom'
+    });
+
+});
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<script src="http://pic.lvmama.com/min/index.php?f=js/new_v/jquery-1.7.2.min.js,/js/ui/lvmamaUI/lvmamaUI.js"></script>
+<script>
+$(function(){
+	$('.calendar').ui('lvtip',{
+	  templete : 2,
+	  place: 'bottom-left',
+	  offsetX: 0,
+	  event : "live"
+    });
+	$('a[class=discount]').ui('lvtip',{
+	  place: 'bottom'
+    });
+	$('i.icon-tag2').ui('lvtip',{
+	  place: 'bottom'
+    });
+
+});
+</script>
+
+</body>
+</html>
