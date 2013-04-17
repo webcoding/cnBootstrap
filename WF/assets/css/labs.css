@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* 
+ @名称: labs.css
+ @功能: 样式实验室
+ */
+
+.hide-clip {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+}
+
+body {
+  font:12px/22px Tahoma,Arial,\5b8b\4f53; color:#333;
+  background:url(../../xOne/images/bg.jpg) #fff center -8px no-repeat;
+}
+
+.nav a {
+  display: block;
+}
+.main-nav li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.main-nav a{
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+/* 组件书写规范请参见README.md
+============================================================ */
+
+/* 
+ === 样式测试 ===
+ javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/cnBootstrap/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";b.className+=" typo"})()
+============================================================ */

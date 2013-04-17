@@ -56,18 +56,18 @@ wbr {
    ============================== */
 
 /*
- * 1. 防止用户自定义背景颜色对网页的影响
+ * 1. 防止用户自定义背景颜色对网页的影响 这是改为设置到body上
  * 2. 设置默认字体Tahoma
  * 3. 防止 iOS 设备方向变化且没有禁用缩放功能时，文字会发生大小变化
  */
 html {
     color: #000; /* 1 */
-	background: #fff; /* 1 */
+	/* background: #fff; 1 */
     font-family: Tahoma,Arial,\5b8b\4f53;; /* 2 */
     -webkit-text-size-adjust: 100%; /* 3 */
     -ms-text-size-adjust: 100%; /* 3 */
 }
-
+body { background: #fff; }
 /* 移除内外边距（内外边距通常让各个浏览器样式的表现位置不同，数目众多可按组划分） */
 body, div, 
 dl, dt, dd, ol, ul, li, 
