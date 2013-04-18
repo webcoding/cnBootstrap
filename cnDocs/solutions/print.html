@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>打印预览</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="wrap">
+	
+    <h1>网页打印</h1>
+    <p>正常情况下的打印是使用 <code>window.print();</code> 直接整页打印，但如果需要打印网页中定义的部分内容，则可使用如下的方法：</p>
+	
+	<!--startprint-->
+	<h2>关于局部打印</h2>
+	<h4>1、在页面的代码头部处加入JavaScript：</h4>
+	<p>以下是代码片段：</p>
+    <div class="demo">
+        <p><a class="btn" href="javascript:void(0);" onClick="doPrint()">局部打印</a></p>
+    </div>	
+<pre class="prettyprint linenums">
+// JS 实现简单的页面局部打印 
+&lt;script&gt; 
+function doPrint() {  
+    bdhtml=window.document.body.innerHTML;
+    sprnstr="&lt;!--startprint--&gt;"; 
+    eprnstr="&lt;!--endprint--&gt;"; 
+    prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17); 
+    prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); 
+    window.document.body.innerHTML=prnhtml; 
+    window.print();
+}  
+&lt;/script&gt; 
+
+亦可以添加变量，同页面多次区别使用：
+&lt;script&gt; 
+function preview(oper) {
+    if (oper < 10) {
+        bdhtml=window.document.body.innerHTML;      //获取当前页的html代码
+        sprnstr="&lt;!--startprint"+oper+"--&gt;";	//设置打印开始区域
+        eprnstr="&lt;!--endprint"+oper+"--&gt;";	//设置打印结束区域
+        prnhtml=bdhtml.substring(bdhtml.indexOf(sprnstr)+18);   //从开始代码向后取html
+        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));  //从结束代码向前取html
+        window.document.body.innerHTML=prnhtml;
+        window.print();
+        window.document.body.innerHTML=bdhtml;
+    } else {
+        window.print();
+    }
+}
+&lt;/script&gt; 
+使用很简单 将页面内要打印的内容加入中间 <code>&lt;!--startprint1--&gt;</code> 内容 <code>&lt;!--endprint1--&gt;</code>
+再加个打印按纽 <code>onclick=preview(1);</code>
+</pre>
+
+    <h4>2、在需要打印的页面正文前后加上 <code>&lt;!--startprint--&gt;</code> 与 <code>&lt;!--endprint--&gt;</code> 标识。</h4>
+     <p>也就是在需要用户打印保存的正文所对应的html处附加上。同时，如果采用小偷程序获得远程数据并需打印，可将此等数据置于该定义标签之内即可。</p> 
+
+    <h4>3、截取内容部分已完成，现在加个“打印”的链接： </h4>
+    <p>以下是代码片段：<a class="btn" href="javascript:void(0);" onClick="doPrint()">局部打印</a></p>
+	<p><code>&lt;a href="javascript:void(0);" onClick="doPrint()"&gt;局部打印&lt;/a&gt;</code></p>
+<!--endprint-->
+	<p>当然你也可以使用 print.css 来做打印样式，通过css 控制在打印媒体中的页面表现形式！</p>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<script>  
+function doPrint() {  
+    bdhtml=window.document.body.innerHTML; 
+    sprnstr="<!--startprint-->"; 
+    eprnstr="<!--endprint-->"; 
+    prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17); 
+    prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); 
+    window.document.body.innerHTML=prnhtml; 
+    window.print(); 
+}  
+</script> 
+</body>
+</html>

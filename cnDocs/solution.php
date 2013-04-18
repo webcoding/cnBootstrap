@@ -97,7 +97,7 @@
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/margin-usage.html"><img src="solutions/img/default.png" alt="妙用margin负边距"><h4>妙用margin负边距</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="textarea自适应高度"><h4>textarea自适应高度</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="局部打印"><h4>局部打印</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/print.html"><img src="solutions/img/print.jpg" alt="打印预览"><h4>打印预览</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
@@ -108,7 +108,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/buttons.html"><img src="solutions/img/buttons.png" alt="按钮组件"><h4>按钮组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/tables.html"><img src="solutions/img/tables.png" alt="表格研究"><h4>表格研究</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/forms.html"><img src="solutions/img/forms.png" alt="Form 表单"><h4>Form 表单</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/tooltip.html"><img src="solutions/img/default.png" alt="tooltip"><h4>工具提醒</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/tooltip.html"><img src="solutions/img/tooltip.png" alt="tooltip"><h4>工具提醒</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/dialog.html"><img src="solutions/img/default.png" alt="对话框"><h4>对话框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/popover.html"><img src="solutions/img/default.png" alt=""><h4>弹出框</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/layout.html"><img src="solutions/img/default.png" alt=""><h4>布局</h4></a></li>
