@@ -20,8 +20,9 @@
             
             <li><a href="#nav">nav <i class="iconfont">导航</i></a></li>
             <li><a href="#breadcrumb">breadcrumb <i class="iconfont">面包屑</i></a></li>
-            <li><a href="#pages">pages <i class="iconfont">分页</i></a></li>
+            <li><a href="#paging">paging <i class="iconfont">分页</i></a></li>
             <li><a href="#label">label <i class="iconfont">标签标记</i></a></li>
+            <li><a href="#counters">counter <i class="iconfont">数字提醒</i></a></li>
             <li><a href="#alert">alert <i class="iconfont">通知提醒</i></a></li>
             <li><a href="#progress">progress <i class="iconfont">进度条</i></a></li>
             <li><a href="#media">media <i class="iconfont">媒体对象</i></a></li>

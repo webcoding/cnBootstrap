@@ -11,6 +11,7 @@
 		<ul>
 			<li><a href="#examples">一个简单的例子</a></li>
 			<li><a href="#download">下载</a></li>
+			<li><a href="extend.php">扩展</a></li>
 		</ul>
 	</div>
 	<div class="main">

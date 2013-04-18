@@ -10,7 +10,7 @@
     <div class="navbar-inner">
         <div class="wrap">
             <h2 class="hide-clip">主导航</h2>
-            <a rel="home" class="brand hide-clip" href="/">WebCoding</a>
+            <a rel="home" class="brand hide-clip" href="/">Pandora</a>
             <ul class="nav nav-pills main-nav" role="navigation">
                 <li <?php if(isset($page) && $page == 'home') echo 'class="active"' ?>><a href="index.php">首页</a></li>
                 <li <?php if(isset($page) && $page == 'framework') echo 'class="active"' ?>><a href="framework.php">基础框架</a></li>
