@@ -122,7 +122,9 @@ strong {
 
 blockquote, 
 pre {
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; 
+       去除此项，避免空格等产生页面布局上的空行
+    */
     word-wrap: break-word;
 }
 
