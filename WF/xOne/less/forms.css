@@ -15,8 +15,8 @@ input {
 i.req {
     padding-right: 3px;
     font-style: normal;
-    color: red;
     font-weight: normal;
+    color: red;
 }
 /*
 fieldset {
@@ -272,7 +272,9 @@ textarea::-webkit-input-placeholder {
 .checkbox.inline + .checkbox.inline {
   margin-left: 10px;
 }
-
+.input-min {
+  width: 42px;
+}
 .input-mini {
   width: 60px;
 }
