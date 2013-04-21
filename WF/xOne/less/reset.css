@@ -1,8 +1,9 @@
 @charset "utf-8";
-/* 
- @名称: reset.css
- @功能: 重设浏览器默认样式(综合自aliceui,yahoo,normalize)
- */
+/* ------------------------------------------------------------
+  reset.css v1.0
+  Author: Pandora
+  Adapted from http://necolas.github.io/normalize.css/
+------------------------------------------------------------ */
 
 /* ==============================
    HTML5 显示定义
@@ -80,53 +81,20 @@ html {
     -webkit-text-size-adjust: 100%; /* 3 */
     -ms-text-size-adjust: 100%; /* 3 */
 }
-body { background: #fff; }
-/* 移除内外边距（内外边距通常让各个浏览器样式的表现位置不同，数目众多可按组划分） */
-body, div, 
-dl, dt, dd, ol, ul, li, 
-h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, code, 
-tr, th, td, 
-hr, 
-menu {
-    margin: 0;
-    padding: 0;
-}
 
-/* 移除表单元素的reset，在form.css中统一设置 */
-fieldset, figure, legend,
-form, input, button, textarea {}
-
-/* 语义化的标签的样式默认的margin,padding都为0，不必reset */
-article, 
-aside, 
-details, 
-figcaption, 
-footer, 
-header, 
-hgroup, 
-menu, 
-nav, 
-section {}
-
-/* 
-  大范围的去除列表项并不好，不若使用.none样式，由于习惯限制等问题，使用推荐如下：
-  - 生产线网站项目使用传统reset样式
-  - 前端研究项目使用noreset.css样式(参考normalize并使用.none样式完成此reset功能)
+/**
+ * Remove default margin.
  */
-ol, 
-ul {
-    list-style-type: none;
+
+body {
+    margin: 0;
+    background: #fff;
 }
+
 
 /* ==============================
    Typography
    ============================== */
-
-/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-}
 
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
@@ -145,7 +113,49 @@ strong {
     font-weight: bold;
 }
 
-blockquote, 
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
 pre {
     /* white-space: pre-wrap; 
        去除此项，避免空格等产生页面布局上的空行
@@ -184,19 +194,32 @@ sub { bottom: -0.25em; }
    Embedded content
    ============================== */
 
-/*
- * 移除IE下a标签内img的边框
+/**
+ * Remove border when inside `a` element in IE 8/9.
  */
+
 img {
     border: 0;
 }
 
 
+
+/* ==============================
+   Figures
+   ============================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
 /* ==============================
    Links
    ============================== */
 
-/*
+/**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
@@ -220,6 +243,10 @@ a:focus {
     outline: thin dotted;
 }
 
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+
+
 a:active,
 a:hover {
     outline: 0;
@@ -242,7 +269,7 @@ fieldset {
 }
 
 /*
- * 1. Correct color not being inherited in IE 8/9.
+ * 1. Corrects color not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
@@ -268,7 +295,7 @@ textarea {
 }
 
 /*
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 
@@ -411,16 +438,6 @@ th {
 }
 
 
-/* 
- 修复火狐下图片和文字之间的间隙
- 添加img{vertical-align:top;}、img{vertical-align:middle;}或img{display:block}属性即可解决
- 推荐前者，不要再reset中设置，建议使用时再处理
-
-img {
-    vertical-align: middle;
-}
- */
- 
 /* 清除浮动 */
 .clearfix:after, 
 .wrap:after {
@@ -453,8 +470,66 @@ img {
 }
 
 
+/* 这条分割线以上为noreset.css，书写规范请参见README.md
+============================================================ */
+
+
+/* 移除内外边距（内外边距通常让各个浏览器样式的表现位置不同，数目众多可按组划分） */
+body, div, 
+dl, dt, dd, ol, ul, li, 
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, code, 
+tr, th, td, 
+hr, 
+menu {
+    margin: 0;
+    padding: 0;
+}
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+/* 移除表单元素的reset，在form.css中统一设置 */
+fieldset, figure, legend,
+form, input, button, textarea {}
+
+/* 语义化的标签的样式默认的margin,padding都为0，不必reset */
+article, 
+aside, 
+details, 
+figcaption, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section {}
+
+/* 
+  大范围的去除列表项并不好，不若使用.none样式，由于习惯限制等问题，使用推荐如下：
+  - 生产线网站项目使用传统reset样式
+  - 前端研究项目使用noreset.css样式(参考normalize并使用.none样式完成此reset功能)
+ */
+ol, 
+ul {
+    list-style-type: none;
+}
+
+
+
+/* 
+ 修复火狐下图片和文字之间的间隙
+ 添加img{vertical-align:top;}、img{vertical-align:middle;}或img{display:block}属性即可解决
+ 推荐前者，不要再reset中设置，建议使用时再处理
+
+img {
+    vertical-align: middle;
+}
+ */
+
 /* 这条分割线以上为reset.css，书写规范请参见README.md
 ============================================================ */
+
 
 /* 
  === 样式测试 ===

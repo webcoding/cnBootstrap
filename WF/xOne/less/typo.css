@@ -1,73 +1,378 @@
-/*
- * WebFrame v1.0
- * Adapted from https://github.com/twitter/bootstrap
+
+/*!
+ * typo.css v1.0
+ * 此样式实现页面基本排版，基于reset.css 样式
  */
 
-/* Core variables and mixins */
-/* Modify this for custom colors, font-sizes, etc */
-@import "variables.css"; 
-@import "mixins.css";
+/* alice要实现每个组件都不依赖基础样式，这样有必要么，影响性能么
+.module * { 
+    margin:0;
+    padding:0;
+}
+*/
 
-/* CSS Reset */
-@import "../../assets/css/reset.css";
-@import "../../assets/css/combo.css";
-@import "../../assets/css/module.css";
+body { font:14px/1.5 Tahoma,Arial,\5b8b\4f53; }
 
-/* Grid system and page structure */
-@import "scaffolding.css";
-@import "grid.css";
-@import "layouts.css";
+p {
+  margin: 0 0 10px;
+}
+.nm p {
+  margin:0;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
 
-/* Base CSS */
-@import "type.css";
-@import "code.css";
-@import "forms.css";
-@import "tables.css";
+small {
+  font-size: 80%;
+}
 
-/* Components: common */
-@import "sprites.css";
-@import "dropdowns.css";
-@import "wells.css";
-@import "component-animations.css";
-@import "close.css";
+strong {
+  font-weight: bold;
+}
 
-/* Components: Buttons & Alerts */
-@import "buttons.css";
-@import "button-groups.css";
-@import "alerts.css"; /* Note: alerts share common CSS with buttons and thus have styles in buttons.css */
+em {
+  font-style: italic;
+}
 
-/* Components: Nav */
-@import "navs.css";
-@import "navbar.css";
-@import "breadcrumbs.css";
-@import "pagination.css";
-@import "pager.css";
+cite {
+  font-style: normal;
+}
+.rose { color:#ff0080;}
+.white { color: white;}
+.red { color: red;}
+.green { color: green;}
+.blue { color: blue;}
+.orange { color: orange;}
+.gray { color: gray;}
+.cc1{ color: #e38;}
+.cc2{ color: #f60;}
 
-/* Components: Popovers */
-@import "modals.css";
-@import "tooltip.css";
-@import "popovers.css";
+.muted {
+  color: #999999;
+}
 
-/* Components: Misc */
-@import "thumbnails.css";
-@import "media.css";
-@import "labels-badges.css";
-@import "progress-bars.css";
-@import "accordion.css";
-@import "carousel.css";
-@import "hero-unit.css";
+a.muted:hover,
+a.muted:focus {
+  color: #808080;
+}
 
-/* Utility classes */
-@import "utilities.css"; /* Has to be last to override when necessary */
+.text-warning {
+  color: #c09853;
+}
+
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #a47e3c;
+}
+
+.text-error {
+  color: #b94a48;
+}
+
+a.text-error:hover,
+a.text-error:focus {
+  color: #953b39;
+}
+
+.text-info {
+  color: #3a87ad;
+}
+
+a.text-info:hover,
+a.text-info:focus {
+  color: #2d6987;
+}
+
+.text-success {
+  color: #468847;
+}
+
+a.text-success:hover,
+a.text-success:focus {
+  color: #356635;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tc {
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-weight: bold;
+  line-height: 22px;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #888;
+}
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+h1 { font-size:36px;}
+h2 { font-size:28px;}
+h3 { font-size:22px;}
+h4 { font-size:18px;}
+h5 { font-size:14px;}
+h6 { font-size:12px;}
+h1 small { font-size: 24px;}
+h2 small { font-size: 18px;}
+h3 small { font-size: 14px;}
+h4 small { font-size: 14px;}
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 30px;
+}
+.page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+ul.ul,
+ol.ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+ul.ul ul,
+ul.ul ol,
+ol.ol ol,
+ol.ol ul {
+  margin-bottom: 0;
+}
+ul.ul { list-style-type: disc;}
+ol.ol { list-style-type: decimal;}
+ul.ul ul ,
+ol.ul ul { list-style-type: circle;}
+ul.ul ol ,
+ol.ul ol { list-style-type: lower-alpha;}
 
 
+li {
+  line-height: 20px;
+}
 
+ul.ul.unstyled,
+ol.ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
 
+ul .inline,
+ol .inline {
+  margin-left: 0;
+  list-style: none;
+}
 
-/* 书写规范请参见README.md
-============================================================ */
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  *display: inline;
+  padding-right: 5px;
+  padding-left: 5px;
+  *zoom: 1;
+}
 
-/* 
- === 样式测试 ===
- javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";b.className+=" typo"})()
-============================================================ */
+dl {
+  margin-bottom: 20px;
+}
+
+dt,
+dd {
+  line-height: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10px;
+}
+
+.dl-horizontal {
+  *zoom: 1;
+}
+
+.dl-horizontal:before,
+.dl-horizontal:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.dl-horizontal:after {
+  clear: both;
+}
+
+.dl-horizontal dt {
+  float: left;
+  width: 160px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dl-horizontal dd {
+  margin-left: 180px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 17.5px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+
+blockquote.pull-right {
+  float: right;
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+}
+
+blockquote.pull-right p,
+blockquote.pull-right small {
+  text-align: right;
+}
+
+blockquote.pull-right small:before {
+  content: '';
+}
+
+blockquote.pull-right small:after {
+  content: '\00A0 \2014';
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+code {
+  padding: 2px 4px;
+  color: #d14;
+  white-space: nowrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+pre {
+  display: block;
+  padding: 10px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+pre.prettyprint {
+  margin-bottom: 20px;
+}
+
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+

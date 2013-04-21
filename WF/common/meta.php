@@ -14,4 +14,8 @@
 <link rel="stylesheet" href="assets/css/combo-dev.css">
 
 <link rel="stylesheet" href="assets/css/labs.css">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+<![endif]-->
 

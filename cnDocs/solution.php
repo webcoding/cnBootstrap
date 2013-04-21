@@ -101,7 +101,7 @@
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
-		<h3>组件解决方案 <small>统一规划、批量生产</small></h3>
+		<h3 id="module">组件解决方案 <small>统一规划、批量生产</small></h3>
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="solutions/pages.html"><img src="solutions/img/pages.png" alt="页码组件"><h4>页码组件</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/alerts.html"><img src="solutions/img/alert.png" alt="通知提醒"><h4>通知提醒</h4></a></li>
@@ -123,7 +123,7 @@
 			<li class="span2"><a class="thumbnail" href="solutions/project.php"><img src="solutions/img/default.png" alt=""><h4>前端资源</h4></a></li>
 		</ul>
 		
-		<h3>HTML5/CSS3 特效 <small>提升体验、平滑升级</small></h3>
+		<h3 id="html5-css3">HTML5/CSS3 特效 <small>提升体验、平滑升级</small></h3>
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="solutions/css3-light-animation.html"><img src="solutions/img/light.png" alt="CSS3 光影动画"><h4>CSS3 光影动画</h4></a></li>
 		    <li class="span2"><a class="thumbnail" target="_blank" href="solutions/css3-box-shadow-effect.html"><img src="solutions/img/css3-box-shadow.jpg" alt="CSS3 阴影特效"><h4>CSS3 阴影特效</h4></a></li>
@@ -153,7 +153,7 @@
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>
 		
-		<h3>JS解决方案 <small>经典功能</small></h3>
+		<h3 id="js">JS解决方案 <small>经典功能</small></h3>
 		<ul class="thumbnails case">
 		    <li class="span2"><a class="thumbnail" target="_blank" href="solutions/sort.html"><img src="solutions/img/default.png" alt=""><h4>JS 排序</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>

@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>页面排版</title>
-<meta name="description" content="TYPO.CSS 提供统一公认的基本网页元素展示效果。"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 让IE系列浏览器识别html5标签 -->
-<!--[if lt IE 9]>
-<script src="../assets/js/html5shiv.js"></script>
-<![endif]-->
-<link rel="stylesheet" href="less/noreset.css" >
-<link rel="stylesheet" href="less/typo.css" >
-<link rel="stylesheet" href="less/docs.css" >
-<style>
-.wrap{ width:980px; margin:30px auto;}
-</style>
-</head>
-<body class="typo">
-<div class="wrap">
 
-<h1>网页排版布局 typo.css <small></small></h1>
-<p>此排版设计参考修改自 <a href="http://typo.sofish.de/">typo.css</a> 与 <a href="https://github.com/webcoding/cnBootstrap">cnBootstrap</a>，首先应用 Reset 重设，然后对常用标签进行规划，充分利用默认属性并优化显示效果。</p>
-<p class="lead">设计 TYPO.CSS 是为了提供统一公认(应用最广泛)的基本网页元素展示效果。</p>
+<h1>排版 <small>标题，段落，列表，以及其他行级元素</small></h1>
+<p>首先应用 Reset 重设，对常用标签进行使用规划，使其应用达到恰到好处的效果。</p>
 
-<h2><a href="less/reset.css">Reset</a> 重设</h2>
+<h2>Reset 重设</h2>
 <p>reset.css 是 Pandora 的浏览器重设样式，统一浏览器布局标签的默认属性，消除浏览器基本的兼容性问题。</p>
-<p>Pandora 的 reset.css 是综合AliceUI、<a href="http://necolas.github.com/normalize.css/">normalize.css</a> 及 bootstrap  等业界优秀模块，并加上一些常用 className 而产出的一套重设样式。</p>
+<p>Pandora 的 reset.css 是综合 html5Doctor、yahoo、<a href="http://necolas.github.com/normalize.css/">normalize.css</a>及AliceUI 等业界优秀模块，并加上一些常用 className 而产出的一套重设样式。</p>
 
 <p>除 <code>reset.css</code> 外，Pandora 还提供适合中文的 <code>noreset.css</code> 样式(借鉴normalize)，在不归零的前提下达到浏览器中标签属性的默认一致。</p>
-<p><span class="label label-info">注意!</span> 国内布局通常要使用reset，但现在也有越来越多的国内攻城师开始注意noreset的优势了。</p>
+<p><span class="label label-info">注意!</span> 国内布局通常还是要使用reset，但现在也有越来越多的国内攻城师开始注意noreset了</p>
+
+<h3>常用功能类</h3>
+<ul class="ul">
+	<li><p><code>clearfix</code> 清除浮动</p></li>
+	<li><p><code>hide</code> 隐藏元素</p></li>
+	<li><p><code>.fl</code> <code>.fr</code> 左右浮动</p></li>
+	<li><p><code>center-box</code> <code>center-item</code> 浮动居中</p></li>
+	<li><p><code>ellipsis</code> 文字单行溢出省略号</p>
+		<div class="ellipsis" style="width:100px;">单行文本，这里文字太多了太多了</div>
+	</li>
+	<li><p><code>text-justify</code> 文本两端对齐</p></li>
+</ul>
 
 <h2>标题</h2>
 <p>HTML中定义的所有标题标签, 从<code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code> 都是可用的。</p>
@@ -45,14 +36,12 @@
 <p><code>reset.css</code> 采用了 12 像素，1.5 的行高，并且兼容 Mac 和 Window 的字体配置，非常适合国内的网站样式。</p>
 <pre>
 body,button,input,select,textarea {
-    font:12px/1.5 Tahoma,Arial,\5b8b\4f53;
+    font:12px/1.5 tahoma,arial,"Hiragino Sans GB","Microsoft Yahei",\5b8b\4f53;
 }
 </pre>
 <h3>段落强调 .lead</h3>
 <p>通过添加 <code>.lead</code> 实现段落强调。</p>
-<div class="docs-example">
-    <p class="lead">写在规则前面的话——项目的可维护性第一。</p>
-</div>
+<p class="lead">写在规则前面的话——项目的可维护性第一。</p>
 
 <h3>强调标签 <small><code>&lt;small&gt;</code> <code>&lt;strong&gt;</code> <code>&lt;em&gt;</code> <code>&lt;b&gt;</code> <code>&lt;i&gt;</code></small></h3>
 <p>使用HTML默认的强调标签，达到代码精简的目的。</p>
@@ -67,7 +56,7 @@ body,button,input,select,textarea {
 
 <p><span class="label label-info">注意!</span> 在HTML5中仍然可以使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 标签，但是它们的用途已经发生了改变。<code>&lt;b&gt;</code> 在过去仅仅用来加粗单词或短语，没有任何语义上的含义，现在定义需要强调的部分（如果您希望把文本标记为相比其他文本更为重要，应该使用 <code>&lt;strong&gt;</code> 标签。）。而 <code>&lt;i&gt;</code> 主要用在语音和技术等方面。</p>
 <h3>强调类 <small>通过颜色来表示强调的工具类</small></h3>
-<div class="docs-example nm">
+<div class="docs-example poetry">
 	<h4 class="cc1">水调歌头 <small>宋 &sdot; 苏轼 &amp;sdot;  &amp;bull;  cc1</small></h4>
 	<p class="orange">--------- 分割线 ---------  orange</p>
 	<p class="gray">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。 gray</p>
@@ -231,164 +220,3 @@ body,button,input,select,textarea {
 	</dl>
 </div>
 <p><span class="label label-info">注意!</span> 水平列表中如果项目名称太长，需要添加 <code>text-overflow</code> 属性。在小分辨率下，他们会以堆叠式布局显示。 </p>
-
-<h2>表单元素</h2>
-<p>各类表单元素，其布局设置详见 forms.css，此处仅展示表单元素的默认效果。</p>
-<div class="docs-example">
-	<label>Select</label>
-	<select>
-	<option>Select</option>
-	<option>Option 2</option>
-	<option>Option 3</option>
-	</select>
-
-	<hr>
-
-	<label>textarea</label>
-	<textarea>Textarea</textarea>
-
-	<hr>
-
-	<label>text</label>
-	<input type="text" value="Text input">
-
-	<hr>
-
-	<label>password</label>
-	<input type="password" value="Password input">
-
-	<hr>
-
-	<label>checkbox</label>
-	<input type="checkbox" value="">
-
-	<hr>
-
-	<label>radio</label>
-	<input type="radio" value="">
-
-	<hr>
-
-	<label>button</label>
-	<input type="button" value="Button">
-
-	<hr>
-
-	<label>submit</label>
-	<input type="submit" value="Submit">
-
-	<hr>
-
-	<label>reset</label>
-	<input type="reset" value="Reset">
-
-	<label>file</label>
-	<input type="file" value="">
-
-	<hr>
-
-	<label>hidden</label>
-	<input type="hidden" value="hidden">
-
-	<hr>
-
-	<label>image</label>
-	<input type="image" value="">
-
-	<hr>
-    <!-- 以下表单元素尚未普及，暂时不予考虑
-	<label>datetime</label>
-	<input type="datetime" value="">
-
-	<hr>
-
-	<label>datetime-local</label>
-	<input type="datetime-local" value="">
-
-	<hr>
-
-	<label>date</label>
-	<input type="date" value="">
-
-	<hr>
-
-	<label>month</label>
-	<input type="month" value="">
-
-	<hr>
-
-	<label>time</label>
-	<input type="time" value="">
-
-	<hr>
-
-	<label>week</label>
-	<input type="week" value="">
-
-	</div>
-	<div class="span4">
-
-	<label>number</label>
-	<input type="number" value="">
-
-	<hr>
-
-	<label>range</label>
-	<input type="range" value="">
-
-	<hr>
-
-	<label>email</label>
-	<input type="email" value="">
-
-	<hr>
-
-	<label>url</label>
-	<input type="url" value="">
-
-	<hr>
-
-	<label>search</label>
-	<input type="search" value="">
-
-	<hr>
-
-	<label>tel</label>
-	<input type="tel" value="">
-
-	<hr>
-
-	<label>color</label>
-	<input type="color" value="">
-	-->
-</div>
-<h3>常用功能类 <small>扩展的工具类</small></h3>
-<ul class="ul">
-	<li><p><code>clearfix</code> 清除浮动</p></li>
-	<li><p><code>hide</code> 隐藏元素</p></li>
-	<li><p><code>.fl</code> <code>.fr</code> 左右浮动</p></li>
-	<li><p><code>center-box</code> <code>center-item</code> 浮动居中</p></li>
-	<li><p><code>ellipsis</code> 文字单行溢出省略号</p>
-		<div class="ellipsis" style="width:100px;">单行文本，这里文字太多了太多了</div>
-	</li>
-	<li><p><code>text-justify</code> 文本两端对齐</p></li>
-</ul>
-
-<pre>/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
-h1,h2,h3,h4,h5,h6 {
-    line-height:1;font-family:Arial,sans-serif;margin:1.4em 0 0.8em;
-}
-h1{font-size:1.8em;}
-h2{font-size:1.6em;}
-h3{font-size:1.4em;}
-h4{font-size:1.2em;}
-h5,h6{font-size:1em;}
-
-/* 现代排版：保证块/段落之间的空白隔行 */
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr{
-    margin:1em 0 0.6em;
-}
-</pre>
-</div>
-</body>
-</html>

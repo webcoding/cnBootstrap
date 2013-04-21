@@ -1,0 +1,16 @@
+
+/*!
+ * module v1.0
+ * Adapted from  https://github.com/webcoding/cnBootstrap
+ */
+
+/* alice要实现每个组件都不依赖基础样式，这样有必要么，影响性能么
+.module * { 
+    margin:0;
+    padding:0;
+}
+*/
+
+
+
+
