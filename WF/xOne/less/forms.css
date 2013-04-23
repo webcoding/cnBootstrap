@@ -1075,3 +1075,11 @@ button.close {
 .vmimg img {
     vertical-align: middle;
 }
+
+/* IE6 */
+input.input-radio,
+input.input-checkbox {
+    width:16px;
+	height:16px;
+}
+label.inline { *display:inline;}

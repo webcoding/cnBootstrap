@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浮动元素margin-bottom在IE6和IE7下失效的解决办法</title>
+<style>body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,figure,menu{margin:0;padding:0}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {display: inline-block;*display: inline;*zoom: 1;}
+body {margin:30px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;line-height: 18px;color: #333333;-webkit-text-size-adjust: none;}
+/* 清除浮动 */
+.clearfix:after, 
+.wrap:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.clearfix, 
+.wrap {
+    *zoom:1
+}/* for IE6 IE7 */
+
+/* 空标签清除法 */
+.clear {
+    clear: both;
+    display: block;
+    height:0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.wrap, 
+.bc {
+    margin-left: auto;
+    margin-right: auto;
+}
+.aa{
+	padding:0 10px 10px;
+	border:1px solid #000;
+	width: 440px;
+    margin-bottom:10px;
+}
+	.box{
+		overflow: hidden;
+		zoom:1;
+	}
+
+	.a,.a li{
+		overflow: hidden;
+		zoom:1;
+	}
+	.a{
+		margin-right: -20px;
+	}
+	.a li{
+		width: 100px;
+		height: 100px;
+		border:#ccc solid 1px;
+		float: left;
+		display: inline;
+		margin:10px 10px 0 0;
+
+	}
+</style>
+</head>
+<body>
+<style>
+body{background:#eee;}
+.aside{width:220px;background:#fff;}
+.sidebox{margin:0 0 10px;min-height:100px;_height:100px;background:#ccc;}
+.border{border:1px solid #333;}
+a.item,a.sitem{display:inline-block;height:65px;background:#ddd;margin-top:10px;vertical-align:middle;text-align:center;}
+a.item{width:220px;}
+a.sitem{width:105px;margin-right:10px;float:left;}
+.imglist{margin:-10px -10px 10px 0;overflow:hidden;*zoom:1;}
+</style>
+
+<div class="aside clearfix">
+	<div class="sidebox border">
+	    侧栏内容
+	</div>
+	<div class="sidebox">
+		<div class="imglist">
+			<a class="item" href="#">大图片</a>
+			<a class="item" href="#">大图片</a>
+		</div>
+	<!--
+	</div>
+	<div class="sidebox">
+	-->
+		<div class="imglist">
+			<a class="sitem" href="#">小图片</a>
+			<a class="sitem" href="#">小图片</a>
+			<a class="sitem" href="#">小图片</a>
+			<a class="sitem" href="#">小图片</a>
+		</div>
+	</div>
+	<div class="sidebox border">
+		<h4>公告</h4>
+	    <ul>
+		    <li><a href="">列表内容文字</a></li>
+		    <li><a href="">列表内容文字</a></li>
+		    <li><a href="">列表内容文字</a></li>
+		    <li><a href="">列表内容文字</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+<div class="aa">
+   <div class="box">
+		<ul class="a">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+    </div>
+</div>
+<div class="aa">
+   <div class="box">
+		<ul class="a">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

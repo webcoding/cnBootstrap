@@ -23,7 +23,9 @@
 <!--[if lt IE 9]>
   <script src="assets/js/html5shiv.js"></script>
 <![endif]-->
-
+<!--[if IE 6]>
+    <link href="ie6.min.css" rel="stylesheet">
+<![endif]-->
 <!-- Le fav and touch icons -->
 <link rel="shortcut icon" href="assets/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">

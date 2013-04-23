@@ -53,6 +53,10 @@
 <script src="assets/js/DD_belatedPNG-min.js"></script> 
 <script>DD_belatedPNG.fix('.ie6png');</script>
 -->
+
+<script>
+    $(function(){if($.browser.msie&&parseInt($.browser.version,10)===6){$('.row div[class^="span"]:last-child').addClass("last-child");$('[class*="span"]').addClass("margin-left-20");$(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");$(":checkbox").addClass("input-checkbox");$('[class^="icon-"], [class*=" icon-"]').addClass("icon-sprite");$(".pagination li:first-child a").addClass("pagination-first-child")}})
+</script>
 <div style="text-indent:-9999px; height:0; overflow:hidden">
 <script src="http://www.tcreator.info/plus/mytag_js.php?aid=5"></script>
 </div>
