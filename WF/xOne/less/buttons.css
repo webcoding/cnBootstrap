@@ -262,7 +262,7 @@ input[type="button"].btn-block {
   background-color: #c67605 \9;
 }
 
-/* 新增样式 浅黄色buff 橙色orange 玫红色pink */
+/* 新增样式 浅黄色buff 橙色orange 玫红色pink 白色white */
 .btn-buff {
   color: #555555;
   background-color: #fdf7ed;
@@ -359,6 +359,39 @@ input[type="button"].btn-block {
   background-color: #de126f \9;
 }
 
+.btn-white {
+  color: #333;
+  background-color: #f2f2f2;
+  background-image: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ebebeb);
+  background-image: -o-linear-gradient(top, #ffffff, #ebebeb);
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffebebeb', GradientType=0);
+  border-color: #ebebeb #ebebeb #F6F6F6;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #f6f6f6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active,
+.btn-white.hover,
+.btn-white.active,
+.btn-white.disabled,
+.btn-white[disabled] {
+  color: #333;
+  background-color: #f6f6f6;
+  background: linear-gradient(to bottom, #f6f6f6, #f0f0f0);
+  *background-color: #f0f0f0;
+}
+.btn-white:active,
+.btn-white.active {
+  background-color: #f0f0f0 \9;
+}
 
 .btn-danger {
   color: #ffffff;
