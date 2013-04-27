@@ -4,7 +4,7 @@
 
 <h2>Reset 重设</h2>
 <p>reset.css 是 Pandora 的浏览器重设样式，统一浏览器布局标签的默认属性，消除浏览器基本的兼容性问题。</p>
-<p>Pandora 的 reset.css 是综合 html5Doctor、yahoo、<a href="http://necolas.github.com/normalize.css/">normalize.css</a>及AliceUI 等业界优秀模块，并加上一些常用 className 而产出的一套重设样式。</p>
+<p>Pandora 的 reset.css 是参考 html5Doctor、yahoo、<a href="http://necolas.github.com/normalize.css/">normalize.css</a>及AliceUI 等业界优秀模块，结合实际应用开发而产生的一套重设样式。</p>
 
 <p>除 <code>reset.css</code> 外，Pandora 还提供适合中文的 <code>noreset.css</code> 样式(借鉴normalize)，在不归零的前提下达到浏览器中标签属性的默认一致。</p>
 <p><span class="label label-info">注意!</span> 国内布局通常还是要使用reset，但现在也有越来越多的国内攻城师开始注意noreset了</p>

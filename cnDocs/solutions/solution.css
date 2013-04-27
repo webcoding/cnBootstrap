@@ -68,7 +68,7 @@ body{padding-bottom:30px;}
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-  overflow:hidden;
+  /* overflow:hidden; */
 }
 .demo + .demo{margin-top:-15px;}
 .demo p:first-child,.demo h2:first-child,.demo h3:first-child,.demo h4:first-child{margin-top:0;}
