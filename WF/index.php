@@ -8,7 +8,7 @@
 
 <div class="wrap">
 	<div class="sidebar">
-		<ul>
+		<ul class="nav">
 			<li><a href="#overview">概述</a></li>
 			<li><a href="#">实例</a></li>
 			<li><a href="#">开始使用</a></li>

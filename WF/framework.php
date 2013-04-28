@@ -8,7 +8,7 @@
 
 <div class="wrap">
 	<div class="sidebar">
-		<ul>
+		<ul class="nav">
 			<li><a href="#">排版</a></li>
 			<li><a href="#">图标/字体集</a></li>
 			<li><a href="#">栅格系统</a></li>

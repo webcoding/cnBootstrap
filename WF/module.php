@@ -8,7 +8,7 @@
 
 <div class="wrap">
 	<div class="sidebar">
-        <ul>
+        <ul class="nav">
             <li><a href="#box">box <i class="iconfont">区块</i></a></li>
             <li><a href="#table">table <i class="iconfont">表格</i></a></li>
 			<li><a href="#btn">btn <i class="iconfont">按钮</i></a></li>

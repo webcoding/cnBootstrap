@@ -8,7 +8,7 @@
 
 <div class="wrap">
 	<div class="sidebar">
-        <ul>
+       <ul class="nav">
             <li><a href="#overview">概述</a></li>
             <li><a href="#transition">transition <i class="iconfont">过渡效果</i></a></li>
             <li><a href="#dialog">dialog <i class="iconfont">对话框</i></a></li>
