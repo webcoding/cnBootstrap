@@ -359,7 +359,7 @@ table {
     border-spacing: 0;
 }
 
-/* IE bug fixed: th 不继承 text-align*/
+/* IE bug fixed: th 不继承 text-align */
 th {
     text-align: inherit;
 }

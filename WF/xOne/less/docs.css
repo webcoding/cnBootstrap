@@ -77,6 +77,87 @@ body {
   background:url(../../xOne/images/bg.jpg) #fff center -8px no-repeat; */
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+h1 { font-size:36px;}
+h2 { font-size:28px;}
+h3 { font-size:22px;}
+h4 { font-size:18px;}
+h5 { font-size:14px;}
+h6 { font-size:12px;}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 @引自sofish的typo.css */
+h1,h2,h3,h4,h5,h6 {
+    margin: 1em 0 0.6em;
+    line-height: 1;
+    font-weight: bold;
+}
+h1 { font-size: 2.6em;}
+h2 { font-size: 2em;}
+h3 { font-size: 1.6em;}
+h4 { font-size: 1.3em;}
+h5, h6 { font-size: 1em;}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #888;
+}
+h1 small { font-size: 24px;}
+h2 small { font-size: 18px;}
+h3 small { font-size: 14px;}
+h4 small { font-size: 14px;}
+
+.lead {
+  margin: 1em 0;
+  font-size: 1.4em;
+  font-weight: 200;
+  line-height: 1em;
+}
+.page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+p { margin: 1em 0 0.6em;}
+ 
+.docs-example h1:first-child,
+.docs-example h2:first-child,
+.docs-example h3:first-child,
+.docs-example h4:first-child,
+.docs-example p:first-child {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

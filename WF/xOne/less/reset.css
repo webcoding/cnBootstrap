@@ -1,6 +1,6 @@
-@charset "utf-8";
+
 /* ------------------------------------------------------------
-  reset.css v1.0
+  normalize.css reset.css v0.9
   Author: Pandora
   Adapted from http://necolas.github.io/normalize.css/
 ------------------------------------------------------------ */
@@ -9,7 +9,7 @@
    HTML5 显示定义
    ============================== */
 
-/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG)，并设置block属性 */
 article, 
 aside, 
 details, 
@@ -18,7 +18,8 @@ figcaption,
 figure, 
 footer, 
 header, 
-hgroup, 
+hgroup,
+main, 
 menu, 
 nav, 
 section, 
@@ -26,7 +27,7 @@ summary {
     display: block;
 }
 
-/* HTML5 媒体文件跟 img inline-block属性保持一致 */
+/* HTML5 媒体文件跟 img inline-block 属性保持一致 */
 audio, 
 canvas, 
 video {
@@ -77,7 +78,7 @@ audio:not([controls]) {
 html {
     color: #000; /* 1 */
     /* background: #fff; 1 */
-    font-family: Tahoma,Arial,\5b8b\4f53;; /* 2 */
+    font-family: Tahoma,Arial,\5b8b\4f53,sans-serif; /* 2 */
     -webkit-text-size-adjust: 100%; /* 3 */
     -ms-text-size-adjust: 100%; /* 3 */
 }
@@ -219,9 +220,6 @@ figure {
    Links
    ============================== */
 
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
 
 /* 默认不显示下划线，保持页面简洁 */
 ins,a {
@@ -238,7 +236,7 @@ a:hover { text-decoration: underline;}
     outline:0;
 }
 
-下面是normalize的方法
+下面是老外normalize的方法
 a:focus {
     outline: thin dotted;
 }
@@ -269,7 +267,7 @@ fieldset {
 }
 
 /*
- * 1. Corrects color not being inherited in IE 8/9.
+ * 1. Correct color not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
@@ -289,13 +287,13 @@ input,
 select,
 textarea {
     font-family: inherit; /* 1 */
-    font-family: Tahoma,Arial,\5b8b\4f53; /* 1 */
+    font-family: Tahoma,Arial,\5b8b\4f53,sans-serif; /* 1 */
     font-size: 100%; /* 2 */
     margin: 0; /* 3 */
 }
 
 /*
- * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 
@@ -386,7 +384,7 @@ table {
     border-spacing: 0;
 }
 
-/* IE bug fixed: th 不继承 text-align*/
+/* IE bug fixed: th 不继承 text-align */
 th {
     text-align: inherit;
 }
@@ -400,6 +398,11 @@ th {
 fieldset, 
 img{
     border: 0;
+}
+
+/* 解决 IE6-7 图片缩放锯齿问题 */
+img {
+    -ms-interpolation-mode: bicubic;    
 }
 
 /* ie6 7 8(q) bug 显示为行内表现 */
