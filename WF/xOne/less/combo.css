@@ -1,0 +1,18 @@
+
+/*!
+ * combo.css v0.9
+ * 内置的快捷布局组合样式
+ */
+
+.hide-clip {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+

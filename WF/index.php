@@ -30,6 +30,7 @@
             <li>之后是单元组件，专一的组件实现，如button、表单等</li>
             <li>插件工具等</li>
             <li>基础样式及扩展前缀，如btn mbtn(metro风格) gbtn(Google风格)方便扩展不同的风格系统</li>
+            <li>自定义字体图标jackey的使用</li>
         </ul>
         
 	</div>

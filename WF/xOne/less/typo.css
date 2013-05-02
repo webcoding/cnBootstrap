@@ -4,7 +4,8 @@
  * 此样式实现页面基本排版，基于normalize.css 样式
  */
 
-/* alice要实现每个组件都不依赖基础样式，这样有必要么，会影响性能么
+/* aliceui要实现每个组件都不依赖基础样式，这样没有必要，网页组件不同于其他语言的组件！
+ * 在测试组件健壮性时，这不失为一个好办法
 .module * { 
     margin:0;
     padding:0;
@@ -12,14 +13,15 @@
 */
 
 body { font:14px/1.5 Tahoma,Arial,\5b8b\4f53; }
-
-p {
-  margin: 0 0 10px;
+p { margin: 0 0 10px;}
+p { margin: 1em 0 0.6em;}
+.nm p { margin:0;}
+.lead {
+  margin: 1em 0;
+  font-size: 1.4em;
+  font-weight: 200;
+  line-height: 1em;
 }
-.nm p {
-  margin:0;
-}
-
 small {
   font-size: 80%;
 }
@@ -90,18 +92,73 @@ a.text-success:focus {
   color: #356635;
 }
 
-.tl {
+.tl, .text-left {
   text-align: left;
 }
 
-.tr {
+.tr, .text-right {
   text-align: right;
 }
 
-.tc {
+.tc, .text-center {
   text-align: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+h1 { font-size:36px;}
+h2 { font-size:28px;}
+h3 { font-size:22px;}
+h4 { font-size:18px;}
+h5 { font-size:14px;}
+h6 { font-size:12px;}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 @引自sofish的typo.css */
+h1,h2,h3,h4,h5,h6 {
+    margin: 1em 0 0.6em;
+    line-height: 1;
+    font-weight: bold;
+}
+h1 { font-size: 2.6em;}
+h2 { font-size: 2em;}
+h3 { font-size: 1.6em;}
+h4 { font-size: 1.3em;}
+h5, h6 { font-size: 1em;}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #888;
+}
+h1 small { font-size: 24px;}
+h2 small { font-size: 18px;}
+h3 small { font-size: 14px;}
+h4 small { font-size: 14px;}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid #eeeeee;
+}
 
 ul.ul,
 ol.ol {
@@ -122,10 +179,6 @@ ul.ul ol ,
 ol.ul ol { list-style-type: lower-alpha;}
 
 
-li {
-  line-height: 20px;
-}
-
 ul.ul.unstyled,
 ol.ol.unstyled {
   margin-left: 0;
@@ -141,14 +194,12 @@ ol .inline {
 ul.inline > li,
 ol.inline > li {
   display: inline-block;
+  /* IE7 inline-block hack */
+  
   *display: inline;
   padding-right: 5px;
   padding-left: 5px;
   *zoom: 1;
-}
-
-dl {
-  margin-bottom: 20px;
 }
 
 dt,
@@ -218,7 +269,7 @@ blockquote {
 }
 
 blockquote p {
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5;
