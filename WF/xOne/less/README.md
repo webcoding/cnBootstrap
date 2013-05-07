@@ -32,7 +32,7 @@ Pandora样式组规划结构参照Bootstrap项目，其对页面组件功能实�
 	typo-dev.css     |
 	combo.css        |
 
-	[normalize.css]  |- core.css
+	normalize.css    |- core.css
 	reset.css        |
 	typo.css         |
 	combo.css        |

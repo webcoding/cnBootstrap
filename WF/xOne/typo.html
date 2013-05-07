@@ -10,7 +10,7 @@
 <script src="../assets/js/html5shiv.js"></script>
 <![endif]-->
 <link rel="stylesheet" href="less/normalize.css" >
-<link rel="stylesheet" href="less/typo.css" >
+<link rel="stylesheet" href="less/typo-dev.css" >
 <link rel="stylesheet" href="less/code.css" >
 <link rel="stylesheet" href="less/tables.css" >
 <link rel="stylesheet" href="less/docs.css" >
@@ -77,9 +77,10 @@ body,button,input,select,textarea {
 <p><span class="label label-info">注意!</span> 在HTML5中仍然可以使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 标签，但是它们的用途已经发生了改变。<code>&lt;b&gt;</code> 在过去仅仅用来加粗单词或短语，没有任何语义上的含义，现在定义需要强调的部分（如果您希望把文本标记为相比其他文本更为重要，应该使用 <code>&lt;strong&gt;</code> 标签。）。而 <code>&lt;i&gt;</code> 主要用在语音和技术等方面。</p>
 <h3>强调类 <small>通过颜色来表示强调的工具类</small></h3>
 <div class="docs-example nm">
-	<h4><cite class="cc1">水调歌头</cite> <small>宋 &sdot; 苏轼 &amp;sdot;  &amp;bull;  cc1</small></h4>
-	<p class="orange">--------- 分割线 ---------  orange</p>
+	<h4 class="cc1"><cite>水调歌头 cc1 </cite> <small>宋 &sdot; 苏轼 &amp;sdot;  &amp;bull;</small></h4>
+	
 	<p class="gray">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。 gray</p>
+    <p class="orange">--------- 分割线 ---------  orange</p>
 	<p class="red">明月几时有？把酒问青天。 red</p>
 	<p class="green">不知天上宫阙，今夕是何年。 green</p>
 	<p class="blue">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。 blue</p>
@@ -246,7 +247,7 @@ body,button,input,select,textarea {
 <div class="docs-example">
 	<h3>古文</h3>
 	<blockquote>
-		<h4>《为学一首示子侄》<small>彭端淑</small></h4>
+		<h4><cite>《为学一首示子侄》</cite><small>彭端淑</small></h4>
 		
 		<p>天下事有难易乎？为之，则难者亦易矣；不为，则易者亦难矣。人之为学<sup><a href="#note1">[1]</a> </sup>有难易乎？学之，则难者亦易矣；不学，则易者亦难矣。</p>
 		<p>吾资之昏，不逮<sup><a href="#note2">[2]</a> </sup>人也，吾材之庸，不逮人也；旦旦<sup><a href="#note3">[3]</a> </sup>而学之，久而不怠焉，迄乎成，而亦不知其昏与庸也。吾资之聪，倍人也，吾材之敏，倍人也；屏弃而不用，其与昏与庸无以异也。圣人之道，卒于鲁也传之。然则昏庸聪敏之用，岂有常哉？</p>

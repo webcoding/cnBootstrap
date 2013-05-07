@@ -1,10 +1,11 @@
 
 /*!
  * typo-dev.css v0.9
- * 实现统一的标签样式(非生产线使用)，基于 normalize.css && bootstrap 修改
+ * 依赖于 normalize.css
+ * 修改自 bootstrap，实现统一的标签样式(非生产线使用)
  */
 
-body { font:14px/1.5 Tahoma,Arial,\5b8b\4f53; }
+body { font:14px/1.5 Tahoma,Arial,\5b8b\4f53;}
 p { margin: 0 0 10px;}
 p { margin: 1em 0 0.6em;}
 .nm p { margin:0;}
@@ -104,13 +105,13 @@ h5 { font-size:14px;}
 h6 { font-size:12px;}
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 @引自sofish的typo.css */
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 0.6em;
     line-height: 1;
     font-weight: bold;
 }
 h1 { font-size: 2.6em;}
-h2 { font-size: 2em;}
+h2 { font-size: 2.0em;}
 h3 { font-size: 1.6em;}
 h4 { font-size: 1.3em;}
 h5, h6 { font-size: 1em;}

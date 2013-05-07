@@ -1,14 +1,17 @@
 /* ------------------------------------------------------------
   normalize.css v0.9
-  Project: Pandora - ÊµÏÖÎŞ²îÒì»¯µÄ±êÇ©Ä¬ÈÏÊôĞÔ
-  Adapted from http://necolas.github.io/normalize.css/
+  Project: Pandora - å®ç°æ— å·®å¼‚åŒ–çš„æ ‡ç­¾é»˜è®¤å±æ€§
+  Adapted from  http://necolas.github.io/normalize.css/ 
+                http://typo.sofish.de/
 ------------------------------------------------------------ */
 
-/* ==============================
-   HTML5 ÏÔÊ¾¶¨Òå
-   ============================== */
 
-/* ÖØÉè HTML5 ±êÇ©, IE ĞèÒªÔÚ js ÖĞ createElement(TAG)£¬²¢ÉèÖÃblockÊôĞÔ */
+
+/* ==========================================================================
+   HTML5 æ˜¾ç¤ºå®šä¹‰
+   ========================================================================== */
+
+/* é‡è®¾ HTML5 æ ‡ç­¾, IE éœ€è¦åœ¨ js ä¸­ createElement(TAG) */
 article, 
 aside, 
 details, 
@@ -18,7 +21,6 @@ figure,
 footer, 
 header, 
 hgroup,
-main, 
 menu, 
 nav, 
 section, 
@@ -26,7 +28,7 @@ summary {
     display: block;
 }
 
-/* HTML5 Ã½ÌåÎÄ¼ş¸ú img inline-block ÊôĞÔ±£³ÖÒ»ÖÂ */
+/* HTML5 åª’ä½“æ–‡ä»¶è·Ÿ img inline-block å±æ€§ä¿æŒä¸€è‡´ */
 audio, 
 canvas, 
 video {
@@ -66,18 +68,21 @@ audio:not([controls]) {
     display: none;
 }
 
-/* ==============================
-   Base
-   ============================== */
 
-/*
- * 1. ·ÀÖ¹ÓÃ»§×Ô¶¨Òå±³¾°ÑÕÉ«¶ÔÍøÒ³µÄÓ°Ïì ÕâÊÇ¸ÄÎªÉèÖÃµ½bodyÉÏ
- * 2. ÉèÖÃÄ¬ÈÏ×ÖÌåTahoma
- * 3. ·ÀÖ¹ iOS Éè±¸·½Ïò±ä»¯ÇÒÃ»ÓĞ½ûÓÃËõ·Å¹¦ÄÜÊ±£¬ÎÄ×Ö»á·¢Éú´óĞ¡±ä»¯
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. é˜²æ­¢ç”¨æˆ·è‡ªå®šä¹‰èƒŒæ™¯é¢œè‰²å¯¹ç½‘é¡µçš„å½±å“ æ”¹ä¸ºè®¾ç½®åˆ°bodyä¸Šé€‚åº”æ€§æ›´å¥½ ?
+ * 2. è®¾ç½®é»˜è®¤å­—ä½“Tahoma
+ * 3. é˜²æ­¢ iOS è®¾å¤‡æ–¹å‘å˜åŒ–ä¸”æ²¡æœ‰ç¦ç”¨ç¼©æ”¾åŠŸèƒ½æ—¶ï¼Œæ–‡å­—ä¼šå‘ç”Ÿå¤§å°å˜åŒ–
  */
+
 html {
     color: #000; /* 1 */
-    /* background: #fff; 1 */
+    background: #fff; /* 1 */
     font-family: Tahoma,Arial,\5b8b\4f53,sans-serif; /* 2 */
     -webkit-text-size-adjust: 100%; /* 3 */
     -ms-text-size-adjust: 100%; /* 3 */
@@ -85,34 +90,75 @@ html {
 
 /**
  * Remove default margin.
- */
+
 
 body {
     margin: 0;
     background: #fff;
 }
-
-
-/* ==============================
-   Typography
-   ============================== */
-
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
 
-abbr[title] {
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */ 
+
+/* Firefox ä»¥å¤–ï¼Œå…ƒç´ æ²¡æœ‰ä¸‹åˆ’çº¿ï¼Œéœ€æ·»åŠ  */
+abbr, 
+acronym {
     border-bottom: 1px dotted;
+    font-variant: normal;
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * æ·»åŠ é¼ æ ‡é—®å·ï¼Œè¿›ä¸€æ­¥ç¡®ä¿åº”ç”¨çš„è¯­ä¹‰æ˜¯æ­£ç¡®çš„
+ *ï¼ˆè¦çŸ¥é“ï¼Œäº¤äº’ä»–ä»¬ä¹Ÿæœ‰æ´ç™–ï¼Œå¦‚æœä½ ä¸å»æ‰ï¼Œé‚£å¾—å¤šèŠ±ç‚¹å£èˆŒï¼‰
  */
 
-b,
+abbr {
+    cursor: help;
+}
+
+address, 
+caption, 
+cite, 
+code, 
+dfn, 
+em, 
+th, 
+var {
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* æ–‡æœ¬æ–œä½“ä½¿ç”¨ i */
+i {
+    font-style: italic;
+}
+
+/* ç»Ÿä¸€åŠ ç²—æ ·å¼ */
+b, 
 strong {
     font-weight: bold;
+}  
+
+/* ä¸€è‡´çš„ del æ ·å¼ */
+del {
+    text-decoration: line-through;
 }
+
+/** 
+ * ä¸“åå·ï¼šè™½ç„¶ u å·²ç»é‡å› html5 Draftï¼Œä½†åœ¨æ‰€æœ‰æµè§ˆå™¨ä¸­éƒ½æ˜¯å¯ä»¥ä½¿ç”¨çš„ï¼Œ
+ * è¦åšåˆ°æ›´å¥½ï¼Œå‘åå…¼å®¹çš„è¯ï¼Œæ·»åŠ  class="typo-u" æ¥æ˜¾ç¤ºä¸“åå·
+ * å…³äº <u> æ ‡ç­¾ï¼šhttp://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
+ * è¢«æ”¾å¼ƒçš„æ˜¯ 4ï¼Œä¹‹å‰ä¸€ç›´æé”™ http://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
+ * ä¸€ç¯‡å…³äº <u> æ ‡ç­¾çš„å¾ˆå¥½æ–‡ç« ï¼šhttp://html5doctor.com/u-element/ 
+ */
+
+u {
+    text-decoration: underline;
+}
+
 
 /**
  * Address differences between Firefox and other browsers.
@@ -124,8 +170,21 @@ hr {
     height: 0;
 }
 
+/* ä¸€è‡´åŒ– horizonal rule
+hr {
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 10px;
+    *color: pink;
+    *filter: chroma(color=pink);
+    height: 10px;
+    *margin: -7px 0 2px;
+}
+ */
+
 /**
  * Address styling not present in IE 8/9.
+ * æ ‡è®°ï¼Œç±»ä¼¼äºæ‰‹å†™çš„è§å…‰ç¬”çš„ä½œç”¨
  */
 
 mark {
@@ -133,43 +192,33 @@ mark {
     color: #000;
 }
 
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-
+/* ç»Ÿä¸€ä»£ç ç‰‡æ–­é»˜è®¤å­—ä½“ && å—/æ®µè½å¼•ç”¨ */
 code,
 kbd,
 pre,
 samp {
     font-family: monospace, serif;
+    font-family: "Courier New", Courier, monospace, serif;
     font-size: 1em;
 }
 
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-
+/* æé«˜é¢„æ ¼å¼åŒ–æ–‡æœ¬çš„å¯è¯»æ€§ */
 pre {
     white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
-/**
- * Set consistent quote types.
- */
-
+/* Set consistent quote types. */
 q {
     quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-
+/* ä¸€è‡´çš„éå¼ºè°ƒæ–‡æœ¬ã€åº•éƒ¨å°åˆ·ä½“ã€ç‰ˆæœ¬ç­‰æ ‡è®°æ•ˆæœ */
 small {
     font-size: 80%;
 }
 
-/* Í³Ò»ÉÏ±êºÍÏÂ±ê */
+/* ç»Ÿä¸€ä¸Šæ ‡å’Œä¸‹æ ‡ */
 sub, 
 sup {
     font-size: 75%;
@@ -180,52 +229,50 @@ sup {
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-/* ==============================
+
+
+/* ==========================================================================
    Embedded content
-   ============================== */
+   ========================================================================== */
 
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-
+/* å»é™¤IEä¸‹ a æ ‡ç­¾å†…äº§ç”Ÿçš„æ„å¤–è¾¹æ¡† */
 img {
     border: 0;
 }
 
-
-
-/* ==============================
-   Figures
-   ============================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-
+/* å»é™¤ figure åœ¨ IE 8/9 and Safari 5 ä¸­çš„å¤–è¾¹è· */
 figure {
     margin: 0;
 }
-/* ==============================
+
+
+/* ==========================================================================
    Links
-   ============================== */
+   ========================================================================== */
 
-
-/* Ä¬ÈÏ²»ÏÔÊ¾ÏÂ»®Ïß£¬±£³ÖÒ³Ãæ¼ò½à */
+/* é»˜è®¤ä¸æ˜¾ç¤ºä¸‹åˆ’çº¿ï¼Œä¿æŒé¡µé¢ç®€æ´ */
 ins,a {
     text-decoration: none;
 }
 
-/* ÈÃÁ´½ÓÔÚ hover ×´Ì¬ÏÂÏÔÊ¾ÏÂ»®Ïß */
-a:hover { text-decoration: underline;}
+/* è®©é“¾æ¥åœ¨ hover çŠ¶æ€ä¸‹æ˜¾ç¤ºä¸‹åˆ’çº¿ */
+a:hover { 
+    text-decoration: underline;
+}
 
-/* webkitÄÚºËä¯ÀÀÆ÷»áÄ¬ÈÏ¸ø:focus×´Ì¬µÄÔªËØ¼ÓÉÏoutlineµÄÑùÊ½ 
- * ²»½¨ÒéÈ¥³ıä¯ÀÀÆ÷Ä¬ÈÏµÄoutlineÊôĞÔ£¬ÎªÊ¹ÓÃ»§ÌåÑé¸üºÃ
+
+/* webkitå†…æ ¸æµè§ˆå™¨ä¼šé»˜è®¤ç»™:focusçŠ¶æ€çš„å…ƒç´ åŠ ä¸Šoutlineçš„æ ·å¼ 
+ * ä¸å»ºè®®å»é™¤æµè§ˆå™¨é»˜è®¤çš„outlineå±æ€§ï¼Œä¸ºä½¿ç”¨æˆ·ä½“éªŒæ›´å¥½
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+
 
 :focus {
     outline:0;
 }
 
-ÏÂÃæÊÇÀÏÍânormalizeµÄ·½·¨
+ä¸‹é¢æ˜¯normalizeçš„æ–¹æ³•
 a:focus {
     outline: thin dotted;
 }
@@ -238,14 +285,16 @@ a:active,
 a:hover {
     outline: 0;
 }
+
  */
 
 
-/* ==============================
-   Forms input button ...
-   ============================== */
 
-/*
+/* ==========================================================================
+   Forms input button ...
+   ========================================================================== */
+
+/**
  * Define consistent border, margin, and padding.
  */
 
@@ -265,12 +314,13 @@ legend {
     padding: 0; /* 2 */
 }
 
-/*
- * 1. ±íµ¥ÔªËØ²¢²»¼Ì³Ğ¸¸¼¶ font µÄ×ÖÌå£¬ÕâÀïÉèÖÃÄ¬ÈÏ×ÖÌå£¬²¢²»ÈÃÆä¼Ì³Ğ¸¸¼¶×ÖÌå
- * 2. ±íµ¥ÔªËØ²¢²»¼Ì³Ğ¸¸¼¶ font µÄ´óĞ¡
- * 3. Í³Ò»Íâ±ß¾à in Firefox 4+, Safari 5, and Chrome.
+/**
+ * 1. è¡¨å•å…ƒç´ å¹¶ä¸ç»§æ‰¿çˆ¶çº§ font çš„å­—ä½“ï¼Œè¿™é‡Œè®¾ç½®é»˜è®¤å­—ä½“ï¼Œå¹¶ä¸è®©å…¶ç»§æ‰¿çˆ¶çº§å­—ä½“
+ * 2. è¡¨å•å…ƒç´ å¹¶ä¸ç»§æ‰¿çˆ¶çº§ font çš„å¤§å°
+ * 3. ç»Ÿä¸€å¤–è¾¹è· in Firefox 4+, Safari 5, and Chrome.
  */
 
+body,
 button,
 input,
 select,
@@ -289,9 +339,12 @@ textarea {
 button,
 input {
     line-height: normal;
-	
-    /* IE6/7 ÄÚ¼ä¾à¿í¶ÈÒ»ÖÂ */	
+    
+    /* IE6/7 å†…é—´è·å®½åº¦ä¸€è‡´ */	
     *overflow: visible; 
+    
+    /* è®© input å’Œ button ä¸€æ ·é«˜
+    line-height:22px; */
 }
 
 /**
@@ -342,7 +395,7 @@ input[type="radio"] {
     padding: 0; /* 2 */
 }
 
-/*
+/**
  * Remove inner padding and border in Firefox 4+.
  */
 
@@ -363,91 +416,75 @@ textarea {
 }
 
 
-/* ==============================
-   Tables
-   ============================== */
 
-/* È¥µôTablesµ¥Ôª¸ñ¼ä¾à²¢ÈÃÏàÁÚ±ßÖØºÏ */
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/* å»æ‰Tableså•å…ƒæ ¼é—´è·å¹¶è®©ç›¸é‚»è¾¹é‡åˆ */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/* IE bug fixed: th ²»¼Ì³Ğ text-align */
+/* IE bug fixed: th ä¸ç»§æ‰¿ text-align */
 th {
     text-align: inherit;
 }
 
-
-/* ==============================
-   Others
-   ============================== */
-   
-/* È¥³ıÄ¬ÈÏ±ß¿ò */
-fieldset, 
-img{
-    border: 0;
-}
-
-/* ½â¾ö IE6-7 Í¼Æ¬Ëõ·Å¾â³İÎÊÌâ */
-img {
-    -ms-interpolation-mode: bicubic;    
-}
-
-/* ie6 7 8(q) bug ÏÔÊ¾ÎªĞĞÄÚ±íÏÖ */
-iframe {
-    display: block;
-}
-
-/* È¥µô firefox ÏÂ´ËÔªËØµÄ±ß¿ò */
-abbr, 
-acronym {
-    border: 0;
-    font-variant: normal;
-}
-
-/* Ò»ÖÂµÄ del ÑùÊ½ */
-del {
-    text-decoration: line-through;
-}
-
-address, 
-caption, 
-cite, 
-dfn, 
-em, 
-i, 
-var {
-    /* Õâ¸öresetÓÃ²»µ½ÎÄ±¾Ğ±Ìå */
-    font-style: normal;
-    font-weight: 500;
-}
-
-/* ¶ÔÆëÊÇÅÅ°æ×îÖØÒªµÄÒòËØ, ±ğÈÃÊ²Ã´¶¼¾ÓÖĞ */
-caption, 
-th {
+/* å¯¹é½æ˜¯æ’ç‰ˆæœ€é‡è¦çš„å› ç´ , åˆ«è®©ä»€ä¹ˆéƒ½å±…ä¸­ */
+caption, th {
     text-align: left;
 }
 
 
-/* Çå³ı¸¡¶¯ */
-.clearfix:after, 
-.wrap:after {
-    clear: both;
-    content: ' ';
-    display: block;
-    font-size: 0;
-    line-height: 0;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
-.clearfix, 
-.wrap {
-    *zoom:1
-}/* for IE6 IE7 */
 
-/* ¿Õ±êÇ©Çå³ı·¨ */
+/* ==========================================================================
+   Others
+   ========================================================================== */
+
+/* è§£å†³ IE6-7 å›¾ç‰‡ç¼©æ”¾é”¯é½¿é—®é¢˜ */
+img {
+    -ms-interpolation-mode: bicubic;    
+}
+
+/* ie6 7 8(q) bug æ˜¾ç¤ºä¸ºè¡Œå†…è¡¨ç° */
+iframe {
+    display: block;
+}
+
+
+
+/* ==========================================================================
+   æ¸…é™¤æµ®åŠ¨
+   ========================================================================== */
+
+.clearfix,
+.wrap {
+  /* for IE6 IE7 */
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after,
+.wrap:before,
+.wrap:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after,
+.wrap:after {
+  clear: both;
+}
+
+.wrap{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ç©ºæ ‡ç­¾æ¸…é™¤æ³• */
 .clear {
     clear: both;
     display: block;
@@ -455,13 +492,8 @@ th {
     overflow: hidden;
     visibility: hidden;
 }
-.wrap, 
-.bc {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
-/* ÕâÌõ·Ö¸îÏßÒÔÉÏÎªnormalize.css£¬ÊéĞ´¹æ·¶Çë²Î¼ûcssREADME.md
-============================================================ */
+/* ä»¥ä¸Šä¸ºnormalize.cssï¼Œä¹¦å†™è§„èŒƒè¯·å‚è§cssREADME.md
+========================================================================== */
 
