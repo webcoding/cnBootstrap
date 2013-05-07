@@ -1,11 +1,51 @@
 
 /* ------------------------------------------------------------
   reset.css v0.9
-  Project: Pandora
-  Adapted from http://necolas.github.io/normalize.css/
+  Project: Pandora 
+  Adapted from normalize.css
 ------------------------------------------------------------ */
 
-/* 移除内外边距（内外边距通常让各个浏览器样式的表现位置不同，数目众多可按组划分） */
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG)，并设置block属性 */
+article, 
+aside, 
+details, 
+embed, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup,
+main, 
+menu, 
+nav, 
+section, 
+summary {
+    display: block;
+}
+
+/* HTML5 媒体文件跟 img inline-block 属性保持一致 */
+audio, 
+canvas, 
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+command, 
+datalist, 
+keygen, 
+mark, 
+meter, 
+progress, 
+rp, 
+rt, 
+ruby, 
+time, 
+wbr {
+    display: inline;
+}
+
+/* 移除内外边距（内外边距通常导致各个浏览器样式的表现位置不同，数目众多可按组划分） */
 body, div, 
 dl, dt, dd, ol, ul, li, 
 h1, h2, h3, h4, h5, h6, p,
@@ -16,6 +56,7 @@ menu {
     margin: 0;
     padding: 0;
 }
+
 /* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
@@ -70,8 +111,3 @@ img {
 /* 这条分割线以上为reset.css，书写规范请参见cssREADME.md
 ============================================================ */
 
-
-/* 
- === 样式测试 ===
- javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/cnBootstrap/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";b.className+=" typo"})()
-============================================================ */
