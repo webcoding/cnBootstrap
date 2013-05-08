@@ -81,7 +81,7 @@ body {
 
 
 
-p { margin: 0.8em 0 0.4em;}
+p { margin: 0.8em 0 0.6em;}
  
 .docs-example h1:first-child,
 .docs-example h2:first-child,
@@ -93,7 +93,7 @@ p { margin: 0.8em 0 0.4em;}
 
 
 
-.gtypo code{ color: green;}
+.google-style code{ color: green;}
 
 
 

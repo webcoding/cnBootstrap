@@ -11,8 +11,8 @@
 <![endif]-->
 <link rel="stylesheet" href="less/normalize.css" >
 <link rel="stylesheet" href="less/typo-dev.css" >
+<link rel="stylesheet" href="less/combo.css" >
 <link rel="stylesheet" href="less/code.css" >
-<link rel="stylesheet" href="less/tables.css" >
 <link rel="stylesheet" href="less/docs.css" >
 <style>
 .wrap{ width:980px; margin:30px auto;}
@@ -76,20 +76,22 @@ body,button,input,select,textarea {
 
 <p><span class="label label-info">注意!</span> 在HTML5中仍然可以使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 标签，但是它们的用途已经发生了改变。<code>&lt;b&gt;</code> 在过去仅仅用来加粗单词或短语，没有任何语义上的含义，现在定义需要强调的部分（如果您希望把文本标记为相比其他文本更为重要，应该使用 <code>&lt;strong&gt;</code> 标签。）。而 <code>&lt;i&gt;</code> 主要用在语音和技术等方面。</p>
 <h3>强调类 <small>通过颜色来表示强调的工具类</small></h3>
-<div class="docs-example nm">
-	<h4 class="cc1"><cite>水调歌头 cc1 </cite> <small>宋 &sdot; 苏轼 &amp;sdot;  &amp;bull;</small></h4>
-	
-	<p class="gray">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。 gray</p>
-    <p class="orange">--------- 分割线 ---------  orange</p>
-	<p class="red">明月几时有？把酒问青天。 red</p>
-	<p class="green">不知天上宫阙，今夕是何年。 green</p>
-	<p class="blue">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。 blue</p>
-	<p class="cc2">起舞弄清影，何似在人间。 cc2</p>
-	<p class="muted">--------- 分割线 --------- muted</p>
-	<p class="text-warning">转朱阁，低绮户，照无眠。 text-warning</p>
-	<p class="text-error">不应有恨，何事长向别时圆？ text-error</p>
-	<p class="text-info">人有悲欢离合，月有阴晴圆缺，此事古难全。 text-info</p>
-	<p class="text-success">但愿人长久，千里共婵娟。 text-success</p>
+<div class="docs-example">
+    <h4 class="cc1"><cite>水调歌头 cc1 </cite> <small>宋 &sdot; 苏轼 &amp;sdot;  &amp;bull;</small></h4>
+    
+    <p>
+        <span class="gray">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。 gray</span><br>
+        <span class="orange">--------- 分割线 ---------  orange</span><br>
+        <span class="red">明月几时有？把酒问青天。 red</span><br>
+        <span class="green">不知天上宫阙，今夕是何年。 green</span><br>
+        <span class="blue">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。 blue</span><br>
+        <span class="cc2">起舞弄清影，何似在人间。 cc2</span><br>
+        <span class="muted">--------- 分割线 --------- muted</span><br>
+        <span class="text-warning">转朱阁，低绮户，照无眠。 text-warning</span><br>
+        <span class="text-error">不应有恨，何事长向别时圆？ text-error</span><br>
+        <span class="text-info">人有悲欢离合，月有阴晴圆缺，此事古难全。 text-info</span><br>
+        <span class="text-success">但愿人长久，千里共婵娟。 text-success</span>
+    </p>
 </div>
 
 <h3>缩写形式</h3>
@@ -120,22 +122,28 @@ body,button,input,select,textarea {
 <h3>引用 <small>定义摘自另一个源的块引用</small></h3>
 <p>用 <code>&lt;blockquote&gt;</code> 嵌套 <abbr title="HyperText Markup Language">HTML</abbr> 即可实现引用。对于连续的引用内容，建议使用 <code>&lt;p&gt;</code> 标签。</p>
 <table class="table-info">
-	<tr>
-			<th>元素</th>
-			<th>使用方式</th>
-			<th>备注</th>
-	</tr>
-	<tr>
-		<td><code>&lt;blockquote&gt;</code></td>
-		<td> 用于引用外部内容的块级元素 </td>
-		<td><p><code>cite</code> 属性可以用来标注文字出处，如：URL。</p>
-			class设置为 <code>.pull-left</code> 或 <code>.pull-right</code> 决定是内容居左还是居右浮动对齐。</td>
-	</tr>
-	<tr>
-		<td><code>&lt;small&gt;</code></td>
-		<td> 可选元素，用于添加针对用户的引用，通常用于引言的作者。 </td>
-		<td> 可以将引言或出处置于 <code>&lt;cite&gt;</code> 标签内。</td>
-	</tr>
+    <thead>
+        <tr>
+            <th>元素</th>
+            <th>使用方式</th>
+            <th>备注</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>&lt;blockquote&gt;</code></td>
+            <td> 用于引用外部内容的块级元素 </td>
+            <td>
+                <p><code>cite</code> 属性可以用来标注文字出处，如：URL。</p>
+                <p>class设置为 <code>.pull-left</code> 或 <code>.pull-right</code> 决定是内容居左还是居右浮动对齐。</p>
+            </td>
+        </tr>
+        <tr>
+            <td><code>&lt;small&gt;</code></td>
+            <td> 可选元素，用于添加针对用户的引用，通常用于引言的作者。 </td>
+            <td> 可以将引言或出处置于 <code>&lt;cite&gt;</code> 标签内。</td>
+        </tr>
+    </tbody>
 </table>
 <div class="docs-example">
 	<blockquote>
@@ -161,12 +169,12 @@ body,button,input,select,textarea {
 <h3>无序列表</h3>
 <p>定义一个 <strong>没有</strong> 明确重要性的项目列表</p>
 <div class="docs-example">
-    <ul class="ul">
+    <ul>
         <li>YUI是个好框架</li>
         <li>artTemplate是个好的JS模板</li>
         <li>Git是个好工具</li>
         <li>为什么选择Git
-            <ul class="ul">
+            <ul>
                 <li>更方便的 Merge</li>
                 <li>更方便的管理</li>
                 <li>更健壮的系统</li>
@@ -183,7 +191,7 @@ body,button,input,select,textarea {
 <h3>有序列表</h3>
 <p>定义一个 <strong>有</strong> 明确重要性的项目列表</p>
 <div class="docs-example">
-	<ol class="ol">
+	<ol>
 		<li>CSS规范-减少依赖，避免耦合</li>
 		<li>统一风格，让代码有规可循，保证团队协作效率</li>
 		<li>文件编码必须使用utf-8（无BOM）</li>
@@ -208,7 +216,7 @@ body,button,input,select,textarea {
 </div>
 
 <h3>行内列表</h3>
-<p>使用<code>inline-block</code>让列表项水平排列一行，同时每项都有少量的内补（padding）。</p>
+<p>使用 <code>inline-block</code> 让列表项水平排列一行，同时每项都有少量的内补（padding）。</p>
 <div class="docs-example">
 	<ul class="inline">
 		<li>首页</li>
@@ -217,6 +225,18 @@ body,button,input,select,textarea {
 		<li>关于我们</li>
 	</ul>
 </div>
+
+<h3>字符表示法</h3>
+<p>页面字体为宋体 <code>\5b8b\4f53</code> 时，使用 <code>&amp;bull;</code> 可全兼容实现 ul 列表项前的点（&bull;）效果如下。</p>
+<div class="docs-example">
+	<ul class="none ul">
+		<li>&bull; <a href="http://www.52z.com/soft/74205.html">Dreamweaver 挺好</a></li>
+		<li>&bull; <a href="http://notepad-plus-plus.org/">但 Notepad++ 更好用</a></li>
+		<li>&bull; <a href="https://code.google.com/p/zen-coding/">配合 Zen-Coding 简直爽歪歪</a></li>
+		<li>&bull; <a href="http://www.sublimetext.com/2">Sublime Text2 也还不错啦</a></li>
+	</ul>
+</div>
+
 
 <h3>描述 <small>对一个列表（或条目）进行关联描述</small></h3>
 <div class="docs-example">
@@ -454,7 +474,7 @@ h5, h6 { font-size: 1em;}
 </div>
 
 <h3>TYPO.CSS 排版偏重点 <small>以下摘自 <a href="http://typo.sofish.de/">typo.css</a> 有改动，待完善</small></h3>
-<table class="gtypo table-border" summary="TYPO.CSS 排版偏重点">
+<table class="google-style table-info" summary="TYPO.CSS 排版偏重点">
     <thead>
         <tr>
             <th>类型</th>
@@ -468,7 +488,7 @@ h5, h6 { font-size: 1em;}
           <th rowspan="15">基础标签</th>
           <td>标题</td>
           <td><code>h1</code> ～ <code>h6</code></td>
-          <td>全局不强制大小，<code>.typo</code> 中标题与其对应的内容应紧贴，并且有相应的大小设置</td>
+          <td>全局不强制大小，开发版与发布版统一设置实现相应的大小，且标题与其对应的内容应紧贴</td>
         </tr>
         <tr>
           <td>上、下标</td>
@@ -483,7 +503,7 @@ h5, h6 { font-size: 1em;}
         <tr>
           <td>缩写</td>
           <td><code>abbr</code></td>
-          <td>是否都有下划线，鼠标 <code>hover</code> 是否为帮助手势</td>
+          <td>统一都有下划线，鼠标 <code>hover</code> 为帮助手势</td>
         </tr>
         <tr>
           <td>分割线</td>
@@ -493,63 +513,63 @@ h5, h6 { font-size: 1em;}
         <tr>
           <td>列表</td>
           <td><code>ul</code>/<code>ol</code>/<code>dl</code></td>
-          <td>在全局没有 <code>list-style</code>，在 .<code>typo</code> 中对齐正确</td>
+          <td>发布版无 <code>list-style</code>及间距等，开发版与 <code>.typo</code> 中保持默认样式</td>
         </tr>
         <tr>
           <td>定义列表</td>
           <td><code>dl</code></td>
-          <td>全局 <code>padding</code> 和 <code>margin</code>为0， .<code>typo</code> 中对齐正确</td>
+          <td>内置默认列表描述（<code>block</code>）属性及横向描述 <code>.dl-hor</code>  <code>.dl-horizontal</code> 样式 </td>
         </tr>
         <tr>
-          <td>选项</td>
-          <td><code>input[type=radio[, checkbox]]</code></td>
-          <td>与其他 <code>form</code> 元素排版时是否居中</td>
+          <td>表单元素</td>
+          <td><code>input[type=text[radio|checkbox]</code></td>
+          <td>解决 <code>form</code> 元素排版时是否（水平/垂直）对齐，详细请参见 <code>form.css</code> 样式表</td>
         </tr>
         <tr>
           <td>斜体</td>
           <td><code>i</code></td>
-          <td>只设置一种斜体，让 <code>em</code> 和  <code>cite</code> 显示为正体</td>
+          <td>只设置一种斜体，让 <code>em</code> 和  <code>cite</code> 显示为正体（<code>dfn>i</code> 的组合<dfn>&yen;<i>300</i>起</dfn>例外）</td>
         </tr>
         <tr>
           <td>强调</td>
           <td><code>em</code></td>
-          <td>在全局显示正体，在 <code>.typo</code> 中显示与 <code>b</code> 和 <code>strong</code> 的样式一致，为粗休</td>
+          <td>在全局显示正体（非斜体非粗体），在 <code>.typo</code> 中显示粗休</td>
         </tr>
         <tr>
           <td>加强</td>
           <td><code>strong/b</code></td>
-          <td>显示为粗体</td>
+          <td><strong>表示强调</strong>，<b>显示为粗体</b></td>
         </tr>
         <tr>
           <td>标记</td>
           <td><code>mark</code></td>
-          <td>类似荧光笔</td>
+          <td><mark>类似荧光笔 background:#ff0;</mark></td>
         </tr>
         <tr>
           <td>印刷</td>
           <td><code>small</code></td>
-          <td>保持为正确字体的 80% 大小，颜色设置为浅灰色</td>
+          <td><small>保持为正确字体的 80% 大小，颜色设置为浅灰色</small></td>
         </tr>
         <tr>
           <td>表格</td>
           <td><code>table</code></td>
-          <td>全局不显示线条，在 <code>table</code> 中显示表格外框，并且表头有浅灰背景</td>
+          <td>全局不显示线条，在 <code>typo</code> 中显示表格外框，并且表头有浅灰背景（同 <code>.table-info</code>）</td>
         </tr>
         <tr>
             <td>代码</td>
             <td><code>pre</code>/<code>code</code></td>
-            <td>字体使用 <code>courier</code> 系字体，保持与 <code>serif</code> 有比较一致的显示效果</td>
+            <td>字体使用 <code>courier</code> 系字体，保持与 <code>serif</code> 有比较一致的显示效果，详见 <code>code.css</code></td>
         </tr>
         <tr>
           <th rowspan="5">特殊符号</th>
-          <td>着重号</td>
-          <td>在文字下加点（•）</td>
-          <td>在支持 <code>:after</code> 和 <code>:before</code> 的浏览器可以做渐进增强实现</td>
+          <td>点</td>
+          <td>•  &amp;bull;</td>
+          <td>字体为宋体 <code>\5b8b\4f53</code> 时，使用 <code>&amp;bull;</code> 可全兼容实现列表项前的点 &bull;</td>
         </tr>
         <tr>
           <td>专名号</td>
-          <td><u>林建锋</u></td>
-          <td>专名号，有下划线，使用 <code>u</code> 或都 <code>.typo-u</code> 类</td>
+          <td><u>sofish</u></td>
+          <td>专名号，有下划线，可使用 <code>u</code> 或 <code>.typo-u</code> 类，此处直接指定<b>暂不</b>使用此标签。</td>
         </tr>
         <tr>
           <td>破折号</td>
@@ -558,24 +578,24 @@ h5, h6 { font-size: 1em;}
         </tr>
         <tr>
           <td>人民币</td>
-          <td>¥</td>
-          <td>使用两平等线的符号，或者 HTML 实体符号 <code>&amp;yen;</code></td>
+          <td><dfn>¥ / &yen;</dfn></td>
+          <td>使用两平等线的符号（需设置Arial字体），或者 HTML 实体符号 <code>&amp;yen;</code></td>
         </tr>
         <tr>
           <td>删除符</td>
           <td><del>已删除（deleted）</del></td>
-          <td>一致化各浏览器显示，中英混排正确</td>
+          <td>一致化的删除符效果，中英混排正确</td>
         </tr>
         <tr>
           <th rowspan="4">加强类</th>
           <td>专名号</td>
           <td><code>.typo-u</code></td>
-          <td>由于 <code>u</code> 被 HTML4 放弃，在向后兼容上推荐使用 <code><u type="typo-u" …<="" code=""></u></code></td>
+          <td>由于 <code>u</code> 被 HTML4 放弃，在向后兼容上推荐使用 <code>class="typo-u" …</code>，暂时我们不使用</td>
         </tr>
         <tr>
           <td>着重符</td>
           <td><code>.typo-em</code></td>
-          <td>利用 <code>:after</code> 和 <code>:before</code> 实现着重符</td>
+          <td>在文字下加点（•），利用 <code>:after</code> 和 <code>:before</code> 在浏览器上渐进增强实现着重符</td>
         </tr>
         <tr>
           <td>首字下沉</td>
@@ -598,7 +618,7 @@ h5, h6 { font-size: 1em;}
           <td colspan="3">（3）块/段落分割空白是否符合设计原则</td>
         </tr>
         <tr>
-          <td colspan="3">（4）input 多余空间问题</td>
+          <td colspan="3">（4）input 多余空白问题</td>
         </tr>
         <tr>
             <td colspan="3">（5）默认字体色彩，目前采用 <code>#333</code> 在各种浏览显示比较好</td>
