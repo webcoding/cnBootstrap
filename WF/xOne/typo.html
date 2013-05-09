@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="less/code.css" >
 <link rel="stylesheet" href="less/docs.css" >
 <style>
-.wrap{ width:980px; margin:30px auto;}
+.wrap{ width:980px; margin:0px auto 30px;}
 </style>
 </head>
 <body class="typo">
@@ -464,6 +464,8 @@ h5, h6 { font-size: 1em;}
 <div class="docs-example">
     <p>所有保留字效果基于引用 <code>pandora.css</code> 样式有效。</p>
     <dl class="dl-horizontal">
+        <dt>基础标签</dt>
+        <dd>所有基础标签，在生产线环境 <code>typo</code> 内表现为排版样式，标签具备指定的用法功能</dd>
     	<dt>按钮</dt>
         <dd>btn btn-block disabled<br> btn-<size>[large/big/small/mini]<br> btn-[primary/info/success/warning/danger/inverse/link]<br> btn-[buff/orange/pink/white]<br></dd>
         <dt>按钮组</dt>
@@ -493,7 +495,7 @@ h5, h6 { font-size: 1em;}
         <tr>
           <td>上、下标</td>
           <td><code>sup</code>/<code>sub</code></td>
-          <td>保持与 MicroSoft Office Word 等程序的日常排版一致</td>
+          <td title="&lt;sup&gt;这个标签在向文档添加脚注以及表示方程式中的指数值时非常有用。如果和&lt;a&gt;标签结合起来使用，就可以创建出很好的超链接脚注。&lt;sub&gt;在数学等式、科学符号和化学公式中都非常有用。">保持与 MicroSoft Office Word 等程序的日常排版一致。</td>
         </tr>
         <tr>
           <td>引用</td>
@@ -548,7 +550,7 @@ h5, h6 { font-size: 1em;}
         <tr>
           <td>印刷</td>
           <td><code>small</code></td>
-          <td><small>保持为正确字体的 80% 大小，颜色设置为浅灰色</small></td>
+          <td><small>保持为页面字体的 80% 大小，颜色设置为浅灰色 #333</small></td>
         </tr>
         <tr>
           <td>表格</td>
