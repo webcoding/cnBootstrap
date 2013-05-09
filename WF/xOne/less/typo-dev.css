@@ -29,15 +29,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
 }
 
-h1, h2, h3 {
-  line-height: 40px;
-}
-h1 { font-size:36px;}
-h2 { font-size:28px;}
-h3 { font-size:22px;}
-h4 { font-size:18px;}
-h5 { font-size:14px;}
-h6 { font-size:12px;}
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 @引自sofish的typo.css */
 h1, h2, h3, h4, h5, h6 {
@@ -50,6 +41,12 @@ h2 { font-size: 2.0em;}
 h3 { font-size: 1.6em;}
 h4 { font-size: 1.3em;}
 h5, h6 { font-size: 1em;}
+h1 { font-size:36px;}
+h2 { font-size:28px;}
+h3 { font-size:22px;}
+h4 { font-size:18px;}
+h5 { font-size:14px;}
+h6 { font-size:12px;}
 
 h1 small,
 h2 small,
