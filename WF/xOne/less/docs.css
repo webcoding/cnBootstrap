@@ -4,12 +4,48 @@
  * Special styles for presenting Pandora's documentation and examples
  */
 
-
-.hide-clip {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
+.wrap { width: 980px;}
+.nav a {
+  display: block;
+}
+.nav i {
+    font-style: normal;
+}
+.main-nav li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.main-nav a{
+  padding: 10px 15px;
+  font-size: 14px;
+  /* color: #ddd; */
+}
+.sidebar,
+.main {
+  border:1px solid #ccc;
+}
+.sidebar {
+  width: 210px;
+  float: left;
+  display: inline;
+  margin-right: 20px;
+  line-height:2;
+}
+.sidebar ul { padding: 10px 10px;}
+.sidebar li {
+    position:relative;  
 }
 
+.sidebar small { 
+    position:absolute;
+    right: 11px;
+}
+.main {
+  overflow:hidden;
+  padding:0 20px 30px;
+}
+.footer{ margin:10px 0;}
 
 /* code examples
 -------------------------------------------------- */
@@ -71,7 +107,7 @@
 }
 
 body {
-  font: 14px/1.5 Tahoma,Arial,\5b8b\4f53; 
+  font: 14px/1.5 Tahoma,Arial,\5b8b\4f53,sans-serif; 
   color:#333;
   /* background: #eee;
   background:url(../../xOne/images/bg.jpg) #fff center -8px no-repeat; */

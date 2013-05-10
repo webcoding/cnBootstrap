@@ -1,7 +1,7 @@
 
 /*!
  * combo.css v0.9
- * ÄÚÖÃµÄ±ã½İ×éºÏÑùÊ½
+ * å†…ç½®çš„ä¾¿æ·ç»„åˆæ ·å¼
  */
 
 .hide-clip {
@@ -16,13 +16,13 @@
   border: 0;
 }
 
-/* ¾ÓÖĞ */
+/* å±…ä¸­ */
 .bc {
     margin-left: auto;
     margin-right: auto;
 }
 
-/* ¸¡¶¯ */
+/* æµ®åŠ¨ */
 .fl, 
 .fr,
 .inline {
@@ -36,18 +36,18 @@
     *zoom:1;
 }
 
-/* Òş²ØÏÔÊ¾ */
+/* éšè—æ˜¾ç¤º */
 .show,
 .block { display: block; }
 body .hide { display: none; }
 
-/* Çå³ıÄ¬ÈÏÊôĞÔ */
+/* æ¸…é™¤é»˜è®¤å±æ€§ */
 body .none { 
     margin: 0;
     padding: 0;
     list-style: none;
 }
-/* ÎÄ±¾¶ÔÆë */
+/* æ–‡æœ¬å¯¹é½ */
 .tl, 
 .text-left {
   text-align: left;
@@ -63,7 +63,7 @@ body .none {
   text-align: center;
 }
 
-/* ÑÕÉ«È¡Öµ */
+/* é¢œè‰²å–å€¼ */
 .red       { color: red;    }
 .orange { color: orange; }
 .pink     { color: #e38;   }
@@ -71,7 +71,7 @@ body .none {
 .gray3   { color: #333;   }
 .gray6   { color: #666;   }
 
-/* ÎÄ±¾´óĞ¡¡¢ĞĞ¸ß */
+/* æ–‡æœ¬å¤§å°ã€è¡Œé«˜ */
 .f12 { font-size: 12px; }
 .f14 { font-size: 14px; }
 .f16 { font-size: 16px; }
@@ -86,7 +86,7 @@ body .none {
 .lh28 { line-height: 28px; }
 .lh30 { line-height: 30px; }
 
-/* Íâ±ß½çÓÃ×éºÏcss */
+/* å¤–è¾¹ç•Œç”¨ç»„åˆcss */
 .m10   {        margin: 10px; }
 .mt10 {    margin-top: 10px; }
 .mb10 { margin-bottom: 10px; }
@@ -113,7 +113,7 @@ body .none {
 .p_rel { position: relative;}
 .p_abs { position: absolute;}
 
-/* ×éºÏ¿í¶È */
+/* ç»„åˆå®½åº¦ */
 .w10 { width: 10px; }
 .w20 { width: 20px; }
 .w30 { width: 30px; }
@@ -155,16 +155,16 @@ body .none {
 .w390 { width: 390px; }
 .w400 { width: 400px; }
 
-/* ×ÖÌå£¬²»ÒªÊ¹ÓÃÖĞÎÄ×ÖÌåÃû */
+/* å­—ä½“ï¼Œä¸è¦ä½¿ç”¨ä¸­æ–‡å­—ä½“å */
 .yahei { font-family:"Microsoft YaHei","\5FAE\8F6F\96C5\9ED1"; }
 
-/* Ê¹webkitÖ§³Ö10pxÒÔÏÂ×ÖÌå */
+/* ä½¿webkitæ”¯æŒ10pxä»¥ä¸‹å­—ä½“ */
 .text-size {
     -webkit-text-size-adjust:100%;
         -ms-text-size-adjust:100%;
 }
 
-/* Í¸Ã÷ */
+/* é€æ˜ */
 .opacity { 
     filter:alpha(opacity=50);
     opacity:.5;
@@ -177,10 +177,10 @@ body .none {
 }
 
 /* ==============================
-   TPL²¼¾ÖÑùÊ½
+   TPLå¸ƒå±€æ ·å¼
    ============================== */
 
-/* ¼ä¸ô¿Õ°× */
+/* é—´éš”ç©ºç™½ */
 .hr_a, 
 .hr_b, 
 .hr_c {
@@ -194,7 +194,7 @@ body .none {
 .hr_b { height:5px; }
 .hr_c { height:20px; }
 
-/* ÎŞ±³¾°aÔªËØ¶¨Î»Á´½Ó */
+/* æ— èƒŒæ™¯aå…ƒç´ å®šä½é“¾æ¥ */
 .disa a {
     display:block;
     width:100%;
@@ -204,7 +204,7 @@ body .none {
 }
 
 
-/* ºáÏòÁĞ±í */
+/* æ¨ªå‘åˆ—è¡¨ */
 .hor li {
     display:inline;
     float:left;
@@ -214,7 +214,7 @@ body .none {
     display:block;
     float:left;
 }
-/* ÊúÏòÁĞ±í */
+/* ç«–å‘åˆ—è¡¨ */
 .ver li {
     display:block;
     *zoom:1;
@@ -224,10 +224,10 @@ body .none {
 }
 
 /* ==============================
-   Ä£¿é¹¦ÄÜ»®·Ö
+   æ¨¡å—åŠŸèƒ½åˆ’åˆ†
    ============================== */
 
-/* °ëÍ¸Ã÷±³¾°ÎÄ×Ö */
+/* åŠé€æ˜èƒŒæ™¯æ–‡å­— */
 .text-cover {
     position: relative;
     display: block;
@@ -268,10 +268,10 @@ a.text-cover:hover {
 }
 
 /* ==============================
-   UIÉè¼Æ
+   UIè®¾è®¡
    ============================== */
 
-/* Á´½Ó|Õ¹¿ª  ¸ü¶à|ÏêÇé */
+/* é“¾æ¥|å±•å¼€  æ›´å¤š|è¯¦æƒ… */
 .link-more,
 .link-details,
 .view-more,
@@ -292,13 +292,13 @@ ol.num li {
     list-style:decimal outside;
     text-indent:0px;
     line-height:20px;
-    margin:5px 0£»
+    margin:5px 0ï¼›
 }
 
-/* È«Õ¾Í³Ò»¼Û¸ñ±êÇ© */
-dfn, dfn i,
-samp, samp i { 
-    font-family:arial;
+/* å…¨ç«™ç»Ÿä¸€ä»·æ ¼æ ‡ç­¾ */
+dfn, dfn i, .price
+samp, samp i, .price { 
+    font-family:arial,sans-serif;
     font-style: normal;
     color: #f60;
 }
@@ -307,7 +307,7 @@ dfn i, samp i{
 }
 
  
-/* ×ÖÌåÑÕÉ«¿ØÖÆ */
+/* å­—ä½“é¢œè‰²æ§åˆ¶ */
 .border {
     border: 1px solid #eee;
 }
@@ -320,14 +320,8 @@ dfn i, samp i{
     background: linear-gradient(top,#fcfcfc,#f1f1f1);
 }
 
-.B, .fb, h1, h2, h3, h4, h5 { font-weight: bold; }
+.B, .fb { font-weight: bold; }
 .fnb { font-weight: normal; }
-h3, h4 { font-size: 14px; }
-h5 { font-size: 12px;}
-h6 { 
-    font-size: 12px; 
-    font-weight: normal; 
-}
 
 .v-t { vertical-align: top; }
 .v-m { vertical-align: middle; }

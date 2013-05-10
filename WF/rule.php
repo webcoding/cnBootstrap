@@ -8,7 +8,7 @@
 
 <div class="wrap">
 	<div class="sidebar">
-		<ul class="nav">
+		<ul class="nav none">
 			<li><a href="#overview">概述</a></li>
 			<li><a href="#document">文档结构</a></li>
 			<li><a href="#naming">命名规范</a></li>

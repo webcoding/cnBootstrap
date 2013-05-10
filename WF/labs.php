@@ -8,7 +8,7 @@
 
 <div class="wrap">
 	<div class="sidebar">
-		<ul class="nav">
+		<ul class="nav none">
 			<li><a href="#solution">兼容解决方案</a></li>
 			<li><a href="#html5">HTML5探索</a></li>
 			<li><a href="#css3">CSS3研究</a></li>

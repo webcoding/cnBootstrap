@@ -8,7 +8,7 @@
 
 <div class="wrap">
 	<div class="sidebar">
-		<ul class="nav">
+		<ul class="nav none">
 			<li><a href="#overview">概述</a></li>
 			<li><a href="#">实例</a></li>
 			<li><a href="#">开始使用</a></li>
@@ -29,7 +29,7 @@
             <li>首先确定排版样式，大量的默认排版组合及固定用法</li>
             <li>之后是单元组件，专一的组件实现，如button、表单等</li>
             <li>插件工具等</li>
-            <li>基础样式及扩展前缀，如btn mbtn(metro风格) gbtn(Google风格)方便扩展不同的风格系统</li>
+            <li>基础样式及扩展前缀，如btn 其外嵌套 metro-style(metro风格) google-style(Google风格)实现不同的风格系统</li>
             <li>自定义字体图标jackey的使用</li>
         </ul>
         

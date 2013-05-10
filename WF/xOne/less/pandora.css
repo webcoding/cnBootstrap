@@ -11,9 +11,8 @@
 
 /* CSS Reset */
 @import "normalize.css";
-@import "reset.css";
+@import "typo-dev.css";
 @import "combo.css";
-@import "module.css";
 
 /* Grid system and page structure */
 @import "scaffolding.css";
@@ -21,12 +20,12 @@
 @import "layouts.css";
 
 /* Base CSS */
-@import "type.css";
 @import "code.css";
 @import "forms.css";
 @import "tables.css";
 
 /* Components: common */
+@import "module.css";
 @import "sprites.css";
 @import "dropdowns.css";
 @import "wells.css";
@@ -69,7 +68,3 @@
 /* 书写规范请参见README.md
 ============================================================ */
 
-/* 
- === 样式测试 ===
- javascript:(function(){var a=document,b=a.body,c=a.createElement("link");c.setAttribute("rel","stylesheet");c.setAttribute("href","http://10.3.1.41/WF/assets/css/reset.css");a.querySelector("head").appendChild(c);b.style.backgroundColor="white";})()
-============================================================ */

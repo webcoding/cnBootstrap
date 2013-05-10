@@ -35,7 +35,9 @@ h1, h2, h3, h4, h5, h6{
     
 }
 
-/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 
+ * 这里相对于12px/14px字体设置
+ */
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
     margin: 1em 0 0.6em;
@@ -54,7 +56,10 @@ h1, h2, h3, h4, h5, h6{
 .typo h4, .typo-h4 {
 	font-size: 1.3em;
 }
-.typo h5, .typo h6, .typo-h5, .typo-h6 {
+.typo h5, .typo-h5 {
+	font-size: 1em;
+}
+.typo h6, .typo-h6 {
 	font-size: 1em;
 }
 
