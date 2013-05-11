@@ -34,12 +34,13 @@
 }
 .sidebar ul { padding: 10px 10px;}
 .sidebar li {
-    position:relative;  
+    position: relative;  
 }
 
 .sidebar small { 
-    position:absolute;
+    position: absolute;
     right: 11px;
+    display: none;
 }
 .main {
   overflow:hidden;
