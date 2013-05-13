@@ -6,7 +6,21 @@
 <body>
 <?php include("./common/header.php"); ?>
 
-
+<div class="wrap">
+	<div class="sidebar">
+		<ul class="nav none">
+			<li><a href="#">如何创建组件模块</a></li>
+			<li><a href="#">注意事项</a></li>
+		</ul>
+	</div>
+    
+	<div class="main">
+        <section id="overview">
+        </section>
+        
+    </div>
+    
+</div>
 
 <?php include("common/footer.html");?>
 </body>
