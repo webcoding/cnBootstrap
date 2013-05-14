@@ -16,9 +16,9 @@
             
             <li><a href="#table">table <small class="iconfont">表格</small></a></li>
 			<li><a href="#btn">btn <small class="iconfont">按钮</small></a></li>
-			<li><a href="#form">form <small class="iconfont">表单</small></a></li>
 			<li><a href="#btn-group">btn-group <small class="iconfont">按钮组</small></a></li>
             <li><a href="#btn-dropdown">btn-dropdown <small class="iconfont">按钮菜单</small></a></li>
+            <li><a href="#form">form <small class="iconfont">表单</small></a></li>
             
             <li><a href="#nav">nav <small class="iconfont">导航</small></a></li>
             <li><a href="#breadcrumb">breadcrumb <small class="iconfont">面包屑</small></a></li>
@@ -36,6 +36,13 @@
 		<section id="tpl">
             <h1>经典布局</h1>
             <p>最常用的经典布局——内容盒子，列表，图文混排，图片滚动，下拉菜单等</p>
+            <p><strong>注：</strong>经典布局不是指单一的某一种布局，针对不同的风格设计，都有优良的布局经典，敏捷开发无处不在，这里仅就某一类设计浅谈布局实现(@此处实例多是修改BT项目实例或引用lvmama的项目或针对未来需求的预设实现)。</p>
+            
+            <h2>区块 box</h2>
+            <p>实现布局块，保证良好的扩展性</p>
+            
+            <h2>列表实现 list</h2>
+            <p>实现常见的布局列表，具备良好的扩展性</p>
         </section>
         
         
@@ -43,21 +50,15 @@
         <section id="table">
             <h1>表格</h1>
             <p>页面中常用的表格，信息展示，布局表格，产品列表，特定功能类。</p>
+            <p>详情参看： <a href="xOne/tables.html">tables</a></p>
         </section>
         
         
         
         <section id="btn">
             <h1>按钮</h1>
-            <p>集合五种规格的按钮，3中类型，四种标签，N*3种风格，更可以与图标/字体集组合能满足大部分的按钮需求。</p>
-        </section>
-        
-        
-        
-        <section id="form">
-            <h1>表单</h1>
-            <p>处理表单最头疼的事情莫过于N中不同的排版杂糅在一起，以致于对齐甚至都要单独个性化处理。</p>
-            <p>这里汇集了两种尺寸大小的四种常用布局方式，且能混合使用，几乎统一了表单的各类布局实现。</p>
+            <p>集合五种尺寸的按钮，3中类型，四种标签，N*4种风格(默认+metro_style+google_stylr+lv_style)，更可以与图标/字体集组合，能满足大部分的按钮需求。</p>
+            <p>详情参看： <a href="xOne/buttons.html">buttons</a></p>
         </section>
         
         
@@ -65,12 +66,24 @@
         <section id="btn-group">
             <h1>按钮组</h1>
             <p>实现一组功能相关的按钮，如单选按钮组等</p>
+            <p>详情参看： <a href="xOne/buttons.html">buttons</a></p>
         </section>
         
         
         
         <section id="btn-dropdown">
             <h1>按钮菜单</h1>
+            <p>由按钮组合实现的下拉菜单</p>
+            <p>详情参看： <a href="xOne/buttons.html">buttons</a></p>
+        </section>
+        
+        
+        
+        <section id="form">
+            <h1>表单</h1>
+            <p>处理表单最头疼的事情莫过于N中不同的排版杂糅在一起，以致于对齐甚至都要单独个性化处理。</p>
+            <p>这里总结了两种尺寸下的四种常见form布局方式，支持混合使用，几乎统一了表单的各类布局实现。</p>
+            <p>详情参看： <a href="xOne/forms.html">forms</a></p>
         </section>
         
         
@@ -92,6 +105,8 @@
         <section id="paging">
             <h1>分页</h1>
             <p>实现功能完备的分页组件，扩展辅助js时可实现前端分页。</p>
+            <p>事实上一个网站也许只有一两种风格的分页模块，下面列举两种尺寸，两种风格的分页布局供大家参考</p>
+            <p>详见：<a href="xOne/paging.html">paging</a></p>
         </section>
         
         

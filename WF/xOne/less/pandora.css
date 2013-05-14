@@ -13,6 +13,7 @@
 @import "normalize.css";
 @import "typo-dev.css";
 @import "combo.css";
+@import "docs.css";
 
 /* Grid system and page structure */
 @import "scaffolding.css";
@@ -61,9 +62,9 @@
 /* Utility classes */
 @import "utilities.css"; /* Has to be last to override when necessary */
 
-/* Plugin classes */
+/* Plugin classes
 @import "plugin.css";
-
+ */
 
 /* 书写规范请参见README.md
 ============================================================ */

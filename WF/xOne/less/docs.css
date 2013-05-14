@@ -40,7 +40,6 @@
 .sidebar small { 
     position: absolute;
     right: 11px;
-    display: none;
 }
 .main {
   overflow:hidden;
