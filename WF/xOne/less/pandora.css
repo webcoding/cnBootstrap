@@ -5,9 +5,10 @@
  */
 
 /* Core variables and mixins */
-/* Modify this for custom colors, font-sizes, etc */
+/* Modify this for custom colors, font-sizes, etc
 @import "variables.css"; 
 @import "mixins.css";
+ */
 
 /* CSS Reset */
 @import "normalize.css";
