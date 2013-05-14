@@ -9,9 +9,7 @@
 <div class="wrap">
 	<div class="sidebar">
         <ul class="nav none">
-            <li><a href="#tpl">tpl <small class="iconfont">经典布局</small></a></li>
-            <li><a href="#box">box <small class="iconfont">区块</small></a></li>
-            <li><a href="#list">list <small class="iconfont">列表</small></a></li>
+            <li><a href="#tpl">tpl <small class="iconfont">布局模板</small></a></li>
             <li><a href="#dropdown">dropdown <small class="iconfont">下拉菜单</small></a></li>
             
             <li><a href="#table">table <small class="iconfont">表格</small></a></li>
@@ -34,15 +32,10 @@
 	</div>
 	<div class="main">
 		<section id="tpl">
-            <h1>经典布局</h1>
-            <p>最常用的经典布局——内容盒子，列表，图文混排，图片滚动，下拉菜单等</p>
+            <h1>布局模板</h1>
+            <p>最常用的布局结构堪称经典，可以作为布局模板使用——内容盒子，列表，图文混排，图片滚动，下拉菜单等</p>
             <p><strong>注：</strong>经典布局不是指单一的某一种布局，针对不同的风格设计，都有优良的布局经典，敏捷开发无处不在，这里仅就某一类设计浅谈布局实现(@此处实例多是修改BT项目实例或引用lvmama的项目或针对未来需求的预设实现)。</p>
-            
-            <h2>区块 box</h2>
-            <p>实现布局块，保证良好的扩展性</p>
-            
-            <h2>列表实现 list</h2>
-            <p>实现常见的布局列表，具备良好的扩展性</p>
+            <p>详情参看： <a href="tpl.php">tpl</a></p>
         </section>
         
         
