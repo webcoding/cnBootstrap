@@ -1,5 +1,5 @@
 <?php $page = "rule" ?>
-<?php $title="规范和最佳实践"?>
+<?php $title="代码规范"?>
 <?php $description = "本项目基于cnBootstrap开源项目创建，致力于前端快捷开发！" ?>
 <?php include("./common/meta.php"); ?>
 </head>

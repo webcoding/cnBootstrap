@@ -26,19 +26,21 @@
         
 		<section id="html5">
             <h1>HTML5探索</h1>
-            
+            <p>关注HTML5文档，可参看：<a href="http://www.w3.org/html/ig/zh/wiki/HTML5">HTML5</a></p>
         </section>
         
         
         
 		<section id="css3">
             <h1>CSS3研究</h1>
+            <p>CSS3实现的功能越发强悍了，这个必须关注！</p>
         </section>
         
         
         
 		<section id="jscode">
             <h1>JS代码段</h1>
+            <p>常用的JS代码段，很有用处，值得收集！</p>
         </section>
 	</div>
 </div>

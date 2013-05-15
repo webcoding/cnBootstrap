@@ -67,11 +67,11 @@ body,button,input,select,textarea {
 <p>使用HTML默认的强调标签，达到代码精简的目的。</p>
 <div class="docs-example">
 	<h4>强调标签</h4>
-	<p><code>&lt;small&gt;</code> 针对不需要强调的<small>inline或block类型的文本</small>使用。</p>
-	<p><code>&lt;strong&gt;</code> 用增加font-weight值的方式<strong>加粗强调</strong>一段文本。</p>
-	<p><code>&lt;em&gt;</code> 用<em>斜体字</em>强调一段文本。</p>
-	<p><code>&lt;b&gt;</code> 是为了<b>高亮词</b>或<b>短语</b>而不会赋予重要含义。</p>
-	<p><code>&lt;i&gt;</code> 主要被用来表示<i>语音、技术术语</i>等。</p>
+	<p><code>&lt;small&gt;</code> 针对不需要强调的 <small>inline或block类型的文本</small> 使用。</p>
+	<p><code>&lt;strong&gt;</code> 用增加 font-weight 值的方式 <strong>加粗强调</strong> 一段文本。</p>
+	<p><code>&lt;em&gt;</code> 用 <em>斜体字</em> 强调一段文本。</p>
+	<p><code>&lt;b&gt;</code> 是为了 <b>高亮词</b> 或 <b>短语</b> 而不会赋予重要含义。</p>
+	<p><code>&lt;i&gt;</code> 主要被用来表示 <i>语音、技术术语</i> 等。</p>
 </div>
 
 <p><span class="label label-info">注意!</span> 在HTML5中仍然可以使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 标签，但是它们的用途已经发生了改变。<code>&lt;b&gt;</code> 在过去仅仅用来加粗单词或短语，没有任何语义上的含义，现在定义需要强调的部分（如果您希望把文本标记为相比其他文本更为重要，应该使用 <code>&lt;strong&gt;</code> 标签。）。而 <code>&lt;i&gt;</code> 主要用在语音和技术等方面。</p>
@@ -529,13 +529,13 @@ h5, h6 { font-size: 1em;}
         </tr>
         <tr>
           <td>斜体</td>
-          <td><code>i</code></td>
-          <td>只设置一种斜体，让 <code>em</code> 和  <code>cite</code> 显示为正体（<code>dfn>i</code> 的组合<dfn>&yen;<i>300</i>起</dfn>例外）</td>
+          <td><code>em</code></td>
+          <td>用 <em>斜体字</em> 强调一段文本，只设置此一种斜体，让 <code>i</code> 和  <code>cite</code> 显示为正体</td>
         </tr>
         <tr>
           <td>强调</td>
-          <td><code>em</code></td>
-          <td>在全局显示正体（非斜体非粗体），在 <code>.typo</code> 中显示粗休</td>
+          <td><code>i</code></td>
+          <td>显示为正体（lvmama中大量用于组合功能 如：<code>dfn>i</code> 的组合<dfn>&yen;<i>300</i>起</dfn>）</td>
         </tr>
         <tr>
           <td>加强</td>

@@ -124,15 +124,15 @@ caption,
 cite, 
 code, 
 dfn, 
-em, 
+i, 
 th, 
 var {
     font-style: normal;
     font-weight: 400;
 }
 
-/* 文本斜体使用 i */
-i {
+/* 文本斜体使用 em */
+em {
     font-style: italic;
 }
 

@@ -201,4 +201,5 @@ input { }
 /* TODO: 供着重号使用 */
 .typo-em, .typo em, legend, caption {
 	font-weight: 700;
+    font-style: normal;
 }

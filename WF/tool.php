@@ -1,5 +1,5 @@
 <?php $page = "tool" ?>
-<?php $title="工具"?>
+<?php $title="造好的轮子"?>
 <?php $description = "本项目基于cnBootstrap开源项目创建，致力于前端快捷开发！" ?>
 <?php include("./common/meta.php"); ?>
 </head>
@@ -17,6 +17,7 @@
 			<li><a href="#nodejs">Nodejs</a></li>
 			<li><a href="#csslint">CSS Lint</a></li>
 			<li><a href="#modernizr">Modernizr</a></li>
+			<li><a href="#htmlchar">HTML特殊符号对照表</a></li>
 		</ul>
 	</div>
 	<div class="main">
@@ -106,6 +107,13 @@
             <p>详情请参考：<a href="http://modernizr.com/">Modernizr</a></p>
         </section>
         
+        
+        
+        <section id="htmlchar">
+            <h1>HTML特殊符号对照表</h1>
+            <p>HTML特殊字符编码大全，建议将最常用的记住！</p>
+            <p>详情请参考：<a href="xOne/htmlchar.html">HTML特殊符号对照表</a></p>
+        </section>
         
         
         
