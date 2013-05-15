@@ -18,6 +18,7 @@
 	<div class="main">
 		<section id="solution">
             <h1>兼容解决方案</h1>
+            <p class="lead">头痛的问题，我们提前搞定</p>
             <p>详情参看： <a href="../cndocs/solution.php">兼容解决方案</a></p>
         </section>
         

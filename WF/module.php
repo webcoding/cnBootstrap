@@ -92,7 +92,7 @@
         <section id="breadcrumb">
             <h1>面包屑</h1>
             <p>此处实现了最常用的三种面包屑导航</p>
-            <p>详情参看： <a href="xOne/crumb.html">breadcrumb</a></p>
+            <p>详情参看： <a href="xOne/breadcrumb.html">breadcrumb</a></p>
         </section>
         
         

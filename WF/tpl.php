@@ -34,7 +34,7 @@
                         <h4>标题 <small>一些说明</small></h4>
                         <a class="link-more" href="">更多 &raquo;</a>
                     </div>
-                    <div class="content" style="200px;">
+                    <div class="content" style="height:100px;">
                         <p>这是列表或其它内容</p>
                     </div>
                 </div>
