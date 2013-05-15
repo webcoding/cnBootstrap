@@ -40,13 +40,16 @@
 .sidebar small { 
     position: absolute;
     right: 11px;
-    display: none;
 }
 .main {
   overflow:hidden;
-  padding:0 20px 30px;
+  padding: 0 20px 30px;
 }
-.footer{ margin:10px 0;}
+.main section{
+  padding: 1px 0;
+}
+
+.footer{ margin: 10px 0;}
 
 /* code examples
 -------------------------------------------------- */
@@ -82,6 +85,7 @@
 }
 
 /* Remove spacing between an example and it's code */
+.docs-example + pre,
 .docs-example + .prettyprint {
   margin-top: -20px;
   padding-top: 15px;

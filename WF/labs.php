@@ -12,11 +12,33 @@
 			<li><a href="#solution">兼容解决方案</a></li>
 			<li><a href="#html5">HTML5探索</a></li>
 			<li><a href="#css3">CSS3研究</a></li>
-			<li><a href="#jskill">JS代码段</a></li>
+			<li><a href="#jscode">JS代码段</a></li>
 		</ul>
 	</div>
 	<div class="main">
-		
+		<section id="solution">
+            <h1>兼容解决方案</h1>
+            <p>详情参看： <a href="../cndocs/solution.php">兼容解决方案</a></p>
+        </section>
+        
+        
+        
+		<section id="html5">
+            <h1>HTML5探索</h1>
+            
+        </section>
+        
+        
+        
+		<section id="css3">
+            <h1>CSS3研究</h1>
+        </section>
+        
+        
+        
+		<section id="jscode">
+            <h1>JS代码段</h1>
+        </section>
 	</div>
 </div>
 

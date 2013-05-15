@@ -5,14 +5,16 @@
  */
 
 /* Core variables and mixins */
-/* Modify this for custom colors, font-sizes, etc */
+/* Modify this for custom colors, font-sizes, etc
 @import "variables.css"; 
 @import "mixins.css";
+ */
 
 /* CSS Reset */
 @import "normalize.css";
 @import "typo-dev.css";
 @import "combo.css";
+@import "docs.css";
 
 /* Grid system and page structure */
 @import "scaffolding.css";
@@ -61,8 +63,13 @@
 /* Utility classes */
 @import "utilities.css"; /* Has to be last to override when necessary */
 
-/* Plugin classes */
+/* Plugin classes
 @import "plugin.css";
+ */
+
+/* Other Style */
+@import "metro-style.css";
+@import "google-style.css";
 
 
 /* 书写规范请参见README.md
