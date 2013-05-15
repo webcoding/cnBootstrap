@@ -1466,6 +1466,7 @@ CSS:
 	</tbody><thead>
 	<tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
 	<tbody>
+    <tr><td>£</td><td>&amp;pound;</td><td>&amp;#163;</td><td>¤</td><td>&amp;yen;</td><td>&amp;#164;</td></tr>
 	<tr><td>¥ </td><td>&amp;yen;</td><td>&amp;#165;</td><td>¦ </td><td>&amp;brvbar;</td><td>&amp;#166;</td></tr>
 	<tr><td>§ </td><td>&amp;sect;</td><td>&amp;#167;</td><td>¨ </td><td>&amp;uml;</td><td>&amp;#168;</td></tr>
 	<tr><td>© </td><td>&amp;copy;</td><td>&amp;#169;</td><td>ª </td><td>&amp;ordf;</td><td>&amp;#170;</td></tr>
@@ -1475,6 +1476,8 @@ CSS:
 	<tr><td>± </td><td>&amp;plusmn;</td><td>&amp;#177;</td><td>²</td><td>&amp;sup2;</td><td>&amp;#178;</td></tr>
 	<tr><td>³</td><td>&amp;sup3;</td><td>&amp;#179;</td><td>´</td><td>&amp;acute;</td><td>&amp;#180;</td></tr>
 	<tr><td>µ</td><td>&amp;micro;</td><td>&amp;#181;</td><td></td><td></td><td></td></tr>
+	<tr><td>»</td><td>&amp;raquo;</td><td>&amp;#187;</td><td>€</td><td>&amp;euro;</td><td>&amp;#8364;</td></tr>
+	£	&pound;	¥	&yen;
 </tbody></table>
 			</section>
         </div>

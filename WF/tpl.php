@@ -32,7 +32,7 @@
                 <div class="pro-box pro_custom border">
                     <div class="title">
                         <h4>标题 <small>一些说明</small></h4>
-                        <a class="linkmore" href="">更多 </a>
+                        <a class="link-more" href="">更多 &raquo;</a>
                     </div>
                     <div class="content" style="200px;">
                         <p>这是列表或其它内容</p>
