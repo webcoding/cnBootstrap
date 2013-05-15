@@ -31,7 +31,7 @@
 /* 隐藏显示 */
 .show,
 .block { display: block; }
-.hide { display: none; }
+.hide { display: none !important; }
 
 /* 文本对齐 */
 .tc{ text-align: center; }
