@@ -31,7 +31,7 @@
                 <li>首先确定排版样式，大量的默认排版组合及固定用法 .pd10 .mt10等</li>
                 <li>之后是单元组件，专一的组件实现，如button、表单等</li>
                 <li>插件工具类，如tooltip，dialog等</li>
-                <li>基础样式及扩展前缀，如btn 其外嵌套 metro-style(metro风格) google-style(Google风格)实现不同的风格系统</li>
+                <li>基础样式及扩展前缀，如btn 其外嵌套 metro_style(metro风格) google_style(Google风格)实现不同的风格系统</li>
                 <li>自定义字体图标jackey的使用</li>
             </ul>
         </section>
@@ -39,14 +39,14 @@
         
         <section id="example">
             <h1>一个简单的例子</h1>
-            <p>实现一个橙色按钮居中，仅仅使用预设样式组合即可：</p>
+            <p>实现一个metro风格的橙色按钮居中显示，仅仅使用预设样式组合即可：</p>
             <div class="docs-example">
-                <p class="tc">
+                <p class="tc metro_style">
                     <button class="btn btn-orange">居中按钮</button>
                 </p>
             </div>
 <pre>
-&lt;p class="tc"&gt;
+&lt;p class="tc metro_style"&gt;
     &lt;button class="btn btn-orange"&gt;居中按钮&lt;/button&gt;
 &lt;/p&gt;
 </pre>
