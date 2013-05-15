@@ -92,6 +92,14 @@
         
         
         
+        <section id="jshint">
+            <h1>JSHint</h1>
+            <p>JSHint跟JSLint非常像，都是Javascript代码验证工具，这种工具可以检查你的代码并提供相关的代码改进意见。</p>
+            <p>详情请参考：<a href="http://jshint.com/">JSHint</a></p>
+        </section>
+        
+        
+        
         <section id="modernizr">
             <h1>Modernizr</h1>
             <p>Modernizr: the feature detection library for HTML5/CSS3</p>
