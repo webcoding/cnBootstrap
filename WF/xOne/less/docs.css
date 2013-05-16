@@ -30,7 +30,7 @@
   float: left;
   display: inline;
   margin-right: 20px;
-  line-height:2;
+  line-height: 2;
 }
 .sidebar ul { padding: 10px 10px;}
 .sidebar li {
@@ -48,7 +48,16 @@
 .main section{
   padding: 1px 0;
 }
-
+.modules {
+    line-height: 2;
+}
+.modules a { 
+    display: inline-block;
+    width: 170px;
+}
+.modules dd a { 
+    width: 90px;
+}
 .footer{ margin: 10px 0;}
 
 /* code examples
@@ -124,11 +133,11 @@ body {
 
 p { margin: 0.8em 0 0.6em;}
  
-.docs-example h1:first-child,
-.docs-example h2:first-child,
-.docs-example h3:first-child,
-.docs-example h4:first-child,
-.docs-example p:first-child {
+.docs-example > h1:first-child,
+.docs-example > h2:first-child,
+.docs-example > h3:first-child,
+.docs-example > h4:first-child,
+.docs-example > p:first-child {
     margin-top: 0;
 }
 
@@ -137,7 +146,7 @@ p { margin: 0.8em 0 0.6em;}
 .google-style code{ color: green;}
 
 
-
+a:hover attr{text-decoration: none;}
 
 
 

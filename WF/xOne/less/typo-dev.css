@@ -11,9 +11,15 @@
  * 用于开发研究，默认 14px 字体
  */
 
+.small { 
+    font-size: 80%;
+    color: #888;
+    font-weight: normal;
+}
+.em { 
+    font-style: italic;
+}
 
-p { margin: 0 0 0 10px;}
-p { margin: 1em 0 0.6em;}
 /* p有上边距，在table中导致td的下边框未合并？ */
 table p { margin-top: 0;}
 
@@ -23,46 +29,6 @@ table p { margin-top: 0;}
     line-height: 1.6em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-  font-weight: bold;
-  line-height: 22px;
-}
-
-h1 { font-size: 36px;}
-h2 { font-size: 28px;}
-h3 { font-size: 22px;}
-h4 { font-size: 18px;}
-h5 { font-size: 14px;}
-h6 { font-size: 12px;}
-
-/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 @引自sofish的typo.css */
-h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0 0.6em;
-    line-height: 1;
-    font-weight: bold;
-}
-h1 { font-size: 2.6em;}
-h2 { font-size: 2.0em;}
-h3 { font-size: 1.6em;}
-h4 { font-size: 1.3em;}
-h5, h6 { font-size: 1em;}
-
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-    line-height: 1;
-    color: #888;
-}
-h1 small { font-size: 24px;}
-h2 small { font-size: 18px;}
-h3 small { font-size: 14px;}
-h4 small { font-size: 14px;}
-h5 small,
-h6 small { font-size: 12px;}
 .page-header {
     padding-bottom: 9px;
     margin: 20px 0 30px;
@@ -155,22 +121,23 @@ dt {
 dd {
   margin-left: 10px;
 }
-
+.dl-hor,
 .dl-horizontal {
   *zoom: 1;
 }
-
+.dl-hor:before,
+.dl-hor:after,
 .dl-horizontal:before,
 .dl-horizontal:after {
   display: table;
   line-height: 0;
   content: "";
 }
-
+.dl-hor:after,
 .dl-horizontal:after {
   clear: both;
 }
-
+.dl-hor dt,
 .dl-horizontal dt {
   float: left;
   width: 160px;
@@ -184,7 +151,13 @@ dd {
 .dl-horizontal dd {
   margin-left: 180px;
 }
-
+.dl-hor dt {
+    width: 80px;
+    font-weight: normal;
+}
+.dl-hor dd {
+  margin-left: 100px;
+}
 hr {
   margin: 20px 0;
   border: 0;
@@ -204,32 +177,38 @@ abbr.initialism {
 }
 
 blockquote {
-  padding: 0 0 0 15px;
-  margin: 0 0 20px;
-  border-left: 5px solid #eeeeee;
+  padding: 1px 1em 0.2em;
+  margin: 15px 0;
+  border-left: 5px solid #ddd;
+  color: #555;
 }
 
 blockquote p {
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 300;
+  margin: 0.6em 0 0.4em;
   line-height: 1.5;
 }
 
 blockquote small {
   display: block;
   line-height: 20px;
-  color: #999999;
+  color: #999;
 }
 
 blockquote small:before {
   content: '\2014 \00A0';
 }
+blockquote em {
+    margin-left: 1em;
+    color: green;
+}
+blockquote blockquote {
+    margin-left: 2em;
+    padding: 1px 0 0.2em 1em;
+}
 
 blockquote.pull-right {
   float: right;
-  padding-right: 15px;
-  padding-left: 0;
+  padding-right: 1em;
   border-right: 5px solid #eeeeee;
   border-left: 0;
 }
@@ -261,4 +240,50 @@ address {
   line-height: 20px;
 }
 
+p { 
+    margin: 0 0 0 10px;
+    margin: 0.8em 0 0.6em;
+}
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+h1 { font-size: 36px;}
+h2 { font-size: 28px;}
+h3 { font-size: 22px;}
+h4 { font-size: 18px;}
+h5 { font-size: 14px;}
+h6 { font-size: 12px;}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 @引自sofish的typo.css */
+h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 0.6em;
+    line-height: 1;
+    font-weight: bold;
+}
+h1 { font-size: 2.6em;}
+h2 { font-size: 2.0em;}
+h3 { font-size: 1.6em;}
+h4 { font-size: 1.3em;}
+h5 { font-size: 1em;}
+h6 { font-size: 12px;}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    line-height: 1;
+    color: #888;
+    display: inline-block;
+}
+h1 small { font-size: 24px;}
+h2 small { font-size: 18px;}
+h3 small { font-size: 14px;}
+h4 small { font-size: 14px;}
+h5 small,
+h6 small { font-size: 12px;}
