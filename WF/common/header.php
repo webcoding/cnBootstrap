@@ -19,7 +19,7 @@
                 <li <?php if(isset($page) && $page == 'rule') echo 'class="active"' ?>><a href="rule.php">代码规范</a></li>
                 <li class="divider-vertical"></li>
                 <li <?php if(isset($page) && $page == 'build') echo 'class="active"' ?>><a href="build.php">管理发布</a></li>
-                <li <?php if(isset($page) && $page == 'tool') echo 'class="active"' ?>><a href="tool.php">造好的轮子</a></li>
+                <li <?php if(isset($page) && $page == 'tool') echo 'class="active"' ?>><a href="wheel.php">造好的轮子</a></li>
                 <li <?php if(isset($page) && $page == 'labs') echo 'class="active"' ?>><a href="labs.php">前端实验室</a></li>
             </ul>
         </div>
