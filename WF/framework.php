@@ -32,7 +32,7 @@
 
             <h3>常用功能类</h3>
 
-<pre>
+<pre class="prettyprint">
 normalize.css 无差异样式及清除浮动
 reset.css 传统重设样式
 combo.css 便捷组合样式表

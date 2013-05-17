@@ -140,6 +140,20 @@
                 -->
             </ul>
             
+            <p><b>注意：</b>确保样式的安全使用，尽量把样式定义在相应的容器中，而不是作为全局使用</p>
+<pre class="prettyprint">
+/* 全局样式：
+ * 除非非常通用，不允许新建全局样式，如果你要建，请先问一下晓寒，不然可能随时被干掉（^_^）
+ */
+.red{color:red!imporant;}
+
+/* 作用域：限定在一定的容器中
+ * 像 .hover 这样的选择器是非常普通的，如何使用？
+ * 这样两个容器的 .hover 就不相互影响了，记得限定作用域
+ */
+.module-1 .hover{ ... }
+.module-2 .hover{ ... }
+</pre>
         </section>
         
         
@@ -152,7 +166,7 @@
                     <button class="btn btn-orange">居中按钮</button>
                 </p>
             </div>
-<pre>
+<pre class="prettyprint">
 &lt;p class="tc metro_style"&gt;
     &lt;button class="btn btn-orange"&gt;居中按钮&lt;/button&gt;
 &lt;/p&gt;
