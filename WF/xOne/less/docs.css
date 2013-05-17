@@ -49,15 +49,37 @@
   padding: 1px 0;
 }
 .modules {
-    line-height: 2;
 }
 .modules a { 
     display: inline-block;
-    width: 170px;
+    width: 160px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.55);
+    margin: 0 5px 10px 0;
+    padding: 3px 0;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-left: 4px solid #ddd;
+    font-family: tahoma;
+    overflow: hidden;
+    position: relative;
 }
-.modules dd a { 
+.modules a.todo  { border-left: 4px solid #ddd; }
+.modules a.doing { border-left: 4px solid #f80; }
+.modules a.done  { border-left: 4px solid #0c0; }
+
+span.label { margin-left:5px; }
+span.todo  {background: #ddd; color: #999; }
+span.doing {background: #f80;}
+span.done  {background: #0c0;}
+
+.demolist dd a {
+    display: inline-block;
     width: 90px;
 }
+
 .footer{ margin: 10px 0;}
 
 /* code examples

@@ -20,91 +20,92 @@
         <section id="overview">
             <h1>前端项目 Pandora</h1>
             <blockquote>
-                <p>无论你身在何方处在何时，请记住Pandora的盒子最底下的是希望。<em>「 xiaohan 」 </em></p>
+                <p>无论你身在何方处在何时，请记住要永存希望。<em>「 晓寒 」 </em></p>
             </blockquote>
-            <p> 这项目一路艰辛，借鉴Bootstrap的思想并结合自己的工作想整合一个适合自己当前工作的前端框架，到底被什么绊住了呢，看着日子一天天过，真是揪心啊，AliceUI还是比较给力，这么快新版就出来了，还好我之前已经整理了部分<a href="../cnDocs/solution.php#module">组件解决方案</a>，这里可以直接使用了，曾经的努力虽然少，但还是有些许价值。</p>
-            <p>加快设计开发进度吧，咱没有熟悉自动化的编译工具，但是手工作适应自己的开发版还是可以的，努力！加油！！！</p>
-            <p>看到人家的项目都有卡通形象，着实比较可爱，我也用一个，咱的就叫做潘多拉-Pandora吧</p>
-            <p>潘多拉（Pandora，也译作潘朵拉），希腊神话中火神赫淮斯托斯用粘土做成的地上的第一个女人，作为对普罗米修斯盗火的惩罚送给人类的第一个女人。众神亦加入使她拥有更诱人的魅力。根据大英博物馆所藏的一只白底基里克斯杯（古希腊一种双耳浅口的大酒杯），潘多拉的另一名字是「安妮斯朵拉」（Anesidora），意思为「送上礼物的她」。根据神话，潘多拉打开一个「盒子」（应作坛子，希腊文原作πίθος，πίθοι，英语：）。而现时当提到「潘多拉的盒子」，通常是指潘多拉出于好奇而打开了盒子，释放出人世间的所有邪恶——贪婪、虚无、诽谤、嫉妒、痛苦——当她再盖上盒子时，<b>只剩下希望在里面</b>。</p>
-            <p>让我们期待 <strong>Pandora</strong> 吧，也许她最初表现不佳，但毕竟还有希望！</p>
+            <p> 这项目一路艰辛，借鉴Bootstrap的思想并结合自己的工作想整合一个适合自己当前工作的前端框架，到底被什么绊住了呢，看着日子一天天过，真是揪心啊，AliceUI还是比较给力，这么快新版就出来了，还好我之前已经整理了部分<a href="../cnDocs/solution.php">前端解决方案</a>，这里可以直接使用了，曾经的努力虽然少，但还是有些许价值。</p>
             
-            <h3>制作规划</h3>
+            <h3>初期制作计划</h3>
             <ul>
-                <li>修正reset样式的实现，首先是无差异化重设normalize，之后是传统意义上的reset.css效果</li>
-                <li>首先确定排版样式，大量的默认排版组合及固定用法 .pd10 .mt10等</li>
-                <li>之后是单元组件，专一的组件实现，如button、表单等</li>
-                <li>插件工具类，如tooltip，dialog等</li>
-                <li>基础样式及扩展前缀，如btn 其外嵌套 metro_style(metro风格) google_style(Google风格)实现不同的风格系统</li>
+                <li>修正reset样式的实现，首先是无差异化重设 normalize.css，之后是传统意义上的reset.css效果</li>
+                <li>首先确定排版样式 typo.css，内置大量（如 <code>.pd10</code> <code>.mt10</code>） 排版组合样式及固定用法 combo.css，</li>
+                <li>之后是模块组件，专一的模块实现，如button、表单等 module</li>
+                <li>javascript 插件工具类，如tooltip，dialog等</li>
+                <li>基础样式及扩展前缀，如btn 外嵌套 metro_style(metro风格) 或 google_style(Google风格)实现不同的风格系统</li>
                 <li>自定义字体图标jackey的使用</li>
+                <li>应用自动化打包管理工具等</li>
             </ul>
         </section>
         
         
         
         <section id="todo">
-            <h1>项目规划</h1>
+            <h1>项目规划 <small><span class="label todo">todo</span><span class="label doing">doing</span><span class="label done">done</span></small></h1>
+            
+            <p><b>注意：</b> 开发模块组件之前请严格按照 <a class="B" href="rule.php">代码开发规范</a> 执行。</p>
             
             <h3>基础</h3>
             <div class="modules">
-                <a href="#">normalize.css <small>无差异化</small></a>
-                <a href="#">reset.css <small>重设样式</small></a>
-                <a href="#">typo.css <small>排版</small></a>
-                <a href="#">combo.css <small>组合样式</small></a>
-                <a href="#">icon/iconfont <small>图标/字体集</small></a>
-                <a href="#">grid <small>栅格系统</small></a>
+                <a class="done" href="xOne/less/normalize.css">normalize.css <small>无差异化</small></a>
+                <a class="done" href="xOne/less/reset.css">reset.css <small>重设样式</small></a>
+                <a class="done" href="xOne/typo.html">typo.css <small>排版</small></a>
+                <a class="doing" href="xOne/less/combo.css">combo.css <small>组合样式</small></a>
+                <a class="todo" href="#">icon/iconfont <small>图标/字体集</small></a>
+                <a class="todo" href="#">grid <small>栅格系统</small></a>
             </div>
             
             <h3>CSS 组件</h3>
             <div class="modules">
-                <a href="#">ui-box <small>区块盒子</small></a>
-                <a href="#">list <small>列表</small></a>
-                <a href="#">imglist <small>图片列表</small></a>
-                <a href="#">imgtext <small>图文混排</small></a>
-                <a href="#">tips <small>可操作浮层</small></a>
-                <a href="#">table <small>表格</small></a>
-                <a href="#">nav <small>导航</small></a>
-                <a href="#">topbar <small>顶部导航</small></a>
-                <a href="#">breadcrumb <small>面包屑</small></a>
-                <a href="#">paging <small>分页</small></a>
-                <a href="#">dropdown <small>下拉菜单</small></a>
-                <a href="#">btn <small>按钮[组]</small></a>
-                <a href="#">form <small>表单</small></a>
-                <a href="#">search <small>搜索框</small></a>
-                <a href="#">filter <small>类目过滤</small></a>
-                <a href="#">label <small>着重标记</small></a>
-                <a href="#">counter <small>数字提醒</small></a>
-                <a href="#">alert message <small>可操作消息</small></a>
-                <a href="#">modal <small>弹出对话框</small></a>
-                <a href="#">progress <small>进度条</small></a>
-                <a href="#">media <small>媒体对象</small></a>
-                <a href="#">step <small>步骤/流程</small></a>
-                <a href="#">misc <small>杂项</small></a>
-                <a href="#">unit <small>组件单元</small></a>
+                <a class="doing" href="#">ui-box <small>区块盒子</small></a>
+                <a class="todo" href="#">list <small>列表</small></a>
+                <a class="todo" href="#">imglist <small>图片列表</small></a>
+                <a class="todo" href="#">imgtext <small>图文混排</small></a>
+                <a class="doing" href="#">tips <small>可操作浮层</small></a>
+                <a class="doing" href="xOne/tables.html">table <small>表格</small></a>
+                <a class="todo" href="#">nav <small>导航</small></a>
+                <a class="todo" href="#">topbar <small>顶部导航</small></a>
+                <a class="todo" href="xOne/breadcrumb.html">breadcrumb <small>面包屑</small></a>
+                <a class="doing" href="xOne/paging.html">paging <small>分页</small></a>
+                <a class="todo" href="#">dropdown <small>下拉菜单</small></a>
+                <a class="done" href="xOne/buttons.html">btn <small>按钮[组]</small></a>
+                <a class="doing" href="xOne/forms.html">form <small>表单</small></a>
+                <a class="todo" href="#">search <small>搜索框</small></a>
+                <a class="todo" href="#">filter <small>类目过滤</small></a>
+                <a class="todo" href="#">label <small>着重标记</small></a>
+                <a class="todo" href="#">counter <small>数字提醒</small></a>
+                <a class="todo" href="#">alert message <small>可操作消息</small></a>
+                <a class="todo" href="#">modal <small>弹出对话框</small></a>
+                <a class="todo" href="#">progress <small>进度条</small></a>
+                <a class="todo" href="#">media <small>媒体对象</small></a>
+                <a class="todo" href="#">step <small>步骤/流程</small></a>
+                <a class="todo" href="#">misc <small>杂项</small></a>
+                <a class="todo" href="#">unit <small>组件单元</small></a>
             </div>
             
             <h3>JavaScript 组件</h3>
             <div class="modules">
-                <a href="#">slides <small>图片轮播</small></a>
-                <a href="#">imgscoll <small>图片滚动</small></a>
-                <a href="#">tiptext <small>浮层提示</small></a>
-                <a href="#">countdown <small>倒计时</small></a>
-                <a href="#">selectbox <small>下拉选项</small></a>
-                <a href="#">dropdown <small>下拉菜单</small></a>
-                <a href="#">tab <small>标签切换</small></a>
-                <a href="#">sort <small>多维排序</small></a>
-                <a href="#">pading <small>分页</small></a>
-                <a href="#">modal <small>弹出对话框</small></a>
-                <a href="#">stars <small>星星打分</small></a>
-                <a href="#">wordcount <small>字数检测</small></a>
-                <a href="#">validator <small>表单验证</small></a>
-                <a href="#">scrollspy <small>滚动侦听</small></a>
-                <a href="#">lightbox <small>图片浏览浮层</small></a>
-                <a href="#">linkage <small>联动操作</small></a>
-                <a href="#">autocomplete <small>自动完成</small></a>
+                <a class="doing" href="#">slides <small>图片轮播</small></a>
+                <a class="todo" href="#">imgscoll <small>图片滚动</small></a>
+                <a class="todo" href="#">lazyload <small>延迟加载</small></a>
+                <a class="doing" href="#">tips <small>浮层提示</small></a>
+                <a class="doing" href="#">countdown <small>倒计时</small></a>
+                <a class="todo" href="#">calendar <small>日历</small></a>
+                <a class="todo" href="#">selectbox <small>下拉选项</small></a>
+                <a class="todo" href="#">dropdown <small>下拉菜单</small></a>
+                <a class="doing" href="#">tab <small>标签切换</small></a>
+                <a class="todo" href="#">sort <small>多维排序</small></a>
+                <a class="todo" href="#">pading <small>分页</small></a>
+                <a class="todo" href="#">modal <small>弹出对话框</small></a>
+                <a class="todo" href="#">stars <small>星星打分</small></a>
+                <a class="todo" href="#">wordcount <small>字数检测</small></a>
+                <a class="todo" href="#">validator <small>表单验证</small></a>
+                <a class="todo" href="#">scrollspy <small>滚动侦听</small></a>
+                <a class="todo" href="#">lightbox <small>图片浏览浮层</small></a>
+                <a class="todo" href="#">linkage <small>联动操作</small></a>
+                <a class="todo" href="#">autocomplete <small>自动补全</small></a>
             </div>
             
             <h3>主要项目页面 DEMO</h3>
-            <div class="modules">
+            <div class="demolist">
                 <dl class="dl-hor">
                 	<dt>驴妈妈</dt>
                     <dd>
@@ -128,9 +129,9 @@
             <h2>工具准备</h2>
             
             <ul>
-                <li>Git - 版本控制</li>
-                <li>Markdown - 书写文档</li>
-                <li>Nodejs - 二期平台</li>
+                <li><a href="http://msysgit.github.io/">Git - 版本控制</a></li>
+                <li><a href="xOne/markdown.html">Markdown - 书写文档</a></li>
+                <li><a href="http://nodejs.org/">Nodejs</a> - 二期使用的平台</li>
             	<!-- 二期开发
                 <li>Spm - 包管理 <small>[二期]</small></li>
             	<li>Nico - 调试&文档 <small>[二期]</small></li>
@@ -175,10 +176,13 @@
         
         
         
-        <section id="start">
-            <h1>开始使用</h1>
+        <section>
+            <h2>其他</h2>
             <p>本项目已经开始在生产线测试使用，样式文件为core.css，本项目中亦设置N个产品的开发版同步上线调试，供研究使用。</p>
-            <p>您可以直接下载release稳定版使用。</p>
+            
+            <p>看到人家的项目都有卡通形象，着实比较可爱，我也用一个，咱的就叫做潘多拉-Pandora吧</p>
+            <p>潘多拉（Pandora，也译作潘朵拉），希腊神话中火神赫淮斯托斯用粘土做成的地上的第一个女人，作为对普罗米修斯盗火的惩罚送给人类的第一个女人。众神亦加入使她拥有更诱人的魅力。根据大英博物馆所藏的一只白底基里克斯杯（古希腊一种双耳浅口的大酒杯），潘多拉的另一名字是「安妮斯朵拉」（Anesidora），意思为「送上礼物的她」。根据神话，潘多拉打开一个「盒子」（应作坛子，希腊文原作πίθος，πίθοι，英语：）。而现时当提到「潘多拉的盒子」，通常是指潘多拉出于好奇而打开了盒子，释放出人世间的所有邪恶——贪婪、虚无、诽谤、嫉妒、痛苦——当她再盖上盒子时，<b>只剩下希望在里面</b>。</p>
+            <p>最初表现不佳的潘多拉，把最大的希望留在了她的盒子里，让我们期待 <strong>Pandora</strong> 的下一步棋吧！</p>
         </section>
         
         
