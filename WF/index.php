@@ -123,6 +123,23 @@
                     </dd>
                 </dl>
             </div>
+            
+            
+            <h2>工具准备</h2>
+            
+            <ul>
+                <li>Git - 版本控制</li>
+                <li>Markdown - 书写文档</li>
+                <li>Nodejs - 二期平台</li>
+            	<!-- 二期开发
+                <li>Spm - 包管理 <small>[二期]</small></li>
+            	<li>Nico - 调试&文档 <small>[二期]</small></li>
+                <li>Peaches - 雪碧图 <small>[二期]</small></li>
+                <li>Stylus - 预编译 <small>[二期]</small></li>
+                <li>Stylib - 样式库搭建工具 <small>[二期]</small></li>
+                -->
+            </ul>
+            
         </section>
         
         
