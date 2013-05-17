@@ -53,7 +53,13 @@
 .modules a { 
     display: inline-block;
     width: 160px;
-    border: 1px solid #eee;
+    border: 1px solid #eee\9;   /* all-IE */
+    border: none\9\0;           /* IE9 */ 
+    /* 
+    background: #fff1ff;*/
+    background: #C7FDC7;
+    
+    
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.55);
     margin: 0 5px 10px 0;
     padding: 3px 0;
@@ -66,14 +72,14 @@
     overflow: hidden;
     position: relative;
 }
-.modules a.todo  { border-left: 4px solid #ddd; }
+.modules a.todo  { border-left: 4px solid #ccc; }
 .modules a.doing { border-left: 4px solid #f80; }
-.modules a.done  { border-left: 4px solid #0c0; }
+.modules a.done  { border-left: 4px solid #0b0; }
 
 span.label { margin-left:5px; }
-span.todo  {background: #ddd; color: #999; }
+span.todo  { }
 span.doing {background: #f80;}
-span.done  {background: #0c0;}
+span.done  {background: #0b0;}
 
 .demolist dd a {
     display: inline-block;
