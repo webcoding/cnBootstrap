@@ -433,6 +433,7 @@ table.middle{height:130px;background:#ccc;}
 	
     <h3 id="middle33">方法三：<small>inline-block + vertical-align:middle 方法</small></h3>
 	<p>父元素高度固定、子元素的高度不固定，使用<code>inline-block</code> 元素设置 <code>vertical-align:middle</code> 后会垂直居中对齐，添加 <code>.middle-full</code> 空标签辅助实现，如下：</p>
+    <p><b>注意：</b> 使用这种方式，针对图片的自动缩放使用 max-width:100%; 时，middle-full和图片间不能有空格空行等</p>
 	<div class="demo">
 	    <div class="box3">
             <div class="middle-full"></div><p class="middle-item">
@@ -443,7 +444,8 @@ table.middle{height:130px;background:#ccc;}
 		</div>
 		<hr>
 		<div class="box3">
-            <div class="middle-full"></div><img class="middle-item" src="img/center-middle.png" width="90" height="60">
+            <div class="middle-full"></div>
+            <img class="middle-item" src="img/center-middle.png" width="90" height="60">
         </div>
 		<hr>
 		<div class="box3">
