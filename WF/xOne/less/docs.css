@@ -4,11 +4,36 @@
  * Special styles for presenting Pandora's documentation and examples
  */
 
+body {
+  font: 14px/1.5 Tahoma,Arial,\5b8b\4f53,sans-serif; 
+  color:#333;
+  /* background: #eee;
+  background:url(../../xOne/images/bg.jpg) #fff center -8px no-repeat; */
+}
+
+/* 三种字体的对比
+ * 宋体表示英文实在太差,既锐利有不好看
+ * Tahoma 表示英文字母间还是太紧凑以至于链接起来了 
+   如: cillum 中 ci TI 等字母都连在一起,可读性变差,
+   但经过测试奇数字号表现良好,以下可用于测试
+ * Arial 表示英文比Tahoma锐利清晰,字母之间独立不互联,但表示中文不若 Tahoma 
+ *
+ * 结论,可针对实现英文区域使用 Arial字体样式.en或使用 Tahoma奇数字号
+   对 tag标签使用 Arial字体,垂直居中表现很好
+   
+   突然发现 Verdana不错,缺点是现实英文占用更多空间,字母稍大间隙稍大
+ */
+body{font-family: \5b8b\4f53,sans-serif;}
+body{font-family: Arial,sans-serif;}
+body{font-family: Tahoma,Arial,sans-serif;}
+body{font-family: Verdana,Tahoma,Arial,sans-serif;}
+body .en{font-family:Arial,sans-serif;}
+
 a { color: #245DC1;}
 a:visited {
     color: #7759AE;
 }
-.wrap { width: 980px;}
+.wrap { width: 990px;}
 .topbar {
     background: #F5F5F5;
     background-image: -moz-linear-gradient(top,#F7F7F7,#F5F5F5);
@@ -46,7 +71,7 @@ a:visited {
     border-width: 0 0 0 1px;
     content: "";
     float: left;
-    height: 30px;
+    height: 26px;
     margin: 0 12px 0 14px;
 }
 .search-util{
@@ -99,10 +124,13 @@ a:visited {
     color: #fff;
     padding: 0 15px;
 }
-.navbar a{ 
+.navbar a { 
     color:#e1e5f2;
 }
-.navbar .active a{ 
+.navbar a:hover { 
+    color:#fff;
+}
+.navbar .active a { 
     color:#fff;
     font-weight: bold;
 }
@@ -137,7 +165,7 @@ a:visited {
 
 #pa-signature{
 	clear:both;
-	margin:120px auto 0;
+	margin:100px auto 0;
 	max-width:978px;
 	min-height:4px
 }
@@ -214,16 +242,16 @@ a:visited {
 .main section{
   padding: 1px 0;
 }
-.modules {
-}
+
 .modules a { 
     display: inline-block;
-    width: 160px;
+    width: 165px;
     border: 1px solid #eee\9;   /* all-IE */
     border: none\9\0;           /* IE9 */ 
     /* 
-    background: #fff1ff;*/
-    background: #C7FDC7;
+    background: #fff1ff;
+    */
+    background: #eee;
     
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.55);
     margin: 0 5px 10px 0;
@@ -233,22 +261,25 @@ a:visited {
     text-overflow: ellipsis;
     white-space: nowrap;
     border-left: 4px solid #ddd;
-    font-family: tahoma;
     overflow: hidden;
     position: relative;
 }
-.modules a.todo  { border-left: 4px solid #ccc; }
-.modules a.doing { border-left: 4px solid #f80; }
-.modules a.done  { border-left: 4px solid #0b0; }
+.modules a:hover { 
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    color: #6C97C2;
+}
+.modules a.todo  { border-left: 4px solid #ccc; background: #eee; }
+.modules a.doing { border-left: 4px solid #f80; background: #FDF1DC; }
+.modules a.done  { border-left: 4px solid #0b0; background: #DDFDCD; }
 
 span.label { margin-left:5px; }
-span.todo  { }
-span.doing {background: #f80;}
-span.done  {background: #0b0;}
+span.todo  {  }
+span.doing { background: #f80; }
+span.done  { background: #0b0; }
 
 .demolist dd a {
     display: inline-block;
-    width: 90px;
+    width: 100px;
 }
 /* code examples
 -------------------------------------------------- */
@@ -310,18 +341,6 @@ span.done  {background: #0b0;}
   margin-top: 0;
 }
 
-body {
-  font: 14px/1.5 Tahoma,Arial,\5b8b\4f53,sans-serif; 
-  color:#333;
-  /* background: #eee;
-  background:url(../../xOne/images/bg.jpg) #fff center -8px no-repeat; */
-}
-
-
-
-
-
-p { margin: 0.8em 0 0.6em;}
  
 .docs-example > h1:first-child,
 .docs-example > h2:first-child,
@@ -337,8 +356,13 @@ p { margin: 0.8em 0 0.6em;}
 
 
 
-
-
-
-
+/* .tag 标签内使用 arial 字体垂直居中表现很好
+ * author: linjianfeng@baixing.com
+ */
+.tag{font-family:Arial,sans-serif;display:inline-block;padding:0 3px;padding:1px 3px 0\9;background:#eee;margin:0 3px;border-radius:2px;color:#888!important;}
+.tag-blue, .tag-green, .tag-red, a.tag:hover{color:#fff!important;}
+.tag-blue{background:#08c;}
+.tag-green{background:#5ba533;}
+.tag-red{background:#f36;}
+a.tag:hover{background:#888;text-decoration:none;color:#fff!important;}
 

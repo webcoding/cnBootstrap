@@ -21,7 +21,7 @@
             <li><a href="#nav">nav <small class="iconfont">导航</small></a></li>
             <li><a href="#breadcrumb">breadcrumb <small class="iconfont">面包屑</small></a></li>
             <li><a href="#paging">paging <small class="iconfont">分页</small></a></li>
-            <li><a href="#label">label <small class="iconfont">标签标记</small></a></li>
+            <li><a href="#label">label/tag <small class="iconfont">标签标记</small></a></li>
             <li><a href="#counters">counter <small class="iconfont">数字提醒</small></a></li>
             <li><a href="#alert">alert <small class="iconfont">通知提醒</small></a></li>
             <li><a href="#progress">progress <small class="iconfont">进度条</small></a></li>
@@ -38,6 +38,23 @@
             <p>详情参看： <a href="tpl.php">tpl</a></p>
         </section>
         
+        
+        
+        <section id="tips">
+            <h1>tips <small>可操作浮层</small></h1>
+        	
+            <div class="docs-example">
+                <div class="tips-text">
+                    Little Robert asked his mother for two cents. "What did you do with the money I gave you yesterday?" <br>
+                    "I gave it to a poor old woman," he answered. <br>
+                    "You're a good boy," said the mother proudly. "Here are two cents more. But why are you so interested in the old woman?" <br>
+                    "She is the one who sells the candy."<br>
+                </div>
+            
+            </div>
+        
+    </section>
+    
         
         
         <section id="table">
@@ -108,6 +125,26 @@
         
         <section id="label">
             <h1>标签标记</h1>
+            
+            
+            <h2>tag <small>标签</small></h2>
+            <div class="docs-example">
+                <h4>Intelligent son <small>聪明的儿子</small></h4>
+                <p>
+                One day, the father lets eight year-old son send a <a href="###" class="tag">letter</a>, the son took the letter , the father then remembered <a class="tag tag-blue" href="###">didn't</a> write the address and addressee's name on the envelope. <br>
+                After the son comes back, the father asks him: "You have <a class="tag tag-red" href="###">thrown</a> the letter in the mail box?" <br>
+                "Certainly" <br>
+                "You have not seen on the envelope not to write the address and the addressee name?" <br>
+                "I certainly saw <span class="tag">nothing</span> written on the envelope." <br>
+                "Then why you didn't take it back?" <br>
+                "I also thought that you do not write the address and the addressee, is for does not want to let me know that you do send the letter to who!" 
+                </p>
+
+                <p>之乎者也，<a href="###" class="tag tag-blue">如果</a>用的是中文呢？来点<a href="###" class="tag tag-green">English</a>混排一下。</p>
+                
+                <p class="f12"><span class="tag tag-blue">来个</span>小字体版的：之乎者也，<a href="###" class="tag">如果</a>用的是中文呢？来点<a href="###" class="tag tag-red">English</a>混排一下。</p>
+        	</div>
+            
         </section>
         
         

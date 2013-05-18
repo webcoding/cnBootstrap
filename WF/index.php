@@ -59,20 +59,26 @@
                 <a class="todo" href="#">list <small>列表</small></a>
                 <a class="todo" href="#">imglist <small>图片列表</small></a>
                 <a class="todo" href="#">imgtext <small>图文混排</small></a>
-                <a class="doing" href="#">tips <small>可操作浮层</small></a>
+                
+                <a class="done" href="#">label/tag <small>标签标记</small></a>
+                <a class="doing" href="#">counter <small>数字提醒</small></a>
+                <a class="todo" href="#">filter <small>类目过滤</small></a>
+                <a class="todo" href="#">icons <small>小图标</small></a>
+                <a class="todo" href="#">tips <small>可操作浮层</small></a>
+                <a class="todo" href="#">alert message <small>通知提醒</small></a>
+                
                 <a class="doing" href="xOne/tables.html">table <small>表格</small></a>
                 <a class="todo" href="#">nav <small>导航</small></a>
                 <a class="todo" href="#">topbar <small>顶部导航</small></a>
                 <a class="todo" href="xOne/breadcrumb.html">breadcrumb <small>面包屑</small></a>
+                
                 <a class="doing" href="xOne/paging.html">paging <small>分页</small></a>
                 <a class="todo" href="#">dropdown <small>下拉菜单</small></a>
                 <a class="done" href="xOne/buttons.html">btn <small>按钮[组]</small></a>
                 <a class="doing" href="xOne/forms.html">form <small>表单</small></a>
                 <a class="todo" href="#">search <small>搜索框</small></a>
-                <a class="todo" href="#">filter <small>类目过滤</small></a>
-                <a class="todo" href="#">label <small>着重标记</small></a>
-                <a class="todo" href="#">counter <small>数字提醒</small></a>
-                <a class="todo" href="#">alert message <small>可操作消息</small></a>
+                
+                
                 <a class="todo" href="#">modal <small>弹出对话框</small></a>
                 <a class="todo" href="#">progress <small>进度条</small></a>
                 <a class="todo" href="#">media <small>媒体对象</small></a>
@@ -178,7 +184,13 @@
         
         <section id="start">
             <h2>开始使用</h2>
-            <p>本项目已经开始在生产线测试使用，样式文件为core.css，本项目中亦设置N个产品的开发版同步上线调试，供研究使用。</p>
+            <p>本项目已经开始在生产线测试使用，样式文件为 core.css 如下:</p>
+<pre>
+reset.css   |-- core.css
+combo.css   |
+buttons.css |
+</pre>
+            <p>此项目中具备新版线上项目的静态版页面，供调试研究使用。</p>
             
         </section>
         
