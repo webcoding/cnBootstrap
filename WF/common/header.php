@@ -1,12 +1,30 @@
 
 <!-- Navbar
 ================================================== -->
-<div class="topbar">
-    
+<div class="topbar hide" role="navigation">
+    <div class="wrap">
+        公告：示例
+    </div>
 </div> <!-- //.topbar -->
 
 <!-- 头部\\ -->
-<div class="navbar header" role="banner">
+<div class="header" role="banner">
+    <div class="wrap">
+        <a rel="home" class="brand" href="#">
+            <h1>Pandora <small>前端解决方案</small></h1>
+        </a>
+        
+        
+        <div class="search-util">
+            <form action="" class="search-form form-inline google_style">
+                <input type="text" name="query" placeholder="搜索 Pandora" autocomplete="off">
+                <button class="btn btn-primary"> <span class="search-icon icon-white icon-search">搜索 Pandora</span> </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="nav navbar" role="navbar">
     <div class="navbar-inner">
         <div class="wrap">
             <h2 class="hide-clip">主导航</h2>

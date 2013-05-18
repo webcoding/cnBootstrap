@@ -15,7 +15,7 @@
 			<li><a href="#start">开始使用</a></li>
 			<li><a href="#about">关于 Pandora</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
         <section id="overview">
             <h1>Pandora 项目</h1>
