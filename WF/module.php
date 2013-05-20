@@ -9,24 +9,26 @@
 <div class="wrap">
 	<div class="sidebar">
         <ul class="nav none">
-            <li><a href="#tpl">tpl <small class="iconfont">布局模板</small></a></li>
-            <li><a href="#dropdown">dropdown <small class="iconfont">下拉菜单</small></a></li>
+            <li><a href="#tpl">tpl <small>布局模板</small></a></li>
+            <li><a href="#dropdown">dropdown <small>下拉菜单</small></a></li>
             
-            <li><a href="#table">table <small class="iconfont">表格</small></a></li>
-			<li><a href="#btn">btn <small class="iconfont">按钮</small></a></li>
-			<li><a href="#btn-group">btn-group <small class="iconfont">按钮组</small></a></li>
-            <li><a href="#btn-dropdown">btn-dropdown <small class="iconfont">按钮菜单</small></a></li>
-            <li><a href="#form">form <small class="iconfont">表单</small></a></li>
+            <li><a href="#table">table <small>表格</small></a></li>
+			<li><a href="#btn">btn <small>按钮</small></a></li>
+			<li><a href="#btn-group">btn-group <small>按钮组</small></a></li>
+            <li><a href="#btn-dropdown">btn-dropdown <small>按钮菜单</small></a></li>
+            <li><a href="#form">form <small>表单</small></a></li>
             
-            <li><a href="#nav">nav <small class="iconfont">导航</small></a></li>
-            <li><a href="#breadcrumb">breadcrumb <small class="iconfont">面包屑</small></a></li>
-            <li><a href="#paging">paging <small class="iconfont">分页</small></a></li>
-            <li><a href="#label">label/tag <small class="iconfont">标签标记</small></a></li>
-            <li><a href="#alert">alert <small class="iconfont">通知提醒</small></a></li>
-            <li><a href="#progress">progress <small class="iconfont">进度条</small></a></li>
-            <li><a href="#media">media <small class="iconfont">媒体对象</small></a></li>
-			<li><a href="#step">step <small class="iconfont">步骤</small></a></li>
-			<li><a href="#misc">misc <small class="iconfont">杂项</small></a></li>
+            <li><a href="#nav">nav <small>导航</small></a></li>
+            <li><a href="#breadcrumb">breadcrumb <small>面包屑</small></a></li>
+            <li><a href="#paging">paging <small>分页</small></a></li>
+            <li><a href="#label">label/tag <small>标签标记</small></a></li>
+            <li><a href="#poptip">poptip <small>提示层</small></a></li>
+            <li><a href="#tiptext">tiptext <small>提示文本</small></a></li>
+            <li><a href="#tipbox">tipbox <small>提示框</small></a></li>
+            <li><a href="#progress">progress <small>进度条</small></a></li>
+            <li><a href="#media">media <small>媒体对象</small></a></li>
+			<li><a href="#step">step <small>步骤</small></a></li>
+			<li><a href="#misc">misc <small>杂项</small></a></li>
         </ul>
 	</div> <!-- // div.sidebar -->
 	<div class="main">
@@ -37,23 +39,6 @@
             <p>详情参看： <a href="tpl.php">tpl</a></p>
         </section>
         
-        
-        
-        <section id="tips">
-            <h1>tips <small>可操作浮层</small></h1>
-        	
-            <div class="docs-example">
-                <div class="tips-text">
-                    Little Robert asked his mother for two cents. "What did you do with the money I gave you yesterday?" <br>
-                    "I gave it to a poor old woman," he answered. <br>
-                    "You're a good boy," said the mother proudly. "Here are two cents more. But why are you so interested in the old woman?" <br>
-                    "She is the one who sells the candy."<br>
-                </div>
-            
-            </div>
-        
-    </section>
-    
         
         
         <section id="table">
@@ -319,8 +304,165 @@
         
         
         
-        <section id="alert">
-            <h1>通知提醒</h1>
+        <section id="poptip">
+            <h1>poptip <small>提示层</small></h1>
+        	
+            <div class="docs-example">
+                <div class="ui-box">
+                    Little Robert asked his mother for two cents. "What did you do with the money I gave you yesterday?" <br>
+                    "I gave it to a poor old woman," he answered. <br>
+                    "You're a good boy," said the mother proudly. "Here are two cents more. But why are you so interested in the old woman?" <br>
+                    "She is the one who sells the candy."<br>
+                </div>
+            
+            </div>
+        
+        </section>
+        
+        
+        
+        <section id="tiptext">
+            <h1>提示文本</h1>
+            <p>老版本请参考 <a href="../cndocs/solutions/alerts.html">信息提示框</a></p>
+            <p>带各类图标的提示文案，可带有提示箭头。</p>
+            <div class="docs-example">
+                <p class="ui-tiptext ui-tiptext-message">
+                    <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                    消息提醒：自行编辑，非系统消息
+                </p>
+
+                <p class="ui-tiptext ui-tiptext-error">
+                    <i class="ui-tiptext-icon iconfont" title="出错">&#xF045;</i>
+                    错误提醒：自行编辑，非系统消息
+                </p>
+
+                <p class="ui-tiptext ui-tiptext-warning">
+                    <i class="ui-tiptext-icon iconfont" title="警告">&#xF047;</i>
+                    警告提醒：自行编辑，非系统消息
+                </p>
+
+                <p class="ui-tiptext ui-tiptext-success">
+                    <i class="ui-tiptext-icon iconfont" title="成功">&#xF049;</i>
+                    成功提醒：自行编辑，非系统消息
+                </p>
+
+                <p class="ui-tiptext ui-tiptext-question">
+                    <i class="ui-tiptext-icon iconfont" title="疑问">&#xF04A;</i>
+                    帮助提醒：自行编辑，非系统消息
+                </p>
+
+                <p class="ui-tiptext ui-tiptext-stop">
+                    <i class="ui-tiptext-icon iconfont" title="阻止">&#xF048;</i>
+                    停止提醒：自行编辑，非系统消息
+                </p>
+
+                <p class="ui-tiptext ui-tiptext-wait">
+                    <i class="ui-tiptext-icon iconfont" title="等待">&#xF04B;</i>
+                    等待提醒：自行编辑，非系统消息
+                </p>
+
+            </div>
+            
+            <div class="docs-example">
+                <div class="ui-tiptext-container ui-tiptext-container-message">
+                    <p class="ui-tiptext ui-tiptext-message">
+                        <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                        消息提醒：自行编辑，非系统消息
+                    </p>
+                    <div class="ui-tiptext-close iconfont">&#xF028;</div>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-error">
+                    <p class="ui-tiptext ui-tiptext-error">
+                        <i class="ui-tiptext-icon iconfont" title="出错">&#xF045;</i>
+                        错误提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-warning">
+                    <p class="ui-tiptext ui-tiptext-warning">
+                        <i class="ui-tiptext-icon iconfont" title="警告">&#xF047;</i>
+                        警告提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-success">
+                    <p class="ui-tiptext ui-tiptext-success">
+                        <i class="ui-tiptext-icon iconfont" title="成功">&#xF049;</i>
+                        成功提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-question">
+                    <p class="ui-tiptext ui-tiptext-question">
+                        <i class="ui-tiptext-icon iconfont" title="疑问">&#xF04A;</i>
+                        帮助提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-stop">
+                    <p class="ui-tiptext ui-tiptext-stop">
+                        <i class="ui-tiptext-icon iconfont" title="阻止">&#xF048;</i>
+                        停止提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-wait">
+                    <p class="ui-tiptext ui-tiptext-wait">
+                        <i class="ui-tiptext-icon iconfont" title="等待">&#xF04B;</i>
+                        等待提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <span class="ui-tiptext-container ui-tiptext-container-message ib">
+                    <span class="ui-tiptext ui-tiptext-message">
+                        <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                        消息提醒：自行编辑，非系统消息
+                    </span>
+                </span>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-message">
+                    <div class="ui-tiptext-arrow ui-tiptext-arrowup">
+                        <em>◆</em>
+                        <span>◆</span>
+                    </div>
+                    <p class="ui-tiptext ui-tiptext-message">
+                        <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                        消息提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-message">
+                    <div class="ui-tiptext-arrow ui-tiptext-arrowdown">
+                        <em>◆</em>
+                        <span>◆</span>
+                    </div>
+                    <p class="ui-tiptext ui-tiptext-message">
+                        <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                        消息提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-message">
+                    <div class="ui-tiptext-arrow ui-tiptext-arrowleft">
+                        <em>◆</em>
+                        <span>◆</span>
+                    </div>
+                    <p class="ui-tiptext ui-tiptext-message">
+                        <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                        消息提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+        
+        
+        
+        <section id="tipbox">
+            <h1>提示框</h1>
+            
+            
         </section>
         
         

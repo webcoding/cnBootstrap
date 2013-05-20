@@ -10,18 +10,18 @@
 	<div class="sidebar">
        <ul class="nav none">
             <li><a href="#overview">概述</a></li>
-            <li><a href="#transition">transition <small class="iconfont">过渡效果</small></a></li>
-            <li><a href="#dialog">dialog <small class="iconfont">对话框</small></a></li>
-            <li><a href="#dropdown">dropdown <small class="iconfont">下拉项</small></a></li>
-            <li><a href="#scrollspy">scrollspy <small class="iconfont">滚动侦听</small></a></li>
-            <li><a href="#tab">tab <small class="iconfont">标签页</small></a></li>
-            <li><a href="#tipbox">tipbox <small class="iconfont">提示框</small></a></li>
-            <li><a href="#tiptext">tiptext <small class="iconfont">提示文本</small></a></li>
-            <li><a href="#select">select <small class="iconfont">下拉框</small></a></li>
-            <li><a href="#collapse">collapse <small class="iconfont">折叠/手风琴</small></a></li>
-            <li><a href="#carousel">carousel <small class="iconfont">轮播/跑马灯</small></a></li>
-            <li><a href="#autocomplete">autocomplete <small class="iconfont">自动完成</small></a></li>
-            <li><a href="#affix">affix <small class="iconfont">位置跟随</small></a></li>
+            <li><a href="#transition">transition <small>过渡效果</small></a></li>
+            <li><a href="#dialog">dialog <small>对话框</small></a></li>
+            <li><a href="#dropdown">dropdown <small>下拉项</small></a></li>
+            <li><a href="#scrollspy">scrollspy <small>滚动侦听</small></a></li>
+            <li><a href="#tab">tab <small>标签页</small></a></li>
+            <li><a href="#tipbox">tipbox <small>提示框</small></a></li>
+            <li><a href="#tiptext">tiptext <small>提示文本</small></a></li>
+            <li><a href="#select">select <small>下拉框</small></a></li>
+            <li><a href="#collapse">collapse <small>折叠/手风琴</small></a></li>
+            <li><a href="#carousel">carousel <small>轮播/跑马灯</small></a></li>
+            <li><a href="#autocomplete">autocomplete <small>自动完成</small></a></li>
+            <li><a href="#affix">affix <small>位置跟随</small></a></li>
         </ul>
 	</div> <!-- // div.sidebar -->
 	<div class="main">

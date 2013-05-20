@@ -54,7 +54,137 @@ combo.css 便捷组合样式表
         
 		<section id="iconfont">
             <h1>图标/字体集</h1>
-            <p>针对使用图标字体集的需求，不论市场还是技术，都已经非常成熟，推广使用大势所趋。</p>
+            <p>针对使用图标字体集的需求，不论市场还是技术，都已经非常成熟，推广使用大势所趋。Pandora项目暂时使用支付宝图标字体集 rei，如果不能满足您的需求，你可以使用 <a href="http://fontello.com/">fontello</a> 项目来扩展字体集或者使用ICON图标。</p>
+            <p>如此，便能对最常用图标使用字体集来表示，如 <a href="module.php#alert">通知提醒</a>，下面是关于 rei 的介绍：</p>
+            <p>Rei（读音为“丽”）是支付宝的 iconfont 集，是一种把图标放入自定义字体中，然后使用字体图标来替代普通图标的技术。同时，Rei 也是动漫女神。</p>
+            <p><img style="border-radius:8px;" src="https://i.alipayobjects.com/e/201303/2P2JVsHeCC.jpg" alt=""></p>
+            <p>字体图标具有良好的兼容性，矢量，规范，减少图片请求，适应性强等特点，大量先进的网站（包括 github 等）正在使用这种技术。 Alice 全面使用了 iconfont 技术，使得所有的通用样式模块都不会产生图片请求，并且也获得了良好的兼容性和通用性。</p>
+            <p>Rei 目前涵盖了网站常用各类图标约 70 多个，兼容包括 <code>ie6/7/8</code> 在内的各主流浏览器，你可以自由的在页面中使用它。</p>
+<style>
+.iconset {
+    padding: 15px;
+    background: #FBFBFB;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.icon {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 22px;
+    width: 156px;
+    color: #888;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.icon .iconfont {
+    margin-right: 10px;
+    font-size: 18px;
+    width: 20px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+    top: 2px;
+}
+</style>
+<!-- 这段代码用来获取下面的字体 HTML 集合 （由此可见支付宝的管理很有一套，值得学习）
+<script src="http://site.alipay.im/rei/js/data.js"></script>
+<script>
+var array = [],
+    html = '';
+array = array.concat(iconData['产品/功能ICON']);
+array = array.concat(iconData['通用ICON']);
+array.forEach(function(item) {
+    html += '<div class="icon"><i class="iconfont" title="' + item[0] +
+               '">' + item[1] + '</i> ' + item[0] + '</div>\n';
+});
+console.log(html);
+</script>
+-->
+<pre>
+&lt;i class="iconfont" title="灯泡"&gt;&amp;#x00E3;&lt;/i&gt;
+</pre>
+            
+            <div class="docs-example">
+<div class="iconset clearfix">
+<div class="icon"><i class="iconfont" title="盾牌-阳">&#xF000;</i> 盾牌-阳</div>
+<div class="icon"><i class="iconfont" title="代付">&#xF004;</i> 代付</div>
+<div class="icon"><i class="iconfont" title="预付卡">&#xF005;</i> 预付卡</div>
+<div class="icon"><i class="iconfont" title="信用支付">&#xF006;</i> 信用支付</div>
+<div class="icon"><i class="iconfont" title="集分宝">&#xF007;</i> 集分宝</div>
+<div class="icon"><i class="iconfont" title="集分宝反色">&#xF008;</i> 集分宝反色</div>
+<div class="icon"><i class="iconfont" title="基金">&#xF009;</i> 基金</div>
+<div class="icon"><i class="iconfont" title="账户通">&#xF00A;</i> 账户通</div>
+<div class="icon"><i class="iconfont" title="红包">&#xF00B;</i> 红包</div>
+<div class="icon"><i class="iconfont" title="银行卡">&#xF00C;</i> 银行卡</div>
+<div class="icon"><i class="iconfont" title="更多">&#xF00D;</i> 更多</div>
+<div class="icon"><i class="iconfont" title="常见问题">&#xF00E;</i> 常见问题</div>
+<div class="icon"><i class="iconfont" title="自助服务">&#xF010;</i> 自助服务</div>
+<div class="icon"><i class="iconfont" title="回收站">&#xF011;</i> 回收站</div>
+<div class="icon"><i class="iconfont" title="日历/日期">&#xF01C;</i> 日历/日期</div>
+<div class="icon"><i class="iconfont" title="喜欢">&#xF01D;</i> 喜欢</div>
+<div class="icon"><i class="iconfont" title="收藏">&#xF01E;</i> 收藏</div>
+<div class="icon"><i class="iconfont" title="设置">&#xF021;</i> 设置</div>
+<div class="icon"><i class="iconfont" title="播放">&#xF022;</i> 播放</div>
+<div class="icon"><i class="iconfont" title="添加-圆">&#xF023;</i> 添加-圆</div>
+<div class="icon"><i class="iconfont" title="添加-方">&#xF024;</i> 添加-方</div>
+<div class="icon"><i class="iconfont" title="添加-无框">&#xF025;</i> 添加-无框</div>
+<div class="icon"><i class="iconfont" title="声音">&#xF026;</i> 声音</div>
+<div class="icon"><i class="iconfont" title="右向">&#xF027;</i> 右向</div>
+<div class="icon"><i class="iconfont" title="关闭/错误">&#xF028;</i> 关闭/错误</div>
+<div class="icon"><i class="iconfont" title="选择/对勾">&#xF029;</i> 选择/对勾</div>
+<div class="icon"><i class="iconfont" title="查询/搜索">&#xF02A;</i> 查询/搜索</div>
+<div class="icon"><i class="iconfont" title="安卓系统">&#xF02B;</i> 安卓系统</div>
+<div class="icon"><i class="iconfont" title="苹果系统">&#xF02C;</i> 苹果系统</div>
+<div class="icon"><i class="iconfont" title="windows Phone">&#xF02D;</i> windows Phone</div>
+<div class="icon"><i class="iconfont" title="显示器">&#xF02E;</i> 显示器</div>
+<div class="icon"><i class="iconfont" title="菱形">&#xF02F;</i> 菱形</div>
+<div class="icon"><i class="iconfont" title="视频">&#xF030;</i> 视频</div>
+<div class="icon"><i class="iconfont" title="建议/对话">&#xF031;</i> 建议/对话</div>
+<div class="icon"><i class="iconfont" title="联系邮箱">&#xF032;</i> 联系邮箱</div>
+<div class="icon"><i class="iconfont" title="手机">&#xF033;</i> 手机</div>
+<div class="icon"><i class="iconfont" title="首页">&#xF034;</i> 首页</div>
+<div class="icon"><i class="iconfont" title="单箭头左">&#xF035;</i> 单箭头左</div>
+<div class="icon"><i class="iconfont" title="单箭头右">&#xF036;</i> 单箭头右</div>
+<div class="icon"><i class="iconfont" title="双箭头左">&#xF037;</i> 双箭头左</div>
+<div class="icon"><i class="iconfont" title="双箭头右">&#xF038;</i> 双箭头右</div>
+<div class="icon"><i class="iconfont" title="左三角形">&#xF039;</i> 左三角形</div>
+<div class="icon"><i class="iconfont" title="右三角形">&#xF03A;</i> 右三角形</div>
+<div class="icon"><i class="iconfont" title="上三角形">&#xF03B;</i> 上三角形</div>
+<div class="icon"><i class="iconfont" title="下三角形">&#xF03C;</i> 下三角形</div>
+<div class="icon"><i class="iconfont" title="旺旺">&#xF03D;</i> 旺旺</div>
+<div class="icon"><i class="iconfont" title="用户">&#xF03E;</i> 用户</div>
+<div class="icon"><i class="iconfont" title="返回">&#xF040;</i> 返回</div>
+<div class="icon"><i class="iconfont" title="图片">&#xF041;</i> 图片</div>
+<div class="icon"><i class="iconfont" title="正方形">&#xF042;</i> 正方形</div>
+<div class="icon"><i class="iconfont" title="账单">&#xF043;</i> 账单</div>
+<div class="icon"><i class="iconfont" title="全部账单">&#xF044;</i> 全部账单</div>
+<div class="icon"><i class="iconfont" title="出错">&#xF045;</i> 出错</div>
+<div class="icon"><i class="iconfont" title="提示">&#xF046;</i> 提示</div>
+<div class="icon"><i class="iconfont" title="警告">&#xF047;</i> 警告</div>
+<div class="icon"><i class="iconfont" title="阻止">&#xF048;</i> 阻止</div>
+<div class="icon"><i class="iconfont" title="成功">&#xF049;</i> 成功</div>
+<div class="icon"><i class="iconfont" title="疑问">&#xF04A;</i> 疑问</div>
+<div class="icon"><i class="iconfont" title="等待">&#xF04B;</i> 等待</div>
+<div class="icon"><i class="iconfont" title="详情">&#xF04C;</i> 详情</div>
+<div class="icon"><i class="iconfont" title="切换">&#xF04D;</i> 切换</div>
+<div class="icon"><i class="iconfont" title="统计">&#xF04E;</i> 统计</div>
+<div class="icon"><i class="iconfont" title="下载">&#xF04F;</i> 下载</div>
+<div class="icon"><i class="iconfont" title="礼盒">&#xF050;</i> 礼盒</div>
+<div class="icon"><i class="iconfont" title="备注">&#xF051;</i> 备注</div>
+<div class="icon"><i class="iconfont" title="添加联系人">&#xF052;</i> 添加联系人</div>
+<div class="icon"><i class="iconfont" title="申请还款">&#xF053;</i> 申请还款</div>
+<div class="icon"><i class="iconfont" title="信用卡管理">&#xF054;</i> 信用卡管理</div>
+<div class="icon"><i class="iconfont" title="记录">&#xF055;</i> 记录</div>
+<div class="icon"><i class="iconfont" title="优惠劵">&#xF013;</i> 优惠劵</div>
+<div class="icon"><i class="iconfont" title="购物袋">&#xF018;</i> 购物袋</div>
+</div>
+            
+            <p>你可以右键查看源代码或访问 rei 来获取字体代码。</p>
+            </div>
+            
             <p><strong>注：</strong> 虽然可通过图表字体集实现ICON等，但需求总是千变万化的，需要使用图标ICON 的时候，可用CSS Sprites分类保存在对应的图标集上，随后会推荐一款自动化处理工具。</p>
         </section>
         

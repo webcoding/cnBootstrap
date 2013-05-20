@@ -67,15 +67,16 @@
                 <a class="done" href="module.php#label">label/tag <small>标签标记</small></a>
                 <a class="todo" href="###">filter <small>类目过滤</small></a>
                 <a class="todo" href="###">icons <small>小图标</small></a>
-                <a class="todo" href="###">tips <small>可操作浮层</small></a>
-                <a class="todo" href="###">alert message <small>通知提醒</small></a>
+                <a class="todo" href="module.php#poptip">poptip <small>提示层</small></a>
+                <a class="done" href="module.php#tiptext">tiptext <small>提示文本</small></a>
+                <a class="done" href="module.php#tipbox">tipbox <small>提示框</small></a>
                 
                 <a class="doing" href="xOne/tables.html">table <small>表格</small></a>
                 <a class="todo" href="###">nav <small>导航</small></a>
                 <a class="todo" href="###">topbar <small>顶部导航</small></a>
                 <a class="done" href="module.php#breadcrumb">breadcrumb <small>面包屑</small></a>
                 
-                <a class="doing" href="xOne/paging.html">paging <small>分页</small></a>
+                <a class="done" href="xOne/paging.html">paging <small>分页</small></a>
                 <a class="todo" href="###">dropdown <small>下拉菜单</small></a>
                 <a class="done" href="xOne/buttons.html">btn <small>按钮[组]</small></a>
                 <a class="doing" href="xOne/forms.html">form <small>表单</small></a>
