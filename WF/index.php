@@ -15,13 +15,15 @@
 			<li><a href="#start">开始使用</a></li>
 			<li><a href="#about">关于 Pandora</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
         <section id="overview">
             <h1>Pandora 项目</h1>
             <blockquote>
                 <p>无论你身在何方处在何时，请记住要永存希望。<em>「 晓寒 」 </em></p>
             </blockquote>
+            
+            <p>潘多拉（Pandora，也作潘朵拉），古希腊神话人物。</p>
             
             <h3>初期制作计划</h3>
             <ul>
@@ -58,20 +60,26 @@
                 <a class="todo" href="#">list <small>列表</small></a>
                 <a class="todo" href="#">imglist <small>图片列表</small></a>
                 <a class="todo" href="#">imgtext <small>图文混排</small></a>
-                <a class="doing" href="#">tips <small>可操作浮层</small></a>
+                
+                <a class="done" href="#">label/tag <small>标签标记</small></a>
+                <a class="doing" href="#">counter <small>数字提醒</small></a>
+                <a class="todo" href="#">filter <small>类目过滤</small></a>
+                <a class="todo" href="#">icons <small>小图标</small></a>
+                <a class="todo" href="#">tips <small>可操作浮层</small></a>
+                <a class="todo" href="#">alert message <small>通知提醒</small></a>
+                
                 <a class="doing" href="xOne/tables.html">table <small>表格</small></a>
                 <a class="todo" href="#">nav <small>导航</small></a>
                 <a class="todo" href="#">topbar <small>顶部导航</small></a>
                 <a class="todo" href="xOne/breadcrumb.html">breadcrumb <small>面包屑</small></a>
+                
                 <a class="doing" href="xOne/paging.html">paging <small>分页</small></a>
                 <a class="todo" href="#">dropdown <small>下拉菜单</small></a>
                 <a class="done" href="xOne/buttons.html">btn <small>按钮[组]</small></a>
                 <a class="doing" href="xOne/forms.html">form <small>表单</small></a>
                 <a class="todo" href="#">search <small>搜索框</small></a>
-                <a class="todo" href="#">filter <small>类目过滤</small></a>
-                <a class="todo" href="#">label <small>着重标记</small></a>
-                <a class="todo" href="#">counter <small>数字提醒</small></a>
-                <a class="todo" href="#">alert message <small>可操作消息</small></a>
+                
+                
                 <a class="todo" href="#">modal <small>弹出对话框</small></a>
                 <a class="todo" href="#">progress <small>进度条</small></a>
                 <a class="todo" href="#">media <small>媒体对象</small></a>
@@ -177,7 +185,14 @@
         
         <section id="start">
             <h2>开始使用</h2>
-            <p>本项目已经开始在生产线测试使用，样式文件为core.css，本项目中亦设置N个产品的开发版同步上线调试，供研究使用。</p>
+            
+            <p>本项目已经开始在生产线测试使用，样式文件为 core.css 如下:</p>
+<pre>
+reset.css   |-- core.css
+combo.css   |
+buttons.css |
+</pre>
+            <p>此项目中具备新版线上项目的静态版页面，供调试研究使用。</p>
             
         </section>
         
@@ -188,7 +203,7 @@
             <p> 这项目一路艰辛，借鉴Bootstrap的思想并结合自己的工作想整合一个适合自己当前工作的前端框架，到底被什么绊住了呢，看着日子一天天过，真是揪心啊，AliceUI 还是比较给力，这么快新版就出来了，还好之前已经整理过部分 <a href="../cnDocs/solution.php">前端解决方案</a>，这里可以直接使用了，曾经的努力虽然少，但还是有些许价值。</p>
             
             <p>看到人家的项目都有卡通形象，着实比较可爱，我也用一个，咱的就叫做 潘多拉 - Pandora 吧</p>
-            
+
             <p><b>潘多拉（Pandora，也作潘朵拉）</b>，古希腊神话人物。在古希腊语中，潘是所有的意思，多拉则是礼物，意为“被授予一切优点的人”。</p>
             
             <p>根据神话，潘多拉出于好奇打开一个「魔盒」（应作坛子，希腊文原作πίθος，πίθοι，英语：pandora's box）释放出人世间的所有邪恶——贪婪、虚无、诽谤、嫉妒、痛苦等等，当她再盖上盒子时，<b>只剩下希望在里面</b>。Pandora 放出了邪恶，却把最大的希望留在了盒子里，如今她为我们所承受的困苦要做一个解决方案，把希望带给大家，并取名 Pandora 项目。</p>

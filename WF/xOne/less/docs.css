@@ -4,12 +4,145 @@
  * Special styles for presenting Pandora's documentation and examples
  */
 
-.wrap { width: 980px;}
+body {
+  font: 14px/1.5 Tahoma,Arial,\5b8b\4f53,sans-serif; 
+  color:#333;
+  /* background: #eee;
+  background:url(../../xOne/images/bg.jpg) #fff center -8px no-repeat; */
+}
+
+/* 三种字体的对比
+ * 宋体表示英文实在太差,既锐利有不好看
+ * Tahoma 表示英文字母间还是太紧凑以至于链接起来了 
+   如: cillum 中 ci TI 等字母都连在一起,可读性变差,
+   但经过测试奇数字号表现良好,以下可用于测试
+ * Arial 表示英文比Tahoma锐利清晰,字母之间独立不互联,但表示中文不若 Tahoma 
+ *
+ * 结论,可针对实现英文区域使用 Arial字体样式.en或使用 Tahoma奇数字号
+   对 tag标签使用 Arial字体,垂直居中表现很好
+   
+   突然发现 Verdana不错,缺点是现实英文占用更多空间,字母稍大间隙稍大
+ */
+body{font-family: \5b8b\4f53,sans-serif;}
+body{font-family: Arial,sans-serif;}
+body{font-family: Tahoma,Arial,sans-serif;}
+body{font-family: Verdana,Tahoma,Arial,sans-serif;}
+body .en{font-family:Arial,sans-serif;}
+
+a { color: #245DC1;}
+a:visited {
+    color: #7759AE;
+}
+.wrap { width: 990px;}
+.topbar {
+    background: #F5F5F5;
+    background-image: -moz-linear-gradient(top,#F7F7F7,#F5F5F5);
+    background-image: -webkit-linear-gradient(top,#F7F7F7,#F5F5F5);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#F7F7F7),color-stop(1,#F5F5F5));
+    background-image: linear-gradient(top,#F7F7F7,#F5F5F5);
+    border-bottom: 1px solid #EEE;
+    position: relative;
+    z-index: 2;
+    height: 28px; 
+    line-height: 28px;
+    font-size: 12px;
+}
+.header {
+    background: #F5F5F5;
+    background: -moz-linear-gradient(top,#FAFAFA,#F5F5F5);
+    background: -webkit-linear-gradient(top,#FAFAFA,#F5F5F5);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#FAFAFA),color-stop(1,#F5F5F5));
+    background: linear-gradient(top,#FAFAFA,#F5F5F5);
+    border-bottom: 1px solid #EEE;
+    color: #444;
+    min-height: 44px;
+    padding: 14px 15px 13px;
+}
+.header h1 {
+    margin: 0;
+    float: left;
+    padding-top: 3px;
+}
+.header h1 small{
+    vertical-align: middle;
+}
+.header h1 small:before {
+    border: solid #E5E5E5;
+    border-width: 0 0 0 1px;
+    content: "";
+    float: left;
+    height: 26px;
+    margin: 0 12px 0 14px;
+}
+.search-util{
+    float: right;
+    padding-top: 10px;
+}
+/*
+.google_style .searchbox input {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 13px;
+    height: 28px;
+    margin: 0;
+    outline: none;
+    padding: 5px 2px;
+    width: 100%;
+}
+.google_style .searchbox {
+    position: absolute;
+    left: 0px;
+    right: 81px;
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    height: 28px;
+    padding-left: 4px;
+}
+.google_style .searchbox:hover {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px inset;
+       -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 2px inset;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px inset;
+    border: 1px solid #4D90FE;
+}
+*/
+.search-icon {
+    display:inline-block;
+    text-indent: -9999px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navbar {
+    background: #325DA7;
+    background: -moz-linear-gradient(top,#4E78C2,#325DA7);
+    background: -webkit-linear-gradient(top,#4E78C2,#325DA7);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4E78C2),color-stop(1,#325DA7));
+    background: linear-gradient(top,#4E78C2,#325DA7);
+    color: #fff;
+    padding: 0 15px;
+}
+.navbar a { 
+    color:#e1e5f2;
+}
+.navbar a:hover { 
+    color:#fff;
+}
+.navbar .active a { 
+    color:#fff;
+    font-weight: bold;
+}
+
 .nav a {
   display: block;
 }
 .nav i {
     font-style: normal;
+}
+.main-nav {
+    margin:0;
 }
 .main-nav li {
   display: inline-block;
@@ -21,9 +154,69 @@
   font-size: 14px;
   /* color: #ddd; */
 }
-.sidebar,
-.main {
-  border:1px solid #ccc;
+
+.global {
+    background: #F6F9FF;
+    border: 1px solid #EFF2F9;
+    border-radius: 2px;
+    margin: 20px -16px;
+    padding-top: 20px;
+}
+
+#pa-signature{
+	clear:both;
+	margin:100px auto 0;
+	max-width:978px;
+	min-height:4px
+}
+#pa-signature:after,#pa-signature:before{
+	content:"";
+	float:right;
+	height:4px
+}
+[dir=rtl]#pa-signature:after,[dir=rtl]#pa-signature:before{
+	float:left
+}
+#pa-signature:after,[dir="rtl"]#pa-signature:before{
+	border-left:34px solid #0089fa;
+	border-right:35px solid #ff002b
+}
+#pa-signature:before,[dir="rtl"]#pa-signature:after{
+	border-left:35px solid #ffa900;
+	border-right:34px solid #00a753
+}
+.footer{ 
+    clear: both;
+    background: #F5F5F5;
+}
+.footer ul,
+.footer p {
+    margin: 0;
+}
+
+.footer-local,
+.footer-global {
+    padding: 10px 15px;
+}
+
+.footer-local {
+    background: #F9F9F9;
+    border-top: 1px solid #F5F5F5;
+    min-height: 24px;
+}
+.footer-global {  
+    border-top: 1px solid #eee;
+}
+
+.sidebar {
+    margin-top:20px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+    background-color: #F9F9F9;
 }
 .sidebar {
   width: 210px;
@@ -31,6 +224,7 @@
   display: inline;
   margin-right: 20px;
   line-height: 2;
+  background: #f5f5f5;
 }
 .sidebar ul { padding: 10px 10px;}
 .sidebar li {
@@ -48,17 +242,16 @@
 .main section{
   padding: 1px 0;
 }
-.modules {
-}
+
 .modules a { 
     display: inline-block;
-    width: 160px;
+    width: 165px;
     border: 1px solid #eee\9;   /* all-IE */
     border: none\9\0;           /* IE9 */ 
     /* 
-    background: #fff1ff;*/
-    background: #C7FDC7;
-    
+    background: #fff1ff;
+    */
+    background: #eee;
     
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.55);
     margin: 0 5px 10px 0;
@@ -68,26 +261,26 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     border-left: 4px solid #ddd;
-    font-family: tahoma;
     overflow: hidden;
     position: relative;
 }
-.modules a.todo  { border-left: 4px solid #ccc; }
-.modules a.doing { border-left: 4px solid #f80; }
-.modules a.done  { border-left: 4px solid #0b0; }
+.modules a:hover { 
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    color: #6C97C2;
+}
+.modules a.todo  { border-left: 4px solid #ccc; background: #eee; }
+.modules a.doing { border-left: 4px solid #f80; background: #FDF1DC; }
+.modules a.done  { border-left: 4px solid #0b0; background: #DDFDCD; }
 
 span.label { margin-left:5px; }
-span.todo  { }
-span.doing {background: #f80;}
-span.done  {background: #0b0;}
+span.todo  {  }
+span.doing { background: #f80; }
+span.done  { background: #0b0; }
 
 .demolist dd a {
     display: inline-block;
-    width: 90px;
+    width: 100px;
 }
-
-.footer{ margin: 10px 0;}
-
 /* code examples
 -------------------------------------------------- */
 
@@ -148,18 +341,6 @@ span.done  {background: #0b0;}
   margin-top: 0;
 }
 
-body {
-  font: 14px/1.5 Tahoma,Arial,\5b8b\4f53,sans-serif; 
-  color:#333;
-  /* background: #eee;
-  background:url(../../xOne/images/bg.jpg) #fff center -8px no-repeat; */
-}
-
-
-
-
-
-p { margin: 0.8em 0 0.6em;}
  
 .docs-example > h1:first-child,
 .docs-example > h2:first-child,
@@ -174,10 +355,14 @@ p { margin: 0.8em 0 0.6em;}
 .google-style code{ color: green;}
 
 
-a:hover attr{text-decoration: none;}
 
-
-
-
-
+/* .tag 标签内使用 arial 字体垂直居中表现很好
+ * author: linjianfeng@baixing.com
+ */
+.tag{font-family:Arial,sans-serif;display:inline-block;padding:0 3px;padding:1px 3px 0\9;background:#eee;margin:0 3px;border-radius:2px;color:#888!important;}
+.tag-blue, .tag-green, .tag-red, a.tag:hover{color:#fff!important;}
+.tag-blue{background:#08c;}
+.tag-green{background:#5ba533;}
+.tag-red{background:#f36;}
+a.tag:hover{background:#888;text-decoration:none;color:#fff!important;}
 
