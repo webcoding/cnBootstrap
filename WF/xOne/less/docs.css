@@ -367,3 +367,7 @@ span.done  { background: #0b0; }
 .tag-red{background:#f36;}
 a.tag:hover{background:#888;text-decoration:none;color:#fff!important;}
 
+/* module test */
+.ui-tiptext,.ui-tiptext-container{ margin-bottom:10px;}
+.ui-tiptext-container .ui-tiptext{ margin-bottom:0;}
+

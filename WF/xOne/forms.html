@@ -17,6 +17,7 @@
 <body>
 <div class="wrap">
     <h1>表单布局及应用实例</h1>
+    <p>这里实现一些应用实例，测试各种使用环境，方便调试引用等</p>
     
     <div class="docs-example">
 <table>
@@ -56,7 +57,7 @@
 	<hr>
 	
 	<h3>水平表单</h3>
-	<form class="bs-docs-example form-horizontal">
+	<form class="form-horizontal">
 		<div class="control-group">
 			<label class="control-label" for="inputEmail">邮箱</label>
 			<div class="controls">
@@ -124,7 +125,7 @@
 	<hr>
 	
 	<h3>水平表单</h3>
-	<form class="bs-docs-example form-horizontal">
+	<form class="form-horizontal">
 		<div class="control-group">
 			<label class="control-label" for="inputEmail">邮箱</label>
 			<div class="controls">
@@ -159,35 +160,103 @@
 	</tr>
 </table>
 	
-	
-	
-	<div class="test">
-		<h2>应用实例</h2>
-		<p>这里实现一些应用实例，测试各种使用环境，方便调试引用等</p>
-	<h2>综合应用</h2>
-	<p>实现一个较为复杂的表单布局，这里应用一个dl横向排列的排版样式</p>
-	<dl class="ul-hor">
-		<dt>游玩类型</dt>
-		<dd>公务出差</dd>
-		<dt>出发地</dt>
-		<dd><select>
-			<option value="">上海</option>
-			<option value="">北京</option>
-		</select></dd>
-		<dt>目的地</dt>
-		<dd><input type="text" /></dd>
-	</dl>
+        </div>
+        
+        
+	    <div class="docs-example">
+        
+        <h2>综合应用</h2>
+        <p>实现常见的较为复杂的表单布局，可以使用表格、dl横向排列、或者扩展布局</p>
 		
-		
-		
-	</div>
+        <h5>常见的一些布局元素</h5>
+        <p class="form-small">
+            <label class="radio"><input name="type-order" type="radio">在线预订较多</label>
+            <label class="radio"><input name="type-order" type="radio">电话预订较多</label>
+            <label class="radio"><input name="type-order" type="radio">在线预订和电话预订二者相当</label>
+            <label class="radio"><input name="type-order" type="radio">没预订过</label>
+        </p>
+        
+        <p class="form-inline form-small">
+            <label class="checkbox"><input type="checkbox">打折门票</label>
+            <label class="checkbox"><input type="checkbox">周边跟团游</label>
+            <label class="checkbox"><input type="checkbox">长途跟团游</label>
+            <label class="checkbox"><input type="checkbox">自由行( 门票+酒店 )</label>
+            <label class="checkbox"><input type="checkbox">自由行( 机票+酒店 )</label>
+            <label class="checkbox"><input type="checkbox">出境游</label>
+            <label class="checkbox"><input type="checkbox">酒店</label>
+            <label class="checkbox"><input type="checkbox">我的驴妈妈</label>
+            <label class="checkbox"><input type="checkbox">手机客户端</label>
+            <label class="checkbox"><input type="checkbox">点评</label>
+            <label class="checkbox"><input type="checkbox">其他</label>
+        </p>
+        
+        <h5>使用表格 <small>使用了 table 但适应性最强</small></h5>
+        <table class="form-table form-inline">
+            <tr>
+                <td class="f_label">驴妈妈用户名：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="f_label"><i class="req">*</i>真实姓名：</td>
+                <td><input id="xh_name" type="text"></td>
+            </tr>
+            <tr>
+                <td class="f_label"><i class="req">*</i>性别：</td>
+                <td>
+                    <span id="select_sex"><label class="radio"><input name="sex" type="radio">男</label>
+                    <label class="radio"><input name="sex" type="radio">女</label></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="f_label"><i class="req">*</i>年龄：</td>
+                <td><span id="select_age"><label class="radio"><input name="age" type="radio">20岁以下</label>
+                    <label class="radio"><input name="age" type="radio">21-30岁</label>
+                    <label class="radio"><input name="age" type="radio">31-40岁</label>
+                    <label class="radio"><input name="age" type="radio">41-50岁</label>
+                    <label class="radio"><input name="age" type="radio">51-60岁</label>
+                    <label class="radio"><input name="age" type="radio">60岁以上</label></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="f_label"><i class="req">*</i>手机号：</td>
+                <td><input id="xh_mobile" type="text"></td>
+            </tr>
+            <tr>
+                <td class="f_label">职业：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="f_label">月收入：</td>
+                <td><select>
+                <option value="">请选择</option>
+                <option value="">5000</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="f_label">Email：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="f_label">留言：</td>
+                <td><textarea class="textarea"></textarea></td>
+            </tr>
+            <tr>
+                <td class="f_label">验证码：</td>
+                <td class="vmimg"><input type="text" style="width:50px;"> <img data-src="holder.js/80x30"> <a href="#">换一张</a></td>
+            </tr>
+        </table>
+        
+        
 	
 	
-</div>	
+        </div>	
 	
 	
 	
 	
 </div>
+
+
+<script src="../assets/js/holder/holder.js"></script>
 </body>
 </html>
