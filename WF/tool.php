@@ -11,10 +11,13 @@
 		<ul class="nav none">
 			<li><a href="#git">Git - 版本控制</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
 		
-	</div>
+        
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 

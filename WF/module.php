@@ -22,14 +22,13 @@
             <li><a href="#breadcrumb">breadcrumb <small class="iconfont">面包屑</small></a></li>
             <li><a href="#paging">paging <small class="iconfont">分页</small></a></li>
             <li><a href="#label">label/tag <small class="iconfont">标签标记</small></a></li>
-            <li><a href="#counters">counter <small class="iconfont">数字提醒</small></a></li>
             <li><a href="#alert">alert <small class="iconfont">通知提醒</small></a></li>
             <li><a href="#progress">progress <small class="iconfont">进度条</small></a></li>
             <li><a href="#media">media <small class="iconfont">媒体对象</small></a></li>
 			<li><a href="#step">step <small class="iconfont">步骤</small></a></li>
 			<li><a href="#misc">misc <small class="iconfont">杂项</small></a></li>
         </ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
 		<section id="tpl">
             <h1>布局模板</h1>
@@ -109,7 +108,36 @@
         <section id="breadcrumb">
             <h1>面包屑</h1>
             <p>此处实现了最常用的三种面包屑导航</p>
-            <p>详情参看： <a href="xOne/breadcrumb.html">breadcrumb</a></p>
+            
+            <div class="docs-example">
+                <div class="crumbs">
+                    <p>
+                        <span>您当前所处的位置：</span>
+                        <a href="../">首页</a> &gt; 
+                        <a href="../module.php">组件</a> &gt; 
+                        面包屑
+                    </p>
+                </div>
+                
+            </div>
+<pre class="prettyprint linenums">
+&lt;div class="crumbs"&gt;
+    &lt;p&gt;
+        &lt;span&gt;您当前所处的位置：&lt;/span&gt;
+        &lt;a href="../"&gt;首页&lt;/a&gt; &amp;gt; 
+        &lt;a href="../module.php"&gt;组件&lt;/a&gt; &amp;gt; 
+        面包屑
+    &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+            <h4>面包屑的作用</h4>
+            <ul>
+                <li>让用户了解当前所处位置，以及当前页面在整个网站中的位置。</li>
+                <li>提供返回各个层级的快速入口，方便用户操作。</li>
+                <li>降低跳出率，面包屑路径会是一个诱惑首次访问者在进入一个页面后去浏览这个网站的非常好的方法。</li>
+                <li>面包屑有利于网站内链的建设，用面包屑大大增加了网站的内部连接，提高用户体验。</li>
+            </ul>
+            
         </section>
         
         
@@ -125,9 +153,147 @@
         
         <section id="label">
             <h1>标签标记</h1>
+            <h3>标签 <small>标签和注释文字</small></h3>
+            <table class="table-info table-full">
+                <thead>
+                    <tr>
+                        <th title="Labels">标签</th>
+                        <th title="Markup">代码</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="label" title="Default">默认</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="label"&gt;默认&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="label label-success" title="Success">成功</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="label label-success"&gt;成功&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="label label-warning" title="Warning">警告</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="label label-warning"&gt;警告&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="label label-important" title="Important">重要</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="label label-important"&gt;重要&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="label label-info" title="Info">信息</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="label label-info"&gt;信息&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="label label-inverse" title="Inverse">相反</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="label label-inverse"&gt;相反&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             
+            <h3 title="Badges">标记 <small>标记信息、未完成任务、未读信息等</small></h3>
+            <p>用来显示指示信息或标识某某数量(未完成任务、未读信息等)的简洁小组件。在CRM中往往用在任务处理列表或消息提醒上。</p>
+            <table class="table-info table-full">
+                <thead>
+                    <tr>
+                    <th title="Name">名称</th>
+                    <th title="Example">例子</th>
+                    <th title="Markup">代码</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            默认
+                        </td>
+                        <td>
+                            <span class="badge">1</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            成功
+                        </td>
+                        <td>
+                            <span class="badge badge-success">2</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            警告
+                        </td>
+                        <td>
+                            <span class="badge badge-warning">4</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            重要
+                        </td>
+                        <td>
+                            <span class="badge badge-important">6</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            信息
+                        </td>
+                        <td>
+                            <span class="badge badge-info">8</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            相反
+                        </td>
+                        <td>
+                            <span class="badge badge-inverse">10</span>
+                        </td>
+                        <td>
+                            <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             
-            <h2>tag <small>标签</small></h2>
+            <h3>tag <small>标签</small></h3>
             <div class="docs-example">
                 <h4>Intelligent son <small>聪明的儿子</small></h4>
                 <p>
@@ -145,13 +311,10 @@
                 <p class="f12"><span class="tag tag-blue">来个</span>小字体版的：之乎者也，<a href="###" class="tag">如果</a>用的是中文呢？来点<a href="###" class="tag tag-red">English</a>混排一下。</p>
         	</div>
             
-        </section>
-        
-        
-        
-        <section id="counters">
-            <h1>数字提醒</h1>
-            <p>某消息/信息的数目提醒</p>
+            
+            <h3>轻松实现折叠效果</h3>
+            <p>当没有任何内容时，可以很方便的将标签和徽章折叠起来（通过CSS的 <code>:empty</code>  选择器）。</p>
+            
         </section>
         
         
@@ -188,7 +351,10 @@
             <p>消息墙等组件</p>
         </section>
         
-	</div>
+        
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 <?php include("common/footer.html");?>

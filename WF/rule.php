@@ -19,7 +19,7 @@
 			<li><a href="#readme">说明文档书写规范</a></li>
 			<li><a href="#edm">EDM制作规范</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
         <section id="overview">
             <h1>规范说明 <small></small></h1>
@@ -35,7 +35,7 @@
         
         
         <section id="document">
-		<h2>文档结构</h2>
+		<h1>文档结构</h1>
 <pre class="prettyprint">
 
 </pre>
@@ -59,7 +59,7 @@
         
         
         <section id="naming">
-            <h2>命名规范</h2>
+            <h1>命名规范</h1>
             <ol>
                 <li>文件和目录名只能包含 [a-z\d-]，并以英文字母开头</li>
                 <li>首选合适的英文单词 </li>
@@ -77,23 +77,6 @@
             <h5>规则：</h5>
             
             
-            <h2>CSS规范</h2>
-            <p>外部CSS引用，必须使用如下格式( rel 在前，href 在后，无 type="text/css" 及 charset )：</p>
-            <pre>&lt;link rel="stylesheet" href="http://pic.lvmama.com/styles/v3/combo.css" &gt;</pre>
-            <h3>CSS 注意事项</h3>
-            <ul>
-                <li>无特殊说明，编码统一为utf-8；</li>
-                <li>防止文件合并及编码转换时造成问题，请将样式中文字体名字改成对应的英文名字（unicode码），如：宋体（ \5b8b\4f53）微软雅黑（”Microsoft YaHei”,”\5FAE\8F6F\96C5\9ED1″）；</li>
-                <li>书写代码前，考虑并提高样式重复使用率；</li>
-                <li>禁止使用 <code>expression</code> 表达式；</li>
-                <li>禁止滥用 <code>!important</code>；</li>
-                <li>能缩写的尽量缩写，如 <code>padding:5px 0 0 5px;</code>；</li>
-                <li>层级(z-index)必须清晰明确，适当划分组件层级范围，禁止层级间盲目攀比；</li>
-                <li>为方便组件模块化和提高弹性，正常情况下，为避免外边界冲突，组件不应设置外边界，外边界用组合css方式实现，如：m10{margin:10px}mt10{margin-top:10px}等；</li>
-                <li>必须为大区块&amp;重要模块的样式添加注释，小区块适量注释；</li>
-                <li>正式发布前应进行压缩，压缩后文件的命名应添加”.min”后缀；</li>
-                <li>代码缩进与格式：请参照以下 CSS 书写规范；</li>
-            </ul>
         </section>
         
         
@@ -130,7 +113,10 @@
                 <li>避免使用 <code>style="xxx:xxx;"</code> 的内联样式表</li>
                 <li>特殊符号使用参考 <a href="http://www.w3school.com.cn/html/html_entities.asp">HTML 符号实体</a> </li>
 			</ul>
-            
+            <h3>HTML 书写规范</h3>
+            <ul>
+                <li>无特殊说明，编码统一为utf-8；</li>
+            </ul>
             <h4>HTML 细化规范</h4>
             <ul>
                 <li>HTML <code>head</code> 部分的结构参看：<a href="https://github.com/webcoding/cool-head">cool-head</a> (摘取必要内容即可)</li>
@@ -169,8 +155,26 @@
         
         
         <section id="css">
+            <h2>CSS 书写规范</h2>
+            <p>外部CSS引用，必须使用如下格式( rel 在前，href 在后，无 type="text/css" 及 charset )：</p>
+            <pre>&lt;link rel="stylesheet" href="http://pic.lvmama.com/styles/v3/combo.css" &gt;</pre>
+            <h3>CSS 注意事项</h3>
+            <ul>
+                <li>无特殊说明，编码统一为utf-8；</li>
+                <li>防止文件合并及编码转换时造成问题，请将样式中文字体名字改成对应的英文名字（unicode码），如：宋体（ \5b8b\4f53）微软雅黑（”Microsoft YaHei”,”\5FAE\8F6F\96C5\9ED1″）；</li>
+                <li>书写代码前，考虑并提高样式重复使用率；</li>
+                <li>禁止使用 <code>expression</code> 表达式；</li>
+                <li>禁止滥用 <code>!important</code>；</li>
+                <li>能缩写的尽量缩写，如 <code>padding:5px 0 0 5px;</code>；</li>
+                <li>层级(z-index)必须清晰明确，适当划分组件层级范围，禁止层级间盲目攀比；</li>
+                <li>为方便组件模块化和提高弹性，正常情况下，为避免外边界冲突，组件不应设置外边界，外边界用组合css方式实现，如：m10{margin:10px}mt10{margin-top:10px}等；</li>
+                <li>必须为大区块&amp;重要模块的样式添加注释，小区块适量注释；</li>
+                <li>正式发布前应进行压缩，压缩后文件的命名应添加”.min”后缀；</li>
+                <li>代码缩进与格式：请参照以下 CSS 书写规范；</li>
+            </ul>
+        
             <h3>CSS 书写规范</h3>
-            <p class="lead">以下书写规范针对组件开发使用，非组件书写格式建议使用单行式排版。</p>
+            <p>以下书写规范针对组件开发使用，非组件书写格式建议使用单行式排版。</p>
             <ul>
                 <li>使用四个空格的 soft-tabs 缩进</li>
                 <li>写组选择器时，保持选择器各占一行</li>
@@ -402,7 +406,11 @@ span { ... }
 			</ul>
             <p>更多细节参考下面链接：<br><a href="http://www.web-ed.com.au/2011/05/coding-html-newsletters-edms-quick-guide/">12 Killer Tips and Tricks for Building HTML Email</a></p>
         </section>
-	</div>
+        
+        
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 <?php include("common/footer.html");?>

@@ -19,7 +19,7 @@
 			<li><a href="#modernizr">Modernizr</a></li>
 			<li><a href="#htmlchar">HTML特殊符号对照表</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
         <section id="overview">
             <h1>造好的轮子</h1>
@@ -116,8 +116,8 @@
         </section>
         
         
-        
-    </div>
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 <?php include("common/footer.html");?>

@@ -17,7 +17,7 @@
 			<li><a href="#responsive">响应式设计</a></li>
 			<li><a href="#animate">CSS3 Animate</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
         <section id="typo">
             <h1>排版 <small>详细参见 <a href="xOne/typo.html">typo.css</a></small></h1>
@@ -99,7 +99,9 @@ combo.css 便捷组合样式表
         </section>
         
         
-	</div>
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 

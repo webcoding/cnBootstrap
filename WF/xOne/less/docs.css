@@ -267,8 +267,9 @@ a:visited {
 .modules a:hover { 
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
     color: #6C97C2;
+    text-decoration: none;
 }
-.modules a.todo  { border-left: 4px solid #ccc; background: #eee; }
+.modules a.todo  { border-left: 4px solid #ccc; background: #eee; cursor: default; }
 .modules a.doing { border-left: 4px solid #f80; background: #FDF1DC; }
 .modules a.done  { border-left: 4px solid #0b0; background: #DDFDCD; }
 

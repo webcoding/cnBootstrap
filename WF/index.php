@@ -23,8 +23,6 @@
                 <p>无论你身在何方处在何时，请记住要永存希望。<em>「 晓寒 」 </em></p>
             </blockquote>
             
-            <p>潘多拉（Pandora，也作潘朵拉），古希腊神话人物。</p>
-            
             <h3>初期制作计划</h3>
             <ul>
                 <li>修正reset样式的实现，首先是无差异化重设 normalize.css，之后是传统意义上的reset.css效果</li>
@@ -34,6 +32,11 @@
                 <li>基础样式及扩展前缀，如btn 外嵌套 metro_style(metro风格) 或 google_style(Google风格)实现不同的风格系统</li>
                 <li>自定义字体图标jackey的使用</li>
                 <li>应用自动化打包管理工具等</li>
+            </ul>
+            
+            <h3>计划修正</h3>
+            <ul>
+                <li>排版呈现使之更贴近生产环境效果</li>
             </ul>
         </section>
         
@@ -48,67 +51,66 @@
             <div class="modules">
                 <a class="done" href="xOne/less/normalize.css">normalize.css <small>无差异化</small></a>
                 <a class="done" href="xOne/less/reset.css">reset.css <small>重设样式</small></a>
-                <a class="done" href="xOne/typo.html">typo.css <small>排版</small></a>
+                <a class="done" href="xOne/typo.html">typo.css <small>排版样式</small></a>
                 <a class="doing" href="xOne/less/combo.css">combo.css <small>组合样式</small></a>
-                <a class="todo" href="#">icon/iconfont <small>图标/字体集</small></a>
-                <a class="todo" href="#">grid <small>栅格系统</small></a>
+                <a class="todo" href="###">icon/iconfont <small>图标/字体集</small></a>
+                <a class="todo" href="###">grid <small>栅格系统</small></a>
             </div>
             
             <h3>CSS 组件</h3>
             <div class="modules">
-                <a class="doing" href="#">ui-box <small>区块盒子</small></a>
-                <a class="todo" href="#">list <small>列表</small></a>
-                <a class="todo" href="#">imglist <small>图片列表</small></a>
-                <a class="todo" href="#">imgtext <small>图文混排</small></a>
+                <a class="doing" href="###">ui-box <small>区块盒子</small></a>
+                <a class="todo" href="###">list <small>列表</small></a>
+                <a class="todo" href="###">imglist <small>图片列表</small></a>
+                <a class="todo" href="###">imgtext <small>图文混排</small></a>
                 
-                <a class="done" href="#">label/tag <small>标签标记</small></a>
-                <a class="doing" href="#">counter <small>数字提醒</small></a>
-                <a class="todo" href="#">filter <small>类目过滤</small></a>
-                <a class="todo" href="#">icons <small>小图标</small></a>
-                <a class="todo" href="#">tips <small>可操作浮层</small></a>
-                <a class="todo" href="#">alert message <small>通知提醒</small></a>
+                <a class="done" href="module.php#label">label/tag <small>标签标记</small></a>
+                <a class="todo" href="###">filter <small>类目过滤</small></a>
+                <a class="todo" href="###">icons <small>小图标</small></a>
+                <a class="todo" href="###">tips <small>可操作浮层</small></a>
+                <a class="todo" href="###">alert message <small>通知提醒</small></a>
                 
                 <a class="doing" href="xOne/tables.html">table <small>表格</small></a>
-                <a class="todo" href="#">nav <small>导航</small></a>
-                <a class="todo" href="#">topbar <small>顶部导航</small></a>
-                <a class="todo" href="xOne/breadcrumb.html">breadcrumb <small>面包屑</small></a>
+                <a class="todo" href="###">nav <small>导航</small></a>
+                <a class="todo" href="###">topbar <small>顶部导航</small></a>
+                <a class="done" href="module.php#breadcrumb">breadcrumb <small>面包屑</small></a>
                 
                 <a class="doing" href="xOne/paging.html">paging <small>分页</small></a>
-                <a class="todo" href="#">dropdown <small>下拉菜单</small></a>
+                <a class="todo" href="###">dropdown <small>下拉菜单</small></a>
                 <a class="done" href="xOne/buttons.html">btn <small>按钮[组]</small></a>
                 <a class="doing" href="xOne/forms.html">form <small>表单</small></a>
-                <a class="todo" href="#">search <small>搜索框</small></a>
+                <a class="todo" href="###">search <small>搜索框</small></a>
                 
                 
-                <a class="todo" href="#">modal <small>弹出对话框</small></a>
-                <a class="todo" href="#">progress <small>进度条</small></a>
-                <a class="todo" href="#">media <small>媒体对象</small></a>
-                <a class="todo" href="#">step <small>步骤/流程</small></a>
-                <a class="todo" href="#">misc <small>杂项</small></a>
-                <a class="todo" href="#">unit <small>组件单元</small></a>
+                <a class="todo" href="###">modal <small>弹出对话框</small></a>
+                <a class="todo" href="###">progress <small>进度条</small></a>
+                <a class="todo" href="###">media <small>媒体对象</small></a>
+                <a class="todo" href="###">step <small>步骤/流程</small></a>
+                <a class="todo" href="###">misc <small>杂项</small></a>
+                <a class="todo" href="###">unit <small>组件单元</small></a>
             </div>
             
             <h3>JavaScript 组件</h3>
             <div class="modules">
-                <a class="doing" href="#">slides <small>图片轮播</small></a>
-                <a class="todo" href="#">imgscoll <small>图片滚动</small></a>
-                <a class="todo" href="#">lazyload <small>延迟加载</small></a>
-                <a class="doing" href="#">tips <small>浮层提示</small></a>
-                <a class="doing" href="#">countdown <small>倒计时</small></a>
-                <a class="todo" href="#">calendar <small>日历</small></a>
-                <a class="todo" href="#">selectbox <small>下拉选项</small></a>
-                <a class="todo" href="#">dropdown <small>下拉菜单</small></a>
-                <a class="doing" href="#">tab <small>标签切换</small></a>
-                <a class="todo" href="#">sort <small>多维排序</small></a>
-                <a class="todo" href="#">pading <small>分页</small></a>
-                <a class="todo" href="#">modal <small>弹出对话框</small></a>
-                <a class="todo" href="#">stars <small>星星打分</small></a>
-                <a class="todo" href="#">wordcount <small>字数检测</small></a>
-                <a class="todo" href="#">validator <small>表单验证</small></a>
-                <a class="todo" href="#">scrollspy <small>滚动侦听</small></a>
-                <a class="todo" href="#">lightbox <small>图片浏览浮层</small></a>
-                <a class="todo" href="#">linkage <small>联动操作</small></a>
-                <a class="todo" href="#">autocomplete <small>自动补全</small></a>
+                <a class="doing" href="###">slides <small>图片轮播</small></a>
+                <a class="todo" href="###">imgscoll <small>图片滚动</small></a>
+                <a class="todo" href="###">lazyload <small>延迟加载</small></a>
+                <a class="doing" href="###">tips <small>浮层提示</small></a>
+                <a class="doing" href="###">countdown <small>倒计时</small></a>
+                <a class="todo" href="###">calendar <small>日历</small></a>
+                <a class="todo" href="###">selectbox <small>下拉选项</small></a>
+                <a class="todo" href="###">dropdown <small>下拉菜单</small></a>
+                <a class="doing" href="###">tab <small>标签切换</small></a>
+                <a class="todo" href="###">sort <small>多维排序</small></a>
+                <a class="todo" href="###">pading <small>分页</small></a>
+                <a class="todo" href="###">modal <small>弹出对话框</small></a>
+                <a class="todo" href="###">stars <small>星星打分</small></a>
+                <a class="todo" href="###">wordcount <small>字数检测</small></a>
+                <a class="todo" href="###">validator <small>表单验证</small></a>
+                <a class="todo" href="###">scrollspy <small>滚动侦听</small></a>
+                <a class="todo" href="###">lightbox <small>图片浏览浮层</small></a>
+                <a class="todo" href="###">linkage <small>联动操作</small></a>
+                <a class="todo" href="###">autocomplete <small>自动补全</small></a>
             </div>
             
             <h3>主要项目页面 DEMO</h3>
@@ -211,7 +213,9 @@ buttons.css |
             </p>Pandora项目第一站——<b>前端解决方案</b>，接下来就让我们看看 <strong>Pandora</strong> 的表现吧！</p>
             
         </section>
-	</div>
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 

@@ -13,10 +13,13 @@
 			<li><a href="#download">下载</a></li>
 			<li><a href="extend.php">扩展</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
-		
-	</div>
+        
+        
+        
+		<?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 

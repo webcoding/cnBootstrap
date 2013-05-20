@@ -17,8 +17,8 @@
         
         <div class="search-util">
             <form action="" class="search-form form-inline google_style">
-                <input type="text" name="query" placeholder="搜索 Pandora" autocomplete="off">
-                <button class="btn btn-primary"> <span class="search-icon icon-white icon-search">搜索 Pandora</span> </button>
+                <input type="text" name="query" placeholder="Pandora 搜索" autocomplete="off">
+                <button class="btn btn-primary"> <span class="search-icon icon-white icon-search">Pandora 搜索</span> </button>
             </form>
         </div>
     </div>

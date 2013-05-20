@@ -14,7 +14,7 @@
 			<li><a href="#css3">CSS3研究</a></li>
 			<li><a href="#jscode">JS代码段</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	<div class="main">
 		<section id="solution">
             <h1>兼容解决方案</h1>
@@ -42,7 +42,11 @@
             <h1>JS代码段</h1>
             <p>常用的JS代码段，很有用处，值得收集！</p>
         </section>
-	</div>
+        
+        
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 </div>
 
 

@@ -15,7 +15,7 @@
             <li><a href="#imglist">imglist <small class="iconfont">图片列表</small></a></li>
             <li><a href="#imgtext">imgtext <small class="iconfont">图文混排</small></a></li>
         </ul>
-	</div>
+	</div> <!-- // div.sidebar -->
 	
     <div class="main">
         <section id="tpl">
@@ -61,8 +61,11 @@
             <h2>图文混排 list</h2>
             <p></p>
         </section>
-    </div>
-
+        
+        
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
 
 </div>
 

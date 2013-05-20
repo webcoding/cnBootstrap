@@ -11,7 +11,7 @@
 		<ul class="nav none">
 			<li><a href="#">管理发布</a></li>
 		</ul>
-	</div>
+	</div> <!-- // div.sidebar -->
     
 	<div class="main">
         <section id="">
@@ -19,7 +19,10 @@
             <p>项目要管理发布，就要有一套良好的流程，只有这样才能确保项目的高效管理</p>
         </section>
         
-    </div>
+        
+        
+        <?php include("common/comment.html");?>
+	</div> <!-- // div.main -->
     
 </div>
 
