@@ -53,7 +53,7 @@
                 <a class="done" href="xOne/less/reset.css">reset.css <small>重设样式</small></a>
                 <a class="done" href="xOne/typo.html">typo.css <small>排版样式</small></a>
                 <a class="doing" href="xOne/less/combo.css">combo.css <small>组合样式</small></a>
-                <a class="todo" href="###">icon/iconfont <small>图标/字体集</small></a>
+                <a class="doing" href="framework.php#iconfont">icon/iconfont <small>图标/字体集</small></a>
                 <a class="todo" href="###">grid <small>栅格系统</small></a>
             </div>
             
@@ -96,8 +96,9 @@
                 <a class="doing" href="###">slides <small>图片轮播</small></a>
                 <a class="todo" href="###">imgscoll <small>图片滚动</small></a>
                 <a class="todo" href="###">lazyload <small>延迟加载</small></a>
-                <a class="doing" href="###">tips <small>浮层提示</small></a>
-                <a class="doing" href="###">countdown <small>倒计时</small></a>
+                <a class="done" href="xOne/countdown.html">countdown <small>倒计时</small></a>
+                <a class="done" href="xOne/tooltip.html">tooltip <small>工具提醒</small></a>
+                <a class="todo" href="###">tips <small>浮层提示</small></a>
                 <a class="todo" href="###">calendar <small>日历</small></a>
                 <a class="todo" href="###">selectbox <small>下拉选项</small></a>
                 <a class="todo" href="###">dropdown <small>下拉菜单</small></a>

@@ -323,54 +323,48 @@
         
         <section id="tiptext">
             <h1>提示文本</h1>
-            <p>老版本请参考 <a href="../cndocs/solutions/alerts.html">信息提示框</a></p>
-            <p>带各类图标的提示文案，可带有提示箭头。</p>
+            <p>老版本 ICON 使用的图片，请参考 <a href="../cndocs/solutions/alerts.html">信息提示框</a></p>
+            <p><strong>提醒：</strong> 字体图标集虽已全兼容，但字体加载仍有延迟，有时会出现闪动，另外针对信息提示框的显示，表示字体图标不够精致，可设置两个方案，精致版的图标集，简单方便扩展的文字图标集。</p>
+            <p>带各类图标的提示文案，可带有提示箭头。以下摘自 AliceUI：</p>
             <div class="docs-example">
-                <p class="ui-tiptext ui-tiptext-message">
-                    <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
-                    消息提醒：自行编辑，非系统消息
-                </p>
-
                 <p class="ui-tiptext ui-tiptext-error">
                     <i class="ui-tiptext-icon iconfont" title="出错">&#xF045;</i>
                     错误提醒：自行编辑，非系统消息
                 </p>
-
+                
+                <p class="ui-tiptext ui-tiptext-message">
+                    <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                    消息提醒：自行编辑，非系统消息
+                </p>
+                
                 <p class="ui-tiptext ui-tiptext-warning">
                     <i class="ui-tiptext-icon iconfont" title="警告">&#xF047;</i>
                     警告提醒：自行编辑，非系统消息
                 </p>
-
-                <p class="ui-tiptext ui-tiptext-success">
-                    <i class="ui-tiptext-icon iconfont" title="成功">&#xF049;</i>
-                    成功提醒：自行编辑，非系统消息
-                </p>
-
-                <p class="ui-tiptext ui-tiptext-question">
-                    <i class="ui-tiptext-icon iconfont" title="疑问">&#xF04A;</i>
-                    帮助提醒：自行编辑，非系统消息
-                </p>
-
+                
                 <p class="ui-tiptext ui-tiptext-stop">
                     <i class="ui-tiptext-icon iconfont" title="阻止">&#xF048;</i>
                     停止提醒：自行编辑，非系统消息
                 </p>
-
+                
+                <p class="ui-tiptext ui-tiptext-success">
+                    <i class="ui-tiptext-icon iconfont" title="成功">&#xF049;</i>
+                    成功提醒：自行编辑，非系统消息
+                </p>
+                
+                <p class="ui-tiptext ui-tiptext-question">
+                    <i class="ui-tiptext-icon iconfont" title="疑问">&#xF04A;</i>
+                    帮助提醒：自行编辑，非系统消息
+                </p>
+                
                 <p class="ui-tiptext ui-tiptext-wait">
                     <i class="ui-tiptext-icon iconfont" title="等待">&#xF04B;</i>
                     等待提醒：自行编辑，非系统消息
                 </p>
-
+                
             </div>
             
             <div class="docs-example">
-                <div class="ui-tiptext-container ui-tiptext-container-message">
-                    <p class="ui-tiptext ui-tiptext-message">
-                        <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
-                        消息提醒：自行编辑，非系统消息
-                    </p>
-                    <div class="ui-tiptext-close iconfont">&#xF028;</div>
-                </div>
                 
                 <div class="ui-tiptext-container ui-tiptext-container-error">
                     <p class="ui-tiptext ui-tiptext-error">
@@ -379,10 +373,25 @@
                     </p>
                 </div>
                 
+                <div class="ui-tiptext-container ui-tiptext-container-message">
+                    <p class="ui-tiptext ui-tiptext-message">
+                        <i class="ui-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                        消息提醒：自行编辑，非系统消息
+                    </p>
+                    <div class="ui-tiptext-close iconfont">&#xF028;</div>
+                </div>
+                
                 <div class="ui-tiptext-container ui-tiptext-container-warning">
                     <p class="ui-tiptext ui-tiptext-warning">
                         <i class="ui-tiptext-icon iconfont" title="警告">&#xF047;</i>
                         警告提醒：自行编辑，非系统消息
+                    </p>
+                </div>
+                
+                <div class="ui-tiptext-container ui-tiptext-container-stop">
+                    <p class="ui-tiptext ui-tiptext-stop">
+                        <i class="ui-tiptext-icon iconfont" title="阻止">&#xF048;</i>
+                        停止提醒：自行编辑，非系统消息
                     </p>
                 </div>
                 
@@ -397,13 +406,6 @@
                     <p class="ui-tiptext ui-tiptext-question">
                         <i class="ui-tiptext-icon iconfont" title="疑问">&#xF04A;</i>
                         帮助提醒：自行编辑，非系统消息
-                    </p>
-                </div>
-                
-                <div class="ui-tiptext-container ui-tiptext-container-stop">
-                    <p class="ui-tiptext ui-tiptext-stop">
-                        <i class="ui-tiptext-icon iconfont" title="阻止">&#xF048;</i>
-                        停止提醒：自行编辑，非系统消息
                     </p>
                 </div>
                 
@@ -462,7 +464,84 @@
         <section id="tipbox">
             <h1>提示框</h1>
             
-            
+            <div class="docs-example">
+                <div class="ui-tipbox ui-tipbox-error">
+                    <div class="ui-tipbox-icon">
+                        <i class="iconfont" title="出错">&#xF045;</i>
+                    </div>
+                    <div class="ui-tipbox-content">
+                        <h3 class="ui-tipbox-title">错误标题</h3>
+                        <p class="ui-tipbox-explain">完成操作的一些说明。</p>
+                        <p class="ui-tipbox-explain"><a href="#">查看详情</a> | <a href="#">返回首页</a></p>
+                    </div>
+                </div>
+                
+                <div class="ui-tipbox ui-tipbox-message">
+                    <div class="ui-tipbox-icon">
+                        <i class="iconfont" title="提示">&#xF046;</i>
+                    </div>
+                    <div class="ui-tipbox-content">
+                        <h3 class="ui-tipbox-title">提示标题</h3>
+                        <p class="ui-tipbox-explain">完成操作的一些说明。</p>
+                        <p class="ui-tipbox-explain"><a href="#">查看详情</a> | <a href="#">返回首页</a></p>
+                    </div>
+                </div>
+                
+                <div class="ui-tipbox ui-tipbox-warning">
+                    <div class="ui-tipbox-icon">
+                        <i class="iconfont" title="警告">&#xF047;</i>
+                    </div>
+                    <div class="ui-tipbox-content">
+                        <h3 class="ui-tipbox-title">警告标题</h3>
+                        <p class="ui-tipbox-explain">完成操作的一些说明。</p>
+                        <p class="ui-tipbox-explain"><a href="#">查看详情</a> | <a href="#">返回首页</a></p>
+                    </div>
+                </div>
+                
+                <div class="ui-tipbox ui-tipbox-stop">
+                    <div class="ui-tipbox-icon">
+                        <i class="iconfont" title="阻止">&#xF048;</i>
+                    </div>
+                    <div class="ui-tipbox-content">
+                        <h3 class="ui-tipbox-title">阻止标题</h3>
+                        <p class="ui-tipbox-explain">完成操作的一些说明。</p>
+                        <p class="ui-tipbox-explain"><a href="#">查看详情</a> | <a href="#">返回首页</a></p>
+                    </div>
+                </div>
+                
+                <div class="ui-tipbox ui-tipbox-success">
+                    <div class="ui-tipbox-icon">
+                        <i class="iconfont" title="成功">&#xF049;</i>
+                    </div>
+                    <div class="ui-tipbox-content">
+                        <h3 class="ui-tipbox-title">成功标题</h3>
+                        <p class="ui-tipbox-explain">完成操作的一些说明。</p>
+                        <p class="ui-tipbox-explain"><a href="#">查看详情</a> | <a href="#">返回首页</a></p>
+                    </div>
+                </div>
+                
+                <div class="ui-tipbox ui-tipbox-question">
+                    <div class="ui-tipbox-icon">
+                        <i class="iconfont" title="疑问">&#xF04A;</i>
+                    </div>
+                    <div class="ui-tipbox-content">
+                        <h3 class="ui-tipbox-title">疑问标题</h3>
+                        <p class="ui-tipbox-explain">完成操作的一些说明。</p>
+                        <p class="ui-tipbox-explain"><a href="#">查看详情</a> | <a href="#">返回首页</a></p>
+                    </div>
+                </div>
+                
+                <div class="ui-tipbox ui-tipbox-wait">
+                    <div class="ui-tipbox-icon">
+                        <i class="iconfont" title="等待">&#xF04B;</i>
+                    </div>
+                    <div class="ui-tipbox-content">
+                        <h3 class="ui-tipbox-title">等待标题</h3>
+                        <p class="ui-tipbox-explain">完成操作的一些说明。</p>
+                        <p class="ui-tipbox-explain"><a href="#">查看详情</a> | <a href="#">返回首页</a></p>
+                    </div>
+                </div>
+            </div>
         </section>
         
         
