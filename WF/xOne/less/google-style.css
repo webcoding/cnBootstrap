@@ -42,7 +42,7 @@
 	background-color:#ebebeb
 }
 
-.google_style input[type="text"]{
+.google_style form input[type="text"]{
 	border:1px solid #e5e5e5;
 	border-top-color:#dcdcdc;
 	color:#666;

@@ -29,10 +29,30 @@ body{font-family: Tahoma,Arial,sans-serif;}
 body{font-family: Verdana,Tahoma,Arial,sans-serif;}
 body .en{font-family:Arial,sans-serif;}
 
-a { color: #245DC1;}
+a { 
+    color: #245DC1;
+    text-decoration: none;
+}
 a:visited {
     color: #7759AE;
+    _color: inherit;
 }
+
+.warning-bar {
+    -webkit-box-shadow: inset 0 0 4px #777;
+    -moz-box-shadow: inset 0 0 4px #777;
+    box-shadow: inset 0 0 4px #777;
+    background-color: #dd4b39;
+    color: #fff;
+    padding: 6px 0;
+    text-align: center;
+}
+.warning-bar a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
 .wrap { width: 990px;}
 .topbar {
     background: #F5F5F5;
@@ -115,25 +135,18 @@ a:visited {
     margin-left: 10px;
     margin-right: 10px;
 }
-.navbar {
+.google_style .navbar {
     background: #325DA7;
-    background: -moz-linear-gradient(top,#4E78C2,#325DA7);
-    background: -webkit-linear-gradient(top,#4E78C2,#325DA7);
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4E78C2),color-stop(1,#325DA7));
+    background: -moz-linear-gradient(top, #4E78C2, #325DA7);
+    background: -webkit-linear-gradient(top, #4E78C2, #325DA7);
+    background: -webkit-gradient(linear, left top, left bottom, from(0,#4E78C2), to(1,#325DA7));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e78c2', endColorstr='#325da7');
     background: linear-gradient(top,#4E78C2,#325DA7);
     color: #fff;
     padding: 0 15px;
+    *zoom: 1;
 }
-.navbar a { 
-    color:#e1e5f2;
-}
-.navbar a:hover { 
-    color:#fff;
-}
-.navbar .active a { 
-    color:#fff;
-    font-weight: bold;
-}
+
 
 .nav a {
   display: block;
@@ -145,16 +158,30 @@ a:visited {
     margin:0;
 }
 .main-nav li {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
+  display: inline;
+  float:left;
 }
 .main-nav a{
-  padding: 10px 15px;
-  font-size: 14px;
-  /* color: #ddd; */
+    /* 仅仅使用padding在IE6/7下效果不好,结合height与line-height控制更为精准 */
+    /* padding: 10px 15px; */
+    display: inline-block;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    
+    /* color: #ddd; */
 }
-
+.main-nav a { 
+    color:#e1e5f2;
+}
+.main-nav a:hover { 
+    color:#fff;
+}
+.main-nav .active a { 
+    color:#fff;
+    font-weight: bold;
+}
 .global {
     background: #F6F9FF;
     border: 1px solid #EFF2F9;
@@ -228,7 +255,8 @@ a:visited {
 }
 .sidebar ul { padding: 10px 10px;}
 .sidebar li {
-    position: relative;  
+    position: relative;
+    *zoom:1;
 }
 
 .sidebar small { 
@@ -238,11 +266,15 @@ a:visited {
 .main {
   overflow:hidden;
   padding: 0 20px 30px;
+  *zoom:1;
 }
 .main section{
   padding: 1px 0;
 }
-
+.modules{
+    margin-right: -10px;
+    
+}
 .modules a { 
     display: inline-block;
     width: 165px;

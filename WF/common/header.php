@@ -1,4 +1,4 @@
-
+<div class="google_style">
 <!-- Navbar
 ================================================== -->
 <div class="topbar hide" role="navigation">
@@ -14,9 +14,8 @@
             <h1>Pandora <small>前端解决方案</small></h1>
         </a>
         
-        
-        <div class="search-util">
-            <form action="" class="search-form form-inline google_style">
+        <div class="search-util hide">
+            <form action="" class="search-form form-inline">
                 <input type="text" name="query" placeholder="Pandora 搜索" autocomplete="off">
                 <button class="btn btn-primary"> <span class="search-icon icon-white icon-search">Pandora 搜索</span> </button>
             </form>
@@ -43,4 +42,7 @@
         </div>
     </div>
 </div> <!-- //.navbar -->
-
+</div>
+<div class="warning-bar">
+    IE6/7 您的浏览器不受支持。详情请访问<a href="https://support.google.com/accounts/answer/1151309?hl=zh-CN">受支持的浏览器</a>。
+</div>
