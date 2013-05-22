@@ -48,6 +48,7 @@
             <p>Markdown 语法的目标是：成为一种适用于网络的<em>书写</em>语言。</p>
             <p>可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 <a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>、<a href="http://www.aaronsw.com/2002/atx/">atx</a>、<a href="http://textism.com/tools/textile/">Textile</a>、<a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>、<a href="http://www.triptico.com/software/grutatxt.html">Grutatext</a> 和 <a href="http://ettext.taint.org/doc/">EtText</a>，而最大灵感来源其实是纯文本电子邮件的格式。</p>
             <p>Markdown 最适合来书写使用说明、介绍或规范等，通常用于书写 Readme.md</p>
+            <p>更多详情常见 <a href="./xOne/markdown.html">Markdown 语法说明</a>，这里还提供 <a href="xOne/markdown.html#editor">Mrakdown 免费编辑器</a>。</p>
         </section>
         
         

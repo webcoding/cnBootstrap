@@ -177,7 +177,7 @@ abbr.initialism {
 }
 
 blockquote {
-  padding: 1px 1em 0.2em;
+  padding: 0 15px;
   margin: 15px 0;
   border-left: 5px solid #ddd;
   color: #555;
@@ -203,13 +203,15 @@ blockquote em {
 }
 blockquote blockquote {
     margin-left: 2em;
-    padding: 1px 0 0.2em 1em;
+    padding: 0 15px;
 }
 
 blockquote.pull-right {
   float: right;
-  padding-right: 1em;
-  border-right: 5px solid #eeeeee;
+  float: none;
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #ddd;
   border-left: 0;
 }
 
