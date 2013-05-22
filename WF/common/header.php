@@ -14,10 +14,10 @@
             <h1>Pandora <small>前端解决方案</small></h1>
         </a>
         
-        <div class="search-util hide">
+        <div class="search-util">
             <form action="" class="search-form form-inline">
                 <input type="text" name="query" placeholder="Pandora 搜索" autocomplete="off">
-                <button class="btn btn-primary"> <span class="search-icon icon-white icon-search">Pandora 搜索</span> </button>
+                <button class="btn btn-primary"> <span class="search-icon icon-white icon-search"></span> </button>
             </form>
         </div>
     </div>

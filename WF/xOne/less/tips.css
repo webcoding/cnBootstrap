@@ -120,7 +120,7 @@
 	margin:0;
 	color:#4D4D4D;
 	position:relative;
-	/* font-size:12px;*/
+	font-size:12px;
 	*zoom:1
 }
 .ui-tiptext-container {

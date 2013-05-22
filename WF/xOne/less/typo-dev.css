@@ -152,11 +152,11 @@ dd {
   margin-left: 180px;
 }
 .dl-hor dt {
-    width: 80px;
+    width: 100px;
     font-weight: normal;
 }
 .dl-hor dd {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 hr {
   margin: 20px 0;

@@ -27,6 +27,7 @@
     <p>依赖：http://pic.lvmama.com/min/index.php?f=/js/new_v/jquery-1.7.2.min.js,/js/ui/lvmamaUI/lvmamaUI.js</p>
 	
     <div class="docs-example">
+        <h4>默认传入倒计时间的 UNIX 时间戳 即可</h4>
         <dl class="dl-horizontal">
             <dt>默认效果：</dt>
             <dd><span class="time">2531275871</span></dd>
@@ -38,20 +39,21 @@
             <dd><span class="time_format">2531275871</span></dd>
             
             <dt>自定义结束提醒：</dt>
-            <dd><span class="time_tips">1356278400</span></dd>
+            <dd><span class="time_tips">10000</span></dd>
         </dl>
     </div>
 <pre class="prettyprint linenums">
 &lt;script&gt;
 $(function(){
-    // 默认调用倒计时
+    // 默认调用倒计时 
     $("span.time").ui("countdown");
     
     // 自定义参数
     $("span.countdown").ui("countdown",{
-        format: "hh:mm:ss",  //Support hh:mm:ss dd:hh:mm hh:mm dd:hh:mm:ss
-        effect: true,
-        overtips: "已结束"
+        format: "dd:hh:mm:ss",  // 时间format 现支持 dd:hh:mm:ss(默认) hh:mm:ss dd:hh:mm mm:ss 四种格式
+        prezero: true,  // 前导零
+        effect : false,  // 支持自定义格式
+        overtips : "已结束"
     });
 });
 &lt;/script&gt;
@@ -68,6 +70,7 @@ $(function(){
     
     // 调用自定义标签
 	$("span.countdown").ui("countdown",{
+        prezero: true,
         effect: true
     });
     
@@ -78,8 +81,8 @@ $(function(){
     
     // 自定义结束提醒
 	$("span.time_tips").ui("countdown",{
-        format: "dd:hh:mm",
-        overtips: "钱用光了，世界末日没来，傻了吧！！！"
+        format: "mm:ss",
+        overtips: "世界末日没来？钱用光了？傻了吧！！！"
     });
 });
 

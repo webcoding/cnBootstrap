@@ -77,13 +77,12 @@
                 <a class="todo" href="###">nav <small>导航</small></a>
                 <a class="todo" href="###">topbar <small>顶部导航</small></a>
                 <a class="done" href="module.php#breadcrumb">breadcrumb <small>面包屑</small></a>
-                
                 <a class="done" href="xOne/paging.html">paging <small>分页</small></a>
+                
                 <a class="todo" href="###">dropdown <small>下拉菜单</small></a>
-                <a class="done" href="xOne/buttons.html">btn <small>按钮[组]</small></a>
+                <a class="done" href="xOne/buttons.html">btn <small>按钮/按钮组</small></a>
                 <a class="doing" href="xOne/forms.html">form <small>表单</small></a>
                 <a class="todo" href="###">search <small>搜索框</small></a>
-                
                 
                 <a class="todo" href="###">modal <small>弹出对话框</small></a>
                 <a class="todo" href="###">progress <small>进度条</small></a>
@@ -117,23 +116,23 @@
                 <a class="todo" href="###">autocomplete <small>自动补全</small></a>
             </div>
             
-            <h3>主要项目页面 DEMO</h3>
+            <h3>主要项目案例 CASE</h3>
             <div class="demolist">
                 <dl class="dl-hor">
                 	<dt>驴妈妈</dt>
                     <dd>
-                        <a href="#">index</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/index/">index</a>
                     </dd>
                 	<dt>定制游</dt>
                     <dd>
-                        <a href="#">custom</a>
-                        <a href="#">custom-list</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/index/custom.html">custom</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/index/custom-page.html">custom-page</a>
                     </dd>
                     <dt>积分商城</dt>
                     <dd>
-                        <a href="#">points</a>
-                        <a href="#">points-list</a>
-                        <a href="#">points-details</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/points/">points</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/points/list.php">points-list</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/points/details.php">points-details</a>
                     </dd>
                 </dl>
             </div>
@@ -199,6 +198,9 @@ combo.css   |
 buttons.css |
 </pre>
             <p>此项目中具备新版线上项目的静态版页面，供调试研究使用。</p>
+            <h4>延迟加载的图片或内容使用的 loading 图标：<small>两种尺寸</small></h4>
+            <p><b>28px：</b> <img src="http://pic.lvmama.com/img/new_v/ui_scrollLoading/loading.gif" alt="" /> <a target="_blank" href="http://pic.lvmama.com/img/new_v/ui_scrollLoading/loading.gif">http://pic.lvmama.com/img/new_v/ui_scrollLoading/loading.gif</a></p>
+            <p><b>46px：</b> <img src="http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif" alt="" /> <a target="_blank" href="http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif">http://pic.lvmama.com/img/new_v/ui_scrollLoading/loadingGIF46px.gif</a></p>
             
         </section>
         
