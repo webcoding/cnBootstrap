@@ -116,23 +116,23 @@
                 <a class="todo" href="###">autocomplete <small>自动补全</small></a>
             </div>
             
-            <h3>主要项目案例 CASE</h3>
+            <h3>主要项目案例 DEMO <small>内网访问</small></h3>
             <div class="demolist">
                 <dl class="dl-hor">
                 	<dt>驴妈妈</dt>
                     <dd>
-                        <a target="_blank" href="http://10.3.1.41/v3/index/">index</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/index.php">index</a>
                     </dd>
                 	<dt>定制游</dt>
                     <dd>
-                        <a target="_blank" href="http://10.3.1.41/v3/index/custom.html">custom</a>
-                        <a target="_blank" href="http://10.3.1.41/v3/index/custom-page.html">custom-page</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/custom.php">custom</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/custom-page.php">custom-page</a>
                     </dd>
                     <dt>积分商城</dt>
                     <dd>
-                        <a target="_blank" href="http://10.3.1.41/v3/points/">points</a>
-                        <a target="_blank" href="http://10.3.1.41/v3/points/list.php">points-list</a>
-                        <a target="_blank" href="http://10.3.1.41/v3/points/details.php">points-details</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/points.php">points</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/points-list.php">points-list</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/points-details.php">points-details</a>
                     </dd>
                 </dl>
             </div>
@@ -216,7 +216,7 @@ buttons.css |
             
             <p>根据神话，潘多拉出于好奇打开一个「魔盒」（应作坛子，希腊文原作πίθος，πίθοι，英语：pandora's box）释放出人世间的所有邪恶——贪婪、虚无、诽谤、嫉妒、痛苦等等，当她再盖上盒子时，<b>只剩下希望在里面</b>。Pandora 放出了邪恶，却把最大的希望留在了盒子里，如今她为我们所承受的困苦要做一个解决方案，把希望带给大家，并取名 Pandora 项目。</p>
             
-            </p>Pandora项目第一站——<b>前端解决方案</b>，接下来就让我们看看 <strong>Pandora</strong> 的表现吧！</p>
+            </p>Pandora 项目第一站——<b>前端解决方案</b>，接下来就让我们看看 <strong>Pandora</strong> 的表现吧！</p>
             
         </section>
         
