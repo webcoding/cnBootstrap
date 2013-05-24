@@ -10,6 +10,10 @@
 	<div class="sidebar">
         <ul class="nav none">
             <li><a href="#tpl">tpl <small>布局模板</small></a></li>
+            <li><a href="#box">box <small class="iconfont">区块盒子</small></a></li>
+            <li><a href="#list">list <small class="iconfont">列表</small></a></li>
+            <li><a href="#imglist">imglist <small class="iconfont">图片列表</small></a></li>
+            <li><a href="#imgtext">imgtext <small class="iconfont">图文混排</small></a></li>
             <li><a href="#dropdown">dropdown <small>下拉菜单</small></a></li>
             
             <li><a href="#table">table <small>表格</small></a></li>
@@ -36,7 +40,36 @@
             <h1>布局模板</h1>
             <p>最常用的布局结构堪称经典，可以作为布局模板使用——内容盒子，列表，图文混排，图片滚动，下拉菜单等</p>
             <p><strong>注：</strong>经典布局不是指单一的某一种布局，针对不同的风格设计，都有优良的布局经典，敏捷开发无处不在，这里仅就某一类设计浅谈布局实现(@此处实例多是修改BT项目实例或引用lvmama的项目或针对未来需求的预设实现)。</p>
-            <p>详情参看： <a href="tpl.php">tpl</a></p>
+            
+            
+            <h2 id="box">区块 box</h2>
+            <p>实现布局块，保证良好的扩展性</p>
+            
+            <div class="docs-example">
+                <div class="pro-box pro_custom border">
+                    <div class="title">
+                        <h4>标题 <small>一些说明</small></h4>
+                        <a class="link-more" href="">更多 &raquo;</a>
+                    </div>
+                    <div class="content" style="height:100px;">
+                        <p>这是列表或其它内容</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <h2 id="list">列表实现 list</h2>
+            <p>实现常见的布局列表，具备良好的扩展性</p>
+            
+            
+            <h2 id="imglist">图片列表 imglist</h2>
+            <p></p>
+            
+            
+            <h2 id="imgtext">图文混排 imgtext</h2>
+            <p></p>
+            
+            
         </section>
         
         
@@ -314,7 +347,161 @@
                     "You're a good boy," said the mother proudly. "Here are two cents more. But why are you so interested in the old woman?" <br>
                     "She is the one who sells the candy."<br>
                 </div>
-            
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">
+                            <div class="ui-poptip-arrow ui-poptip-arrow-10">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <a href="javascript:;" class="ui-poptip-close">×</a>
+                            <div class="ui-poptip-content">
+                                我是内容我是内容我是内容我是内容我是内容我是内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">
+                            <div class="ui-poptip-arrow ui-poptip-arrow-10">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <a href="javascript:;" class="ui-poptip-close">×</a>
+                            <div class="ui-poptip-content">
+                                <div>我是内容。</div>
+                                <div>我是内容我是内容我是内容。</div>
+                                <div>
+                                    <a href="https://app.alipay.com/xxxx" target="_blank">现在使用</a>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">    
+                            <div class="ui-poptip-arrow ui-poptip-arrow-10">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">
+                                我是内容我是内容我是内容我是内容我是内容我是内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-2">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">
+                                我是内容我是内容我是内容我是内容我是内容我是内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-11">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">
+                                我是内容我是内容我是内容我是内容我是内容我是内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-1">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">
+                                我是内容我是内容我是内容我是内容我是内容我是内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-5">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">
+                                我是内容我是内容我是内容我是内容我是内容我是内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-7">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">
+                                我是内容我是内容我是内容我是内容我是内容我是内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip ui-poptip-blue">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-10">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">我是内容我是内容我是内容我是内容我是内容我是内容</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip ui-poptip-blue">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-5">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">我是内容我是内容我是内容我是内容我是内容我是内容</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-poptip ui-poptip-white">
+                    <div class="ui-poptip-shadow">
+                        <div class="ui-poptip-container">        
+                            <div class="ui-poptip-arrow ui-poptip-arrow-5">
+                                <em>◆</em>
+                                <span>◆</span>
+                            </div>
+                            <div class="ui-poptip-content">我是内容我是内容我是内容我是内容我是内容我是内容</div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         
         </section>

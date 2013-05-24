@@ -47,6 +47,7 @@
 @import "breadcrumbs.css";
 @import "pagination.css";
 @import "pager.css";
+@import "poptip.css";
 
 /* Components: Popovers */
 @import "modals.css";
