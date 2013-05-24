@@ -11,7 +11,7 @@
 <div class="header" role="banner">
     <div class="wrap">
         <a rel="home" class="brand" href="#">
-            <h1>Pandora <small>前端解决方案</small></h1>
+            <h1>Pandora <small>前端框架</small></h1>
         </a>
         
         <div class="search-util">

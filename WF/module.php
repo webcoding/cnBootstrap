@@ -39,20 +39,22 @@
 		<section id="tpl">
             <h1>布局模板</h1>
             <p>最常用的布局结构堪称经典，可以作为布局模板使用——内容盒子，列表，图文混排，图片滚动，下拉菜单等</p>
-            <p><strong>注：</strong>经典布局不是指单一的某一种布局，针对不同的风格设计，都有优良的布局经典，敏捷开发无处不在，这里仅就某一类设计浅谈布局实现(@此处实例多是修改BT项目实例或引用lvmama的项目或针对未来需求的预设实现)。</p>
+            <p>经典布局不是指单一的某一种布局，针对不同的风格设计，都有优良的布局经典，敏捷开发无处不在，这里仅就某一类设计浅谈布局实现(@此处实例多是修改BT项目实例或引用lvmama的项目或针对未来需求的预设实现)。</p>
+            <p><strong>注：</strong> 针对公共模块提取调整，立足实际应用，除此外其他的不做规划。</p>
+            
             
             
             <h2 id="box">区块 box</h2>
             <p>实现布局块，保证良好的扩展性</p>
             
             <div class="docs-example">
-                <div class="pro-box pro_custom border">
-                    <div class="title">
+                <div class="p-box border">
+                    <div class="p-box-head">
+                        <a class="link-more fr" href="">更多 &raquo;</a>
                         <h4>标题 <small>一些说明</small></h4>
-                        <a class="link-more" href="">更多 &raquo;</a>
                     </div>
-                    <div class="content" style="height:100px;">
-                        <p>这是列表或其它内容</p>
+                    <div class="p-box-content">
+                        <p>box-content 有默认内边距</p>
                     </div>
                 </div>
             </div>

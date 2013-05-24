@@ -42,6 +42,7 @@
 
 
 /* Components: Nav */
+@import "tpl.css";
 @import "navs.css";
 @import "navbar.css";
 @import "breadcrumbs.css";
