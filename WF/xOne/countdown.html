@@ -39,21 +39,23 @@
             <dd><span class="time_format">2531275871</span></dd>
             
             <dt>自定义结束提醒：</dt>
-            <dd><span class="time_tips">10000</span></dd>
+            <dd><span class="time_tips">5000</span></dd>
         </dl>
     </div>
 <pre class="prettyprint linenums">
+&lt;span class="time"&gt;5000&lt;/span&gt;  标签内为倒计时间
+
 &lt;script&gt;
 $(function(){
     // 默认调用倒计时 
     $("span.time").ui("countdown");
     
-    // 自定义参数
+    // 自定义参数说明
     $("span.countdown").ui("countdown",{
-        format: "dd:hh:mm:ss",  // 时间format 现支持 dd:hh:mm:ss(默认) hh:mm:ss dd:hh:mm mm:ss 四种格式
-        prezero: true,  // 前导零
-        effect : false,  // 支持自定义格式
-        overtips : "已结束"
+        format: "dd:hh:mm:ss",  // 自定义倒计时类型 现支持 dd:hh:mm:ss(默认) hh:mm:ss dd:hh:mm mm:ss 四种格式
+        prezero: true,  // 设置前导零
+        effect : false,  // 自定义样式效果
+        overtips : "已结束"  // 自定义结束提醒
     });
 });
 &lt;/script&gt;
