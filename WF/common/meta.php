@@ -15,6 +15,7 @@
 
 <link rel="stylesheet" href="xOne/less/pandora.css">
 <link rel="stylesheet" href="xOne/less/docs.css">
+<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
 
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->

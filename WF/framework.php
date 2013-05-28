@@ -32,7 +32,7 @@
 
             <h3>常用功能类</h3>
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 normalize.css 无差异样式及清除浮动
     reset.css 传统重设样式
 combo.css 便捷组合样式表
@@ -104,7 +104,7 @@ array.forEach(function(item) {
 console.log(html);
 </script>
 -->
-<pre>
+<pre class="prettyprint linenums">
 &lt;i class="iconfont" title="灯泡"&gt;&amp;#x00E3;&lt;/i&gt;
 </pre>
             

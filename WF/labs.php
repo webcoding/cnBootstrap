@@ -29,7 +29,7 @@
             <p>常用的JS代码段，很有用处，值得收集！</p>
             
             <h3>瀑布广告 <small><a href="demo/waterfall.html">查看demo</a></small></h3>
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 &lt;script&gt;
 $(function(){
     // html代码
@@ -70,10 +70,10 @@ $(function(){
 })
 &lt;/script&gt;
 </pre>
-            <h3>滚动悬浮</h3>
+            <h3>跟随滚动 <small><a href="demo/smartfloat.html">查看demo</a></small></h3>
             <p>实现滚动后一定位置后，某内容悬浮在特定位置</p>
             <p>注意事项：实现此浮动的标签需要默认具备定位属性，如position:absolute;</p>
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 &lt;script&gt;
 $.fn.smartFloat = function() {
     var position = function(element) {
@@ -105,7 +105,7 @@ $.fn.smartFloat = function() {
 };
 
 //绑定
-$(".navbar").smartFloat();
+$("#float").smartFloat();
 &lt;/script&gt;
 </pre>
             

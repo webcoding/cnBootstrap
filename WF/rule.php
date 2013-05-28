@@ -36,7 +36,7 @@
         
         <section id="document">
 		<h1>文档结构</h1>
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 
 </pre>
 
@@ -147,7 +147,7 @@
                 <li>for|type|href</li>
             </ul>
             <p>比如你的代码看起来应该像这样:</p>
-<pre>
+<pre class="prettyprint linenums">
 &lt;a class="" id="" data-modal="" href=""&gt;链接示例&lt;/a&gt;
 </pre>
         </section>
@@ -157,7 +157,7 @@
         <section id="css">
             <h2>CSS 书写规范</h2>
             <p>外部CSS引用，必须使用如下格式( rel 在前，href 在后，无 type="text/css" 及 charset )：</p>
-            <pre>&lt;link rel="stylesheet" href="http://pic.lvmama.com/styles/v3/combo.css" &gt;</pre>
+            <pre class="prettyprint linenums">&lt;link rel="stylesheet" href="http://pic.lvmama.com/styles/v3/combo.css" &gt;</pre>
             <h3>CSS 注意事项</h3>
             <ul>
                 <li>无特殊说明，编码统一为utf-8；</li>

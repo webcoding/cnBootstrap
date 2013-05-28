@@ -159,7 +159,7 @@
             </ul>
             
             <p><b>注意：</b>确保样式的安全使用，尽量把样式定义在相应的容器中，而不是作为全局使用</p>
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 /* 全局样式：
  * 除非非常通用，不允许新建全局样式，如果你要建，请先问一下晓寒，不然可能随时被干掉（^_^）
  */
@@ -184,7 +184,7 @@
                     <button class="btn btn-orange">居中按钮</button>
                 </p>
             </div>
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 &lt;p class="tc metro_style"&gt;
     &lt;button class="btn btn-orange"&gt;居中按钮&lt;/button&gt;
 &lt;/p&gt;
@@ -197,7 +197,7 @@
             <h2>开始使用</h2>
             
             <p>本项目已经开始在生产线测试使用，样式文件为 core.css 如下:</p>
-<pre>
+<pre class="prettyprint linenums">
 reset.css   |-- core.css
 combo.css   |
 buttons.css |
