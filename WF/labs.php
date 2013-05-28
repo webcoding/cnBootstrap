@@ -70,6 +70,47 @@ $(function(){
 })
 &lt;/script&gt;
 </pre>
+            <h3>滚动悬浮</h3>
+            <p>实现滚动后一定位置后，某内容悬浮在特定位置</p>
+            <p>注意事项：实现此浮动的标签需要默认具备定位属性，如position:absolute;</p>
+<pre class="prettyprint">
+&lt;script&gt;
+$.fn.smartFloat = function() {
+    var position = function(element) {
+        var top = element.position().top, pos = element.css("position");
+        $(window).scroll(function() {
+            var scrolls = $(this).scrollTop();
+            if (scrolls > top) {
+                if (window.XMLHttpRequest) {
+                    element.css({
+                        position: "fixed",
+                        top: 0
+                    });    
+                } else {
+                    element.css({
+                        top: scrolls
+                    });    
+                }
+            }else {
+                element.css({
+                    position: "absolute",
+                    top: top
+                });    
+            }
+        });
+    };
+    return $(this).each(function() {
+        position($(this));                         
+    });
+};
+
+//绑定
+$(".navbar").smartFloat();
+&lt;/script&gt;
+</pre>
+            
+            
+            
         </section>
         
         

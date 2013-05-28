@@ -116,6 +116,11 @@
                 <a class="todo" href="###">autocomplete <small>自动补全</small></a>
             </div>
             
+            <h3>常用 JS 代码段</h3>
+            <div class="modules">
+                <a class="done" href="demo/waterfall.html">waterfall <small>瀑布广告</small></a>
+                <a class="doing" href="demo/smartfloat.html">smartfloat <small>滚动浮动</small></a>
+            </div>
             <h3>主要项目案例 DEMO <small>内网访问</small></h3>
             <div class="demolist">
                 <dl class="dl-hor">
