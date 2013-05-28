@@ -28,7 +28,7 @@
             <h1>JS代码段</h1>
             <p>常用的JS代码段，很有用处，值得收集！</p>
             
-            <h3>瀑布广告 <small><a href="xOne/waterfall.html">查看demo</a></small></h3>
+            <h3>瀑布广告 <small><a href="demo/waterfall.html">查看demo</a></small></h3>
 <pre class="prettyprint">
 &lt;script&gt;
 $(function(){
