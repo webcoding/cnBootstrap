@@ -392,18 +392,9 @@ span.done  { background: #0b0; }
 
 
 
-/* .tag 标签内使用 arial 字体垂直居中表现很好
- * author: linjianfeng@baixing.com
- */
-.tag{font-family:Arial,sans-serif;display:inline-block;padding:0 3px;padding:1px 3px 0\9;background:#eee;margin:0 3px;border-radius:2px;color:#888!important;}
-.tag-blue, .tag-green, .tag-red, a.tag:hover{color:#fff!important;}
-.tag-blue{background:#08c;}
-.tag-green{background:#5ba533;}
-.tag-red{background:#f36;}
-a.tag:hover{background:#888;text-decoration:none;color:#fff!important;}
-
 /* module test */
-.ui-tiptext,.ui-tiptext-container{ margin-bottom:10px;}
+.ui-tiptext,
+.ui-tiptext-container{ margin-bottom:10px;}
 .ui-tiptext-container .ui-tiptext{ margin-bottom:0;}
 .ui-tipbox,
 .ui-poptip{ 

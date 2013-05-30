@@ -335,6 +335,26 @@
             <h3>轻松实现折叠效果</h3>
             <p>当没有任何内容时，可以很方便的将标签和徽章折叠起来（通过CSS的 <code>:empty</code>  选择器）。</p>
             
+            <h3>特定功能标签 <small>促销、返现、提示</small></h3>
+            <div class="docs-example">
+                
+                <span class="tagcc">优惠活动</span> <br>
+                
+                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣</em><i>7.9折</i></span> <br>
+                
+                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>销量</em><i>1208</i></span> <br>
+                
+                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>返</em><i>5元</i></span> <br>
+                
+                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣返现</em><i>20元</i></span> <br>
+                
+                <h4>放在段落中看一下：<small>默认设置了4px左边距，保证连用标签的间距</small></h4>
+                
+                <p class="f12">这是一个一般标签<span class="tagcc">优惠活动</span><span class="tagcc">促销产品</span>，还有打折标签<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣</em><i>7.9折</i></span>销量促销标签<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>销量</em><i>1208</i></span>以及点评返现标签<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>返</em><i>5元</i></span>，并且这些标签具备一定的弹性<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣返现</em><i>20元</i></span>，标签内的文字可以适度的变化。</p>
+                
+                
+            </div>
+            
         </section>
         
         

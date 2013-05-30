@@ -107,3 +107,88 @@ a.badge:focus {
 .btn-mini .badge {
   top: 0;
 }
+
+
+
+/* .tag 标签内使用 arial 字体垂直居中表现很好
+ * author: linjianfeng@baixing.com
+ */
+.tag {
+    font-family: Arial,sans-serif;
+    display: inline-block;
+    padding: 0 3px;
+    padding: 1px 3px 0\9;
+    background: #eee;
+    margin: 0 3px;
+    border-radius: 2px;
+    color: #888 !important;
+}
+.tag-blue, 
+.tag-green, 
+.tag-red, 
+a.tag:hover {
+    color: #fff !important;
+}
+.tag-blue { background: #08c; }
+.tag-green { background: #5ba533; }
+.tag-red { background: #f36; }
+a.tag:hover { 
+    background: #888;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+
+/* Other tags: tagcc,tagback */
+
+.tagcc,
+.tagback {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    cursor: default;
+}
+
+.tagcc {
+    padding: 0 4px;
+    background: #ff9614;
+    color: #fff;
+    height: 16px;
+    line-height: 16px;
+}
+
+.tagback {
+    display: inline-block;
+    color: #ff9614;
+    border: 1px solid #ff9614;
+    height: 14px;
+    line-height: 14px;
+}
+.tagback:hover {
+    text-decoration: none;
+    color: #ff9614;
+}
+.tagback em,
+.tagback i { 
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    height: 100%;
+}
+.tagback em {
+    display: inline-block;
+    float: left;
+    padding: 0 2px;
+    background: #ff9614;
+    color: #fff;
+}
+.tagback i {
+    padding: 0 3px;
+    min-width: 30px;
+    _width: 30px;
+    text-align: center;
+}
+
+

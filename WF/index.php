@@ -45,7 +45,7 @@
         
         
         <section id="todo">
-            <h1>项目规划 <small><span class="label todo">todo</span><span class="label doing">doing</span><span class="label done">done</span></small></h1>
+            <h1>项目规划 <small><span class="label todo" title="计划模块">todo</span><span class="label doing" title="调试中...">doing</span><span class="label done" title="已完成，可用于生产线">done</span></small></h1>
             
             <p><b>注意：</b> 开发模块组件之前请严格按照 <a class="B" href="rule.php">代码开发规范</a> 执行。</p>
             
@@ -53,7 +53,7 @@
             <div class="modules">
                 <a class="done" href="xOne/less/normalize.css">normalize.css <small>无差异化</small></a>
                 <a class="done" href="xOne/less/reset.css">reset.css <small>重设样式</small></a>
-                <a class="done" href="xOne/typo.html">typo.css <small>排版样式</small></a>
+                <a class="doing" href="xOne/typo.html">typo.css <small>排版样式</small></a>
                 <a class="doing" href="xOne/less/combo.css">combo.css <small>组合样式</small></a>
                 <a class="doing" href="framework.php#iconfont">icon/iconfont <small>图标/字体集</small></a>
                 <a class="todo" href="###">grid <small>栅格系统</small></a>
@@ -70,13 +70,13 @@
                 <a class="todo" href="###">filter <small>类目过滤</small></a>
                 <a class="todo" href="###">icons <small>小图标</small></a>
                 <a class="doing" href="module.php#poptip">poptip <small>提示层</small></a>
-                <a class="done" href="module.php#tiptext">tiptext <small>提示文本</small></a>
-                <a class="done" href="module.php#tipbox">tipbox <small>提示框</small></a>
+                <a class="doing" href="module.php#tiptext">tiptext <small>提示文本</small></a>
+                <a class="doing" href="module.php#tipbox">tipbox <small>提示框</small></a>
                 
                 <a class="doing" href="xOne/tables.html">table <small>表格</small></a>
                 <a class="done" href="xOne/nav.html">nav <small>导航</small></a>
                 <a class="doing" href="xOne/topbar.html">topbar <small>顶部导航</small></a>
-                <a class="done" href="module.php#breadcrumb">breadcrumb <small>面包屑</small></a>
+                <a class="doing" href="module.php#breadcrumb">breadcrumb <small>面包屑</small></a>
                 <a class="done" href="xOne/paging.html">paging <small>分页</small></a>
                 
                 <a class="todo" href="###">dropdown <small>下拉菜单</small></a>
@@ -96,7 +96,7 @@
             <div class="modules">
                 <a class="doing" href="###">slides <small>图片轮播</small></a>
                 <a class="todo" href="###">imgscoll <small>图片滚动</small></a>
-                <a class="todo" href="###">lazyload <small>延迟加载</small></a>
+                <a class="doing" href="###">lazyload <small>延迟加载</small></a>
                 <a class="done" href="xOne/countdown.html">countdown <small>倒计时</small></a>
                 <a class="done" href="xOne/tooltip.html">tooltip <small>工具提醒</small></a>
                 <a class="todo" href="###">tips <small>浮层提示</small></a>
@@ -104,7 +104,7 @@
                 <a class="todo" href="###">selectbox <small>下拉选项</small></a>
                 <a class="todo" href="###">dropdown <small>下拉菜单</small></a>
                 <a class="doing" href="###">tab <small>标签切换</small></a>
-                <a class="todo" href="###">sort <small>多维排序</small></a>
+                <a class="doing" href="###">sort <small>多维排序</small></a>
                 <a class="todo" href="###">pading <small>分页</small></a>
                 <a class="todo" href="###">modal <small>弹出对话框</small></a>
                 <a class="todo" href="###">stars <small>星星打分</small></a>
@@ -119,7 +119,7 @@
             <h3>常用 JS 代码段</h3>
             <div class="modules">
                 <a class="done" href="demo/waterfall.html">waterfall <small>瀑布广告</small></a>
-                <a class="doing" href="demo/smartfloat.html">smartfloat <small>滚动浮动</small></a>
+                <a class="done" href="demo/smartfloat.html">smartfloat <small>滚动浮动</small></a>
             </div>
             <h3>主要项目案例 DEMO <small>内网访问</small></h3>
             <div class="demolist">
