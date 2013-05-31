@@ -14,7 +14,7 @@
 
 </style>
 </head>
-<body>
+<body id="xhindex">
 <div class="topbar">
     <div class="wrap">topbar</div>
 </div>
@@ -71,17 +71,13 @@ $(function(){
 $(function(){
     // html代码
     var _activebox = '<div id="indexSilde" style="width:980px;margin:0 auto;position:relative;overflow:hidden;height:0;">'
-            + '<div id="xslide1" style="position:absolute;z-index:11;top:0;display:none;">'
-            + '<a target="_blank" href="http://zhounianqing.lvmama.com/?losc=019677">'
-            + '<img src="http://pic.lvmama.com/img/v3/coupon.jpg" width="980" height="80">'
-            + '</a></div>'
-            + '<div id="xslide2" style="position:relative;top:0;z-index:10;">'
-            + '<a target="_blank"  href="http://zhounianqing.lvmama.com/?losc=019677">'
-            + '<img src="http://pic.lvmama.com/img/v3/couponbig.jpg" width="980" height="500">'
-            + '</a></div>'
-            + '</div>';
+             + '<div id="xslide1" style="position:absolute;z-index:11;top:0;display:none;"><a target="_blank" href="http://zhounianqing.lvmama.com/?losc=019677"><img src="http://pic.lvmama.com/img/v3/coupon.jpg" width="980" height="80" style="vertical-align:middle"></a></div>'
+             
+             + '<div id="xslide2" style="position:relative;top:0;z-index:10;"><a target="_blank"  href="http://zhounianqing.lvmama.com/?losc=019677"><img src="http://pic.lvmama.com/img/v3/couponbig.jpg" width="980" height="500" style="vertical-align:middle"></a></div></div>';
+    var _activeboxsmall = '<div id="coupon" style="width:980px;margin:0 auto;"><a target="_blank" href="http://zhounianqing.lvmama.com/?losc=019677"><img src="http://pic.lvmama.com/img/v3/coupon.jpg" width="980" height="80" style="vertical-align:middle"></a></div>'
     
-    $('.topbar').after(_activebox);
+    $('body:not("#xhindex")').find('.topbar').after(_activeboxsmall);
+    $('#xhindex .topbar').after(_activebox);
     
     // 瀑布广告
     var _indexSilde = $('#indexSilde');

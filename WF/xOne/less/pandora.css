@@ -58,6 +58,7 @@
 /* Components: Misc */
 @import "thumbnails.css";
 @import "media.css";
+@import "tags.css";
 @import "labels-badges.css";
 @import "progress-bars.css";
 @import "accordion.css";
