@@ -4,6 +4,10 @@
  * Adapted from https://github.com/webcoding/cnBootstrap
  */
 
+/*
+ * 在32个"style"方法(style, link, @import)后浏览器会忽略后面的样式(IE6/7/8)
+ */
+
 /* Core variables and mixins */
 /* Modify this for custom colors, font-sizes, etc
 @import "variables.css"; 
@@ -16,24 +20,24 @@
 @import "typo-dev.css";
 @import "combo.css";
 
-/* Grid system and page structure */
+/* Grid system and page structure
 @import "scaffolding.css";
 @import "grid.css";
 @import "layouts.css";
-
+ */
 /* Base CSS */
 @import "code.css";
 @import "forms.css";
 @import "tables.css";
 
-/* Components: common */
+/* Components: common 
 @import "module.css";
 @import "sprites.css";
 @import "dropdowns.css";
 @import "wells.css";
 @import "component-animations.css";
 @import "close.css";
-
+*/
 /* Components: Buttons & Alerts */
 @import "tips.css";
 @import "buttons.css";
@@ -41,10 +45,9 @@
 @import "alerts.css"; /* Note: alerts share common CSS with buttons and thus have styles in buttons.css */
 
 
-/* Components: Nav */
-@import "tpl.css";
+/* Components: Nav
 @import "navs.css";
-@import "navbar.css";
+@import "navbar.css"; */
 @import "breadcrumbs.css";
 @import "pagination.css";
 @import "pager.css";
@@ -60,12 +63,13 @@
 @import "media.css";
 @import "tags.css";
 @import "labels-badges.css";
+/*
 @import "progress-bars.css";
 @import "accordion.css";
 @import "carousel.css";
 @import "hero-unit.css";
-
-/* Utility classes */
+*/
+/* Utility classes 
 @import "utilities.css"; /* Has to be last to override when necessary */
 
 /* Plugin classes
