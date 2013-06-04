@@ -38,7 +38,18 @@
 		
 		<i class="tagcc" tip-content='订购份数越多将享受优惠越多'>多订优惠</i>
         
-        <i class="tagcc" tip-content='500积分抵扣5元（不与优惠券叠加使用）'>积分抵扣</i>
+        <i id="clonethis" class="tagcc" tip-content='500积分抵扣5元（不与优惠券叠加使用）'>积分抵扣</i>
+        
+        <br><br>
+        
+        <button id="clonebtn" class="btn" type="button">再添加一个标签</button>
+        
+        <br><br>
+        
+        <div id="test">
+            
+        
+        </div>
         
     </div>
 <pre class="prettyprint linenums">
@@ -51,19 +62,19 @@
 
 &lt;script src="http://pic.lvmama.com/min/index.php?f=js/new_v/jquery-1.7.2.min.js,/js/ui/lvmamaUI/lvmamaUI.js"&gt;&lt;/script&gt;
 $(function(){
-	$('.calendar').ui('lvtip',{
-	  templete : 2,
-	  place: 'bottom-left',
-	  offsetX: 0,
-	  event : "live"
+    $('.calendar').ui('lvtip',{
+        templete : 2,
+        place: 'bottom-left',
+        offsetX: 0,
+        events : "live"  //live方法有问题，后添加元素ui不被调用
     });
-	$('span[class=tagback]').ui('lvtip',{
-	  place: 'bottom'
+    $('span[class=tagback]').ui('lvtip',{
+        place: 'bottom'
     });
-	$('.tagcc').ui('lvtip',{
-	  place: 'bottom'
+    $('.tagcc').ui('lvtip',{
+        place: 'bottom',
+        events : "live"
     });
-
 });
 </pre>
 
@@ -72,19 +83,30 @@ $(function(){
 <script src="http://pic.lvmama.com/min/index.php?f=js/new_v/jquery-1.7.2.min.js,/js/ui/lvmamaUI/lvmamaUI.js"></script>
 <script>
 $(function(){
-	$('.calendar').ui('lvtip',{
-	  templete : 2,
-	  place: 'bottom-left',
-	  offsetX: 0,
-	  event : "live"
+    $('.calendar').ui('lvtip',{
+        templete : 2,
+        place: 'bottom-left',
+        offsetX: 0,
+        events : "live"
     });
-	$('span[class=tagback]').ui('lvtip',{
-	  place: 'bottom'
+    $('span[class=tagback]').ui('lvtip',{
+        place: 'bottom'
     });
-	$('.tagcc').ui('lvtip',{
-	  place: 'bottom'
+    $('.tagcc').ui('lvtip',{
+        place: 'bottom'
     });
-
+    
+    $('#clonebtn').click(function(){
+        $("span.tagcc").clone().appendTo("#test");
+        $("#test").append('<span class="tagback" tip-content="订购份数越多将享受优惠越多">多订优惠</span>');
+        $(this).unbind();
+        
+        //live方法有问题，后添加元素ui不被调用 暂时可以如下解决
+        $('.tagcc').ui('lvtip',{
+            place: 'bottom'
+        });
+    })
+    
 });
 </script>
 </body>
