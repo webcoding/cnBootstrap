@@ -9,7 +9,8 @@
 .tagcc,
 .tagback {
     display: inline-block;
-    margin-left: 4px;
+    vertical-align: text-top;
+    margin: 0 2px;
     font-size: 12px;
     font-style: normal;
     font-weight: normal;

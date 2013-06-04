@@ -99,6 +99,10 @@ a:visited {
     float: right;
     padding-top: 10px;
 }
+.search-util form {
+    margin: 0;
+}
+
 /*
 .google_style .searchbox input {
     -webkit-box-sizing: border-box;
@@ -265,6 +269,7 @@ a:visited {
 .sidebar small { 
     position: absolute;
     right: 11px;
+    font-size: 12px;
 }
 .main {
   overflow:hidden;

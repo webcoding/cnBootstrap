@@ -42,7 +42,10 @@
         </div>
     </div>
 </div> <!-- //.navbar -->
-</div>
+</div><!-- //.google_style -->
+
+<!--[if lt IE 8 ]>
 <div class="warning-bar">
     IE6/7 您的浏览器不受支持。详情请访问<a href="https://support.google.com/accounts/answer/1151309?hl=zh-CN">受支持的浏览器</a>。
 </div>
+<![endif]-->

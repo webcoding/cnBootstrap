@@ -10,10 +10,10 @@
 	<div class="sidebar">
         <ul class="nav none">
             <li><a href="#tpl">tpl <small>布局模板</small></a></li>
-            <li><a href="#box">box <small class="iconfont">区块盒子</small></a></li>
-            <li><a href="#list">list <small class="iconfont">列表</small></a></li>
-            <li><a href="#imglist">imglist <small class="iconfont">图片列表</small></a></li>
-            <li><a href="#imgtext">imgtext <small class="iconfont">图文混排</small></a></li>
+            <li><a href="#box">box <small>区块盒子</small></a></li>
+            <li><a href="#list">list <small>列表</small></a></li>
+            <li><a href="#imglist">imglist <small>图片列表</small></a></li>
+            <li><a href="#imgtext">imgtext <small>图文混排</small></a></li>
             <li><a href="#dropdown">dropdown <small>下拉菜单</small></a></li>
             
             <li><a href="#table">table <small>表格</small></a></li>
@@ -676,7 +676,7 @@
             <div class="docs-example">
                 <div class="ui-tipbox ui-tipbox-error">
                     <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="出错">&#xF045;</i>
+                        <i title="出错">&#xF045;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">错误标题</h3>
@@ -687,7 +687,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-message">
                     <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="提示">&#xF046;</i>
+                        <i title="提示">&#xF046;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">提示标题</h3>
@@ -698,7 +698,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-warning">
                     <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="警告">&#xF047;</i>
+                        <i title="警告">&#xF047;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">警告标题</h3>
@@ -709,7 +709,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-stop">
                     <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="阻止">&#xF048;</i>
+                        <i title="阻止">&#xF048;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">阻止标题</h3>
@@ -720,7 +720,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-success">
                     <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="成功">&#xF049;</i>
+                        <i title="成功">&#xF049;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">成功标题</h3>
@@ -731,7 +731,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-question">
                     <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="疑问">&#xF04A;</i>
+                        <i title="疑问">&#xF04A;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">疑问标题</h3>
@@ -742,7 +742,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-wait">
                     <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="等待">&#xF04B;</i>
+                        <i title="等待">&#xF04B;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">等待标题</h3>
