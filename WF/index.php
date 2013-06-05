@@ -139,6 +139,14 @@
                         <a target="_blank" href="http://10.3.1.41/v3/points-list.php">points-list</a>
                         <a target="_blank" href="http://10.3.1.41/v3/points-details.php">points-details</a>
                     </dd>
+                    <dt>频道页面</dt>
+                    <dd>
+                        <a target="_blank" href="http://10.3.1.41/v3/ticket.php">景点门票</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/freetour.php">周边游</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/destroute.php">国内游</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/abroad.php">出境游</a>
+                        <a target="_blank" href="http://10.3.1.41/v3/hotel.php">特色酒店</a>
+                    </dd>
                 </dl>
             </div>
             
