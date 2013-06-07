@@ -17,9 +17,157 @@
 <body>
 <div class="wrap">
     <h1>表单布局及应用实例</h1>
-    <p>这里实现一些应用实例，测试各种使用环境，方便调试引用等</p>
-    
+    <p>这里实现基本的四种表单布局实例，测试各种使用环境，方便调试引用等</p>
+    <h4>一些定制参数：</h4>
+    <ul>
+    	<li>表单基本单元 <small>control-group controls input-*</small></li>
+    	<li>四种布局 <small>form[-default] .form-inline .form-hor .form-search</small></li>
+    	<li>六种尺寸 <small>.input-min .input-mini .input-small .input-medium .input-large .input-xxlarge</small> </li>
+    	<li>定制 <small>.input-date .help-block .help-inline</small> </li>
+    </ul>
     <div class="docs-example">
+        <h3>基本表单控件 <small>无论如何复杂的表单布局，都由基本表单控件组合构成</small></h3>
+        <form class="form" action="#">
+            <h4>input</h4>
+            <div class="control-group">
+                <label class="control-label" for="textinput">文本输入框</label>
+                <div class="controls">
+                    <input class="input-text" id="textinput" name="" type="text" placeholder="placeholder">
+                    <p class="help-block">例如 块级的帮助文本。</p>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">文本输入框</label>
+                <div class="controls">
+                    <input class="input-text input-password" id="" name="" type="password" placeholder="密码框">
+                    <p class="help-block">帮助信息</p>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">文本域</label>
+                <div class="controls">
+                    <textarea class="" id="textarea" name="textarea">default text</textarea>
+                </div>
+            </div>
+            
+            <h4>单/复选项</h4>
+            <div class="control-group">
+                <label class="control-label" for="">单选项</label>
+                <div class="controls">
+                    <label class="radio">
+                        <input class="input-radio" type="radio" name="radios" id="" value="" checked="checked"> 选项一
+                    </label>
+                    <label class="radio">
+                        <input class="input-radio" type="radio" name="radios" id="" value=""> 选项二
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">内联单选项</label>
+                <div class="controls">
+                    <label class="radio inline">
+                        <input class="input-radio" type="radio" name="sex" id="" value=""> 男
+                    </label>
+                    <label class="radio inline">
+                        <input class="input-radio" type="radio" name="sex" id="" value=""> 女
+                    </label>
+                    <label class="radio inline">
+                        <input class="input-radio" type="radio" name="sex" id="" value=""> 保密
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">复选项</label>
+                <div class="controls">
+                    <label class="checkbox">
+                        <input class="input-checkbox" type="checkbox" name="radios" id="" value="" checked="checked"> 选项一
+                    </label>
+                    <label class="checkbox">
+                        <input class="input-checkbox" type="checkbox" name="radios" id="" value=""> 选项二
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">内联复选项</label>
+                <div class="controls">
+                    <label class="checkbox inline">
+                        <input class="input-checkbox" type="checkbox" name="sex" id="" value=""> HTML
+                    </label>
+                    <label class="checkbox inline">
+                        <input class="input-checkbox" type="checkbox" name="sex" id="" value=""> CSS
+                    </label>
+                    <label class="checkbox inline">
+                        <input class="input-checkbox" type="checkbox" name="sex" id="" value=""> JS
+                    </label>
+                </div>
+            </div>
+            
+            
+            <h4>下拉框/菜单</h4>
+            <div class="control-group">
+                <label class="control-label" for="selectbasic">单选菜单</label>
+                <div class="controls">
+                    <select class="select" id="selectbasic" name="selectbasic">
+                        <option>选项一</option>
+                        <option>选项二</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="selectbasic">多选菜单</label>
+                <div class="controls">
+                    <select class="selects" id="selectmultiple" name="selectmultiple" multiple="multiple">
+                        <option>选项一</option>
+                        <option>选项二</option>
+                    </select>
+                </div>
+            </div>
+            
+            <h4>按钮</h4>
+            <div class="control-group">
+                <label class="control-label" for="selectbasic">上传文件</label>
+                <div class="controls">
+                    <input class="input-file" id="filebutton" name="filebutton" type="file">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="selectbasic">按钮</label>
+                <div class="controls">
+                    <button id="singlebutton" name="singlebutton" class="btn btn-success">按钮</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="selectbasic">按钮</label>
+                <div class="controls">
+                    <button id="button1id" name="button1id" class="btn btn-inverse disabled" disabled>不可用状态</button>
+                    <button id="button2id" name="button2id" class="btn btn-orange">可用状态</button>
+                    <p class="help-block">关于disabled状态的按钮，需要再设置一种表现形式 btn-disabled，暂定灰色，不可点击状态(低版本IE 会添加文字投影)</p>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+        </form>
+        
+        
+        
+        <h3>内联布局 <small>同一行</small></h3>
+        
+        
+        
+        <div class="form-inline">
+            
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="docs-example hide">
+    
+    
 <table>
 	<tr>
 		<td class="form-small">

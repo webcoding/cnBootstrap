@@ -1,0 +1,28 @@
+
+/* ------------------------------------------------------------
+  form.css v1.0
+  Adapted from  Bootstrap forms.css
+------------------------------------------------------------ */
+
+button,
+input {
+    line-height: normal;
+    /* IE6/7 内间距宽度一致 */	
+    *overflow: visible; 
+}
+
+i.req {
+    padding-right: 3px;
+    font-style: normal;
+    font-weight: normal;
+    color: red;
+}
+
+
+/* IE6 */
+input.input-radio,
+input.input-checkbox {
+    width:16px;
+	height:16px;
+}
+label.inline { *display:inline;}
