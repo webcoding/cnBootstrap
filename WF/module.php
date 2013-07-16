@@ -313,7 +313,7 @@
                 </tbody>
             </table>
             
-            <h3>tag <small>标签</small></h3>
+            <h3>tags标签 <small>依赖<a href="xOne/less/tags.css">tags.css</a></small></h3>
             <div class="docs-example">
                 <h4>Intelligent son <small>聪明的儿子</small></h4>
                 <p>
@@ -332,28 +332,79 @@
         	</div>
             
             
-            <h3>轻松实现折叠效果</h3>
-            <p>当没有任何内容时，可以很方便的将标签和徽章折叠起来（通过CSS的 <code>:empty</code>  选择器）。</p>
-            
-            <h3>特定功能标签 <small>促销、返现、提示</small></h3>
-            <div class="docs-example">
+            <h3>lvmama标签统一 <small>促销、返现、提示</small></h3>
+            <div class="docs-example f12">
+                <p>默认设置了margin:0 2px，保证连用标签的间距(换行会产生一个空格)，使用时注意保持统一</p>
+                <h3>纯色标签 tags10* <small></small></h3>
+                <p>&lt;span class="tags101"&gt;文字&lt;/span&gt;
+                    <span class="tags101">多人多惠</span>
+                    <span class="tags101">促销</span>
+                </p>
+                <p>&lt;span class="tags102"&gt;文字&lt;/span&gt;
+                    <span class="tags102">元旦</span>
+                    <span class="tags102">国庆</span>
+                    <span class="tags102">端午</span>
+                    <span class="tags102">微旅游日</span>
+                    <span class="tags102">中秋</span>
+                    <span class="tags102">清明</span>
+                    <span class="tags102">五一</span>
+                </p>
+                <p>&lt;span class="tags103"&gt;文字&lt;/span&gt;
+                    <span class="tags103">热卖</span><br>
+                </p>
+                <p>&lt;span class="tags104"&gt;文字&lt;/span&gt;
+                    <span class="tags104">新品</span><br>
+                </p>
                 
-                <span class="tagcc">优惠活动</span> <br>
                 
-                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣</em><i>7.9折</i></span> <br>
-                
-                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>销量</em><i>1208</i></span> <br>
-                
-                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>返</em><i>5元</i></span> <br>
-                
-                <span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣返现</em><i>20元</i></span> <br>
-                
-                <h4>放在段落中看一下：<small>默认设置了4px左边距，保证连用标签的间距</small></h4>
-                
-                <p class="f12">这是一个一般标签<span class="tagcc">优惠活动</span><span class="tagcc">促销产品</span>，还有打折标签<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣</em><i>7.9折</i></span>销量促销标签<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>销量</em><i>1208</i></span>以及点评返现标签<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>返</em><i>5元</i></span>，并且这些标签具备一定的弹性<span class="tagback" tip-title="提示标题" tip-content="提示内容"><em>折扣返现</em><i>20元</i></span>，标签内的文字可以适度的变化。</p>
+                <h3>促销标签 tags20*</h3>
+                <p>
+                    &lt;span class="tags201"&gt;促销&lt;/span&gt; 
+                    <span class="tags201">信用卡促销</span>
+                    <span class="tags201">多人促销</span>
+                    <span class="tags201">早订惠</span>
+                    <span class="tags201">招 行</span>
+                </p>
                 
                 
+                <h3>分类标签 tags30*</h3>
+                <p>
+                    &lt;span class="tags301"&gt;超级自由行&lt;/span&gt; 
+                    <span class="tags301">超级自由行</span>
+                </p>
+                <p>
+                    &lt;span class="tags302"&gt;开心驴行&lt;/span&gt; 
+                    <span class="tags302">开心驴行</span>
+                </p>
+                
+                
+                <h3>放到文字中看看效果：标题中 <span class="tags101">多人多惠</span><span class="tagsback"><em>折扣</em><i>7.9折</i></span><span class="tags301">超级自由行</span></h3>
+        
+                <p>段落中：驴妈妈的<span class="tags101">多人多惠</span>、<span class="tags301">超级自由行</span>产品一直在<span class="tags103">热卖</span>，并且<span class="tags102">节假日</span>还时常发布<span class="tags104">新品</span>并伴随<span class="tags101">促销</span>活动<span class="tags302">开心驴行</span>，转发<span class="tags102">微博</span>还有好礼不断哦！</p>
+                
+                
+                <h3>返现类标签 <small>橙色</small></h3>
+                <p>
+                    <span class="tagsback" tip-title="提示标题" tip-content="提示内容"><em>折扣</em><i>7.9折</i></span>
+                        
+                    <span class="tagsback" tip-title="提示标题" tip-content="提示内容"><em>销量</em><i>1208</i></span>
+                    
+                    <span class="tagsback" tip-title="提示标题" tip-content="提示内容"><em>返</em><i>5元</i></span>
+                    
+                    <span class="tagsback" tip-title="提示标题" tip-content="提示内容"><em>折扣返现</em><i>20元</i></span>
+                    <pre>&lt;span class="tagsback" tip-title="提示标题" tip-content="提示内容"&gt;&lt;em&gt;折扣&lt;/em&gt;&lt;i&gt;7.9折&lt;/i&gt;&lt;/span&gt;</pre>
+                </p>
+                
+                <p><span class="tagsback tagblue" tip-title="提示标题" tip-content="提示内容"><em>送</em><i>积分100分</i></span></p>
+                
+                <p>关于 tooltip ，参看 <a target="_blank" href="xOne/tooltip.html">tooltip 工具提醒</a></p>
+                
+                <p>复杂标签测试： <span class="testtags" tip-title="提示标题" tip-content="提示内容"><em>折扣返现</em><i>20元</i></span></p>
             </div>
+            
+            
+            <h3>轻松实现折叠效果</h3>
+            <p>当没有任何内容时，可以很方便的将标签和徽章折叠起来（通过CSS的 <code>:empty</code>  选择器）。<small>针对低版本浏览器需要js修复支持</small></p>
             
         </section>
         
@@ -676,7 +727,7 @@
             <div class="docs-example">
                 <div class="ui-tipbox ui-tipbox-error">
                     <div class="ui-tipbox-icon">
-                        <i title="出错">&#xF045;</i>
+                        <i class="iconfont" title="出错">&#xF045;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">错误标题</h3>
@@ -687,7 +738,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-message">
                     <div class="ui-tipbox-icon">
-                        <i title="提示">&#xF046;</i>
+                        <i class="iconfont" title="提示">&#xF046;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">提示标题</h3>
@@ -698,7 +749,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-warning">
                     <div class="ui-tipbox-icon">
-                        <i title="警告">&#xF047;</i>
+                        <i class="iconfont" title="警告">&#xF047;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">警告标题</h3>
@@ -709,7 +760,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-stop">
                     <div class="ui-tipbox-icon">
-                        <i title="阻止">&#xF048;</i>
+                        <i class="iconfont" title="阻止">&#xF048;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">阻止标题</h3>
@@ -720,7 +771,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-success">
                     <div class="ui-tipbox-icon">
-                        <i title="成功">&#xF049;</i>
+                        <i class="iconfont" title="成功">&#xF049;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">成功标题</h3>
@@ -731,7 +782,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-question">
                     <div class="ui-tipbox-icon">
-                        <i title="疑问">&#xF04A;</i>
+                        <i class="iconfont" title="疑问">&#xF04A;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">疑问标题</h3>
@@ -742,7 +793,7 @@
                 
                 <div class="ui-tipbox ui-tipbox-wait">
                     <div class="ui-tipbox-icon">
-                        <i title="等待">&#xF04B;</i>
+                        <i class="iconfont" title="等待">&#xF04B;</i>
                     </div>
                     <div class="ui-tipbox-content">
                         <h3 class="ui-tipbox-title">等待标题</h3>

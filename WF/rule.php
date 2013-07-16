@@ -190,7 +190,34 @@
                 </li>
                 <li>避免0值设置单位, 例如, <code>margin: 0;</code> 而非 <code>margin: 0px;</code></li>
             </ul>
-        
+            <h4>为方便调试，css底部必须书写此css名称以及功能描述，如下：</h4>
+<pre class="prettyprint linenums">
+/* 
+ @名称: channel.css
+ @功能: 各大频道页样式 //注意适当的隔行划分
+ */
+
+/* 频道全局样式 */
+.col-w { width: 780px; float: right;}
+.aside { width: 200px; float: left;}
+
+
+/* 频道侧边栏 */
+.side-box { margin-bottom: 15px;}
+
+
+/* 频道主内容区域 */
+.ctitle { }
+
+
+/* 特色酒店 */
+.pro-search { }
+
+
+/* 火车票 */
+.ticket-search { }
+</pre>
+
             <h4>错误示例：</h4>
 <pre class="prettyprint linenums">
 .selector, .selector-secondary, .selector[type=text] {

@@ -32,6 +32,9 @@
             <dt>默认效果：</dt>
             <dd><span class="time">2531275871</span></dd>
             
+            <dt>调整时间差：</dt>
+            <dd><span class="timediff">2531275871</span></dd>
+            
             <dt>自定义效果：</dt>
             <dd><span class="countdown effect">2531275871</span></dd>
             
@@ -40,6 +43,7 @@
             
             <dt>自定义结束提醒：</dt>
             <dd><span class="time_tips">5000</span></dd>
+            
         </dl>
     </div>
 <pre class="prettyprint linenums">
@@ -55,7 +59,8 @@ $(function(){
         format: "dd:hh:mm:ss",  // 自定义倒计时类型 现支持 dd:hh:mm:ss(默认) hh:mm:ss dd:hh:mm mm:ss 四种格式
         prezero: true,  // 设置前导零
         effect : false,  // 自定义样式效果
-        overtips : "已结束"  // 自定义结束提醒
+        overtips : "已结束",  // 自定义结束提醒
+        timediff : 0  // 调整时间差，单位毫秒
     });
 });
 &lt;/script&gt;
@@ -69,6 +74,11 @@ $(function(){
 $(function(){
     // 调用倒计时
     $("span.time").ui("countdown");
+    
+    // 调整时间差
+	$("span.timediff").ui("countdown",{
+        timediff: -86400000
+    });
     
     // 调用自定义标签
 	$("span.countdown").ui("countdown",{
@@ -86,6 +96,8 @@ $(function(){
         format: "mm:ss",
         overtips: "2012世界末日没来？钱用光了？傻了吧！！！"
     });
+    
+    
 });
 
 </script>

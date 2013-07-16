@@ -88,6 +88,10 @@ html {
     -ms-text-size-adjust: 100%; /* 3 */
 }
 
+body {
+    margin: 0;
+}
+
 /**
  * Remove default margin.
 
@@ -322,7 +326,6 @@ legend {
  * 3. 统一外边距 in Firefox 4+, Safari 5, and Chrome.
  */
 
-body,
 button,
 input,
 select,
@@ -330,6 +333,7 @@ textarea {
     font-family: inherit; /* 1 */
     font-family: Tahoma,Arial,\5b8b\4f53,sans-serif; /* 1 */
     font-size: 100%; /* 2 */
+    line-height: 1;
     margin: 0; /* 3 */
 }
 

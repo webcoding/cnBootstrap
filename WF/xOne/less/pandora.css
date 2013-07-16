@@ -27,6 +27,8 @@
  */
 /* Base CSS */
 @import "code.css";
+@import "buttons.css";
+@import "button-groups.css";
 @import "form.css";
 @import "tables.css";
 
@@ -40,8 +42,7 @@
 */
 /* Components: Buttons & Alerts */
 @import "tips.css";
-@import "buttons.css";
-@import "button-groups.css";
+
 @import "alerts.css"; /* Note: alerts share common CSS with buttons and thus have styles in buttons.css */
 
 

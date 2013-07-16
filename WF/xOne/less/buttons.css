@@ -222,7 +222,7 @@ input[type="button"].btn-block {
   background-color: #c67605 \9;
 }
 
-/* 新增样式 浅黄色buff 橙色orange 玫红色pink 白色white */
+/* 新增样式 浅黄色buff 橙色orange 玫红色pink 白色white 暗灰色dark */
 .btn-buff {
   color: #555555;
   background-color: #fdf7ed;
@@ -351,6 +351,40 @@ input[type="button"].btn-block {
 .btn-white:active,
 .btn-white.active {
   background-color: #f0f0f0 \9;
+}
+
+.btn-dark {
+  color: #333;
+  background-color: #aaaaaa;
+  background-image: -moz-linear-gradient(top, #cccccc, #aaaaaa);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#aaaaaa));
+  background-image: -webkit-linear-gradient(top, #cccccc, #aaaaaa);
+  background-image: -o-linear-gradient(top, #cccccc, #aaaaaa);
+  background-image: linear-gradient(to bottom, #cccccc, #aaaaaa);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcccccc', endColorstr='#ffaaaaaa', GradientType=0);
+  border-color: #dddddd #aaaaaa #cccccc;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #cccccc;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark.hover,
+.btn-dark.active,
+.btn-dark.disabled,
+.btn-dark[disabled] {
+  color: #333;
+  background-color: #cccccc;
+  background: linear-gradient(to bottom, #dddddd, #999999);
+  *background-color: #aaaaaa;
+}
+.btn-dark:active,
+.btn-dark.active {
+  background-color: #aaaaaa \9;
 }
 
 .btn-danger {
