@@ -12,26 +12,30 @@ span.as-rc-cnt{
     padding:0 10px;height:30px;line-height: 30px;color:#333;  
     background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#e3e3e3));
     background: -moz-linear-gradient(top,  #fefefe,  #e3e3e3);
+    background: -ms-linear-gradient(top, #fefefe,  #e3e3e3);
     background: -o-linear-gradient(left, #fefefe, #e3e3e3);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#e3e3e3');
-    background: linear-gradient(left, #fefefe, #e3e3e3);
+    background: linear-gradient(#fefefe, #e3e3e3);
 } 
 a.as-rc-wrap:hover{border-color:#d1d1d1;}
 a.as-rc-wrap:hover .as-rc-cnt{
     border-color: #d1d1d1;      
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e3e3e3));
     background: -moz-linear-gradient(top,  #fff,  #e3e3e3);
+    background: -ms-linear-gradient(top, #ffffff,  #e3e3e3);
     background: -o-linear-gradient(top, #fff, #e3e3e3);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e3e3e3');
-    background: linear-gradient(top, #fff, #e3e3e3);
+    background: linear-gradient(#fff, #e3e3e3);
 }
 
 .linearbox{
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dddddd));
     background: -moz-linear-gradient(top,  #fff,  #dddddd);
+    background: -ms-linear-gradient(top, #ffffff,  #e3e3e3);
     background: -o-linear-gradient(top, #fff, #dddddd);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd');
-    background: linear-gradient(top, #fff, #dddddd);
+    background: linear-gradient( #fff, #dddddd);
+    /* 原 background: linear-gradient(top, #fff, #dddddd);的写法(添加top)不被浏览器支持 */
 }
 
 .linearbox .as-rc-cnt{
@@ -40,6 +44,52 @@ a.as-rc-wrap:hover .as-rc-cnt{
 .linearbox{
     width: 400px;
 }
+
+
+div.linear {
+    width:200px;
+    height:100px;
+    margin-top:10px;
+    border:1px solid #ddd;
+}
+
+.test{
+    background:-moz-linear-gradient(#fff,#333);
+    background:-webkit-gradient(linear,center top,center bottom,from(#fff),to(#333));
+    background:-webkit-linear-gradient(#fff,#333);
+    background:-o-linear-gradient(#fff,#333);
+    background:-ms-linear-gradient(#fff,#333);
+    background:linear-gradient(#fff,#333);
+}
+.test2{
+    background:-moz-linear-gradient(#000,#f00 50%,#090);
+    background:-webkit-gradient(linear,center top,center bottom,from(#000),color-stop(.5,#f00),to(#090));
+    background:-webkit-linear-gradient(#000,#f00 50%,#090);
+    background:-o-linear-gradient(#000,#f00 50%,#090);
+    background:-ms-linear-gradient(#000,#f00 50%,#090);
+    background:linear-gradient(#000,#f00 50%,#090);
+}
+.test3{
+    background:-moz-linear-gradient(left center,#000 20%,#f00 50%,#090 80%);
+    background:-webkit-gradient(linear,left center,right center,color-stop(.2,#000),color-stop(.5,#f00),color-stop(.8,#090));
+    background:-webkit-linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+    background:-o-linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+    background:-ms-linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+    background:linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+}
+.test4{
+    background:-moz-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:-webkit-gradient(linear,left bottom,right top,from(#000),color-stop(.5,#f00),to(#090));
+    background:-webkit-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:-o-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:-ms-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:linear-gradient(45deg,#000,#f00 50%,#090);
+}
+
+.test2, .test3, .test4 {
+    color: #fff;
+}
+
 </style>
 </head>
 <body>
@@ -59,15 +109,61 @@ a.as-rc-wrap:hover .as-rc-cnt{
             花开了，会有凋谢的一天；星星是璀璨的，也会有消失光芒的一天。这个地球，太阳，这个银河系，甚至连整个宇宙，都有死亡的时候。人的一生和这些相比，不过是一眨眼那么短暂而已。就在那样一个瞬间，人们诞生、欢笑、流泪、战斗、受伤、欢喜、悲伤……憎恨某人，爱上某人，一切的一切，都只是刹那间的邂逅。终究将归入死的永眠。
             </div>
         </div>
+        
+        
+        <div class="linear test">test</div>
+        <div class="linear test2">test2</div>
+        <div class="linear test3">test3</div>
+        <div class="linear test4">test4</div>
     </div>
 <pre class="prettyprint linenums">
 .linearbox{
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dddddd));
     background: -moz-linear-gradient(top,  #fff,  #dddddd);
+    background: -ms-linear-gradient(top, #ffffff,  #e3e3e3);
     background: -o-linear-gradient(top, #fff, #dddddd);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd');
-    background: linear-gradient(top, #fff, #dddddd);
+    background: linear-gradient( #fff, #dddddd);
+    /* 原 background: linear-gradient(top, #fff, #dddddd);的写法(添加top)不被浏览器支持 */
 }
+
+.test{
+    background:-moz-linear-gradient(#fff,#333);
+    background:-webkit-gradient(linear,center top,center bottom,from(#fff),to(#333));
+    background:-webkit-linear-gradient(#fff,#333);
+    background:-o-linear-gradient(#fff,#333);
+    background:-ms-linear-gradient(#fff,#333);
+    background:linear-gradient(#fff,#333);
+}
+
+.test2{
+    background:-moz-linear-gradient(#000,#f00 50%,#090);
+    background:-webkit-gradient(linear,center top,center bottom,from(#000),color-stop(.5,#f00),to(#090));
+    background:-webkit-linear-gradient(#000,#f00 50%,#090);
+    background:-o-linear-gradient(#000,#f00 50%,#090);
+    background:-ms-linear-gradient(#000,#f00 50%,#090);
+    background:linear-gradient(#000,#f00 50%,#090);
+}
+
+.test3{
+    background:-moz-linear-gradient(left center,#000 20%,#f00 50%,#090 80%);
+    background:-webkit-gradient(linear,left center,right center,color-stop(.2,#000),color-stop(.5,#f00),color-stop(.8,#090));
+    background:-webkit-linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+    background:-o-linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+    background:-ms-linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+    background:linear-gradient(0deg,#000 20%,#f00 50%,#090 80%);
+}
+
+.test4{
+    background:-moz-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:-webkit-gradient(linear,left bottom,right top,from(#000),color-stop(.5,#f00),to(#090));
+    background:-webkit-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:-o-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:-ms-linear-gradient(45deg,#000,#f00 50%,#090);
+    background:linear-gradient(45deg,#000,#f00 50%,#090);
+}
+
+
 </pre>
 
 	<h3>问题及注意事项：</h3>
