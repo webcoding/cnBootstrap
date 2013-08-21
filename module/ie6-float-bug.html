@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>测试IE6的浮动元素对其他元素对齐的影响问题</title>
+<style>
+*{margin:0;padding:0;}
+body{zoom:1;}
+body .hide{display: none;}
+.xdl {
+    padding-left: 120px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height:22px;
+}
+.xdl .dt,
+.xdl dt {
+    float: left;
+    display: inline-block;
+    *display:inline;
+    width: 110px;
+    margin-left: -120px;
+    text-align: right;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+}
+.xdl .dd,
+.xdl dd {
+    border: 1px solid #ddd;
+}
+.xdl dd p{border:1px solid red}
+
+.content{zoom:1;}
+
+
+/* 1. dd 中不能添加zoom:1，否则引起IE下dt后dd第一行的dd外空格问题，导致垂直dd左边框不对齐
+ * 2. 但dt左浮动，仍然出现dd内的空格问题，第一行(准确的说是dt在高度上对应了的dd行数)的内容仍然不对齐
+ * 3. 在.dd外嵌套一层并添加zoom:1，bug解除
+**/
+</style>
+</head>
+<body>
+	<h2>测试IE6的浮动元素对其他元素对齐的影响问题</h2>
+    
+    <dl class="xdl">
+    	<dt>姓名：</dt>
+    	<dd>王小二</dd>
+    	<dd>王小二</dd>
+    	<dd>王小二</dd>
+    </dl>
+    <dl class="xdl">
+    	<dt>姓名：</dt>
+    	<dd><p>王小二</p></dd>
+    	<dd><p>王小二</p></dd>
+    	<dd><p>王小二</p></dd>
+    </dl>
+    <dl class="xdl">
+    	<dt>姓名：</dt>
+    	<dd class="check-radio-box"><label class="radio inline"><input class="input-radio" name="taxes" type="radio"></label><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    	<dd class="check-radio-box"><label class="radio inline"><input class="input-radio" name="taxes" type="radio"></label><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+        <dd class="check-radio-box"><label class="radio inline"><input class="input-radio" name="taxes" type="radio"></label><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    	<dd class="check-radio-box"><label class="radio inline"><input class="input-radio" name="taxes" type="radio"></label><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    </dl>
+    <dl class="xdl">
+    	<dt>姓名：</dt>
+    	<dd class="check-radio-box"><input class="input-radio" name="taxes" type="radio"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    	<dd class="check-radio-box"><input class="input-radio" name="taxes" type="radio"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    	<dd class="check-radio-box"><input class="input-radio" name="taxes" type="radio"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+        <dd class="check-radio-box"><input class="input-radio" name="taxes" type="radio"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    </dl>
+    <dl class="xdl">
+    	<dt>姓名：</dt>
+    	<dd class="check-radio-box"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    	<dd class="check-radio-box"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    	<dd class="check-radio-box"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    	<dd class="check-radio-box"><span class="check-radio-item"><i class="ui-arrow-bottom blue-ui-arrow-bottom"></i>苏梅岛机票税金（香港往返）</span></dd>
+    </dl>
+    <dl class="xdl">
+    	<dt>姓名：</dt>
+    	<dd>王小二</dd>
+    </dl>
+    <div class="xdl">
+    	<div class="dt">姓名：</div>
+    	<div class="dd">王小二</div>
+    	<div class="dd">王小二</div>
+    	<div class="dd">王小二</div>
+    </div>
+    <div class="xdl">
+    	<div class="dt">姓名：</div>
+        <div class="content">
+            <div class="dd">王小二</div>
+            <div class="dd">王小二</div>
+            <div class="dd">王小二</div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
