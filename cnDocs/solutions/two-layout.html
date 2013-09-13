@@ -79,8 +79,17 @@
 	<h4>如果是你，你会怎么实现？你能写出几种方法？<small>要考虑兼容主流浏览器哦！</small></h4>
 	<p>当时面试的时候，关于自动宽度当时拿不准两个属性，width:100%和width:auto(平时不怎么用这两个属性)，实在没办法，就用绝对定 位，定位四个方向可以做到自动宽度(实际在此例中定位两个属性也OK)，第二种方法写的是可以通过css表达式实现自动宽度（当然自动宽度可以实现，但这个方法岁也能实现，但是根本不可取，即使不知道别的方法，也别说这个方法了），面试结果第一种需要修复IE6下的bug（最多只支持两个方向的绝对定位）需要引入一个js，第二种css表达式性能实在太差，就这样我就被否定掉了……</p>
 	<p>唉，有点郁闷啊，所以回来就总结了以下实现方法，给大家贴出来！和大家交流下，呵呵</p>
+    
+    <h4>你可以仔细思考几分钟，尝试实现并测试一下，之后再看下面的参考......</h4>
+    
+    <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+    
+    <h3>你确定要开始看参考了？不再想一会儿...</h3>
+    
+    <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 </div>	
 
+<h4>好吧，参考推荐开始：</h4>
 <p>第一种想法<br />
 应用<strong>绝对定位</strong>，限定于此laya盒模型中，兼容性好，可扩展性较好，易控性好，网页性能佳，是不错的解决办法<br />
   综合推荐指数：★★★★</p>
@@ -161,9 +170,30 @@
     <div class="content">右侧自适应，overflow:hidden<br>这也许是最简单的办法了，唯一的限制是设置了overflow:hidden，导致超出此盒子的布局会被隐藏。<br>
 	还有个问题，这里无法全兼容使用等高布局(margin-bottom:-1000px;padding-bottom:1000px;)这个属性，在IE6/7下，清除浮动时margin-bottom失效。所以这个不适用等高布局，除非仅右侧高度较大的情况。</div>
 </div>
-    <h3>问题及注意事项：</h3>
-    <p>实践出真知</p>
-    
 </div>
+
+
+<div class="wrap">
+    <h3>扩展的问题，思考一下：</h3>
+    <ul>
+    	<li>除了以上实现的方法，还有其他实现方式么，写出来...</li>
+    	<li>如果是三列布局，实现中间列自适应并优先加载呢？</li>
+    	<li>上述各类方法实现等高布局时各有什么优劣？注意事项呢？</li>
+    </ul>
+    
+    <h3>如果你有什么想法，可以在此处写出来：</h3>
+    <div id="uyan_frame"></div>
+</div>
+
+<!-- UY BEGIN -->
+<script type="text/javascript">
+var uyan_config = {
+    'title':'前端开发框架 #pandora#', 
+    'du':'pandoraui.com'
+};
+</script>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=0" async=""></script>
+<!-- UY END -->
+
 </body>
 </html>

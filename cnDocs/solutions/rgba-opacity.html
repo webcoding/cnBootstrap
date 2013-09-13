@@ -57,19 +57,39 @@
 }
 
 
-iframe{
-    position:relative;
-    z-index:3;
-    width:420px;
-    height:120px;
-    color:#fff;
+.text-cover { 
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
-
+.text-cover i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #fff;
+    font-style: normal;
+    text-indent: 10px;
+    
+    /* 半透明核心代码 */
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+}
+.text-cover:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-    <h1>RGBA 与 背景透明、flash透明、iframe透明</h1>
+    <h1>RGBA 与 背景透明、flash透明</h1>
 	<p class="browser">RGBA-浏览器参照基准：IE9+, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
     <p>语法：rgba(0-255,0-255,0-255,0-1)</p>
     
@@ -141,51 +161,45 @@ opacity:.5;</pre></div>
     color:#fff;
 }
 </pre>
-    
-	<h3>问题及注意事项：</h3>
-    <p>实践出真知</p>
-	
-	<h2>知识扩展：</h2>
-	<h3>如何让iframe的背景透明内容不透明？</h3>
-	<p class="browser">背景透明-浏览器参照基准：IE6+, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
+    <h3>最新式的半透明效果实现</h3>
+    <p>推荐的半透明实现方法，简单易用！</p>
     <div class="demo">
-	    <h3>iframe背景透明</h3>
-	    <iframe src="iframe-test-content.html" allowtransparency="true"></iframe>
-		<div class="text">给iframe标记加上allowtransparency属性并设置为true即可以让iframe在IE下透明</div>
+        <div class="relative" style="width:300px;height:200px;">
+            <a href="###" class="text-cover">
+                <img src="images/girl.jpg" alt="" width="300" height="200" />
+                <i>具有半透明背景的文字，文字过长也不要紧的哦，布局良好！</i>
+            </a>
+        </div>
     </div>
 <pre class="prettyprint linenums">
-&lt;iframe src="iframe-test-content.html" <b class="red">allowtransparency="true"</b>&gt;&lt;/iframe&gt;
-
-iframe{
-    position:relative;
-    z-index:3;
-    width:420px;
-    height:120px;
-    color:#fff;
+.text-cover { 
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
-</pre>
-    <div class="demo">
-	    <h3>flash背景透明</h3>
-		<p>首先flash本身要透明，另外&lt;embed ***&gt;中添加 <code>wmode="transparent"</code>属性即可 </p>
-	    <div class="flash">
-			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="500" height="100"><param name="movie" value="img/flash.swf"><param name="quality" value="high"><param name="menu" value="false"><param name="wmode" value="opaque"><embed src="img/flash.swf" wmode="transparent" menu=" false"="" quality="high" width="500" height="100" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object>
-		</div>
-    </div>
-<pre class="prettyprint linenums">
-&lt;div class="flash"&gt;
-    &lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="500" height="100"&gt;
-    &lt;param name="movie" value="img/flash.swf"&gt;
-    &lt;param name="quality" value="high"&gt;
-    &lt;param name="menu" value="false"&gt;
-    &lt;param name="wmode" <b class="red">value="transparent"</b>&gt;
-    &lt;embed src="flash.swf" <b class="red">wmode="transparent"</b> menu=" false"="" quality="high" width="500" height="100" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"&gt;
-    &lt;/object&gt;
-&lt;/div&gt;
+.text-cover i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #fff;
+    font-style: normal;
+    text-indent: 10px;
+    
+    /* 半透明核心代码 */
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+}
 
-标红为透明关键属性：
-&lt;param name="wmode" <b class="red">value="transparent"</b>&gt; 针对IE
-&lt;embed src="flash.swf" <b class="red">wmode="transparent"</b> ... 针对firefox/chrome等
+说明：#88000000 的前两位数字控制透明度，取值16进制从00 -> FF，值越小越透明，后面六位是色值。
 </pre>
+    
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>
     

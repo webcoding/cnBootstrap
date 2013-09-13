@@ -67,21 +67,31 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/localStorage.html"><img src="solutions/img/localStorage.png" alt="跨浏览器文本存储"><h4>跨浏览器文本存储</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/ime-disabled.html"><img src="solutions/img/ime.png" alt="强制非中文输入法"><h4>强制非中文输入法</h4></a></li>
 			
+            
 			
-			
+            <li class="span2"><a class="thumbnail" target="_blank" href="solutions/iframe.html"><img src="solutions/img/iframe-transparent.png" alt="iframe 兼容解决方案"><h4>iframe 透明等</h4></a></li>
+            <li class="span2"><a class="thumbnail" target="_blank" href="solutions/flash.html"><img src="solutions/img/flash.png" alt=">flash 兼容性问题"><h4>flash 透明及层级</h4></a></li>
+            <li class="span2"><a class="thumbnail" target="_blank" href="solutions/ie-z-index-bug.html"><img src="solutions/img/z-index.png" alt="IE z-index bug"><h4>IE z-index bug</h4></a></li>
+            
+            <li class="span2"><a class="thumbnail" target="_blank" href="solutions/font-face.html"><img src="solutions/img/font-face.jpg" alt="@font-face"><h4>@font-face</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/linear-gradient.html"><img src="solutions/img/linear-gradient.png" alt="跨浏览器线性渐变"><h4>跨浏览器线性渐变</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/drop-shadow.html"><img src="solutions/img/box-shadow.png" alt="跨浏览器投影"><h4>跨浏览器投影</h4></a></li>
+            
+            
+            
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/cross-domain-iframe.html"><img src="solutions/img/iframe.png" alt="iframe 跨域自适应"><h4>iframe 跨域自适应</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/custom-cursor.html"><img src="solutions/img/custom-cursor.jpg" alt="鼠标指针样式自定义"><h4>鼠标指针样式自定义</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/border.html"><img src="solutions/img/border.png" alt=""><h4>border 探索</h4></a></li>
 			
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/font-face.html"><img src="solutions/img/font-face.jpg" alt="@font-face"><h4>@font-face</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/linear-gradient.html"><img src="solutions/img/linear-gradient.png" alt="跨浏览器线性渐变"><h4>跨浏览器线性渐变</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/drop-shadow.html"><img src="solutions/img/box-shadow.png" alt="跨浏览器投影"><h4>跨浏览器投影</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="测试"><h4>测试</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="测试"><h4>测试</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="测试"><h4>测试</h4></a></li>
 			
 			
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/min-max.html"><img src="solutions/img/min-max.png" alt="IE6 最大/小宽度"><h4>IE6 最大/小宽度</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/position-fixed.html"><img src="solutions/img/position-fixed.png" alt="IE6 position:fixed"><h4>IE6 position:fixed</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/ie-z-index-bug.html"><img src="solutions/img/z-index.png" alt="IE z-index bug"><h4>IE z-index bug</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="测试"><h4>测试</h4></a></li>
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/1px-round-corner.html"><img src="solutions/img/radius-1px-box.png" alt="一像素圆角"><h4>一像素圆角</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/rotate.html"><img src="solutions/img/rotate.png" alt="跨浏览器翻转"><h4>跨浏览器翻转</h4></a></li>
@@ -96,7 +106,7 @@
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/double-border.html"><img src="solutions/img/double-border.png" alt=""><h4>double border 双线框</h4></a></li>
 			
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/margin-usage.html"><img src="solutions/img/default.png" alt="妙用margin负边距"><h4>妙用margin负边距</h4></a></li>
-			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/m.html"><img src="solutions/img/default.png" alt="textarea自适应高度"><h4>textarea自适应高度</h4></a></li>
+			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/textarea.html"><img src="solutions/img/textarea.png" alt="textarea自适应高度"><h4>textarea 等自适应高度</h4></a></li>
 			<li class="span2"><a class="thumbnail" target="_blank" href="solutions/print.html"><img src="solutions/img/print.jpg" alt="打印预览"><h4>打印预览</h4></a></li>
 			<li class="span2"><a class="thumbnail">what's the next?<h4>敬请期待，佳作马上登场！</h4></a></li>
 		</ul>

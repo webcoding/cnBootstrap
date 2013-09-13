@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>textarea 自适应高度</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+
+
+.textarea {
+    height: auto;
+    padding: 3px 5px;
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    resize: none;
+    line-height: 22px;
+}
+.autobox {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    width: 300px;
+    background: #fff;
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>textarea 自适应高度</h1>
+    <p>实现高度自适应，默认一定高度，过高出现滚动条，常用在模拟selectbox，文本域等情况下：</p>
+    
+    <div class="demo">
+        <textarea class="textarea" cols="30" rows="10" placeholder="这是 textarea 自适应高度示例">
+        这是测试文本，你可以多复制几遍，超过文本域宽度时即自动出现滚动条。
+        这是测试文本，你可以多复制几遍，超过文本域宽度时即自动出现滚动条。
+        这是测试文本，你可以多复制几遍，超过文本域宽度时即自动出现滚动条。</textarea>
+        
+        <div class="autobox">
+            <p>autobox</p>
+            <p>这是测试文本，你可以多复制几遍，超过文本域宽度时即自动出现滚动条。</p>
+        </div>
+        
+        <div class="autobox">
+            <p>autobox</p>
+            <p>这是测试文本，你可以多复制几遍，超过文本域宽度时即自动出现滚动条。</p>
+            <p>这是测试文本，你可以多复制几遍，超过文本域宽度时即自动出现滚动条。</p>
+            <p>这是测试文本，你可以多复制几遍，超过文本域宽度时即自动出现滚动条。</p>
+        </div>
+        
+    </div>
+<pre class="prettyprint linenums">
+
+</pre>
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>

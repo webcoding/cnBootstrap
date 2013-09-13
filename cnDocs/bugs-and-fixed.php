@@ -853,6 +853,7 @@ vertical-align:middle;
                             <p>设置flash的wmode值为transparent或opaque，<code>&lt;param name="wmode" value="transparent" /&gt;</code></p>
 							<p>IE浏览器下可用 <code>&lt;param name=”wmode” value=”transparent” /&gt;</code><br>标准浏览器下可用 <code>&lt;embed src=”flash.swf” wmode=”transparent” ... &gt;&lt;/embed&gt;</code></p>
 							<p>还有种方法是 iframe，缺点是影响网站性能！建议万不得已再用</p>
+                            <p>更多请参考：<a target="_blank" href="http://www.candoudou.com/archives/663">解决Flash挡住层用z-index无效的问题</a></p>
                         </div>
                     </li>
                     <li class="bugs-item" data-key="IE6 iframe 背景透明">

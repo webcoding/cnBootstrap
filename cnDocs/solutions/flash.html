@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flash 兼容性问题</title>
+<link rel="stylesheet" href="../assets/css/noreset.css">
+<link rel="stylesheet" href="solution.css">
+<style>
+.flash {
+    border: 1px solid #9E73FC;
+    background-color: #6FA9FF;
+    -webkit-transition: background-color 1.5s ease-in;
+       -moz-transition: background-color 1.5s ease-in;
+        -ms-transition: background-color 1.5s ease-in;
+         -o-transition: background-color 1.5s ease-in;
+            transition: background-color 1.5s ease-in;
+    width: 500px;
+}
+.flash:hover {
+    background-color: #5C08B6;
+    -webkit-transition: background-color 1.5s ease-in;
+       -moz-transition: background-color 1.5s ease-in;
+        -ms-transition: background-color 1.5s ease-in;
+         -o-transition: background-color 1.5s ease-in;
+            transition: background-color 1.5s ease-in;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <h1>flash 兼容性问题</h1>
+    <ul>
+    	<li>flash 背景透明问题</li>
+    	<li>flash 与div 的层级问题</li>
+    </ul>
+    
+    <div class="demo white-demo">
+	    <h3>flash背景透明</h3>
+		<p>首先flash本身要透明，另外需要在&lt;embed ***&gt;标签中添加 <code>wmode="transparent"</code> 属性即可。</p>
+        <p>下面示例鼠标hover时背景变色，但flash是透明的。</p>
+	    <div class="flash">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="500" height="400"><param name="movie" value="img/flash.swf"><param name="quality" value="high"><param name="menu" value="false"><param name="wmode" value="opaque"><embed src="img/flash.swf" wmode="transparent" menu=" false"="" quality="high" width="500" height="400" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object>
+		</div>
+        
+    </div>
+<pre class="prettyprint linenums">
+&lt;div class="flash"&gt;
+    &lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="500" height="100"&gt;
+    &lt;param name="movie" value="img/flash.swf"&gt;
+    &lt;param name="quality" value="high"&gt;
+    &lt;param name="menu" value="false"&gt;
+    &lt;param name="wmode" <b class="red">value="transparent"</b>&gt;
+    &lt;embed src="flash.swf" <b class="red">wmode="transparent"</b> menu=" false"="" quality="high" width="500" height="100" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"&gt;
+    &lt;/object&gt;
+&lt;/div&gt;
+
+标红为透明关键属性：
+&lt;param name="wmode" <b class="red">value="transparent"</b>&gt; 针对IE
+&lt;embed src="flash.swf" <b class="red">wmode="transparent"</b> ... 针对firefox/chrome等
+</pre>
+    <h3>flash 与div 的层级问题</h3>
+    <p></p>
+    
+    
+    <h3>问题及注意事项：</h3>
+    <p>实践出真知</p>
+    
+</div>
+
+<!--以下修复IE6使之支持png透明(必须放到html页面中)，可自定义设置标签或class -->
+
+<!--[if ie 6]>
+<script src="../assets/js/DD_belatedPNG-min.js"></script> 
+<script>DD_belatedPNG.fix('.ie6png');</script>
+<![endif]-->
+</body>
+</html>
