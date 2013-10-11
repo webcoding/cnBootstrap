@@ -90,34 +90,34 @@
 <body>
 <div class="wrap">
     <h1>RGBA 与 背景透明、flash透明</h1>
-	<p class="browser">RGBA-浏览器参照基准：IE9+, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
+    <p class="browser">RGBA-浏览器参照基准：IE9+, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
     <p>语法：rgba(0-255,0-255,0-255,0-1)</p>
     
     <div class="demo">
         <h3>HEX颜色中的黑色：</h3>
         <div class="box hex"><pre class="inblock">background-color:#000000;</pre></div>
-		<h3>RGB颜色中的黑色：</h3>
+        <h3>RGB颜色中的黑色：</h3>
         <div class="box rgb"><pre class="inblock"></pre>background-color:rgb(0,0,0);</div>
-		<h3>RGB颜色+opacity透明度(50%透明度的黑色)：</h3>
+        <h3>RGB颜色+opacity透明度(50%透明度的黑色)：</h3>
         <div class="box rgb-alpha"><pre class="inblock">background-color:rgb(0,0,0);
 opacity:.5;</pre></div>
-		<h3>RGBA颜色(50%透明度的黑色)：</h3>
+        <h3>RGBA颜色(50%透明度的黑色)：</h3>
         <div class="box rgba"><pre class="inblock">background-color:rgba(0,0,0,.5);</pre></div>
     </div>
-	<p class="browser">背景透明-浏览器参照基准：IE, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
+    <p class="browser">背景透明-浏览器参照基准：IE, Firefox3.6+, Chrome5+, Safari5+, Opera10.53+ </p>
     <div class="demo">
-	    <h3>效果演示：<small>error</small></h3>
+        <h3>效果演示：<small>error</small></h3>
         <div class="opacity">这是一个不成功的背景透明内容不透明效果，你会看到背景及内容两者都透明了</div>
-		<div class="text">将内容和背景分别放到不同的层，然后将背景设置成透明，两者就互不相关了</div>
-		
-		<h3>效果演示：<small>success</small></h3>
-		<div class="opacity"></div>
-		<div class="opacity-text">这是一个在所有主流浏览器下都可以看到的背景透明，内容不透明的效果</div>
-		<div class="text">将内容和背景分别放到不同的层，然后将背景设置成透明，两者就互不相关了</div>
-		
-		<h3>效果演示：<small>RGBA</small></h3>
-		<div class="rgba-opacity">这是一个用RGBA实现的背景透明内容不透明的效果</div>
-		<div class="text">直接用RGBA值作为背景色</div>
+        <div class="text">将内容和背景分别放到不同的层，然后将背景设置成透明，两者就互不相关了</div>
+        
+        <h3>效果演示：<small>success</small></h3>
+        <div class="opacity"></div>
+        <div class="opacity-text">这是一个在所有主流浏览器下都可以看到的背景透明，内容不透明的效果</div>
+        <div class="text">将内容和背景分别放到不同的层，然后将背景设置成透明，两者就互不相关了</div>
+        
+        <h3>效果演示：<small>RGBA</small></h3>
+        <div class="rgba-opacity">这是一个用RGBA实现的背景透明内容不透明的效果</div>
+        <div class="text">直接用RGBA值作为背景色</div>
     </div>
 <pre class="prettyprint linenums">
 .opacity{
@@ -191,14 +191,30 @@ opacity:.5;</pre></div>
     color: #fff;
     font-style: normal;
     text-indent: 10px;
+    /* 此种缩进实现边距，针对单行文本甚是有效，多行则不行，可通过 padding: 0 10px 来设置，
+    注意右侧文本不要贴边，如此100%的宽度会溢出，需在父层设置 overflow: hidden; */
     
     /* 半透明核心代码 */
     background-color: rgba(0, 0, 0, 0.4);
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+    /* 此处的 */
 }
 
-说明：#88000000 的前两位数字控制透明度，取值16进制从00 -> FF，值越小越透明，后面六位是色值。
+说明：#88000000 的前两位数字控制透明度，取值16进制从00 -> FF（越小越透明），00表示完全透明，FF就是全不透明，后面六位是色值。
+
 </pre>
+    <h4>知识扩展：</h4>
+    <p>DXImageTransform.Microsoft.gradient 滤镜里的 startColorstr 参数值是 #AARRGGBB 形式的， 其中的AA是代表不透明度的十六进制，00表示完全透明，FF就是全不透明，化成十进制的范围就是0~255，剩下的 RRGGBB 就是颜色的十六进制代码。</p>
+    <p>举例如：background: rgba(125, 0, 0, .3); 表示的是30%不透明度的红色背景。把30%的不透明度转换成十六制呢的方法如下：先计算#AA的的十进制x，x/255 = 3/10，解得x=3*255/10，然后再把x换算成十六进制，约等于4C。 </p>
+    
+    <h4>常用透明度对用关系：</h4>
+    <p style="font-family: sans-serif;">
+    .0（00） .1（19） .05（0C） .15（26） <br>
+    .2（33） .3（4C） .25（3F） .35（59） <br>
+    .4（66） .5（7F） .45（72） .55（8C） <br>
+    .6（99） .7（B2） .65（A5） .75（BF） <br>
+    .8（CC） .9（E5） .85（D8） .95（F2）
+    </p>
     
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>
