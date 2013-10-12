@@ -26,7 +26,7 @@ td{padding:5px 10px;}
 <div class="wrap">
     <h1>强制换行、强制不换行、CSS省略号</h1>
     <h3>强制换行用法：</h3>
-	<p class="note"><strong>属性：</strong>强制换行：<code>word-wrap:break-word; word-break:break-all; white-space:pre-wrap;</code><br>
+    <p class="note"><strong>属性：</strong>强制换行：<code>word-wrap:break-word; word-break:break-all; white-space:pre-wrap;</code><br>
 　　　 强制不换行：<code>overflow:hidden; width:300px; white-space:nowrap; text-overflow: ellipsis;</code></p>
     <h3>white-space 属性详解</h3>
     <ul>
@@ -39,53 +39,53 @@ td{padding:5px 10px;}
 
     <h3>使用组合属性</h3>
     <ul>
-    	<li>一般块级元素用：.as-wrap</li>
-    	<li>table标签中需添加：.as-wrap-table</li>
+        <li>一般块级元素用：.as-wrap</li>
+        <li>table标签中需添加：.as-wrap-table</li>
     </ul>
     
 <div class="demo">
     <div class="fl" style="margin-bottom:30px;">
         <h3>一般块元素换行:</h3>
         <p class="fl as-wrap" style="width:200px;margin-top:20px;margin-right:30px;background:#e8edef;">
-        	http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
-        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <h3>一般块元素不换行:</h3>
         <p class="fl" style="width:200px;margin-top:20px;background:#ffc;">
-        	http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
-        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
     </div>
     <table width="500px;" class="as-wrap as-wrap-table">
-    	<tr>
-    		<th colspan="2"><h3>换行的 table:</h3></th>
-    	</tr>
-    	<tr>
-    		<td>
-    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
-    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    		</td>
-    		<td>
-    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
-    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    		</td>
-    	</tr>
+        <tr>
+            <th colspan="2"><h3>换行的 table:</h3></th>
+        </tr>
+        <tr>
+            <td>
+                http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </td>
+            <td>
+                http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </td>
+        </tr>
     </table>
 
     <table width="500px;" style="margin-bottom:20px;">
-    	<tr>
-    		<th colspan="2"><h3>未换行的 table:</h3></th>
-    	</tr>
-    	<tr>
-    		<td>
-    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
-    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    		</td>
-    		<td>
-    			http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
-    			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    		</td>
-    	</tr>
+        <tr>
+            <th colspan="2"><h3>未换行的 table:</h3></th>
+        </tr>
+        <tr>
+            <td>
+                http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </td>
+            <td>
+                http://google.com/abcdefghijklmnopqrstuvwxyz 000_^_^_000_(^o^)_000 abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </td>
+        </tr>
     </table>
 
     
@@ -118,12 +118,12 @@ td{padding:5px 10px;}
     <div class="demo">
         <p class="ellipsis" title="单行文本，如果这里字太多了就会显示省略号省略号啊！">单行文本，如果这里字太多了就会显示省略号省略号啊！</p>
         <div class="box">
-		    <p title="如果父层有宽度，这里不设置宽度，IE6不行，其他浏览器都OK ">如果父层有宽度，这里不设置宽度，IE6不行，其他浏览器都OK </p>
-		</div>
+            <p title="如果父层有宽度，这里不设置宽度，IE6不行，其他浏览器都OK ">如果父层有宽度，这里不设置宽度，IE6不行，其他浏览器都OK </p>
+        </div>
     </div>
 <pre class="prettyprint linenums">
 .ellipsis{
-    width:300px; /*设置宽度*/
+    width: 300px; /*设置宽度*/
     white-space: nowrap; /*设置不折行*/
     overflow: hidden; /*设置超过的隐藏*/
     text-overflow: ellipsis; /*这就是省略号喽*/
@@ -136,13 +136,13 @@ td{padding:5px 10px;}
     overflow: hidden;
     text-overflow: ellipsis;
 }
-如果父层有宽度，这里不设置宽度，仅IE6不支持，其他浏览器都OK
+如果仅依赖父层的宽度自适应，内层不设置宽度，仅IE6不支持，其他浏览器都OK，内层设置width:100%;可以解决此问题。
 </pre>
     
-	<h4>问题及注意事项：</h4>
+    <h4>问题及注意事项：</h4>
     <p>如上代码设置，都是必选项，每个属性都不可缺少，且仅适用于单行文本。</p>
-	
-	<h2>省略号 <small>多行文本解决方案</small></h2>
+    
+    <h2>省略号 <small>多行文本解决方案</small></h2>
 
 
     <h3>问题及注意事项：</h3>

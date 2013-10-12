@@ -41,6 +41,9 @@ table.middle{height:150px;background:#ccc;}
 .vertical{*position:relative;*top:-50%;}
 /* 方法三 */
 .box3{ height:200px; text-align:center;background:#ccc;}
+/* 方法三 */
+.box4{ height:200px; text-align:center;background:#ccc; line-height: 200px;}
+.img-middle{max-height:100%;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;}
 
 .Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
 .Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
@@ -50,73 +53,74 @@ table.middle{height:150px;background:#ccc;}
 <body>
 <div class="wrap">
     <h1>水平/垂直居中</h1>
-	
-	<!-- 便捷导航 -->
+    
+    <!-- 便捷导航 -->
     <div id="guide" class="fixed fixed-top fixed-right">
-    	<ol id="shortcut">
-			<li><a href="#table">使用table</a></li>
-        	<li><a href="#center">水平居中</a>
-			    <ul>
-				    <li><a href="#center1">文本、图片等行内元素的水平居中</a></li>
-				    <li><a href="#center2">确定宽度的块级元素的水平居中</a></li>
-				    <li><a href="#center3">不确定宽度的块级元素的水平居中</a>
-				        <ul>
-				            <li><a href="#center31">方法一 <small>外嵌套table方法</small></a></li>
-				            <li><a href="#center32">方法二 <small>块级变inline</small></a></li>
-				            <li><a href="#center33">方法三 <small>使用position:relative</small></a></li>
-				        </ul>
-					</li>
-				</ul>
-			</li>
+        <ol id="shortcut">
+            <li><a href="#table">使用table</a></li>
+            <li><a href="#center">水平居中</a>
+                <ul>
+                    <li><a href="#center1">文本、图片等行内元素的水平居中</a></li>
+                    <li><a href="#center2">确定宽度的块级元素的水平居中</a></li>
+                    <li><a href="#center3">不确定宽度的块级元素的水平居中</a>
+                        <ul>
+                            <li><a href="#center31">方法一 <small>外嵌套table方法</small></a></li>
+                            <li><a href="#center32">方法二 <small>块级变inline</small></a></li>
+                            <li><a href="#center33">方法三 <small>使用position:relative</small></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
             <li><a href="#middle">垂直居中</a>
-			    <ul>
-				    <li><a href="#middle1">父元素高度不确定的文本、图片、块级元素的垂直居中</a></li>
-				    <li><a href="#middle2">父元素高度确定的单行文本的垂直居中</a></li>
-				    <li><a href="#middle3">父元素高度确定的多行文本、图片、块级元素的垂直居中</a>
-				        <ul>
-				            <li><a href="#middle31">方法一 <small>外嵌套table方法</small></a></li>
-				            <li><a href="#middle32">方法二 <small>display:table-cell + hack</small></a></li>
+                <ul>
+                    <li><a href="#middle1">父元素高度不确定的文本、图片、块级元素的垂直居中</a></li>
+                    <li><a href="#middle2">父元素高度确定的单行文本的垂直居中</a></li>
+                    <li><a href="#middle3">父元素高度确定的多行文本、图片、块级元素的垂直居中</a>
+                        <ul>
+                            <li><a href="#middle31">方法一 <small>外嵌套table方法</small></a></li>
+                            <li><a href="#middle32">方法二 <small>display:table-cell + hack</small></a></li>
                             <li><a href="#middle33">方法三：<small>vertical-align:middle + inline-block方法</small></a></li>
-				        </ul>
-					</li>
-				</ul>
-			<li><a href="#center-middle">弹窗的居中 <small>定位实现</small></a>
-			</li>
+                        </ul>
+                    </li>
+                    <li><a href="#middle4">CSS实现 图片等比缩放并垂直居中</a></li>
+                </ul>
+            <li><a href="#center-middle">弹窗的居中 <small>定位实现</small></a>
+            </li>
         </ol>
-		　<a href="#">返回顶部</a>
+        　<a href="#">返回顶部</a>
     </div><!-- //div #guide -->
-	
-	<h2 id="table">使用table</h2>
-	<p>无论水平还是垂直居中，使用 <code>table</code> 实现都超简单，只需 <code>text-algin:center;vertical-align:middle;</code> 就可以了。<br>这便是下面的水平/垂直居中的第一个方法。</p>
+    
+    <h2 id="table">使用table</h2>
+    <p>无论水平还是垂直居中，使用 <code>table</code> 实现都超简单，只需 <code>text-algin:center;vertical-align:middle;</code> 就可以了。<br>这便是下面的水平/垂直居中的第一个方法。</p>
 <!--
-	<div class="demo">
-	    <table class="bc">
-	        <tr><td>
-			    <ul class="pages pages1">
-				    <li><a href="#">1</a></li>
-				</ul>
-		    </td></tr>
-		</table>
-		<table class="bc">
-	        <tr><td>
-				<ul class="pages pages1">
-				    <li><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				</ul>
-			</td></tr>
-		</table>
-		<table class="bc ">
-	        <tr><td>
-				<ul class="pages pages1">
-				    <li><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				    <li><a href="#">4</a></li>
-				    <li><a href="#">5</a></li>
-				</ul>
-			</td></tr>
-		</table>
+    <div class="demo">
+        <table class="bc">
+            <tr><td>
+                <ul class="pages pages1">
+                    <li><a href="#">1</a></li>
+                </ul>
+            </td></tr>
+        </table>
+        <table class="bc">
+            <tr><td>
+                <ul class="pages pages1">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </td></tr>
+        </table>
+        <table class="bc ">
+            <tr><td>
+                <ul class="pages pages1">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </td></tr>
+        </table>
     </div>
 <pre class="prettyprint linenums">
 .bc{margin-left:auto;margin-right:auto;}
@@ -131,22 +135,22 @@ table.middle{height:150px;background:#ccc;}
     &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 </pre>
-	<p><code>table</code> 标签拥有很多优厚的待遇，浏览器对它的支持几乎达到了空前的一致。</p>
-	<p>做法很巧妙，但缺点是增加了无语义的标签，加深了标签的嵌套层数。</p>
+    <p><code>table</code> 标签拥有很多优厚的待遇，浏览器对它的支持几乎达到了空前的一致。</p>
+    <p>做法很巧妙，但缺点是增加了无语义的标签，加深了标签的嵌套层数。</p>
 -->
-	<p class="note"><strong>小提示：</strong>下面方法中的水平居中案例及垂直居中的前四个案例摘自<b>曹刘阳</b>所著《编写高质量代码——Web前端开发修炼之道》的Page<sub>104-112</sub><br>
-	　　　　 方法三（<a href="#middle33">inline-block + vertical-align:middle 方法</a>）取自QQ空间相册预览的垂直居中效果，提取后的<a target="_blank" href="http://www.tcreator.info/demo/vertical-middle.html">效果预览</a>
-	</p>
-	<h1 id="center">水平居中</h1>
-	<p>除上述 <code>table</code> 方法外，其他的CSS实现居中会遇到很多种情况，不同的情况使用的方法不同。</p>
-	
-	
-	<h2 id="center1">文本、图片等行内元素的水平居中</h2>
-	<p>给父元素设置 <code>text-align:center</code> 可以实现文本、图片等行内元素的水平居中，如下：</p>
+    <p class="note"><strong>小提示：</strong>下面方法中的水平居中案例及垂直居中的前四个案例摘自<b>曹刘阳</b>所著《编写高质量代码——Web前端开发修炼之道》的Page<sub>104-112</sub><br>
+    　　　　 方法三（<a href="#middle33">inline-block + vertical-align:middle 方法</a>）取自QQ空间相册预览的垂直居中效果，提取后的<a target="_blank" href="http://www.tcreator.info/demo/vertical-middle.html">效果预览</a>
+    </p>
+    <h1 id="center">水平居中</h1>
+    <p>除上述 <code>table</code> 方法外，其他的CSS实现居中会遇到很多种情况，不同的情况使用的方法不同。</p>
+    
+    
+    <h2 id="center1">文本、图片等行内元素的水平居中</h2>
+    <p>给父元素设置 <code>text-align:center</code> 可以实现文本、图片等行内元素的水平居中，如下：</p>
     <div class="demo">
         <p class="tc">hello world!</p>
-		<hr>
-		<p class="tc"><img src="img/center-middle.png"></p>
+        <hr>
+        <p class="tc"><img src="img/center-middle.png"></p>
     </div>
 <pre class="prettyprint linenums">
 .tc{text-align:center}
@@ -155,11 +159,11 @@ table.middle{height:150px;background:#ccc;}
 &lt;p class="tc"&gt;&lt;img src="img/"&gt;&lt;/p&gt;
 </pre>
     <p>注意：以上方法适用的是内联元素。</p>
-	
-	
-	<h2 id="center2">确定宽度的块级元素的水平居中</h2>
-	<p>确定宽度的块级元素的水平居中是通过设置 <code>margin-left:auto</code> 和 <code>margin-right:auto</code> 来实现的，如下：</p>
-	<div class="demo">
+    
+    
+    <h2 id="center2">确定宽度的块级元素的水平居中</h2>
+    <p>确定宽度的块级元素的水平居中是通过设置 <code>margin-left:auto</code> 和 <code>margin-right:auto</code> 来实现的，如下：</p>
+    <div class="demo">
         <div class="ctest bc"></div>
     </div>
 <pre class="prettyprint linenums">
@@ -168,40 +172,40 @@ table.middle{height:150px;background:#ccc;}
 
 &lt;div class="ctest bc"&gt;&lt;/div&gt;
 </pre>
-	
-	
-	<h2 id="center3">不确定宽度的块级元素的水平居中</h2>
-	<p>不确定宽度的块级元素有三种方式可以实现居中。以分页模块为例，因为分页的数量是不确定的，所以我们不能通过设置宽度来显示它的弹性。</p>
-	
-	<h3 id="center31">方法一：<small>外嵌套table方法</small></h3>
-	<div class="demo">
-	    <table class="bc">
-	        <tr><td>
-			    <ul class="pages pages1">
-				    <li><a href="#">1</a></li>
-				</ul>
-		    </td></tr>
-		</table>
-		<table class="bc">
-	        <tr><td>
-				<ul class="pages pages1">
-				    <li><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				</ul>
-			</td></tr>
-		</table>
-		<table class="bc">
-	        <tr><td>
-				<ul class="pages pages1">
-				    <li><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				    <li><a href="#">4</a></li>
-				    <li><a href="#">5</a></li>
-				</ul>
-			</td></tr>
-		</table>
+    
+    
+    <h2 id="center3">不确定宽度的块级元素的水平居中</h2>
+    <p>不确定宽度的块级元素有三种方式可以实现居中。以分页模块为例，因为分页的数量是不确定的，所以我们不能通过设置宽度来显示它的弹性。</p>
+    
+    <h3 id="center31">方法一：<small>外嵌套table方法</small></h3>
+    <div class="demo">
+        <table class="bc">
+            <tr><td>
+                <ul class="pages pages1">
+                    <li><a href="#">1</a></li>
+                </ul>
+            </td></tr>
+        </table>
+        <table class="bc">
+            <tr><td>
+                <ul class="pages pages1">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </td></tr>
+        </table>
+        <table class="bc">
+            <tr><td>
+                <ul class="pages pages1">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </td></tr>
+        </table>
     </div>
 <pre class="prettyprint linenums">
 .bc{margin-left:auto;margin-right:auto;}
@@ -216,26 +220,26 @@ table.middle{height:150px;background:#ccc;}
     &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 </pre>
-	<p>这里用到了一个有趣的标签 <code>table</code> 来帮助实现了不确定宽度的块级元素的水平居中，<code>table</code>有趣的地方在于它本身并不是块级元素，如果不给它设定宽度的话，它的宽度由内部元素的宽度“撑起”，但即使不设定它的宽度，仅设置 margin-left:auto 和 margin-right:auto 就可以实现水平居中！将 <code>ul</code> 包含在 table 标签内，对 <code>table</code> 设置 margin-left:auto 和 margin-right:auto 就可以使 <code>table</code> 水平居中，间接使 <code>ul</code> 实现了水平居中。</p>
-	<p>这种做法很巧妙，但缺点是增加了无语义的标签，加深了标签的嵌套层数。</p>
-	
-	<h3 id="center32">方法二：<small>变块级为inline类型</small></h3>
-	<div class="demo">
-		<ul class="pages pages2">
-			<li><a href="#">1</a></li>
-		</ul>
-		<ul class="pages pages2">
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-		</ul>
-		<ul class="pages pages2">
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-		</ul>
+    <p>这里用到了一个有趣的标签 <code>table</code> 来帮助实现了不确定宽度的块级元素的水平居中，<code>table</code>有趣的地方在于它本身并不是块级元素，如果不给它设定宽度的话，它的宽度由内部元素的宽度“撑起”，但即使不设定它的宽度，仅设置 margin-left:auto 和 margin-right:auto 就可以实现水平居中！将 <code>ul</code> 包含在 table 标签内，对 <code>table</code> 设置 margin-left:auto 和 margin-right:auto 就可以使 <code>table</code> 水平居中，间接使 <code>ul</code> 实现了水平居中。</p>
+    <p>这种做法很巧妙，但缺点是增加了无语义的标签，加深了标签的嵌套层数。</p>
+    
+    <h3 id="center32">方法二：<small>变块级为inline类型</small></h3>
+    <div class="demo">
+        <ul class="pages pages2">
+            <li><a href="#">1</a></li>
+        </ul>
+        <ul class="pages pages2">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+        </ul>
+        <ul class="pages pages2">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
     </div>
 <pre class="prettyprint linenums">
 .pages2{text-align:center; padding:5px;}
@@ -246,28 +250,28 @@ table.middle{height:150px;background:#ccc;}
     &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-	
-	<p>这里换了种思路，改变块级元素的display为 <code>inline</code> 类型，然后使用 <code>text-align:center</code> 来实现居中。相较于方法一，它的好处是不用增加无语义标签，简化了标签的嵌套深度，但它也存在一定的问题：它将块级元素的 display 类型改为 inline，变成了行内元素，而行内元素比起块级元素缺少一些功能，比如设定长宽值，在某些特殊需求的CSS设置中，这种方法可能会带来一些限制。</p>
-	
-	<p class="note"><strong>注：</strong>其实这里使用变块级为inline-block类型更为合适，此方法为<em>水平居中</em> 的<b>推荐方案</b>。</p>
-	
-	<h3 id="center33">方法三：<small>使用position:relative</small></h3>
-	<div class="demo">
-		<ul class="pages pages3">
-			<li><a href="#">1</a></li>
-		</ul>
-		<ul class="pages pages3">
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-		</ul>
-		<ul class="pages pages3">
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-		</ul>
+    
+    <p>这里换了种思路，改变块级元素的display为 <code>inline</code> 类型，然后使用 <code>text-align:center</code> 来实现居中。相较于方法一，它的好处是不用增加无语义标签，简化了标签的嵌套深度，但它也存在一定的问题：它将块级元素的 display 类型改为 inline，变成了行内元素，而行内元素比起块级元素缺少一些功能，比如设定长宽值，在某些特殊需求的CSS设置中，这种方法可能会带来一些限制。</p>
+    
+    <p class="note"><strong>注：</strong>其实这里使用变块级为inline-block类型更为合适，此方法为<em>水平居中</em> 的<b>推荐方案</b>。</p>
+    
+    <h3 id="center33">方法三：<small>使用position:relative</small></h3>
+    <div class="demo">
+        <ul class="pages pages3">
+            <li><a href="#">1</a></li>
+        </ul>
+        <ul class="pages pages3">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+        </ul>
+        <ul class="pages pages3">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
     </div>
 <pre class="prettyprint linenums">
 .pages3{float:left;clear:both;padding-top:5px;position:relative;left:50%;}
@@ -278,30 +282,30 @@ table.middle{height:150px;background:#ccc;}
     &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-	
-	<p>方法三通过给父标签设置 <code>float</code>，然后父元素设置 <code>position:relative</code> 和 <code>left:50%;</code>，子元素设置 <code>position:relative</code> 和 <code>left:-50%;</code> 来实现水平居中。它可以保留块级元素仍以 <code>display:block</code> 的形式显示，而且不会添加无语义标签，不增加嵌套深度，但它的缺点是设置了 <code>position:relative</code>，带来了一定的副作用。</p>
-	<p>此方法可以解决浮动居中的问题，详情参见<a href="float-center.html">float-center.html</a>。</p>
-	
-	<p>这三种方法使用得都非常广泛，各有优缺点，具体选用哪种方式可以视具体情况而定。</p>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<h1 id="middle">垂直居中</h1>
-	
-	<h2 id="middle1">父元素高度不确定的文本、图片、块级元素的垂直居中</h2>
-	<p>父元素高度不确定的文本、图片、块级元素的垂直居中是通过给父级容器设置相同上下边距实现的，如下：</p>
-	<div class="demo">
+    
+    <p>方法三通过给父标签设置 <code>float</code>，然后父元素设置 <code>position:relative</code> 和 <code>left:50%;</code>，子元素设置 <code>position:relative</code> 和 <code>left:-50%;</code> 来实现水平居中。它可以保留块级元素仍以 <code>display:block</code> 的形式显示，而且不会添加无语义标签，不增加嵌套深度，但它的缺点是设置了 <code>position:relative</code>，带来了一定的副作用。</p>
+    <p>此方法可以解决浮动居中的问题，详情参见<a href="float-center.html">float-center.html</a>。</p>
+    
+    <p>这三种方法使用得都非常广泛，各有优缺点，具体选用哪种方式可以视具体情况而定。</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <h1 id="middle">垂直居中</h1>
+    
+    <h2 id="middle1">父元素高度不确定的文本、图片、块级元素的垂直居中</h2>
+    <p>父元素高度不确定的文本、图片、块级元素的垂直居中是通过给父级容器设置相同上下边距实现的，如下：</p>
+    <div class="demo">
         <p class="mtest">hello world!</p>
-		<hr>
-		<p class="mtest"><img src="img/center-middle.png"></p>
-		<hr>
-		<div class="mtest"><p class="ctest"></p></div>
+        <hr>
+        <p class="mtest"><img src="img/center-middle.png"></p>
+        <hr>
+        <div class="mtest"><p class="ctest"></p></div>
     </div>
 <pre class="prettyprint linenums">
 .mtest{padding:20px 0}
@@ -310,44 +314,44 @@ table.middle{height:150px;background:#ccc;}
 &lt;p class="mtest"&gt;&lt;img src="img/"&gt;&lt;/p&gt;
 &lt;div class="mtest"&gt;&lt;p class="ctest"&gt;&lt;/p&gt;&lt;/div&gt;
 </pre>
-	
-	
-	<h2 id="middle2">父元素高度确定的单行文本的垂直居中</h2>
-	<p>设置此单行文本 <code>line-height</code> 高度等于父元素高度即可</p>
-	<div class="demo">
+    
+    
+    <h2 id="middle2">父元素高度确定的单行文本的垂直居中</h2>
+    <p>设置此单行文本 <code>line-height</code> 高度等于父元素高度即可</p>
+    <div class="demo">
         <p style="height:100px;line-height:100px;background:#ccc;">hello world!</p>
     </div>
 <pre class="prettyprint linenums">
 &lt;p style="height:100px;line-height:100px;background:#ccc;"&gt;hello world!&lt;/p&gt;
 </pre>
-	
-	
-	<h2 id="middle3">父元素高度确定的多行文本、图片、块级元素的垂直居中</h2>
-	<p>父元素高度确定的多行文本、图片、块级元素的垂直居中有两种方法。</p>
+    
+    
+    <h2 id="middle3">父元素高度确定的多行文本、图片、块级元素的垂直居中</h2>
+    <p>父元素高度确定的多行文本、图片、块级元素的垂直居中有两种方法。</p>
 
-	<h3 id="middle31">方法一：<small>外嵌套table方法</small></h3>
-	<p>说到垂直居中，CSS中有一个用于垂直居中的属性 <code>vertical-align</code>，但只是当父元素为td或tr时，这是属性才会生效，对于其他块级元素，例如div、p等，默认情况下是不支持 <code>vertical-align</code> 属性的。在Firefox和IE8+下，可以设置块级元素的display类型为 <code>table-cell</code>，激活vertical-align属性，但在IE6和IE7并不支持 <code>display:table-cell</code>，所以这种方法没办法跨浏览器兼容。</p>
-	<p>但我们可以使用最原始的笨方法来实现兼容——既然不支持块级元素设置为table-cell来模拟表格，那么我们就直接使用表格好了，如下：</p>
-	<div class="demo">
-	    <table class="middle">
-		    <tr><td>
-			    hello world!<br>
-			    hello world!<br>
-			    hello world!
+    <h3 id="middle31">方法一：<small>外嵌套table方法</small></h3>
+    <p>说到垂直居中，CSS中有一个用于垂直居中的属性 <code>vertical-align</code>，但只是当父元素为td或tr时，这是属性才会生效，对于其他块级元素，例如div、p等，默认情况下是不支持 <code>vertical-align</code> 属性的。在Firefox和IE8+下，可以设置块级元素的display类型为 <code>table-cell</code>，激活vertical-align属性，但在IE6和IE7并不支持 <code>display:table-cell</code>，所以这种方法没办法跨浏览器兼容。</p>
+    <p>但我们可以使用最原始的笨方法来实现兼容——既然不支持块级元素设置为table-cell来模拟表格，那么我们就直接使用表格好了，如下：</p>
+    <div class="demo">
+        <table class="middle">
+            <tr><td>
+                hello world!<br>
+                hello world!<br>
+                hello world!
             </td></tr>
-		</table>
-		<hr>
-		<table class="middle">
-		    <tr><td>
+        </table>
+        <hr>
+        <table class="middle">
+            <tr><td>
                 <img src="img/center-middle.png" width="90" height="60">
             </td></tr>
-		</table>
-		<hr>
-		<table class="middle">
-		    <tr><td>
+        </table>
+        <hr>
+        <table class="middle">
+            <tr><td>
                 <div class="ctest"></div>
-			</td></tr>
-		</table>
+            </td></tr>
+        </table>
     </div>
 <pre class="prettyprint linenums">
 table.middle{height:130px;background:#ccc;}
@@ -372,33 +376,33 @@ table.middle{height:130px;background:#ccc;}
     &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 </pre>
-	
-	<p>因为td标签默认情况下就隐式地设置了vertical-align的值为middle，所以我们不需要在显式地设置一遍。</p>
-	
-	<h3 id="middle32">方法二：<small>display:table-cell + hack</small></h3>
-	<p>对支持 <code>display:table-cell</code> 的IE8+和Firefox用 <code>display:table-cell</code> 和 <code>vertical-align:middle</code> 来实现居中，对不支持 display:table-cell 的IE6和IE7，使用特定的hack，如下：</p>
-	<div class="demo">
-	    <div class="box2">
+    
+    <p>因为td标签默认情况下就隐式地设置了vertical-align的值为middle，所以我们不需要在显式地设置一遍。</p>
+    
+    <h3 id="middle32">方法二：<small>display:table-cell + hack</small></h3>
+    <p>对支持 <code>display:table-cell</code> 的IE8+和Firefox用 <code>display:table-cell</code> 和 <code>vertical-align:middle</code> 来实现居中，对不支持 display:table-cell 的IE6和IE7，使用特定的hack，如下：</p>
+    <div class="demo">
+        <div class="box2">
             <div class="verticalWrap">
                 <p class="vertical">
-            	    hello world!<br>
-            	    hello world!<br>
-            	    hello world!
+                    hello world!<br>
+                    hello world!<br>
+                    hello world!
                 </p>
             </div>
-		</div>
-		<hr>
-		<div class="box2">
+        </div>
+        <hr>
+        <div class="box2">
             <div class="verticalWrap">
                 <img class="vertical" src="img/center-middle.png" width="90" height="60">
             </div>
         </div>
-		<hr>
-		<div class="box2">
+        <hr>
+        <div class="box2">
             <div class="verticalWrap">
                 <div class="ctest vertical"></div>
             </div>
-		</div>
+        </div>
     </div>
 <pre class="prettyprint linenums">
 /* 垂直居中 */
@@ -428,29 +432,29 @@ table.middle{height:130px;background:#ccc;}
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
-	
-	<p>利用hack技术区别对待标准浏览器和IE6/7，在不支持 <code>display:table-cell</code> 的IE6/7下，通过给父子两层元素分别设置 <code>top:50%</code> 和 <code>top:-50%</code> 来实现居中。这种方法的好处是没有增加额外的标签，但它的缺点也很明显，一方面使用了hack，不利于维护，另一方面，它需要设置 <code>position:relative</code>和 <code>position:absolute</code>，带来了副作用。</p>
-	
+    
+    <p>利用hack技术区别对待标准浏览器和IE6/7，在不支持 <code>display:table-cell</code> 的IE6/7下，通过给父子两层元素分别设置 <code>top:50%</code> 和 <code>top:-50%</code> 来实现居中。这种方法的好处是没有增加额外的标签，但它的缺点也很明显，一方面使用了hack，不利于维护，另一方面，它需要设置 <code>position:relative</code>和 <code>position:absolute</code>，带来了副作用。</p>
+    
     <h3 id="middle33">方法三：<small>inline-block + vertical-align:middle 方法</small></h3>
-	<p>父元素高度固定、子元素的高度不固定，使用<code>inline-block</code> 元素设置 <code>vertical-align:middle</code> 后会垂直居中对齐，添加 <code>.middle-full</code> 空标签辅助实现，如下：</p>
+    <p>父元素高度固定、子元素的高度不固定，使用<code>inline-block</code> 元素设置 <code>vertical-align:middle</code> 后会垂直居中对齐，添加 <code>.middle-full</code> 空标签辅助实现，如下：</p>
     <p><b>注意：</b> 使用这种方式，针对图片的自动缩放使用 max-width:100%; 时，middle-full和图片间不能有空格空行等</p>
-	<div class="demo">
-	    <div class="box3">
+    <div class="demo">
+        <div class="box3">
             <div class="middle-full"></div><p class="middle-item">
                 hello world!<br>
                 hello world!<br>
                 hello world!
             </p>
-		</div>
-		<hr>
-		<div class="box3">
+        </div>
+        <hr>
+        <div class="box3">
             <div class="middle-full"></div>
             <img class="middle-item" src="img/center-middle.png" width="90" height="60">
         </div>
-		<hr>
-		<div class="box3">
+        <hr>
+        <div class="box3">
             <div class="middle-full"></div><div class="ctest middle-item"></div>
-		</div>
+        </div>
     </div>
 <pre class="prettyprint linenums">
 /* 垂直居中 */
@@ -477,20 +481,40 @@ table.middle{height:130px;background:#ccc;}
 &lt;/div&gt;
 </pre>
     <p>利用<code>inline-block</code> 属性的元素设置 <code>vertical-align:middle</code> 后垂直居中对齐的特性，在父标签内放置辅助标签 <code>.middle-full</code> 等高于父标签（宽度为0），表现元素会垂直居中对齐于此标签，从而实现想要的效果。优点相比于方法二大大减少了标签嵌套层级，且更容易实现水平垂直居中（再添加text-align:center即可），同时避免了方法二设置position属性可能引起的副作用。</p>
-	
-	<h2 id="center-middle">弹窗的居中 <small>定位实现</small></h2>
-	<div class="demo" style="height:300px;">
-		<div class="Lx"></div>
-		<div class="Ly"></div>
-	</div>
+    
+    
+    <h3 id="middle33">CSS实现 图片等比缩放并垂直居中</h3>
+    <p>不借助 空标签 而是使用 <code>line-height</code> 实现垂直居中(line-height 为父级元素高度)</p>
+    <p><b>注意：</b> 使用这种方式，不同尺寸的盒子需要设置不同的 line-height，并且网页文件必须使用 HTML5 头部声明。</p>
+    <div class="demo">
+        <div class="box4 ">
+            <img class="img-middle" src="img/center-middle.png" width="90" height="60">
+        </div>
+    </div>
+<pre class="prettyprint linenums">
+/* 垂直居中 */
+.box4{ height:200px; text-align:center;background:#ccc; line-height: 200px;}
+.img-middle{max-height:100%;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;}
+
+&lt;div class="box4"&gt;
+    &lt;img class="img-middle" src="img/center-middle.png" height="60"&gt;
+&lt;/div&gt;
+
+</pre>
+    
+    <h2 id="center-middle">弹窗的居中 <small>定位实现</small></h2>
+    <div class="demo" style="height:300px;">
+        <div class="Lx"></div>
+        <div class="Ly"></div>
+    </div>
 <pre class="prettyprint linenums">
 .Lx,.Ly{position:absolute;left:50%;top:50%;background:red;}
 .Lx{width:100px;height:30px;margin-left:-50px;margin-top:-15px;}
 .Ly{width:30px;height:100px;margin-left:-15px;margin-top:-50px;}
 </pre>
     
-	<h3>问题及注意事项：</h3>
-	<p></p>
+    <h3>问题及注意事项：</h3>
+    <p></p>
 
 </div>
 </body>

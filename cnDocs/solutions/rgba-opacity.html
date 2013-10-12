@@ -78,8 +78,8 @@
     text-indent: 10px;
     
     /* 半透明核心代码 */
-    background-color: rgba(0, 0, 0, 0.4);
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7F000000, endColorstr=#7F000000);
 }
 .text-cover:hover {
     text-decoration: none;
@@ -248,8 +248,8 @@ opacity:.5;</pre></div>
     注意右侧文本不要贴边，如此100%的宽度会溢出，需在父层设置 overflow: hidden; */
     
     /* 半透明核心代码 */
-    background-color: rgba(0, 0, 0, 0.4);
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7F000000, endColorstr=#7F000000);
     /* 此处的 */
 }
 
@@ -276,24 +276,24 @@ opacity:.5;</pre></div>
             <span class="rbox"></span>
             <span class="rbox"></span>
             <span class="rbox"></span>
-            <span class="box1">颜色：白<br>透明度：.8</span>
-            <span class="box2">颜色：黑<br>透明度：.5</span>
-            <span class="box3">颜色：红<br>透明度：.4</span>
-            <span class="box4">颜色：绿<br>透明度：.3</span>
-            <span class="box5">颜色：蓝<br>透明度：.2</span>
+            <span class="box1">颜色：白<br>透明度：.8 #CC</span>
+            <span class="box2">颜色：黑<br>透明度：.5 #7F</span>
+            <span class="box3">颜色：红<br>透明度：.4 #66</span>
+            <span class="box4">颜色：绿<br>透明度：.3 #4C</span>
+            <span class="box5">颜色：蓝<br>透明度：.2 #33</span>
         </div>
     </div>
 <pre class="prettyprint linenums">
 .box1 { background-color: rgba(255, 255, 255, .8); 
-filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#ccffffff, endColorstr=#ccffffff); }
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF); }
 .box2 { background-color: rgba(  0,   0,   0, .5); 
-filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7f000000, endColorstr=#7f000000); color: #fff;}
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#7F000000, endColorstr=#7F000000); color: #fff;}
 .box3 { background-color: rgba(255,   0,   0, .4); 
-filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#66ff0000, endColorstr=#66ff0000); }
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#66FF0000, endColorstr=#66FF0000); }
 .box4 { background-color: rgba(  0, 255,   0, .3); 
-filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#4c0ff000, endColorstr=#4c00ff00); }
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#4C00FF00, endColorstr=#4C00FF00); }
 .box5 { background-color: rgba(  0,   0, 255, .2); 
-filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#330000ff, endColorstr=#330000ff); }
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#330000FF, endColorstr=#330000FF); }
 
 针对Win7下的IEtester中IE6不透明，可在滤镜前单独设置 _background 色，如下：
 .box5 { 
