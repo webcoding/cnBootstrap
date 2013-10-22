@@ -34,8 +34,8 @@ a.as-rc-wrap:hover .as-rc-cnt{
     background: -ms-linear-gradient(top, #ffffff,  #e3e3e3);
     background: -o-linear-gradient(top, #fff, #dddddd);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd');
-    background: linear-gradient( #fff, #dddddd);
-    /* 原 background: linear-gradient(top, #fff, #dddddd);的写法(添加top)不被浏览器支持 */
+    background: linear-gradient(to bottom, #fff, #dddddd);
+    /* 原 background: linear-gradient(top, #fff, #dddddd);的写法不正确，w3c的标准(应为to bottom 或缺省) */
 }
 
 .linearbox .as-rc-cnt{
