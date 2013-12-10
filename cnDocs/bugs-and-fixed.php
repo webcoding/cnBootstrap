@@ -76,43 +76,43 @@
                 <li><a href="#typography"><i class="icon-chevron-right"></i> 相关资源</a></li>
                 <li><a href="#htmlchar"><i class="icon-chevron-right"></i> HTML特殊符号对照表</a></li>
             </ul>
-			<!-- 使用模板迷做一个界面样式
-				 实现功能类似淘宝的筛选
-			-->
-			<!-- 搜素筛选\\ -->
-			<div class="search-filter bs-docs-sidenav" style="margin-top:450px;">
-				<div class="filter-info clearfix"><span class="result-info">共找到<i id="filter-num">81</i>条结果。</span>
-					<dl id="your-choices" class="your-choices">
-					</dl>
-				</div>
-				<ul id="tags-list" class="filter-tags">
-					<li id="filter-browser" title="浏览器版本">
-						<a class="all-browser s-tag selected" href="#">全部</a>
-						<a class="s-tag" href="#">IE6</a>
-						<a class="s-tag" href="#">IE7</a>
-						<a class="s-tag" href="#">IE8</a>
-						<a class="s-tag" href="#">Chrome</a>
-						<a class="s-tag" href="#">Firefox</a>
-					</li>
-					<li id="filter-img" title="图片方面">
-						<a class="all-img s-tag selected" href="#">全部</a>
-						<a class="s-tag" href="#">PNG</a>
-						<a class="s-tag" href="#">背景</a>
-						<a class="s-tag" href="#">定位</a>
-						<a class="s-tag" href="#">热点</a>
-					</li>
-					<li id="filter-layout" title="布局方面">
-						<a class="all-layout s-tag selected" href="#">全部</a>
-						<a class="s-tag" href="#">列表</a>
-						<a class="s-tag" href="#">其他</a>
-					</li>
-					<li id="filter-css" title="css方面">
-						<a class="all-css s-tag selected" href="#">全部</a>
-						<a class="s-tag" href="#">属性失效</a>
-						<a class="s-tag" href="#">其他</a>
-					</li>
-				</ul>
-			</div>
+            <!-- 使用模板迷做一个界面样式
+                 实现功能类似淘宝的筛选
+            -->
+            <!-- 搜素筛选\\ -->
+            <div class="search-filter bs-docs-sidenav" style="margin-top:450px;">
+                <div class="filter-info clearfix"><span class="result-info">共找到<i id="filter-num">81</i>条结果。</span>
+                    <dl id="your-choices" class="your-choices">
+                    </dl>
+                </div>
+                <ul id="tags-list" class="filter-tags">
+                    <li id="filter-browser" title="浏览器版本">
+                        <a class="all-browser s-tag selected" href="#">全部</a>
+                        <a class="s-tag" href="#">IE6</a>
+                        <a class="s-tag" href="#">IE7</a>
+                        <a class="s-tag" href="#">IE8</a>
+                        <a class="s-tag" href="#">Chrome</a>
+                        <a class="s-tag" href="#">Firefox</a>
+                    </li>
+                    <li id="filter-img" title="图片方面">
+                        <a class="all-img s-tag selected" href="#">全部</a>
+                        <a class="s-tag" href="#">PNG</a>
+                        <a class="s-tag" href="#">背景</a>
+                        <a class="s-tag" href="#">定位</a>
+                        <a class="s-tag" href="#">热点</a>
+                    </li>
+                    <li id="filter-layout" title="布局方面">
+                        <a class="all-layout s-tag selected" href="#">全部</a>
+                        <a class="s-tag" href="#">列表</a>
+                        <a class="s-tag" href="#">其他</a>
+                    </li>
+                    <li id="filter-css" title="css方面">
+                        <a class="all-css s-tag selected" href="#">全部</a>
+                        <a class="s-tag" href="#">属性失效</a>
+                        <a class="s-tag" href="#">其他</a>
+                    </li>
+                </ul>
+            </div>
         </div><!-- //搜素筛选 -->
         <div class="span9"> 
     <!-- Overview
@@ -124,7 +124,7 @@
                 <p>一直想系统的整理下关于浏览器兼容性的各种Bug及解决方法，但一直都很忙没有完成，没有成片的时间，于是我决定每天整理一点，毕竟网上也不少整理的了，虽然不全，但是参考着再补充我和朋友们所遇到的，那么一份齐全的浏览器兼容性bug列表及解决方案也就指日可待了！</p>
                 <p>整理Bugs方案，自然首先要处理更底层的东西，考虑到不同的结构也可能产生影响，所以优先研究css reset以及html结构基础方案，这之后在解决Bugs问题就会减少N多种的情形，如此就能保证更好更统一的解决问题！</p>
                 <p>关于浏览器的Bug解决方案(包含hack技术)，下面列举了一般常见的样式Bug，布局Bug，以及需要设计时需要规避的Bug(目前81个)</p>
-				</section>
+                </section>
 
                 <!-- 问题列表 -->
 
@@ -185,9 +185,9 @@
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>方法一：经过几次测试我找到一个方法大家可以尝试一下，将href的javascript;;改成#
 <code>&lt;a href="#" onclick="form.submit();"&gt;&lt;/a&gt;</code> </p>
-							<p>方法二：&lt;a href=&quot;javascript:void(0);&quot; class=&quot;reg_submit&quot; id=&quot;asubmit&quot; onclick=&quot;if(!validate()){return false;}else{document.getElementById(&quot;regfrm&quot;).submit();return false;}&quot;&gt;提交&lt;/a&gt;，onclick 返回 false ,阻止浏览器的默认行为,也可以达到相同的目的。</p>
+                            <p>方法二：&lt;a href=&quot;javascript:void(0);&quot; class=&quot;reg_submit&quot; id=&quot;asubmit&quot; onclick=&quot;if(!validate()){return false;}else{document.getElementById(&quot;regfrm&quot;).submit();return false;}&quot;&gt;提交&lt;/a&gt;，onclick 返回 false ,阻止浏览器的默认行为,也可以达到相同的目的。</p>
                             <p>方法三：&lt;a href=&quot;javascript:void(0);&quot; class=&quot;reg_submit&quot; id=&quot;asubmit&quot;&gt;提交&lt;/a&gt;。</p>
-                            <pre>
+<pre>
 window.onload = function() { 
     document.getElementById(&quot;asubmit&quot;).onclick = function() {
         setTimeout(function() {
@@ -233,7 +233,7 @@ window.onload = function() {
                             <p>如果使用div(或其他容器)包裹一个浮动的元素，经常会遇到一些无法包裹内部元素的问题。</p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" href="">Fixed</a></span>
-							<p class="info">必须给div(容器)定义明确的height、width、overflow之中一个属性（除了auto值）才能将浮动元素严实地包裹。推荐以下方法：</p>
+                            <p class="info">必须给div(容器)定义明确的height、width、overflow之中一个属性（除了auto值）才能将浮动元素严实地包裹。推荐以下方法：</p>
                             <p><b>clearfix清除法</b>：clearfix使用:after属性，配合zoom:1 来实现清除浮动；实现：只要在其父层添加 <code>class="clearfix"</code> 即可。</p>
                             <p><b>overflow清除法</b>：定义overflow之中一个属性（除了auto值）。</p>
                             <p><b>额外空标签清除法</b>：在浮动层父标签内部最后添加空标签 <code>&lt;div class="clear"&gt;&lt;/div&gt;</code> 来实现。</p>
@@ -263,7 +263,7 @@ window.onload = function() {
                             <p>此BUG的原因可能是多重混合的，如浮动，注释，宽高定义等等。并且注释条数越多，溢出的文本也会随之增多。</p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
-                            <p>头大了吧！但别担心，<a href="http://www.positioniseverything.net/explorer/guillotine.html" rel="nofollow" target="_blank">well-documented</a>提供了详细的解决方法。</p>
+                            <p>头大了吧！但别担心，<a href="http://www.positioniseverything.net/explorer/guillotine.html" rel="nofollow" target="_blank">well-documented</a>提供了详细的解决方法。或者请参考 <a href="http://www.cnblogs.com/leejersey/archive/2013/09/08/3308314.html">文本溢出BUG</a></p>
                         </div>
                     </li>
                     <li class="bugs-item" data-key="IE6 绝对定位 1像素">
@@ -371,7 +371,7 @@ window.onload = function() {
                         <h3 class="bug-title">列表阶梯bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p><a href="http://haslayout.net/css/Staircase-Bug" rel="nofollow" target="_blank">列表阶梯bug</a>通常会在给 <code>&lt;li&gt;</code> 的子元素 <code>&lt;a&gt;</code> 使用 <code>float:left;</code> 时触发，我们本意是要做一个横向的列表(通常是导航栏)，但IE却可能呈现出垂直的或者阶梯状。</p>
-							<p>抑或说：当给一系列 &lt;li&gt; 里面的浮动元素设置font-size后会出现阶梯效果</p>
+                            <p>抑或说：当给一系列 &lt;li&gt; 里面的浮动元素设置font-size后会出现阶梯效果</p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>解决办法就是给 <code>&lt;li&gt;</code> 定义 <code>float:left;</code> 而非子元素 <code>&lt;a&gt;</code>，或者给 <code>&lt;li&gt;</code> 定义 <code>display:inline;</code> 也可以解决。</p>
@@ -435,7 +435,7 @@ window.onload = function() {
                         </div>
                     </li>
                 </ol>
-				<h2>其他一些奇怪的Bug</h2>
+                <h2>其他一些奇怪的Bug</h2>
                 <ol>
                     <li class="bugs-item" data-key="IE8 :focus">
                         <h3 class="bug-title">:focus + selector {} 选择器失效</h3>
@@ -446,7 +446,7 @@ window.onload = function() {
                             <p>在失效选择器后面添加一个空选择器 <code>:focus{}</code></p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE7 :hover 据对定位">
+                    <li class="bugs-item" data-key="IE7 :hover 据对定位">
                         <h3 class="bug-title">ie7的坏的:hover 绝对定位bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE7</i>
                             <p>当子元素设置了absolute并且通过设置left top 等来通过:hover时改变其显示位置时将会不起作用，如果他们不在父元素的可视范围内，http://haslayout.net/css/ie7-broken-hover-absolute-bug</p>
@@ -455,7 +455,7 @@ window.onload = function() {
                             <p>给其加上margin-left:0%;</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE8 :active 背景偏移">
+                    <li class="bugs-item" data-key="IE8 :active 背景偏移">
                         <h3 class="bug-title">当:active时Button背景偏移</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE8</i>
                             <p>给button设置:active时背景会做偏移</p>
@@ -464,7 +464,7 @@ window.onload = function() {
                             <p>可以通过设置:active时的 -ms-background-position-x和-ms-background-position-y来改变这个偏移。</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE8 边框消失 outline :hover">
+                    <li class="bugs-item" data-key="IE8 边框消失 outline :hover">
                         <h3 class="bug-title">:hover边框消失bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE8</i>
                             <p>当设置了outline的元素后，再设置:hover的时候，如果设置边框的话，将会不显示</p>
@@ -473,17 +473,17 @@ window.onload = function() {
                             <p>规避触发条件</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 绝对定位 a标签">
+                    <li class="bugs-item" data-key="IE6 IE7 绝对定位 a标签">
                         <h3 class="bug-title">position:absolute元素中的a元素bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>position:absolute元素中，a{ display:block}, 在非:hover时只有文本可点击</p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>A:http://haslayout.net/css/Partial-Click-Bug，影响版本ie6，解决方法：设置layout</p>
-							<p>B:http://haslayout.net/css/Partial-Click-Bug-v2，影响版本ie6/7，解决方法：给a添加background, 如果背景透明，使用background:url('任何页面中已经缓存的文件链接')；不推荐backgroundurl(#)[官方的解决方法]，因为会增加一下HTTP请求</p>
+                            <p>B:http://haslayout.net/css/Partial-Click-Bug-v2，影响版本ie6/7，解决方法：给a添加background, 如果背景透明，使用background:url('任何页面中已经缓存的文件链接')；不推荐backgroundurl(#)[官方的解决方法]，因为会增加一下HTTP请求</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 文档滚动 overflow">
+                    <li class="bugs-item" data-key="IE6 IE7 文档滚动 overflow">
                         <h3 class="bug-title">文档滚动bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>不在html标签上设置overflow或许会影响到body上面的overflow，具体请看 http://haslayout.net/css/Document-Scrollbars-Overflow-Inconsistency </p>
@@ -492,7 +492,7 @@ window.onload = function() {
                             <p>html{ overflow:visible;} body{ overflow:hidden;}</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6">
+                    <li class="bugs-item" data-key="IE6">
                         <h3 class="bug-title">* html bug ie6下不会被忽略</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>* html [selector]在ie6下通常不会被忽略，这个bug通常被用来作ie6的hack使用</p>
@@ -501,7 +501,7 @@ window.onload = function() {
                             <p>选择性规避</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 浮动 文字斜体">
+                    <li class="bugs-item" data-key="IE6 浮动 文字斜体">
                         <h3 class="bug-title">浮动元素内文字斜体bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>给两个浮动元素的某中一个的文字设定为斜体，另一个元素下拉在有斜体文字元素的下面，影响版本ie6，http://haslayout.net/css/Italics-Float-Bug</p>
@@ -510,7 +510,7 @@ window.onload = function() {
                             <p>给有斜体文字的元素添加overflow:hidden </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 浮动 自适应伸展">
+                    <li class="bugs-item" data-key="IE6 IE7 浮动 自适应伸展">
                         <h3 class="bug-title">不正确的浮动伸展布局</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>连续浮动的元素并且设置clear属性没法自动伸展，demo：http://haslayout.net/demos/Incorrect-Float-Shrink-Wrap-Bug-Demo.html</p>
@@ -519,7 +519,7 @@ window.onload = function() {
                             <p>给连续浮动元素加一个span然后设置display:inline-block和display:block </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 连续浮动">
+                    <li class="bugs-item" data-key="IE6 IE7 连续浮动">
                         <h3 class="bug-title">连续浮动元素bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>连续浮动元素bug：http://haslayout.net/css/Float-Squeeze-Weird-Gap-Bug</p>
@@ -528,7 +528,7 @@ window.onload = function() {
                             <p>添加宽度</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 连续浮动 重复字符">
+                    <li class="bugs-item" data-key="IE6 IE7 连续浮动 重复字符">
                         <h3 class="bug-title">连续浮动字符出现重复字符</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>连续浮动字符出现重复字符，影响版本ie6/ie7, http://haslayout.net/css/Float-Squeeze-Duplicate-Last-Character-Bug</p>
@@ -537,28 +537,28 @@ window.onload = function() {
                             <p>这个和上面的一个问题解决方案都差不多，14是通过加一个宽度，而这个是通过给浮动字符加一个position:relative;</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 空元素 高度">
+                    <li class="bugs-item" data-key="IE6 IE7 空元素 高度">
                         <h3 class="bug-title">空元素高度bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>空元素高度bug，有layout的空元素获得了高度:http://haslayout.net/css/Empty-Element-Height-Bug <br>
-							<pre>div {
+                            <pre>div {
 background: blue;
 width:100%; /* to give "layout"  */
 }
 </pre>
-							</p>
+                            </p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>
-							<pre>div {
+                            <pre>div {
 height: 0;
 overflow: hidden;
 }
 </pre>
-							</p>
+                            </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE7 dotted边框 dashed边框">
+                    <li class="bugs-item" data-key="IE7 dotted边框 dashed边框">
                         <h3 class="bug-title">ie7的1px dotted 边框变成dashed边框的bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE7</i>
                             <p>当设置了1px dotted边框后，有一个边框的宽度大于1px 的话其它为1px边框会变为dashed的样式，具体请看http://haslayout.net/css/ie7-1px-Dotted-Border-Appears-As-Dashed-Bug </p>
@@ -567,7 +567,7 @@ overflow: hidden;
                             <p></p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE8 th 表格 继承属性 text-align">
+                    <li class="bugs-item" data-key="IE8 th 表格 继承属性 text-align">
                         <h3 class="bug-title">th没有继承text-align属性的bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE8</i>
                             <p>当给table设置text-align时，th没有继承样式，http://haslayout.net/css/non-inherited-th-text-align-bug </p>
@@ -576,7 +576,7 @@ overflow: hidden;
                             <p>给th设置text-align:inherit;来解决ie8下这个丑陋的bug。</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 表格 继承属性 text-align">
+                    <li class="bugs-item" data-key="IE6 IE7 表格 继承属性 text-align">
                         <h3 class="bug-title">text-align bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>当容器外面设置了text-align，如果容器里面有文本和其他block的元素, block的元素也会继承text-align，这是不正确的，http://haslayout.net/css/Text-Align-Bug </p>
@@ -585,7 +585,7 @@ overflow: hidden;
                             <p>重新写出合理的有语义的markup，如文本外面加一个p。</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 IE8 style link @import 限制">
+                    <li class="bugs-item" data-key="IE6 IE7 IE8 style link @import 限制">
                         <h3 class="bug-title">32个style限制</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>在32个"style"方法(style, link, @import)后浏览器会忽略后面的样式</p>
@@ -594,7 +594,7 @@ overflow: hidden;
                             <p>选择规避</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE8 浮动 图片 标记错误">
+                    <li class="bugs-item" data-key="IE8 浮动 图片 标记错误">
                         <h3 class="bug-title">浮动图片list标记错位bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE8</i>
                             <p>当list里面有浮动的image时，list标记显示的位置跑在里面了，http://haslayout.net/css/Image-Float-Bullet-Chaos-Bug </p>
@@ -603,7 +603,7 @@ overflow: hidden;
                             <p>用背景图片代替list自带的标记 </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 dt dd dl 浮动 背景">
+                    <li class="bugs-item" data-key="IE6 dt dd dl 浮动 背景">
                         <h3 class="bug-title">dt, dd, li背景消失bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>当给浮动的div里面的dt, dd, dl设置背景时不显示，http://haslayout.net/css/disappearing-list-background-bug </p>
@@ -612,7 +612,7 @@ overflow: hidden;
                             <p>给dt, dd, dl加上position:relative; </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE8 baseline 偏移 display overflow">
+                    <li class="bugs-item" data-key="IE8 baseline 偏移 display overflow">
                         <h3 class="bug-title">li内元素偏离 baseline 向下拉</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE8</i>
                             <p>当给list里面的元素设置display和overflow属性后list标记会偏移，http://haslayout.net/css/list-drop-shift-bug </p>
@@ -621,7 +621,7 @@ overflow: hidden;
                             <p>给里面的元素加一个float:right; width:100% 或给li设置display:inline </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 ol 数字标记 自增">
+                    <li class="bugs-item" data-key="IE6 IE7 ol 数字标记 自增">
                         <h3 class="bug-title">ol数字标记不自增</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>当给li设置宽度时会触发这个bug</p>
@@ -630,7 +630,7 @@ overflow: hidden;
                             <p>给li设置display:list-item </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 ul ol 标记">
+                    <li class="bugs-item" data-key="IE6 IE7 ul ol 标记">
                         <h3 class="bug-title">ul/ol标记消失bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>当ul/ol触发了layout并且有margin-left会触发这个bug，http://haslayout.net/css/No-Bullets-on--ul--and--ol--Bug </p>
@@ -639,7 +639,7 @@ overflow: hidden;
                             <p>给li设置margin-left（不要加在ul/ol上）</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 图片 垂直居中">
+                    <li class="bugs-item" data-key="IE6 IE7 图片 垂直居中">
                         <h3 class="bug-title">图片不垂直居中</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>当使用line-height来居中图片时在ie6/7下不会生效，http://haslayout.net/css/No-line-height-Vertical-Center-on-Images-Bug </p>
@@ -648,7 +648,7 @@ overflow: hidden;
                             <p>在img后加一个有layout的空白元素如&lt;span&gt;&lt;/span&gt;</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 IE8 图片 label form">
+                    <li class="bugs-item" data-key="IE6 IE7 IE8 图片 label form">
                         <h3 class="bug-title">图片label bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>当label中有img的时候无法触发点击选中form元素事件：http://haslayout.net/demos/Image-Label-Focus-Bug-Demo.html</p>
@@ -657,7 +657,7 @@ overflow: hidden;
                             <p>通过给<label>内加入一个空的span标签，然后设置 position:absolute；background:url(#); 设置label float:left; position:relative;overflow:hidden;就可以解决了。http://haslayout.net/demos/Image-Label-Focus-Bug-Fixed-Demo-CMS.html</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 IE8 filter 透明 背景">
+                    <li class="bugs-item" data-key="IE6 IE7 IE8 filter 透明 背景">
                         <h3 class="bug-title">使用filter处理的透明背景图片的透明部分不可点bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>当给一个display:block元素使用filter来支持png透明的时候，透明区域无法点击，http://haslayout.net/css/no-transparency-click-bug </p>
@@ -666,7 +666,7 @@ overflow: hidden;
                             <p>不要使用 background:none;filter…，而是background:url(#);filter…</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE7 白色背景 :hover">
+                    <li class="bugs-item" data-key="IE7 白色背景 :hover">
                         <h3 class="bug-title">白色背景hover bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE7</i>
                             <p>给hover设置background-color:#ffffff;时，背景不会改变，http://haslayout.net/css/hover-white-background-ignore-bug </p>
@@ -675,7 +675,7 @@ overflow: hidden;
                             <p>设置background:#ffffff;</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 IE8 PNG 背景">
+                    <li class="bugs-item" data-key="IE6 IE7 IE8 PNG 背景">
                         <h3 class="bug-title">png图片和背景颜色不一致</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>设置背景颜色和png图片背景同样的颜色代码最后表现不一致，http://haslayout.net/css/PNG-Image-and-Background-Color-Mismatch </p>
@@ -684,7 +684,7 @@ overflow: hidden;
                             <p>原来是因为ie支持"PNG Gamma profiles"，解决方案是通过一个pngcrush程序来优化图片。</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 IE8 background url()">
+                    <li class="bugs-item" data-key="IE6 IE7 IE8 background url()">
                         <h3 class="bug-title">没有背景图片bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>当使用background的时候如果在url()后没有加空格背景图片就不会显示。</p>
@@ -693,7 +693,7 @@ overflow: hidden;
                             <p>添加空格</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 背景溢出 滚动条">
+                    <li class="bugs-item" data-key="IE6 背景溢出 滚动条">
                         <h3 class="bug-title">背景溢出,拖动滚动条后显示正常 bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>一个容器里面有浮动元素并且通过加一个clear:both的额外div来清除浮动会产生此bug，http://haslayout.net/css/Leaking-Background-Bug </p>
@@ -702,14 +702,14 @@ overflow: hidden;
                             <p>建议尽量不要通过增加一个 clear:both的div来清除浮动，可以通过在外层加上overflow:hidden;对于ie可以通过加上zoom:1；来触发ie的 layout </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 IE8 自定义鼠标">
+                    <li class="bugs-item" data-key="IE6 IE7 IE8 自定义鼠标">
                         <h3 class="bug-title">自定义鼠标bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>当自定义鼠标样式的时候，如果url()里面的路径是相对路径的话，ie会认为相对于当前文档而不会出现鼠标样式的图片，http://haslayout.net/css/Custom-Cursor-Bug </p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>采用绝对路径。此言我觉的有误，下面是一些总结：</p>
-							<p>cursor:设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。<br>
+                            <p>cursor:设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。<br>
 <strong>注意：</strong>使用自定义图像作为光标类型，IE, Opera只支持*.cur等特定的图片格式；Firefox, Chrome, Safari既支持特定图片类型也支持常见的*.jpg, *.gif, *.jpg等图片格式。 
 cursor的属性值可以是一个序列 
 示例代码：</p>
@@ -724,7 +724,7 @@ cursor的属性值可以是一个序列
 </p>
                         </div>
                     </li>
-					<li class="bugs-item">
+                    <li class="bugs-item">
                         <h3 class="bug-title" data-key="IE6 IE7 IE8 noscript border">noscript样式bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>当js可用的时候如果给noscript设置border和背景都可以显示，http://haslayout.net/css/noscript-ghost-bug </p>
@@ -733,7 +733,7 @@ cursor的属性值可以是一个序列
                             <p>给noscript设置display:none; </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE8 百分比padding 垂直marging">
+                    <li class="bugs-item" data-key="IE8 百分比padding 垂直marging">
                         <h3 class="bug-title">百分比padding垂直margin bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE8</i>
                             <p>当父元素设置了百分比的padding，子元素有垂直的margin的时候，就好像父元素被设置了margin一样</p>
@@ -742,7 +742,7 @@ cursor的属性值可以是一个序列
                             <p>给父元素加一个overflow:hidden/auto </p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 IE8 auto margin 水平居中">
+                    <li class="bugs-item" data-key="IE6 IE7 IE8 auto margin 水平居中">
                         <h3 class="bug-title">auto margin居中bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7 IE8</i>
                             <p>给block元素设置margin auto无法居中，http://haslayout.net/css/no-auto-margin-center-pseudo-bug</p>
@@ -751,7 +751,7 @@ cursor的属性值可以是一个序列
                             <p>出现这种bug的原因通常是没有Doctype，然后触发了ie的quirks mode，加上&lt;!DOCTYPE html&gt;就可以了。</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 表单 双边距">
+                    <li class="bugs-item" data-key="IE6 IE7 表单 双边距">
                         <h3 class="bug-title">表单元素双margin bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>input和textarea或许会继承父元素的水平的margin，具体请看 http://haslayout.net/css/Form-Control-Double-Margin-Bug </p>
@@ -760,7 +760,7 @@ cursor的属性值可以是一个序列
                             <p>解决方案</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 IE7 负margin">
+                    <li class="bugs-item" data-key="IE6 IE7 负margin">
                         <h3 class="bug-title">负margin bug</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6 IE7</i>
                             <p>当给一个有layout容器里面的元素设置负marin时内容会被截断，http://haslayout.net/css/Negative-Margin-Bug </p>
@@ -769,7 +769,7 @@ cursor的属性值可以是一个序列
                             <p>不让容器有layout或者给负marin的元素layout并设置 position:relative;</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 margin auto button 居中">
+                    <li class="bugs-item" data-key="IE6 margin auto button 居中">
                         <h3 class="bug-title">设置margin auto的button没有居中</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>ie8下如果给像button这样的标签（如button, input[type="button"], input[type="submit"]）设置{ display:block; margin-left:auto; margin-right:auto; }如果不设置宽度的话无法居中。demo http://haslayout.net/demos/No-Auto-Margin-Center-on-Buttons-Inconsistency-Fixed-Demo-CS.html </p>
@@ -778,7 +778,7 @@ cursor的属性值可以是一个序列
                             <p>可以给button加上宽度</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 li :hover 高度增大">
+                    <li class="bugs-item" data-key="IE6 li :hover 高度增大">
                         <h3 class="bug-title">ie6下li里有hover行为时li高度会增大</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>ie6下li里有hover行为时li高度会增大</p>
@@ -787,20 +787,20 @@ cursor的属性值可以是一个序列
                             <p>重设li的padding-top为0或不要让li拥有layout。</p>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 line-height 非文字对象">
+                    <li class="bugs-item" data-key="IE6 line-height 非文字对象">
                         <h3 class="bug-title">IE6下 line-height属性非文字对象中失效</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>在IE6中，只有当文字和img、input、textarea、select、object等对象在同一个容器中的时候，line-height属性在这些非文字的对象中就会失效。</p>
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>设置非文字的对象的样式：</p>
-							<pre>
+                            <pre>
 _margin: (容器的line-height – 对象本身的高度)/2px 0;
 vertical-align:middle;
 </pre>
                         </div>
                     </li>
-					<li class="bugs-item" data-key="IE6 图标 文字">
+                    <li class="bugs-item" data-key="IE6 图标 文字">
                         <h3 class="bug-title">图标和文字不能垂直居中</h3>
                         <div class="question"><span class="link"><a target="_blank" title="Bug重现" href="">Bug</a></span> <i class="browser" title="涉及浏览器">IE6</i>
                             <p>IE6浏览器中，图标和文字不能垂直居中</p>
@@ -809,7 +809,7 @@ vertical-align:middle;
                             <p>对包含文字的标签设置layout。</p>
                         </div>
                     </li>
-				</ol>
+                </ol>
                 <h2>技巧和经验</h2>
                 <ol>
                     <li class="bugs-item" data-key="Chrome 12px 字体">
@@ -851,8 +851,8 @@ vertical-align:middle;
                         </div>
                         <div class="answer"><span class="link"><a target="_blank" title="解决办法" href="">Fixed</a></span>
                             <p>设置flash的wmode值为transparent或opaque，<code>&lt;param name="wmode" value="transparent" /&gt;</code></p>
-							<p>IE浏览器下可用 <code>&lt;param name=”wmode” value=”transparent” /&gt;</code><br>标准浏览器下可用 <code>&lt;embed src=”flash.swf” wmode=”transparent” ... &gt;&lt;/embed&gt;</code></p>
-							<p>还有种方法是 iframe，缺点是影响网站性能！建议万不得已再用</p>
+                            <p>IE浏览器下可用 <code>&lt;param name=”wmode” value=”transparent” /&gt;</code><br>标准浏览器下可用 <code>&lt;embed src=”flash.swf” wmode=”transparent” ... &gt;&lt;/embed&gt;</code></p>
+                            <p>还有种方法是 iframe，缺点是影响网站性能！建议万不得已再用</p>
                             <p>更多请参考：<a target="_blank" href="http://www.candoudou.com/archives/663">解决Flash挡住层用z-index无效的问题</a></p>
                         </div>
                     </li>
@@ -1000,8 +1000,8 @@ vertical-align:middle;
                 <p>CSS Hack大致有3类表现形式如下：再添加一类新的Hack原理——<a href="./bugs-and-fixed.php#media-hack">Medial Queries</a></p>
 <h2 id="condition-hack">第一类：条件Hack/条件注释</h2>
                 <p>条件Hack又称<a target="_blank" href="http://baike.baidu.com/view/3615016.htm" title="点击查看其百度百科">条件注释</a>，IE中的条件注释（Conditional comments）对IE的版本和IE非IE有优秀的区分能力，是WEB设计中常用的hack方法，且被认为是取代针对IE css hack的首选办法。但是由于维护的不便利性，所以在处理兼容性上使用的不是非常广泛，主要用于针对特定版本浏览器的指定文件引入上，如：<a href="./bugs-and-fixed.php#ie6png">IE6 PNG半透明bug处理</a>、html5.js等。</p>
-				<div class="bs-docs-example">
-					<p>
+                <div class="bs-docs-example">
+                    <p>
                     <!--[if lt IE 7 ]>此浏览器版本小于IE7<![endif]-->
                     <!--[if IE 7 ]>这是IE7浏览器<![endif]-->
                     <!--[if IE 8 ]>这是IE8浏览器<![endif]-->
@@ -1009,7 +1009,7 @@ vertical-align:middle;
                     <!--[if (gt IE 9)|!(IE)]><!-->
                         这个浏览器版本大于IE9或者此浏览器是非IE浏览器
                     <!--<![endif]-->
-				</div>
+                </div>
 <pre class="prettyprint linenums">
 &lt;!--[if &lt;keywords&gt; IE &lt;version&gt;]&gt;
  HTML代码块 
@@ -1126,7 +1126,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMe
 }</pre>
                 <p>以上方法只能应用于处理背景，且无法平铺等，所以推荐使用<a target="_blank" href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD_belatedPNG插件</a>处理，具备其他方法所不支持的backgrond-position与background-repeat属性，同时DD_belatedPNG还支持a:hover属性</p>
                 <div class="bs-docs-example">
-                	<p class="test-png24 ie6png"></p>
+                    <p class="test-png24 ie6png"></p>
                 </div>
 <pre class="prettyprint linenums">
 &lt;!--[if lte IE 6]&gt;
@@ -1138,7 +1138,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMe
 
 &lt;p class=&quot;test-png24 ie6png&quot;&gt;&lt;/p&gt;
 </pre>
-			<p>引用函数是 DD_belatedPNG.fix() , 括号里分别填写应用PNG的CSS选择器（可使用ID选择器和类选择器）和应用类型（分为img和background两种）。</p>
+            <p>引用函数是 DD_belatedPNG.fix() , 括号里分别填写应用PNG的CSS选择器（可使用ID选择器和类选择器）和应用类型（分为img和background两种）。</p>
             <p>这里还有一些关于<a target="_blank" href="http://www.tcreator.info/webSchool/xhtml-css/ie6-DD_belatedPNG.html">使用DD_belatedPNG的注意事项</a>。</p>
             <blockquote><h4>JavaScript方式修复IE6 PNG</h4><ul><li><a href="http://www.clientcide.com/wiki/cnet-libraries/02-browser/01-fixpng" rel="nofollow" target="_blank">MooTools’ FixPNG</a></li><li><a href="http://jquery.andreaseberhard.de/pngFix/" rel="nofollow" target="_blank">jQuery PNG fix</a></li><li><a href="http://www.twinhelix.com/css/iepngfix/" rel="nofollow" target="_blank">IE PNG Fix by Twin Helix</a></li><li><a href="http://entropymine.com/jason/tweakpng/" rel="nofollow" target="_blank">TweakPNG</a></li><li><a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/" rel="nofollow" target="_blank">DD_belatedPNG</a></li></ul></blockquote>
 </section>
@@ -1163,7 +1163,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMe
 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { 
     -webkit-border-top-right-radius: 4px;
      -khtml-border-top-right-radius: 4px;
-    	-moz-border-radius-topright: 4px;
+        -moz-border-radius-topright: 4px;
             border-top-right-radius: 4px;
 } 
 .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
@@ -1175,7 +1175,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMe
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
     -webkit-border-bottom-right-radius: 4px;
      -khtml-border-bottom-right-radius: 4px;
-    	-moz-border-radius-bottomright: 4px;
+        -moz-border-radius-bottomright: 4px;
             border-bottom-right-radius: 4px;
 }</pre>
 <p>如果不能使用上述方法替代（影响用户体验比较严重），那么只能使用图片来处理，这样扩展性不是很好，但是如果设计上达到高度的一致性，那么扩展性也是蛮好的！</p>
@@ -1199,7 +1199,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMe
             &lt;div class=&quot;box-br&quot;&gt;
             ...
             &lt;/div&gt;
-        &lt;/div&gt;	
+        &lt;/div&gt;    
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -1219,7 +1219,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMe
 <pre class="prettyprint linenums">
 document.execCommand(&quot;BackgroundImageCache&quot;,false,true);
 </pre>
-				<blockquote><h4>其他解决方法：</h4><ul><li><a href="http://www.fivesevensix.com/studies/ie6flicker/" rel="nofollow" target="_blank">Minimize Flickering CSS Background Images in IE6</a></li></ul></blockquote>
+                <blockquote><h4>其他解决方法：</h4><ul><li><a href="http://www.fivesevensix.com/studies/ie6flicker/" rel="nofollow" target="_blank">Minimize Flickering CSS Background Images in IE6</a></li></ul></blockquote>
             </section>
             
             <!-- Layout
@@ -1250,7 +1250,7 @@ CSS:
 /* 其他浏览器 */
 html>body #container { height:auto;}
 </pre>
-				<h2 id="max-height">最大高度</h2>
+                <h2 id="max-height">最大高度</h2>
                 <p>非常遗憾，在IE6下实现 <code>max-height</code> 只能使用IE特有滤镜，或者可以使用JavaScript实现。我个人更建议使用JavaScript来解决，因为IE滤镜会消耗大量资源甚至会使浏览器崩溃，而且禁用JavaScript后这两种方法都无法生效。</p>
                 <h2 id="one-hundred-percent-height">100% 高度</h2>
                 <p>在IE6下，如果要给元素定义100%高度，必须要明确定义它的父级元素的高度，如果你需要给元素定义满屏的高度，就得先给 <code>html</code> 和 <code>body</code> 定义 <code>height:100%;</code> 。</p>
@@ -1264,7 +1264,7 @@ CSS:
 html, body {height:100%;}
 #fullLength {height:100%;}
 </pre>
-				<h2 id="float-bug">双边距Bug</h2>
+                <h2 id="float-bug">双边距Bug</h2>
                 <p>当 <code>block</code> 元素浮动时，IE6会错误的把浮动方向的margin值双倍计算。<a href="http://www.positioniseverything.net/explorer/floatIndent.html" rel="nofollow" target="_blank">Steve Clason</a>给出了解决方法：给元素添加 <code>display:inline;</code> </p>
 <pre class="prettyprint linenums">
 CSS:
@@ -1276,7 +1276,7 @@ CSS:
 </pre>                
                 <p>如果你想用div(或其他容器)包裹一个浮动的元素，你会发现必须给div(容器)定义明确的 <code>height</code>、<code>width</code>、<code>overflow</code> 之中一个属性（除了auto值）才能将浮动元素严实地包裹。</p>
                 
-				<div class="bs-docs-example"> </div>
+                <div class="bs-docs-example"> </div>
 <pre class="prettyprint linenums">
 
 </pre>
@@ -1393,94 +1393,94 @@ CSS:
                     <h1>HTML特殊符号对照表</h1>
                 </div>
                 <p>这是html特殊符号对照表，建议将最常用的记住！</p>
-				<table class="table table-striped table-bordered table-hover table-condensed">
-				<thead><tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
-	<tbody><tr><td>Α</td><td>&amp;Alpha;</td><td>&amp;#913;</td><td>Β</td><td>&amp;Beta;</td><td>&amp;#914;</td></tr>
-	<tr><td>Γ</td><td>&amp;Gamma;</td><td>&amp;#915;</td><td>Δ</td><td>&amp;Delta;</td><td>&amp;#916;</td></tr>
-	<tr><td>Ε</td><td>&amp;Epsilon;</td><td>&amp;#917;</td><td>Ζ</td><td>&amp;Zeta;</td><td>&amp;#918;</td></tr>
-	<tr><td>Η</td><td>&amp;Eta;</td><td>&amp;#919;</td><td>Θ</td><td>&amp;Theta;</td><td>&amp;#920;</td></tr>
-	<tr><td>Ι</td><td>&amp;Iota;</td><td>&amp;#921;</td><td>Κ</td><td>&amp;Kappa;</td><td>&amp;#922;</td></tr>
-	<tr><td>Λ</td><td>&amp;Lambda;</td><td>&amp;#923;</td><td>Μ</td><td>&amp;Mu;</td><td>&amp;#924;</td></tr>
-	<tr><td>Ν</td><td>&amp;Nu;</td><td>&amp;#925;</td><td>Ξ</td><td>&amp;Xi;</td><td>&amp;#926;</td></tr>
-	<tr><td>Ο</td><td>&amp;Omicron;</td><td>&amp;#927;</td><td>Π</td><td>&amp;Pi;</td><td>&amp;#928;</td></tr>
-	<tr><td>Ρ</td><td>&amp;Rho;</td><td>&amp;#929;</td><td>Σ</td><td>&amp;Sigma;</td><td>&amp;#931;</td></tr>
-	<tr><td>Τ</td><td>&amp;Tau;</td><td>&amp;#932;</td><td>Υ</td><td>&amp;Upsilon;</td><td>&amp;#933;</td></tr>
-	<tr><td>Φ</td><td>&amp;Phi;</td><td>&amp;#934;</td><td>Χ</td><td>&amp;Chi;</td><td>&amp;#935;</td></tr>
-	<tr><td>Ψ</td><td>&amp;Psi;</td><td>&amp;#936;</td><td>Ω</td><td>&amp;Omega;</td><td>&amp;#937;</td></tr>
-	<tr><td>α</td><td>&amp;alpha;</td><td>&amp;#945;</td><td>β</td><td>&amp;beta;</td><td>&amp;#946;</td></tr>
-	<tr><td>γ</td><td>&amp;gamma;</td><td>&amp;#947;</td><td>δ</td><td>&amp;delta;</td><td>&amp;#948;</td></tr>
-	<tr><td>ε</td><td>&amp;epsilon;</td><td>&amp;#949;</td><td>ζ</td><td>&amp;zeta;</td><td>&amp;#950;</td></tr>
-	<tr><td>η</td><td>&amp;eta;</td><td>&amp;#951;</td><td>θ</td><td>&amp;theta;</td><td>&amp;#952;</td></tr>
-	<tr><td>ι</td><td>&amp;iota;</td><td>&amp;#953;</td><td>κ</td><td>&amp;kappa;</td><td>&amp;#954;</td></tr>
-	<tr><td>λ</td><td>&amp;lambda;</td><td>&amp;#955;</td><td>μ</td><td>&amp;mu;</td><td>&amp;#956;</td></tr>
-	<tr><td>ν</td><td>&amp;nu;</td><td>&amp;#957;</td><td>ξ</td><td>&amp;xi;</td><td>&amp;#958;</td></tr>
-	<tr><td>ο</td><td>&amp;omicron;</td><td>&amp;#959;</td><td>π</td><td>&amp;pi;</td><td>&amp;#960;</td></tr>
-	<tr><td>ρ</td><td>&amp;rho;</td><td>&amp;#961;</td><td>ς</td><td>&amp;sigmaf;</td><td>&amp;#962;</td></tr>
-	</tbody><thead>
-	<tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
-	<tbody>
-	<tr><td>σ </td><td>&amp;sigma;</td><td>&amp;#963;</td><td>τ </td><td>&amp;tau;</td><td>&amp;#964;</td></tr>
-	<tr><td>υ</td><td>&amp;upsilon;</td><td>&amp;#965;</td><td>φ </td><td>&amp;phi;</td><td>&amp;#966;</td></tr>
-	<tr><td>χ</td><td>&amp;chi;</td><td>&amp;#967;</td><td>ψ </td><td>&amp;psi;</td><td>&amp;#968;</td></tr>
-	<tr><td>ω </td><td>&amp;omega;</td><td>&amp;#969;</td><td>ϑ </td><td>&amp;thetasym;</td><td>&amp;#977;</td></tr>
-	<tr><td>ϒ </td><td>&amp;upsih;</td><td>&amp;#978;</td><td>ϖ </td><td>&amp;piv;</td><td>&amp;#982;</td></tr>
-	<tr><td>• </td><td>&amp;bull;</td><td>&amp;#8226;</td><td>… </td><td>&amp;hellip;</td><td>&amp;#8230;</td></tr>
-	<tr><td>′ </td><td>&amp;prime;</td><td>&amp;#8242;</td><td>″ </td><td>&amp;Prime;</td><td>&amp;#8243;</td></tr>
-	<tr><td>‾ </td><td>&amp;oline;</td><td>&amp;#8254;</td><td>⁄ </td><td>&amp;frasl;</td><td>&amp;#8260;</td></tr>
-	<tr><td>℘ </td><td>&amp;weierp;</td><td>&amp;#8472;</td><td>ℑ </td><td>&amp;image;</td><td>&amp;#8465;</td></tr>
-	<tr><td>ℜ </td><td>&amp;real;</td><td>&amp;#8476;</td><td>™ </td><td>&amp;trade;</td><td>&amp;#8482;</td></tr>
-	<tr><td>ℵ </td><td>&amp;alefsym;</td><td>&amp;#8501;</td><td>← </td><td>&amp;larr;</td><td>&amp;#8592;</td></tr>
-	<tr><td>↑ </td><td>&amp;uarr;</td><td>&amp;#8593;</td><td>→ </td><td>&amp;rarr;</td><td>&amp;#8594;</td></tr>
-	<tr><td>↓ </td><td>&amp;darr;</td><td>&amp;#8595;</td><td>↔ </td><td>&amp;harr;</td><td>&amp;#8596;</td></tr>
-	<tr><td>↵ </td><td>&amp;crarr;</td><td>&amp;#8629;</td><td>⇐ </td><td>&amp;lArr;</td><td>&amp;#8656;</td></tr>
-	<tr><td>⇑ </td><td>&amp;uArr;</td><td>&amp;#8657;</td><td>⇒ </td><td>&amp;rArr;</td><td>&amp;#8658;</td></tr>
-	<tr><td>⇓ </td><td>&amp;dArr;</td><td>&amp;#8659;</td><td>⇔ </td><td>&amp;hArr;</td><td>&amp;#8660;</td></tr>
-	<tr><td>∀ </td><td>&amp;forall;</td><td>&amp;#8704;</td><td>∂ </td><td>&amp;part;</td><td>&amp;#8706;</td></tr>
-	<tr><td>∃ </td><td>&amp;exist;</td><td>&amp;#8707;</td><td>∅ </td><td>&amp;empty;</td><td>&amp;#8709;</td></tr>
-	<tr><td>∇ </td><td>&amp;nabla;</td><td>&amp;#8711;</td><td>∈ </td><td>&amp;isin;</td><td>&amp;#8712;</td></tr>
-	<tr><td>∉ </td><td>&amp;notin;</td><td>&amp;#8713;</td><td>∋ </td><td>&amp;ni;</td><td>&amp;#8715;</td></tr>
-	<tr><td>∏ </td><td>&amp;prod;</td><td>&amp;#8719;</td><td>∑ </td><td>&amp;sum;</td><td>&amp;#8722;</td></tr>
-	</tbody><thead>
-	<tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
-	<tbody>
-	<tr><td>− </td><td>&amp;minus;</td><td>&amp;#8722;</td><td>∗ </td><td>&amp;lowast;</td><td>&amp;#8727;</td></tr>
-	<tr><td>√ </td><td>&amp;radic;</td><td>&amp;#8730;</td><td>∝ </td><td>&amp;prop;</td><td>&amp;#8733;</td></tr>
-	<tr><td>∞ </td><td>&amp;infin;</td><td>&amp;#8734;</td><td>∠ </td><td>&amp;ang;</td><td>&amp;#8736;</td></tr>
-	<tr><td>∧ </td><td>&amp;and;</td><td>&amp;#8869;</td><td>∨ </td><td>&amp;or;</td><td>&amp;#8870;</td></tr>
-	<tr><td>∩ </td><td>&amp;cap;</td><td>&amp;#8745;</td><td>∪ </td><td>&amp;cup;</td><td>&amp;#8746;</td></tr>
-	<tr><td>∫ </td><td>&amp;int;</td><td>&amp;#8747;</td><td>∴ </td><td>&amp;there4;</td><td>&amp;#8756;</td></tr>
-	<tr><td>∼ </td><td>&amp;sim;</td><td>&amp;#8764;</td><td>≅ </td><td>&amp;cong;</td><td>&amp;#8773;</td></tr>
-	<tr><td>≈ </td><td>&amp;asymp;</td><td>&amp;#8773;</td><td>≠ </td><td>&amp;ne;</td><td>&amp;#8800;</td></tr>
-	<tr><td>≡ </td><td>&amp;equiv;</td><td>&amp;#8801;</td><td>≤ </td><td>&amp;le;</td><td>&amp;#8804;</td></tr>
-	<tr><td>≥ </td><td>&amp;ge;</td><td>&amp;#8805;</td><td>⊂ </td><td>&amp;sub;</td><td>&amp;#8834;</td></tr>
-	<tr><td>⊃ </td><td>&amp;sup;</td><td>&amp;#8835;</td><td>⊄ </td><td>&amp;nsub;</td><td>&amp;#8836;</td></tr>
-	<tr><td>⊆ </td><td>&amp;sube;</td><td>&amp;#8838;</td><td>⊇ </td><td>&amp;supe;</td><td>&amp;#8839;</td></tr>
-	<tr><td>⊕ </td><td>&amp;oplus;</td><td>&amp;#8853;</td><td>⊗ </td><td>&amp;otimes;</td><td>&amp;#8855;</td></tr>
-	<tr><td>⊥ </td><td>&amp;perp;</td><td>&amp;#8869;</td><td>⋅ </td><td>&amp;sdot;</td><td>&amp;#8901;</td></tr>
-	<tr><td>⌈ </td><td>&amp;lceil;</td><td>&amp;#8968;</td><td>⌉ </td><td>&amp;rceil;</td><td>&amp;#8969;</td></tr>
-	<tr><td>⌊ </td><td>&amp;lfloor;</td><td>&amp;#8970;</td><td>⌋ </td><td>&amp;rfloor;</td><td>&amp;#8971;</td></tr>
-	<tr><td>◊ </td><td>&amp;loz;</td><td>&amp;#9674;</td><td>♠ </td><td>&amp;spades;</td><td>&amp;#9824;</td></tr>
-	<tr><td>♣ </td><td>&amp;clubs;</td><td>&amp;#9827;</td><td>♥ </td><td>&amp;hearts;</td><td>&amp;#9829;</td></tr>
-	<tr><td>♦ </td><td>&amp;diams;</td><td>&amp;#9830;</td><td></td><td>&amp;nbsp;</td><td>&amp;#160;</td></tr>
-	<tr><td>¡ </td><td>&amp;iexcl;</td><td>&amp;#161;</td><td>¢ </td><td>&amp;cent;</td><td>&amp;#162;</td></tr>
-	<tr><td>£ </td><td>&amp;pound;</td><td>&amp;#163;</td><td>¤ </td><td>&amp;curren;</td><td>&amp;#164;</td></tr>
-	</tbody><thead>
-	<tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
-	<tbody>
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                <thead><tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
+    <tbody><tr><td>Α</td><td>&amp;Alpha;</td><td>&amp;#913;</td><td>Β</td><td>&amp;Beta;</td><td>&amp;#914;</td></tr>
+    <tr><td>Γ</td><td>&amp;Gamma;</td><td>&amp;#915;</td><td>Δ</td><td>&amp;Delta;</td><td>&amp;#916;</td></tr>
+    <tr><td>Ε</td><td>&amp;Epsilon;</td><td>&amp;#917;</td><td>Ζ</td><td>&amp;Zeta;</td><td>&amp;#918;</td></tr>
+    <tr><td>Η</td><td>&amp;Eta;</td><td>&amp;#919;</td><td>Θ</td><td>&amp;Theta;</td><td>&amp;#920;</td></tr>
+    <tr><td>Ι</td><td>&amp;Iota;</td><td>&amp;#921;</td><td>Κ</td><td>&amp;Kappa;</td><td>&amp;#922;</td></tr>
+    <tr><td>Λ</td><td>&amp;Lambda;</td><td>&amp;#923;</td><td>Μ</td><td>&amp;Mu;</td><td>&amp;#924;</td></tr>
+    <tr><td>Ν</td><td>&amp;Nu;</td><td>&amp;#925;</td><td>Ξ</td><td>&amp;Xi;</td><td>&amp;#926;</td></tr>
+    <tr><td>Ο</td><td>&amp;Omicron;</td><td>&amp;#927;</td><td>Π</td><td>&amp;Pi;</td><td>&amp;#928;</td></tr>
+    <tr><td>Ρ</td><td>&amp;Rho;</td><td>&amp;#929;</td><td>Σ</td><td>&amp;Sigma;</td><td>&amp;#931;</td></tr>
+    <tr><td>Τ</td><td>&amp;Tau;</td><td>&amp;#932;</td><td>Υ</td><td>&amp;Upsilon;</td><td>&amp;#933;</td></tr>
+    <tr><td>Φ</td><td>&amp;Phi;</td><td>&amp;#934;</td><td>Χ</td><td>&amp;Chi;</td><td>&amp;#935;</td></tr>
+    <tr><td>Ψ</td><td>&amp;Psi;</td><td>&amp;#936;</td><td>Ω</td><td>&amp;Omega;</td><td>&amp;#937;</td></tr>
+    <tr><td>α</td><td>&amp;alpha;</td><td>&amp;#945;</td><td>β</td><td>&amp;beta;</td><td>&amp;#946;</td></tr>
+    <tr><td>γ</td><td>&amp;gamma;</td><td>&amp;#947;</td><td>δ</td><td>&amp;delta;</td><td>&amp;#948;</td></tr>
+    <tr><td>ε</td><td>&amp;epsilon;</td><td>&amp;#949;</td><td>ζ</td><td>&amp;zeta;</td><td>&amp;#950;</td></tr>
+    <tr><td>η</td><td>&amp;eta;</td><td>&amp;#951;</td><td>θ</td><td>&amp;theta;</td><td>&amp;#952;</td></tr>
+    <tr><td>ι</td><td>&amp;iota;</td><td>&amp;#953;</td><td>κ</td><td>&amp;kappa;</td><td>&amp;#954;</td></tr>
+    <tr><td>λ</td><td>&amp;lambda;</td><td>&amp;#955;</td><td>μ</td><td>&amp;mu;</td><td>&amp;#956;</td></tr>
+    <tr><td>ν</td><td>&amp;nu;</td><td>&amp;#957;</td><td>ξ</td><td>&amp;xi;</td><td>&amp;#958;</td></tr>
+    <tr><td>ο</td><td>&amp;omicron;</td><td>&amp;#959;</td><td>π</td><td>&amp;pi;</td><td>&amp;#960;</td></tr>
+    <tr><td>ρ</td><td>&amp;rho;</td><td>&amp;#961;</td><td>ς</td><td>&amp;sigmaf;</td><td>&amp;#962;</td></tr>
+    </tbody><thead>
+    <tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
+    <tbody>
+    <tr><td>σ </td><td>&amp;sigma;</td><td>&amp;#963;</td><td>τ </td><td>&amp;tau;</td><td>&amp;#964;</td></tr>
+    <tr><td>υ</td><td>&amp;upsilon;</td><td>&amp;#965;</td><td>φ </td><td>&amp;phi;</td><td>&amp;#966;</td></tr>
+    <tr><td>χ</td><td>&amp;chi;</td><td>&amp;#967;</td><td>ψ </td><td>&amp;psi;</td><td>&amp;#968;</td></tr>
+    <tr><td>ω </td><td>&amp;omega;</td><td>&amp;#969;</td><td>ϑ </td><td>&amp;thetasym;</td><td>&amp;#977;</td></tr>
+    <tr><td>ϒ </td><td>&amp;upsih;</td><td>&amp;#978;</td><td>ϖ </td><td>&amp;piv;</td><td>&amp;#982;</td></tr>
+    <tr><td>• </td><td>&amp;bull;</td><td>&amp;#8226;</td><td>… </td><td>&amp;hellip;</td><td>&amp;#8230;</td></tr>
+    <tr><td>′ </td><td>&amp;prime;</td><td>&amp;#8242;</td><td>″ </td><td>&amp;Prime;</td><td>&amp;#8243;</td></tr>
+    <tr><td>‾ </td><td>&amp;oline;</td><td>&amp;#8254;</td><td>⁄ </td><td>&amp;frasl;</td><td>&amp;#8260;</td></tr>
+    <tr><td>℘ </td><td>&amp;weierp;</td><td>&amp;#8472;</td><td>ℑ </td><td>&amp;image;</td><td>&amp;#8465;</td></tr>
+    <tr><td>ℜ </td><td>&amp;real;</td><td>&amp;#8476;</td><td>™ </td><td>&amp;trade;</td><td>&amp;#8482;</td></tr>
+    <tr><td>ℵ </td><td>&amp;alefsym;</td><td>&amp;#8501;</td><td>← </td><td>&amp;larr;</td><td>&amp;#8592;</td></tr>
+    <tr><td>↑ </td><td>&amp;uarr;</td><td>&amp;#8593;</td><td>→ </td><td>&amp;rarr;</td><td>&amp;#8594;</td></tr>
+    <tr><td>↓ </td><td>&amp;darr;</td><td>&amp;#8595;</td><td>↔ </td><td>&amp;harr;</td><td>&amp;#8596;</td></tr>
+    <tr><td>↵ </td><td>&amp;crarr;</td><td>&amp;#8629;</td><td>⇐ </td><td>&amp;lArr;</td><td>&amp;#8656;</td></tr>
+    <tr><td>⇑ </td><td>&amp;uArr;</td><td>&amp;#8657;</td><td>⇒ </td><td>&amp;rArr;</td><td>&amp;#8658;</td></tr>
+    <tr><td>⇓ </td><td>&amp;dArr;</td><td>&amp;#8659;</td><td>⇔ </td><td>&amp;hArr;</td><td>&amp;#8660;</td></tr>
+    <tr><td>∀ </td><td>&amp;forall;</td><td>&amp;#8704;</td><td>∂ </td><td>&amp;part;</td><td>&amp;#8706;</td></tr>
+    <tr><td>∃ </td><td>&amp;exist;</td><td>&amp;#8707;</td><td>∅ </td><td>&amp;empty;</td><td>&amp;#8709;</td></tr>
+    <tr><td>∇ </td><td>&amp;nabla;</td><td>&amp;#8711;</td><td>∈ </td><td>&amp;isin;</td><td>&amp;#8712;</td></tr>
+    <tr><td>∉ </td><td>&amp;notin;</td><td>&amp;#8713;</td><td>∋ </td><td>&amp;ni;</td><td>&amp;#8715;</td></tr>
+    <tr><td>∏ </td><td>&amp;prod;</td><td>&amp;#8719;</td><td>∑ </td><td>&amp;sum;</td><td>&amp;#8722;</td></tr>
+    </tbody><thead>
+    <tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
+    <tbody>
+    <tr><td>− </td><td>&amp;minus;</td><td>&amp;#8722;</td><td>∗ </td><td>&amp;lowast;</td><td>&amp;#8727;</td></tr>
+    <tr><td>√ </td><td>&amp;radic;</td><td>&amp;#8730;</td><td>∝ </td><td>&amp;prop;</td><td>&amp;#8733;</td></tr>
+    <tr><td>∞ </td><td>&amp;infin;</td><td>&amp;#8734;</td><td>∠ </td><td>&amp;ang;</td><td>&amp;#8736;</td></tr>
+    <tr><td>∧ </td><td>&amp;and;</td><td>&amp;#8869;</td><td>∨ </td><td>&amp;or;</td><td>&amp;#8870;</td></tr>
+    <tr><td>∩ </td><td>&amp;cap;</td><td>&amp;#8745;</td><td>∪ </td><td>&amp;cup;</td><td>&amp;#8746;</td></tr>
+    <tr><td>∫ </td><td>&amp;int;</td><td>&amp;#8747;</td><td>∴ </td><td>&amp;there4;</td><td>&amp;#8756;</td></tr>
+    <tr><td>∼ </td><td>&amp;sim;</td><td>&amp;#8764;</td><td>≅ </td><td>&amp;cong;</td><td>&amp;#8773;</td></tr>
+    <tr><td>≈ </td><td>&amp;asymp;</td><td>&amp;#8773;</td><td>≠ </td><td>&amp;ne;</td><td>&amp;#8800;</td></tr>
+    <tr><td>≡ </td><td>&amp;equiv;</td><td>&amp;#8801;</td><td>≤ </td><td>&amp;le;</td><td>&amp;#8804;</td></tr>
+    <tr><td>≥ </td><td>&amp;ge;</td><td>&amp;#8805;</td><td>⊂ </td><td>&amp;sub;</td><td>&amp;#8834;</td></tr>
+    <tr><td>⊃ </td><td>&amp;sup;</td><td>&amp;#8835;</td><td>⊄ </td><td>&amp;nsub;</td><td>&amp;#8836;</td></tr>
+    <tr><td>⊆ </td><td>&amp;sube;</td><td>&amp;#8838;</td><td>⊇ </td><td>&amp;supe;</td><td>&amp;#8839;</td></tr>
+    <tr><td>⊕ </td><td>&amp;oplus;</td><td>&amp;#8853;</td><td>⊗ </td><td>&amp;otimes;</td><td>&amp;#8855;</td></tr>
+    <tr><td>⊥ </td><td>&amp;perp;</td><td>&amp;#8869;</td><td>⋅ </td><td>&amp;sdot;</td><td>&amp;#8901;</td></tr>
+    <tr><td>⌈ </td><td>&amp;lceil;</td><td>&amp;#8968;</td><td>⌉ </td><td>&amp;rceil;</td><td>&amp;#8969;</td></tr>
+    <tr><td>⌊ </td><td>&amp;lfloor;</td><td>&amp;#8970;</td><td>⌋ </td><td>&amp;rfloor;</td><td>&amp;#8971;</td></tr>
+    <tr><td>◊ </td><td>&amp;loz;</td><td>&amp;#9674;</td><td>♠ </td><td>&amp;spades;</td><td>&amp;#9824;</td></tr>
+    <tr><td>♣ </td><td>&amp;clubs;</td><td>&amp;#9827;</td><td>♥ </td><td>&amp;hearts;</td><td>&amp;#9829;</td></tr>
+    <tr><td>♦ </td><td>&amp;diams;</td><td>&amp;#9830;</td><td></td><td>&amp;nbsp;</td><td>&amp;#160;</td></tr>
+    <tr><td>¡ </td><td>&amp;iexcl;</td><td>&amp;#161;</td><td>¢ </td><td>&amp;cent;</td><td>&amp;#162;</td></tr>
+    <tr><td>£ </td><td>&amp;pound;</td><td>&amp;#163;</td><td>¤ </td><td>&amp;curren;</td><td>&amp;#164;</td></tr>
+    </tbody><thead>
+    <tr><th>特殊符号</th><th>命名实体</th><th>十进制编码</th><th>特殊符号</th><th>命名实体</th><th>十进制编码</th></tr></thead>
+    <tbody>
     <tr><td>£</td><td>&amp;pound;</td><td>&amp;#163;</td><td>¤</td><td>&amp;yen;</td><td>&amp;#164;</td></tr>
-	<tr><td>¥ </td><td>&amp;yen;</td><td>&amp;#165;</td><td>¦ </td><td>&amp;brvbar;</td><td>&amp;#166;</td></tr>
-	<tr><td>§ </td><td>&amp;sect;</td><td>&amp;#167;</td><td>¨ </td><td>&amp;uml;</td><td>&amp;#168;</td></tr>
-	<tr><td>© </td><td>&amp;copy;</td><td>&amp;#169;</td><td>ª </td><td>&amp;ordf;</td><td>&amp;#170;</td></tr>
-	<tr><td>« </td><td>&amp;laquo;</td><td>&amp;#171;</td><td>¬ </td><td>&amp;not;</td><td>&amp;#172;</td></tr>
-	<tr><td>­</td><td>&amp;shy;</td><td>&amp;#173;</td><td>® </td><td>&amp;reg;</td><td>&amp;#174;</td></tr>
-	<tr><td>¯</td><td>&amp;macr;</td><td>&amp;#175;</td><td>°</td><td>&amp;deg;</td><td>d&amp;#176;</td></tr>
-	<tr><td>± </td><td>&amp;plusmn;</td><td>&amp;#177;</td><td>²</td><td>&amp;sup2;</td><td>&amp;#178;</td></tr>
-	<tr><td>³</td><td>&amp;sup3;</td><td>&amp;#179;</td><td>´</td><td>&amp;acute;</td><td>&amp;#180;</td></tr>
-	<tr><td>µ</td><td>&amp;micro;</td><td>&amp;#181;</td><td></td><td></td><td></td></tr>
-	<tr><td>»</td><td>&amp;raquo;</td><td>&amp;#187;</td><td>€</td><td>&amp;euro;</td><td>&amp;#8364;</td></tr>
-	£	&pound;	¥	&yen;
+    <tr><td>¥ </td><td>&amp;yen;</td><td>&amp;#165;</td><td>¦ </td><td>&amp;brvbar;</td><td>&amp;#166;</td></tr>
+    <tr><td>§ </td><td>&amp;sect;</td><td>&amp;#167;</td><td>¨ </td><td>&amp;uml;</td><td>&amp;#168;</td></tr>
+    <tr><td>© </td><td>&amp;copy;</td><td>&amp;#169;</td><td>ª </td><td>&amp;ordf;</td><td>&amp;#170;</td></tr>
+    <tr><td>« </td><td>&amp;laquo;</td><td>&amp;#171;</td><td>¬ </td><td>&amp;not;</td><td>&amp;#172;</td></tr>
+    <tr><td>­</td><td>&amp;shy;</td><td>&amp;#173;</td><td>® </td><td>&amp;reg;</td><td>&amp;#174;</td></tr>
+    <tr><td>¯</td><td>&amp;macr;</td><td>&amp;#175;</td><td>°</td><td>&amp;deg;</td><td>d&amp;#176;</td></tr>
+    <tr><td>± </td><td>&amp;plusmn;</td><td>&amp;#177;</td><td>²</td><td>&amp;sup2;</td><td>&amp;#178;</td></tr>
+    <tr><td>³</td><td>&amp;sup3;</td><td>&amp;#179;</td><td>´</td><td>&amp;acute;</td><td>&amp;#180;</td></tr>
+    <tr><td>µ</td><td>&amp;micro;</td><td>&amp;#181;</td><td></td><td></td><td></td></tr>
+    <tr><td>»</td><td>&amp;raquo;</td><td>&amp;#187;</td><td>€</td><td>&amp;euro;</td><td>&amp;#8364;</td></tr>
+    £   &pound; ¥   &yen;
 </tbody></table>
-			</section>
+            </section>
         </div>
     </div>
 </div>
