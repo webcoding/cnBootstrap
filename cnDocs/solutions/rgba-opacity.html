@@ -269,6 +269,7 @@ opacity:.5;</pre></div>
     .8（CC） .9（E5） .85（D8） .95（F2）
     </p>
     <div class="demo">
+        <p><button class="btn test">交互时的滤镜问题</button> 显示隐藏有透明度变化时，IE8-下的滤镜透明有时出问题(待进一步研究)，设置时间为0可解决</p>
         <div class="rgbabox">
             <p>全兼容半透明测试，五种颜色及透明度。设置背景图片作为陪衬对比，增强浏览效果。</p>
             <span class="rbox"></span>
@@ -305,8 +306,19 @@ filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#330000FF, endC
 </pre>
     
     <h3>问题及注意事项：</h3>
-    <p>实践出真知</p>
-    
+    <p>今天(2014-01-06)注意到一个问题，IE中使用如上滤镜方法，若有显示隐藏的交互时，不能有渐变透明度的变化，即透明度变化时间大于0，有时出问题，可能是页面比较大的情况下。做测试如上：</p>
 </div>
+<script src="http://pic.lvmama.com/js/new_v/jquery-1.7.2.min.js"></script> 
+<script>
+$(function(){
+    $(".test").click(function(){
+        if($(".box2").css("display") == "inline-block"){
+            $(".box2").fadeOut(500);
+        } else{
+            $(".box2").fadeIn(500);
+        }
+    })
+})
+</script>
 </body>
 </html>
