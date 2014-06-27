@@ -55,7 +55,19 @@
         
     </div>
 <pre class="prettyprint linenums">
-
+//pc端有弹窗滚动时禁用body滚动
+$scollBox.on('mousewheel DOMMouseScroll', function (e) {
+    var type = e.type;
+    if (type == 'DOMMouseScroll' || type == 'mousewheel') {
+        var delta = (e.wheelDelta) ? e.wheelDelta : -(e.detail || 0);
+    }
+    // var e0 = e.originalEvent,
+    //     delta = e0.wheelDelta || -e0.detail;
+    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+    e.preventDefault();
+});
+$scollBox.on('touchmove', function (e) {
+});
 </pre>
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>
