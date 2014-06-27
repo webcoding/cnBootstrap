@@ -55,6 +55,7 @@
         
     </div>
 <pre class="prettyprint linenums">
+var $scollBox = $('.box-scroll');
 //pc端有弹窗滚动时禁用body滚动
 $scollBox.on('mousewheel DOMMouseScroll', function (e) {
     var type = e.type;
@@ -66,6 +67,7 @@ $scollBox.on('mousewheel DOMMouseScroll', function (e) {
     this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
     e.preventDefault();
 });
+//移动端实现，要借鉴iScroll那个组件
 $scollBox.on('touchmove', function (e) {
 });
 </pre>
