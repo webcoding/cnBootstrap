@@ -78,6 +78,24 @@
 	background:-webkit-gradient(linear,50% 0,50% 100%,from(#888),to(#fff));
 }
 
+
+.mul-border {
+	/* Borders */
+	box-shadow: 0 0 0 6px rgba(0,0,0,0.2), 
+	            0 0 0 12px rgba(0,0,0,0.2), 
+	            0 0 0 18px rgba(0,0,0,0.2), 
+	            0 0 0 24px rgba(0,0,0,0.2);
+
+	/* Meaningless pretty things */
+	background: linear-gradient(45deg, powderBlue, ghostwhite);
+	height: 200px;
+	line-height: 200px;
+	font-family: sans-serif;
+	color: MidnightBlue;
+	margin: 100px auto;
+	text-align: center;
+	width: 400px
+}
 </style>
 </head>
 <body>
@@ -129,7 +147,10 @@
 <h3>Figure 7：</h3>
 <div class="box double-border8">double border</div>
     </div>
-
+<h3>多边框：</h3>
+<p>利用 box-shadow 实现</p>
+<div class="box mul-border">mul-border</div>
+    </div>
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>
     
