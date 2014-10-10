@@ -58,9 +58,17 @@
 &lt;param name="wmode" <b class="red">value="transparent"</b>&gt; 针对IE
 &lt;embed src="flash.swf" <b class="red">wmode="transparent"</b> ... 针对firefox/chrome等
 </pre>
-    <h3>flash 与div 的层级问题</h3>
-    <p></p>
-    
+    <h3>flash 层级问题</h3>
+    <p>FLASH总挡住DIV,用这个办法把它优先级放到最下边。</p>
+    <p>FLASH优先级比DIV高, 所以会挡住DIV的。</p>
+    <p>在<object>里加入<param name="wmode" value="Opaque">这个参数,将FLASH置于底层。</p>
+
+    <h4>wmode的三个值解释：</h4>
+    <ul>
+        <li>"Window" 在 Web 页上用影片自己的矩形窗口来播放应用程序，并且始终位于最顶层。</li>
+        <li>"Opaque" 显示页面上位于它后面的内容。</li>
+        <li>"Transparent"使 HTML 页的背景可以透过应用程序的所有透明部分显示出来，并且可能会降低动画性能。</li>
+    </ul>
     
     <h3>问题及注意事项：</h3>
     <p>实践出真知</p>
